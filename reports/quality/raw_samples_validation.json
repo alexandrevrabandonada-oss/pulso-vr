@@ -28,6 +28,171 @@
     "ok": true
   },
   {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_2024_02.html",
+    "filename": "sih_tabnet_nrrj_2024_02.html",
+    "bytes": 2438,
+    "sha256": "61ee5e6c08c55531b1ad75fb56b80856d98a4ad79ffed1c9ad51d04a6af520ce",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_2024_03.html",
+    "filename": "sih_tabnet_nrrj_2024_03.html",
+    "bytes": 2438,
+    "sha256": "a3e0186defb4bfa4b087357317b75436d7ed291bd8467d7107f0be2ce68d0229",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_2024_04.html",
+    "filename": "sih_tabnet_nrrj_2024_04.html",
+    "bytes": 2438,
+    "sha256": "f8c1236c26497117500e36cdce6fd785c8ecf9f7564cc147f8f88ee6e3d50d4b",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_2024_05.html",
+    "filename": "sih_tabnet_nrrj_2024_05.html",
+    "bytes": 2438,
+    "sha256": "9963b356c6f1d3b75e2cd148bd20028c627c826f7236bc9ec06f84f670c91d3f",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_2024_06.html",
+    "filename": "sih_tabnet_nrrj_2024_06.html",
+    "bytes": 2438,
+    "sha256": "ca894c1fdc10ab580c181df41e66c0e506abaf42bc2a3c835a59f7e89d1e8776",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_2024_07.html",
+    "filename": "sih_tabnet_nrrj_2024_07.html",
+    "bytes": 2438,
+    "sha256": "38389ab526f34748d78801581065052dd95cf5455026d723d080b80005e1206d",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_2024_08.html",
+    "filename": "sih_tabnet_nrrj_2024_08.html",
+    "bytes": 2438,
+    "sha256": "cf1a573a276d20752370f103492eadca3ee1e193af32bd1b4f79bee68522eb30",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_2024_09.html",
+    "filename": "sih_tabnet_nrrj_2024_09.html",
+    "bytes": 2438,
+    "sha256": "53d5028c91001145ab07b74a00d04a327112790ef32896a33dd611ed107c3a65",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_2024_10.html",
+    "filename": "sih_tabnet_nrrj_2024_10.html",
+    "bytes": 2438,
+    "sha256": "ce8b9de1a9eb42c0bed236f31aea12cfd9741b66a8f2e65a9a2796f5ac4ac2af",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_2024_11.html",
+    "filename": "sih_tabnet_nrrj_2024_11.html",
+    "bytes": 2438,
+    "sha256": "bcc3edd62842942cf699214ef672b1f9de5c3b8186af22bb2528b085c84a8504",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_2024_12.html",
+    "filename": "sih_tabnet_nrrj_2024_12.html",
+    "bytes": 2438,
+    "sha256": "cdbfb9a94fa0b4f1cfb66a3f879e1176279d7a664cb8698eec2bcea0c780a654",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
     "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sim_2010_Mortalidade_Geral_2010_csv.zip",
     "filename": "sim_2010_Mortalidade_Geral_2010_csv.zip",
     "bytes": 45277062,

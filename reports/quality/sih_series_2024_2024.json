@@ -1,0 +1,75 @@
+{
+  "source_id": "sih_tabnet_nrrj",
+  "geography": "residência em Volta Redonda",
+  "municipality_code_datasus": "330630",
+  "period_start": "2024-01",
+  "period_end": "2024-12",
+  "rows": 12,
+  "total_aggregated_events": 22613,
+  "duplicate_periods": [],
+  "missing_periods": [],
+  "negative_values": [],
+  "raw_files": [
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_01.html",
+      "sha256": "321eda4feb1286f215e0f09c32630ca95eba7e1d409098997d4189b2bcd4690c",
+      "value": 1463
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_02.html",
+      "sha256": "61ee5e6c08c55531b1ad75fb56b80856d98a4ad79ffed1c9ad51d04a6af520ce",
+      "value": 1575
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_03.html",
+      "sha256": "a3e0186defb4bfa4b087357317b75436d7ed291bd8467d7107f0be2ce68d0229",
+      "value": 2048
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_04.html",
+      "sha256": "f8c1236c26497117500e36cdce6fd785c8ecf9f7564cc147f8f88ee6e3d50d4b",
+      "value": 2271
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_05.html",
+      "sha256": "9963b356c6f1d3b75e2cd148bd20028c627c826f7236bc9ec06f84f670c91d3f",
+      "value": 1991
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_06.html",
+      "sha256": "ca894c1fdc10ab580c181df41e66c0e506abaf42bc2a3c835a59f7e89d1e8776",
+      "value": 2123
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_07.html",
+      "sha256": "38389ab526f34748d78801581065052dd95cf5455026d723d080b80005e1206d",
+      "value": 1926
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_08.html",
+      "sha256": "cf1a573a276d20752370f103492eadca3ee1e193af32bd1b4f79bee68522eb30",
+      "value": 1945
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_09.html",
+      "sha256": "53d5028c91001145ab07b74a00d04a327112790ef32896a33dd611ed107c3a65",
+      "value": 1869
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_10.html",
+      "sha256": "ce8b9de1a9eb42c0bed236f31aea12cfd9741b66a8f2e65a9a2796f5ac4ac2af",
+      "value": 1802
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_11.html",
+      "sha256": "bcc3edd62842942cf699214ef672b1f9de5c3b8186af22bb2528b085c84a8504",
+      "value": 1692
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_12.html",
+      "sha256": "cdbfb9a94fa0b4f1cfb66a3f879e1176279d7a664cb8698eec2bcea0c780a654",
+      "value": 1908
+    }
+  ],
+  "status": "validated_structure_only_no_epidemiological_estimate"
+}

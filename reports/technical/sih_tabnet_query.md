@@ -18,6 +18,15 @@ Resultado retornado pelo TabNet: **1.463 internações**. A resposta HTML bruta,
 sem edição, está em `data/raw/sih_tabnet_nrrj_2024_01.html`, com sidecar SHA-256
 e entrada em `metadata/extraction_log.csv`.
 
+## Série mensal de teste
+
+A rota foi expandida para janeiro–dezembro de 2024. Foram preservadas 12
+respostas mensais, todas com código `330630`, sem períodos ausentes ou chaves
+duplicadas. A tabela harmonizada está em
+`data/interim/sih_nrrj_monthly.csv`, com o relatório estrutural em
+`reports/quality/sih_series_2024_2024.json`. A soma descritiva dos eventos
+agregados foi 22.613; ela não representa pessoas únicas nem uma taxa.
+
 ## Interpretação autorizada
 
 Esse número é uma contagem agregada de internações/AIHs segundo residência,
@@ -28,7 +37,7 @@ reinternações são computadas.
 
 ## Próxima expansão
 
-Iterar os arquivos mensais `nrrjYYMM.dbf` de 2008 em diante, armazenar cada
-resposta e extrair as linhas do município com um parser versionado. Antes de
-liberar a série, comparar totais mensais/anuais com a tabulação oficial e
-documentar mudanças no conjunto de períodos disponíveis.
+Expandir a mesma rotina para 2008 em diante, começando pelo período
+respiratório e pelos anos de comparação definidos no protocolo. Antes de
+liberar a série para análise, comparar totais mensais/anuais com outra
+tabulação oficial e documentar mudanças no conjunto de períodos disponíveis.

@@ -22,10 +22,10 @@ Cobertura planejada: AIH reduzida de residentes no RJ, mês a mês, 2008–2026.
   modalidade Dados, tipo RD - AIH Reduzida.
 - Rota alternativa executável: definição oficial
   `sih/cnv/nrrj` e POST em `tabcgi.exe`, com município de residência e arquivo
-  mensal selecionados na própria definição. O comando
-  `python scripts/run_cli.py sih-query --year 2024 --month 1` foi testado e
-  preservou a resposta HTML com hash; retornou 1.463 internações para
-  Volta Redonda em janeiro de 2024.
+  mensal selecionados na própria definição. Os comandos `sih-query` e
+  `sih-series` preservam as respostas HTML com hash; a série de
+  janeiro–dezembro de 2024 foi obtida para Volta Redonda e totalizou 22.613
+  eventos agregados descritivos.
 - Rota FTP legada testada em 2026-08-02: falhou por ausência de resposta do
   host. O resultado está em metadata/extraction_log.csv; não é convertido em
   zero nem em indisponibilidade definitiva.

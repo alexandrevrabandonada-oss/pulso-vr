@@ -54,6 +54,7 @@ python scripts/run_cli.py acquire --source ibge_9514_vr_2022
 python scripts/run_cli.py acquire --source sim_2024_csv
 python scripts/run_cli.py acquire --source sivep_2019_parquet
 python scripts/run_cli.py sih-query --year 2024 --month 1
+python scripts/run_cli.py sih-series --start-year 2024 --start-month 1 --end-year 2024 --end-month 12
 ```
 
 Cada arquivo baixado permanece em `data/raw/`, recebe um arquivo `.sha256` e
@@ -65,6 +66,9 @@ O catálogo atual dos recursos oficiais descobertos está em
 `metadata/discovered_resources_sivep.json`; os layouts observados estão em
 `metadata/layout_manifest.json`. A validação territorial está em
 `reports/quality/territory_code_validation.md`.
+A série mensal SIH harmonizada, sem alterar os arquivos brutos, fica em
+`data/interim/sih_nrrj_monthly.csv` e seu relatório em
+`reports/quality/sih_series_2024_2024.json`.
 
 ## Princípios analíticos
 

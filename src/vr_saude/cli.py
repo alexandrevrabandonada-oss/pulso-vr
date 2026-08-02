@@ -15,7 +15,7 @@ from .logging_utils import configure_logging
 from .layout_validation import write_layout_manifest
 from .provenance import sha256_file
 from .raw_validation import write_raw_validation_report
-from .sih_tabnet import query_residence, save_query_response
+from .sih_tabnet import query_residence, query_residence_series, save_query_response, write_harmonized_series
 from .sources import get_sample_source
 from .territory_validation import write_territory_report
 from .validate import validate_project
@@ -64,8 +64,9 @@ def _quality_report(root: Path) -> Path:
                 "## Achados e limites",
                 "",
                 "- O workspace inicial não continha dados ou documentação; a Fase 2 agora possui amostras oficiais versionadas por hash.",
-                "- O endpoint FTP legado do SIH falhou na checagem de conectividade, mas a rota TabNet por residência foi executada para janeiro de 2024.",
+                "- O endpoint FTP legado do SIH falhou na checagem de conectividade, mas a rota TabNet por residência foi executada para os 12 meses de 2024.",
                 "- O catálogo dinâmico de recursos SIM/SIVEP e os layouts observados foram preservados em metadata/.",
+                "- A série SIH harmonizada em data/interim/ é descritiva e mantém o vínculo com cada resposta HTML bruta.",
                 "- A reconciliação de totais oficiais ainda não foi executada.",
                 "- Não há resultado negativo ou positivo sobre saúde de Volta Redonda nesta fase.",
             ]
@@ -94,7 +95,7 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "metadata" / "layout_manifest.json",
         root / "metadata" / "discovered_resources_sim.json",
         root / "metadata" / "discovered_resources_sivep.json",
-    ]
+    ] + sorted((root / "reports" / "quality").glob("sih_series_*.json"))
     raw_samples = [
         {
             "path": str(path.relative_to(root)),
@@ -103,6 +104,15 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         }
         for path in sorted((root / "data" / "raw").iterdir())
         if path.is_file() and not path.name.endswith(".sha256") and path.name not in {"README.md", ".gitkeep"}
+    ]
+    derived_artifacts = [
+        {
+            "path": str(path.relative_to(root)),
+            "bytes": path.stat().st_size,
+            "sha256": sha256_file(path),
+        }
+        for path in sorted((root / "data" / "interim").iterdir())
+        if path.is_file() and path.name not in {"README.md", ".gitkeep"}
     ]
     manifest = {
         "project": "vr_saude_ambiental",
@@ -119,6 +129,7 @@ def _manifest(root: Path, quality_report: Path) -> Path:
             if path.exists()
         ],
         "raw_samples": raw_samples,
+        "derived_artifacts": derived_artifacts,
         "results": [],
         "notes": [
             "No causal conclusion is authorized by this run.",
@@ -142,6 +153,11 @@ def _parser() -> argparse.ArgumentParser:
     sih_query = subparsers.add_parser("sih-query", help="query one official SIH TabNet month by residence")
     sih_query.add_argument("--year", type=int, default=2024)
     sih_query.add_argument("--month", type=int, default=1)
+    sih_series = subparsers.add_parser("sih-series", help="query and harmonize a monthly SIH TabNet range")
+    sih_series.add_argument("--start-year", type=int, required=True)
+    sih_series.add_argument("--start-month", type=int, required=True)
+    sih_series.add_argument("--end-year", type=int, required=True)
+    sih_series.add_argument("--end-month", type=int, required=True)
     discover = subparsers.add_parser("discover", help="save the current official resource catalog")
     discover.add_argument("--dataset", choices=("sim", "sivep"), required=True)
     subparsers.add_parser("sources", help="list verified sample acquisition identifiers")
@@ -208,6 +224,26 @@ def main(argv: list[str] | None = None) -> int:
             return 1
         print(f"SIH TabNet response: {destination}")
         print(f"Volta Redonda / {args.year:04d}-{args.month:02d}: {result.hospitalizations} internações")
+        return 0
+    if args.command == "sih-series":
+        try:
+            results = query_residence_series(
+                root,
+                args.start_year,
+                args.start_month,
+                args.end_year,
+                args.end_month,
+            )
+            for result in results:
+                save_query_response(root, result)
+            interim, report = write_harmonized_series(root, results)
+        except (LookupError, ValueError, OSError) as exc:
+            print(f"ERROR: SIH TabNet series failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"SIH raw responses: {len(results)}")
+        print(f"Harmonized interim series: {interim}")
+        print(f"Series quality report: {report}")
+        print(f"Aggregated events: {sum(item.hospitalizations for item in results)}")
         return 0
     if args.command == "discover":
         resources = discover_resources(args.dataset)

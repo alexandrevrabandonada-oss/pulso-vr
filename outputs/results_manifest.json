@@ -1,7 +1,7 @@
 {
   "project": "vr_saude_ambiental",
   "code_version": "0.1.0",
-  "run_at": "2026-08-02T19:22:01+00:00",
+  "run_at": "2026-08-02T20:08:41+00:00",
   "status": "preliminary_no_epidemiological_results",
   "inputs": [
     {
@@ -26,21 +26,21 @@
     },
     {
       "path": "metadata\\extraction_log.csv",
-      "sha256": "28f251c0372a737bd477c1af368ffe79596fb7d82cb7dc604ec77f64a6c50abe"
+      "sha256": "e079a8bf80141873e2904f9346d0cc0057964a75340e9bc57ef314b8d55281c4"
     }
   ],
   "outputs": [
     {
       "path": "reports\\quality\\quality_report_initial.md",
-      "sha256": "8934c5d086bc2e1570acc38dc80c935a5a34155554959dc9affaee489b6ae22a"
+      "sha256": "388b54a9b9a644cc7877961487dc9f992afe9bfb6700b7da92bc1cbcefd8d3d4"
     },
     {
       "path": "reports\\quality\\raw_samples_validation.md",
-      "sha256": "e36fbbf05542888c3dc2c19ebab6d59a61d0a4efcaa194c89362fdc9465e76a2"
+      "sha256": "99b4f99a0c74f21379d199670ca81bab5990d478cecd24945cda5ed7ce0c818b"
     },
     {
       "path": "reports\\quality\\raw_samples_validation.json",
-      "sha256": "0066975a4a5c335605c0cc9eed02768a547a1ecb05431db6c678bb3af73c1c4a"
+      "sha256": "fd81e42b33c298d77f5259d62a02e04db2e0fa64ca1b58ae861e3d2b1e7ee3a7"
     },
     {
       "path": "reports\\quality\\territory_code_validation.md",
@@ -61,6 +61,10 @@
     {
       "path": "metadata\\discovered_resources_sivep.json",
       "sha256": "5948b89b492d085b5beb62917dc9e30d421d92e581013799049abd19f7b4c632"
+    },
+    {
+      "path": "reports\\quality\\sih_series_2024_2024.json",
+      "sha256": "c48e0e91ca2c56682140e4e3bb9a3f45d93249234719c3d23139f1f82212622f"
     }
   ],
   "raw_samples": [
@@ -73,6 +77,61 @@
       "path": "data\\raw\\sih_tabnet_nrrj_2024_01.html",
       "bytes": 2438,
       "sha256": "321eda4feb1286f215e0f09c32630ca95eba7e1d409098997d4189b2bcd4690c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_02.html",
+      "bytes": 2438,
+      "sha256": "61ee5e6c08c55531b1ad75fb56b80856d98a4ad79ffed1c9ad51d04a6af520ce"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_03.html",
+      "bytes": 2438,
+      "sha256": "a3e0186defb4bfa4b087357317b75436d7ed291bd8467d7107f0be2ce68d0229"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_04.html",
+      "bytes": 2438,
+      "sha256": "f8c1236c26497117500e36cdce6fd785c8ecf9f7564cc147f8f88ee6e3d50d4b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_05.html",
+      "bytes": 2438,
+      "sha256": "9963b356c6f1d3b75e2cd148bd20028c627c826f7236bc9ec06f84f670c91d3f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_06.html",
+      "bytes": 2438,
+      "sha256": "ca894c1fdc10ab580c181df41e66c0e506abaf42bc2a3c835a59f7e89d1e8776"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_07.html",
+      "bytes": 2438,
+      "sha256": "38389ab526f34748d78801581065052dd95cf5455026d723d080b80005e1206d"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_08.html",
+      "bytes": 2438,
+      "sha256": "cf1a573a276d20752370f103492eadca3ee1e193af32bd1b4f79bee68522eb30"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_09.html",
+      "bytes": 2438,
+      "sha256": "53d5028c91001145ab07b74a00d04a327112790ef32896a33dd611ed107c3a65"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_10.html",
+      "bytes": 2438,
+      "sha256": "ce8b9de1a9eb42c0bed236f31aea12cfd9741b66a8f2e65a9a2796f5ac4ac2af"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_11.html",
+      "bytes": 2438,
+      "sha256": "bcc3edd62842942cf699214ef672b1f9de5c3b8186af22bb2528b085c84a8504"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_12.html",
+      "bytes": 2438,
+      "sha256": "cdbfb9a94fa0b4f1cfb66a3f879e1176279d7a664cb8698eec2bcea0c780a654"
     },
     {
       "path": "data\\raw\\sim_2010_Mortalidade_Geral_2010_csv.zip",
@@ -103,6 +162,13 @@
       "path": "data\\raw\\sivep_srag_dicionario_2019_2025.pdf",
       "bytes": 1052922,
       "sha256": "6b92d438cf1cab28cd3719a7bcc48df3c269cf271f7c8181e334db2e849a0e35"
+    }
+  ],
+  "derived_artifacts": [
+    {
+      "path": "data\\interim\\sih_nrrj_monthly.csv",
+      "bytes": 2391,
+      "sha256": "613fb6b07a2a25d63377863b0527a2188ca186fcbc447b25ce9a814475e1ba23"
     }
   ],
   "results": [],
