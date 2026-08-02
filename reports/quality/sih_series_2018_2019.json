@@ -1,0 +1,139 @@
+{
+  "source_id": "sih_tabnet_nrrj",
+  "geography": "residência em Volta Redonda",
+  "municipality_code_datasus": "330630",
+  "period_start": "2018-01",
+  "period_end": "2019-12",
+  "rows": 24,
+  "total_aggregated_events": 32093,
+  "annual_aggregated_events": {
+    "2018": 15143,
+    "2019": 16950
+  },
+  "duplicate_periods": [],
+  "missing_periods": [],
+  "negative_values": [],
+  "raw_files": [
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2018_01.html",
+      "sha256": "ed5e6cc4a11a164c3d0ab164bea47089f10fd9de4119c6e53c061f02cde04201",
+      "value": 1204
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2018_02.html",
+      "sha256": "f95719f2d2a705d144aebf2ac985a0bfa521ec0fe4e478e6a77299ad69c062f8",
+      "value": 1161
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2018_03.html",
+      "sha256": "a1fd8c6fcb5e3b1c152cad67d694439df2ddb6f0c089a82c36a52beac0cbdbc5",
+      "value": 1435
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2018_04.html",
+      "sha256": "a75c50e00d79eab87a56a52a6123344d17c78a65d98ce98f6887e83880d44ffc",
+      "value": 1316
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2018_05.html",
+      "sha256": "cd75ee9cbb81c1be38b2629ea32b4d09465e55001017755c50b92180e507f257",
+      "value": 1263
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2018_06.html",
+      "sha256": "a536253cdbe93fcb2ed802b62709016a0ec281cbbfd6a34bc25fa0e009390df5",
+      "value": 1249
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2018_07.html",
+      "sha256": "c94b6bb589156f6aaa38786336d5dd9ae7c3406f493195795c4817d4e97786a5",
+      "value": 1242
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2018_08.html",
+      "sha256": "7ba79f6525250ebdb9941141b95e88a2490eac0f17f2aeffb8be408f910b51ce",
+      "value": 1310
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2018_09.html",
+      "sha256": "15f6292a2aa87a5f5d303b6f64d028b07059f2874e75b0463d6ca65d6d716637",
+      "value": 1137
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2018_10.html",
+      "sha256": "4b20e043da2ed230e51b274cd17b735025053a59575c58b02990ac69bcb00e46",
+      "value": 1298
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2018_11.html",
+      "sha256": "0a158df3d91cf21e3c729aa17311b300037a1c652569012270deed997dbabd64",
+      "value": 1183
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2018_12.html",
+      "sha256": "98fa3fbdb8823d25037f14a831805faa2399eafc9ed7330c862f745b6f2a4e23",
+      "value": 1345
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2019_01.html",
+      "sha256": "1dd607824e723d941a32f21c2ee7a8b8c42bf9644cbb31adafbb4b79a6327785",
+      "value": 1155
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2019_02.html",
+      "sha256": "0a85959a28303c7d4d64ddf93d7608b11338719906cdbf4857e4e51174095a92",
+      "value": 1349
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2019_03.html",
+      "sha256": "23033d8a31e39802572956d15f80300f547b667bb7f4bc51fe2ecc9a3a8b5c98",
+      "value": 1539
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2019_04.html",
+      "sha256": "d204f9a293f394c892d81b5878fbb681cc497b1059b09308e0966996c204ada3",
+      "value": 1524
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2019_05.html",
+      "sha256": "2093290d3f308bdf419a4b52a057e1ecfeeb76f9b4727b70c143515bb2783935",
+      "value": 1596
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2019_06.html",
+      "sha256": "15c5380ee5c398e69a6af3c07893c92998bab32987a4132c5b279eef8ca824be",
+      "value": 1434
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2019_07.html",
+      "sha256": "88710c4f265e725d87a4241e9d3f5d23cbb01cce598977c4c94af244e10e4e69",
+      "value": 1536
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2019_08.html",
+      "sha256": "44054c0d34607657b380e7e0c5df5d9957b2d206301f4c4fc81fd629f60c0860",
+      "value": 1575
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2019_09.html",
+      "sha256": "8113b5688e610de40c91e3b1b752a80594c988c2a32120b00fff89217de1ee10",
+      "value": 1324
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2019_10.html",
+      "sha256": "3a2d40d2aed6601f766309cd9b893d67dae2ae0dbb179f4f0d7f3489a9fdd990",
+      "value": 1374
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2019_11.html",
+      "sha256": "e80043b6ae6b2770f844f41b063241b0a299e9d871144241a110b02e1d28c4a2",
+      "value": 1381
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2019_12.html",
+      "sha256": "543e4186b6b6ddb7a6414b613c79c2b183d0c7f636003b384a32983325b115a0",
+      "value": 1163
+    }
+  ],
+  "status": "validated_structure_only_no_epidemiological_estimate"
+}

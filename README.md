@@ -70,6 +70,9 @@ A série mensal SIH harmonizada, sem alterar os arquivos brutos, fica em um
 arquivo nomeado por janela em `data/interim/`; a janela 2020–2024 está em
 `data/interim/sih_nrrj_monthly_2020_2024.csv` e seu relatório em
 `reports/quality/sih_series_2020_2024.json`.
+Também estão disponíveis as janelas históricas 2008–2017, 2018–2019 e
+2025–2026-05. Os meses de 2026 ainda não listados pelo TabNet não são tratados
+como zero.
 
 ## Princípios analíticos
 
@@ -101,8 +104,8 @@ requests/               LAI, ética e parcerias
 ## Limitações atuais
 
 O endpoint FTP legado do SIH não respondeu durante a validação inicial. A rota
-TabNet por residência foi automatizada e testada para um mês, mas a cobertura
-mensal integral do SIH só será liberada depois de iterar os arquivos e
-reconciliar os totais com a fonte oficial. Ainda faltam, entre outros, dados
+TabNet por residência foi automatizada para 2008–2025 e 2026 até maio, mas a
+cobertura só será liberada depois de reconciliar os totais com a fonte oficial.
+Ainda faltam, entre outros, dados
 históricos de qualidade do ar em resolução diária, registros de câncer,
 cobertura de planos privados e dados ocupacionais legalmente acessíveis.

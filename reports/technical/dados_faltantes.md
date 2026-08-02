@@ -2,8 +2,9 @@
 
 ## Bloqueiam as análises principais
 
-- SIH/SUS mensal completo para residentes do RJ, 2008–2026, com dicionários e
-  validação de totais.
+- Reconciliação oficial dos arquivos SIH/SUS já coletados para residentes do
+  RJ (2008–2025 e 2026 até maio), com dicionários, totais independentes e
+  atualização dos meses ainda não publicados.
 - SIM completo dos anos planejados, incluindo causas múltiplas quando
   publicamente disponíveis e indicação de definitivo/preliminar.
 - População anual por município e, para taxas específicas, série compatível de

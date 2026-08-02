@@ -27,6 +27,19 @@ ausentes ou chaves duplicadas. A tabela harmonizada está em
 `reports/quality/sih_series_2020_2024.json`. A soma descritiva dos eventos
 agregados foi 89.119; ela não representa pessoas únicas nem uma taxa.
 
+## Cobertura histórica obtida
+
+| Janela | Meses | Eventos agregados descritivos |
+|---|---:|---:|
+| 2008–2017 | 120 | 141.437 |
+| 2018–2019 | 24 | 32.093 |
+| 2020–2024 | 60 | 89.119 |
+| 2025–2026-05 | 17 | 32.672 |
+
+São 221 competências no total. O TabNet consultado listava como último arquivo
+`nrrj2605.dbf`; junho–agosto de 2026 permanecem como período ainda não
+disponível nessa rota e não foram imputados.
+
 ## Interpretação autorizada
 
 Esse número é uma contagem agregada de internações/AIHs segundo residência,
@@ -37,7 +50,6 @@ reinternações são computadas.
 
 ## Próxima expansão
 
-Expandir a mesma rotina para 2008–2019 e 2025 em diante, começando pelos anos
-de comparação definidos no protocolo. Antes de liberar a série para análise,
-comparar totais mensais/anuais com outra tabulação oficial e documentar
-mudanças no conjunto de períodos disponíveis.
+Antes de liberar a série para análise, comparar totais mensais/anuais com
+outra tabulação oficial, reconciliar as mudanças de processamento e
+documentar a atualização dos meses de 2026 quando o TabNet os disponibilizar.

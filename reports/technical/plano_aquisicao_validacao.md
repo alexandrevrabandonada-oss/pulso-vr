@@ -23,9 +23,10 @@ Cobertura planejada: AIH reduzida de residentes no RJ, mês a mês, 2008–2026.
 - Rota alternativa executável: definição oficial
   `sih/cnv/nrrj` e POST em `tabcgi.exe`, com município de residência e arquivo
   mensal selecionados na própria definição. Os comandos `sih-query` e
-  `sih-series` preservam as respostas HTML com hash; a série de janeiro de
-  2020 a dezembro de 2024 foi obtida para Volta Redonda, com 60 meses completos
-  e 89.119 eventos agregados descritivos.
+  `sih-series` preservam as respostas HTML com hash. Foram obtidas 221
+  competências entre janeiro de 2008 e maio de 2026, divididas em blocos
+  versionados; junho–agosto de 2026 não estavam listados no TabNet no momento
+  da coleta e não foram tratados como zero.
 - Rota FTP legada testada em 2026-08-02: falhou por ausência de resposta do
   host. O resultado está em metadata/extraction_log.csv; não é convertido em
   zero nem em indisponibilidade definitiva.
