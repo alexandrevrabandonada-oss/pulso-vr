@@ -1,0 +1,322 @@
+{
+  "source_id": "sih_tabnet_nrrj",
+  "geography": "residência em Volta Redonda",
+  "municipality_code_datasus": "330630",
+  "period_start": "2020-01",
+  "period_end": "2024-12",
+  "rows": 60,
+  "total_aggregated_events": 89119,
+  "annual_aggregated_events": {
+    "2020": 12349,
+    "2021": 15107,
+    "2022": 18081,
+    "2023": 20969,
+    "2024": 22613
+  },
+  "duplicate_periods": [],
+  "missing_periods": [],
+  "negative_values": [],
+  "raw_files": [
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2020_01.html",
+      "sha256": "017653cc7511f73dcd9ff94a004f6a3640e575dbd330ba322122fb2f59696900",
+      "value": 990
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2020_02.html",
+      "sha256": "794d0b3e8803f8a5c87c102fc582ed3c1d3cc84648b5493afa0107c96a54f5a9",
+      "value": 1302
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2020_03.html",
+      "sha256": "33de0d348f14e6956043a2421f681f96686e7f8ef3867f558dcde0ca7598b445",
+      "value": 1252
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2020_04.html",
+      "sha256": "4b1f95090f15fee2f950fb878419afb25f3efb4a1c0740405dfb7677c5134ff3",
+      "value": 799
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2020_05.html",
+      "sha256": "6141864dbdf902276a85a7d844f99e0856c9cab29163b4e531153505631084ed",
+      "value": 781
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2020_06.html",
+      "sha256": "d429222811dc6fb47fcb914aa6432a1cd582b986428d232788a64b023b16349a",
+      "value": 848
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2020_07.html",
+      "sha256": "4da25c397b84dece3bb61fe548f460389970eb4c5715545fb1f58396de2d406e",
+      "value": 1167
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2020_08.html",
+      "sha256": "e1c681f8c6764a2d68303de7cdc38d01e1ce5ca92f2b3d38b4bd3dd87c13104c",
+      "value": 1270
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2020_09.html",
+      "sha256": "396398c01afd443f8bd6d66a3c1baf51bde5bb4bf51a5bff235af38764263dde",
+      "value": 1010
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2020_10.html",
+      "sha256": "a070508bc97bd161727d95307f000f3b2133dd07a2d9b0b3af9b9b6423095318",
+      "value": 987
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2020_11.html",
+      "sha256": "d982871b3736d96b1a72d1212db1374c39c09e4610ffa3358b35aec5ac35a3e4",
+      "value": 879
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2020_12.html",
+      "sha256": "5e85975cc319a37166009b52a4bc7e08ab58599eb7a3eb948c7e3c19b7cec101",
+      "value": 1064
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2021_01.html",
+      "sha256": "28b1b5ddce1c08d677b5efdd54ecaea2f53eb1d97647ca047c09f2c016697092",
+      "value": 1205
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2021_02.html",
+      "sha256": "f1cc75fbdcaafa7c6054f6fbe4fa9ba2f5d88e0c3722a029af0aa17b49778b81",
+      "value": 1035
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2021_03.html",
+      "sha256": "a630f364f39ed9c120c88296de0de2e0c013a603d1f6ba70f4249f4291431e3c",
+      "value": 1260
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2021_04.html",
+      "sha256": "b8a48d1da1a0f05d8f72e0c659d2c981410c7941b6ffb9e905c827c3d67643a8",
+      "value": 1151
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2021_05.html",
+      "sha256": "b4d44993a14ca816c54cbf4e583979d29c24f979dd9d154416a258d986f81ef2",
+      "value": 1253
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2021_06.html",
+      "sha256": "3701d96e767e2b395e0b7244bcf4932e69c04837fa7501d334c127974153f4cf",
+      "value": 1290
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2021_07.html",
+      "sha256": "318283d26aec0900d64b68e9c3cf98049e4e5d5a7d1a3d7e934c57708fed004b",
+      "value": 1267
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2021_08.html",
+      "sha256": "bae78268994e63a64123ab5cf3bc169dc53c9467bd9865e0685ff05db99606c8",
+      "value": 1328
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2021_09.html",
+      "sha256": "6fa8d599ff05bd406710d1bdee314373427252df61c541b69cdb732afabe1db5",
+      "value": 1269
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2021_10.html",
+      "sha256": "58dfc24a18f097210cf1ce7e13608aac725144a526cd0c34cea06cbfc2ba7dce",
+      "value": 1192
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2021_11.html",
+      "sha256": "97300e510d2e93fd1a224c9b77dfc7f5bbf2fa2a80112f28269c09f0ead6000e",
+      "value": 1299
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2021_12.html",
+      "sha256": "a8ac390ef80032695f53d4e7bdb3761c33bd62f0a2ac8de10fbcbab7e26c0a58",
+      "value": 1558
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2022_01.html",
+      "sha256": "8707884c39f89a8b302d4b51bf22a1edadf23af0b549e884b21516e507828e39",
+      "value": 1418
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2022_02.html",
+      "sha256": "5a3682b07dafe75c954093a6a1f3b3a0b5e4b6ceddbc5557fd73cd140da6ec6d",
+      "value": 1406
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2022_03.html",
+      "sha256": "34e5091b0a39747f4c24206f32ad92f60154f95fe248ea5676f41f08e8e2a486",
+      "value": 1868
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2022_04.html",
+      "sha256": "946d28b76efc6a0af5279b23234c11648eec2e56f583b1e74131687b0cc2cc65",
+      "value": 1726
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2022_05.html",
+      "sha256": "f7078b8bcb1bf699f85aeb817bb0f27de0bac1beda0f84d82df3465c753658a0",
+      "value": 1522
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2022_06.html",
+      "sha256": "12e19e05277f74accf3f2b5cefb370280d1e79e6f829d955180eafbdb0203506",
+      "value": 1411
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2022_07.html",
+      "sha256": "1f17bc16e1c103d45193fbffb3d3b4d140bc98be87d414ae376cc052bc03246d",
+      "value": 1598
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2022_08.html",
+      "sha256": "d27d6d2a051818f535fbe00e56e403fecbb2bac16352d71a3210e8857c04156f",
+      "value": 1638
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2022_09.html",
+      "sha256": "20a30cd42330e52c34f964565d1d92ad57346d86bb85a187e3072a9220c52662",
+      "value": 1603
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2022_10.html",
+      "sha256": "a2e772b0d2284a956127234184aad83b4aae424cfd78185895f6a44dabe4a967",
+      "value": 1457
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2022_11.html",
+      "sha256": "87aa94708469894250c9145b80f899f7e94d3704458c6153638179c79e860556",
+      "value": 1420
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2022_12.html",
+      "sha256": "88d595a87ccb294c0436752fd4458aa702c86bbf4bf22e960a5704f5e341edfb",
+      "value": 1014
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2023_01.html",
+      "sha256": "a7a33d46c40cc7de6e98a1a9039fd6b34695c1da966def1082b7358d8d676d56",
+      "value": 1614
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2023_02.html",
+      "sha256": "53c57c8886e14f6d89057247475ba272e4c54934620ac7b744f6b1ff409c2fd6",
+      "value": 1446
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2023_03.html",
+      "sha256": "0f85be94168990c98022782ac1a43430ce4e0f868a109a5f8887ddc2e312b9f7",
+      "value": 1851
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2023_04.html",
+      "sha256": "787c932a250f52303278b7343d4ab412d6ac64a801635ddb174b8fc468f9ab9a",
+      "value": 1680
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2023_05.html",
+      "sha256": "33c9e381456fa4b5b69dd7aefb11656953efa5802a6305733a78103542bd4682",
+      "value": 1880
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2023_06.html",
+      "sha256": "184f308a71eb188cb9c1fb0f097b4c2069ac533c95af88873a18c372f1304d34",
+      "value": 1848
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2023_07.html",
+      "sha256": "6f17c067880ebbcd6d94aefbdfb6f2007b1444fa82ddb9cd2a20a990f4ee8739",
+      "value": 1887
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2023_08.html",
+      "sha256": "af11f683cf4cf75a146de258ece32a99c3c2e090aee593e9686bf4976777b536",
+      "value": 1836
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2023_09.html",
+      "sha256": "813d24409de2ee3adbbe503527e6fd1bc3f71cd3217bbb9d0783fa812acb6c8c",
+      "value": 1742
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2023_10.html",
+      "sha256": "4e8278aad200ba413603f0c06743c68efbb99e53d66d70805aa63223aa81a3e5",
+      "value": 1672
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2023_11.html",
+      "sha256": "00e100fa4bebd1c15bfacff8e859f1a530b3499c2befd039fad501fcfd73f1d7",
+      "value": 1709
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2023_12.html",
+      "sha256": "fa7e9f42fb4057dc60a6dc7604fb3615c71fedf483c840cfbe5af16c22cf895b",
+      "value": 1804
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_01.html",
+      "sha256": "321eda4feb1286f215e0f09c32630ca95eba7e1d409098997d4189b2bcd4690c",
+      "value": 1463
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_02.html",
+      "sha256": "61ee5e6c08c55531b1ad75fb56b80856d98a4ad79ffed1c9ad51d04a6af520ce",
+      "value": 1575
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_03.html",
+      "sha256": "a3e0186defb4bfa4b087357317b75436d7ed291bd8467d7107f0be2ce68d0229",
+      "value": 2048
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_04.html",
+      "sha256": "f8c1236c26497117500e36cdce6fd785c8ecf9f7564cc147f8f88ee6e3d50d4b",
+      "value": 2271
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_05.html",
+      "sha256": "9963b356c6f1d3b75e2cd148bd20028c627c826f7236bc9ec06f84f670c91d3f",
+      "value": 1991
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_06.html",
+      "sha256": "ca894c1fdc10ab580c181df41e66c0e506abaf42bc2a3c835a59f7e89d1e8776",
+      "value": 2123
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_07.html",
+      "sha256": "38389ab526f34748d78801581065052dd95cf5455026d723d080b80005e1206d",
+      "value": 1926
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_08.html",
+      "sha256": "cf1a573a276d20752370f103492eadca3ee1e193af32bd1b4f79bee68522eb30",
+      "value": 1945
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_09.html",
+      "sha256": "53d5028c91001145ab07b74a00d04a327112790ef32896a33dd611ed107c3a65",
+      "value": 1869
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_10.html",
+      "sha256": "ce8b9de1a9eb42c0bed236f31aea12cfd9741b66a8f2e65a9a2796f5ac4ac2af",
+      "value": 1802
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_11.html",
+      "sha256": "bcc3edd62842942cf699214ef672b1f9de5c3b8186af22bb2528b085c84a8504",
+      "value": 1692
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_12.html",
+      "sha256": "cdbfb9a94fa0b4f1cfb66a3f879e1176279d7a664cb8698eec2bcea0c780a654",
+      "value": 1908
+    }
+  ],
+  "status": "validated_structure_only_no_epidemiological_estimate"
+}

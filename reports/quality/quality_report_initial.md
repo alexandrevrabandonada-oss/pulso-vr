@@ -1,6 +1,6 @@
 # Relatório inicial de qualidade
 
-Execução: 2026-08-02T20:08:41+00:00
+Execução: 2026-08-02T20:30:09+00:00
 
 ## Escopo
 
@@ -8,18 +8,18 @@ Esta execução valida a estrutura, metadados, proveniência e amostras iniciais
 
 ## Arquivos brutos
 
-Arquivos brutos não auxiliares encontrados: **19**.
+Arquivos brutos não auxiliares encontrados: **67**.
 Todos os arquivos brutos presentes devem ter sidecar `.sha256`.
 
 ## Log de extração
 
-Entradas no log: **34**.
-Contagem por status: `{"complete": 1, "downloaded": 19, "failed": 1, "skipped_existing_verified": 13}`.
+Entradas no log: **154**.
+Contagem por status: `{"complete": 1, "downloaded": 67, "failed": 1, "skipped_existing_verified": 85}`.
 
 ## Achados e limites
 
 - O workspace inicial não continha dados ou documentação; a Fase 2 agora possui amostras oficiais versionadas por hash.
-- O endpoint FTP legado do SIH falhou na checagem de conectividade, mas a rota TabNet por residência foi executada para os 12 meses de 2024.
+- O endpoint FTP legado do SIH falhou na checagem de conectividade, mas a rota TabNet por residência foi executada para 60 meses entre 2020 e 2024.
 - O catálogo dinâmico de recursos SIM/SIVEP e os layouts observados foram preservados em metadata/.
 - A série SIH harmonizada em data/interim/ é descritiva e mantém o vínculo com cada resposta HTML bruta.
 - A reconciliação de totais oficiais ainda não foi executada.

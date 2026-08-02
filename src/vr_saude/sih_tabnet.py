@@ -188,7 +188,9 @@ def write_harmonized_series(root: Path, results: list[SihQueryResult]) -> tuple[
     if any(item.hospitalizations < 0 for item in results):
         raise ValueError("series contains negative hospitalization counts")
     ordered = sorted(results, key=lambda item: (item.year, item.month))
-    destination = root / "data" / "interim" / "sih_nrrj_monthly.csv"
+    destination = root / "data" / "interim" / (
+        f"sih_nrrj_monthly_{ordered[0].year}_{ordered[-1].year}.csv"
+    )
     destination.parent.mkdir(parents=True, exist_ok=True)
     fields = [
         "year",
@@ -237,6 +239,9 @@ def write_harmonized_series(root: Path, results: list[SihQueryResult]) -> tuple[
         for year, month in expected_periods
         if (year, month) not in counts
     ]
+    annual_totals: dict[str, int] = {}
+    for item in ordered:
+        annual_totals[str(item.year)] = annual_totals.get(str(item.year), 0) + item.hospitalizations
     report = {
         "source_id": "sih_tabnet_nrrj",
         "geography": "residência em Volta Redonda",
@@ -245,6 +250,7 @@ def write_harmonized_series(root: Path, results: list[SihQueryResult]) -> tuple[
         "period_end": f"{ordered[-1].year:04d}-{ordered[-1].month:02d}",
         "rows": len(ordered),
         "total_aggregated_events": sum(item.hospitalizations for item in ordered),
+        "annual_aggregated_events": annual_totals,
         "duplicate_periods": duplicate_periods,
         "missing_periods": missing_periods,
         "negative_values": [],

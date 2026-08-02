@@ -66,9 +66,10 @@ O catálogo atual dos recursos oficiais descobertos está em
 `metadata/discovered_resources_sivep.json`; os layouts observados estão em
 `metadata/layout_manifest.json`. A validação territorial está em
 `reports/quality/territory_code_validation.md`.
-A série mensal SIH harmonizada, sem alterar os arquivos brutos, fica em
-`data/interim/sih_nrrj_monthly.csv` e seu relatório em
-`reports/quality/sih_series_2024_2024.json`.
+A série mensal SIH harmonizada, sem alterar os arquivos brutos, fica em um
+arquivo nomeado por janela em `data/interim/`; a janela 2020–2024 está em
+`data/interim/sih_nrrj_monthly_2020_2024.csv` e seu relatório em
+`reports/quality/sih_series_2020_2024.json`.
 
 ## Princípios analíticos
 
