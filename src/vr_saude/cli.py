@@ -14,8 +14,10 @@ from .discovery import discover_resources, select_resource
 from .harmonize import harmonize_sources
 from .logging_utils import configure_logging
 from .layout_validation import write_layout_manifest
+from .population import acquire_population, harmonize_population
 from .provenance import sha256_file
 from .raw_validation import write_raw_validation_report
+from .rates import build_respiratory_rates
 from .reporting import write_respiratory_report
 from .sih_morbidity import query_morbidity_series
 from .sih_tabnet import query_residence, query_residence_series, save_query_response, write_harmonized_series
@@ -99,7 +101,11 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "metadata" / "discovered_resources_sim.json",
         root / "metadata" / "discovered_resources_sivep.json",
         root / "reports" / "quality" / "harmonization_manifest.json",
+        root / "reports" / "quality" / "population_denominator_manifest.json",
+        root / "reports" / "quality" / "respiratory_rates_manifest.json",
         root / "reports" / "technical" / "fase3_respiratorio.md",
+        root / "reports" / "technical" / "denominadores.md",
+        root / "reports" / "technical" / "taxas_respiratorias.md",
     ] + sorted((root / "reports" / "quality").glob("sih_series_*.json")) + sorted(
         (root / "reports" / "quality").glob("sih_morbidity_*.json")
     )
@@ -112,13 +118,17 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         for path in sorted((root / "data" / "raw").iterdir())
         if path.is_file() and not path.name.endswith(".sha256") and path.name not in {"README.md", ".gitkeep"}
     ]
+    derived_artifact_paths = [
+        *sorted((root / "data" / "interim").iterdir()),
+        *sorted((root / "data" / "processed").iterdir()),
+    ]
     derived_artifacts = [
         {
             "path": str(path.relative_to(root)),
             "bytes": path.stat().st_size,
             "sha256": sha256_file(path),
         }
-        for path in sorted((root / "data" / "interim").iterdir())
+        for path in derived_artifact_paths
         if path.is_file() and path.name not in {"README.md", ".gitkeep"}
     ]
     manifest = {
@@ -179,6 +189,22 @@ def _parser() -> argparse.ArgumentParser:
     subparsers.add_parser(
         "respiratory-report",
         help="write the reproducible descriptive SIH respiratory report",
+    )
+    population_acquire = subparsers.add_parser(
+        "population-acquire",
+        help="download official SIDRA population denominator payloads",
+    )
+    population_acquire.add_argument("--start-year", type=int, default=2008)
+    population_acquire.add_argument("--end-year", type=int, default=2025)
+    population_harmonize = subparsers.add_parser(
+        "population-harmonize",
+        help="filter SIDRA payloads to RJ and create denominator Parquet outputs",
+    )
+    population_harmonize.add_argument("--start-year", type=int, default=2008)
+    population_harmonize.add_argument("--end-year", type=int, default=2025)
+    subparsers.add_parser(
+        "respiratory-rates",
+        help="calculate crude annual respiratory rates with exact Poisson intervals",
     )
     discover = subparsers.add_parser("discover", help="save the current official resource catalog")
     discover.add_argument("--dataset", choices=("sim", "sivep"), required=True)
@@ -303,6 +329,40 @@ def main(argv: list[str] | None = None) -> int:
             print(f"ERROR: respiratory report failed: {exc}", file=sys.stderr)
             return 1
         print(f"Respiratory report: {report}")
+        return 0
+    if args.command == "population-acquire":
+        try:
+            paths = acquire_population(root, args.start_year, args.end_year)
+        except (OSError, ValueError, RuntimeError) as exc:
+            print(f"ERROR: population acquisition failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Population raw payloads: {len(paths)}")
+        for path in paths:
+            print(path)
+        return 0
+    if args.command == "population-harmonize":
+        try:
+            municipality, denominator, report = harmonize_population(
+                root,
+                args.start_year,
+                args.end_year,
+            )
+        except (OSError, ValueError, TypeError) as exc:
+            print(f"ERROR: population harmonization failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Population municipality Parquet: {municipality}")
+        print(f"Population denominator Parquet: {denominator}")
+        print(f"Population report: {report}")
+        return 0
+    if args.command == "respiratory-rates":
+        try:
+            output, manifest, report = build_respiratory_rates(root)
+        except (OSError, ValueError, TypeError, KeyError) as exc:
+            print(f"ERROR: respiratory rates failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Respiratory rates Parquet: {output}")
+        print(f"Respiratory rates manifest: {manifest}")
+        print(f"Respiratory rates report: {report}")
         return 0
     if args.command == "discover":
         resources = discover_resources(args.dataset)

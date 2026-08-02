@@ -4,6 +4,24 @@ Esta validação testa sidecar SHA-256 e integridade estrutural básica; não su
 
 | arquivo | bytes | hash | formato | status | detalhes |
 |---|---:|---|---|---|---|
+| ibge_sidra_6579_population_2008.json | 1508483 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2009.json | 1508496 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2010.json | 352 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2011.json | 1508555 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2012.json | 1508564 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2013.json | 1508611 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2014.json | 1508628 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2015.json | 1508639 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2016.json | 1508649 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2017.json | 1508646 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2018.json | 1508643 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2019.json | 1508658 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2020.json | 1508662 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2021.json | 1508660 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2023.json | 352 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2024.json | 1508654 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_6579_population_2025.json | 1508654 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_9514_population_2022.json | 2154653 | OK | OK | OK | {"json_type": "list"} |
 | ibge_sidra_9514_vr_2022.json | 945 | OK | OK | OK | {"json_type": "list"} |
 | sih_tabnet_nrrj_2008_01.html | 2436 | OK | OK | OK | {"source_label": true, "tabnet_title": true, "total_label": true} |
 | sih_tabnet_nrrj_2008_02.html | 2438 | OK | OK | OK | {"source_label": true, "tabnet_title": true, "total_label": true} |

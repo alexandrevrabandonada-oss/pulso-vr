@@ -37,8 +37,9 @@ município de ocorrência ou notificação.
 - A diferença de layout entre os anos do SIM exige dicionários por versão.
 - Os arquivos SIVEP estão sujeitos a revisão e devem ser tratados como versões
   datadas, sem misturar banco vivo e ano congelado sem decisão explícita.
-- Ainda falta reconciliar as contagens com tabulações oficiais e fechar o
-  denominador populacional anual/etário.
+- Ainda falta reconciliar as contagens com tabulações oficiais; o denominador
+  agregado está disponível para 2008–2025 quando a SIDRA fornece observação,
+  mas o denominador por idade/sexo e os anos ausentes continuam pendentes.
 - A série SIH já foi adquirida por TabNet para 221 competências; ainda falta
   reconciliação independente dos totais antes da liberação analítica.
 - A Lista Morb CID-10 do SIH foi adquirida para as mesmas 221 competências,

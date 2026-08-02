@@ -1,7 +1,7 @@
 {
   "project": "vr_saude_ambiental",
   "code_version": "0.1.0",
-  "run_at": "2026-08-02T21:25:09+00:00",
+  "run_at": "2026-08-02T21:58:06+00:00",
   "status": "preliminary_no_epidemiological_results",
   "inputs": [
     {
@@ -22,25 +22,25 @@
     },
     {
       "path": "metadata\\source_catalog.csv",
-      "sha256": "9309c0e69b576a917a500d85a423778443c75190a3b0a8daa7fbc9909c16329b"
+      "sha256": "806b00f4b95180ad3f5f48f5c75fcaa480e358eaed00d4ca1156580f16d40c00"
     },
     {
       "path": "metadata\\extraction_log.csv",
-      "sha256": "aec09cecd54cf788b03f435589254f174d798d33f37767eba78ae485bd5b4c09"
+      "sha256": "45512f857ad17888951e82a9483a94d372c6a746a0ee5104bada43f6ce91e0cb"
     }
   ],
   "outputs": [
     {
       "path": "reports\\quality\\quality_report_initial.md",
-      "sha256": "6568756547512993f705ab6c8b18278487c078bff801a9bb9e65be66aee908f0"
+      "sha256": "3583304b48089a954cc63c9480be5d56037e5bdad590ddbe508197b816f9a38a"
     },
     {
       "path": "reports\\quality\\raw_samples_validation.md",
-      "sha256": "e6f0d4b9386dd14fae183f5afa18d950949c51e2a55d80df66124382eb16b647"
+      "sha256": "0c34e2ae8da07f62ac773704a25aefaa9f379ed585b40128bece4944d0416747"
     },
     {
       "path": "reports\\quality\\raw_samples_validation.json",
-      "sha256": "2a29b209e34b3ebe7a9d5a7399eb7447aac77cd5ebd0eed3b21f6c0408eba632"
+      "sha256": "bf5a69f0095cbfa995d689eaf88f18d908a2fbe87971cdd5c6cfdd2de265b6e4"
     },
     {
       "path": "reports\\quality\\territory_code_validation.md",
@@ -67,8 +67,24 @@
       "sha256": "c9291b036be6448b8359fe7c94a48c74744f46824d91a131a369673a2c7ae0a8"
     },
     {
+      "path": "reports\\quality\\population_denominator_manifest.json",
+      "sha256": "4842ec9b61ea50dd9f8c867224f88120482b0457d64ec1607aedf0eeb23c3dd5"
+    },
+    {
+      "path": "reports\\quality\\respiratory_rates_manifest.json",
+      "sha256": "3bb9f074ece3be04db321704c52ec35b27b85803491c2201c6c26301c1bffe8b"
+    },
+    {
       "path": "reports\\technical\\fase3_respiratorio.md",
-      "sha256": "a59ea78ce10d65b084f3c0bf64a8e434aca0dd749789bcba02d3e2a24ecde57c"
+      "sha256": "eeaa88a2b027370460b12ce20b347ee747e4571aaadd029b819b18f0d0934a3c"
+    },
+    {
+      "path": "reports\\technical\\denominadores.md",
+      "sha256": "4dcf9ed0bb18ace67c50299708969601491036e4e6a78f1878b7d051a1b697f5"
+    },
+    {
+      "path": "reports\\technical\\taxas_respiratorias.md",
+      "sha256": "669f68b4ab58aec28ad0dcf5339d263290d7a583ff0ca642cf2b7dfb27cc6be0"
     },
     {
       "path": "reports\\quality\\sih_series_2008_2017.json",
@@ -104,6 +120,96 @@
     }
   ],
   "raw_samples": [
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2008.json",
+      "bytes": 1508483,
+      "sha256": "6ea98b8723d5130b06116f88ab7c2ae23f9ee9d036b4404264ef9e9184e57e8b"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2009.json",
+      "bytes": 1508496,
+      "sha256": "334db98a2e79906e988dd70eb2e31840c5519709658882c48baddff1575a23bc"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2010.json",
+      "bytes": 352,
+      "sha256": "18586c96f636c86a87a2458b60dc92b1835a31a56a8c62d2c9cc66e79bf7745d"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2011.json",
+      "bytes": 1508555,
+      "sha256": "6ac7722bfdd4fe1783ea41d1ba6fbe9916cf31729be1c15302ac3b34e0d56da1"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2012.json",
+      "bytes": 1508564,
+      "sha256": "95043c8946a0f212ba07f7d03d55ce7b7ba7056a12563fcb0ec188463d47323f"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2013.json",
+      "bytes": 1508611,
+      "sha256": "ea274e11be0eacc46bf934c9a8b5b1221cd138780b592def8f6705ed691ac0f2"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2014.json",
+      "bytes": 1508628,
+      "sha256": "fa7ca14ad730bde3702db10666ff8a69baec3ef8a314476097ab5eed90131a6e"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2015.json",
+      "bytes": 1508639,
+      "sha256": "738d7b6b75937006841381b013f81424c5e99b5c51408b2ce9359e4aa74eae71"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2016.json",
+      "bytes": 1508649,
+      "sha256": "450642fdcd5df6527d4eea35ef87d105ceb426c1ca89e79c8f9784e9fa7b89e7"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2017.json",
+      "bytes": 1508646,
+      "sha256": "fc96a3da1b0a34d0e804482e222f232f7f313b64eb806d22abe7727c32e6716d"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2018.json",
+      "bytes": 1508643,
+      "sha256": "7292d1e27252a8643bed6843a2b1d88e8f89e31ef8d63194c3c3d74c87c39603"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2019.json",
+      "bytes": 1508658,
+      "sha256": "be19701a33e42e7f15e9d520c5c533fecef03b8946f6f7750343ee6c59993c37"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2020.json",
+      "bytes": 1508662,
+      "sha256": "33899e1ad2871b6b1f4a55edeccc2521645e8ae2e8200a2850c155d9f85ffffd"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2021.json",
+      "bytes": 1508660,
+      "sha256": "67716657a6655b9d812cc40e3cf4fe3bea4fd6c8e380a353e3d7026e76abb150"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2023.json",
+      "bytes": 352,
+      "sha256": "18586c96f636c86a87a2458b60dc92b1835a31a56a8c62d2c9cc66e79bf7745d"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2024.json",
+      "bytes": 1508654,
+      "sha256": "4433c99286852a70a24c9eb8b5346d1709ea7c96be179533843b1857f24823b0"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_6579_population_2025.json",
+      "bytes": 1508654,
+      "sha256": "01f0ff6d9fe497e3966ef750158b4d2e6c4821c1866ad5f0f9d59e6873493c5a"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_9514_population_2022.json",
+      "bytes": 2154653,
+      "sha256": "64d49c1b89e279c448fee17f899b6c1618404a6194df5f3c40e5e7e06d4056e5"
+    },
     {
       "path": "data\\raw\\ibge_sidra_9514_vr_2022.json",
       "bytes": 945,
@@ -3520,6 +3626,21 @@
       "path": "data\\interim\\sivep_2020_harmonized.parquet",
       "bytes": 13975616,
       "sha256": "e6ee615ffa2c5c486067977b3ed22c2607c0c6c0eb383e8e85358f6b68f27db3"
+    },
+    {
+      "path": "data\\processed\\population_denominators.parquet",
+      "bytes": 7195,
+      "sha256": "0363ab5e56a15773eb483bbbfb993b612a629af79f3cb2ed1da5c789955d316e"
+    },
+    {
+      "path": "data\\processed\\population_rj_municipality.parquet",
+      "bytes": 17972,
+      "sha256": "8404f579875498adddecdb244df78603a67ebb410c611bc87bb2bb7dab5b7173"
+    },
+    {
+      "path": "data\\processed\\respiratory_rates_annual.parquet",
+      "bytes": 33070,
+      "sha256": "2a13bde7d697c685f663acd15935d8ee73242a96636e690a8e511f00eec686ed"
     }
   ],
   "results": [],

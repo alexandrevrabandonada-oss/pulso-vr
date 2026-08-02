@@ -58,6 +58,9 @@ python scripts/run_cli.py sih-series --start-year 2024 --start-month 1 --end-yea
 python scripts/run_cli.py sih-morbidity --start-year 2008 --start-month 1 --end-year 2017 --end-month 12
 python scripts/run_cli.py sih-morbidity --start-year 2018 --start-month 1 --end-year 2026 --end-month 5
 python scripts/run_cli.py respiratory-report
+python scripts/run_cli.py population-acquire --start-year 2008 --end-year 2025
+python scripts/run_cli.py population-harmonize --start-year 2008 --end-year 2025
+python scripts/run_cli.py respiratory-rates
 python scripts/run_cli.py harmonize --source all
 ```
 
@@ -81,6 +84,14 @@ como zero.
 A harmonização inicial SIM/SIVEP por nome de campo é gravada somente em
 `data/interim/`; o manifesto correspondente fica em
 `reports/quality/harmonization_manifest.json`.
+Os denominadores populacionais agregados são harmonizados a partir das tabelas
+SIDRA 6579 e 9514 em `data/processed/`, com manifesto em
+`reports/quality/population_denominator_manifest.json`. Anos sem observação
+oficial permanecem ausentes e não são interpolados.
+As primeiras taxas brutas anuais, com IC exato de Poisson, são gravadas em
+`data/processed/respiratory_rates_annual.parquet`. Apenas anos com 12 meses
+SIH e denominador disponível entram no cálculo; isso ainda não é padronização
+por idade nem análise causal.
 Também está disponível a primeira série respiratória agregada do SIH em
 `data/interim/sih_morbidity_2008_2017.csv` e
 `data/interim/sih_morbidity_2018_2026.csv`, com o relatório técnico em

@@ -84,8 +84,8 @@ def write_respiratory_report(root: Path) -> Path:
                 "",
                 "- A Lista Morb é uma agregação oficial do TabNet; o dicionário CID e a "
                 "reconciliação com totais independentes ainda devem ser fechados.",
-                "- O denominador populacional por ano, idade e sexo ainda não foi integrado; "
-                "portanto nenhuma razão de taxas ou intervalo de confiança é liberado.",
+                "- O denominador populacional agregado já pode ser integrado; idade/sexo, taxas "
+                "específicas e intervalos de confiança ainda não são liberados.",
                 "- SIH é uma contagem de internações/AIH e não deve ser interpretado como "
                 "número de indivíduos.",
                 "- 2025–2026-05 permanece provisório conforme a atualização do TabNet.",

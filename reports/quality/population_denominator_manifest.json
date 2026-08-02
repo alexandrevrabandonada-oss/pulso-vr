@@ -1,0 +1,205 @@
+{
+  "generated_at": "2026-08-02T21:53:11+00:00",
+  "status": "validated_denominators_no_rates",
+  "requested_years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "available_years": [
+    2008,
+    2009,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2024,
+    2025
+  ],
+  "missing_years": [
+    2010,
+    2023
+  ],
+  "municipality": {
+    "source_by_year": {
+      "2008": "annual_estimate",
+      "2009": "annual_estimate",
+      "2011": "annual_estimate",
+      "2012": "annual_estimate",
+      "2013": "annual_estimate",
+      "2014": "annual_estimate",
+      "2015": "annual_estimate",
+      "2016": "annual_estimate",
+      "2017": "annual_estimate",
+      "2018": "annual_estimate",
+      "2019": "annual_estimate",
+      "2020": "annual_estimate",
+      "2021": "annual_estimate",
+      "2022": "census_2022",
+      "2024": "annual_estimate",
+      "2025": "annual_estimate"
+    },
+    "missing_payload_years": [
+      2010,
+      2023
+    ],
+    "input_files": [
+      {
+        "year": 2008,
+        "path": "data\\raw\\ibge_sidra_6579_population_2008.json",
+        "sha256": "6ea98b8723d5130b06116f88ab7c2ae23f9ee9d036b4404264ef9e9184e57e8b",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2009,
+        "path": "data\\raw\\ibge_sidra_6579_population_2009.json",
+        "sha256": "334db98a2e79906e988dd70eb2e31840c5519709658882c48baddff1575a23bc",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2011,
+        "path": "data\\raw\\ibge_sidra_6579_population_2011.json",
+        "sha256": "6ac7722bfdd4fe1783ea41d1ba6fbe9916cf31729be1c15302ac3b34e0d56da1",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2012,
+        "path": "data\\raw\\ibge_sidra_6579_population_2012.json",
+        "sha256": "95043c8946a0f212ba07f7d03d55ce7b7ba7056a12563fcb0ec188463d47323f",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2013,
+        "path": "data\\raw\\ibge_sidra_6579_population_2013.json",
+        "sha256": "ea274e11be0eacc46bf934c9a8b5b1221cd138780b592def8f6705ed691ac0f2",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2014,
+        "path": "data\\raw\\ibge_sidra_6579_population_2014.json",
+        "sha256": "fa7ca14ad730bde3702db10666ff8a69baec3ef8a314476097ab5eed90131a6e",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2015,
+        "path": "data\\raw\\ibge_sidra_6579_population_2015.json",
+        "sha256": "738d7b6b75937006841381b013f81424c5e99b5c51408b2ce9359e4aa74eae71",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2016,
+        "path": "data\\raw\\ibge_sidra_6579_population_2016.json",
+        "sha256": "450642fdcd5df6527d4eea35ef87d105ceb426c1ca89e79c8f9784e9fa7b89e7",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2017,
+        "path": "data\\raw\\ibge_sidra_6579_population_2017.json",
+        "sha256": "fc96a3da1b0a34d0e804482e222f232f7f313b64eb806d22abe7727c32e6716d",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2018,
+        "path": "data\\raw\\ibge_sidra_6579_population_2018.json",
+        "sha256": "7292d1e27252a8643bed6843a2b1d88e8f89e31ef8d63194c3c3d74c87c39603",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2019,
+        "path": "data\\raw\\ibge_sidra_6579_population_2019.json",
+        "sha256": "be19701a33e42e7f15e9d520c5c533fecef03b8946f6f7750343ee6c59993c37",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2020,
+        "path": "data\\raw\\ibge_sidra_6579_population_2020.json",
+        "sha256": "33899e1ad2871b6b1f4a55edeccc2521645e8ae2e8200a2850c155d9f85ffffd",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2021,
+        "path": "data\\raw\\ibge_sidra_6579_population_2021.json",
+        "sha256": "67716657a6655b9d812cc40e3cf4fe3bea4fd6c8e380a353e3d7026e76abb150",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2022,
+        "path": "data\\raw\\ibge_sidra_9514_population_2022.json",
+        "sha256": "64d49c1b89e279c448fee17f899b6c1618404a6194df5f3c40e5e7e06d4056e5",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2024,
+        "path": "data\\raw\\ibge_sidra_6579_population_2024.json",
+        "sha256": "4433c99286852a70a24c9eb8b5346d1709ea7c96be179533843b1857f24823b0",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2025,
+        "path": "data\\raw\\ibge_sidra_6579_population_2025.json",
+        "sha256": "01f0ff6d9fe497e3966ef750158b4d2e6c4821c1866ad5f0f9d59e6873493c5a",
+        "rows_in_rj": 92
+      }
+    ],
+    "duplicate_keys": 0,
+    "invalid_codes": [],
+    "rows": 1472,
+    "path": "data\\processed\\population_rj_municipality.parquet",
+    "sha256": "8404f579875498adddecdb244df78603a67ebb410c611bc87bb2bb7dab5b7173"
+  },
+  "denominator": {
+    "municipality_count_by_year": {
+      "2008": 92,
+      "2009": 92,
+      "2011": 92,
+      "2012": 92,
+      "2013": 92,
+      "2014": 92,
+      "2015": 92,
+      "2016": 92,
+      "2017": 92,
+      "2018": 92,
+      "2019": 92,
+      "2020": 92,
+      "2021": 92,
+      "2022": 92,
+      "2024": 92,
+      "2025": 92
+    },
+    "missing_vr_years": [],
+    "incomplete_years": [],
+    "rows": 48,
+    "path": "data\\processed\\population_denominators.parquet",
+    "sha256": "0363ab5e56a15773eb483bbbfb993b612a629af79f3cb2ed1da5c789955d316e"
+  },
+  "notes": [
+    "2022 is sourced from SIDRA table 9514 Censo population resident, total sex and total age.",
+    "Other requested years use SIDRA table 6579 resident population estimates when available.",
+    "Missing years are explicit and are not interpolated or replaced by zero.",
+    "The rest-of-RJ comparator excludes IBGE code 3306305 by construction.",
+    "No age-specific denominator or epidemiological rate is produced by this step."
+  ]
+}

@@ -1,6 +1,6 @@
 # Fase 3 — primeira série respiratória do SIH
 
-Execução: 2026-08-02T21:25:07+00:00
+Execução: 2026-08-02T21:58:05+00:00
 
 ## Escopo
 
@@ -50,6 +50,6 @@ O produto é descritivo e estrutural. Não representa pessoas únicas, casos nov
 ## Limites para a análise seguinte
 
 - A Lista Morb é uma agregação oficial do TabNet; o dicionário CID e a reconciliação com totais independentes ainda devem ser fechados.
-- O denominador populacional por ano, idade e sexo ainda não foi integrado; portanto nenhuma razão de taxas ou intervalo de confiança é liberado.
+- O denominador populacional agregado já pode ser integrado; idade/sexo, taxas específicas e intervalos de confiança ainda não são liberados.
 - SIH é uma contagem de internações/AIH e não deve ser interpretado como número de indivíduos.
 - 2025–2026-05 permanece provisório conforme a atualização do TabNet.
