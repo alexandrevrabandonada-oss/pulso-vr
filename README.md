@@ -9,8 +9,11 @@ Volta Redonda, Rio de Janeiro.
 O workspace original estava vazio, sem bases, documentos ou commits. A
 estrutura das Fases 0–1 foi criada, com protocolo preliminar, matriz de
 perguntas, catálogo de fontes, configurações, validações automatizadas e
-downloaders idempotentes. Ainda não há resultado epidemiológico: nenhuma
-hipótese é considerada confirmada.
+downloaders idempotentes. A Fase 2 já validou a descoberta dinâmica no portal
+oficial, adquiriu amostras SIM 2010/2020/2024 e SIVEP 2019/2020 e confirmou o
+código DATASUS de residência de Volta Redonda. Ainda não há resultado
+epidemiológico: a rota SIH foi exercitada em um mês, mas nenhuma hipótese é
+considerada confirmada.
 
 ## Comparação e períodos
 
@@ -29,6 +32,9 @@ câncer; 2025–2026 ou 2025 em diante são provisórios conforme a fonte.
 python -m venv .venv
 python -m pip install -e .[dev]
 python scripts/run_cli.py validate
+python scripts/run_cli.py validate-raw
+python scripts/run_cli.py validate-layout
+python scripts/run_cli.py validate-territories
 python scripts/run_cli.py all
 python -m pytest -q
 ```
@@ -47,11 +53,18 @@ As aquisições públicas são feitas por comandos idempotentes. Exemplos:
 python scripts/run_cli.py acquire --source ibge_9514_vr_2022
 python scripts/run_cli.py acquire --source sim_2024_csv
 python scripts/run_cli.py acquire --source sivep_2019_parquet
+python scripts/run_cli.py sih-query --year 2024 --month 1
 ```
 
 Cada arquivo baixado permanece em `data/raw/`, recebe um arquivo `.sha256` e
 é registrado em `metadata/extraction_log.csv`. A aquisição nunca substitui um
 arquivo bruto sem validação explícita.
+
+O catálogo atual dos recursos oficiais descobertos está em
+`metadata/discovered_resources_sim.json` e
+`metadata/discovered_resources_sivep.json`; os layouts observados estão em
+`metadata/layout_manifest.json`. A validação territorial está em
+`reports/quality/territory_code_validation.md`.
 
 ## Princípios analíticos
 
@@ -82,9 +95,9 @@ requests/               LAI, ética e parcerias
 
 ## Limitações atuais
 
-O endpoint FTP legado do SIH não respondeu durante a validação inicial. O
-projeto mantém a página oficial de transferência e o TabNet como alternativas
-auditáveis, mas a cobertura mensal integral do SIH só será liberada depois de
+O endpoint FTP legado do SIH não respondeu durante a validação inicial. A rota
+TabNet por residência foi automatizada e testada para um mês, mas a cobertura
+mensal integral do SIH só será liberada depois de iterar os arquivos e
 reconciliar os totais com a fonte oficial. Ainda faltam, entre outros, dados
 históricos de qualidade do ar em resolução diária, registros de câncer,
 cobertura de planos privados e dados ocupacionais legalmente acessíveis.

@@ -1,7 +1,7 @@
 {
   "project": "vr_saude_ambiental",
   "code_version": "0.1.0",
-  "run_at": "2026-08-02T18:33:15+00:00",
+  "run_at": "2026-08-02T19:22:01+00:00",
   "status": "preliminary_no_epidemiological_results",
   "inputs": [
     {
@@ -22,17 +22,87 @@
     },
     {
       "path": "metadata\\source_catalog.csv",
-      "sha256": "b94eeb7a35bc060defc21a3ef8c43396c4ed305a8b5ed2fd1ab41c0ddaae8049"
+      "sha256": "9309c0e69b576a917a500d85a423778443c75190a3b0a8daa7fbc9909c16329b"
     },
     {
       "path": "metadata\\extraction_log.csv",
-      "sha256": "98a6fc6390a5660616da8f8287b0ad27e281ce419472df2e735697c02267f44c"
+      "sha256": "28f251c0372a737bd477c1af368ffe79596fb7d82cb7dc604ec77f64a6c50abe"
     }
   ],
   "outputs": [
     {
       "path": "reports\\quality\\quality_report_initial.md",
-      "sha256": "b4504e25753e023418eeb20c0b558f27f7386b7f8d18cf58b28ec26ccbc81e5b"
+      "sha256": "8934c5d086bc2e1570acc38dc80c935a5a34155554959dc9affaee489b6ae22a"
+    },
+    {
+      "path": "reports\\quality\\raw_samples_validation.md",
+      "sha256": "e36fbbf05542888c3dc2c19ebab6d59a61d0a4efcaa194c89362fdc9465e76a2"
+    },
+    {
+      "path": "reports\\quality\\raw_samples_validation.json",
+      "sha256": "0066975a4a5c335605c0cc9eed02768a547a1ecb05431db6c678bb3af73c1c4a"
+    },
+    {
+      "path": "reports\\quality\\territory_code_validation.md",
+      "sha256": "ddba6d8863d0084284306d88fda4954f6c71fcac65b89566a907a62762b3cc5b"
+    },
+    {
+      "path": "reports\\quality\\territory_code_validation.json",
+      "sha256": "73d12465afd7660bb46b2e92a9a309d76228d857ff9ec729565b4f81bc145936"
+    },
+    {
+      "path": "metadata\\layout_manifest.json",
+      "sha256": "0cf6843f6eba33f1833f40571e6d9278a8cafe7e1feddee794af602780541151"
+    },
+    {
+      "path": "metadata\\discovered_resources_sim.json",
+      "sha256": "6d0783d0cb82233463ab1b1fdd318d5c0732bf7d018273ba466f8b575c17827a"
+    },
+    {
+      "path": "metadata\\discovered_resources_sivep.json",
+      "sha256": "5948b89b492d085b5beb62917dc9e30d421d92e581013799049abd19f7b4c632"
+    }
+  ],
+  "raw_samples": [
+    {
+      "path": "data\\raw\\ibge_sidra_9514_vr_2022.json",
+      "bytes": 945,
+      "sha256": "a9967cedd8616ac8cb51d979b91d11ab2a1cac739edf73a6a43a918fabe05d2a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_2024_01.html",
+      "bytes": 2438,
+      "sha256": "321eda4feb1286f215e0f09c32630ca95eba7e1d409098997d4189b2bcd4690c"
+    },
+    {
+      "path": "data\\raw\\sim_2010_Mortalidade_Geral_2010_csv.zip",
+      "bytes": 45277062,
+      "sha256": "304e577de1e87f5f0eb8db9af3e8550722679a61758d7cb86b3744462d25fdc9"
+    },
+    {
+      "path": "data\\raw\\sim_2020_Mortalidade_Geral_2020_csv.zip",
+      "bytes": 91585111,
+      "sha256": "ac626dff18876eaa572f724966fb05cd5f42529fc6bdd5507ce5dfbd08146142"
+    },
+    {
+      "path": "data\\raw\\sim_mortalidade_geral_2024_csv.zip",
+      "bytes": 98076266,
+      "sha256": "13db250c90908e85d1ef9fb9cd7caa08583fb1912108b0f3260605aca0e9b787"
+    },
+    {
+      "path": "data\\raw\\sivep_2020_INFLUD20-23-03-2026.parquet",
+      "bytes": 87148508,
+      "sha256": "371723b91c0e4de1ae4067c8a6ee04887430869fa8d3c561d4b9106fb89e0c0b"
+    },
+    {
+      "path": "data\\raw\\sivep_srag_2019_2026-03-23.parquet",
+      "bytes": 3447406,
+      "sha256": "748519f593d4438b94ba781320ec127e473594853a6aa25a90ef1c18338e761a"
+    },
+    {
+      "path": "data\\raw\\sivep_srag_dicionario_2019_2025.pdf",
+      "bytes": 1052922,
+      "sha256": "6b92d438cf1cab28cd3719a7bcc48df3c269cf271f7c8181e334db2e849a0e35"
     }
   ],
   "results": [],

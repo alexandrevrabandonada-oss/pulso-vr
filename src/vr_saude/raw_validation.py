@@ -49,6 +49,17 @@ def validate_raw_file(path: Path) -> dict[str, Any]:
             header = path.read_bytes()[:5]
             result["format_ok"] = header == b"%PDF-"
             result["format_details"] = {"header": header.decode("ascii", errors="replace")}
+        elif suffix in {".html", ".htm"}:
+            text = path.read_text(encoding="latin1", errors="replace")
+            markers = {
+                "tabnet_title": "TabNet Win32" in text,
+                "total_label": '"Total"' in text,
+                "source_label": "Sistema de Informações Hospitalares" in text,
+            }
+            result["format_ok"] = all(markers.values())
+            result["format_details"] = markers
+            if not result["format_ok"]:
+                result["errors"].append("unexpected_tabnet_html_markers")
         elif suffix == ".parquet":
             import pyarrow.parquet as pq
 

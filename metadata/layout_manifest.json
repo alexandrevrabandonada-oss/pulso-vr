@@ -1,0 +1,101 @@
+[
+  {
+    "path": "data\\raw\\sim_2010_Mortalidade_Geral_2010_csv.zip",
+    "source": "SIM",
+    "format": "ZIP",
+    "members": [
+      {
+        "member": "Mortalidade_Geral_2010.csv",
+        "delimiter": ";",
+        "columns": 56,
+        "required_fields_present": [
+          "CAUSABAS",
+          "CODMUNRES",
+          "IDADE",
+          "SEXO"
+        ],
+        "missing_required_fields": []
+      }
+    ],
+    "ok": true,
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sim_2020_Mortalidade_Geral_2020_csv.zip",
+    "source": "SIM",
+    "format": "ZIP",
+    "members": [
+      {
+        "member": "Mortalidade_Geral_2020.csv",
+        "delimiter": ";",
+        "columns": 87,
+        "required_fields_present": [
+          "CAUSABAS",
+          "CODMUNRES",
+          "IDADE",
+          "SEXO"
+        ],
+        "missing_required_fields": []
+      }
+    ],
+    "ok": true,
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sim_mortalidade_geral_2024_csv.zip",
+    "source": "SIM",
+    "format": "ZIP",
+    "members": [
+      {
+        "member": "DO24OPEN.csv",
+        "delimiter": ";",
+        "columns": 88,
+        "required_fields_present": [
+          "CAUSABAS",
+          "CODMUNRES",
+          "IDADE",
+          "SEXO"
+        ],
+        "missing_required_fields": []
+      }
+    ],
+    "ok": true,
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sivep_2020_INFLUD20-23-03-2026.parquet",
+    "source": "SIVEP",
+    "format": "PARQUET",
+    "ok": true,
+    "errors": [],
+    "rows": 1206920,
+    "columns": 194,
+    "required_fields_present": [
+      "CLASSI_FIN",
+      "CO_MUN_RES",
+      "CS_SEXO",
+      "DT_SIN_PRI",
+      "EVOLUCAO",
+      "NU_IDADE_N"
+    ],
+    "missing_required_fields": []
+  },
+  {
+    "path": "data\\raw\\sivep_srag_2019_2026-03-23.parquet",
+    "source": "SIVEP",
+    "format": "PARQUET",
+    "ok": true,
+    "errors": [],
+    "rows": 48941,
+    "columns": 194,
+    "required_fields_present": [
+      "CLASSI_FIN",
+      "CO_MUN_RES",
+      "CS_SEXO",
+      "DT_SIN_PRI",
+      "EVOLUCAO",
+      "NU_IDADE_N"
+    ],
+    "missing_required_fields": []
+  }
+]

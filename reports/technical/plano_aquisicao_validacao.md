@@ -20,8 +20,12 @@ Cobertura planejada: AIH reduzida de residentes no RJ, mês a mês, 2008–2026.
 
 - Rota primária: página DATASUS de Transferência de Arquivos, fonte SIHSUS,
   modalidade Dados, tipo RD - AIH Reduzida.
-- Rota alternativa: TabNet de Morbidade Hospitalar por local de residência e
-  notas técnicas.
+- Rota alternativa executável: definição oficial
+  `sih/cnv/nrrj` e POST em `tabcgi.exe`, com município de residência e arquivo
+  mensal selecionados na própria definição. O comando
+  `python scripts/run_cli.py sih-query --year 2024 --month 1` foi testado e
+  preservou a resposta HTML com hash; retornou 1.463 internações para
+  Volta Redonda em janeiro de 2024.
 - Rota FTP legada testada em 2026-08-02: falhou por ausência de resposta do
   host. O resultado está em metadata/extraction_log.csv; não é convertido em
   zero nem em indisponibilidade definitiva.
@@ -37,8 +41,12 @@ Cobertura planejada: óbitos de residentes no RJ, 2010–2025 para câncer e
 controles desde 2008 quando disponível.
 
 - Rota primária: Portal de Dados Abertos do SUS, base SIM.
-- Amostra adquirida: Mortalidade Geral 2024, ZIP oficial, íntegro, com
-  DO24OPEN.csv e separador ;.
+- Amostras adquiridas: Mortalidade Geral 2010, 2020 e 2024, ZIPs oficiais,
+  íntegros, com separador ;. Os recursos de 2010 e 2020 foram selecionados
+  automaticamente a partir do catálogo atual da página oficial e registrados
+  em metadata/discovered_resources_sim.json.
+- A inspeção inicial encontrou 56 colunas em 2010, 87 em 2020 e 88 em 2024;
+  a harmonização deve ser feita por dicionário, nunca por posição de coluna.
 - Validação: dicionário, CODMUNRES, data, sexo, idade, causa básica e causas
   múltiplas; classificar ano como definitivo, preliminar ou prévia.
 - Reconciliação: comparar contagens de residentes de VR e RJ com TabNet e
@@ -66,10 +74,12 @@ municípios do RJ.
 Cobertura planejada: 2019–2026, separando anos congelados e banco vivo.
 
 - Rota primária: Portal de Dados Abertos do SUS, base SRAG 2019–2026.
-- Amostras adquiridas: dicionário 2019–2025 e Parquet 2019.
-- Validação: Parquet íntegro, 48.941 linhas, 194 colunas; presentes campos de
-  município de notificação e residência, sexo, idade, início de sintomas,
-  classificação final e evolução.
+- Amostras adquiridas: dicionário 2019–2025 e Parquet 2019 e 2020. Os recursos
+  anuais foram selecionados automaticamente a partir do catálogo atual e
+  registrados em metadata/discovered_resources_sivep.json.
+- Validação: Parquet íntegro, 194 colunas; 48.941 linhas em 2019 e 1.206.920
+  em 2020; presentes campos de município de notificação e residência, sexo,
+  idade, início de sintomas, classificação final e evolução.
 - Normalização: padronizar códigos de município, datas e classificações de
   vírus por versão do dicionário, sem comparar diretamente campos inexistentes
   em anos anteriores.

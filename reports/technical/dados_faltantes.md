@@ -8,7 +8,8 @@
   publicamente disponíveis e indicação de definitivo/preliminar.
 - População anual por município e, para taxas específicas, série compatível de
   idade e sexo; confirmar estratégia de denominador mensal.
-- SIVEP dos anos 2020–2026 e dicionários das versões correspondentes.
+- SIVEP completo dos anos 2021–2026, além dos dicionários e versões
+  correspondentes; 2019 e 2020 já têm amostras Parquet validadas.
 
 ## Necessários para pandemia e poluição
 

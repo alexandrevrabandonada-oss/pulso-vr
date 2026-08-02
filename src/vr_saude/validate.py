@@ -4,7 +4,7 @@ import csv
 from pathlib import Path
 from typing import Iterable
 
-from .config import load_config, load_yaml, project_root
+from .config import load_config, project_root
 
 
 REQUIRED_DIRS = [

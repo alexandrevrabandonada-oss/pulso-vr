@@ -16,11 +16,16 @@ anexado foi a única especificação recebida.
 - data/raw/sim_mortalidade_geral_2024_csv.zip: ZIP oficial do SIM 2024; ZIP
   íntegro, contendo DO24OPEN.csv separado por ponto e vírgula; SHA-256
   registrado.
+- data/raw/sim_2010_Mortalidade_Geral_2010_csv.zip e
+  data/raw/sim_2020_Mortalidade_Geral_2020_csv.zip: ZIPs oficiais descobertos
+  pelo catálogo dinâmico do SIM; SHA-256 registrado.
 - data/raw/sivep_srag_dicionario_2019_2025.pdf: dicionário oficial; cabeçalho
   PDF válido; SHA-256 registrado.
 - data/raw/sivep_srag_2019_2026-03-23.parquet: amostra SIVEP 2019; 48.941
   linhas, 194 colunas e grupo de campos territoriais, sexo, idade, início de
   sintomas, classificação final e evolução presentes; SHA-256 registrado.
+- data/raw/sivep_2020_INFLUD20-23-03-2026.parquet: amostra SIVEP 2020; 1.206.920
+  linhas, 194 colunas e campos mínimos presentes; SHA-256 registrado.
 
 ## O que não foi encontrado/adquirido
 
