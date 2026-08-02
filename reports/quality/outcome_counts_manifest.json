@@ -1,0 +1,98 @@
+{
+  "generated_at": "2026-08-02T22:12:41+00:00",
+  "status": "interim_outcome_counts_no_incidence_estimate",
+  "rows": 1988,
+  "outcome_ids": [
+    "acute_bronchitis_bronchiolitis",
+    "all_malignant_neoplasms",
+    "asthma",
+    "colorectal",
+    "copd",
+    "covid19",
+    "influenza",
+    "leukemia",
+    "lung",
+    "non_hodgkin_lymphoma",
+    "pneumoconiosis",
+    "pneumonia",
+    "prostate",
+    "resp_all",
+    "srag"
+  ],
+  "input_file_count": 5,
+  "residence_rj_rows": 574221,
+  "residence_vr_rows": 8800,
+  "input_files": [
+    {
+      "source": "SIM",
+      "source_year": 2010,
+      "input_path": "data\\raw\\sim_2010_Mortalidade_Geral_2010_csv.zip",
+      "input_sha256": "304e577de1e87f5f0eb8db9af3e8550722679a61758d7cb86b3744462d25fdc9",
+      "harmonized_path": "data\\interim\\sim_2010_harmonized.parquet",
+      "harmonized_sha256": "749d287e037bae31fa7fc3d3e8c5760c3ec1edc8096cf120eeed6276a9993328",
+      "rows": 1136947,
+      "residence_rj_rows": 127536,
+      "residence_vr_rows": 1962
+    },
+    {
+      "source": "SIM",
+      "source_year": 2020,
+      "input_path": "data\\raw\\sim_2020_Mortalidade_Geral_2020_csv.zip",
+      "input_sha256": "ac626dff18876eaa572f724966fb05cd5f42529fc6bdd5507ce5dfbd08146142",
+      "harmonized_path": "data\\interim\\sim_2020_harmonized.parquet",
+      "harmonized_sha256": "d2fa96b160b2ef84be0bb40977912319d69a8d3f4ce6c6972ed91f1b7f7b6db1",
+      "rows": 1556824,
+      "residence_rj_rows": 172185,
+      "residence_vr_rows": 2704
+    },
+    {
+      "source": "SIM",
+      "source_year": 2024,
+      "input_path": "data\\raw\\sim_mortalidade_geral_2024_csv.zip",
+      "input_sha256": "13db250c90908e85d1ef9fb9cd7caa08583fb1912108b0f3260605aca0e9b787",
+      "harmonized_path": "data\\interim\\sim_2024_harmonized.parquet",
+      "harmonized_sha256": "ae0969906883b23d48645a7de6dbf64a3c87289e487a5a67b3abbbc4326ea4e5",
+      "rows": 1532015,
+      "residence_rj_rows": 148156,
+      "residence_vr_rows": 2493
+    },
+    {
+      "source": "SIVEP-SRAG",
+      "source_year": 2019,
+      "input_path": "data\\raw\\sivep_srag_2019_2026-03-23.parquet",
+      "input_sha256": "748519f593d4438b94ba781320ec127e473594853a6aa25a90ef1c18338e761a",
+      "harmonized_path": "data\\interim\\sivep_2019_harmonized.parquet",
+      "harmonized_sha256": "462776c0188faa490418629a21380863ea479cac0605f0a77efdb7ae3ffc2281",
+      "rows": 48941,
+      "residence_rj_rows": 2426,
+      "residence_vr_rows": 116
+    },
+    {
+      "source": "SIVEP-SRAG",
+      "source_year": 2020,
+      "input_path": "data\\raw\\sivep_2020_INFLUD20-23-03-2026.parquet",
+      "input_sha256": "371723b91c0e4de1ae4067c8a6ee04887430869fa8d3c561d4b9106fb89e0c0b",
+      "harmonized_path": "data\\interim\\sivep_2020_harmonized.parquet",
+      "harmonized_sha256": "bb0fb1a7525633bc7b4e70db1992533408792d3d872f2a0933fb6582b267c607",
+      "rows": 1206920,
+      "residence_rj_rows": 123918,
+      "residence_vr_rows": 1525
+    }
+  ],
+  "output_path": "data\\processed\\outcome_counts_sim_sivep.parquet",
+  "output_sha256": "dcb9afc265b8c9b9933319f7f35dcb3b6475e3ba056cf815897f9dd53b09c6f8",
+  "rules": {
+    "sim": "underlying_cause classified by CID-10 ranges from config/outcomes.yml",
+    "sivep_srag": "all eligible SIVEP records",
+    "sivep_influenza": "CLASSI_FIN=1",
+    "sivep_covid19": "CLASSI_FIN=5",
+    "territory": "residence code beginning 33; VR=330630; rest RJ excludes VR"
+  },
+  "notes": [
+    "SIM records are deaths, not incident cancer or respiratory cases.",
+    "SIVEP records are surveillance notifications, not population incidence.",
+    "Age groups are broad and use TP_IDADE for SIVEP; no age-specific rates are calculated here.",
+    "Counts below five are suppressed in the technical presentation, not in the internal Parquet.",
+    "No causal interpretation is authorized."
+  ]
+}

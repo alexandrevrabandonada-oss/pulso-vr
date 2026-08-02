@@ -1,7 +1,7 @@
 {
   "project": "vr_saude_ambiental",
   "code_version": "0.1.0",
-  "run_at": "2026-08-02T21:58:06+00:00",
+  "run_at": "2026-08-02T22:14:21+00:00",
   "status": "preliminary_no_epidemiological_results",
   "inputs": [
     {
@@ -32,7 +32,7 @@
   "outputs": [
     {
       "path": "reports\\quality\\quality_report_initial.md",
-      "sha256": "3583304b48089a954cc63c9480be5d56037e5bdad590ddbe508197b816f9a38a"
+      "sha256": "ad5c4ee7c44ad4395763b55dd37d71cb83e7ece5d151affbdcbbf1c88094543f"
     },
     {
       "path": "reports\\quality\\raw_samples_validation.md",
@@ -64,7 +64,7 @@
     },
     {
       "path": "reports\\quality\\harmonization_manifest.json",
-      "sha256": "c9291b036be6448b8359fe7c94a48c74744f46824d91a131a369673a2c7ae0a8"
+      "sha256": "ebd3e60a72163d56e7fe4cc9579715ad852eedeaf950ed231b195b7f730c4c4e"
     },
     {
       "path": "reports\\quality\\population_denominator_manifest.json",
@@ -75,8 +75,12 @@
       "sha256": "3bb9f074ece3be04db321704c52ec35b27b85803491c2201c6c26301c1bffe8b"
     },
     {
+      "path": "reports\\quality\\outcome_counts_manifest.json",
+      "sha256": "8d1991b600f70dfd42dabe43fcb13a600df841a90ef47c9675b8d170f3890fcc"
+    },
+    {
       "path": "reports\\technical\\fase3_respiratorio.md",
-      "sha256": "eeaa88a2b027370460b12ce20b347ee747e4571aaadd029b819b18f0d0934a3c"
+      "sha256": "560cb7e20a3e336dbbe2c0c76ba6e9742a34f85f03d6831e2812737214962785"
     },
     {
       "path": "reports\\technical\\denominadores.md",
@@ -85,6 +89,10 @@
     {
       "path": "reports\\technical\\taxas_respiratorias.md",
       "sha256": "669f68b4ab58aec28ad0dcf5339d263290d7a583ff0ca642cf2b7dfb27cc6be0"
+    },
+    {
+      "path": "reports\\technical\\desfechos_sim_sivep.md",
+      "sha256": "37d61b1a76603601b7f649d6792bc64965e45885d87ab4d33ca6b13f910968cb"
     },
     {
       "path": "reports\\quality\\sih_series_2008_2017.json",
@@ -3619,13 +3627,18 @@
     },
     {
       "path": "data\\interim\\sivep_2019_harmonized.parquet",
-      "bytes": 553937,
-      "sha256": "e3146e7b96c428b2f22fed47f77bd0ae7676e2ff899382d7c8dba7ac8e7e3675"
+      "bytes": 561697,
+      "sha256": "462776c0188faa490418629a21380863ea479cac0605f0a77efdb7ae3ffc2281"
     },
     {
       "path": "data\\interim\\sivep_2020_harmonized.parquet",
-      "bytes": 13975616,
-      "sha256": "e6ee615ffa2c5c486067977b3ed22c2607c0c6c0eb383e8e85358f6b68f27db3"
+      "bytes": 14011391,
+      "sha256": "bb0fb1a7525633bc7b4e70db1992533408792d3d872f2a0933fb6582b267c607"
+    },
+    {
+      "path": "data\\processed\\outcome_counts_sim_sivep.parquet",
+      "bytes": 15046,
+      "sha256": "dcb9afc265b8c9b9933319f7f35dcb3b6475e3ba056cf815897f9dd53b09c6f8"
     },
     {
       "path": "data\\processed\\population_denominators.parquet",

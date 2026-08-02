@@ -25,7 +25,7 @@ SIM_OPTIONAL = {
     "TIPOBITO",
     "STDOEPIDEM",
 }
-SIVEP_OPTIONAL = {"CO_MUN_NOT", "CS_RACA", "CS_GESTANT", "DT_EVOLUCA", "DT_NOTIFIC"}
+SIVEP_OPTIONAL = {"CO_MUN_NOT", "CS_RACA", "CS_GESTANT", "DT_EVOLUCA", "DT_NOTIFIC", "TP_IDADE"}
 
 
 def _vr_code(root: Path) -> str:
@@ -191,6 +191,7 @@ def _sivep_batches(path: Path, root: Path, vr_code: str, batch_size: int) -> Ite
             "CS_GESTANT",
             "DT_EVOLUCA",
             "DT_NOTIFIC",
+            "TP_IDADE",
         }
         & fields
     )
@@ -201,6 +202,7 @@ def _sivep_batches(path: Path, root: Path, vr_code: str, batch_size: int) -> Ite
         normalized["municipality_code_notification"] = _string_series(chunk, "CO_MUN_NOT", len(chunk))
         normalized["sex_raw"] = _string_series(chunk, "CS_SEXO", len(chunk))
         normalized["age_raw"] = _string_series(chunk, "NU_IDADE_N", len(chunk))
+        normalized["age_unit_raw"] = _string_series(chunk, "TP_IDADE", len(chunk))
         normalized["symptom_onset_date"] = _date_series(chunk, "DT_SIN_PRI", len(chunk))
         normalized["notification_date"] = _date_series(chunk, "DT_NOTIFIC", len(chunk))
         normalized["outcome_date"] = _date_series(chunk, "DT_EVOLUCA", len(chunk))

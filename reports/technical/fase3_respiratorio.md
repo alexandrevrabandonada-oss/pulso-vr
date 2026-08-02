@@ -1,6 +1,6 @@
 # Fase 3 — primeira série respiratória do SIH
 
-Execução: 2026-08-02T21:58:05+00:00
+Execução: 2026-08-02T22:14:20+00:00
 
 ## Escopo
 

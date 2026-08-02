@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T21:05:18+00:00",
+  "generated_at": "2026-08-02T22:07:49+00:00",
   "status": "interim_harmonization_no_epidemiological_estimate",
   "source_filter": "all",
   "results": [
@@ -626,7 +626,7 @@
       ],
       "optional_fields_absent": [],
       "output_path": "data\\interim\\sivep_2020_harmonized.parquet",
-      "output_sha256": "e6ee615ffa2c5c486067977b3ed22c2607c0c6c0eb383e8e85358f6b68f27db3",
+      "output_sha256": "bb0fb1a7525633bc7b4e70db1992533408792d3d872f2a0933fb6582b267c607",
       "rows": 1206920,
       "residence_vr_rows": 1525,
       "columns": [
@@ -640,6 +640,7 @@
         "municipality_code_notification",
         "sex_raw",
         "age_raw",
+        "age_unit_raw",
         "symptom_onset_date",
         "notification_date",
         "outcome_date",
@@ -660,6 +661,7 @@
           "municipality_code_notification": 5789,
           "sex_raw": 0,
           "age_raw": 0,
+          "age_unit_raw": 0,
           "symptom_onset_date": 0,
           "notification_date": 0,
           "outcome_date": 152891,
@@ -877,7 +879,7 @@
       ],
       "optional_fields_absent": [],
       "output_path": "data\\interim\\sivep_2019_harmonized.parquet",
-      "output_sha256": "e3146e7b96c428b2f22fed47f77bd0ae7676e2ff899382d7c8dba7ac8e7e3675",
+      "output_sha256": "462776c0188faa490418629a21380863ea479cac0605f0a77efdb7ae3ffc2281",
       "rows": 48941,
       "residence_vr_rows": 116,
       "columns": [
@@ -891,6 +893,7 @@
         "municipality_code_notification",
         "sex_raw",
         "age_raw",
+        "age_unit_raw",
         "symptom_onset_date",
         "notification_date",
         "outcome_date",
@@ -911,6 +914,7 @@
           "municipality_code_notification": 42,
           "sex_raw": 0,
           "age_raw": 0,
+          "age_unit_raw": 0,
           "symptom_onset_date": 0,
           "notification_date": 0,
           "outcome_date": 7811,

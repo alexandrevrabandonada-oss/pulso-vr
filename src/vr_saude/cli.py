@@ -14,6 +14,7 @@ from .discovery import discover_resources, select_resource
 from .harmonize import harmonize_sources
 from .logging_utils import configure_logging
 from .layout_validation import write_layout_manifest
+from .outcomes import build_outcome_counts
 from .population import acquire_population, harmonize_population
 from .provenance import sha256_file
 from .raw_validation import write_raw_validation_report
@@ -103,9 +104,11 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "reports" / "quality" / "harmonization_manifest.json",
         root / "reports" / "quality" / "population_denominator_manifest.json",
         root / "reports" / "quality" / "respiratory_rates_manifest.json",
+        root / "reports" / "quality" / "outcome_counts_manifest.json",
         root / "reports" / "technical" / "fase3_respiratorio.md",
         root / "reports" / "technical" / "denominadores.md",
         root / "reports" / "technical" / "taxas_respiratorias.md",
+        root / "reports" / "technical" / "desfechos_sim_sivep.md",
     ] + sorted((root / "reports" / "quality").glob("sih_series_*.json")) + sorted(
         (root / "reports" / "quality").glob("sih_morbidity_*.json")
     )
@@ -205,6 +208,10 @@ def _parser() -> argparse.ArgumentParser:
     subparsers.add_parser(
         "respiratory-rates",
         help="calculate crude annual respiratory rates with exact Poisson intervals",
+    )
+    subparsers.add_parser(
+        "outcome-counts",
+        help="classify SIM CID-10 and SIVEP outcomes by residence",
     )
     discover = subparsers.add_parser("discover", help="save the current official resource catalog")
     discover.add_argument("--dataset", choices=("sim", "sivep"), required=True)
@@ -363,6 +370,16 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Respiratory rates Parquet: {output}")
         print(f"Respiratory rates manifest: {manifest}")
         print(f"Respiratory rates report: {report}")
+        return 0
+    if args.command == "outcome-counts":
+        try:
+            output, manifest, report = build_outcome_counts(root)
+        except (OSError, ValueError, TypeError, KeyError) as exc:
+            print(f"ERROR: outcome classification failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Outcome counts Parquet: {output}")
+        print(f"Outcome counts manifest: {manifest}")
+        print(f"Outcome counts report: {report}")
         return 0
     if args.command == "discover":
         resources = discover_resources(args.dataset)

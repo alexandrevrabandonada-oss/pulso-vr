@@ -61,6 +61,7 @@ python scripts/run_cli.py respiratory-report
 python scripts/run_cli.py population-acquire --start-year 2008 --end-year 2025
 python scripts/run_cli.py population-harmonize --start-year 2008 --end-year 2025
 python scripts/run_cli.py respiratory-rates
+python scripts/run_cli.py outcome-counts
 python scripts/run_cli.py harmonize --source all
 ```
 
@@ -92,6 +93,10 @@ As primeiras taxas brutas anuais, com IC exato de Poisson, são gravadas em
 `data/processed/respiratory_rates_annual.parquet`. Apenas anos com 12 meses
 SIH e denominador disponível entram no cálculo; isso ainda não é padronização
 por idade nem análise causal.
+Os desfechos classificados do SIM e SIVEP ficam em
+`data/processed/outcome_counts_sim_sivep.parquet`. SIM representa óbitos; SIVEP
+representa vigilância de SRAG, não incidência populacional. A apresentação
+suprime células menores que cinco.
 Também está disponível a primeira série respiratória agregada do SIH em
 `data/interim/sih_morbidity_2008_2017.csv` e
 `data/interim/sih_morbidity_2018_2026.csv`, com o relatório técnico em
