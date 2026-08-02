@@ -1,7 +1,7 @@
 {
   "project": "vr_saude_ambiental",
   "code_version": "0.1.0",
-  "run_at": "2026-08-02T21:07:04+00:00",
+  "run_at": "2026-08-02T21:25:09+00:00",
   "status": "preliminary_no_epidemiological_results",
   "inputs": [
     {
@@ -26,21 +26,21 @@
     },
     {
       "path": "metadata\\extraction_log.csv",
-      "sha256": "beb9acfaf81b86b895df65355d6ac8a7cb3a5e3620993dbf9eb79fa159e94724"
+      "sha256": "aec09cecd54cf788b03f435589254f174d798d33f37767eba78ae485bd5b4c09"
     }
   ],
   "outputs": [
     {
       "path": "reports\\quality\\quality_report_initial.md",
-      "sha256": "61bacfb6870f15330dd202981bc9ede4f8137548b7d376c4546d24040ac4bee5"
+      "sha256": "6568756547512993f705ab6c8b18278487c078bff801a9bb9e65be66aee908f0"
     },
     {
       "path": "reports\\quality\\raw_samples_validation.md",
-      "sha256": "0a9340609d52f75a097828f35623ecf0e453d292e40bc216ea4ed2590bb690db"
+      "sha256": "e6f0d4b9386dd14fae183f5afa18d950949c51e2a55d80df66124382eb16b647"
     },
     {
       "path": "reports\\quality\\raw_samples_validation.json",
-      "sha256": "91aa86aa3549e7b47e5ac0a78a3c5a9f5612d70044799e4c282ab3a4ae2f214b"
+      "sha256": "2a29b209e34b3ebe7a9d5a7399eb7447aac77cd5ebd0eed3b21f6c0408eba632"
     },
     {
       "path": "reports\\quality\\territory_code_validation.md",
@@ -67,6 +67,10 @@
       "sha256": "c9291b036be6448b8359fe7c94a48c74744f46824d91a131a369673a2c7ae0a8"
     },
     {
+      "path": "reports\\technical\\fase3_respiratorio.md",
+      "sha256": "a59ea78ce10d65b084f3c0bf64a8e434aca0dd749789bcba02d3e2a24ecde57c"
+    },
+    {
       "path": "reports\\quality\\sih_series_2008_2017.json",
       "sha256": "309dcc520de6d06986b94cb6a5e011a78df3dcbf9c2404c5266bbe811c93a152"
     },
@@ -85,6 +89,18 @@
     {
       "path": "reports\\quality\\sih_series_2025_2026.json",
       "sha256": "9adf0ba898ada46d1ee0c0ccc162a2f9ec00f99950f07d80936fcc63d35959dd"
+    },
+    {
+      "path": "reports\\quality\\sih_morbidity_2008_2017.json",
+      "sha256": "be2b78cd5d463c0e6e2a808396d01134883d928277bb00f6e0e4c4047765bc22"
+    },
+    {
+      "path": "reports\\quality\\sih_morbidity_2018_2026.json",
+      "sha256": "87db6258eb2f59e61d62dc51bb2b2c544b0fad9150dc53295cf1e86daff4bcea"
+    },
+    {
+      "path": "reports\\quality\\sih_morbidity_2024_2024.json",
+      "sha256": "29bb15ae8db6808b2dba02796fa00c237ddccdef7db4465745e4ddf900fb71af"
     }
   ],
   "raw_samples": [
@@ -1199,6 +1215,2216 @@
       "sha256": "b56e88ad4f48536ae8b92eeae53d668171694e79ab7ec9d83f33a9dc8bb75f53"
     },
     {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2008_01.html",
+      "bytes": 20567,
+      "sha256": "9500b6453dbb8832dff4778a022e6f97a206f9b7d8404f8f771be6f027bd20a3"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2008_02.html",
+      "bytes": 20598,
+      "sha256": "bd2a36806e58f196a314f1e8f720b1f8dcd7873a582a3d00d085ba7090c7e419"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2008_03.html",
+      "bytes": 20662,
+      "sha256": "7a6d5c5bf59c447c538611a6e56522f3ea357e9c3b8d64915487f12886e6c4d5"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2008_04.html",
+      "bytes": 20635,
+      "sha256": "af790cfab2eba10c1e39c61e4e290788f2f50f61d27df26fd885fae48e5ede54"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2008_05.html",
+      "bytes": 20644,
+      "sha256": "e94dfec6483f5090c75855ad599fabe250ba7b69a26c3aa93f5ae5a60801b811"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2008_06.html",
+      "bytes": 20662,
+      "sha256": "2343566c666bfee941c43d727f9a9f6265e8e85f50c47a76211d9ce77445fc55"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2008_07.html",
+      "bytes": 20659,
+      "sha256": "cd7d8b0e2d4f8b11de8f1e37c88c186a2f7240ebdd642319cb3b46871898ffc8"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2008_08.html",
+      "bytes": 20668,
+      "sha256": "ece6cbba5c032617dd95e49d1f5d62c21fc33c1d3e7f4e7d2f198eabf6a350c1"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2008_09.html",
+      "bytes": 20670,
+      "sha256": "324bcf6312a79ffaf98631cf4117c6e03a6cc30ee5cc1a65e17bcc5fbdeca1e2"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2008_10.html",
+      "bytes": 20658,
+      "sha256": "41e52b952cb551c7595773564da24e92a808167fb8ab32af72d38c72d6fa8066"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2008_11.html",
+      "bytes": 20638,
+      "sha256": "0bf64ddd0719b340e717e4fbf68762d861f7f3594ba7c581633cd0d998b35d3d"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2008_12.html",
+      "bytes": 20646,
+      "sha256": "776a1300b99ebc24f2e511417c6a1c5e94fca1b06c55eb22bdb29ef33f1435ac"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2009_01.html",
+      "bytes": 20636,
+      "sha256": "0db2a0f9f47d2edb155761275185bd0c0f2381dffaba831dd967ca01c4c38341"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2009_02.html",
+      "bytes": 20638,
+      "sha256": "d29bbd172cd3980e3f8123c0b818cee31aabca46cc04ff6ceb1fbaaeaecd765b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2009_03.html",
+      "bytes": 20648,
+      "sha256": "16493f6cc7c4c4c1b96e3a8bf929d768fb1fc0d4f576efab1b0289f7a9be5357"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2009_04.html",
+      "bytes": 20646,
+      "sha256": "10d8e24ecf26c6c299270208c559f0f0b009accff50e4f445fc041ba79adfb2a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2009_05.html",
+      "bytes": 20656,
+      "sha256": "4150176e22d2b0053736a723fdedf1dd5d88cea5605b15ca31dc928bfbff43a9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2009_06.html",
+      "bytes": 20652,
+      "sha256": "dea61a8af610b110e4909c18de8ccc68cf63f873d285440e1d9cc2e69868b123"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2009_07.html",
+      "bytes": 20652,
+      "sha256": "ed3fd664524d00b683118bfb3e0398415165159f71dbc3af3eebbb1d5f5f3d67"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2009_08.html",
+      "bytes": 20652,
+      "sha256": "a3c7e327c42bf2125643b631ae6b30127e4ec052c60907c429e9f739889551ef"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2009_09.html",
+      "bytes": 20645,
+      "sha256": "c74438e06507e7e2d43b2bde0e894e1fefff0269d0d0fd6c08deea41716b7ddd"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2009_10.html",
+      "bytes": 20645,
+      "sha256": "475c186ac5a3ae0f20c054cf80aa14626f875e7bfe4f8464bb795e3bc8ee03c8"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2009_11.html",
+      "bytes": 20640,
+      "sha256": "4d7b3a3cd9605b3045cf258d5f734f7bc3f8b12672b435ed3b21d9e2828208d6"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2009_12.html",
+      "bytes": 20633,
+      "sha256": "cd7a16c470ef386b4a3dc3553970a186171594773eaa51c33f5190f234063156"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2010_01.html",
+      "bytes": 20638,
+      "sha256": "2c59b4d737f082c55b96694764aaee14a7f1d7241854f01865792666866a1443"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2010_02.html",
+      "bytes": 20646,
+      "sha256": "f5edca31974591d8a0037574007ccac2ace9a86c577afa3453911670b09b5b48"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2010_03.html",
+      "bytes": 20656,
+      "sha256": "8dbf47ab8d63fd98414b7cc0971d0dddf5341c93895b558fd4acc2852042228c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2010_04.html",
+      "bytes": 20657,
+      "sha256": "182b4ff62b52ca4612915c3aae2589ef7941ea734bc9624a5130695a2082fd5a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2010_05.html",
+      "bytes": 20658,
+      "sha256": "d5c789d6fd951008f892bb4d7d5d2d30ec402ff878bce9ba678d4d3963040fd2"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2010_06.html",
+      "bytes": 20654,
+      "sha256": "88dc47b13739afa8535fd1465a86c8b23412295f113403f72d69dd105b1e1da0"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2010_07.html",
+      "bytes": 20666,
+      "sha256": "d2183821d2b694d16b70ce21af47c725bca187eb1680ac4362dd422a48302766"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2010_08.html",
+      "bytes": 20666,
+      "sha256": "1812c43a1efb465e724d8920ecc29d55cb167e7af5703036a869ec2dba6b06cd"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2010_09.html",
+      "bytes": 20646,
+      "sha256": "b3aa873502d16b1137ee0580cb4016174e7a6e9a5a3838b26adb1c1bb599ecf2"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2010_10.html",
+      "bytes": 20654,
+      "sha256": "f13344491153aa7de60527f449bc22114c2f78f979cddf332b23f3bce6fc4185"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2010_11.html",
+      "bytes": 20655,
+      "sha256": "929650b8bba52c78bd18b1e80805ced85856c93822eb6133ff0b9d4e116272ec"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2010_12.html",
+      "bytes": 20654,
+      "sha256": "2e3bb7ebc753271b035e054481581e0f8289864dca0176d95d06c78897adf0f9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2011_01.html",
+      "bytes": 20647,
+      "sha256": "39876df4147613a69f0c376bae8fab71a89c83099b6f96e88bf75ae4835b7a2a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2011_02.html",
+      "bytes": 20656,
+      "sha256": "befca3ef520d859846c92d7a5d3c4087bf12c30ee8778ba4c7646abda7dd2278"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2011_03.html",
+      "bytes": 20659,
+      "sha256": "b4ed6870b40c5f3264b45268fd4287445583de046400f1edb8199be1227c232f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2011_04.html",
+      "bytes": 20662,
+      "sha256": "8135db09e2d6c698ced020a4f712bcadd66a6aba6913f009c4d22372bf588c26"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2011_05.html",
+      "bytes": 20669,
+      "sha256": "69c5fc5150fade9e83ff2b6bc8262849f95dddda0bc80d233630a33ee0c854d3"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2011_06.html",
+      "bytes": 20653,
+      "sha256": "f2631c8a0dc39196165f4438ce5a08a361b2810d1d63e34ca66c1aeb7b0534fd"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2011_07.html",
+      "bytes": 20649,
+      "sha256": "966a6eb2eeab2c37e96720d4f2e3fcc738b95094a9365a7c177caf2d04a5954f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2011_08.html",
+      "bytes": 20664,
+      "sha256": "724fac16a19b4ac9c5597b516954c2472a610f0ee64f6d31a5f07af67300ae8e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2011_09.html",
+      "bytes": 20654,
+      "sha256": "86a3b5dd3602643254448fc562b93c963b621f6356cfc6a5319d3ac8c19a6aeb"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2011_10.html",
+      "bytes": 20652,
+      "sha256": "455e224f4ca6a23034ad2ce42d33e9cd325567ce775fbc24d5a4b5c4362ad437"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2011_11.html",
+      "bytes": 20655,
+      "sha256": "0c41a4c58735b432a31d613099e7e8350ac7caf378c61fd092f510aa6ab32b15"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2011_12.html",
+      "bytes": 20647,
+      "sha256": "1168397667102ea97ddde9f8568131456ac68ddd9800e6bb299dd9f44b02abc9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2012_01.html",
+      "bytes": 20642,
+      "sha256": "57c3a4750457353506c106a1905798db0f058c0704c1039d56c0049e6e9b0995"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2012_02.html",
+      "bytes": 20634,
+      "sha256": "71a812cac75a2d38178765f3e5d14d55d7d55231f09c56a8fe6e45547661ace0"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2012_03.html",
+      "bytes": 20664,
+      "sha256": "3fb8873c21cc1cbccf40ab326bf6e8e6dae9b1cf245b5c6431315fe081c65e35"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2012_04.html",
+      "bytes": 20659,
+      "sha256": "c641609a2ffb1339361defccd332b5631f33960d22554c153cb82d02a48bf93b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2012_05.html",
+      "bytes": 20660,
+      "sha256": "3c1a4b7fcb925e69e171cbc3cd29dde5929aa8c94795d2c43400dde03ecbd0ca"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2012_06.html",
+      "bytes": 20657,
+      "sha256": "cccd573f5baa9d814440209c5dfd0aa73b90d915937fe21e93f71da5257e57e1"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2012_07.html",
+      "bytes": 20662,
+      "sha256": "4d8aa5f4343d5f8d8e8e28cdf6d986f63cb938fc461578ce10f811fb4d211c7b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2012_08.html",
+      "bytes": 20668,
+      "sha256": "fce5eefef0542f002837f295c7eccaf4a92757d9ea5570ec8538a79601d8b3cd"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2012_09.html",
+      "bytes": 20658,
+      "sha256": "dd664aa89959370a056a92dbe445b8102610548e1f5e0b97afca893b947e648b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2012_10.html",
+      "bytes": 20654,
+      "sha256": "f6a2b1903d3ca9005cefcf8a7337dc06c34ea05edc1ae61d51ee6a17a04d521e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2012_11.html",
+      "bytes": 20640,
+      "sha256": "a6d270b3fde79a202f42660ae4e40fa778c3b1eb6a425ebb5e247cc0dd60ecef"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2012_12.html",
+      "bytes": 20638,
+      "sha256": "d46b915a1d0f5eb9ee18254735baedb005d8eef362305ea18d22c03a67ead742"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2013_01.html",
+      "bytes": 20651,
+      "sha256": "4c4829f7a716a1ec0ea2e9d9b119776be25f5ddb213c52db34f6494cc2805814"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2013_02.html",
+      "bytes": 20637,
+      "sha256": "88748a003dc7945ec9b6b4305a7b63592faab56997b855d512f75a35d7ba1439"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2013_03.html",
+      "bytes": 20655,
+      "sha256": "4aac87d7a35c83af7b47d7c31706baa0e755e0d7965c136cb3351475901732ab"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2013_04.html",
+      "bytes": 20651,
+      "sha256": "4a81b738f41a0c83e67eead70d90f41665789db0c7a4687f6ced35afda983000"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2013_05.html",
+      "bytes": 20654,
+      "sha256": "bd14211a7a30c71135a309805e3262c7ea233161c21d7de96ef8b695df06bd1e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2013_06.html",
+      "bytes": 20646,
+      "sha256": "39d819d3e4a726321c187ebae8c17fd47a6bd6657d485dc02f92127ecf8dc849"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2013_07.html",
+      "bytes": 20663,
+      "sha256": "9740a08106ba404715e080b567d0ee26bcbe6c30e5dd757d1551928603ec1eac"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2013_08.html",
+      "bytes": 20657,
+      "sha256": "54dde0c759b2b18492727d786a3effa3880dd1f9890d7c41f723e9017d97afc6"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2013_09.html",
+      "bytes": 20648,
+      "sha256": "8cf831ce61e8883c45514b45f29b8ab2d2c958f647513ca8d722c5d066324759"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2013_10.html",
+      "bytes": 20661,
+      "sha256": "4b5e52ad6f43be1f308e925177252edd063f95c1772e7622ff2aa25298566ecf"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2013_11.html",
+      "bytes": 20648,
+      "sha256": "770a8538c354af3f3dda82d114b85b6e5cb56e585598e6385ce53c3186a96b84"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2013_12.html",
+      "bytes": 20641,
+      "sha256": "65236e6fc3333eafb9390c9fb790d6b828b2c4f8a9bf49727cf7ab69e082c8e8"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2014_01.html",
+      "bytes": 20650,
+      "sha256": "bf27bf5ab5def962e01245e7c27b824508c79e6aafec0f4d6e1eda5d2c9d8243"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2014_02.html",
+      "bytes": 20651,
+      "sha256": "849466edcd93ea753a0398db7fc1bab598a06231bd2a7a84e997d5de2a0258e9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2014_03.html",
+      "bytes": 20643,
+      "sha256": "ec1dc2f19cefb66ef6efc5e8f86a0c747a2014b7e7b0284b824b71192aa9787c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2014_04.html",
+      "bytes": 20639,
+      "sha256": "6cdd6c3bd5e673e91cbb95f0b2c81823c524fae44da820462834dd7ce26d8579"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2014_05.html",
+      "bytes": 20643,
+      "sha256": "7d837b7699f6a9088aa288d86a5c9d62edd0c711ab8e27288d7da8de3c2e9731"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2014_06.html",
+      "bytes": 20638,
+      "sha256": "d7f1b380ed2a7227b5c6131b78ac02f74c7653eff1e5830cb0c92fbffce2afcc"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2014_07.html",
+      "bytes": 20658,
+      "sha256": "a1ed194d5d160ec6531d268aa65681265bd444900b654f6665685ef9d23e9f0c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2014_08.html",
+      "bytes": 20663,
+      "sha256": "43ecb31edb859ffd3babcec327a08d89884aebfc10af1c23bf31802ecd9bf979"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2014_09.html",
+      "bytes": 20657,
+      "sha256": "86902781fa905ec5a465fb1f94e93b0de54e3b7621a68fa6696fffed8d75d0d8"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2014_10.html",
+      "bytes": 20663,
+      "sha256": "1531018080ae5cf2c9e8f6e79bf1a98cafe623b67c63c0221f7de95822123ecb"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2014_11.html",
+      "bytes": 20655,
+      "sha256": "358ec7631372a34b7c2aaa6f387c97b39304a8825927668fcde66c132fc414e6"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2014_12.html",
+      "bytes": 20644,
+      "sha256": "353b8bdd0e0d820b45b50ee450f2a45d66768eddfb1a2cdd8e0959847d5015b9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2015_01.html",
+      "bytes": 20645,
+      "sha256": "4efc891e46407957d22de456998d821a4325968a34cd253e0f00109f27e61319"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2015_02.html",
+      "bytes": 20644,
+      "sha256": "3ebbc0cf184c62ab255fbd07149ff074fb601e62e96a82ce9f81bbcf6d9b1b62"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2015_03.html",
+      "bytes": 20670,
+      "sha256": "54e1868d69944608115142f0e01f6962a5b1a3d36f4dce8746f208e3ae2ba9c2"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2015_04.html",
+      "bytes": 20649,
+      "sha256": "efe35bc4aedb1f8fb776bace45a772143bde39d83b4fac40cb519b101cf7f3b4"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2015_05.html",
+      "bytes": 20656,
+      "sha256": "f987305713741f5db41e5e021a6338059fb21d3cc76b5ae183e6a6b9a3cd92a8"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2015_06.html",
+      "bytes": 20660,
+      "sha256": "60c64d55004ed4cfa2dc972f37a8be5fea0cb207603bff38a1bb5efa846b9d1b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2015_07.html",
+      "bytes": 20670,
+      "sha256": "997997672bbe59fe01bef3c6c96ab2b85d71a96d915e3a8346ee014f5d6d9857"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2015_08.html",
+      "bytes": 20664,
+      "sha256": "600619d7ee8ae7808e04e6ae5653ee9773e3709cf9bd912b1d1ba3d170ae7df9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2015_09.html",
+      "bytes": 20662,
+      "sha256": "53e2b037603e336907976e2c617d1b936ba10fee5cc0c3aac4a28cb9191433c0"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2015_10.html",
+      "bytes": 20668,
+      "sha256": "ff8dccbd8739db5b9a0d81b6c7d5d7f5204c535b0ec7bec76dd356bcc9f793ec"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2015_11.html",
+      "bytes": 20657,
+      "sha256": "9409afc45a92977a1b2b1bf4ff7de80005a6ea00e38bfe1be2ca0b23d756b8d3"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2015_12.html",
+      "bytes": 20652,
+      "sha256": "f0c4431593f9928d2da7fa7575d4448102b207e526e8e0a5c9468efa7818fa35"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2016_01.html",
+      "bytes": 20651,
+      "sha256": "c0eb098f8a8c8726e949c1dbc197415286d2f3325e88a1a34f216ddf70d1ba26"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2016_02.html",
+      "bytes": 20648,
+      "sha256": "112108be42c3564c41522afd4d4c86a4599784e0b909fce9ef3f7078b1afd2ae"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2016_03.html",
+      "bytes": 20662,
+      "sha256": "217a0a0879a5ffefc44c6359beac0598a3d9073d832254030ba9a5503d5184a6"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2016_04.html",
+      "bytes": 20654,
+      "sha256": "64073586f4075e818c82e783140b542c92675d87efa83cba33447c4e657a33e6"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2016_05.html",
+      "bytes": 20647,
+      "sha256": "48e8d744fceef43294d9da18bc748d12d067d26d9ee1575da97fdb1d4461bdab"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2016_06.html",
+      "bytes": 20650,
+      "sha256": "17cbfdead6bb64bc8932d7fa132d332f34d7122adf8a8682f7a538cd35ed018a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2016_07.html",
+      "bytes": 20651,
+      "sha256": "9fc961ebca739623afce4e5a12fb0c1d0517655805b13c3ba0abfc46163ebb22"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2016_08.html",
+      "bytes": 20657,
+      "sha256": "df3870ac88a1c8030d1991fdffb43753aa62aa7783aa20aa48ad066eb4136fbe"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2016_09.html",
+      "bytes": 20645,
+      "sha256": "29e2d21a84ebd257a8e301a53d1e6a57ea050c14fc65f2131dba667df0eadd50"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2016_10.html",
+      "bytes": 20643,
+      "sha256": "5a4414292fd076eadb53772e2f2fdb4b155d6e1b76547d436a3e5ce61853aaac"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2016_11.html",
+      "bytes": 20643,
+      "sha256": "7d680a13c2bb1bedf87890c484979d96fa2bf6c369077ef780de5601e1f79833"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2016_12.html",
+      "bytes": 20650,
+      "sha256": "b35241dddeba31d62ba7ed9c47b21ddaae96439243e495fab86b18ea89dbffc7"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2017_01.html",
+      "bytes": 20643,
+      "sha256": "85945c21267c94e8001dcfd55083b0a4e6ecbb85bec50b46826944344f2a0507"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2017_02.html",
+      "bytes": 20638,
+      "sha256": "dec16e1cf3166dfca67e95d28e3a5dcee23af0010e56caa670132c7ce18472a6"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2017_03.html",
+      "bytes": 20645,
+      "sha256": "4cc2cdfbb579b09b954ad28138275bc2091d31a2e9645de32bcdcbc68c703e01"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2017_04.html",
+      "bytes": 20640,
+      "sha256": "5f9fbba8dce9c1d4afed2a0c85616a4ea754234606e3faf7e88b9b73d7ec06d7"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2017_05.html",
+      "bytes": 20651,
+      "sha256": "2cf34db5f03d35e0e23d970ce64ef50af0d186902809114a5e3afacd76810d6f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2017_06.html",
+      "bytes": 20652,
+      "sha256": "777dd0816d49bdcebb7db2ef19473309e0c5609d2c6b3b55b049e9f6e2448378"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2017_07.html",
+      "bytes": 20653,
+      "sha256": "fbb60974a248c9343ba488398e17dba638a86294c6f7fcc578c2f17abafb6a00"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2017_08.html",
+      "bytes": 20655,
+      "sha256": "990f18d87036fc77d7a2004c0943b88828cb304f05f5fd68186308b2e2aaa7a5"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2017_09.html",
+      "bytes": 20657,
+      "sha256": "5da07af2e1954de28a27258d7c51bb71ce8153ae4e4cbb11dde5e7d1c605ce90"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2017_10.html",
+      "bytes": 20657,
+      "sha256": "62d8c6a4a6a68b42539d8394194ee1caed937b167b4619bfa6c5d2d379f33cb8"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2017_11.html",
+      "bytes": 20652,
+      "sha256": "4e49b8b59a6b4080d700a2443472549a795f7040dfd27da2131547c13505ba83"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2017_12.html",
+      "bytes": 20646,
+      "sha256": "669eb1dc4976734664c8c492a1c098dd0049f989b8cda9681e177634d5384586"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2018_01.html",
+      "bytes": 20659,
+      "sha256": "48e05ad024c378e9199b5870896fc8c101aa37e11b3cd3dbaef11a0abc015cf2"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2018_02.html",
+      "bytes": 20650,
+      "sha256": "719520a170d6fbaa4696eb1234e217446a2a48ec845be61a74bb460f39e030da"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2018_03.html",
+      "bytes": 20663,
+      "sha256": "056f41650712f05322d4214c47b962f4f0f77e99a43570386f21e7f76239ea7b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2018_04.html",
+      "bytes": 20669,
+      "sha256": "447131a9e7ceee1ad12f138ea0229c5a9a6186af3695645f850d826dcb2f258e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2018_05.html",
+      "bytes": 20664,
+      "sha256": "ae04c98fcdbe0f00a450bab03a6ec2a1804446305d087293f7700145dbf58e02"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2018_06.html",
+      "bytes": 20656,
+      "sha256": "bc4cd133e64648caa1f77624f573a86f9b407ad5b69b63aaf26b27e0b8a4775f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2018_07.html",
+      "bytes": 20664,
+      "sha256": "c832f9e38bd03d484cadd1ef200c8d39f21515bfe2c5a52a10cf333403269d74"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2018_08.html",
+      "bytes": 20668,
+      "sha256": "2cffa5c8f3adeb007ec4b26364810a2018e354e0c37393d2b775a243a3d32e9c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2018_09.html",
+      "bytes": 20658,
+      "sha256": "5ab2d519b771a7ebfa0d5e7336e400e43b83034599552a05f736bccd7477d187"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2018_10.html",
+      "bytes": 20664,
+      "sha256": "995e80f474e79821d575e1dc2491153249536c3afd91f52be347d7a31e2af48c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2018_11.html",
+      "bytes": 20664,
+      "sha256": "6e4bb8b326236a869809a7c25f6a30c28fc8de7238d5f371bd3d6cbb295d044f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2018_12.html",
+      "bytes": 20646,
+      "sha256": "c28b9235d6d06c897de649ec0d26d162d789c7c19237c589e5cd99f06e92050e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2019_01.html",
+      "bytes": 20668,
+      "sha256": "556361a5716748d3695635b0e402c345973ff27bde6f7bd648e8bf22f51db323"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2019_02.html",
+      "bytes": 20663,
+      "sha256": "5eea6d41fb0338391ca97d5cd8c80a45033bff2754e33d1e4ba83c5fd16a88c9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2019_03.html",
+      "bytes": 20652,
+      "sha256": "333d1d76b71ac922317e27fe7debf798810e35a86678390a4fa3752eafae0482"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2019_04.html",
+      "bytes": 20660,
+      "sha256": "744e8ec0afc05b68e12877f0182919de1e4522f3bed24c7d14d18e7b46e0fea1"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2019_05.html",
+      "bytes": 20681,
+      "sha256": "c2649cd6cfc542036bc4c3c6a32a385c47761b779e40d39d93b2f8e66690004e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2019_06.html",
+      "bytes": 20669,
+      "sha256": "eb256eff00b974323bff4660de7b76e16bea813abec4cfadfe040f6cd65ecda9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2019_07.html",
+      "bytes": 20675,
+      "sha256": "b3e40102446054ba11f12b96348f8cdb86b5efe6f8dabb1b6ad5c1bfc4e35035"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2019_08.html",
+      "bytes": 20686,
+      "sha256": "48d644ca5834cdf045d35e2a5319c4fec21b991305b246fa5c6f9d1a63cdeb79"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2019_09.html",
+      "bytes": 20670,
+      "sha256": "dda103954d46cc99192883808d9fd1c199d5385f19809c74592d6803df599385"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2019_10.html",
+      "bytes": 20680,
+      "sha256": "723653a5c6e33e95ffc2dc6b703edea4a578e34b4ed2cb07ef8bc5cb18cc97ec"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2019_11.html",
+      "bytes": 20672,
+      "sha256": "f601d32b930ed7763832429e56025e92bcb9e761dd0673a9036d9debab64936a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2019_12.html",
+      "bytes": 20660,
+      "sha256": "6a304c304f7b98252d424a50beb88ce2abe6977a9ce13fd534b0cf5b1b23b317"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2020_01.html",
+      "bytes": 20670,
+      "sha256": "396dda89379a30290ebfc02ac6a6edf3da593ff46e6854faa3efaed08788b86c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2020_02.html",
+      "bytes": 20661,
+      "sha256": "33e7a97949e2af8edcc04b002e4544c326dd60ea03ae512000c066bc26977774"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2020_03.html",
+      "bytes": 20644,
+      "sha256": "f29dfd140a1099ccc9f1d2e5e3265a785d2e3d05ee789999f7679e325c3df4ac"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2020_04.html",
+      "bytes": 20612,
+      "sha256": "6a5ec0b9ca3902d4d00f21b218045ac495323166f065229e7500f4c208447371"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2020_05.html",
+      "bytes": 20606,
+      "sha256": "0babe0912ff45c3347cce30628372fbf5209b34a7e44c85d652af000716a7a5e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2020_06.html",
+      "bytes": 20603,
+      "sha256": "1a9a862dc6246af767a336688e6e6b7b5e6fcaf92ae8e763b95c5f398a4443db"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2020_07.html",
+      "bytes": 20620,
+      "sha256": "ddb67f0cf2662eda3c3e00e90fdc564d16b6122900eb55a27a2585d379ddef9f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2020_08.html",
+      "bytes": 20632,
+      "sha256": "5f8cc173893a324179e80d16ea733812b37c41b96716b95b0aa91a6c68ff2ee7"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2020_09.html",
+      "bytes": 20637,
+      "sha256": "11611c9ad0927ec39a665f661c1f6a9e72d373e2c9fcc338f5ba36ab37c32eea"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2020_10.html",
+      "bytes": 20639,
+      "sha256": "ce4a09cbbdf95ee8287ee07ea30192b526a94b32fab638c01cec643c46a2979a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2020_11.html",
+      "bytes": 20632,
+      "sha256": "f85900434d26c823e1591c55d8a5dac0d8a32383d0a75741e029668785123d42"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2020_12.html",
+      "bytes": 20634,
+      "sha256": "5631c7bef4198da5676edce0a801ef73ca5fc42c39f60ad8c25f9a533fb9df53"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2021_01.html",
+      "bytes": 20625,
+      "sha256": "c811e059a0a942b5a557c45176e7b5f3ec4ea0f09c03a1069b8e51e4d1732d6a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2021_02.html",
+      "bytes": 20630,
+      "sha256": "b8005e1c7f5bcf6c816a0154ed816cdc106745158c7472b62c6bf972cd8e136e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2021_03.html",
+      "bytes": 20645,
+      "sha256": "de2f565ff4c4df7b75446eb39a2a27b1c6b40b53482afc1464342145ba318fa4"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2021_04.html",
+      "bytes": 20639,
+      "sha256": "32b44dea72876bb1189cab29d5d8c8f68c92edf647867a8d792b0fdd227f8928"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2021_05.html",
+      "bytes": 20639,
+      "sha256": "ba48fdd87f6557ebf55d8b9e2afc5d8c9a191c713244da852cdf72471411a4c3"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2021_06.html",
+      "bytes": 20643,
+      "sha256": "cc6d3177f7599cf4609c9fb08cb19a1bbeccf2e4983efd2a67489f49e1f097b7"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2021_07.html",
+      "bytes": 20648,
+      "sha256": "9e07ddb800a9b7b362cc77a9ba0cd6e0bcde5bd945467439e165a7dfa579a193"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2021_08.html",
+      "bytes": 20659,
+      "sha256": "ce32bd2c16b88b848a0aa72fca5a010a07f59e9ffbd02b13106a14eedbd06976"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2021_09.html",
+      "bytes": 20666,
+      "sha256": "d9297c76f3d8521efa13dfcd87c3130005c421cabe860865312d2e9e2ba55e21"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2021_10.html",
+      "bytes": 20663,
+      "sha256": "09339972be1f1a833d008b1507981e2af61a0c6a241892ad15a82701d058b40a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2021_11.html",
+      "bytes": 20659,
+      "sha256": "a7c427db2512ba3e26b3e6f898c1c78b21df506ab838c8623acec51749478ac8"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2021_12.html",
+      "bytes": 20662,
+      "sha256": "bdbaaf334c39ca9205c1bd30c2fe64be40eb88666de7e7a48ddb0f01ed2ec92e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2022_01.html",
+      "bytes": 20652,
+      "sha256": "3f771d73b117ca1cad14f7b6330b57547a5aace00bada20f4e898ef7343233dc"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2022_02.html",
+      "bytes": 20657,
+      "sha256": "a87dcc9c1fc5d0d99189f62a65a3dbdb825a482332e3e7c4c53f6d2f2ab87a48"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2022_03.html",
+      "bytes": 20677,
+      "sha256": "0e1b6d505c347d2e8f38822149b548a52d4a729019d1241ad4b6dd6ebff495df"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2022_04.html",
+      "bytes": 20667,
+      "sha256": "8d68d9de714431a82b36789d3ab5b81853464b0b3361bc1ef33acc2ad273541a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2022_05.html",
+      "bytes": 20677,
+      "sha256": "b4d1b38ff750784e8e8f5625d3350440a887cca687c2ccd86c0acd332c25bd21"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2022_06.html",
+      "bytes": 20671,
+      "sha256": "d1a1fa5237b9d97b2fcf751f29c2333f57f40637c8c417171227b4ac74f1de61"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2022_07.html",
+      "bytes": 20682,
+      "sha256": "e4c4104257c5e02ab2656fabd3531a2aae5e6d53527b4e9e48892fdf24b6c1fe"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2022_08.html",
+      "bytes": 20690,
+      "sha256": "0c3dd3695948f1e1ec1a7fc0a4cd5a18f352acecc6cd6483475d661e04404a22"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2022_09.html",
+      "bytes": 20692,
+      "sha256": "2c5d7aab76e75705376a264ea500060357e2699e48ef3431d241abb3a1dc499d"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2022_10.html",
+      "bytes": 20693,
+      "sha256": "e80f867a15d924ff36e15fe923935960484900d933253ab6e36bb447e8b94316"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2022_11.html",
+      "bytes": 20677,
+      "sha256": "0e5f4ba4a998d6317ea1577041de61f95134093302bc8173c7063284209a782c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2022_12.html",
+      "bytes": 20679,
+      "sha256": "12ee8c4765d2fe2a808bb07a081591e0a16e0943717e8ee821a5b4477233d043"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2023_01.html",
+      "bytes": 20686,
+      "sha256": "23d29c77e1ee639e025215baef87441c92a24c77e83aff9df647a6406870e17a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2023_02.html",
+      "bytes": 20677,
+      "sha256": "6a40dc0bfa84193db91576b92e50f942296fd15ea2c64a084d675e846aab3856"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2023_03.html",
+      "bytes": 20699,
+      "sha256": "dbd86e8c9cc3a44b9422e375c72a6bcbd992e54a8e91996c2bc6c4b0082cb2f0"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2023_04.html",
+      "bytes": 20685,
+      "sha256": "b7b140a1da0901be83857b8124371f87cf658d46f4117ef81187c105052f9e01"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2023_05.html",
+      "bytes": 20705,
+      "sha256": "2f0831b5e018e8b6af230586fe0155c5fb4c798bfbd935d87a5730db60c3962f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2023_06.html",
+      "bytes": 20693,
+      "sha256": "ec0d1c32ee29448b1645457b1b49630429dfbee00c06f01ff3b94c9fd1e768e6"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2023_07.html",
+      "bytes": 20692,
+      "sha256": "03b1b4362938a8a83988e22d74287b574fd5570bf6594ee0d99dc6da0fe009e0"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2023_08.html",
+      "bytes": 20701,
+      "sha256": "1303a98e6b066cfd7efc99e3d21fa4700e76f38f0cf3a8fa271ddb180d500630"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2023_09.html",
+      "bytes": 20695,
+      "sha256": "b3fd4cb596b441cf0f0d7e443a06520acba1a0dd7280aaa74c13093a30833000"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2023_10.html",
+      "bytes": 20695,
+      "sha256": "7871f2f78dce9404b2055ff23df1fb23d21b7ffda84aad86e72009efb2927e88"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2023_11.html",
+      "bytes": 20688,
+      "sha256": "66417a6de3863469d78c02e9e012c7bd607ca779e9e9826418d37621d371df7f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2023_12.html",
+      "bytes": 20691,
+      "sha256": "0cfbf23f809b7d0d0b3cafa4e3a1dad375c2c3667258f690d2be39c086538cf7"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2024_01.html",
+      "bytes": 20692,
+      "sha256": "ad0eca8807f841bb0b0b4bedf5d512e954c35740e3c04092229fd7ea65aa1205"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2024_02.html",
+      "bytes": 20691,
+      "sha256": "7a6b2a5b71911f4dee30c3e8d4092db2e878f2743dd57f1b3b5bb4697970db4f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2024_03.html",
+      "bytes": 20707,
+      "sha256": "6153075b6ac2eb010609fdd658e7473b6b95d6369db84ac1498a4b287181520b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2024_04.html",
+      "bytes": 20698,
+      "sha256": "5ebe6b16949e45b6a26c74fc11eb2ae4969569ca758315159d9ec48cdfa03646"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2024_05.html",
+      "bytes": 20703,
+      "sha256": "ed21f93ffa87130fb4095bca7ae600bd9044c3c35c8a4251eed490a5053e2d62"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2024_06.html",
+      "bytes": 20693,
+      "sha256": "166d467bd161b9bb66a9083d498f2bfd6603c1eea4e4c60790ad7598134cbd12"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2024_07.html",
+      "bytes": 20697,
+      "sha256": "f158df1a37ae51c64bc1580a79a93c3dfb2bc16411e5f367c4f81dc3ec1323d2"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2024_08.html",
+      "bytes": 20701,
+      "sha256": "a307fd0d32fc922d0b2a10461130cd60858408f62009a667d22594af8df34800"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2024_09.html",
+      "bytes": 20697,
+      "sha256": "da6cb823ee1fa736da9d38f358c3487e2ab4ccbd5597b118b5f36cc35e833dc1"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2024_10.html",
+      "bytes": 20702,
+      "sha256": "84a5cbf38ac52652dd447900066acf328da697344821dc86127f8c4dde84d3c0"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2024_11.html",
+      "bytes": 20696,
+      "sha256": "92fb7cf6fc719c4ee0d8ab64c73c10c3921e29a40a246c935ea96960dbc9769e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2024_12.html",
+      "bytes": 20679,
+      "sha256": "49857f5a677e769e9466c9c59d7ed35bd4487e6d7aa175eba4143aa51f693dc5"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2025_01.html",
+      "bytes": 20700,
+      "sha256": "61e1641b1564f9664e3c8477d9b9f65e717e43fc98e5f95c357547c44e83e893"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2025_02.html",
+      "bytes": 20695,
+      "sha256": "b63141b55b28e6ae073ba7f4e545ec65a6d16c21f50d51daa6075b18352e2f52"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2025_03.html",
+      "bytes": 20699,
+      "sha256": "d99b74baef1a62b6fc41c4d54a9a411dd6cedcdd5fa9e68eb23d4bfd1e6699db"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2025_04.html",
+      "bytes": 20695,
+      "sha256": "31b730d6921d760e1c312e180053e99ac86bd97e678e2843fd7403571a32b1a6"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2025_05.html",
+      "bytes": 20705,
+      "sha256": "0ba9ead1f5f28dcf210d4d307782bfd355deb4ea8d10619e1dfcdfbb251518cc"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2025_06.html",
+      "bytes": 20703,
+      "sha256": "7cafb3cd3cdc3b3d75f363ddb38c84f999c1bc5a66b8706eb1a983412909a27c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2025_07.html",
+      "bytes": 20713,
+      "sha256": "bff9435ea597f1c74dd900802c9303e06d48f03e1aaededeb9643d45aeb22ef5"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2025_08.html",
+      "bytes": 20705,
+      "sha256": "f256c6d5a67f167e0ffa88ed5f057316a085c158169c1b83f566dffaeca3d58d"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2025_09.html",
+      "bytes": 20717,
+      "sha256": "52c5828c02718d938d181b7d1a51724e6d2cf7ff505f107ddc5e28f89a8b4011"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2025_10.html",
+      "bytes": 20713,
+      "sha256": "3bfaf01f03e94669fc9c9106dc82c8fe8f06037788c1499dd40c1beac1124fb4"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2025_11.html",
+      "bytes": 20703,
+      "sha256": "111f929466e980f03787ef1d3372cb94ebc5c20763c4bc8dde1445192003df79"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2025_12.html",
+      "bytes": 20695,
+      "sha256": "683fc646a4428c6f968fd736be3a2066070a17579ebeb783301b45b2b759a4f6"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2026_01.html",
+      "bytes": 20692,
+      "sha256": "c2eae905969606ed6fe74685c2b4b8fc441910c85f2397cda6d1dd98d4415564"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2026_02.html",
+      "bytes": 20696,
+      "sha256": "0047ee7c6ad3bc0a3b04c5c123466f85d3d9f7fa284bc2718c4c37beb10c27cc"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2026_03.html",
+      "bytes": 20708,
+      "sha256": "a49597aab54ef8178d927de523113f2c403a95173bf5bcb1ac9e4805fb7d70d0"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2026_04.html",
+      "bytes": 20702,
+      "sha256": "eecf5fe8f9fb355901df4289389500379c1e1512b464727f343ff36f784004e0"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_rj_total_2026_05.html",
+      "bytes": 20702,
+      "sha256": "7ce5d155ae2a9e191855a24085c64ccf969da8d5dcff3b83ddac029debf232ea"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2008_01.html",
+      "bytes": 20350,
+      "sha256": "d04b8d1db32c3ed96e4047e8f6897d2b95c4133b1bda5e0df6288eb5ad8ebe05"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2008_02.html",
+      "bytes": 20362,
+      "sha256": "ced4f65fcbf529c1b113fb495fa923a5ae1ca97143e9505234e6c12ed1e3e868"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2008_03.html",
+      "bytes": 20368,
+      "sha256": "5422c509e48138825d04334bc499dc3dff0225a6e966843ad29ac80c8e620024"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2008_04.html",
+      "bytes": 20368,
+      "sha256": "cf21b29d2b28981aaf3d63a7b8b97f7d911a874133aa6d2a4b7bcee3072a9915"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2008_05.html",
+      "bytes": 20365,
+      "sha256": "8b7a2e9bc355b4492076c983c5b281f2c95edd29681cb9cf27064447e7064d37"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2008_06.html",
+      "bytes": 20360,
+      "sha256": "0475de9eb1e51cbe7c1fe75d2770675e3b664453da1bd720fc0a293358598d8b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2008_07.html",
+      "bytes": 20369,
+      "sha256": "4ef6f36bee57cbd08e21ae8fb61ed54b3f4c6d095edee0270ba82b4813ee23c2"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2008_08.html",
+      "bytes": 20365,
+      "sha256": "73ad5fcc14bfa7560c1feb45133d2d3c34d0220de02e6aeb18d93e8cb2ead91c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2008_09.html",
+      "bytes": 20365,
+      "sha256": "b474b124b45a3ac70767809328506fa57b46875d1acd77a811572d983df4677d"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2008_10.html",
+      "bytes": 20367,
+      "sha256": "21a8c14055b78035eac0f30079cdf1b7d737f2e977c8cf968efd960fe1430208"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2008_11.html",
+      "bytes": 20357,
+      "sha256": "9f25a2b67c717a47b90c5fdcc8a1ec4a73f4d8bfba3efba593ac4dae78ce5507"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2008_12.html",
+      "bytes": 20357,
+      "sha256": "a455076fc91d315f1a9292f5acf5ce2c97d62aa593db3667eaf81f4ff6571489"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2009_01.html",
+      "bytes": 20355,
+      "sha256": "53bb69348a85e66bc6f75edaaa34c4e89e890512eebc2fe104d56de6d2add10c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2009_02.html",
+      "bytes": 20358,
+      "sha256": "56b232e35439ff44fd28fbeddee7632738f146ba65fa4c386d4d57ade986b1a7"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2009_03.html",
+      "bytes": 20361,
+      "sha256": "9cd1e23ae76ec4ad4498a8cf0c6f981df25697fd9c9c2a84fc792137f20b6224"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2009_04.html",
+      "bytes": 20361,
+      "sha256": "17fc8d58620d221279a4cb5a7452780dc570efb261a5357c519bed846371fe60"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2009_05.html",
+      "bytes": 20374,
+      "sha256": "ed1c1176a28e921cf999bcfdf22135b3aa807a5d7f22904261c09affd66f00af"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2009_06.html",
+      "bytes": 20361,
+      "sha256": "9d678f36ccdb49b6bfd29037b804deab1e374b38f55ad3b6cbb3e2d7501d6f0b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2009_07.html",
+      "bytes": 20373,
+      "sha256": "c04efefe0809c1af73ad0d1b474722c8ca16137c4e0196db2be346352bb2585e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2009_08.html",
+      "bytes": 20372,
+      "sha256": "4eeea4edb0e0de8f0874541bd5535bfbdbfcd0c0d18bab0cfa54d8739dbf29ce"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2009_09.html",
+      "bytes": 20369,
+      "sha256": "619a28649c833e500c116da881357fe9c243a7110f4e10daeba67c0375a98f1d"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2009_10.html",
+      "bytes": 20368,
+      "sha256": "dd0b95a95d31b0f3c8502811a9fff0dae79cb33702d130d98f125037c1c6c431"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2009_11.html",
+      "bytes": 20368,
+      "sha256": "3832e119d639c45c03924cd0855a82cf8a897d218d66f7f01ab6648a9eeee096"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2009_12.html",
+      "bytes": 20362,
+      "sha256": "4743d1a058606c416d75847f3026766662bc482b66225087731693ecbacd1ff7"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2010_01.html",
+      "bytes": 20369,
+      "sha256": "bcfc45f12c421b4130bdb4f513afd8a8c0dc2b5887ea8e60f2eeb0476ec0ee76"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2010_02.html",
+      "bytes": 20364,
+      "sha256": "a66ec4c54f037bf68855a7f234a6d535140130a2e6beaac3f4afd85ef4bcd9ba"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2010_03.html",
+      "bytes": 20372,
+      "sha256": "a69f6cb770a72a081645796a616788cd0034392082c30bd2c96d86261f9fe1a3"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2010_04.html",
+      "bytes": 20360,
+      "sha256": "74625ae2b0fc132741d549ed35367787a52e898b5be7cf67c333e9f4b35b25bc"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2010_05.html",
+      "bytes": 20366,
+      "sha256": "85a79728e359a432ded0d4468c8e25fa8b92d2764e30351dadb6c6a7d02766b2"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2010_06.html",
+      "bytes": 20359,
+      "sha256": "8805d4c8ccd73494cd1decbd3655b2427e4e6786bbcb59741b467c34522b7641"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2010_07.html",
+      "bytes": 20366,
+      "sha256": "c292c96ee90f1635ea86c0122179fa22d67cdcfe92bb02bb75dc2896f2c477a9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2010_08.html",
+      "bytes": 20360,
+      "sha256": "3e5a9db0cdc55a6558e3056fc796d100b3781f5217c2e98327b9eae59bd09f0b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2010_09.html",
+      "bytes": 20362,
+      "sha256": "ce583c9650f3108fc390a26dd5c678071342e92f9f3f52fbaa4fc99f2079a955"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2010_10.html",
+      "bytes": 20369,
+      "sha256": "6bd876bd50175870e31b45c62da0b0bdfe251dd9eb10f58f29922ec43e66f2c1"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2010_11.html",
+      "bytes": 20368,
+      "sha256": "c7ff040de273aa78ac58d5159c947d21771748798f6415643fef7b5ef570b206"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2010_12.html",
+      "bytes": 20368,
+      "sha256": "5fe4d074d35e626434e87840f07543e88c734d33dc327026d395ae15d73e551e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2011_01.html",
+      "bytes": 20358,
+      "sha256": "2bfa9be0c7fe30c9e67cb00b07eb134c95fd376b6001943d60fb5afbc3f02cd0"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2011_02.html",
+      "bytes": 20371,
+      "sha256": "4b502d2a79e1c11c255eb1b6a8b36c14b36cd751fbeb02feef59587b201508ab"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2011_03.html",
+      "bytes": 20379,
+      "sha256": "3faaabbcedaf6f27b53f112682991066ba4516a59e196172f3d9d7e010267462"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2011_04.html",
+      "bytes": 20378,
+      "sha256": "71760ee6af9de9bfbdf6c2a36cd4d5d3498a2041234c35bb112ec89e7e9f1adc"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2011_05.html",
+      "bytes": 20374,
+      "sha256": "984022807afea221efec59e048950029942dbdf81af9ad507d44be0b83bc3e63"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2011_06.html",
+      "bytes": 20366,
+      "sha256": "4d2def09ab1c324d79f254f9baeb44ce7bbd065bef64f286916227a7770c1afe"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2011_07.html",
+      "bytes": 20368,
+      "sha256": "ffe2dd542b1d7fcbc478830eb44fbbd02c124557c431dd858c00b3d2830dc1bc"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2011_08.html",
+      "bytes": 20379,
+      "sha256": "75950a162a178e1d5b025ccd5116996dc5587c8ae260ea4101a1f7260b6df4f0"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2011_09.html",
+      "bytes": 20372,
+      "sha256": "a86df958b738d999aeaba7d7fe982fe469d21ecb021f499852729300775422c9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2011_10.html",
+      "bytes": 20368,
+      "sha256": "eb234f0368295732990aed05daee287c88711718a6eb4ec927f074f8f610b405"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2011_11.html",
+      "bytes": 20362,
+      "sha256": "4595ca05fbb850f8daf0eb325854b6a866774efdfd8205fe0798cd2ea84d9a3b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2011_12.html",
+      "bytes": 20368,
+      "sha256": "3d58b6b9d5b95121942fdd49189022db217e202d31702f53ff26ab96bae00258"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2012_01.html",
+      "bytes": 20363,
+      "sha256": "d93fc02faa16595e68e23eea46602deec8727515bc0cbe52436f06ae60331e45"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2012_02.html",
+      "bytes": 20367,
+      "sha256": "11c7287c9cb0901d0d8477df77fd50fe17151a0099ec93eee4298dd431e2839d"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2012_03.html",
+      "bytes": 20374,
+      "sha256": "511978b9065146af8f9cded0e602437564f31545db23ca719724111c50354d6f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2012_04.html",
+      "bytes": 20371,
+      "sha256": "2238ad529caf85b70adf63162f70c9441709202877069077413f32d03fcf65c2"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2012_05.html",
+      "bytes": 20372,
+      "sha256": "f94d3cd96502f9e107fd7fcbe59a84dfbecd8e88b741f41f78a76034570153af"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2012_06.html",
+      "bytes": 20357,
+      "sha256": "3abe515677be790a86594684ca0c494f7938809825809d3dee3c17f672d9e9ef"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2012_07.html",
+      "bytes": 20366,
+      "sha256": "85fbb27b402ce8685d681a79c67998d58c1e0076273162992426472686b0c233"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2012_08.html",
+      "bytes": 20369,
+      "sha256": "b87bab85c8810468219451c52acb39ba3d6c0191a2009ecedbc05619e912758c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2012_09.html",
+      "bytes": 20364,
+      "sha256": "e092261ab155bda7742b3cd4ffd1f6719eb5440c86750fc04b895b837bfaf313"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2012_10.html",
+      "bytes": 20364,
+      "sha256": "2eda05a347785849cab5d8065acf83e49fd3cd8a0224a2ddf4a0a6fe023b2349"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2012_11.html",
+      "bytes": 20364,
+      "sha256": "b947d3fcc8f6fe3d1acf389f1fd3800682b835929b0af54e014fda195205aef0"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2012_12.html",
+      "bytes": 20361,
+      "sha256": "d8d08f4833e962e3aee55c01fff3f61e6f58ef5ed864190a30886118a3ca72f5"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2013_01.html",
+      "bytes": 20356,
+      "sha256": "80a9fa4b585aa8112249950ce222eebc4ba8a73203bdf769925932bbbb4d5da2"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2013_02.html",
+      "bytes": 20355,
+      "sha256": "ba23642369de4f6ce01afa775f1f0c8160e14ce8e83b046e5178ec3acdadface"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2013_03.html",
+      "bytes": 20370,
+      "sha256": "10fa4ad723aecea81de701893af0ce09f35d89ffa90bae1c1327a976ee77dfab"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2013_04.html",
+      "bytes": 20369,
+      "sha256": "e07c03c9b0a99ee9e2c0b4670c3e28dc3b81405a38edbe3f4b956fca97e101e5"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2013_05.html",
+      "bytes": 20357,
+      "sha256": "70d3c75ba4ac868562cfeb318c267695b606874473487a0b9d7188988e1f8489"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2013_06.html",
+      "bytes": 20372,
+      "sha256": "275a293c923196eacb4d98e4b310c0eb4d377c63d8d444d5e6ea8966e18ae6ba"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2013_07.html",
+      "bytes": 20362,
+      "sha256": "59a55a7af68ba10083fefe69f4cbbe7af3ee66b38a3cb4f66c50fba1fdcd881d"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2013_08.html",
+      "bytes": 20364,
+      "sha256": "419e0288ff7c3c22a563de92c01e26d70f37eb12779eace3dff2df2db28eee7e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2013_09.html",
+      "bytes": 20368,
+      "sha256": "693f70027b53574eb2b09f1d20849b6884482ca473e8a8c83f54ff9a8e1aef90"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2013_10.html",
+      "bytes": 20367,
+      "sha256": "6463807da391d09f165dc22a7c9dc9026fe3e963f546bf40458af83792d937d4"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2013_11.html",
+      "bytes": 20355,
+      "sha256": "8f2faa637333b789048003ddb91112f4b7769f9c9a39a6e0ccbf40e55d902db5"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2013_12.html",
+      "bytes": 20355,
+      "sha256": "19faa9dc0e5ad0cf9cdb0a2498cff95500a3256b9e3a572fbcf5ffe454f0b72c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2014_01.html",
+      "bytes": 20365,
+      "sha256": "66d76f530cea41adb0d76908d9a7c192b795d297518095dfe3a5e601154acd06"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2014_02.html",
+      "bytes": 20364,
+      "sha256": "3fd4f12bd2cdb5a89f6d1171d2d9d6bd76f78c189bc6faf26781c3425775cfd5"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2014_03.html",
+      "bytes": 20357,
+      "sha256": "762a74e32de9ec74cafaf34f40ebc8110481ce0c9543b4ee7edd1e59f75b07a1"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2014_04.html",
+      "bytes": 20355,
+      "sha256": "0f1833121827047879da4099ab35aeeb56c941549aaf78adef7551132d129db6"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2014_05.html",
+      "bytes": 20371,
+      "sha256": "9a8c19d6ed27a4eff07b54e3c8d2e696c378412d9e0c645fc972baff3a4d9dab"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2014_06.html",
+      "bytes": 20357,
+      "sha256": "fe6bca706b93d628062d0a39cb4d8415c3f76cf95044f02f873ce692e4fce617"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2014_07.html",
+      "bytes": 20365,
+      "sha256": "a5c0294684401af982253511698a2afb40c0b5fede900a33e02d648b9e09a966"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2014_08.html",
+      "bytes": 20364,
+      "sha256": "c6334e6774a693565e5d2c2c7693955a4ef86cd1e512cdf7b062e2d95bb8e1f4"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2014_09.html",
+      "bytes": 20364,
+      "sha256": "a1174003837d66810c1a3c34d30cdf966910f2f6f9356deb11c74e5458813d3c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2014_10.html",
+      "bytes": 20359,
+      "sha256": "4f070522fb8cf8218124cd212fc534df7402bf3b60695ab3dbd117e9690afea6"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2014_11.html",
+      "bytes": 20370,
+      "sha256": "e55652eb1351c1442025b9f3b12b8cd1ec89df655cf9f8a6653ca541ecaefacd"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2014_12.html",
+      "bytes": 20359,
+      "sha256": "8863b6ff668312e0abc10e8881010d748e3e5222fd8bcb78c890d1b48ec0603b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2015_01.html",
+      "bytes": 20371,
+      "sha256": "4986e0afe5650204d24f8e166be5c005bde02696d4dc54dd509cb79df11a74e9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2015_02.html",
+      "bytes": 20370,
+      "sha256": "82355321ce85b5fd1cf4a0e2d223124427e5000d24b569d6e6f562212cf9be9b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2015_03.html",
+      "bytes": 20380,
+      "sha256": "7dbf6bdb108c3f4873d8bc654ebcf0ec2b29510b158fc08c9a8e7e4fe1b1c2ee"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2015_04.html",
+      "bytes": 20368,
+      "sha256": "3d413725e8cb1b0aaa3c17975d0b27671e507978dbdd8527e34a47947f74522e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2015_05.html",
+      "bytes": 20373,
+      "sha256": "3a170f8b25f72cb19dc56f74e814c9003d2e4a0431e1573161e7e7a1869da6fa"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2015_06.html",
+      "bytes": 20369,
+      "sha256": "97c1af7fa49a8f6a10d2e4c1cdcbfcf47732ad7635b3c4cea0df02caaa2a8756"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2015_07.html",
+      "bytes": 20372,
+      "sha256": "d706d3557a4a553b9e47a1eaec0ee8b312a60918cc2233d4c3103079a5b0810c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2015_08.html",
+      "bytes": 20360,
+      "sha256": "e270164a341e20f1216e7b24b35a3aafcc0f82f370e6f17e69bbce0a17e0f7ae"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2015_09.html",
+      "bytes": 20362,
+      "sha256": "8f068721f9283890176d19ac4bd35d880eaafa24a036ef255bf0df913c10d3cf"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2015_10.html",
+      "bytes": 20366,
+      "sha256": "b00ced522e8608cbb41a69900a662cc3be03857d8f76f6987e33e95d5976722c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2015_11.html",
+      "bytes": 20376,
+      "sha256": "a2b6793ded18869b0b119a37775e43c4e043275182f8e23970c66cba1e7539e1"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2015_12.html",
+      "bytes": 20363,
+      "sha256": "003c884329e5b516f452c1e36d6113e7df0c161aa3fbbdbe12d1aa44883111d9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2016_01.html",
+      "bytes": 20364,
+      "sha256": "ba1c737e602f5247c341ce82e3ac8ef0027fb3a194a916ec702afffe490c68d4"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2016_02.html",
+      "bytes": 20372,
+      "sha256": "c52cca7549574017a9d3f0c71812b23e0c2fa2be86c0c024cf03fb9587dac3c0"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2016_03.html",
+      "bytes": 20368,
+      "sha256": "49095fea42d6dc58ffa9467396d8163d4d104b3961895c7b4ca7cbd8ca167f75"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2016_04.html",
+      "bytes": 20374,
+      "sha256": "21e8ad656553b955716785237e27ee2da57dc08fd5b93366a7174400f6cbc571"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2016_05.html",
+      "bytes": 20372,
+      "sha256": "c8f5b147b684d4b569da08f07e1d53046af787e0fd87cbb1d670b0b5682ed3b4"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2016_06.html",
+      "bytes": 20377,
+      "sha256": "210c0bcb6ed4bbdb1dc7353000a1b74280dc332e95900c65f18c069373640fa2"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2016_07.html",
+      "bytes": 20367,
+      "sha256": "4c039e652745ac53c2a9e5c175542191370882d98929e987a1d956ac5e232957"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2016_08.html",
+      "bytes": 20373,
+      "sha256": "519f52ab84bbd1e75f0668f5af1fb07a5e4ceac051d805e3c5d7499b19fd55aa"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2016_09.html",
+      "bytes": 20369,
+      "sha256": "fa013464ebb01721282410c717f4c35b8a95a1d041d5d22ec9686d1729d0a86d"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2016_10.html",
+      "bytes": 20372,
+      "sha256": "8de2cc1e28721056288ad894003dfa294eb4118d990a5f36b4367e5fe719b9e0"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2016_11.html",
+      "bytes": 20367,
+      "sha256": "1ecd7b8f1283f3a0c5f401164121ae940b30f0ebf73df66fd00b13b3ad467c96"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2016_12.html",
+      "bytes": 20377,
+      "sha256": "078e594af50a1a548b2cd71b066dfabafba5fd6c736c6aa70731934d87912f3a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2017_01.html",
+      "bytes": 20359,
+      "sha256": "b2822276d4a04d12bb710cbe944b5785e281e3cd412657cf70b66fd8b4964eaf"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2017_02.html",
+      "bytes": 20368,
+      "sha256": "b7c6235eca78aea878eb2d9aefe67b1140ac76854dc17ad8c0a97b613c3e816a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2017_03.html",
+      "bytes": 20375,
+      "sha256": "1cf37ac413173d93b727b198d150c5a14eb9fc4ac494bce01f4fc6b4ad014c79"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2017_04.html",
+      "bytes": 20365,
+      "sha256": "2613150edc9d4d6e5ec07bae59f83177fb2dbc2abb1e2ffe98d8fe52ca8c6ce5"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2017_05.html",
+      "bytes": 20372,
+      "sha256": "50e0937fe9d8501b18a9c1b878efecb4ec403d2a051b7b165f4ce6ab04aed42e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2017_06.html",
+      "bytes": 20378,
+      "sha256": "3301ece954b56a75e847f5ef192e3dafc595c7a6436fb8f4c7382d4d9997916b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2017_07.html",
+      "bytes": 20368,
+      "sha256": "fff50887c7d660a7c5d22fbaaf1610850c730a718a6804bbda84a479b38d09d1"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2017_08.html",
+      "bytes": 20372,
+      "sha256": "a5506b6a425f7459c599c85dcd1cec73ca69cf2b4373d7b644bd683f3e42b9a1"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2017_09.html",
+      "bytes": 20373,
+      "sha256": "67aec5e6251dbefe9c296a9b1568743cdadfed2c1eefc6410ee22aec2d193f27"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2017_10.html",
+      "bytes": 20370,
+      "sha256": "8487be989da32adca130d118aeac80bc31bbc7dfb74d816e0d7e974259d1c8ca"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2017_11.html",
+      "bytes": 20369,
+      "sha256": "33c0107ac0dc315dc1d3543bb5eedfb2cecfc3711d2613c9424677f905439064"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2017_12.html",
+      "bytes": 20369,
+      "sha256": "82fa7a88e19df0e03211206519a580b166501f3e483840d6a439bfda3ffa62f2"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2018_01.html",
+      "bytes": 20365,
+      "sha256": "8490f2f73a909ff0d659b9af7bd3dba8dbeda67e0f2cd03b2f2c3bb9f862151c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2018_02.html",
+      "bytes": 20366,
+      "sha256": "6ae948acbfa23d677abeabab86cbd2139d29f266b930ae025ff3b48cab58710e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2018_03.html",
+      "bytes": 20377,
+      "sha256": "1b0c5e9a59e3c40f16bd365ac4dc2e208483f729c5c18a867a64c8cee88172ef"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2018_04.html",
+      "bytes": 20377,
+      "sha256": "5a68e720c98f1c16e8f9c9aa547855fab8c124f4f1349b7c167eaaa90aa940f2"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2018_05.html",
+      "bytes": 20370,
+      "sha256": "902afe9547dd0088c9ad1e02f08901124d170ce69e696e4871714819ddc9e8c5"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2018_06.html",
+      "bytes": 20370,
+      "sha256": "bb1496e71a47cbf590ef9b89962c776860861c2519868946eba8c3fdcc0ad265"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2018_07.html",
+      "bytes": 20371,
+      "sha256": "ef2431a536e6911d7e508108f2faa034fead25afb9a559510401ca73e581cc63"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2018_08.html",
+      "bytes": 20374,
+      "sha256": "68710429b142a84fa2c63c058d3545be52e20d193ec5c0cecf80598a6525ec3f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2018_09.html",
+      "bytes": 20369,
+      "sha256": "19ba4c0170b25725f7c3d0f012e39a5d87423b6a24cfc9996c049c9a4850d76d"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2018_10.html",
+      "bytes": 20374,
+      "sha256": "7bb216768b102848fcc5a8c65e57c9e82b4a4e610a7d1de6d9ef94fbfe266a80"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2018_11.html",
+      "bytes": 20369,
+      "sha256": "d4703a1d1cedad3fc84957f5b9a2ffa26247f8e3ccf860d02f0aa9f54c128fdb"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2018_12.html",
+      "bytes": 20372,
+      "sha256": "91d36a2bb698aeb7268391b36994eff89c396a36b3cb9f4e9a6a82124c4e5593"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2019_01.html",
+      "bytes": 20364,
+      "sha256": "ae3f20637d5ac9275a701630a0ebc91af112165b2dcee95d9a7bc3ff3ae7a0c5"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2019_02.html",
+      "bytes": 20369,
+      "sha256": "a8284d7d80d2d585ea7a7a4700e284897ffb895bc5eabc08be661f1d1f86587f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2019_03.html",
+      "bytes": 20380,
+      "sha256": "59ae48e9fb0f408619c21b8820c5e588157994db2188c830facc95f122a7e350"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2019_04.html",
+      "bytes": 20379,
+      "sha256": "211a87266a714c5dfbcb793b2939e0c88172746507ce54b6cc03b13635e55fab"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2019_05.html",
+      "bytes": 20382,
+      "sha256": "f74128a1d1c0e576e058ab690cc77b9fd047bc99eb40fc8b9721a7eb4b9af260"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2019_06.html",
+      "bytes": 20378,
+      "sha256": "b90adc94b4ae8bf2ae80493f2554deb49451e20ef47f0b46514aafb1a4efe532"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2019_07.html",
+      "bytes": 20374,
+      "sha256": "534cd7a3f636375e50e8beead16d098b343ee8fddf5f4f263a0325bca460ef2a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2019_08.html",
+      "bytes": 20382,
+      "sha256": "2b486e84da8b2fa4d27b0d86fdeb650421217e148a1ab9f8561c1e5f2de49d76"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2019_09.html",
+      "bytes": 20376,
+      "sha256": "0c616a7aa5e1b94f11369e7b92571f896856841c004a555e25c0cfc530a7bfa1"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2019_10.html",
+      "bytes": 20376,
+      "sha256": "c896ed9e9cc4667d440b1365fec984464fce7c1bdc1a627471f1ab4349f60317"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2019_11.html",
+      "bytes": 20375,
+      "sha256": "6921ef6bc4753f32e210388f7a65f18e5d144943f3311883d8e5d684ab654fca"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2019_12.html",
+      "bytes": 20366,
+      "sha256": "d108cb2303e695ef7cdcd4f43112d04244bfac4cc94052bbb25712e5aab9c69d"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2020_01.html",
+      "bytes": 20362,
+      "sha256": "c4217d5cda164f40c4d9794bd0cccc25f8875eb90447aed18e4baad1b66f0efa"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2020_02.html",
+      "bytes": 20371,
+      "sha256": "f7be0c0fffd18ae4122e7d1f5f0136959b90e734c3804ed1f9e5f1ca6e3c4aa9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2020_03.html",
+      "bytes": 20368,
+      "sha256": "e5feda3a329dc5a4f51c690b146e5af07561d27dc46e7bd53b6902a973fdc4fe"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2020_04.html",
+      "bytes": 20348,
+      "sha256": "842d1ba8baa7daf0549622bccc2ab178a28ce3a72032f43de2ab7e01e91f0ce9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2020_05.html",
+      "bytes": 20343,
+      "sha256": "8813b9d3294664fdb735e308fe692d94bba10ebb83925c74b212d24d680f6905"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2020_06.html",
+      "bytes": 20348,
+      "sha256": "0c8108b60f71f410a3c6d006dc5b0d88867c93d6aeea09d0fcd66bd9d4cad382"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2020_07.html",
+      "bytes": 20357,
+      "sha256": "75578e44b71bde04a37162a9c9d188cf37b008884f552b6ea4f114272d19e180"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2020_08.html",
+      "bytes": 20365,
+      "sha256": "ea4643d78a0ea43d80c7a5186bc7486ceb1266a11c78bf09a36a322ae3f5cc84"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2020_09.html",
+      "bytes": 20361,
+      "sha256": "4752f5ce7a6275253221440be8e21cb0d4b84f77d4d817855e049626db11cd49"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2020_10.html",
+      "bytes": 20358,
+      "sha256": "7b8b7eb9163e83d665200db9420ff5ffe62a77ab2f1fed78c71cf1c21a85e0a3"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2020_11.html",
+      "bytes": 20351,
+      "sha256": "eb3955eb93d156155217389d082f919a520f97d217d30d1210714aa561e368fe"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2020_12.html",
+      "bytes": 20358,
+      "sha256": "c97ca5f43e6ca3b02fa3bafb5e5c1abdfdd091f6a064a22f134131b9a82c57c8"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2021_01.html",
+      "bytes": 20365,
+      "sha256": "a9875af9a94724669a22a8bc38f081541770f7d089f3fce1e0ef172f8de98aac"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2021_02.html",
+      "bytes": 20360,
+      "sha256": "85301f61e543469e60f578490bb82009d2129d3e1dc4cd787b5ce44f41e26341"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2021_03.html",
+      "bytes": 20363,
+      "sha256": "2c870947cd6dea2d35861fc3eac844375a7b07e6ee050a582c9e784f90754996"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2021_04.html",
+      "bytes": 20350,
+      "sha256": "8ffeeb1a2838e69bfcfd6fc6e255475e743c1e341746e753313a2befd7761924"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2021_05.html",
+      "bytes": 20357,
+      "sha256": "3e1262da9d4a355ecaf32bdd7139e1b4f4aa9cc31474313129f0d198fb93170a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2021_06.html",
+      "bytes": 20361,
+      "sha256": "8769b193a75f8ce4e2f80d251a8b04e25f174999614fb88be40123efba559fca"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2021_07.html",
+      "bytes": 20369,
+      "sha256": "63766e7b72024e2981399178ec56d7940a6d83daaf88a93e37936190e9c6bd63"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2021_08.html",
+      "bytes": 20367,
+      "sha256": "ebd7aab763fe84f3a4794825a99f7c5a37aaf1886fb2f66b9b1ae98f5d5b1918"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2021_09.html",
+      "bytes": 20366,
+      "sha256": "a3e3c40809961b118b1bc9b827a8c99c6e75e2a6fd815e1a44ded415aa36525a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2021_10.html",
+      "bytes": 20371,
+      "sha256": "9311db32e1a4dfb6106cace37d91926f1a61012881735aaa33826be1c1c311e2"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2021_11.html",
+      "bytes": 20375,
+      "sha256": "a11f615465dec98c63188775df02cbef9082624760167a344f4a2954e8f7930b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2021_12.html",
+      "bytes": 20377,
+      "sha256": "79015463e557a4f26fda6f654c471df92f9dcddb8148c72165af87bea91c6764"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2022_01.html",
+      "bytes": 20379,
+      "sha256": "c77ab6ea9bc9e95d356b85944bcb67d59052e38b0fbe53abd18c27130343aa31"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2022_02.html",
+      "bytes": 20373,
+      "sha256": "6a97e74cafac882607beae4ee82c7ca4cf7d56f3d14a4024f6a69872cb7952c9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2022_03.html",
+      "bytes": 20387,
+      "sha256": "d4c4cf4e6e47ee1f27c21d9cdfc571fdcf2d26f738da4378e8f2376da74ffc42"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2022_04.html",
+      "bytes": 20383,
+      "sha256": "bbff1318b72ed52e5a6615fa4dcc4ffc697ffdf8bc932f106968b63150bfcc38"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2022_05.html",
+      "bytes": 20380,
+      "sha256": "1a61d2029344f809e626ca9af3fe61c12e16a7562b5f2e471db54625048d127a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2022_06.html",
+      "bytes": 20370,
+      "sha256": "c5fb9a43e10703bffc613017e826511f9ff69a0fce2592cfe73c6c322722f550"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2022_07.html",
+      "bytes": 20381,
+      "sha256": "cb6e0c0695351355c15dcda466e2d2914f114013e190145ed52dab38b8377e9d"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2022_08.html",
+      "bytes": 20381,
+      "sha256": "5527a35ba2f907f59e9b36286f219b68ba204e2799699504c513c62e26eef7bd"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2022_09.html",
+      "bytes": 20380,
+      "sha256": "1d57eb672737e56d3c727d1c314c38968f23f6e88c32cb1aae4a928cc8c31308"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2022_10.html",
+      "bytes": 20380,
+      "sha256": "27d348adfe9efe001eea94f7f2ae21d69a744544001ec5944ab2a69c3d105252"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2022_11.html",
+      "bytes": 20375,
+      "sha256": "cfae7b34fb5dd228bada8a07ac1943962dad362b99d3dd7886628e02c51d7022"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2022_12.html",
+      "bytes": 20365,
+      "sha256": "ab5a063545b4fd3cfd4fc34c2bd9642cbe78351f0edd7a3b2d7d491779003499"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2023_01.html",
+      "bytes": 20379,
+      "sha256": "4815914b41b3c2cdf2406f579a62816b5296811b21c7577774d5ca424abeca79"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2023_02.html",
+      "bytes": 20375,
+      "sha256": "2344f91d818c03b4be6e7fadd58b17c7f49b639fb412287ec2b5fa73e3b09efc"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2023_03.html",
+      "bytes": 20394,
+      "sha256": "08eb20ec31aff22a2eb9151b39304228860f2328ce99b880889dbf9eac1e236e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2023_04.html",
+      "bytes": 20385,
+      "sha256": "03801efc66109471f5be938a42c82ac8df70a6360112bd473ec5c622d67b9408"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2023_05.html",
+      "bytes": 20385,
+      "sha256": "9178c5d52eb712eca75893610a195ba548131454a8952b47d16c8ebc16725688"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2023_06.html",
+      "bytes": 20384,
+      "sha256": "1f968f3048219d4957a1d790777a349a08939dfa93ccd0e88b468cd478d9a717"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2023_07.html",
+      "bytes": 20385,
+      "sha256": "252c7148e08d4528c3eb6f0313062e4d2a9e645fc4d8a24aed2aa3152362dc0c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2023_08.html",
+      "bytes": 20389,
+      "sha256": "c0ab0e78d2faa116e69716c45ec55043048b92f0641e492b76667f9d3bfdf101"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2023_09.html",
+      "bytes": 20388,
+      "sha256": "93d1f55b4bd6ced028357d1e71a981a6fec9d8e52a96fd5c15ae6577d65fd1d9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2023_10.html",
+      "bytes": 20383,
+      "sha256": "1f2bfcebe99c0edaa786af418fec1f3c1bc0b83fb8b84b4445442bffccb9d734"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2023_11.html",
+      "bytes": 20382,
+      "sha256": "da5d306304948f74fb56df4e76aa9bcdec61045a2b924104a6eb4c7f39744d37"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2023_12.html",
+      "bytes": 20386,
+      "sha256": "9a2a37ebfaa31840dfeb27221ef83d2c043149fa366cde855ceca5564358017e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2024_01.html",
+      "bytes": 20370,
+      "sha256": "5d4abfd83d5d941b6f710b616c1259c815e39604aea900656fada3686e4c8bac"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2024_02.html",
+      "bytes": 20373,
+      "sha256": "d91108f2e53b705fcea8fe597d2de7ac0d83256adff98e35aa1a26cbda70c557"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2024_03.html",
+      "bytes": 20388,
+      "sha256": "a8a7deabb0e53b4ccafbe3612269ecae3a1ad41300965f8598ef08a9da99960f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2024_04.html",
+      "bytes": 20393,
+      "sha256": "8fa9cda9c9bb752823d7759b0c360f113919032a9842f0b7839de8ea408b1a6a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2024_05.html",
+      "bytes": 20390,
+      "sha256": "f0f7c851833136ba91856193fccc0b28684f76871ff1f2ad3b3cb1bd290a9cfe"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2024_06.html",
+      "bytes": 20397,
+      "sha256": "18302de26a1b32c73fcb2f99af39dd9f076f1b44dc63de103e5fc1b6957bb185"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2024_07.html",
+      "bytes": 20385,
+      "sha256": "f7f060844e7ade2affad11afcd06e67fe6a96a48b924769faba1fa41bb0e00c2"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2024_08.html",
+      "bytes": 20389,
+      "sha256": "43a0b83cca07167432db9df94af07da02a7075fe7800bad92681a879fe6eff30"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2024_09.html",
+      "bytes": 20390,
+      "sha256": "836d10b03f53c4217364ebafdb7ca618f0659906bdd3a4d6663b15be83582511"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2024_10.html",
+      "bytes": 20384,
+      "sha256": "87670dd8bbc72288e1773681ca915c071a50e349ab6d6fc8d78ae0625b6cf94c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2024_11.html",
+      "bytes": 20384,
+      "sha256": "9e8bf0f6e832251b7ef264399d57caceddc3916235c616b730129c44cd9ce968"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2024_12.html",
+      "bytes": 20383,
+      "sha256": "2f0f4cd26bd4e551ac3369b033a3bb521172811739eec8896def2620d3049f24"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2025_01.html",
+      "bytes": 20381,
+      "sha256": "2b97878368c900bff3483b90a05f926c1bc2eec2ff19e8cb2255e17d942870d8"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2025_02.html",
+      "bytes": 20379,
+      "sha256": "dddb232361e21b91db10063713b82fb7fd2812dc1d014b3c6321f1aaf424ea76"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2025_03.html",
+      "bytes": 20393,
+      "sha256": "6a5573b2d648f5fc0033999c96b1c55efbcaf3dfafd293ba8b4fec5e312d7e9a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2025_04.html",
+      "bytes": 20376,
+      "sha256": "383ff6423dab4ad1f671a4315091454448ff39eb0c7b855c4018729ad555085f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2025_05.html",
+      "bytes": 20394,
+      "sha256": "3abecf7e29db730b09f138b6455487d86ccea90ae24e97cf13369a551b43beea"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2025_06.html",
+      "bytes": 20386,
+      "sha256": "b892b4d2cd25caffc52093946c281d9f0af8c173fb5218627af8b7d430e19a6a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2025_07.html",
+      "bytes": 20393,
+      "sha256": "6b14ed7a7d548cc6803887aeccb814306f7086c79ccb13456044902bc560af73"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2025_08.html",
+      "bytes": 20387,
+      "sha256": "7e30f713ba3ff7a57951420a81af3da821dc168c1a4f359f89a9cab6cbd8ac3b"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2025_09.html",
+      "bytes": 20385,
+      "sha256": "5d469f9120e2d1197855c3e29c8a75d5faef4f7a73a435bba4424bd06648b0ff"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2025_10.html",
+      "bytes": 20386,
+      "sha256": "c07b2df2dec048b3ae609b9d1544a45f872412d0c2048b8083092acc5fd2566a"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2025_11.html",
+      "bytes": 20388,
+      "sha256": "231de6fb90af75087ac940d514ea93b1ded958c7c179fab0a77e833b7ec9b4c0"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2025_12.html",
+      "bytes": 20383,
+      "sha256": "75898bcb136c01bea237153498eab5433977081567e18d001b6ca332892c089f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2026_01.html",
+      "bytes": 20379,
+      "sha256": "eb1947519530482c8e91b1feaaacd592b3f3944940fb0cd9a8a75cdff93086ba"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2026_02.html",
+      "bytes": 20383,
+      "sha256": "42866a5a9e9b451e830d08757e12d093a30ab48b83628e0ac61df3119a494adf"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2026_03.html",
+      "bytes": 20389,
+      "sha256": "cf2dba691fb898b990e7ff7a6371417b268887c51b9cd33e303996dae6ab7376"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2026_04.html",
+      "bytes": 20391,
+      "sha256": "b71af323f6bf4d022f41a48a059b21fd28f123b4190b7f33e115b8a001385186"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrrj_morbidity_volta_redonda_2026_05.html",
+      "bytes": 20390,
+      "sha256": "55fbe756f784c1b93557d2dd95f89cf1282d27bc22213032c4b9fe0f6a671144"
+    },
+    {
       "path": "data\\raw\\sim_2010_Mortalidade_Geral_2010_csv.zip",
       "bytes": 45277062,
       "sha256": "304e577de1e87f5f0eb8db9af3e8550722679a61758d7cb86b3744462d25fdc9"
@@ -1230,6 +3456,26 @@
     }
   ],
   "derived_artifacts": [
+    {
+      "path": "data\\interim\\sih_definition.html",
+      "bytes": 89473,
+      "sha256": "113e9159fc77686df8d9d3b6ae5e41d5ef6bb05c2ea7dd4f1758101f8d0cccb1"
+    },
+    {
+      "path": "data\\interim\\sih_morbidity_2008_2017.csv",
+      "bytes": 604730,
+      "sha256": "fac4ff0a020d6717230b77c3617400d4995496677f15cb8536c6e20877d1aaa8"
+    },
+    {
+      "path": "data\\interim\\sih_morbidity_2018_2026.csv",
+      "bytes": 509097,
+      "sha256": "4d82442080e1c5fa0a994766b7efcbdfee3e01a76d830a30321bcc16a0e0a5e5"
+    },
+    {
+      "path": "data\\interim\\sih_morbidity_2024_2024.csv",
+      "bytes": 5151,
+      "sha256": "77038aa2aa0b531fbe39f27b270d73cf14a6871df2c7eb8a39bd0d15a112b705"
+    },
     {
       "path": "data\\interim\\sih_nrrj_monthly_2008_2017.csv",
       "bytes": 22928,

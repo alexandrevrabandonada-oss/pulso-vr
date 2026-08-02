@@ -1,0 +1,28 @@
+{
+  "source_id": "sih_tabnet_nrrj_morbidity",
+  "geography": "residência; RJ total, Volta Redonda e restante do RJ excluindo VR",
+  "municipality_code_datasus": "330630",
+  "period_start": "2008-01",
+  "period_end": "2017-12",
+  "rows": 2160,
+  "expected_rows": 2160,
+  "raw_response_count": 240,
+  "target_labels": {
+    "resp_all": "10 Doenças do aparelho respiratório",
+    "pneumonia": "Pneumonia",
+    "acute_bronchitis_bronchiolitis": "Bronquite aguda e bronquiolite aguda",
+    "copd": "Bronquite enfisema e outr doenç pulm obstr crôn",
+    "asthma": "Asma",
+    "pneumoconiosis": "Pneumoconiose"
+  },
+  "derived_comparator": "rj_total - volta_redonda",
+  "negative_values": [],
+  "status": "validated_structure_only_no_epidemiological_estimate",
+  "notes": [
+    "SIH counts are aggregated hospitalizations/AIH, not unique persons or incident cases.",
+    "Rest of RJ is algebraically derived after querying the RJ total and Volta Redonda by residence.",
+    "TabNet's Lista Morb CID-10 is used for the named respiratory groups; exact CID audit remains required.",
+    "In the official TabNet legend, '-' is a numeric zero not resulting from rounding and is retained as 0.",
+    "No denominator, rate, confidence interval, or causal estimate is produced here."
+  ]
+}

@@ -41,6 +41,9 @@ município de ocorrência ou notificação.
   denominador populacional anual/etário.
 - A série SIH já foi adquirida por TabNet para 221 competências; ainda falta
   reconciliação independente dos totais antes da liberação analítica.
+- A Lista Morb CID-10 do SIH foi adquirida para as mesmas 221 competências,
+  com respostas separadas para o total do RJ e Volta Redonda; o restante do
+  RJ é derivado por subtração documentada.
 
 ## Harmonização inicial
 

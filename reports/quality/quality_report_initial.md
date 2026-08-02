@@ -1,6 +1,6 @@
 # Relatório inicial de qualidade
 
-Execução: 2026-08-02T21:07:04+00:00
+Execução: 2026-08-02T21:25:07+00:00
 
 ## Escopo
 
@@ -8,13 +8,13 @@ Esta execução valida a estrutura, metadados, proveniência e amostras iniciais
 
 ## Arquivos brutos
 
-Arquivos brutos não auxiliares encontrados: **228**.
+Arquivos brutos não auxiliares encontrados: **670**.
 Todos os arquivos brutos presentes devem ter sidecar `.sha256`.
 
 ## Log de extração
 
-Entradas no log: **315**.
-Contagem por status: `{"complete": 1, "downloaded": 228, "failed": 1, "skipped_existing_verified": 85}`.
+Entradas no log: **761**.
+Contagem por status: `{"complete": 1, "downloaded": 669, "empty": 1, "failed": 1, "skipped_existing_verified": 89}`.
 
 ## Achados e limites
 

@@ -16,6 +16,8 @@ from .logging_utils import configure_logging
 from .layout_validation import write_layout_manifest
 from .provenance import sha256_file
 from .raw_validation import write_raw_validation_report
+from .reporting import write_respiratory_report
+from .sih_morbidity import query_morbidity_series
 from .sih_tabnet import query_residence, query_residence_series, save_query_response, write_harmonized_series
 from .sources import get_sample_source
 from .territory_validation import write_territory_report
@@ -97,7 +99,10 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "metadata" / "discovered_resources_sim.json",
         root / "metadata" / "discovered_resources_sivep.json",
         root / "reports" / "quality" / "harmonization_manifest.json",
-    ] + sorted((root / "reports" / "quality").glob("sih_series_*.json"))
+        root / "reports" / "technical" / "fase3_respiratorio.md",
+    ] + sorted((root / "reports" / "quality").glob("sih_series_*.json")) + sorted(
+        (root / "reports" / "quality").glob("sih_morbidity_*.json")
+    )
     raw_samples = [
         {
             "path": str(path.relative_to(root)),
@@ -162,6 +167,19 @@ def _parser() -> argparse.ArgumentParser:
     sih_series.add_argument("--start-month", type=int, required=True)
     sih_series.add_argument("--end-year", type=int, required=True)
     sih_series.add_argument("--end-month", type=int, required=True)
+    sih_morbidity = subparsers.add_parser(
+        "sih-morbidity",
+        help="query official SIH respiratory morbidity groups by residence",
+    )
+    sih_morbidity.add_argument("--start-year", type=int, required=True)
+    sih_morbidity.add_argument("--start-month", type=int, required=True)
+    sih_morbidity.add_argument("--end-year", type=int, required=True)
+    sih_morbidity.add_argument("--end-month", type=int, required=True)
+    sih_morbidity.add_argument("--workers", type=int, default=2)
+    subparsers.add_parser(
+        "respiratory-report",
+        help="write the reproducible descriptive SIH respiratory report",
+    )
     discover = subparsers.add_parser("discover", help="save the current official resource catalog")
     discover.add_argument("--dataset", choices=("sim", "sivep"), required=True)
     subparsers.add_parser("sources", help="list verified sample acquisition identifiers")
@@ -262,6 +280,30 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Series quality report: {report}")
         print(f"Aggregated events: {sum(item.hospitalizations for item in results)}")
         return 0
+    if args.command == "sih-morbidity":
+        try:
+            interim, report = query_morbidity_series(
+                root,
+                args.start_year,
+                args.start_month,
+                args.end_year,
+                args.end_month,
+                workers=args.workers,
+            )
+        except (LookupError, ValueError, OSError) as exc:
+            print(f"ERROR: SIH morbidity query failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"SIH morbidity interim series: {interim}")
+        print(f"Morbidity quality report: {report}")
+        return 0
+    if args.command == "respiratory-report":
+        try:
+            report = write_respiratory_report(root)
+        except (OSError, ValueError) as exc:
+            print(f"ERROR: respiratory report failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Respiratory report: {report}")
+        return 0
     if args.command == "discover":
         resources = discover_resources(args.dataset)
         destination = root / "metadata" / f"discovered_resources_{args.dataset}.json"
@@ -329,9 +371,14 @@ def main(argv: list[str] | None = None) -> int:
                 print(f"ERROR: territory validation {item['path']}: {item['errors']}", file=sys.stderr)
             return 1
         quality = _quality_report(root)
+        respiratory_report = None
+        if list((root / "data" / "interim").glob("sih_morbidity_*.csv")):
+            respiratory_report = write_respiratory_report(root)
         manifest = _manifest(root, quality)
         print(f"Raw validation report: {raw_report}")
         print(f"Quality report: {quality}")
+        if respiratory_report:
+            print(f"Respiratory report: {respiratory_report}")
         print(f"Results manifest: {manifest}")
         return 0
     return 2
