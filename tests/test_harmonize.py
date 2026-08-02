@@ -28,3 +28,22 @@ def test_harmonize_sim_uses_named_fields_and_keeps_residence_separate(tmp_path: 
     assert result["residence_vr_rows"] == 1
     assert table.column("municipality_code_datasus").to_pylist() == ["330630"]
     assert table.column("municipality_code_occurrence").to_pylist() == ["330455"]
+
+
+def test_harmonize_plain_sim_csv(tmp_path: Path) -> None:
+    root = tmp_path
+    (root / "config").mkdir()
+    (root / "config" / "territories.yml").write_text(
+        "volta_redonda:\n  datasus_code_6_expected: '330630'\n  ibge_code_7: '3306305'\n",
+        encoding="utf-8",
+    )
+    raw = root / "data" / "raw"
+    raw.mkdir(parents=True)
+    csv_text = "CAUSABAS;IDADE;SEXO;CODMUNRES\nC340;465;2;330630\n"
+    source = raw / "sim_2022_DO22OPEN.csv"
+    source.write_text(csv_text, encoding="latin1")
+    result = harmonize_file(root, source, chunk_size=10)
+    table = pq.read_table(root / result["output_path"])
+    assert result["rows"] == 1
+    assert result["residence_vr_rows"] == 1
+    assert table.column("underlying_cause").to_pylist() == ["C340"]

@@ -14,6 +14,132 @@
     "errors": []
   },
   {
+    "path": "data\\raw\\sim_2011_Mortalidade_Geral_2011_csv.zip",
+    "source": "SIM",
+    "field": "CODMUNRES",
+    "format": "ZIP/CSV",
+    "ok": true,
+    "rows": 1170498,
+    "target_code": "330630",
+    "target_rows": 1997,
+    "observed_code_lengths": {
+      "6": 1170498
+    },
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sim_2012_Mortalidade_Geral_2012_csv.zip",
+    "source": "SIM",
+    "field": "CODMUNRES",
+    "format": "ZIP/CSV",
+    "ok": true,
+    "rows": 1181166,
+    "target_code": "330630",
+    "target_rows": 1916,
+    "observed_code_lengths": {
+      "6": 1181166
+    },
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sim_2013_Mortalidade_Geral_2013_csv.zip",
+    "source": "SIM",
+    "field": "CODMUNRES",
+    "format": "ZIP/CSV",
+    "ok": true,
+    "rows": 1210474,
+    "target_code": "330630",
+    "target_rows": 2025,
+    "observed_code_lengths": {
+      "6": 1210474
+    },
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sim_2014_Mortalidade_Geral_2014_csv.zip",
+    "source": "SIM",
+    "field": "CODMUNRES",
+    "format": "ZIP/CSV",
+    "ok": true,
+    "rows": 1227039,
+    "target_code": "330630",
+    "target_rows": 2013,
+    "observed_code_lengths": {
+      "6": 1227039
+    },
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sim_2015_Mortalidade_Geral_2015_csv.zip",
+    "source": "SIM",
+    "field": "CODMUNRES",
+    "format": "ZIP/CSV",
+    "ok": true,
+    "rows": 1264175,
+    "target_code": "330630",
+    "target_rows": 2050,
+    "observed_code_lengths": {
+      "6": 1264175
+    },
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sim_2016_Mortalidade_Geral_2016_csv.zip",
+    "source": "SIM",
+    "field": "CODMUNRES",
+    "format": "ZIP/CSV",
+    "ok": true,
+    "rows": 1309774,
+    "target_code": "330630",
+    "target_rows": 2120,
+    "observed_code_lengths": {
+      "6": 1309774
+    },
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sim_2017_Mortalidade_Geral_2017_csv.zip",
+    "source": "SIM",
+    "field": "CODMUNRES",
+    "format": "ZIP/CSV",
+    "ok": true,
+    "rows": 1312663,
+    "target_code": "330630",
+    "target_rows": 2081,
+    "observed_code_lengths": {
+      "6": 1312663
+    },
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sim_2018_Mortalidade_Geral_2018_csv.zip",
+    "source": "SIM",
+    "field": "CODMUNRES",
+    "format": "ZIP/CSV",
+    "ok": true,
+    "rows": 1316719,
+    "target_code": "330630",
+    "target_rows": 2279,
+    "observed_code_lengths": {
+      "6": 1316719
+    },
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sim_2019_Mortalidade_Geral_2019_csv.zip",
+    "source": "SIM",
+    "field": "CODMUNRES",
+    "format": "ZIP/CSV",
+    "ok": true,
+    "rows": 1349801,
+    "target_code": "330630",
+    "target_rows": 2369,
+    "observed_code_lengths": {
+      "6": 1349801
+    },
+    "errors": []
+  },
+  {
     "path": "data\\raw\\sim_2020_Mortalidade_Geral_2020_csv.zip",
     "source": "SIM",
     "field": "CODMUNRES",
@@ -24,6 +150,20 @@
     "target_rows": 2704,
     "observed_code_lengths": {
       "6": 1556824
+    },
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sim_2021_Mortalidade_Geral_2021_csv.zip",
+    "source": "SIM",
+    "field": "CODMUNRES",
+    "format": "ZIP/CSV",
+    "ok": true,
+    "rows": 1832649,
+    "target_code": "330630",
+    "target_rows": 3202,
+    "observed_code_lengths": {
+      "6": 1832649
     },
     "errors": []
   },

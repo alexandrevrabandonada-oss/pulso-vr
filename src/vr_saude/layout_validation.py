@@ -15,33 +15,50 @@ def inspect_sim_archive(path: Path) -> dict[str, Any]:
     result: dict[str, Any] = {
         "path": str(path),
         "source": "SIM",
-        "format": "ZIP",
+        "format": "ZIP" if path.suffix.lower() == ".zip" else "CSV",
         "members": [],
         "ok": False,
         "errors": [],
     }
     try:
-        with zipfile.ZipFile(path) as archive:
-            for member in archive.namelist():
-                if not member.lower().endswith(".csv"):
-                    continue
-                with archive.open(member) as handle:
-                    header_line = handle.readline().decode("latin1").strip()
-                fields = {field.strip().strip('"') for field in next(csv.reader([header_line], delimiter=";"))}
-                missing = sorted(SIM_REQUIRED_FIELDS - fields)
-                result["members"].append(
-                    {
-                        "member": member,
-                        "delimiter": ";",
-                        "columns": len(fields),
-                        "required_fields_present": sorted(SIM_REQUIRED_FIELDS & fields),
-                        "missing_required_fields": missing,
-                    }
-                )
-                if missing:
-                    result["errors"].append(f"{member}:missing:{','.join(missing)}")
-            if not result["members"]:
-                result["errors"].append("no_csv_member")
+        if path.suffix.lower() == ".zip":
+            with zipfile.ZipFile(path) as archive:
+                for member in archive.namelist():
+                    if not member.lower().endswith(".csv"):
+                        continue
+                    with archive.open(member) as handle:
+                        header_line = handle.readline().decode("latin1").strip()
+                    fields = {field.strip().strip('"') for field in next(csv.reader([header_line], delimiter=";"))}
+                    missing = sorted(SIM_REQUIRED_FIELDS - fields)
+                    result["members"].append(
+                        {
+                            "member": member,
+                            "delimiter": ";",
+                            "columns": len(fields),
+                            "required_fields_present": sorted(SIM_REQUIRED_FIELDS & fields),
+                            "missing_required_fields": missing,
+                        }
+                    )
+                    if missing:
+                        result["errors"].append(f"{member}:missing:{','.join(missing)}")
+                if not result["members"]:
+                    result["errors"].append("no_csv_member")
+        else:
+            with path.open("rb") as handle:
+                header_line = handle.readline().decode("latin1").strip()
+            fields = {field.strip().strip('"') for field in next(csv.reader([header_line], delimiter=";"))}
+            missing = sorted(SIM_REQUIRED_FIELDS - fields)
+            result["members"].append(
+                {
+                    "member": path.name,
+                    "delimiter": ";",
+                    "columns": len(fields),
+                    "required_fields_present": sorted(SIM_REQUIRED_FIELDS & fields),
+                    "missing_required_fields": missing,
+                }
+            )
+            if missing:
+                result["errors"].append(f"{path.name}:missing:{','.join(missing)}")
     except Exception as exc:
         result["errors"].append(f"{type(exc).__name__}:{exc}")
     result["ok"] = not result["errors"]
@@ -81,7 +98,7 @@ def inspect_sivep_parquet(path: Path) -> dict[str, Any]:
 def validate_known_layouts(root: Path) -> list[dict[str, Any]]:
     results: list[dict[str, Any]] = []
     raw = root / "data" / "raw"
-    for path in sorted(raw.glob("sim_*.zip")):
+    for path in [*sorted(raw.glob("sim_*.zip")), *sorted(raw.glob("sim_*.csv"))]:
         results.append(inspect_sim_archive(path))
     for path in sorted(raw.glob("sivep_*.parquet")):
         results.append(inspect_sivep_parquet(path))

@@ -63,6 +63,7 @@ python scripts/run_cli.py population-harmonize --start-year 2008 --end-year 2025
 python scripts/run_cli.py respiratory-rates
 python scripts/run_cli.py outcome-counts
 python scripts/run_cli.py sivep-summary
+python scripts/run_cli.py sim-mortality-rates
 python scripts/run_cli.py harmonize --source all
 ```
 
@@ -104,6 +105,12 @@ residência, taxa de notificação por 100 mil e proporção descritiva de óbit
 entre notificações. A taxa não é incidência e 2019–2020 não deve ser comparado
 automaticamente sem considerar cobertura, definição de caso e revisão da base;
 o relatório está em `reports/technical/pandemia_sivep.md`.
+As taxas brutas de mortalidade do SIM para os anos públicos observados ficam em
+`data/processed/sim_mortality_rates_sample.parquet`, com IC exato de Poisson,
+razão VR/restante do RJ e marcação de 2020 como interrupção assistencial ou
+pandemia conforme o desfecho. Os arquivos SIM de 2010–2024 foram adquiridos,
+mas 2010 e 2023 permanecem fora das taxas por falta de denominador populacional;
+o relatório está em `reports/technical/mortalidade_sim.md`.
 Também está disponível a primeira série respiratória agregada do SIH em
 `data/interim/sih_morbidity_2008_2017.csv` e
 `data/interim/sih_morbidity_2018_2026.csv`, com o relatório técnico em

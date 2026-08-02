@@ -1,11 +1,15 @@
 from __future__ import annotations
 
 import json
+import csv
 import zipfile
 from pathlib import Path
 from typing import Any
 
 from .provenance import sha256_file
+
+
+SIM_REQUIRED_FIELDS = {"CODMUNRES", "SEXO", "IDADE", "CAUSABAS"}
 
 
 def _sidecar_status(path: Path) -> tuple[bool, str]:
@@ -45,6 +49,20 @@ def validate_raw_file(path: Path) -> dict[str, Any]:
                 }
                 if bad_member:
                     result["errors"].append(f"corrupt_zip_member:{bad_member}")
+        elif suffix == ".csv":
+            with path.open("rb") as handle:
+                header_line = handle.readline().decode("latin1").strip()
+            fields = {field.strip().strip('"') for field in next(csv.reader([header_line], delimiter=";"))}
+            missing = sorted(SIM_REQUIRED_FIELDS - fields)
+            result["format_ok"] = not missing
+            result["format_details"] = {
+                "delimiter": ";",
+                "columns": len(fields),
+                "required_fields_present": sorted(SIM_REQUIRED_FIELDS & fields),
+                "missing_required_fields": missing,
+            }
+            if missing:
+                result["errors"].append("missing_required_fields:" + ",".join(missing))
         elif suffix == ".pdf":
             header = path.read_bytes()[:5]
             result["format_ok"] = header == b"%PDF-"

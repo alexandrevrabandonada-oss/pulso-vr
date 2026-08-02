@@ -14,6 +14,7 @@ from .discovery import discover_resources, select_resource
 from .harmonize import harmonize_sources
 from .logging_utils import configure_logging
 from .layout_validation import write_layout_manifest
+from .mortality import build_mortality_rates
 from .outcomes import build_outcome_counts
 from .population import acquire_population, harmonize_population
 from .provenance import sha256_file
@@ -107,11 +108,13 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "reports" / "quality" / "respiratory_rates_manifest.json",
         root / "reports" / "quality" / "outcome_counts_manifest.json",
         root / "reports" / "quality" / "sivep_surveillance_manifest.json",
+        root / "reports" / "quality" / "sim_mortality_rates_manifest.json",
         root / "reports" / "technical" / "fase3_respiratorio.md",
         root / "reports" / "technical" / "denominadores.md",
         root / "reports" / "technical" / "taxas_respiratorias.md",
         root / "reports" / "technical" / "desfechos_sim_sivep.md",
         root / "reports" / "technical" / "pandemia_sivep.md",
+        root / "reports" / "technical" / "mortalidade_sim.md",
     ] + sorted((root / "reports" / "quality").glob("sih_series_*.json")) + sorted(
         (root / "reports" / "quality").glob("sih_morbidity_*.json")
     )
@@ -175,6 +178,7 @@ def _parser() -> argparse.ArgumentParser:
     subparsers.add_parser("validate-territories", help="validate residence codes for Volta Redonda")
     harmonize = subparsers.add_parser("harmonize", help="create interim named-field Parquet outputs")
     harmonize.add_argument("--source", choices=("all", "sim", "sivep"), default="all")
+    harmonize.add_argument("--year", type=int, action="append", help="harmonize only this year; repeatable")
     sih_query = subparsers.add_parser("sih-query", help="query one official SIH TabNet month by residence")
     sih_query.add_argument("--year", type=int, default=2024)
     sih_query.add_argument("--month", type=int, default=1)
@@ -219,6 +223,10 @@ def _parser() -> argparse.ArgumentParser:
     subparsers.add_parser(
         "sivep-summary",
         help="summarize SIVEP notifications, notification rates and deaths",
+    )
+    subparsers.add_parser(
+        "sim-mortality-rates",
+        help="calculate sampled SIM crude mortality rates with Poisson intervals",
     )
     discover = subparsers.add_parser("discover", help="save the current official resource catalog")
     discover.add_argument("--dataset", choices=("sim", "sivep"), required=True)
@@ -279,7 +287,11 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if args.command == "harmonize":
         try:
-            report, results = harmonize_sources(root, args.source)
+            report, results = harmonize_sources(
+                root,
+                args.source,
+                years=set(args.year) if args.year else None,
+            )
         except (ValueError, OSError, TypeError) as exc:
             print(f"ERROR: harmonization failed: {exc}", file=sys.stderr)
             return 1
@@ -397,6 +409,16 @@ def main(argv: list[str] | None = None) -> int:
         print(f"SIVEP surveillance Parquet: {output}")
         print(f"SIVEP surveillance manifest: {manifest}")
         print(f"SIVEP surveillance report: {report}")
+        return 0
+    if args.command == "sim-mortality-rates":
+        try:
+            output, manifest, report = build_mortality_rates(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: SIM mortality rates failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"SIM mortality rates Parquet: {output}")
+        print(f"SIM mortality rates manifest: {manifest}")
+        print(f"SIM mortality rates report: {report}")
         return 0
     if args.command == "discover":
         resources = discover_resources(args.dataset)

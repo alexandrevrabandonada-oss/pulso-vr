@@ -137,42 +137,56 @@ def _write_batches(output: Path, batches: Iterable[pd.DataFrame]) -> tuple[int, 
     return rows, vr_rows, columns, quality
 
 
-def _sim_batches(path: Path, root: Path, vr_code: str, chunk_size: int) -> Iterable[pd.DataFrame]:
+def _sim_batches_from_handle(
+    path: Path,
+    root: Path,
+    vr_code: str,
+    handle: Any,
+    chunk_size: int,
+) -> Iterable[pd.DataFrame]:
     year = _source_year(path)
     source_file = str(path.relative_to(root))
-    with zipfile.ZipFile(path) as archive:
-        members = [name for name in archive.namelist() if name.lower().endswith(".csv")]
-        if len(members) != 1:
-            raise ValueError(f"expected one SIM CSV member in {path.name}, found {len(members)}")
-        with archive.open(members[0]) as handle:
-            reader = pd.read_csv(
-                handle,
-                sep=";",
-                encoding="latin1",
-                dtype="string",
-                chunksize=chunk_size,
-                low_memory=False,
-            )
-            row_offset = 0
-            for chunk in reader:
-                chunk = chunk.reset_index(drop=True)
-                missing = sorted(SIM_REQUIRED - set(chunk.columns))
-                if missing:
-                    raise ValueError(f"{path.name}: missing SIM fields {missing}")
-                normalized = _base_metadata(chunk, root, "SIM", year, source_file, row_offset, vr_code)
-                normalized["municipality_code_occurrence"] = _string_series(chunk, "CODMUNOCOR", len(chunk))
-                normalized["sex_raw"] = _string_series(chunk, "SEXO", len(chunk))
-                normalized["age_raw"] = _string_series(chunk, "IDADE", len(chunk))
-                normalized["underlying_cause"] = _string_series(chunk, "CAUSABAS", len(chunk))
-                normalized["multiple_cause_raw"] = _string_series(chunk, "CAUSAMAT", len(chunk))
-                normalized["death_date_raw"] = _string_series(chunk, "DTOBITO", len(chunk))
-                normalized["death_date"] = _date_series(chunk, "DTOBITO", len(chunk), compact=True)
-                normalized["birth_date_raw"] = _string_series(chunk, "DTNASC", len(chunk))
-                normalized["birth_date"] = _date_series(chunk, "DTNASC", len(chunk), compact=True)
-                normalized["death_type_raw"] = _string_series(chunk, "TIPOBITO", len(chunk))
-                normalized["status_raw"] = _string_series(chunk, "STDOEPIDEM", len(chunk))
-                row_offset += len(chunk)
-                yield normalized
+    reader = pd.read_csv(
+        handle,
+        sep=";",
+        encoding="latin1",
+        dtype="string",
+        chunksize=chunk_size,
+        low_memory=False,
+    )
+    row_offset = 0
+    for chunk in reader:
+        chunk = chunk.reset_index(drop=True)
+        missing = sorted(SIM_REQUIRED - set(chunk.columns))
+        if missing:
+            raise ValueError(f"{path.name}: missing SIM fields {missing}")
+        normalized = _base_metadata(chunk, root, "SIM", year, source_file, row_offset, vr_code)
+        normalized["municipality_code_occurrence"] = _string_series(chunk, "CODMUNOCOR", len(chunk))
+        normalized["sex_raw"] = _string_series(chunk, "SEXO", len(chunk))
+        normalized["age_raw"] = _string_series(chunk, "IDADE", len(chunk))
+        normalized["underlying_cause"] = _string_series(chunk, "CAUSABAS", len(chunk))
+        normalized["multiple_cause_raw"] = _string_series(chunk, "CAUSAMAT", len(chunk))
+        normalized["death_date_raw"] = _string_series(chunk, "DTOBITO", len(chunk))
+        normalized["death_date"] = _date_series(chunk, "DTOBITO", len(chunk), compact=True)
+        normalized["birth_date_raw"] = _string_series(chunk, "DTNASC", len(chunk))
+        normalized["birth_date"] = _date_series(chunk, "DTNASC", len(chunk), compact=True)
+        normalized["death_type_raw"] = _string_series(chunk, "TIPOBITO", len(chunk))
+        normalized["status_raw"] = _string_series(chunk, "STDOEPIDEM", len(chunk))
+        row_offset += len(chunk)
+        yield normalized
+
+
+def _sim_batches(path: Path, root: Path, vr_code: str, chunk_size: int) -> Iterable[pd.DataFrame]:
+    if path.suffix.lower() == ".zip":
+        with zipfile.ZipFile(path) as archive:
+            members = [name for name in archive.namelist() if name.lower().endswith(".csv")]
+            if len(members) != 1:
+                raise ValueError(f"expected one SIM CSV member in {path.name}, found {len(members)}")
+            with archive.open(members[0]) as handle:
+                yield from _sim_batches_from_handle(path, root, vr_code, handle, chunk_size)
+    else:
+        with path.open("rb") as handle:
+            yield from _sim_batches_from_handle(path, root, vr_code, handle, chunk_size)
 
 
 def _sivep_batches(path: Path, root: Path, vr_code: str, batch_size: int) -> Iterable[pd.DataFrame]:
@@ -215,13 +229,17 @@ def _sivep_batches(path: Path, root: Path, vr_code: str, batch_size: int) -> Ite
 
 
 def harmonize_file(root: Path, path: Path, chunk_size: int = 100_000) -> dict[str, Any]:
-    if path.suffix.lower() == ".zip":
+    if path.suffix.lower() in {".zip", ".csv"}:
         source = "SIM"
         output_name = f"sim_{_source_year(path)}_harmonized.parquet"
         batches = _sim_batches(path, root, _vr_code(root), chunk_size)
-        with zipfile.ZipFile(path) as archive:
-            member = next(name for name in archive.namelist() if name.lower().endswith(".csv"))
-            with archive.open(member) as handle:
+        if path.suffix.lower() == ".zip":
+            with zipfile.ZipFile(path) as archive:
+                member = next(name for name in archive.namelist() if name.lower().endswith(".csv"))
+                with archive.open(member) as handle:
+                    input_fields = next(csv.reader((line.decode("latin1") for line in handle), delimiter=";"))
+        else:
+            with path.open("rb") as handle:
                 input_fields = next(csv.reader((line.decode("latin1") for line in handle), delimiter=";"))
         optional_fields = SIM_OPTIONAL
     elif path.suffix.lower() == ".parquet" and path.name.startswith("sivep_"):
@@ -252,20 +270,39 @@ def harmonize_file(root: Path, path: Path, chunk_size: int = 100_000) -> dict[st
     }
 
 
-def harmonize_sources(root: Path, source: str = "all", chunk_size: int = 100_000) -> tuple[Path, list[dict[str, Any]]]:
+def harmonize_sources(
+    root: Path,
+    source: str = "all",
+    chunk_size: int = 100_000,
+    years: set[int] | None = None,
+) -> tuple[Path, list[dict[str, Any]]]:
     paths: list[Path] = []
     if source in {"all", "sim"}:
         paths.extend(sorted((root / "data" / "raw").glob("sim_*.zip")))
+        paths.extend(sorted((root / "data" / "raw").glob("sim_*.csv")))
     if source in {"all", "sivep"}:
         paths.extend(sorted((root / "data" / "raw").glob("sivep_*.parquet")))
     if source not in {"all", "sim", "sivep"}:
         raise ValueError(f"unknown harmonization source: {source}")
+    if years is not None:
+        paths = [path for path in paths if _source_year(path) in years]
     results = [harmonize_file(root, path, chunk_size) for path in paths]
+    manifest_results = results
+    existing_manifest_path = root / "reports" / "quality" / "harmonization_manifest.json"
+    if years is not None and existing_manifest_path.exists():
+        existing_manifest = json.loads(existing_manifest_path.read_text(encoding="utf-8"))
+        by_output = {item["output_path"]: item for item in existing_manifest.get("results", [])}
+        by_output.update({item["output_path"]: item for item in results})
+        manifest_results = sorted(
+            by_output.values(),
+            key=lambda item: (item["source"], item["source_year"], item["output_path"]),
+        )
     manifest = {
         "generated_at": utc_now(),
         "status": "interim_harmonization_no_epidemiological_estimate",
         "source_filter": source,
-        "results": results,
+        "year_filter": sorted(years) if years is not None else None,
+        "results": manifest_results,
         "rules": [
             "Residence uses CODMUNRES for SIM and CO_MUN_RES for SIVEP-SRAG.",
             "Occurrence and notification municipality fields remain separate.",

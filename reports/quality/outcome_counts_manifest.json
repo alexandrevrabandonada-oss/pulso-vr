@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-02T22:12:41+00:00",
+  "generated_at": "2026-08-02T23:15:13+00:00",
   "status": "interim_outcome_counts_no_incidence_estimate",
-  "rows": 1988,
+  "rows": 6939,
   "outcome_ids": [
     "acute_bronchitis_bronchiolitis",
     "all_malignant_neoplasms",
@@ -19,9 +19,9 @@
     "resp_all",
     "srag"
   ],
-  "input_file_count": 5,
-  "residence_rj_rows": 574221,
-  "residence_vr_rows": 8800,
+  "input_file_count": 17,
+  "residence_rj_rows": 2269657,
+  "residence_vr_rows": 35894,
   "input_files": [
     {
       "source": "SIM",
@@ -36,6 +36,105 @@
     },
     {
       "source": "SIM",
+      "source_year": 2011,
+      "input_path": "data\\raw\\sim_2011_Mortalidade_Geral_2011_csv.zip",
+      "input_sha256": "78b21b2868c802ff9b2e6ec651777d10778b8a63ee263ba349e0655d2e5b9aa2",
+      "harmonized_path": "data\\interim\\sim_2011_harmonized.parquet",
+      "harmonized_sha256": "2b4042c5959ed4ef2b77e789586c59bd1d07f22a3e43e0b813bbce91c5f0ab5b",
+      "rows": 1170498,
+      "residence_rj_rows": 127095,
+      "residence_vr_rows": 1997
+    },
+    {
+      "source": "SIM",
+      "source_year": 2012,
+      "input_path": "data\\raw\\sim_2012_Mortalidade_Geral_2012_csv.zip",
+      "input_sha256": "31fe02bbd54e275e1fff6eafcc509af4804f6cf8ac5787782a9b4c8d7283f8ce",
+      "harmonized_path": "data\\interim\\sim_2012_harmonized.parquet",
+      "harmonized_sha256": "de0a65093e4883370d1c5d35c9a8fc335ae2739b8231c2c3057263be34e9cd53",
+      "rows": 1181166,
+      "residence_rj_rows": 126261,
+      "residence_vr_rows": 1916
+    },
+    {
+      "source": "SIM",
+      "source_year": 2013,
+      "input_path": "data\\raw\\sim_2013_Mortalidade_Geral_2013_csv.zip",
+      "input_sha256": "98491e61587590667ca88acf63af47e3ad3755aabd082380cfd831c70f7b6a29",
+      "harmonized_path": "data\\interim\\sim_2013_harmonized.parquet",
+      "harmonized_sha256": "85d7ad1bdaf7a399c1f370c917ef9e5003f2e51890051e01b4ae5b399448d120",
+      "rows": 1210474,
+      "residence_rj_rows": 130032,
+      "residence_vr_rows": 2025
+    },
+    {
+      "source": "SIM",
+      "source_year": 2014,
+      "input_path": "data\\raw\\sim_2014_Mortalidade_Geral_2014_csv.zip",
+      "input_sha256": "a66f562380838d050e0460c10d18b01e534f2b206a86de322fe5cace512d0d1a",
+      "harmonized_path": "data\\interim\\sim_2014_harmonized.parquet",
+      "harmonized_sha256": "b6f48c6d2850dfa1f58ada210ee14bb6a2bec877faeaf2ff367154aa2f41ea37",
+      "rows": 1227039,
+      "residence_rj_rows": 131044,
+      "residence_vr_rows": 2013
+    },
+    {
+      "source": "SIM",
+      "source_year": 2015,
+      "input_path": "data\\raw\\sim_2015_Mortalidade_Geral_2015_csv.zip",
+      "input_sha256": "4a7c1cc3444c730cfecfbbe0f682072a5efb36e7dafa5ab0f88348766a6d29d4",
+      "harmonized_path": "data\\interim\\sim_2015_harmonized.parquet",
+      "harmonized_sha256": "490f73629d1246c2d521d060d28c6ed5afadfef64fd00dbc470afc75e8286914",
+      "rows": 1264175,
+      "residence_rj_rows": 132714,
+      "residence_vr_rows": 2050
+    },
+    {
+      "source": "SIM",
+      "source_year": 2016,
+      "input_path": "data\\raw\\sim_2016_Mortalidade_Geral_2016_csv.zip",
+      "input_sha256": "55476c5591858484db259fdf469bf3787e6042aec96f323eccdb3e35528abb17",
+      "harmonized_path": "data\\interim\\sim_2016_harmonized.parquet",
+      "harmonized_sha256": "81e3dc15659d16f4f3e65b915b169b5da2cadc750b19c4499e62fbf8ed83c035",
+      "rows": 1309774,
+      "residence_rj_rows": 141089,
+      "residence_vr_rows": 2120
+    },
+    {
+      "source": "SIM",
+      "source_year": 2017,
+      "input_path": "data\\raw\\sim_2017_Mortalidade_Geral_2017_csv.zip",
+      "input_sha256": "c2ab78d74faeefecb2d6546f1992b14522666684e9e0177a67e0d04df9232893",
+      "harmonized_path": "data\\interim\\sim_2017_harmonized.parquet",
+      "harmonized_sha256": "02da6ad1116a1e9a46169f897eff390944016c502d32aefb87cb147d20f51ffd",
+      "rows": 1312663,
+      "residence_rj_rows": 136709,
+      "residence_vr_rows": 2081
+    },
+    {
+      "source": "SIM",
+      "source_year": 2018,
+      "input_path": "data\\raw\\sim_2018_Mortalidade_Geral_2018_csv.zip",
+      "input_sha256": "9d9807bde1a745562504473332add042031b43212792d8aba7d746e11b6dd1f4",
+      "harmonized_path": "data\\interim\\sim_2018_harmonized.parquet",
+      "harmonized_sha256": "be1df1e75985daef5b3f140ae4464d44d74a5919752f34846d7a76c42f8cc92f",
+      "rows": 1316719,
+      "residence_rj_rows": 140706,
+      "residence_vr_rows": 2279
+    },
+    {
+      "source": "SIM",
+      "source_year": 2019,
+      "input_path": "data\\raw\\sim_2019_Mortalidade_Geral_2019_csv.zip",
+      "input_sha256": "66501b7348ad77d8e88bcb6306d86dc555496fe65258333440998f2472c66480",
+      "harmonized_path": "data\\interim\\sim_2019_harmonized.parquet",
+      "harmonized_sha256": "d7082bee1b89f7fe3efdfe7213c4f8bcd4018bca78a25cf5622c04e63c0d2b5e",
+      "rows": 1349801,
+      "residence_rj_rows": 144600,
+      "residence_vr_rows": 2369
+    },
+    {
+      "source": "SIM",
       "source_year": 2020,
       "input_path": "data\\raw\\sim_2020_Mortalidade_Geral_2020_csv.zip",
       "input_sha256": "ac626dff18876eaa572f724966fb05cd5f42529fc6bdd5507ce5dfbd08146142",
@@ -44,6 +143,39 @@
       "rows": 1556824,
       "residence_rj_rows": 172185,
       "residence_vr_rows": 2704
+    },
+    {
+      "source": "SIM",
+      "source_year": 2021,
+      "input_path": "data\\raw\\sim_2021_Mortalidade_Geral_2021_csv.zip",
+      "input_sha256": "6a8fe8077cf11cbf2ae8d783d4b786968de4e7606ca52c2a04c97d864aa89e4f",
+      "harmonized_path": "data\\interim\\sim_2021_harmonized.parquet",
+      "harmonized_sha256": "ffc64184ac479f4997fede36738dec535cfb904f967397d17ba05df28b5e483d",
+      "rows": 1832649,
+      "residence_rj_rows": 189232,
+      "residence_vr_rows": 3202
+    },
+    {
+      "source": "SIM",
+      "source_year": 2022,
+      "input_path": "data\\raw\\sim_2022_DO22OPEN.csv",
+      "input_sha256": "044568561aa08b8c93aafbe2eaa13e10ff4234fac37f8d30b917e4c3562f3f7d",
+      "harmonized_path": "data\\interim\\sim_2022_harmonized.parquet",
+      "harmonized_sha256": "2989c6f0b9c8810590f7befd2bae3fdc3ffe3972ed180022de8a597308ac2a9f",
+      "rows": 1544266,
+      "residence_rj_rows": 150806,
+      "residence_vr_rows": 2587
+    },
+    {
+      "source": "SIM",
+      "source_year": 2023,
+      "input_path": "data\\raw\\sim_2023_DO23OPEN.csv",
+      "input_sha256": "b07c9a8ae98b3d7cb1fed4bc13b6aa5cc23e48311435db509eb5c652ce204126",
+      "harmonized_path": "data\\interim\\sim_2023_harmonized.parquet",
+      "harmonized_sha256": "a6e0befb91bf9dc61a86c920ce448504450e41adaf47b3c95c2f02c1c4564274",
+      "rows": 1465610,
+      "residence_rj_rows": 145148,
+      "residence_vr_rows": 2455
     },
     {
       "source": "SIM",
@@ -80,7 +212,7 @@
     }
   ],
   "output_path": "data\\processed\\outcome_counts_sim_sivep.parquet",
-  "output_sha256": "dcb9afc265b8c9b9933319f7f35dcb3b6475e3ba056cf815897f9dd53b09c6f8",
+  "output_sha256": "5609061246398e2b6f2707c1b492a2e56c1e8afd693100aa288c30cf8f765d16",
   "rules": {
     "sim": "underlying_cause classified by CID-10 ranges from config/outcomes.yml",
     "sivep_srag": "all eligible SIVEP records",

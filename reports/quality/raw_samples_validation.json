@@ -10208,6 +10208,150 @@
     "ok": true
   },
   {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sim_2011_Mortalidade_Geral_2011_csv.zip",
+    "filename": "sim_2011_Mortalidade_Geral_2011_csv.zip",
+    "bytes": 44919789,
+    "sha256": "78b21b2868c802ff9b2e6ec651777d10778b8a63ee263ba349e0655d2e5b9aa2",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "members": 1,
+      "first_members": [
+        "Mortalidade_Geral_2011.csv"
+      ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sim_2012_Mortalidade_Geral_2012_csv.zip",
+    "filename": "sim_2012_Mortalidade_Geral_2012_csv.zip",
+    "bytes": 50406576,
+    "sha256": "31fe02bbd54e275e1fff6eafcc509af4804f6cf8ac5787782a9b4c8d7283f8ce",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "members": 1,
+      "first_members": [
+        "Mortalidade_Geral_2012.csv"
+      ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sim_2013_Mortalidade_Geral_2013_csv.zip",
+    "filename": "sim_2013_Mortalidade_Geral_2013_csv.zip",
+    "bytes": 51738281,
+    "sha256": "98491e61587590667ca88acf63af47e3ad3755aabd082380cfd831c70f7b6a29",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "members": 1,
+      "first_members": [
+        "Mortalidade_Geral_2013.csv"
+      ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sim_2014_Mortalidade_Geral_2014_csv.zip",
+    "filename": "sim_2014_Mortalidade_Geral_2014_csv.zip",
+    "bytes": 72099732,
+    "sha256": "a66f562380838d050e0460c10d18b01e534f2b206a86de322fe5cace512d0d1a",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "members": 1,
+      "first_members": [
+        "Mortalidade_Geral_2014.csv"
+      ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sim_2015_Mortalidade_Geral_2015_csv.zip",
+    "filename": "sim_2015_Mortalidade_Geral_2015_csv.zip",
+    "bytes": 68243412,
+    "sha256": "4a7c1cc3444c730cfecfbbe0f682072a5efb36e7dafa5ab0f88348766a6d29d4",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "members": 1,
+      "first_members": [
+        "Mortalidade_Geral_2015.csv"
+      ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sim_2016_Mortalidade_Geral_2016_csv.zip",
+    "filename": "sim_2016_Mortalidade_Geral_2016_csv.zip",
+    "bytes": 75979354,
+    "sha256": "55476c5591858484db259fdf469bf3787e6042aec96f323eccdb3e35528abb17",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "members": 1,
+      "first_members": [
+        "Mortalidade_Geral_2016.csv"
+      ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sim_2017_Mortalidade_Geral_2017_csv.zip",
+    "filename": "sim_2017_Mortalidade_Geral_2017_csv.zip",
+    "bytes": 76907142,
+    "sha256": "c2ab78d74faeefecb2d6546f1992b14522666684e9e0177a67e0d04df9232893",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "members": 1,
+      "first_members": [
+        "Mortalidade_Geral_2017.csv"
+      ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sim_2018_Mortalidade_Geral_2018_csv.zip",
+    "filename": "sim_2018_Mortalidade_Geral_2018_csv.zip",
+    "bytes": 71708152,
+    "sha256": "9d9807bde1a745562504473332add042031b43212792d8aba7d746e11b6dd1f4",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "members": 1,
+      "first_members": [
+        "Mortalidade_Geral_2018.csv"
+      ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sim_2019_Mortalidade_Geral_2019_csv.zip",
+    "filename": "sim_2019_Mortalidade_Geral_2019_csv.zip",
+    "bytes": 81336392,
+    "sha256": "66501b7348ad77d8e88bcb6306d86dc555496fe65258333440998f2472c66480",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "members": 1,
+      "first_members": [
+        "Mortalidade_Geral_2019.csv"
+      ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
     "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sim_2020_Mortalidade_Geral_2020_csv.zip",
     "filename": "sim_2020_Mortalidade_Geral_2020_csv.zip",
     "bytes": 91585111,
@@ -10219,6 +10363,64 @@
       "first_members": [
         "Mortalidade_Geral_2020.csv"
       ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sim_2021_Mortalidade_Geral_2021_csv.zip",
+    "filename": "sim_2021_Mortalidade_Geral_2021_csv.zip",
+    "bytes": 106736013,
+    "sha256": "6a8fe8077cf11cbf2ae8d783d4b786968de4e7606ca52c2a04c97d864aa89e4f",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "members": 1,
+      "first_members": [
+        "Mortalidade_Geral_2021.csv"
+      ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sim_2022_DO22OPEN.csv",
+    "filename": "sim_2022_DO22OPEN.csv",
+    "bytes": 528817737,
+    "sha256": "044568561aa08b8c93aafbe2eaa13e10ff4234fac37f8d30b917e4c3562f3f7d",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "delimiter": ";",
+      "columns": 87,
+      "required_fields_present": [
+        "CAUSABAS",
+        "CODMUNRES",
+        "IDADE",
+        "SEXO"
+      ],
+      "missing_required_fields": []
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sim_2023_DO23OPEN.csv",
+    "filename": "sim_2023_DO23OPEN.csv",
+    "bytes": 506687313,
+    "sha256": "b07c9a8ae98b3d7cb1fed4bc13b6aa5cc23e48311435db509eb5c652ce204126",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "delimiter": ";",
+      "columns": 86,
+      "required_fields_present": [
+        "CAUSABAS",
+        "CODMUNRES",
+        "IDADE",
+        "SEXO"
+      ],
+      "missing_required_fields": []
     },
     "errors": [],
     "ok": true

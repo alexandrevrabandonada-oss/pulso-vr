@@ -1,0 +1,86 @@
+{
+  "generated_at": "2026-08-02T23:16:41+00:00",
+  "status": "sampled_sim_crude_mortality_rates_no_incidence_estimate",
+  "observed_years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "available_years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2024
+  ],
+  "missing_denominator_years": [
+    2010,
+    2023
+  ],
+  "outcome_ids": [
+    "acute_bronchitis_bronchiolitis",
+    "all_malignant_neoplasms",
+    "asthma",
+    "colorectal",
+    "copd",
+    "influenza",
+    "leukemia",
+    "lung",
+    "non_hodgkin_lymphoma",
+    "pneumoconiosis",
+    "pneumonia",
+    "prostate",
+    "resp_all"
+  ],
+  "coverage_status": "annual_sim_source_years_observed_2010_2024_rates_limited_by_denominator",
+  "missing_source_years_between_2010_2024": [],
+  "missing_rate_years_between_2010_2024": [
+    2010,
+    2023
+  ],
+  "rows": 507,
+  "output_path": "data\\processed\\sim_mortality_rates_sample.parquet",
+  "output_sha256": "7b0a2c9d3e3b878babf40dd166e3486f6b0ef4eb467894bdb1d1a3b61721445c",
+  "input_files": [
+    {
+      "path": "data\\processed\\outcome_counts_sim_sivep.parquet",
+      "sha256": "5609061246398e2b6f2707c1b492a2e56c1e8afd693100aa288c30cf8f765d16"
+    },
+    {
+      "path": "data\\processed\\population_denominators.parquet",
+      "sha256": "0363ab5e56a15773eb483bbbfb993b612a629af79f3cb2ed1da5c789955d316e"
+    }
+  ],
+  "rules": {
+    "outcome": "SIM underlying cause classified by CID-10 ranges from config/outcomes.yml",
+    "territory": "residence code; VR=330630; rest of RJ excludes VR",
+    "rate": "deaths divided by annual resident population times 100,000",
+    "interval": "exact Poisson 95% interval for the count"
+  },
+  "notes": [
+    "The three available SIM years are not a continuous annual series and are not used for trend inference.",
+    "SIM deaths are not incident cancer cases.",
+    "Small cells are suppressed in the technical report.",
+    "No age standardization, causal inference, or ecological attribution to CSN is produced."
+  ]
+}

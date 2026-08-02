@@ -1,6 +1,6 @@
 # Síntese pandêmica do SIVEP
 
-Execução: 2026-08-02T22:18:09+00:00
+Execução: 2026-08-02T23:15:21+00:00
 
 O SIVEP é uma base de vigilância de SRAG. As taxas abaixo são taxas de notificação por 100 mil residentes, não incidência, e dependem de cobertura, definição de caso, completude e atualização do sistema.
 

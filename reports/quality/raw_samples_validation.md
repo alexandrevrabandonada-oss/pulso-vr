@@ -687,7 +687,19 @@ Esta validação testa sidecar SHA-256 e integridade estrutural básica; não su
 | sih_tabnet_nrrj_morbidity_volta_redonda_2026_04.html | 20391 | OK | OK | OK | {"source_label": true, "tabnet_title": true, "total_label": true} |
 | sih_tabnet_nrrj_morbidity_volta_redonda_2026_05.html | 20390 | OK | OK | OK | {"source_label": true, "tabnet_title": true, "total_label": true} |
 | sim_2010_Mortalidade_Geral_2010_csv.zip | 45277062 | OK | OK | OK | {"first_members": ["Mortalidade_Geral_2010.csv"], "members": 1} |
+| sim_2011_Mortalidade_Geral_2011_csv.zip | 44919789 | OK | OK | OK | {"first_members": ["Mortalidade_Geral_2011.csv"], "members": 1} |
+| sim_2012_Mortalidade_Geral_2012_csv.zip | 50406576 | OK | OK | OK | {"first_members": ["Mortalidade_Geral_2012.csv"], "members": 1} |
+| sim_2013_Mortalidade_Geral_2013_csv.zip | 51738281 | OK | OK | OK | {"first_members": ["Mortalidade_Geral_2013.csv"], "members": 1} |
+| sim_2014_Mortalidade_Geral_2014_csv.zip | 72099732 | OK | OK | OK | {"first_members": ["Mortalidade_Geral_2014.csv"], "members": 1} |
+| sim_2015_Mortalidade_Geral_2015_csv.zip | 68243412 | OK | OK | OK | {"first_members": ["Mortalidade_Geral_2015.csv"], "members": 1} |
+| sim_2016_Mortalidade_Geral_2016_csv.zip | 75979354 | OK | OK | OK | {"first_members": ["Mortalidade_Geral_2016.csv"], "members": 1} |
+| sim_2017_Mortalidade_Geral_2017_csv.zip | 76907142 | OK | OK | OK | {"first_members": ["Mortalidade_Geral_2017.csv"], "members": 1} |
+| sim_2018_Mortalidade_Geral_2018_csv.zip | 71708152 | OK | OK | OK | {"first_members": ["Mortalidade_Geral_2018.csv"], "members": 1} |
+| sim_2019_Mortalidade_Geral_2019_csv.zip | 81336392 | OK | OK | OK | {"first_members": ["Mortalidade_Geral_2019.csv"], "members": 1} |
 | sim_2020_Mortalidade_Geral_2020_csv.zip | 91585111 | OK | OK | OK | {"first_members": ["Mortalidade_Geral_2020.csv"], "members": 1} |
+| sim_2021_Mortalidade_Geral_2021_csv.zip | 106736013 | OK | OK | OK | {"first_members": ["Mortalidade_Geral_2021.csv"], "members": 1} |
+| sim_2022_DO22OPEN.csv | 528817737 | OK | OK | OK | {"columns": 87, "delimiter": ";", "missing_required_fields": [], "required_fields_present": ["CAUSABAS", "CODMUNRES", "IDADE", "SEXO"]} |
+| sim_2023_DO23OPEN.csv | 506687313 | OK | OK | OK | {"columns": 86, "delimiter": ";", "missing_required_fields": [], "required_fields_present": ["CAUSABAS", "CODMUNRES", "IDADE", "SEXO"]} |
 | sim_mortalidade_geral_2024_csv.zip | 98076266 | OK | OK | OK | {"first_members": ["DO24OPEN.csv"], "members": 1} |
 | sivep_2020_INFLUD20-23-03-2026.parquet | 87148508 | OK | OK | OK | {"columns": 194, "row_groups": 1, "rows": 1206920} |
 | sivep_srag_2019_2026-03-23.parquet | 3447406 | OK | OK | OK | {"columns": 194, "row_groups": 1, "rows": 48941} |
