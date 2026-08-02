@@ -60,11 +60,14 @@ python scripts/run_cli.py sih-morbidity --start-year 2018 --start-month 1 --end-
 python scripts/run_cli.py respiratory-report
 python scripts/run_cli.py population-acquire --start-year 2008 --end-year 2025
 python scripts/run_cli.py population-harmonize --start-year 2008 --end-year 2025
+python scripts/run_cli.py population-age-sex-acquire
+python scripts/run_cli.py population-age-sex-harmonize
 python scripts/run_cli.py respiratory-rates
 python scripts/run_cli.py outcome-counts
 python scripts/run_cli.py sivep-summary
 python scripts/run_cli.py sim-mortality-rates
 python scripts/run_cli.py sim-age-sex-profile
+python scripts/run_cli.py sim-age-sex-rates
 python scripts/run_cli.py harmonize --source all
 ```
 
@@ -117,6 +120,16 @@ O perfil descritivo por grupos etários amplos e sexo está em
 contagens e proporções dentro do desfecho, sem taxas específicas ou
 padronização, pois os denominadores por idade/sexo ainda não foram obtidos.
 O relatório está em `reports/technical/perfil_etario_sexual_sim.md`.
+Os denominadores por idade e sexo do Censo 2022 são harmonizados da tabela
+SIDRA 9514 em `data/processed/population_age_sex_denominators_2022.parquet`.
+Eles permitem taxas específicas apenas para 2022; não são interpolados para os
+demais anos. O relatório está em
+`reports/technical/denominadores_idade_sexo_2022.md`.
+As taxas específicas de mortalidade por idade e sexo do SIM 2022, com IC exato
+de Poisson e comparação entre Volta Redonda e o restante do RJ, ficam em
+`data/processed/sim_mortality_age_sex_rates_2022.parquet`. São taxas brutas
+específicas, não padronizadas; o relatório está em
+`reports/technical/taxas_sim_idade_sexo_2022.md`.
 Também está disponível a primeira série respiratória agregada do SIH em
 `data/interim/sih_morbidity_2008_2017.csv` e
 `data/interim/sih_morbidity_2018_2026.csv`, com o relatório técnico em

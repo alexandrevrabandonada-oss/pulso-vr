@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from . import __version__
+from .age_sex_rates import build_age_sex_rates
 from .config import project_root
 from .download import download_public_file
 from .discovery import discover_resources, select_resource
@@ -18,6 +19,7 @@ from .layout_validation import write_layout_manifest
 from .mortality import build_mortality_rates
 from .outcomes import build_outcome_counts
 from .population import acquire_population, harmonize_population
+from .population_age_sex import acquire_age_sex_population, harmonize_age_sex_population
 from .provenance import sha256_file
 from .raw_validation import write_raw_validation_report
 from .rates import build_respiratory_rates
@@ -106,18 +108,22 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "metadata" / "discovered_resources_sivep.json",
         root / "reports" / "quality" / "harmonization_manifest.json",
         root / "reports" / "quality" / "population_denominator_manifest.json",
+        root / "reports" / "quality" / "population_age_sex_manifest.json",
         root / "reports" / "quality" / "respiratory_rates_manifest.json",
         root / "reports" / "quality" / "outcome_counts_manifest.json",
         root / "reports" / "quality" / "sivep_surveillance_manifest.json",
         root / "reports" / "quality" / "sim_mortality_rates_manifest.json",
         root / "reports" / "quality" / "sim_age_sex_profile_manifest.json",
+        root / "reports" / "quality" / "sim_age_sex_rates_manifest.json",
         root / "reports" / "technical" / "fase3_respiratorio.md",
         root / "reports" / "technical" / "denominadores.md",
+        root / "reports" / "technical" / "denominadores_idade_sexo_2022.md",
         root / "reports" / "technical" / "taxas_respiratorias.md",
         root / "reports" / "technical" / "desfechos_sim_sivep.md",
         root / "reports" / "technical" / "pandemia_sivep.md",
         root / "reports" / "technical" / "mortalidade_sim.md",
         root / "reports" / "technical" / "perfil_etario_sexual_sim.md",
+        root / "reports" / "technical" / "taxas_sim_idade_sexo_2022.md",
     ] + sorted((root / "reports" / "quality").glob("sih_series_*.json")) + sorted(
         (root / "reports" / "quality").glob("sih_morbidity_*.json")
     )
@@ -215,6 +221,15 @@ def _parser() -> argparse.ArgumentParser:
     )
     population_harmonize.add_argument("--start-year", type=int, default=2008)
     population_harmonize.add_argument("--end-year", type=int, default=2025)
+    population_age_sex_acquire = subparsers.add_parser(
+        "population-age-sex-acquire",
+        help="download SIDRA 9514 Census 2022 age-sex payloads for RJ",
+    )
+    population_age_sex_acquire.add_argument("--chunk-size", type=int, default=20)
+    subparsers.add_parser(
+        "population-age-sex-harmonize",
+        help="harmonize SIDRA 9514 Census 2022 age-sex denominators",
+    )
     subparsers.add_parser(
         "respiratory-rates",
         help="calculate crude annual respiratory rates with exact Poisson intervals",
@@ -234,6 +249,10 @@ def _parser() -> argparse.ArgumentParser:
     subparsers.add_parser(
         "sim-age-sex-profile",
         help="describe SIM deaths by broad age group and sex",
+    )
+    subparsers.add_parser(
+        "sim-age-sex-rates",
+        help="calculate SIM 2022 specific crude rates by age group and sex",
     )
     discover = subparsers.add_parser("discover", help="save the current official resource catalog")
     discover.add_argument("--dataset", choices=("sim", "sivep"), required=True)
@@ -387,6 +406,26 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Population denominator Parquet: {denominator}")
         print(f"Population report: {report}")
         return 0
+    if args.command == "population-age-sex-acquire":
+        try:
+            paths = acquire_age_sex_population(root, chunk_size=args.chunk_size)
+        except (OSError, ValueError, RuntimeError, FileNotFoundError) as exc:
+            print(f"ERROR: age-sex population acquisition failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Age-sex population raw payloads: {len(paths)}")
+        for path in paths:
+            print(path)
+        return 0
+    if args.command == "population-age-sex-harmonize":
+        try:
+            municipality, denominator, report = harmonize_age_sex_population(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: age-sex population harmonization failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Age-sex municipality Parquet: {municipality}")
+        print(f"Age-sex denominator Parquet: {denominator}")
+        print(f"Age-sex population report: {report}")
+        return 0
     if args.command == "respiratory-rates":
         try:
             output, manifest, report = build_respiratory_rates(root)
@@ -436,6 +475,16 @@ def main(argv: list[str] | None = None) -> int:
         print(f"SIM age-sex profile Parquet: {output}")
         print(f"SIM age-sex profile manifest: {manifest}")
         print(f"SIM age-sex profile report: {report}")
+        return 0
+    if args.command == "sim-age-sex-rates":
+        try:
+            output, manifest, report = build_age_sex_rates(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: SIM age-sex rates failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"SIM age-sex rates Parquet: {output}")
+        print(f"SIM age-sex rates manifest: {manifest}")
+        print(f"SIM age-sex rates report: {report}")
         return 0
     if args.command == "discover":
         resources = discover_resources(args.dataset)

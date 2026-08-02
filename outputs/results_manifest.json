@@ -1,7 +1,7 @@
 {
   "project": "vr_saude_ambiental",
   "code_version": "0.1.0",
-  "run_at": "2026-08-02T23:34:38+00:00",
+  "run_at": "2026-08-02T23:54:18+00:00",
   "status": "preliminary_no_epidemiological_results",
   "inputs": [
     {
@@ -22,25 +22,25 @@
     },
     {
       "path": "metadata\\source_catalog.csv",
-      "sha256": "806b00f4b95180ad3f5f48f5c75fcaa480e358eaed00d4ca1156580f16d40c00"
+      "sha256": "df1a810ccbde0d3d67875aa8f563dae39c941e646968b2f99776baec8d1f8f9a"
     },
     {
       "path": "metadata\\extraction_log.csv",
-      "sha256": "b17f5dc7adf334a173d83f981fbefe9934e861529cd5cabe2dc7dafe56a346da"
+      "sha256": "e7460b2174af9d0504ca82f14120984e54afe1bfe991efe21d762ed1546b6604"
     }
   ],
   "outputs": [
     {
       "path": "reports\\quality\\quality_report_initial.md",
-      "sha256": "0f62566aa54cc01c7726ab4a253a57fe1888a80d8a10e893ceb6a611e0d6c26a"
+      "sha256": "fa2dc9f6a377a9abfac3d75a4962121afeb9ebf8546be142955a41967d9a9b40"
     },
     {
       "path": "reports\\quality\\raw_samples_validation.md",
-      "sha256": "b06317ac4c967b24b4941ed63d5a4ce1465e25f77eb5354fc5da259d2da678cd"
+      "sha256": "c604da2dd48bac8c7a4b9af337a76e101a713c066fdeb91688cd1178e9a6d45f"
     },
     {
       "path": "reports\\quality\\raw_samples_validation.json",
-      "sha256": "6596260316b3c12ecbc63c5d9e7f44d0c19f772788261f59fdc5fbf40a3546e0"
+      "sha256": "8ff7c934385729bc4d4c2c4e5105af7ba5747ae1baed94d21f0f183a8e576852"
     },
     {
       "path": "reports\\quality\\territory_code_validation.md",
@@ -71,6 +71,10 @@
       "sha256": "4842ec9b61ea50dd9f8c867224f88120482b0457d64ec1607aedf0eeb23c3dd5"
     },
     {
+      "path": "reports\\quality\\population_age_sex_manifest.json",
+      "sha256": "298f38b4ef66699f512055056c11541c36202318c49fe80d249430cbf1fb4d02"
+    },
+    {
       "path": "reports\\quality\\respiratory_rates_manifest.json",
       "sha256": "3bb9f074ece3be04db321704c52ec35b27b85803491c2201c6c26301c1bffe8b"
     },
@@ -91,12 +95,20 @@
       "sha256": "69b3c7c06170df1e14c1fa02d6e1f94e16a0a7952a60489e37b4f659b4c259d6"
     },
     {
+      "path": "reports\\quality\\sim_age_sex_rates_manifest.json",
+      "sha256": "397ce89c6249e2c9fc95982ed4bb7ab33dffa2bdb41758c3c6898dec7ade81b5"
+    },
+    {
       "path": "reports\\technical\\fase3_respiratorio.md",
-      "sha256": "a540f6b370383b7ed27ac7de36d7f598829629df629820131d8de6007f379a7a"
+      "sha256": "5c3aace4d333ed52aa5065ccc9c37022b4ac755ee3c1ab3d412f0dc6e3cda561"
     },
     {
       "path": "reports\\technical\\denominadores.md",
       "sha256": "4dcf9ed0bb18ace67c50299708969601491036e4e6a78f1878b7d051a1b697f5"
+    },
+    {
+      "path": "reports\\technical\\denominadores_idade_sexo_2022.md",
+      "sha256": "4555f4e8b6e1d010fd0de515fe66ffa1b50c0b958137af1eefbb00f7911c0e5d"
     },
     {
       "path": "reports\\technical\\taxas_respiratorias.md",
@@ -117,6 +129,10 @@
     {
       "path": "reports\\technical\\perfil_etario_sexual_sim.md",
       "sha256": "3366bfe35f18624ccbb932cf82e47aec20c6ce0d69a2996a587700629f557f0d"
+    },
+    {
+      "path": "reports\\technical\\taxas_sim_idade_sexo_2022.md",
+      "sha256": "a7eed2d825efd11cc8fcf1857e98b9e012ca84202121058854554ef49172add2"
     },
     {
       "path": "reports\\quality\\sih_series_2008_2017.json",
@@ -236,6 +252,31 @@
       "path": "data\\raw\\ibge_sidra_6579_population_2025.json",
       "bytes": 1508654,
       "sha256": "01f0ff6d9fe497e3966ef750158b4d2e6c4821c1866ad5f0f9d59e6873493c5a"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_9514_age_sex_2022_rj_01.json",
+      "bytes": 390743,
+      "sha256": "18083f0e9377742666471ca58e3bf45202b848720850218c6f15c3a3bbc43f00"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_9514_age_sex_2022_rj_02.json",
+      "bytes": 388574,
+      "sha256": "324734e488dab06306e5fea3bd5afe65d646699e831decba3ef58a479b7fe1cd"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_9514_age_sex_2022_rj_03.json",
+      "bytes": 387465,
+      "sha256": "8be6c65d9654d1e08ea97ad3d778efdf9db87c410ec16667112b2c0835ac3623"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_9514_age_sex_2022_rj_04.json",
+      "bytes": 393921,
+      "sha256": "b8cda879daaf12b271b47f852fe341a6b6c78ea2c9b7767a0b1d8dff856f8055"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_9514_age_sex_2022_rj_05.json",
+      "bytes": 233110,
+      "sha256": "d6a79211ca3a1a3e7dc4a85596531e68e4f33cc651ad500b47d585cd40bd8646"
     },
     {
       "path": "data\\raw\\ibge_sidra_9514_population_2022.json",
@@ -3785,6 +3826,16 @@
       "sha256": "5609061246398e2b6f2707c1b492a2e56c1e8afd693100aa288c30cf8f765d16"
     },
     {
+      "path": "data\\processed\\population_age_sex_2022.parquet",
+      "bytes": 15885,
+      "sha256": "610a43b1f2123d12f0355aa3bd7dce2051a66d8385506d1eb14338151b074da1"
+    },
+    {
+      "path": "data\\processed\\population_age_sex_denominators_2022.parquet",
+      "bytes": 4160,
+      "sha256": "3c5ef105706b0c533e23543b2562cf8320cc7cf031164a14dd058174924a4826"
+    },
+    {
       "path": "data\\processed\\population_denominators.parquet",
       "bytes": 7195,
       "sha256": "0363ab5e56a15773eb483bbbfb993b612a629af79f3cb2ed1da5c789955d316e"
@@ -3803,6 +3854,11 @@
       "path": "data\\processed\\sim_mortality_age_sex_profile.parquet",
       "bytes": 70670,
       "sha256": "11ae598020a21e5004e91f763fc95f3219b9e81c4d033245aac159733a097862"
+    },
+    {
+      "path": "data\\processed\\sim_mortality_age_sex_rates_2022.parquet",
+      "bytes": 37621,
+      "sha256": "ab3bdebda51a25b72e5459f03e770bb3abdcc66d8a78ca25b6a7f921b008dc9b"
     },
     {
       "path": "data\\processed\\sim_mortality_rates_sample.parquet",

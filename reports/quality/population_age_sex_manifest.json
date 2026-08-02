@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-08-02T23:43:39+00:00",
+  "status": "validated_census_2022_age_sex_denominators",
+  "year": 2022,
+  "municipality_count": 92,
+  "municipality_rows": 1472,
+  "denominator_rows": 48,
+  "duplicate_rows": 0,
+  "sidra_zero_marker_count": 34,
+  "input_file_count": 5,
+  "input_files": [
+    {
+      "path": "data\\raw\\ibge_sidra_9514_age_sex_2022_rj_01.json",
+      "sha256": "18083f0e9377742666471ca58e3bf45202b848720850218c6f15c3a3bbc43f00"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_9514_age_sex_2022_rj_02.json",
+      "sha256": "324734e488dab06306e5fea3bd5afe65d646699e831decba3ef58a479b7fe1cd"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_9514_age_sex_2022_rj_03.json",
+      "sha256": "8be6c65d9654d1e08ea97ad3d778efdf9db87c410ec16667112b2c0835ac3623"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_9514_age_sex_2022_rj_04.json",
+      "sha256": "b8cda879daaf12b271b47f852fe341a6b6c78ea2c9b7767a0b1d8dff856f8055"
+    },
+    {
+      "path": "data\\raw\\ibge_sidra_9514_age_sex_2022_rj_05.json",
+      "sha256": "d6a79211ca3a1a3e7dc4a85596531e68e4f33cc651ad500b47d585cd40bd8646"
+    }
+  ],
+  "municipality_output": {
+    "path": "data\\processed\\population_age_sex_2022.parquet",
+    "sha256": "610a43b1f2123d12f0355aa3bd7dce2051a66d8385506d1eb14338151b074da1"
+  },
+  "denominator_output": {
+    "path": "data\\processed\\population_age_sex_denominators_2022.parquet",
+    "sha256": "3c5ef105706b0c533e23543b2562cf8320cc7cf031164a14dd058174924a4826"
+  },
+  "rules": {
+    "table": "9514",
+    "variable": "93",
+    "sex_codes": {
+      "4": "masculino",
+      "5": "feminino"
+    },
+    "age_groups": [
+      "<1",
+      "1-4",
+      "5-14",
+      "15-24",
+      "25-44",
+      "45-64",
+      "65-74",
+      "75+"
+    ],
+    "territory": "92 RJ municipalities; rest excludes IBGE 3306305"
+  },
+  "notes": [
+    "This is a 2022 Census denominator and is not interpolated to other years.",
+    "The age groups are harmonized to the SIM groups, not directly published as rates by the source.",
+    "No unknown-age or unknown-sex denominator is invented.",
+    "SIDRA '-' markers are treated as zero population cells and counted in the manifest."
+  ]
+}

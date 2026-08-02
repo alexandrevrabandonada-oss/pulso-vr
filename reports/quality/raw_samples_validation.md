@@ -21,6 +21,11 @@ Esta validação testa sidecar SHA-256 e integridade estrutural básica; não su
 | ibge_sidra_6579_population_2023.json | 352 | OK | OK | OK | {"json_type": "list"} |
 | ibge_sidra_6579_population_2024.json | 1508654 | OK | OK | OK | {"json_type": "list"} |
 | ibge_sidra_6579_population_2025.json | 1508654 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_9514_age_sex_2022_rj_01.json | 390743 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_9514_age_sex_2022_rj_02.json | 388574 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_9514_age_sex_2022_rj_03.json | 387465 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_9514_age_sex_2022_rj_04.json | 393921 | OK | OK | OK | {"json_type": "list"} |
+| ibge_sidra_9514_age_sex_2022_rj_05.json | 233110 | OK | OK | OK | {"json_type": "list"} |
 | ibge_sidra_9514_population_2022.json | 2154653 | OK | OK | OK | {"json_type": "list"} |
 | ibge_sidra_9514_vr_2022.json | 945 | OK | OK | OK | {"json_type": "list"} |
 | sih_tabnet_nrrj_2008_01.html | 2436 | OK | OK | OK | {"source_label": true, "tabnet_title": true, "total_label": true} |

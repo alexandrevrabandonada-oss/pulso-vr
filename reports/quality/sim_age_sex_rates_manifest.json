@@ -1,0 +1,63 @@
+{
+  "generated_at": "2026-08-02T23:48:20+00:00",
+  "status": "validated_sim_2022_specific_crude_rates_no_standardization",
+  "year": 2022,
+  "rows": 624,
+  "outcome_ids": [
+    "acute_bronchitis_bronchiolitis",
+    "all_malignant_neoplasms",
+    "asthma",
+    "colorectal",
+    "copd",
+    "influenza",
+    "leukemia",
+    "lung",
+    "non_hodgkin_lymphoma",
+    "pneumoconiosis",
+    "pneumonia",
+    "prostate",
+    "resp_all"
+  ],
+  "geographies": [
+    "rest_of_rj_excluding_vr",
+    "rj_total",
+    "volta_redonda"
+  ],
+  "age_groups": [
+    "<1",
+    "1-4",
+    "5-14",
+    "15-24",
+    "25-44",
+    "45-64",
+    "65-74",
+    "75+"
+  ],
+  "sexes": [
+    "masculino",
+    "feminino"
+  ],
+  "output_path": "data\\processed\\sim_mortality_age_sex_rates_2022.parquet",
+  "output_sha256": "ab3bdebda51a25b72e5459f03e770bb3abdcc66d8a78ca25b6a7f921b008dc9b",
+  "input_files": [
+    {
+      "path": "data\\processed\\outcome_counts_sim_sivep.parquet",
+      "sha256": "5609061246398e2b6f2707c1b492a2e56c1e8afd693100aa288c30cf8f765d16"
+    },
+    {
+      "path": "data\\processed\\population_age_sex_denominators_2022.parquet",
+      "sha256": "3c5ef105706b0c533e23543b2562cf8320cc7cf031164a14dd058174924a4826"
+    }
+  ],
+  "rules": {
+    "rate": "deaths divided by same age-sex resident population times 100,000",
+    "interval": "exact Poisson 95% interval",
+    "comparison": "Volta Redonda versus rest of RJ excluding VR"
+  },
+  "notes": [
+    "Rates are specific crude rates for 2022 and are not age-standardized.",
+    "Only age and sex groups with official Censo denominators are included.",
+    "Small cells are suppressed in the technical report.",
+    "No causal inference or incidence estimate is produced."
+  ]
+}

@@ -221,6 +221,71 @@
     "ok": true
   },
   {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\ibge_sidra_9514_age_sex_2022_rj_01.json",
+    "filename": "ibge_sidra_9514_age_sex_2022_rj_01.json",
+    "bytes": 390743,
+    "sha256": "18083f0e9377742666471ca58e3bf45202b848720850218c6f15c3a3bbc43f00",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "json_type": "list"
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\ibge_sidra_9514_age_sex_2022_rj_02.json",
+    "filename": "ibge_sidra_9514_age_sex_2022_rj_02.json",
+    "bytes": 388574,
+    "sha256": "324734e488dab06306e5fea3bd5afe65d646699e831decba3ef58a479b7fe1cd",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "json_type": "list"
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\ibge_sidra_9514_age_sex_2022_rj_03.json",
+    "filename": "ibge_sidra_9514_age_sex_2022_rj_03.json",
+    "bytes": 387465,
+    "sha256": "8be6c65d9654d1e08ea97ad3d778efdf9db87c410ec16667112b2c0835ac3623",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "json_type": "list"
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\ibge_sidra_9514_age_sex_2022_rj_04.json",
+    "filename": "ibge_sidra_9514_age_sex_2022_rj_04.json",
+    "bytes": 393921,
+    "sha256": "b8cda879daaf12b271b47f852fe341a6b6c78ea2c9b7767a0b1d8dff856f8055",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "json_type": "list"
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\ibge_sidra_9514_age_sex_2022_rj_05.json",
+    "filename": "ibge_sidra_9514_age_sex_2022_rj_05.json",
+    "bytes": 233110,
+    "sha256": "d6a79211ca3a1a3e7dc4a85596531e68e4f33cc651ad500b47d585cd40bd8646",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "json_type": "list"
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
     "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\ibge_sidra_9514_population_2022.json",
     "filename": "ibge_sidra_9514_population_2022.json",
     "bytes": 2154653,
