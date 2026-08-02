@@ -62,6 +62,7 @@ python scripts/run_cli.py population-acquire --start-year 2008 --end-year 2025
 python scripts/run_cli.py population-harmonize --start-year 2008 --end-year 2025
 python scripts/run_cli.py respiratory-rates
 python scripts/run_cli.py outcome-counts
+python scripts/run_cli.py sivep-summary
 python scripts/run_cli.py harmonize --source all
 ```
 
@@ -97,6 +98,12 @@ Os desfechos classificados do SIM e SIVEP ficam em
 `data/processed/outcome_counts_sim_sivep.parquet`. SIM representa óbitos; SIVEP
 representa vigilância de SRAG, não incidência populacional. A apresentação
 suprime células menores que cinco.
+O resumo pandêmico do SIVEP fica em
+`data/processed/sivep_surveillance_summary.parquet`, com notificações por
+residência, taxa de notificação por 100 mil e proporção descritiva de óbitos
+entre notificações. A taxa não é incidência e 2019–2020 não deve ser comparado
+automaticamente sem considerar cobertura, definição de caso e revisão da base;
+o relatório está em `reports/technical/pandemia_sivep.md`.
 Também está disponível a primeira série respiratória agregada do SIH em
 `data/interim/sih_morbidity_2008_2017.csv` e
 `data/interim/sih_morbidity_2018_2026.csv`, com o relatório técnico em

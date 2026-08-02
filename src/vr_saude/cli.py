@@ -23,6 +23,7 @@ from .reporting import write_respiratory_report
 from .sih_morbidity import query_morbidity_series
 from .sih_tabnet import query_residence, query_residence_series, save_query_response, write_harmonized_series
 from .sources import get_sample_source
+from .surveillance import build_sivep_surveillance_summary
 from .territory_validation import write_territory_report
 from .validate import validate_project
 
@@ -105,10 +106,12 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "reports" / "quality" / "population_denominator_manifest.json",
         root / "reports" / "quality" / "respiratory_rates_manifest.json",
         root / "reports" / "quality" / "outcome_counts_manifest.json",
+        root / "reports" / "quality" / "sivep_surveillance_manifest.json",
         root / "reports" / "technical" / "fase3_respiratorio.md",
         root / "reports" / "technical" / "denominadores.md",
         root / "reports" / "technical" / "taxas_respiratorias.md",
         root / "reports" / "technical" / "desfechos_sim_sivep.md",
+        root / "reports" / "technical" / "pandemia_sivep.md",
     ] + sorted((root / "reports" / "quality").glob("sih_series_*.json")) + sorted(
         (root / "reports" / "quality").glob("sih_morbidity_*.json")
     )
@@ -212,6 +215,10 @@ def _parser() -> argparse.ArgumentParser:
     subparsers.add_parser(
         "outcome-counts",
         help="classify SIM CID-10 and SIVEP outcomes by residence",
+    )
+    subparsers.add_parser(
+        "sivep-summary",
+        help="summarize SIVEP notifications, notification rates and deaths",
     )
     discover = subparsers.add_parser("discover", help="save the current official resource catalog")
     discover.add_argument("--dataset", choices=("sim", "sivep"), required=True)
@@ -380,6 +387,16 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Outcome counts Parquet: {output}")
         print(f"Outcome counts manifest: {manifest}")
         print(f"Outcome counts report: {report}")
+        return 0
+    if args.command == "sivep-summary":
+        try:
+            output, manifest, report = build_sivep_surveillance_summary(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: SIVEP surveillance summary failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"SIVEP surveillance Parquet: {output}")
+        print(f"SIVEP surveillance manifest: {manifest}")
+        print(f"SIVEP surveillance report: {report}")
         return 0
     if args.command == "discover":
         resources = discover_resources(args.dataset)

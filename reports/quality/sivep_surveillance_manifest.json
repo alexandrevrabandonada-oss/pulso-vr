@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-08-02T22:18:09+00:00",
+  "status": "surveillance_notification_rates_no_incidence_estimate",
+  "rows": 15,
+  "available_years": [
+    2019,
+    2020
+  ],
+  "missing_denominator_years": [],
+  "output_path": "data\\processed\\sivep_surveillance_summary.parquet",
+  "output_sha256": "ea3ba705a584d5e4e5a553f2d509baf5f823a5968beafd59f0b52be64431cfbc",
+  "input_files": [
+    {
+      "path": "data\\processed\\outcome_counts_sim_sivep.parquet",
+      "sha256": "dcb9afc265b8c9b9933319f7f35dcb3b6475e3ba056cf815897f9dd53b09c6f8"
+    },
+    {
+      "path": "data\\processed\\population_denominators.parquet",
+      "sha256": "0363ab5e56a15773eb483bbbfb993b612a629af79f3cb2ed1da5c789955d316e"
+    }
+  ],
+  "rules": {
+    "outcomes": [
+      "srag",
+      "covid19",
+      "influenza"
+    ],
+    "death_statuses": [
+      "óbito por SRAG",
+      "óbito por outra causa"
+    ],
+    "territory": "residence; rj_total, Volta Redonda and rest of RJ excluding VR"
+  },
+  "notes": [
+    "Notification rates are not incidence rates and should not be interpreted as risk of infection.",
+    "SIVEP coverage and case definitions change over time; 2019 and 2020 are not automatically comparable.",
+    "Small counts are suppressed in the technical report.",
+    "No causal or interrupted time-series inference is produced."
+  ]
+}

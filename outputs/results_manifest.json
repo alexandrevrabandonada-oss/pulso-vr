@@ -1,7 +1,7 @@
 {
   "project": "vr_saude_ambiental",
   "code_version": "0.1.0",
-  "run_at": "2026-08-02T22:14:21+00:00",
+  "run_at": "2026-08-02T22:19:37+00:00",
   "status": "preliminary_no_epidemiological_results",
   "inputs": [
     {
@@ -32,7 +32,7 @@
   "outputs": [
     {
       "path": "reports\\quality\\quality_report_initial.md",
-      "sha256": "ad5c4ee7c44ad4395763b55dd37d71cb83e7ece5d151affbdcbbf1c88094543f"
+      "sha256": "1138faf37075e3c83f3d9ce254ab54710278d6b6a5c104706a131226f2bb37e3"
     },
     {
       "path": "reports\\quality\\raw_samples_validation.md",
@@ -79,8 +79,12 @@
       "sha256": "8d1991b600f70dfd42dabe43fcb13a600df841a90ef47c9675b8d170f3890fcc"
     },
     {
+      "path": "reports\\quality\\sivep_surveillance_manifest.json",
+      "sha256": "ae993ea72e46f127c6679ddb73550de2d57ebc518a715c254d5c627dd4f7bc3d"
+    },
+    {
       "path": "reports\\technical\\fase3_respiratorio.md",
-      "sha256": "560cb7e20a3e336dbbe2c0c76ba6e9742a34f85f03d6831e2812737214962785"
+      "sha256": "df9755bcd2e72de56186bb438fa0327bdf37ec2de461e8145c81f3888bee4916"
     },
     {
       "path": "reports\\technical\\denominadores.md",
@@ -93,6 +97,10 @@
     {
       "path": "reports\\technical\\desfechos_sim_sivep.md",
       "sha256": "37d61b1a76603601b7f649d6792bc64965e45885d87ab4d33ca6b13f910968cb"
+    },
+    {
+      "path": "reports\\technical\\pandemia_sivep.md",
+      "sha256": "ea28e46382a180d5fac6f8d4bdef570eab990d18673be41628ea3fc5473a89e7"
     },
     {
       "path": "reports\\quality\\sih_series_2008_2017.json",
@@ -3654,6 +3662,11 @@
       "path": "data\\processed\\respiratory_rates_annual.parquet",
       "bytes": 33070,
       "sha256": "2a13bde7d697c685f663acd15935d8ee73242a96636e690a8e511f00eec686ed"
+    },
+    {
+      "path": "data\\processed\\sivep_surveillance_summary.parquet",
+      "bytes": 11295,
+      "sha256": "ea3ba705a584d5e4e5a553f2d509baf5f823a5968beafd59f0b52be64431cfbc"
     }
   ],
   "results": [],
