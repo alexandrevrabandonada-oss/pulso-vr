@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-08-02T23:29:54+00:00",
+  "status": "descriptive_sim_age_sex_profile_no_specific_rates",
+  "rows": 6207,
+  "available_years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "outcome_ids": [
+    "acute_bronchitis_bronchiolitis",
+    "all_malignant_neoplasms",
+    "asthma",
+    "colorectal",
+    "copd",
+    "influenza",
+    "leukemia",
+    "lung",
+    "non_hodgkin_lymphoma",
+    "pneumoconiosis",
+    "pneumonia",
+    "prostate",
+    "resp_all"
+  ],
+  "geographies": [
+    "rest_of_rj_excluding_vr",
+    "rj_total",
+    "volta_redonda"
+  ],
+  "output_path": "data\\processed\\sim_mortality_age_sex_profile.parquet",
+  "output_sha256": "11ae598020a21e5004e91f763fc95f3219b9e81c4d033245aac159733a097862",
+  "input_files": [
+    {
+      "path": "data\\processed\\outcome_counts_sim_sivep.parquet",
+      "sha256": "5609061246398e2b6f2707c1b492a2e56c1e8afd693100aa288c30cf8f765d16"
+    }
+  ],
+  "rules": {
+    "age_groups": [
+      "<1",
+      "1-4",
+      "5-14",
+      "15-24",
+      "25-44",
+      "45-64",
+      "65-74",
+      "75+",
+      "ignorado"
+    ],
+    "sex_mapping": {
+      "1": "masculino",
+      "2": "feminino",
+      "other": "ignorado"
+    },
+    "unit": "óbitos de residentes; causa básica do SIM",
+    "share": "count divided by total count within year, geography and outcome"
+  },
+  "notes": [
+    "The profile is descriptive and does not produce age-specific rates.",
+    "No age-sex denominators or direct standardization are available in this step.",
+    "Small cells are suppressed in the technical report.",
+    "SIM deaths are not incident cancer cases and no causal inference is produced."
+  ]
+}

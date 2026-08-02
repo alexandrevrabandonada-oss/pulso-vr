@@ -1,7 +1,7 @@
 {
   "project": "vr_saude_ambiental",
   "code_version": "0.1.0",
-  "run_at": "2026-08-02T23:23:29+00:00",
+  "run_at": "2026-08-02T23:34:38+00:00",
   "status": "preliminary_no_epidemiological_results",
   "inputs": [
     {
@@ -32,7 +32,7 @@
   "outputs": [
     {
       "path": "reports\\quality\\quality_report_initial.md",
-      "sha256": "03c00a572309c2fe135c701e166c72164552fc247e48b54144b7b147e9bcf669"
+      "sha256": "0f62566aa54cc01c7726ab4a253a57fe1888a80d8a10e893ceb6a611e0d6c26a"
     },
     {
       "path": "reports\\quality\\raw_samples_validation.md",
@@ -87,8 +87,12 @@
       "sha256": "c4df2b31eda90fe34785b44bf78f730d4b9e7f23c5ccb5d3949eb1b45c1e5c6f"
     },
     {
+      "path": "reports\\quality\\sim_age_sex_profile_manifest.json",
+      "sha256": "69b3c7c06170df1e14c1fa02d6e1f94e16a0a7952a60489e37b4f659b4c259d6"
+    },
+    {
       "path": "reports\\technical\\fase3_respiratorio.md",
-      "sha256": "09b479e15bc16c5d7bc4a4a3126f2b4f8664c1f70ce5f04993331aa530ef5cf8"
+      "sha256": "a540f6b370383b7ed27ac7de36d7f598829629df629820131d8de6007f379a7a"
     },
     {
       "path": "reports\\technical\\denominadores.md",
@@ -109,6 +113,10 @@
     {
       "path": "reports\\technical\\mortalidade_sim.md",
       "sha256": "e68e1781aff08865d5eb1d9e231bf1e3e6e22e537ff1e606b49b2fbe9d21d53f"
+    },
+    {
+      "path": "reports\\technical\\perfil_etario_sexual_sim.md",
+      "sha256": "3366bfe35f18624ccbb932cf82e47aec20c6ce0d69a2996a587700629f557f0d"
     },
     {
       "path": "reports\\quality\\sih_series_2008_2017.json",
@@ -3790,6 +3798,11 @@
       "path": "data\\processed\\respiratory_rates_annual.parquet",
       "bytes": 33070,
       "sha256": "2a13bde7d697c685f663acd15935d8ee73242a96636e690a8e511f00eec686ed"
+    },
+    {
+      "path": "data\\processed\\sim_mortality_age_sex_profile.parquet",
+      "bytes": 70670,
+      "sha256": "11ae598020a21e5004e91f763fc95f3219b9e81c4d033245aac159733a097862"
     },
     {
       "path": "data\\processed\\sim_mortality_rates_sample.parquet",

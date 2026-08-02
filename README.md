@@ -64,6 +64,7 @@ python scripts/run_cli.py respiratory-rates
 python scripts/run_cli.py outcome-counts
 python scripts/run_cli.py sivep-summary
 python scripts/run_cli.py sim-mortality-rates
+python scripts/run_cli.py sim-age-sex-profile
 python scripts/run_cli.py harmonize --source all
 ```
 
@@ -111,6 +112,11 @@ razão VR/restante do RJ e marcação de 2020 como interrupção assistencial ou
 pandemia conforme o desfecho. Os arquivos SIM de 2010–2024 foram adquiridos,
 mas 2010 e 2023 permanecem fora das taxas por falta de denominador populacional;
 o relatório está em `reports/technical/mortalidade_sim.md`.
+O perfil descritivo por grupos etários amplos e sexo está em
+`data/processed/sim_mortality_age_sex_profile.parquet`; ele mostra
+contagens e proporções dentro do desfecho, sem taxas específicas ou
+padronização, pois os denominadores por idade/sexo ainda não foram obtidos.
+O relatório está em `reports/technical/perfil_etario_sexual_sim.md`.
 Também está disponível a primeira série respiratória agregada do SIH em
 `data/interim/sih_morbidity_2008_2017.csv` e
 `data/interim/sih_morbidity_2018_2026.csv`, com o relatório técnico em

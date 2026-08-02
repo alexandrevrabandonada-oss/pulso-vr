@@ -11,6 +11,7 @@ from . import __version__
 from .config import project_root
 from .download import download_public_file
 from .discovery import discover_resources, select_resource
+from .age_sex import build_age_sex_profile
 from .harmonize import harmonize_sources
 from .logging_utils import configure_logging
 from .layout_validation import write_layout_manifest
@@ -109,12 +110,14 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "reports" / "quality" / "outcome_counts_manifest.json",
         root / "reports" / "quality" / "sivep_surveillance_manifest.json",
         root / "reports" / "quality" / "sim_mortality_rates_manifest.json",
+        root / "reports" / "quality" / "sim_age_sex_profile_manifest.json",
         root / "reports" / "technical" / "fase3_respiratorio.md",
         root / "reports" / "technical" / "denominadores.md",
         root / "reports" / "technical" / "taxas_respiratorias.md",
         root / "reports" / "technical" / "desfechos_sim_sivep.md",
         root / "reports" / "technical" / "pandemia_sivep.md",
         root / "reports" / "technical" / "mortalidade_sim.md",
+        root / "reports" / "technical" / "perfil_etario_sexual_sim.md",
     ] + sorted((root / "reports" / "quality").glob("sih_series_*.json")) + sorted(
         (root / "reports" / "quality").glob("sih_morbidity_*.json")
     )
@@ -227,6 +230,10 @@ def _parser() -> argparse.ArgumentParser:
     subparsers.add_parser(
         "sim-mortality-rates",
         help="calculate sampled SIM crude mortality rates with Poisson intervals",
+    )
+    subparsers.add_parser(
+        "sim-age-sex-profile",
+        help="describe SIM deaths by broad age group and sex",
     )
     discover = subparsers.add_parser("discover", help="save the current official resource catalog")
     discover.add_argument("--dataset", choices=("sim", "sivep"), required=True)
@@ -419,6 +426,16 @@ def main(argv: list[str] | None = None) -> int:
         print(f"SIM mortality rates Parquet: {output}")
         print(f"SIM mortality rates manifest: {manifest}")
         print(f"SIM mortality rates report: {report}")
+        return 0
+    if args.command == "sim-age-sex-profile":
+        try:
+            output, manifest, report = build_age_sex_profile(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: SIM age-sex profile failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"SIM age-sex profile Parquet: {output}")
+        print(f"SIM age-sex profile manifest: {manifest}")
+        print(f"SIM age-sex profile report: {report}")
         return 0
     if args.command == "discover":
         resources = discover_resources(args.dataset)
