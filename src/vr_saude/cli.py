@@ -11,6 +11,7 @@ from . import __version__
 from .config import project_root
 from .download import download_public_file
 from .discovery import discover_resources, select_resource
+from .harmonize import harmonize_sources
 from .logging_utils import configure_logging
 from .layout_validation import write_layout_manifest
 from .provenance import sha256_file
@@ -95,6 +96,7 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "metadata" / "layout_manifest.json",
         root / "metadata" / "discovered_resources_sim.json",
         root / "metadata" / "discovered_resources_sivep.json",
+        root / "reports" / "quality" / "harmonization_manifest.json",
     ] + sorted((root / "reports" / "quality").glob("sih_series_*.json"))
     raw_samples = [
         {
@@ -150,6 +152,8 @@ def _parser() -> argparse.ArgumentParser:
     subparsers.add_parser("validate-raw", help="validate hashes and structural integrity of raw samples")
     subparsers.add_parser("validate-layout", help="validate source-specific layouts of raw samples")
     subparsers.add_parser("validate-territories", help="validate residence codes for Volta Redonda")
+    harmonize = subparsers.add_parser("harmonize", help="create interim named-field Parquet outputs")
+    harmonize.add_argument("--source", choices=("all", "sim", "sivep"), default="all")
     sih_query = subparsers.add_parser("sih-query", help="query one official SIH TabNet month by residence")
     sih_query.add_argument("--year", type=int, default=2024)
     sih_query.add_argument("--month", type=int, default=1)
@@ -214,6 +218,19 @@ def main(argv: list[str] | None = None) -> int:
                 print(f"ERROR: {item['path']}: {item['errors']}", file=sys.stderr)
             return 1
         print(f"Territory samples validated: {len(results)}")
+        return 0
+    if args.command == "harmonize":
+        try:
+            report, results = harmonize_sources(root, args.source)
+        except (ValueError, OSError, TypeError) as exc:
+            print(f"ERROR: harmonization failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Harmonization manifest: {report}")
+        for item in results:
+            print(
+                f"{item['source']} {item['source_year']}: "
+                f"{item['rows']} rows, {item['residence_vr_rows']} VR residents -> {item['output_path']}"
+            )
         return 0
     if args.command == "sih-query":
         try:

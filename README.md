@@ -55,6 +55,7 @@ python scripts/run_cli.py acquire --source sim_2024_csv
 python scripts/run_cli.py acquire --source sivep_2019_parquet
 python scripts/run_cli.py sih-query --year 2024 --month 1
 python scripts/run_cli.py sih-series --start-year 2024 --start-month 1 --end-year 2024 --end-month 12
+python scripts/run_cli.py harmonize --source all
 ```
 
 Cada arquivo baixado permanece em `data/raw/`, recebe um arquivo `.sha256` e
@@ -73,6 +74,10 @@ arquivo nomeado por janela em `data/interim/`; a janela 2020–2024 está em
 Também estão disponíveis as janelas históricas 2008–2017, 2018–2019 e
 2025–2026-05. Os meses de 2026 ainda não listados pelo TabNet não são tratados
 como zero.
+
+A harmonização inicial SIM/SIVEP por nome de campo é gravada somente em
+`data/interim/`; o manifesto correspondente fica em
+`reports/quality/harmonization_manifest.json`.
 
 ## Princípios analíticos
 

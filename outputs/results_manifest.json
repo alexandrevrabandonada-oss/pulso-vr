@@ -1,7 +1,7 @@
 {
   "project": "vr_saude_ambiental",
   "code_version": "0.1.0",
-  "run_at": "2026-08-02T20:39:09+00:00",
+  "run_at": "2026-08-02T21:07:04+00:00",
   "status": "preliminary_no_epidemiological_results",
   "inputs": [
     {
@@ -32,7 +32,7 @@
   "outputs": [
     {
       "path": "reports\\quality\\quality_report_initial.md",
-      "sha256": "e9371d26a412546c131fc5dded3ad053b47d6ddb9626b72b59fe5238133b6289"
+      "sha256": "61bacfb6870f15330dd202981bc9ede4f8137548b7d376c4546d24040ac4bee5"
     },
     {
       "path": "reports\\quality\\raw_samples_validation.md",
@@ -61,6 +61,10 @@
     {
       "path": "metadata\\discovered_resources_sivep.json",
       "sha256": "5948b89b492d085b5beb62917dc9e30d421d92e581013799049abd19f7b4c632"
+    },
+    {
+      "path": "reports\\quality\\harmonization_manifest.json",
+      "sha256": "c9291b036be6448b8359fe7c94a48c74744f46824d91a131a369673a2c7ae0a8"
     },
     {
       "path": "reports\\quality\\sih_series_2008_2017.json",
@@ -1245,6 +1249,31 @@
       "path": "data\\interim\\sih_nrrj_monthly_2025_2026.csv",
       "bytes": 3341,
       "sha256": "72d4f3aade72818967ef0d7d2cf861fb8a2a494bd0bee5d1319506bfebab7e7d"
+    },
+    {
+      "path": "data\\interim\\sim_2010_harmonized.parquet",
+      "bytes": 17607400,
+      "sha256": "749d287e037bae31fa7fc3d3e8c5760c3ec1edc8096cf120eeed6276a9993328"
+    },
+    {
+      "path": "data\\interim\\sim_2020_harmonized.parquet",
+      "bytes": 23379412,
+      "sha256": "d2fa96b160b2ef84be0bb40977912319d69a8d3f4ce6c6972ed91f1b7f7b6db1"
+    },
+    {
+      "path": "data\\interim\\sim_2024_harmonized.parquet",
+      "bytes": 23434155,
+      "sha256": "ae0969906883b23d48645a7de6dbf64a3c87289e487a5a67b3abbbc4326ea4e5"
+    },
+    {
+      "path": "data\\interim\\sivep_2019_harmonized.parquet",
+      "bytes": 553937,
+      "sha256": "e3146e7b96c428b2f22fed47f77bd0ae7676e2ff899382d7c8dba7ac8e7e3675"
+    },
+    {
+      "path": "data\\interim\\sivep_2020_harmonized.parquet",
+      "bytes": 13975616,
+      "sha256": "e6ee615ffa2c5c486067977b3ed22c2607c0c6c0eb383e8e85358f6b68f27db3"
     }
   ],
   "results": [],

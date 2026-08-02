@@ -8,6 +8,8 @@
 - Download idempotente, hash SHA-256 e registro no log de extração.
 - Inspeção de contêiner, cabeçalho e campos mínimos por fonte.
 - Validação do campo de residência e do código DATASUS de Volta Redonda.
+- Harmonização inicial por nome de campo para Parquet intermediário, mantendo
+  município de ocorrência/notificação separado da residência.
 
 ## Amostras disponíveis
 
@@ -37,7 +39,18 @@ município de ocorrência ou notificação.
   datadas, sem misturar banco vivo e ano congelado sem decisão explícita.
 - Ainda falta reconciliar as contagens com tabulações oficiais e fechar o
   denominador populacional anual/etário.
-- O SIH/SUS ainda não possui amostra adquirida nesta entrega.
+- A série SIH já foi adquirida por TabNet para 221 competências; ainda falta
+  reconciliação independente dos totais antes da liberação analítica.
+
+## Harmonização inicial
+
+O comando `python scripts/run_cli.py harmonize --source all` produz Parquet em
+`data/interim/` para SIM 2010/2020/2024 e SIVEP 2019/2020. Os campos comuns
+incluem código DATASUS de residência, indicador de residência em Volta
+Redonda, sexo, idade, causas, datas e status/classificação disponíveis. A
+harmonização é estrutural e não libera estimativas: dicionários, CID,
+duplicações, faltantes e status definitivo/preliminar ainda precisam ser
+revisados antes da base analítica.
 
 ## Artefatos de auditoria
 
