@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Raw/interim/processed data are not versioned by default. Keep README files
+# and checksums, but never commit restricted, personal or sensitive data.
+data/raw/*
+!data/raw/README.md
+!data/raw/.gitkeep
+!data/raw/*.sha256
+data/interim/*
+!data/interim/README.md
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/README.md
+!data/processed/.gitkeep
+
+# Local execution artifacts
+outputs/*.log
+outputs/*.xlsx
+outputs/*.parquet

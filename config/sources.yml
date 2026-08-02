@@ -1,0 +1,120 @@
+version: "0.1.0"
+accessed_at: "2026-08-02"
+sources:
+  sih:
+    title: "Sistema de Informações Hospitalares do SUS"
+    institution: "DATASUS / Ministério da Saúde"
+    primary:
+      landing_url: "https://datasus.saude.gov.br/transferencia-de-arquivos/"
+      mode: "SIHSUS > Dados > RD - AIH Reduzida"
+      granularity: "monthly"
+      territory: "residence in RJ"
+    fallback:
+      - url: "https://datasus.saude.gov.br/acesso-a-informacao/morbidade-hospitalar-do-sus-sih-sus/"
+        mode: "TabNet / morbidity by residence"
+      - url: "https://tabnet.datasus.gov.br/cgi/sih/prdescr.htm"
+        mode: "technical notes and reconciliation reference"
+      - url: "ftp://ftp.datasus.gov.br/dissemin/publicos/SIHSUS/"
+        mode: "legacy FTP"
+        status: "failed_in_initial_network_check"
+    validation:
+      - "confirm residence field and UF/municipality codes"
+      - "reconcile monthly RD totals with official TabNet totals"
+      - "document processing month versus discharge month"
+      - "do not interpret AIH as unique person"
+  sim:
+    title: "Sistema de Informação sobre Mortalidade"
+    institution: "CGIAE / DATASUS / Ministério da Saúde"
+    primary:
+      landing_url: "https://dadosabertos.saude.gov.br/dataset/sim"
+      mode: "anonymized dissemination microdata"
+      format: ["CSV", "XML/ZIP"]
+    fallback:
+      - url: "https://www.gov.br/saude/pt-br/acesso-a-informacao/sic/dados-em-transparencia-ativa/svsa/mortalidade"
+        mode: "official release and status notes"
+      - url: "https://datasus.saude.gov.br/mortalidade-desde-1996-pela-cid-10/"
+        mode: "TabNet"
+    validation:
+      - "separate definitive, preliminary and provisional releases"
+      - "use residence municipality for population risk"
+      - "validate underlying and multiple causes separately"
+  ibge_population:
+    title: "Population denominators"
+    institution: "IBGE"
+    primary:
+      landing_url: "https://sidra.ibge.gov.br/tabela/9514"
+      mode: "Censo 2022 population by sex and age"
+      api_template: "https://apisidra.ibge.gov.br/values/t/{table}/n6/{municipality}/p/{period}"
+    annual_estimates:
+      landing_url: "https://sidra.ibge.gov.br/tabela/6579"
+      mode: "estimated resident population by municipality"
+    validation:
+      - "use the same age standard for all territories"
+      - "check table revision and reference date"
+      - "do not silently interpolate missing denominators"
+  sivep:
+    title: "Banco de dados da Síndrome Respiratória Aguda Grave (SRAG)"
+    institution: "CGIAE / DATASUS / Ministério da Saúde"
+    primary:
+      landing_url: "https://dadosabertos.saude.gov.br/dataset/srag-2019-a-2026"
+      mode: "annual frozen files plus current live file"
+      formats: ["CSV", "JSON", "Parquet", "XML"]
+    validation:
+      - "separate frozen years from current live version"
+      - "record update date and form/dictionary version"
+      - "stratify virus result, hospitalization, outcome and residence"
+      - "audit missingness and reporting changes across pandemic periods"
+  air_quality:
+    title: "Qualidade do ar"
+    institution: "INEA / SEAS"
+    primary:
+      landing_url: "https://portalsigqar.inea.rj.gov.br/"
+      information_page: "https://www.inea.rj.gov.br/ar-agua-e-solo/iqar/"
+      mode: "station-level series and metadata"
+    validation:
+      - "audit station coverage, operating periods and missingness"
+      - "retain raw units and calibration/quality flags"
+  meteorology:
+    title: "Meteorologia"
+    institution: "INMET"
+    primary:
+      landing_url: "https://portal.inmet.gov.br/"
+      mode: "station observations for temperature, humidity and precipitation"
+    validation:
+      - "document gaps and station changes"
+  cancer_mortality:
+    title: "Atlas On-line de Mortalidade"
+    institution: "INCA / Ministério da Saúde"
+    primary:
+      landing_url: "https://mortalidade.inca.gov.br/MortalidadeWeb/"
+      mode: "public cancer mortality tabulations"
+    validation:
+      - "compare against SIM extracts"
+      - "document standard population used by the Atlas"
+  cancer_assistance:
+    title: "Painel Oncologia, RHC e SISCAN"
+    institution: "INCA / Ministério da Saúde / gestores locais"
+    primary:
+      landing_url: "https://www.gov.br/saude/pt-br/composicao/saes/cgcan/cgcan"
+      siscan_manual: "https://www.inca.gov.br/publicacoes/manuais/manual-do-sistema-de-informacao-do-cancer-siscan-modulos-1-2-3-e-4"
+    validation:
+      - "audit hospital and year coverage before trend interpretation"
+      - "do not treat registry or detection volume as incidence"
+  cnes:
+    title: "Cadastro Nacional de Estabelecimentos de Saúde"
+    institution: "DATASUS / Ministério da Saúde"
+    primary:
+      landing_url: "https://tabnet.datasus.gov.br/cgi/cnes/NT_Estabelecimentos.htm"
+      mode: "facility and bed capacity"
+  vaccination:
+    title: "Registros de vacinação contra Covid-19"
+    institution: "PNI / Ministério da Saúde"
+    primary:
+      landing_url: "https://dadosabertos.saude.gov.br/dataset/covid-19-vacinacao"
+      mode: "anonymized vaccination records"
+  occupational:
+    title: "Exposição ocupacional e histórico industrial"
+    institution: "a solicitar por LAI/parceria"
+    primary:
+      landing_url: ""
+      mode: "restricted; no acquisition without legal and ethical basis"

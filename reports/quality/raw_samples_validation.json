@@ -1,0 +1,59 @@
+[
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\ibge_sidra_9514_vr_2022.json",
+    "filename": "ibge_sidra_9514_vr_2022.json",
+    "bytes": 945,
+    "sha256": "a9967cedd8616ac8cb51d979b91d11ab2a1cac739edf73a6a43a918fabe05d2a",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "json_type": "list"
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sim_mortalidade_geral_2024_csv.zip",
+    "filename": "sim_mortalidade_geral_2024_csv.zip",
+    "bytes": 98076266,
+    "sha256": "13db250c90908e85d1ef9fb9cd7caa08583fb1912108b0f3260605aca0e9b787",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "members": 1,
+      "first_members": [
+        "DO24OPEN.csv"
+      ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sivep_srag_2019_2026-03-23.parquet",
+    "filename": "sivep_srag_2019_2026-03-23.parquet",
+    "bytes": 3447406,
+    "sha256": "748519f593d4438b94ba781320ec127e473594853a6aa25a90ef1c18338e761a",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "rows": 48941,
+      "columns": 194,
+      "row_groups": 1
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sivep_srag_dicionario_2019_2025.pdf",
+    "filename": "sivep_srag_dicionario_2019_2025.pdf",
+    "bytes": 1052922,
+    "sha256": "6b92d438cf1cab28cd3719a7bcc48df3c269cf271f7c8181e334db2e849a0e35",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "header": "%PDF-"
+    },
+    "errors": [],
+    "ok": true
+  }
+]

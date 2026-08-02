@@ -1,0 +1,22 @@
+version: "0.1.0"
+state:
+  uf_sigla: RJ
+  uf_ibge_code: "33"
+volta_redonda:
+  name: "Volta Redonda"
+  ibge_code_7: "3306305"
+  datasus_code_6_expected: "330630"
+  residence_only: true
+comparators:
+  primary:
+    id: rest_of_rj_excluding_vr
+    rule: "all municipalities in UF 33 except ibge_code_7=3306305"
+  secondary:
+    - id: medio_paraiba_without_vr
+      rule: "Médio Paraíba municipalities except Volta Redonda"
+    - id: pre_specified_comparable_municipalities
+      rule: "municipalities selected before outcome inspection"
+geography_rules:
+  keep_residence_field: true
+  never_substitute_occurrence_for_residence: true
+  verify_codes_before_analysis: true

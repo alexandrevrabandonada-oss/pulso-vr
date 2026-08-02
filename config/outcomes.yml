@@ -1,0 +1,121 @@
+version: "0.1.0"
+cid_system: "CID-10"
+normalization: "uppercase_without_dot"
+respiratory:
+  - id: resp_all
+    label: "Todas as doenças respiratórias"
+    code_ranges: ["J00-J99"]
+    source: ["SIH", "SIM"]
+    priority: primary
+  - id: pneumonia
+    label: "Pneumonias"
+    code_ranges: ["J12-J18"]
+    source: ["SIH", "SIM"]
+    priority: secondary
+  - id: acute_bronchitis_bronchiolitis
+    label: "Bronquite e bronquiolite agudas"
+    code_ranges: ["J20-J21"]
+    source: ["SIH", "SIM"]
+    priority: secondary
+  - id: copd
+    label: "Bronquite crônica, enfisema e DPOC"
+    code_ranges: ["J40-J44"]
+    source: ["SIH", "SIM"]
+    priority: secondary
+  - id: asthma
+    label: "Asma e estado de mal asmático"
+    code_ranges: ["J45-J46"]
+    source: ["SIH", "SIM"]
+    priority: secondary
+  - id: pneumoconiosis
+    label: "Pneumoconioses"
+    code_ranges: ["J60-J65"]
+    source: ["SIH", "SIM"]
+    priority: secondary
+  - id: covid19
+    label: "Covid-19"
+    code_ranges: ["U071", "U072"]
+    source: ["SIH", "SIM", "SIVEP"]
+    priority: independent_series
+  - id: srag
+    label: "Síndrome Respiratória Aguda Grave"
+    code_ranges: []
+    source: ["SIVEP"]
+    priority: independent_series
+  - id: influenza
+    label: "Influenza"
+    code_ranges: ["J09-J11"]
+    source: ["SIVEP", "SIH", "SIM"]
+    priority: independent_series
+
+cancer:
+  - id: all_malignant_neoplasms
+    label: "Todas as neoplasias malignas"
+    code_ranges: ["C00-C97"]
+    source: ["SIM", "RHC", "Painel Oncologia"]
+    priority: primary
+  - id: lung
+    label: "Traqueia, brônquios e pulmão"
+    code_ranges: ["C33-C34"]
+    source: ["SIM", "RHC"]
+    priority: primary_environmental_occupational
+  - id: bladder
+    label: "Bexiga"
+    code_ranges: ["C67"]
+    source: ["SIM", "RHC"]
+    priority: primary_environmental_occupational
+  - id: non_hodgkin_lymphoma
+    label: "Linfoma não Hodgkin"
+    code_ranges: ["C82-C86"]
+    source: ["SIM", "RHC"]
+    priority: primary_environmental_occupational
+  - id: multiple_myeloma
+    label: "Mieloma múltiplo"
+    code_ranges: ["C90"]
+    source: ["SIM", "RHC"]
+    priority: primary_environmental_occupational
+  - id: leukemia
+    label: "Leucemias"
+    code_ranges: ["C91-C95"]
+    source: ["SIM", "RHC"]
+    priority: primary_environmental_occupational
+  - id: myelodysplastic_syndromes
+    label: "Síndromes mielodisplásicas"
+    code_ranges: ["D46"]
+    source: ["SIM", "RHC"]
+    priority: separate
+  - id: colorectal
+    label: "Cólon e reto"
+    code_ranges: ["C18-C21"]
+    source: ["SIM", "RHC", "Painel Oncologia"]
+    priority: care_comparison
+  - id: stomach
+    label: "Estômago"
+    code_ranges: ["C16"]
+    source: ["SIM", "RHC"]
+    priority: care_comparison
+  - id: liver
+    label: "Fígado"
+    code_ranges: ["C22"]
+    source: ["SIM", "RHC"]
+    priority: care_comparison
+  - id: pancreas
+    label: "Pâncreas"
+    code_ranges: ["C25"]
+    source: ["SIM", "RHC"]
+    priority: care_comparison
+  - id: breast
+    label: "Mama"
+    code_ranges: ["C50"]
+    source: ["SIM", "RHC", "SISCAN", "Painel Oncologia"]
+    priority: care_comparison
+  - id: cervix
+    label: "Colo do útero"
+    code_ranges: ["C53"]
+    source: ["SIM", "RHC", "SISCAN", "Painel Oncologia"]
+    priority: care_comparison
+  - id: prostate
+    label: "Próstata"
+    code_ranges: ["C61"]
+    source: ["SIM", "RHC", "Painel Oncologia"]
+    priority: care_comparison

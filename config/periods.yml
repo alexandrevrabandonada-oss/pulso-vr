@@ -1,0 +1,55 @@
+version: "0.1.0"
+respiratory:
+  - id: resp_2008_2014
+    start: "2008-01"
+    end: "2014-12"
+    status: definitive_or_source_specific
+  - id: resp_2015_2019
+    start: "2015-01"
+    end: "2019-12"
+    status: definitive_or_source_specific
+  - id: resp_2020_2021
+    start: "2020-01"
+    end: "2021-12"
+    status: pandemic
+  - id: resp_2022
+    start: "2022-01"
+    end: "2022-12"
+    status: post_acute_pandemic
+  - id: resp_2023_2024
+    start: "2023-01"
+    end: "2024-12"
+    status: definitive_or_source_specific
+  - id: resp_2025_2026
+    start: "2025-01"
+    end: "2026-12"
+    status: provisional
+
+cancer:
+  - id: cancer_2010_2014
+    start: "2010-01"
+    end: "2014-12"
+    status: five_year_period
+  - id: cancer_2015_2019
+    start: "2015-01"
+    end: "2019-12"
+    status: five_year_period
+  - id: cancer_2020_2021
+    start: "2020-01"
+    end: "2021-12"
+    status: care_disruption
+  - id: cancer_2022_2024
+    start: "2022-01"
+    end: "2024-12"
+    status: post_disruption_and_oncology_line
+  - id: cancer_2025_onward
+    start: "2025-01"
+    end: "2099-12"
+    status: provisional_prevenir_50_plus
+
+breaks:
+  respiratory_pandemic_start: "2020-03"
+  cancer_care_disruption_start: "2020-01"
+  cancer_care_disruption_end: "2022-12"
+  oncology_line_start: "2022-03"
+  prevenir_50_plus_start: "2025-01"

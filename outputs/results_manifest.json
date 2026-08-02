@@ -1,0 +1,44 @@
+{
+  "project": "vr_saude_ambiental",
+  "code_version": "0.1.0",
+  "run_at": "2026-08-02T18:33:15+00:00",
+  "status": "preliminary_no_epidemiological_results",
+  "inputs": [
+    {
+      "path": "config\\outcomes.yml",
+      "sha256": "636bebc990e41423489817aafae1df68a5c2bcb16db4aae723bf7314a927bf28"
+    },
+    {
+      "path": "config\\periods.yml",
+      "sha256": "cef73203854bc16ff2ce430b9ecadbe2da47164164bbb726bf4f1e66080a35eb"
+    },
+    {
+      "path": "config\\sources.yml",
+      "sha256": "4d4a3da04dc044d24b69392fd1ddf5ab0ac5b4b8d9cdd4ff24d8d8d83eb43b0f"
+    },
+    {
+      "path": "config\\territories.yml",
+      "sha256": "421bfb2312a822d4f52e2e32634bf6f1ed19c8ccbfb67b1427f373cb51b4c6a2"
+    },
+    {
+      "path": "metadata\\source_catalog.csv",
+      "sha256": "b94eeb7a35bc060defc21a3ef8c43396c4ed305a8b5ed2fd1ab41c0ddaae8049"
+    },
+    {
+      "path": "metadata\\extraction_log.csv",
+      "sha256": "98a6fc6390a5660616da8f8287b0ad27e281ce419472df2e735697c02267f44c"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "reports\\quality\\quality_report_initial.md",
+      "sha256": "b4504e25753e023418eeb20c0b558f27f7386b7f8d18cf58b28ec26ccbc81e5b"
+    }
+  ],
+  "results": [],
+  "notes": [
+    "No causal conclusion is authorized by this run.",
+    "Volta Redonda is excluded from the primary RJ comparator by config/territories.yml.",
+    "Raw data remain outside version control unless explicitly approved."
+  ]
+}
