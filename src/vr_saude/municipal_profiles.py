@@ -10,6 +10,7 @@ from scipy.stats import chi2
 
 from .config import load_config
 from .mortality import period_status
+from .outcomes import OUTCOME_SECTIONS, _matches_cid, _normalize_code
 from .population_age_sex import AGE_GROUPS
 from .provenance import sha256_file
 from .rates import RATE_MULTIPLIER
@@ -24,7 +25,7 @@ def _definitions(root: Path) -> list[dict[str, object]]:
     config = load_config("outcomes.yml", root)
     definitions = [
         item
-        for section in ("respiratory", "cardiovascular", "cardiorespiratory", "cancer")
+        for section in OUTCOME_SECTIONS
         for item in config.get(section, [])
         if "SIM" in item.get("source", []) and item.get("code_ranges") and item["id"] != "covid19"
     ]
@@ -55,6 +56,16 @@ def complementary_suppression(frame: pd.DataFrame) -> pd.DataFrame:
     return result
 
 
+def apply_profile_applicability(frame: pd.DataFrame) -> pd.DataFrame:
+    result = frame.copy()
+    not_applicable = (
+        (result["outcome_id"].eq("cervix") & result["sex"].eq("masculino"))
+        | (result["outcome_id"].eq("prostate") & result["sex"].eq("feminino"))
+    )
+    result.loc[not_applicable, "suppression_status"] = "not_applicable"
+    return result
+
+
 def _load_inputs(root: Path) -> tuple[pd.DataFrame, Path, Path]:
     sim_path = root / "data" / "interim" / f"sim_{YEAR}_harmonized.parquet"
     population_path = root / "data" / "processed" / "population_age_sex_2022.parquet"
@@ -64,32 +75,20 @@ def _load_inputs(root: Path) -> tuple[pd.DataFrame, Path, Path]:
     return population, sim_path, population_path
 
 
-def _cid_rules(definitions: list[dict[str, object]]) -> pd.DataFrame:
-    rows: list[dict[str, object]] = []
+def _cause_map(sim_path: Path, definitions: list[dict[str, object]]) -> pd.DataFrame:
+    raw = pd.read_parquet(sim_path, columns=["underlying_cause"])
+    causes = pd.Series(_normalize_code(raw["underlying_cause"]).unique(), dtype="string")
+    rows: list[pd.DataFrame] = []
     for definition in definitions:
-        for raw_expression in definition["code_ranges"]:
-            expression = str(raw_expression).upper().replace(".", "").replace(" ", "")
-            if "-" not in expression:
-                rows.append({
-                    "outcome_id": str(definition["id"]),
-                    "kind": "prefix" if len(expression) == 3 else "exact",
-                    "expression": expression,
-                    "letter": expression[0],
-                    "start_number": int(expression[1:3]),
-                    "end_number": int(expression[1:3]),
-                })
-                continue
-            start, end = expression.split("-", 1)
-            rows.append({
-                "outcome_id": str(definition["id"]), "kind": "range", "expression": expression,
-                "letter": start[0], "start_number": int(start[1:3]), "end_number": int(end[1:3]),
-            })
-    return pd.DataFrame(rows)
+        selected = causes.loc[_matches_cid(causes, list(definition["code_ranges"]))]
+        rows.append(pd.DataFrame({"cause": selected, "outcome_id": str(definition["id"])}))
+    return pd.concat(rows, ignore_index=True).drop_duplicates()
 
 
 def _classified_counts(sim_path: Path, definitions: list[dict[str, object]]) -> pd.DataFrame:
     connection = duckdb.connect(database=":memory:")
-    connection.register("cid_rules", _cid_rules(definitions))
+    connection.execute("SET threads TO 4")
+    connection.register("cause_map", _cause_map(sim_path, definitions))
     path = str(sim_path).replace("'", "''")
     query = f"""
         WITH normalized AS (
@@ -116,14 +115,6 @@ def _classified_counts(sim_path: Path, definitions: list[dict[str, object]]) -> 
               WHEN age_value BETWEEN 475 AND 499 THEN '75+'
               ELSE 'ignorado' END AS age_group
           FROM normalized
-        ), cause_map AS (
-          SELECT DISTINCT causes.cause, r.outcome_id
-          FROM (SELECT DISTINCT cause FROM normalized) causes
-          JOIN cid_rules r ON
-            (r.kind='exact' AND causes.cause=r.expression)
-            OR (r.kind='prefix' AND starts_with(causes.cause,r.expression))
-            OR (r.kind='range' AND substr(causes.cause,1,1)=r.letter
-                AND try_cast(substr(causes.cause,2,2) AS INTEGER) BETWEEN r.start_number AND r.end_number)
         ), classified AS (
           SELECT d.source_row_number, d.municipality_code_datasus, d.age_group, d.sex, m.outcome_id
           FROM dimensions d
@@ -143,6 +134,10 @@ def _build_rates(root: Path) -> tuple[pd.DataFrame, dict[str, object], Path, Pat
     population, sim_path, population_path = _load_inputs(root)
     definitions = _definitions(root)
     classified = _classified_counts(sim_path, definitions)
+    valid_datasus_codes = set(population["municipality_code_ibge"].astype(str).str[:6].unique())
+    invalid_territory = classified.loc[~classified["municipality_code_datasus"].isin(valid_datasus_codes)]
+    excluded_invalid_territory = invalid_territory.groupby("outcome_id")["count"].sum().astype(int).to_dict()
+    classified = classified.loc[classified["municipality_code_datasus"].isin(valid_datasus_codes)].copy()
     classified_totals = classified.groupby("outcome_id")["count"].sum().astype(int).to_dict()
     valid_dimensions = classified["age_group"].isin(AGE_GROUPS) & classified["sex"].isin(SEXES)
     ignored_by_outcome = classified.loc[~valid_dimensions].groupby("outcome_id")["count"].sum().astype(int).to_dict()
@@ -175,8 +170,11 @@ def _build_rates(root: Path) -> tuple[pd.DataFrame, dict[str, object], Path, Pat
     rates["rate_ci_lower_per_100k"] = lower_counts / rates["population"].to_numpy() * RATE_MULTIPLIER
     rates["rate_ci_upper_per_100k"] = upper_counts / rates["population"].to_numpy() * RATE_MULTIPLIER
     rates["year"] = YEAR
-    rates["period_status"] = [period_status(root, YEAR, outcome) for outcome in rates["outcome_id"]]
-    rates = complementary_suppression(rates)
+    status_by_outcome = {
+        outcome: period_status(root, YEAR, outcome) for outcome in rates["outcome_id"].unique()
+    }
+    rates["period_status"] = rates["outcome_id"].map(status_by_outcome)
+    rates = apply_profile_applicability(complementary_suppression(rates))
 
     reconciled = rates.groupby("outcome_id")["count"].sum().to_dict()
     expected = {key: value - ignored_by_outcome[key] for key, value in classified_totals.items()}
@@ -186,6 +184,9 @@ def _build_rates(root: Path) -> tuple[pd.DataFrame, dict[str, object], Path, Pat
     quality = {
         "classified_deaths": classified_totals,
         "excluded_unknown_age_or_sex": ignored_by_outcome,
+        "excluded_invalid_or_historical_municipality_code": {
+            key: int(value) for key, value in excluded_invalid_territory.items()
+        },
         "reconciled_publishable_dimension_deaths": {key: int(value) for key, value in reconciled.items()},
         "reconciliation_mismatches": mismatches,
     }

@@ -350,6 +350,7 @@ def _profile_payload(root: Path, catalog: Iterable[dict[str, Any]]) -> dict[str,
         rows: list[dict[str, Any]] = []
         for row in group.itertuples(index=False):
             protected = str(row.suppression_status) != "published"
+            not_applicable = str(row.suppression_status) == "not_applicable"
             item = {
                 "municipalityCode": str(row.municipality_code_ibge),
                 "indicatorId": indicator_id,
@@ -357,11 +358,11 @@ def _profile_payload(root: Path, catalog: Iterable[dict[str, Any]]) -> dict[str,
                 "ageGroup": str(row.age_group),
                 "sex": str(row.sex),
                 "count": None if protected else int(row.count),
-                "denominator": int(row.population),
+                "denominator": None if not_applicable else int(row.population),
                 "ratePer100k": None if protected else _finite_or_none(row.rate_per_100k),
                 "ciLow": None if protected else _finite_or_none(row.rate_ci_lower_per_100k),
                 "ciHigh": None if protected else _finite_or_none(row.rate_ci_upper_per_100k),
-                "suppressionStatus": "suppressed" if protected else "published",
+                "suppressionStatus": "not_applicable" if not_applicable else ("suppressed" if protected else "published"),
                 "dataStatus": "source_observed",
                 "manifestRef": "reports/quality/sim_municipal_age_sex_profiles_manifest.json",
             }
