@@ -12,6 +12,7 @@ import { TerritoryMap } from '../components/TerritoryMap'
 import { TimeSeriesChart } from '../components/TimeSeriesChart'
 import { usePortal } from '../context/usePortal'
 import { loadMap, loadMunicipalSeries, loadSeries } from '../lib/data'
+import { trackEvent } from '../lib/analytics'
 import { deriveExplorerState, explorerStateSearch } from '../lib/explorerState'
 import { formatMetric, metricLabel, statusLabel } from '../lib/format'
 import { buildMunicipalComparisonSeries, rateRatio, relativeDifferenceLabel, restOfStateExcludingMunicipality } from '../lib/municipalComparison'
@@ -242,8 +243,8 @@ export function ExplorerPage() {
         </section>
       ) : null}
       <div className="mobile-view-tabs" role="tablist" aria-label="Visualização principal">
-        <button role="tab" aria-selected={activeTab === 'map'} className={activeTab === 'map' ? 'is-active' : ''} onClick={() => setActiveTab('map')}>Mapa</button>
-        <button role="tab" aria-selected={activeTab === 'series'} className={activeTab === 'series' ? 'is-active' : ''} onClick={() => setActiveTab('series')}>Série temporal</button>
+        <button role="tab" aria-selected={activeTab === 'map'} className={activeTab === 'map' ? 'is-active' : ''} onClick={() => { setActiveTab('map'); trackEvent('map_series_toggled', { tab: 'map' }) }}>Mapa</button>
+        <button role="tab" aria-selected={activeTab === 'series'} className={activeTab === 'series' ? 'is-active' : ''} onClick={() => { setActiveTab('series'); trackEvent('map_series_toggled', { tab: 'series' }) }}>Série temporal</button>
       </div>
       {availableMapPeriods.length > 1 && selectedMunicipality ? (
         <nav className="map-period-control" aria-label="Escolher ano do mapa municipal">

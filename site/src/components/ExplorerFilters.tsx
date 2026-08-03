@@ -1,5 +1,6 @@
 import { Download, Filter, Share2, X } from 'lucide-react'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import { trackEvent } from '../lib/analytics'
 import type { Indicator, MetricKind, Theme } from '../types'
 
 interface FilterProps {
@@ -20,6 +21,7 @@ interface FilterProps {
 export function ExplorerFilters(props: FilterProps) {
   const [open, setOpen] = useState(false)
   const [feedback, setFeedback] = useState('')
+  const triggerRef = useRef<HTMLButtonElement>(null)
   const selected = props.indicators.find((item) => item.id === props.indicatorId)!
   const years = Array.from({ length: selected.yearEnd - selected.yearStart + 1 }, (_, index) => selected.yearStart + index)
   const share = async () => {
@@ -32,6 +34,16 @@ export function ExplorerFilters(props: FilterProps) {
       if ((error as DOMException).name !== 'AbortError') setFeedback('Não foi possível compartilhar este link.')
     }
   }
+  const close = () => {
+    setOpen(false)
+    window.requestAnimationFrame(() => triggerRef.current?.focus())
+  }
+  const toggle = () => {
+    setOpen((current) => {
+      if (!current) trackEvent('filters_opened', { surface: 'explorer' })
+      return !current
+    })
+  }
   return (
     <>
       <div className="analysis-summary">
@@ -40,12 +52,12 @@ export function ExplorerFilters(props: FilterProps) {
           <strong>{selected.measureLabel}: {selected.label}</strong>
           <small>{props.startYear}–{props.endYear} · {props.metric === 'count' ? 'Contagens' : 'Taxa por 100 mil'} · cidade, restante do RJ e Brasil</small>
         </div>
-        <button type="button" aria-expanded={open} onClick={() => setOpen((current) => !current)}><Filter size={18} />{open ? 'Fechar ajustes' : 'Ajustar análise'}</button>
+        <button ref={triggerRef} type="button" aria-expanded={open} onClick={toggle}><Filter size={18} />{open ? 'Fechar ajustes' : 'Ajustar análise'}</button>
       </div>
       <section className={`filter-rail${open ? ' filter-rail--open' : ''}`} aria-label="Filtros do explorador">
         <div className="filter-rail__mobile-heading">
           <strong>Ajustar análise</strong>
-          <button type="button" aria-label="Fechar filtros" onClick={() => setOpen(false)}><X /></button>
+          <button type="button" aria-label="Fechar filtros" onClick={close}><X /></button>
         </div>
         <label>
           Tema
@@ -85,9 +97,9 @@ export function ExplorerFilters(props: FilterProps) {
           <button className="icon-action" type="button" onClick={share}><Share2 />Compartilhar</button>
         </div>
         <span className="sr-only" aria-live="polite">{feedback}</span>
-        <button className="filter-rail__apply" type="button" onClick={() => setOpen(false)}>Aplicar filtros</button>
+        <button className="filter-rail__apply" type="button" onClick={close}>Aplicar filtros</button>
       </section>
-      {open ? <button className="filter-backdrop" aria-label="Fechar painel de filtros" onClick={() => setOpen(false)} /> : null}
+      {open ? <button className="filter-backdrop" aria-label="Fechar painel de filtros" onClick={close} /> : null}
     </>
   )
 }
