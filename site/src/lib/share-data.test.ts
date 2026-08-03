@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { lineSegments, parseShareRequest } from './share-data'
+import { lineSegments, parseShareRequest } from '../../api/share-data'
 
 describe('safe social card contracts', () => {
   it('rejects arbitrary indicators and text-like periods', () => {
