@@ -9,7 +9,10 @@ export function formatMetric(value: number | null, metric: MetricKind): string {
 }
 
 export function metricLabel(metric: MetricKind): string {
-  return metric === 'count' ? 'Contagens registradas' : 'Taxa bruta por 100 mil habitantes'
+  if (metric === 'count') return 'Contagens registradas'
+  return metric === 'age_sex_standardized_rate_per_100k'
+    ? 'Taxa padronizada por idade e sexo por 100 mil habitantes'
+    : 'Taxa bruta por 100 mil habitantes'
 }
 
 export function statusLabel(status: string): string {

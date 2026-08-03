@@ -45,11 +45,11 @@ export function ExplorerPage() {
     [municipalities, municipalityCode],
   )
   const selectedMunicipality = municipalities.find((item) => item.code === selectedMunicipalityCode) ?? null
-  const availableMapPeriods = useMemo(() => [...new Set((municipalObservations ?? []).map((item) => item.period))].sort((a, b) => Number(a) - Number(b)), [municipalObservations])
+  const availableMapPeriods = useMemo(() => [...new Set((municipalObservations ?? []).filter((item) => item.metricKind === metric).map((item) => item.period))].sort((a, b) => Number(a) - Number(b)), [metric, municipalObservations])
   const municipalPeriod = selectedMapPeriod ?? mapPayload?.values[0]?.period ?? null
   const mapValues = useMemo(() => municipalPeriod && municipalObservations
-    ? municipalObservations.filter((item) => item.period === municipalPeriod)
-    : mapPayload?.values ?? [], [mapPayload, municipalObservations, municipalPeriod])
+    ? municipalObservations.filter((item) => item.period === municipalPeriod && item.metricKind === metric)
+    : mapPayload?.values ?? [], [mapPayload, metric, municipalObservations, municipalPeriod])
   const selectedMunicipalValue = mapValues.find((item) => item.geographyId === selectedMunicipalityCode) ?? null
 
   useEffect(() => {
@@ -103,7 +103,7 @@ export function ExplorerPage() {
     navigate(`/explorador?${new URLSearchParams({
       tema: value,
       indicador: nextIndicator.id,
-      medida: 'crude_rate_per_100k',
+      medida: nextIndicator.availableMetrics[0] ?? 'crude_rate_per_100k',
       territorio: 'all',
       inicio: String(nextIndicator.yearStart),
       fim: String(nextIndicator.yearEnd),
@@ -117,6 +117,7 @@ export function ExplorerPage() {
     next.set('tema', nextIndicator.theme)
     next.set('inicio', String(nextIndicator.yearStart))
     next.set('fim', String(nextIndicator.yearEnd))
+    next.set('medida', nextIndicator.availableMetrics[0] ?? 'crude_rate_per_100k')
     next.delete('ano_mapa')
     navigate(`/explorador?${next.toString()}`)
   }
@@ -127,9 +128,9 @@ export function ExplorerPage() {
 
   const quickReading = useMemo(() => {
     if (selectedMunicipality && selectedMunicipalValue && municipalPeriod) {
-      const stateTotal = observations?.find((item) => item.geographyId === 'rj_total' && item.period === municipalPeriod) ?? null
+      const stateTotal = observations?.find((item) => item.geographyId === 'rj_total' && item.period === municipalPeriod && item.metricKind === metric) ?? null
       const restOfState = restOfStateExcludingMunicipality(selectedMunicipalValue, stateTotal)
-      const brazil = observations?.find((item) => item.geographyId === 'brazil_total' && item.period === municipalPeriod) ?? null
+      const brazil = observations?.find((item) => item.geographyId === 'brazil_total' && item.period === municipalPeriod && item.metricKind === metric) ?? null
       const selectedValue = metric === 'count' ? selectedMunicipalValue.count : selectedMunicipalValue.value
       const difference = rateRatio(selectedMunicipalValue.value, restOfState?.value)
       const eventLabel = indicator.measure === 'hospitalization' ? 'internações hospitalares' : 'óbitos'
@@ -155,8 +156,8 @@ export function ExplorerPage() {
     return null
   }, [indicator.measure, metric, municipalPeriod, observations, selectedMunicipality, selectedMunicipalValue])
   const provisional = observations?.some((item) => Number(item.period) >= startYear && Number(item.period) <= endYear && item.dataStatus === 'provisional') ?? false
-  const stateTotalAtMunicipalPeriod = observations?.find((item) => item.geographyId === 'rj_total' && item.period === municipalPeriod) ?? null
-  const brazilAtMunicipalPeriod = observations?.find((item) => item.geographyId === 'brazil_total' && item.period === municipalPeriod) ?? null
+  const stateTotalAtMunicipalPeriod = observations?.find((item) => item.geographyId === 'rj_total' && item.period === municipalPeriod && item.metricKind === metric) ?? null
+  const brazilAtMunicipalPeriod = observations?.find((item) => item.geographyId === 'brazil_total' && item.period === municipalPeriod && item.metricKind === metric) ?? null
   const restOfState = restOfStateExcludingMunicipality(selectedMunicipalValue, stateTotalAtMunicipalPeriod)
   const stateRatio = rateRatio(selectedMunicipalValue?.value, restOfState?.value)
   const brazilRatio = rateRatio(selectedMunicipalValue?.value, brazilAtMunicipalPeriod?.value)

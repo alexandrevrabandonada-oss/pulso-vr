@@ -24,6 +24,7 @@ export function TerritoryMap({ topology, compact = false, values = [], status = 
   const [focused, setFocused] = useState<MapFeatureProperties | null>(null)
   const valuesByCode = useMemo(() => new Map(values.map((value) => [value.geographyId, value])), [values])
   const isSihMap = status.startsWith('validated_sih_')
+  const isStandardizedMap = values.some((item) => item.metricKind === 'age_sex_standardized_rate_per_100k')
   const hasPublishedMap = status.startsWith('validated_')
   const valueRange = useMemo(() => {
     const published = values.map((value) => value.value).filter((value): value is number => value !== null)
@@ -99,7 +100,7 @@ export function TerritoryMap({ topology, compact = false, values = [], status = 
       </div>
       <div className="territory-map__note">
         <strong>{hasPublishedMap ? `Mapa municipal · ${isSihMap ? 'SIH' : 'SIM'} ${period ?? values[0]?.period ?? ''}` : 'Mapa contextual'}</strong>
-        <span>{hasPublishedMap ? `${isSihMap ? 'Taxa bruta de internações por residência; AIHs são eventos' : 'Taxa bruta de mortalidade por residência'}; células menores que cinco estão suprimidas. A escala é fixa para os períodos disponíveis deste indicador.` : 'Malha dos 92 municípios; nenhuma cidade é usada como referência padrão.'}</span>
+        <span>{hasPublishedMap ? `${isSihMap ? 'Taxa bruta de internações por residência; AIHs são eventos' : isStandardizedMap ? 'Taxa de mortalidade padronizada por idade e sexo pela população do Brasil no Censo 2022' : 'Taxa bruta de mortalidade por residência'}; células menores que cinco estão suprimidas.${scaleDomain ? ' A escala é fixa para esta métrica.' : ''}` : 'Malha dos 92 municípios; nenhuma cidade é usada como referência padrão.'}</span>
       </div>
     </div>
   )

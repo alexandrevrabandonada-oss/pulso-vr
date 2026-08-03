@@ -10,7 +10,7 @@ export function restOfStateExcludingMunicipality(
   municipality: MapValue | null,
   stateTotal: Observation | null,
 ): ComparableValue | null {
-  if (!municipality || municipality.suppressed || municipality.count === null || !stateTotal || stateTotal.count === null) return null
+  if (!municipality || municipality.suppressed || municipality.count === null || municipality.denominator === null || !stateTotal || stateTotal.count === null || stateTotal.denominator === null) return null
   const denominator = stateTotal.denominator - municipality.denominator
   const count = stateTotal.count - municipality.count
   if (denominator <= 0 || count < 0) return null

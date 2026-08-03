@@ -66,6 +66,7 @@ export function ExplorerFilters(props: FilterProps) {
             <option value="cardiovascular">Cardiovasculares</option>
             <option value="cardiorespiratory">Cardiorrespiratórias</option>
             <option value="cancer">Câncer</option>
+            <option value="neurological">Saúde neurológica</option>
           </select>
         </label>
         <label className="filter-rail__indicator">
@@ -89,6 +90,7 @@ export function ExplorerFilters(props: FilterProps) {
           </select>
         </label>
         <div className="metric-switch" role="group" aria-label="Medida exibida">
+          {selected.availableMetrics.includes('age_sex_standardized_rate_per_100k') ? <button type="button" className={props.metric === 'age_sex_standardized_rate_per_100k' ? 'is-selected' : ''} onClick={() => props.onMetric('age_sex_standardized_rate_per_100k')}>Padronizada 2022</button> : null}
           <button type="button" className={props.metric === 'crude_rate_per_100k' ? 'is-selected' : ''} onClick={() => props.onMetric('crude_rate_per_100k')}>Taxa por 100 mil</button>
           <button type="button" className={props.metric === 'count' ? 'is-selected' : ''} onClick={() => props.onMetric('count')}>Contagens</button>
         </div>

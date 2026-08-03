@@ -117,11 +117,19 @@ O pré-voo de lançamento grava o diagnóstico em
 `reports/quality/portal_release_preflight.json`,
 `reports/technical/portal_lancamento.md` e no download público
 `site/public/data/launch-readiness.json`. Os mapas municipais estão disponíveis
-nos anos validados. O módulo de perfis municipais cobre os 30 indicadores SIM
+nos anos validados. O módulo de perfis municipais cobre os 32 indicadores SIM
 do catálogo com taxas específicas de 2022, supressão primária e complementar;
 SIH não é apresentado como perfil nesta versão. O ano 2010 usa a
 população residente do Censo 2010; 2023 permanece como lacuna de denominador,
 sem interpolação.
+
+A área “Saúde neurológica” inclui mortalidade SIM por Alzheimer e pelo conjunto
+Alzheimer e outras demências, internações/AIHs SIH em 2022 e perfis SIM de
+2022. A comparação principal usa taxa diretamente padronizada por idade e sexo
+pela população do Brasil no Censo 2022; a evolução permanece bruta, com 2023
+como lacuna real. Os indicadores se sobrepõem e não devem ser somados. SIA
+permanece explicitamente indisponível por falta de dimensão diagnóstica e
+residência validadas.
 O inventário resumido de lacunas e critérios de fechamento está em
 `reports/technical/lacunas_dados_portal.md`.
 As revisões anteriores estão em `reports/reviews/`, mas mudanças na jornada

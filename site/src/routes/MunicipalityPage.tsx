@@ -66,13 +66,14 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
   const [series, setSeries] = useState<Observation[] | null>(null)
   const [municipalSeries, setMunicipalSeries] = useState<Observation[] | null>(null)
   const [map, setMap] = useState<MapPayload | null>(null)
+  const [mapMetric, setMapMetric] = useState<'age_sex_standardized_rate_per_100k' | 'crude_rate_per_100k'>('age_sex_standardized_rate_per_100k')
   const [activeTab, setActiveTab] = useState<'evolution' | 'map' | 'profile' | null>(null)
   const [detailError, setDetailError] = useState<string | null>(null)
   const [linkCopied, setLinkCopied] = useState(false)
 
   useEffect(() => {
     let active = true
-    setSummary(undefined); setSeries(null); setMunicipalSeries(null); setMap(null); setActiveTab(null); setDetailError(null)
+    setSummary(undefined); setSeries(null); setMunicipalSeries(null); setMap(null); setMapMetric('age_sex_standardized_rate_per_100k'); setActiveTab(null); setDetailError(null)
     loadMunicipalitySummary(municipalityCode).then((payload) => {
       if (!active) return
       setSummary(payload.items.find((item) => item.indicatorId === indicator.id) ?? null)
@@ -105,11 +106,17 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
   if (summary === null) return <main className="content-page"><h1>Resposta temporariamente indisponível</h1><p>Não foi possível carregar o resumo de {indicator.label} para {municipality.name}. Nenhum valor foi substituído por zero.</p><button type="button" onClick={() => window.location.reload()}>Tentar novamente</button></main>
 
   const latest = summary
+  const answerMetric = latest.metricKind ?? 'crude_rate_per_100k'
+  const isNeurological = indicator.theme === 'neurological'
   const period = latest?.period ?? null
-  const comparisonSeries = series && municipalSeries ? buildMunicipalComparisonSeries(municipality.code, municipalSeries, series) : []
+  const crudeMunicipalSeries = municipalSeries?.filter((item) => item.metricKind === 'crude_rate_per_100k') ?? null
+  const comparisonSeries = series && crudeMunicipalSeries ? buildMunicipalComparisonSeries(municipality.code, crudeMunicipalSeries, series.filter((item) => item.metricKind === 'crude_rate_per_100k')) : []
   const labels = { selected_municipality: municipality.name, rest_of_rj_excluding_selected: `RJ sem ${municipality.name}`, brazil_total: 'Brasil' }
   const ratio = rateRatio(latest?.value, latest?.restOfStateValue)
   const status = statusLabel(latest.dataStatus)
+  const mapAlternative = map?.alternatives?.find((item) => item.metricKind === 'crude_rate_per_100k')
+  const visibleMapValues = mapMetric === 'crude_rate_per_100k' && mapAlternative ? mapAlternative.values : map?.values ?? []
+  const visibleMapPeriod = mapMetric === 'crude_rate_per_100k' && mapAlternative ? mapAlternative.period : map?.period
   const eventLabel = indicator.measure === 'hospitalization' ? 'internações/AIHs registradas' : 'óbitos de residentes registrados'
   const open = (code: string, indicatorId: string) => navigate(`/municipios/${code}?indicador=${indicatorId}`)
   const download = async () => {
@@ -135,10 +142,11 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
       </section>
       <section className={`municipality-answer${latest?.suppressionStatus === 'suppressed' ? ' is-suppressed' : ''}`} aria-labelledby="municipality-answer-title">
         <div className="municipality-answer__intro"><span>O que este indicador mede</span><h2 id="municipality-answer-title">{indicator.label}</h2><p>{indicator.definition}</p><small>{indicator.measureLabel} · {period ?? 'sem período publicável'} · {status}</small></div>
-        <div className="municipality-answer__value"><span>1 · Valor</span><strong>{latest.suppressionStatus === 'suppressed' ? 'Dado protegido' : formatMetric(latest.value, 'crude_rate_per_100k')}</strong>{latest.suppressionStatus !== 'suppressed' ? <><span>por 100 mil habitantes</span><small>{formatMetric(latest.count, 'count')} {eventLabel}</small></> : <small>Célula pequena protegida. A ausência do valor não significa zero.</small>}</div>
-        <div className="municipality-answer__comparison"><span>2 · Comparação</span><strong>{latest?.comparisonAvailable ? relativeDifferenceLabel(ratio) : 'Comparação indisponível'}</strong><small>RJ sem {municipality.name}: {formatMetric(latest?.restOfStateValue ?? null, 'crude_rate_per_100k')}</small>{indicator.comparisonAvailability?.brazil ? <small>Brasil: {formatMetric(latest?.brazilValue ?? null, 'crude_rate_per_100k')}</small> : <small>Brasil não exibido: definição ou período não equivalentes.</small>}</div>
+        <div className="municipality-answer__value"><span>1 · Valor</span><strong>{latest.suppressionStatus === 'suppressed' ? 'Dado protegido' : formatMetric(latest.value, answerMetric)}</strong>{latest.suppressionStatus !== 'suppressed' ? <><span>{answerMetric === 'age_sex_standardized_rate_per_100k' ? 'taxa padronizada por idade e sexo por 100 mil' : 'por 100 mil habitantes'}</span><small>{formatMetric(latest.count, 'count')} {eventLabel}</small></> : <small>Célula pequena protegida. A ausência do valor não significa zero.</small>}</div>
+        <div className="municipality-answer__comparison"><span>2 · Comparação</span><strong>{latest?.comparisonAvailable ? relativeDifferenceLabel(ratio) : 'Comparação indisponível'}</strong><small>RJ sem {municipality.name}: {formatMetric(latest?.restOfStateValue ?? null, answerMetric)}</small>{indicator.comparisonAvailability?.brazil && answerMetric !== 'age_sex_standardized_rate_per_100k' ? <small>Brasil: {formatMetric(latest?.brazilValue ?? null, answerMetric)}</small> : <small>Brasil não exibido: definição, métrica ou período não equivalentes.</small>}</div>
         <div className="municipality-answer__interpretation"><span>3 · Como interpretar</span><strong>Leitura orientada pelo contexto</strong><p>{indicator.allowsConclusion}</p></div>
       </section>
+      {isNeurological ? <section className="municipality-method"><FileText /><div><h2>Por que padronizar?</h2><p>Municípios mais envelhecidos podem apresentar taxas brutas maiores apenas pela composição etária. A taxa de 2022 ajusta idade e sexo usando a população do Brasil no Censo 2022, tornando a comparação municipal mais justa. Ela não mede prevalência nem todas as pessoas com diagnóstico.</p><p><strong>Dado recente:</strong> a mortalidade bruta de 2024 aparece na evolução. O ano de 2023 permanece como lacuna e não é interpolado.</p></div></section> : null}
       <div className="municipality-actions"><button type="button" onClick={download}><Download />Baixar este recorte</button><button type="button" onClick={share}><Share2 />{linkCopied ? 'Link copiado' : 'Copiar link'}</button><Link href={`/explorador?indicador=${indicator.id}&municipio=${municipality.code}`}>Abrir análise avançada <ArrowRight /></Link></div>
       <section className="municipality-explore" aria-labelledby="explore-title">
         <div className="municipality-explore__heading"><span>3 · Evolução e contexto</span><h2 id="explore-title">Explore quando precisar</h2><p>A resposta principal está acima. Abra apenas a visualização que ajuda sua pergunta.</p></div>
@@ -149,11 +157,12 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
         </div>
         <div className="municipality-tabpanel" role="tabpanel">
           {!activeTab ? <div className="municipality-tab-empty"><strong>Nenhuma visualização carregada</strong><p>Escolha evolução, mapa ou perfil para continuar.</p></div> : null}
-          {activeTab === 'evolution' ? series && municipalSeries ? <div><SeriesInsights municipalityName={municipality.name} observations={comparisonSeries} /><TimeSeriesChart indicator={indicator} observations={comparisonSeries} metric="crude_rate_per_100k" geographyLabels={labels} geographies={Object.keys(labels)} startYear={indicator.yearStart} endYear={indicator.yearEnd} /></div> : detailError ? <div className="municipality-inline-error"><strong>{detailError}</strong><button type="button" onClick={() => { setActiveTab(null); setTimeout(() => setActiveTab('evolution'), 0) }}>Tentar novamente</button></div> : <LoadingState label="Carregando evolução…" /> : null}
-          {activeTab === 'map' ? map ? <TerritoryMap topology={topology} values={map.values} scaleDomain={map.mapScale?.domain} status={map.status} period={map.period} selectedCode={municipality.code} onSelect={(code) => navigate(`/municipios/${code}?indicador=${indicator.id}`)} /> : detailError ? <div className="municipality-inline-error"><strong>{detailError}</strong><button type="button" onClick={() => { setActiveTab(null); setTimeout(() => setActiveTab('map'), 0) }}>Tentar novamente</button></div> : <LoadingState label="Carregando mapa contextual…" /> : null}
+          {activeTab === 'evolution' ? series && municipalSeries ? <div>{isNeurological ? <p>A evolução abaixo usa exclusivamente a taxa bruta. A linha é interrompida em 2023 e não se conecta à taxa padronizada de 2022.</p> : null}<SeriesInsights municipalityName={municipality.name} observations={comparisonSeries} /><TimeSeriesChart indicator={indicator} observations={comparisonSeries} metric="crude_rate_per_100k" geographyLabels={labels} geographies={Object.keys(labels)} startYear={indicator.yearStart} endYear={indicator.yearEnd} /></div> : detailError ? <div className="municipality-inline-error"><strong>{detailError}</strong><button type="button" onClick={() => { setActiveTab(null); setTimeout(() => setActiveTab('evolution'), 0) }}>Tentar novamente</button></div> : <LoadingState label="Carregando evolução…" /> : null}
+          {activeTab === 'map' ? map ? <div>{isNeurological && mapAlternative ? <div className="metric-switch" role="group" aria-label="Métrica do mapa"><button type="button" className={mapMetric === 'age_sex_standardized_rate_per_100k' ? 'is-selected' : ''} onClick={() => setMapMetric('age_sex_standardized_rate_per_100k')}>Padronizada · 2022</button><button type="button" className={mapMetric === 'crude_rate_per_100k' ? 'is-selected' : ''} onClick={() => setMapMetric('crude_rate_per_100k')}>Bruta · 2024</button></div> : null}<TerritoryMap topology={topology} values={visibleMapValues} scaleDomain={mapMetric === 'age_sex_standardized_rate_per_100k' ? map.mapScale?.domain : undefined} status={map.status} period={visibleMapPeriod} selectedCode={municipality.code} onSelect={(code) => navigate(`/municipios/${code}?indicador=${indicator.id}`)} /></div> : detailError ? <div className="municipality-inline-error"><strong>{detailError}</strong><button type="button" onClick={() => { setActiveTab(null); setTimeout(() => setActiveTab('map'), 0) }}>Tentar novamente</button></div> : <LoadingState label="Carregando mapa contextual…" /> : null}
           {activeTab === 'profile' ? <div className="municipality-profile-callout"><Users /><div><strong>Perfil por idade e sexo</strong><p>{indicator.profileCoverage?.status === 'available' ? 'Há perfil municipal publicável para 2022.' : 'Este perfil ainda não está disponível para a fonte selecionada.'}</p>{indicator.profileCoverage?.status === 'available' ? <Link href={`/perfis?municipio=${municipality.code}&indicador=${indicator.id}&periodo=2022`}>Abrir perfil de 2022 <ArrowRight /></Link> : <Link href={`/indicadores/${indicator.id}`}>Entender a indisponibilidade</Link>}</div></div> : null}
         </div>
       </section>
+      {isNeurological ? <section className="municipality-method"><FileText /><div><h2>Outras camadas disponíveis</h2><p><strong>Internações registradas em 2022:</strong> consulte o indicador SIH correspondente. Cada registro é uma AIH/evento de internação, não uma pessoa única ou caso novo.</p>{catalog.indicators.some((item) => item.id === `sih-${indicator.outcomeId.replaceAll('_', '-')}`) ? <Link href={`/municipios/${municipality.code}?indicador=sih-${indicator.outcomeId.replaceAll('_', '-')}`}>Ver internações/AIHs de 2022</Link> : null}<p><strong>Produção ambulatorial SIA:</strong> indisponível nesta release porque não há dimensão diagnóstica CID-10 e território de residência validados. Ausência não significa zero.</p></div></section> : null}
       <DataGlossary />
       <section className="municipality-method"><FileText /><div><h2>Como interpretar</h2><p><strong>O que permite concluir:</strong> {indicator.allowsConclusion}</p><p><strong>O que não permite concluir:</strong> {indicator.doesNotAllowConclusion}</p><Link href={`/indicadores/${indicator.id}`}>Ver fonte, CID e limitações</Link></div></section>
     </main>
