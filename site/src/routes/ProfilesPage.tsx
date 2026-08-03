@@ -14,6 +14,12 @@ function safeParameter(value: string | null, allowed: Set<string>, fallback: str
   return value && allowed.has(value) ? value : fallback
 }
 
+function profileValueLabel(observation: ProfileObservation | null, compact = false) {
+  if (observation?.suppressionStatus === 'published') return formatMetric(observation.ratePer100k, 'crude_rate_per_100k')
+  if (observation?.suppressionStatus === 'not_applicable') return 'Não aplicável'
+  return compact ? 'Protegido' : 'Célula protegida'
+}
+
 export function ProfilesPage() {
   const { catalog, topology } = usePortal()
   const search = useSearch()
@@ -23,7 +29,7 @@ export function ProfilesPage() {
   const available = catalog.indicators.filter((item) => item.profileCoverage?.status === 'available')
   const municipalityCodes = useMemo(() => new Set(municipalities.map((item) => item.code)), [municipalities])
   const indicatorIds = useMemo(() => new Set(available.map((item) => item.id)), [available])
-  const defaultMunicipality = municipalities[0]?.code ?? ''
+  const defaultMunicipality = ''
   const defaultIndicator = available.find((item) => item.outcomeId === 'all_malignant_neoplasms')?.id ?? available[0]?.id ?? ''
   const municipalityCode = safeParameter(parameters.get('municipio'), municipalityCodes, defaultMunicipality)
   const indicatorId = safeParameter(parameters.get('indicador'), indicatorIds, defaultIndicator)
@@ -34,7 +40,7 @@ export function ProfilesPage() {
   const [failed, setFailed] = useState(false)
 
   useEffect(() => {
-    if (!indicatorId) return
+    if (!indicatorId || !municipalityCode) { setRows([]); return }
     let active = true
     setRows(null)
     setFailed(false)
@@ -68,11 +74,11 @@ export function ProfilesPage() {
     <main className="content-page profiles-page">
       <header className="content-page__header"><h1>Perfis por idade e sexo</h1><span>Taxas específicas de mortalidade de residentes em 2022. Estes valores não são taxas padronizadas.</span></header>
       <section className="profile-controls" aria-label="Selecionar perfil">
-        <label>Município<select value={municipalityCode} onChange={(event) => setSelection(event.target.value)}>{municipalities.map((item) => <option key={item.code} value={item.code}>{item.name}</option>)}</select></label>
+        <label>Município<select value={municipalityCode} onChange={(event) => setSelection(event.target.value)}><option value="" disabled>Escolha um município</option>{municipalities.map((item) => <option key={item.code} value={item.code}>{item.name}</option>)}</select></label>
         <label>Indicador<select value={indicatorId} onChange={(event) => setSelection(municipalityCode, event.target.value)}>{available.map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}</select></label>
         <label>Período<select value={period} disabled><option value="2022">2022</option></select></label>
       </section>
-      {rows ? (
+      {!municipalityCode ? <section className="profile-empty"><h2>Escolha uma cidade para começar</h2><p>O perfil será carregado somente depois da seleção, sem adotar um município silenciosamente.</p></section> : rows ? (
         failed ? <section className="profile-empty" role="alert"><h2>Não foi possível carregar o perfil</h2><p>Tente novamente ou consulte a análise municipal sem o recorte por idade e sexo.</p></section> :
         <section className="profile-chart" aria-labelledby="profile-title">
           <div className="profile-chart__heading"><div><h2 id="profile-title">{indicator?.label}</h2><p>{municipality?.name} · 2022 · taxa específica por 100 mil</p></div><div className="profile-legend"><span><i />Feminino</span><span><i />Masculino</span></div></div>
@@ -80,11 +86,11 @@ export function ProfilesPage() {
             {profile.map((item) => (
               <div className="profile-row" key={item.age}>
                 <strong>{item.age}</strong>
-                {[item.feminino, item.masculino].map((observation, index) => <div key={index}><span className={`profile-bar ${index === 0 ? 'profile-bar--female' : 'profile-bar--male'}`} style={{ width: `${((observation?.ratePer100k ?? 0) / max) * 100}%` }} /><em>{observation?.suppressionStatus === 'published' ? formatMetric(observation.ratePer100k, 'crude_rate_per_100k') : 'Protegido'}</em></div>)}
+                {[item.feminino, item.masculino].map((observation, index) => <div key={index}><span className={`profile-bar ${index === 0 ? 'profile-bar--female' : 'profile-bar--male'}`} style={{ width: `${((observation?.ratePer100k ?? 0) / max) * 100}%` }} /><em>{profileValueLabel(observation, true)}</em></div>)}
               </div>
             ))}
           </div>
-          <div className="profile-table-wrap"><table><caption>Alternativa tabular do perfil por idade e sexo</caption><thead><tr><th>Idade</th><th>Feminino</th><th>Masculino</th></tr></thead><tbody>{profile.map((item) => <tr key={item.age}><th>{item.age}</th><td>{item.feminino?.suppressionStatus === 'published' ? formatMetric(item.feminino.ratePer100k, 'crude_rate_per_100k') : 'Célula protegida'}</td><td>{item.masculino?.suppressionStatus === 'published' ? formatMetric(item.masculino.ratePer100k, 'crude_rate_per_100k') : 'Célula protegida'}</td></tr>)}</tbody></table></div>
+          <div className="profile-table-wrap"><table><caption>Alternativa tabular do perfil por idade e sexo</caption><thead><tr><th>Idade</th><th>Feminino</th><th>Masculino</th></tr></thead><tbody>{profile.map((item) => <tr key={item.age}><th>{item.age}</th><td>{profileValueLabel(item.feminino)}</td><td>{profileValueLabel(item.masculino)}</td></tr>)}</tbody></table></div>
           <p className="profile-note">Células protegidas não representam zero. Idade ou sexo ignorado não recebe denominador inventado. Mortalidade por câncer não representa incidência.</p>
         </section>
       ) : <LoadingState label={`Carregando perfil de ${municipality?.name ?? 'município'}…`} />}

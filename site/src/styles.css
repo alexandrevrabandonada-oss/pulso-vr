@@ -405,6 +405,16 @@ p { line-height: 1.65; }
   .release-summary dl div:first-child { border-left: 0; padding-left: 0; }
 }
 
+@media (max-width: 560px) {
+  .content-page__header h1 {
+    display: block;
+    max-width: 100%;
+    padding: 8px 9px;
+    font-size: 2rem;
+    overflow-wrap: anywhere;
+  }
+}
+
 /* Jornada pública estadual */
 .discovery-search { width: min(760px, 100%); display: grid; grid-template-columns: 1fr 1fr auto; align-items: end; border: 3px solid var(--ink); background: #fff; }
 .discovery-field { position: relative; min-width: 0; padding: 11px 14px; border-right: 1px solid var(--ink); }
@@ -502,6 +512,7 @@ p { line-height: 1.65; }
 }
 
 @media (max-width: 560px) {
+  .content-page__header h1 { display: block; max-width: 100%; padding: 8px 9px; font-size: clamp(2rem, 11vw, 2.55rem); overflow-wrap: anywhere; }
   .municipality-overview__list { grid-template-columns: 1fr; }
   .municipality-overview-card { min-height: 210px; border-right: 0; }
 }
@@ -1142,4 +1153,14 @@ button, select, input, .primary-button, .icon-action, .content-actions a { borde
   .lenses-row article > svg { width: 42px; height: 42px; }
   .evidence-band { padding: 36px 0; }
   .filter-rail { position: fixed; top: auto; grid-template-columns: 1fr 1fr; box-shadow: 0 -12px 0 rgba(11,11,11,.08); }
+}
+
+@media (max-width: 560px) {
+  .content-page__header h1 {
+    display: block;
+    max-width: 100%;
+    padding: 8px 9px;
+    font-size: 2rem;
+    overflow-wrap: anywhere;
+  }
 }
