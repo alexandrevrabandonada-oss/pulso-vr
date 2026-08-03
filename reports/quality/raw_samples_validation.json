@@ -10612,6 +10612,21 @@
     "ok": true
   },
   {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sivep_2026_INFLUD26-27-07-2026.parquet",
+    "filename": "sivep_2026_INFLUD26-27-07-2026.parquet",
+    "bytes": 13806135,
+    "sha256": "6584f741159f80b231d6ef54a03989dc0f6cfdd4028075aaa710b98e210894a6",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "rows": 177445,
+      "columns": 194,
+      "row_groups": 1
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
     "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sivep_srag_2019_2026-03-23.parquet",
     "filename": "sivep_srag_2019_2026-03-23.parquet",
     "bytes": 3447406,

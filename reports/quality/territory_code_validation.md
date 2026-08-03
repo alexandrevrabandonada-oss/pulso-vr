@@ -27,4 +27,5 @@ Esta checagem confirma que os filtros de residência encontram Volta Redonda nos
 | `sivep_2023_INFLUD23-23-03-2026.parquet` | SIVEP-SRAG / `CO_MUN_RES` | 279453 | 733 | `{"0": 66, "6": 279387}` | OK |
 | `sivep_2024_INFLUD24-23-03-2026.parquet` | SIVEP-SRAG / `CO_MUN_RES` | 267986 | 592 | `{"0": 78, "6": 267908}` | OK |
 | `sivep_2025_INFLUD25-27-07-2026.parquet` | SIVEP-SRAG / `CO_MUN_RES` | 336260 | 826 | `{"0": 109, "6": 336151}` | OK |
+| `sivep_2026_INFLUD26-27-07-2026.parquet` | SIVEP-SRAG / `CO_MUN_RES` | 177445 | 336 | `{"0": 76, "6": 177369}` | OK |
 | `sivep_srag_2019_2026-03-23.parquet` | SIVEP-SRAG / `CO_MUN_RES` | 48941 | 116 | `{"0": 37, "6": 48904}` | OK |

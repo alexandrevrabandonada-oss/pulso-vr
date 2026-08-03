@@ -74,7 +74,8 @@ def _write_report(root: Path, summary: pd.DataFrame, metadata: dict[str, object]
         "",
         "## Limitações",
         "",
-        "- 2019–2025 são arquivos SIVEP versionados, sujeitos a revisão e mudanças de cobertura; 2025 é provisório.",
+        "- 2019–2025 são arquivos SIVEP versionados; 2026 é parcial na versão de 27/07/2026. "
+        "Todos permanecem sujeitos a revisão e mudanças de cobertura.",
         "- O comparador territorial usa residência e exclui Volta Redonda do restante do RJ.",
         "- Não há ajuste por idade, sexo, vacinação, circulação viral, sazonalidade ou acesso.",
         "- Nenhuma associação com poluição ou CSN é estimada nesta etapa.",
@@ -156,7 +157,7 @@ def build_sivep_surveillance_summary(root: Path) -> tuple[Path, Path, Path]:
         },
         "notes": [
             "Notification rates are not incidence rates and should not be interpreted as risk of infection.",
-            "SIVEP coverage and case definitions change over time; 2019-2025 are not automatically comparable.",
+            "SIVEP coverage and case definitions change over time; 2019-2026 are not automatically comparable.",
             "Small counts are suppressed in the technical report.",
             "No causal or interrupted time-series inference is produced.",
         ],

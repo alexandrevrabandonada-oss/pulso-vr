@@ -272,6 +272,21 @@
     "errors": []
   },
   {
+    "path": "data\\raw\\sivep_2026_INFLUD26-27-07-2026.parquet",
+    "source": "SIVEP-SRAG",
+    "field": "CO_MUN_RES",
+    "format": "Parquet",
+    "ok": true,
+    "rows": 177445,
+    "target_code": "330630",
+    "target_rows": 336,
+    "observed_code_lengths": {
+      "0": 76,
+      "6": 177369
+    },
+    "errors": []
+  },
+  {
     "path": "data\\raw\\sivep_srag_2019_2026-03-23.parquet",
     "source": "SIVEP-SRAG",
     "field": "CO_MUN_RES",

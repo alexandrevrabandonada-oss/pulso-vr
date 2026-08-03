@@ -1,11 +1,19 @@
 {
-  "generated_at": "2026-08-03T00:52:07+00:00",
+  "generated_at": "2026-08-03T01:53:51+00:00",
   "status": "monthly_sivep_surveillance_notification_rates_no_incidence",
   "start_period": "2019-01",
-  "end_period": "2025-12",
-  "rows": 756,
+  "end_period": "2026-07",
+  "rows": 819,
+  "partial_years": [
+    2026
+  ],
+  "provisional_years": [
+    2025,
+    2026
+  ],
   "missing_denominator_years": [
-    2023
+    2023,
+    2026
   ],
   "source_stats": [
     {
@@ -62,11 +70,19 @@
       "rows": 336260,
       "rj_rows": 23322,
       "missing_onset_rj_rows": 0,
-      "outside_window_rj_rows": 119
+      "outside_window_rj_rows": 0
+    },
+    {
+      "path": "data\\interim\\sivep_2026_harmonized.parquet",
+      "sha256": "afc08323ffb5ae63cc272cf35d0ab69c43537bd8e8c0824dc46e15bbf50d2c71",
+      "rows": 177445,
+      "rj_rows": 11950,
+      "missing_onset_rj_rows": 0,
+      "outside_window_rj_rows": 0
     }
   ],
   "output_path": "data\\processed\\sivep_monthly_surveillance.parquet",
-  "output_sha256": "3bf7ab23f266ee0008564eb5408c325dacaf8677afc4278c231626f50c5a0744",
+  "output_sha256": "db5c1dd3702bc8bf6f2574749506c94c86068219c2877a8a019dd23a35c95c78",
   "report_path": "reports\\technical\\sivep_mensal.md",
   "input_files": [
     {
@@ -96,6 +112,10 @@
     {
       "path": "data\\interim\\sivep_2025_harmonized.parquet",
       "sha256": "22227f3ed2fe885f493412270affce15fadf5b635a9e920483daa628bb02001a"
+    },
+    {
+      "path": "data\\interim\\sivep_2026_harmonized.parquet",
+      "sha256": "afc08323ffb5ae63cc272cf35d0ab69c43537bd8e8c0824dc46e15bbf50d2c71"
     }
   ],
   "rules": {
@@ -107,7 +127,7 @@
   },
   "notes": [
     "Notification rates are not incidence rates.",
-    "2025 is provisional and SIVEP versions are subject to revision.",
+    "2025 is provisional; 2026 is partial through the observed end period and both versions are subject to revision.",
     "No causal or interrupted time-series inference is produced here."
   ]
 }

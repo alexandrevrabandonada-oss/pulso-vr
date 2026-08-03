@@ -10,7 +10,7 @@ O workspace original estava vazio, sem bases, documentos ou commits. A
 estrutura das Fases 0–1 foi criada, com protocolo preliminar, matriz de
 perguntas, catálogo de fontes, configurações, validações automatizadas e
 downloaders idempotentes. A Fase 2 já validou a descoberta dinâmica no portal
-oficial, adquiriu a série SIM 2010–2024 e arquivos SIVEP versionados de 2019–2025 e confirmou o
+oficial, adquiriu a série SIM 2010–2024 e arquivos SIVEP versionados de 2019–2026 e confirmou o
 código DATASUS de residência de Volta Redonda. Não há resultado etiológico
 confirmado: há resultados preliminares descritivos de SIH, SIM e
 SIVEP, mas nenhuma hipótese causal é considerada confirmada.
@@ -129,13 +129,15 @@ suprime células menores que cinco.
 O resumo pandêmico do SIVEP fica em
 `data/processed/sivep_surveillance_summary.parquet`, com notificações por
 residência, taxa de notificação por 100 mil e proporção descritiva de óbitos
-entre notificações. A taxa não é incidência e 2019–2025 não deve ser comparado
+entre notificações. A taxa não é incidência e 2019–2026 não deve ser comparado
 automaticamente sem considerar cobertura, definição de caso e revisão da base;
-2025 permanece provisório. O relatório está em `reports/technical/pandemia_sivep.md`.
+2025 permanece provisório e 2026 é parcial na versão de 27/07/2026. O relatório está em
+`reports/technical/pandemia_sivep.md`.
 Também há uma série mensal SIVEP por mês de início dos sintomas em
 `data/processed/sivep_monthly_surveillance.parquet`; ela mantém Covid-19 e
 influenza como séries independentes e não é incidência. O relatório está em
-`reports/technical/sivep_mensal.md`.
+`reports/technical/sivep_mensal.md`. A janela termina no último mês observado nos
+arquivos adquiridos; para a versão atual, 2026 é parcial e provisório.
 As taxas brutas de mortalidade do SIM para os anos públicos observados ficam em
 `data/processed/sim_mortality_rates_sample.parquet`, com IC exato de Poisson,
 razão VR/restante do RJ e marcação de 2020 como interrupção assistencial ou

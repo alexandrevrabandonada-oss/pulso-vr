@@ -14,7 +14,7 @@ SIVEP_OUTCOMES = ["srag", "covid19", "influenza"]
 GEOGRAPHIES = ["rj_total", "volta_redonda", "rest_of_rj_excluding_vr"]
 VR_CODE = "330630"
 START_PERIOD = pd.Timestamp("2019-01-01")
-END_PERIOD = pd.Timestamp("2025-12-01")
+DEFAULT_END_PERIOD = pd.Timestamp("2025-12-01")
 
 
 def _sivep_geography(codes: pd.Series, vr_code: str = VR_CODE) -> pd.Series:
@@ -38,10 +38,33 @@ def _input_paths(root: Path) -> list[Path]:
     return paths
 
 
+def _observed_end_period(paths: list[Path]) -> pd.Timestamp:
+    latest: list[pd.Timestamp] = []
+    for path in paths:
+        onset = pd.to_datetime(
+            pd.read_parquet(path, columns=["symptom_onset_date"])["symptom_onset_date"],
+            errors="coerce",
+        )
+        maximum = onset.max()
+        if pd.notna(maximum):
+            latest.append(pd.Timestamp(maximum).to_period("M").to_timestamp())
+    return max(latest) if latest else DEFAULT_END_PERIOD
+
+
+def _period_status(year: int) -> str:
+    if year == 2026:
+        return "provisional_partial_2026"
+    if year == 2025:
+        return "provisional_2025"
+    return "surveillance_versioned"
+
+
 def _load_monthly_counts(root: Path) -> tuple[pd.DataFrame, dict[str, object], list[Path]]:
     frames: list[pd.DataFrame] = []
     source_stats: list[dict[str, object]] = []
-    for path in _input_paths(root):
+    input_paths = _input_paths(root)
+    end_period = _observed_end_period(input_paths)
+    for path in input_paths:
         frame = pd.read_parquet(
             path,
             columns=[
@@ -54,7 +77,7 @@ def _load_monthly_counts(root: Path) -> tuple[pd.DataFrame, dict[str, object], l
         geography = _sivep_geography(frame["municipality_code_datasus"])
         in_rj = geography.isin(["volta_redonda", "rest_of_rj_excluding_vr"])
         onset = pd.to_datetime(frame["symptom_onset_date"], errors="coerce")
-        in_window = onset.ge(START_PERIOD) & onset.le(END_PERIOD + pd.offsets.MonthEnd(1))
+        in_window = onset.ge(START_PERIOD) & onset.le(end_period + pd.offsets.MonthEnd(1))
         usable = in_rj & onset.notna() & in_window
         classification = (
             frame["final_classification_raw"]
@@ -122,7 +145,7 @@ def _load_monthly_counts(root: Path) -> tuple[pd.DataFrame, dict[str, object], l
         .assign(geography="rj_total")
     )
     observed = pd.concat([observed, rj_total], ignore_index=True)
-    months = pd.date_range(START_PERIOD, END_PERIOD, freq="MS")
+    months = pd.date_range(START_PERIOD, end_period, freq="MS")
     grid = pd.DataFrame(
         itertools.product(months, GEOGRAPHIES, SIVEP_OUTCOMES),
         columns=["period", "geography", "outcome_id"],
@@ -145,14 +168,14 @@ def _load_monthly_counts(root: Path) -> tuple[pd.DataFrame, dict[str, object], l
     data["death_any_pct"] = (
         data["death_any_count"] / data["notification_count"] * 100
     ).where(data["notification_count"].gt(0))
-    data["period_status"] = data["year"].map(
-        lambda year: "provisional_2025" if year == 2025 else "surveillance_versioned"
-    )
+    data["period_status"] = data["year"].map(_period_status)
     data = data.sort_values(["period", "outcome_id", "geography"]).reset_index(drop=True)
     metadata = {
         "start_period": START_PERIOD.strftime("%Y-%m"),
-        "end_period": END_PERIOD.strftime("%Y-%m"),
+        "end_period": end_period.strftime("%Y-%m"),
         "rows": int(len(data)),
+        "partial_years": [int(end_period.year)] if end_period.month < 12 else [],
+        "provisional_years": [2025, 2026],
         "missing_denominator_years": sorted(
             int(year) for year in set(data["year"].unique()) - set(population["year"].unique())
         ),
@@ -199,7 +222,8 @@ def _write_report(root: Path, data: pd.DataFrame, metadata: dict[str, object], i
         f"- Janela mensal: **{metadata['start_period']} a {metadata['end_period']}**.",
         f"- Linhas do Parquet: **{metadata['rows']}**.",
         f"- Anos sem denominador: **{metadata['missing_denominator_years']}**.",
-        "- 2025 é provisório; eventos fora da janela e datas de início ausentes são registrados no manifesto.",
+        f"- 2025 é provisório; 2026 é parcial até **{metadata['end_period']}** na versão adquirida. "
+        "Eventos fora da janela e datas de início ausentes são registrados no manifesto.",
         "- Células menores que cinco são suprimidas nesta tabela.",
         "",
         "## Totais anuais de controle",
@@ -248,7 +272,7 @@ def build_sivep_monthly(root: Path) -> tuple[Path, Path, Path]:
         },
         "notes": [
             "Notification rates are not incidence rates.",
-            "2025 is provisional and SIVEP versions are subject to revision.",
+            "2025 is provisional; 2026 is partial through the observed end period and both versions are subject to revision.",
             "No causal or interrupted time-series inference is produced here.",
         ],
     }

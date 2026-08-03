@@ -713,5 +713,6 @@ Esta validação testa sidecar SHA-256 e integridade estrutural básica; não su
 | sivep_2023_INFLUD23-23-03-2026.parquet | 22121151 | OK | OK | OK | {"columns": 194, "row_groups": 1, "rows": 279453} |
 | sivep_2024_INFLUD24-23-03-2026.parquet | 21222050 | OK | OK | OK | {"columns": 194, "row_groups": 1, "rows": 267986} |
 | sivep_2025_INFLUD25-27-07-2026.parquet | 26780040 | OK | OK | OK | {"columns": 194, "row_groups": 1, "rows": 336260} |
+| sivep_2026_INFLUD26-27-07-2026.parquet | 13806135 | OK | OK | OK | {"columns": 194, "row_groups": 1, "rows": 177445} |
 | sivep_srag_2019_2026-03-23.parquet | 3447406 | OK | OK | OK | {"columns": 194, "row_groups": 1, "rows": 48941} |
 | sivep_srag_dicionario_2019_2025.pdf | 1052922 | OK | OK | OK | {"header": "%PDF-"} |

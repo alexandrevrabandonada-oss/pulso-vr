@@ -40,7 +40,20 @@ def select_resource(
 ) -> dict[str, Any]:
     """Select one resource for a year, prioritizing analysis-friendly formats."""
     year_text = str(year)
-    candidates = [
+    year_code = f"INFLUD{year % 100:02d}"
+
+    def strict_year_match(resource: dict[str, Any]) -> bool:
+        name = str(resource.get("name", ""))
+        url = str(resource.get("url", ""))
+        url_path = url.split("?", 1)[0]
+        filename = PurePosixPath(url_path).name.upper()
+        year_in_path = bool(re.search(rf"/{re.escape(year_text)}/", url_path))
+        year_in_name = bool(re.match(rf"^\s*{re.escape(year_text)}\b", name))
+        year_in_filename = year_code in filename
+        return year_in_path or year_in_name or year_in_filename
+
+    strict_candidates = [resource for resource in resources if strict_year_match(resource)]
+    candidates = strict_candidates or [
         resource
         for resource in resources
         if year_text in str(resource.get("name", "")) or year_text in str(resource.get("url", ""))
