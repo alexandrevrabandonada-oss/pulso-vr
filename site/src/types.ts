@@ -59,6 +59,26 @@ export interface Catalog {
   discovery?: { generatedAt: string; municipalityCount: number }
 }
 
+export interface MunicipalitySummaryItem {
+  indicatorId: string
+  period: string | null
+  value: number | null
+  count: number | null
+  unit: string
+  dataStatus: string
+  suppressionStatus: SuppressionStatus
+  restOfStateValue: number | null
+  brazilValue: number | null
+  comparisonAvailable: boolean
+  unavailableReason?: string | null
+}
+
+export interface MunicipalitySummariesPayload {
+  schemaVersion: string
+  generatedAt: string
+  municipalities: Record<string, MunicipalitySummaryItem[]>
+}
+
 export interface Observation {
   source: 'SIH' | 'SIM'
   outcomeId: string

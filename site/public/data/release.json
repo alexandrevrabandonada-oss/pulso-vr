@@ -501,6 +501,11 @@
       "sha256": "60e559a4f7ad34d53c70fa10f6b308150303625b0b5bfb6a42d0f9b1efab9f47"
     },
     {
+      "path": "municipality-summaries.json",
+      "bytes": 166773,
+      "sha256": "6a9fc6abd87cbd1b75e0cd8cd98bcfa2e0a0cd7af50d4a1eeee365ca376a3e59"
+    },
+    {
       "path": "profiles/sih-acute-bronchitis-bronchiolitis.json",
       "bytes": 113,
       "sha256": "2a001185b6b8081621bd194bce8a2458be1e9edf100b84afb0a863480de3361f"

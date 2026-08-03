@@ -2,7 +2,7 @@ import json
 
 import pandas as pd
 
-from vr_saude.portal_data import _municipal_map_payloads, _municipal_series_payloads, _topology_geometry, suppress_public_observation
+from vr_saude.portal_data import _municipal_map_payloads, _municipal_series_payloads, _municipality_summaries, _topology_geometry, suppress_public_observation
 
 
 def test_publication_suppresses_small_cells_before_frontend() -> None:
@@ -80,3 +80,28 @@ def test_municipal_map_uses_latest_validated_year(tmp_path) -> None:
     payload = _municipal_map_payloads(tmp_path, [{"id": "sim-lung", "outcomeId": "lung", "source": "SIM"}])
     assert payload["sim-lung"]["period"] == "2024"
     assert payload["sim-lung"]["values"][0]["period"] == "2024"
+
+
+def test_municipality_summary_is_lightweight_dynamic_and_suppression_safe() -> None:
+    ids = ["sih-pneumonia", "sim-lung", "sim-all-malignant-neoplasms", "sim-acute-myocardial-infarction"]
+    catalog = [{"id": indicator_id, "unit": "taxa por 100 mil"} for indicator_id in ids]
+    municipal = {}
+    aggregate = {}
+    for indicator_id in ids:
+        protected = indicator_id == "sim-lung"
+        municipal[indicator_id] = {"observations": [{
+            "geographyId": "3300100", "period": "2022", "value": None if protected else 10.0,
+            "count": None if protected else 10, "denominator": 100_000, "dataStatus": "source_observed",
+            "suppressed": protected, "suppressionReason": "small_cell_lt_5" if protected else None,
+        }]}
+        aggregate[indicator_id] = [{
+            "geographyId": "rj_total", "period": "2022", "value": 20.0,
+            "count": 200, "denominator": 1_000_000, "dataStatus": "source_observed", "suppressed": False,
+        }]
+    payload = _municipality_summaries(catalog, aggregate, municipal)
+    items = payload["municipalities"]["3300100"]
+    published = next(item for item in items if item["indicatorId"] == "sih-pneumonia")
+    protected = next(item for item in items if item["indicatorId"] == "sim-lung")
+    assert round(published["restOfStateValue"], 2) == 21.11
+    assert protected["value"] is None and protected["count"] is None
+    assert protected["restOfStateValue"] is None

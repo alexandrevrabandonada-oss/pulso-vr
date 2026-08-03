@@ -12,6 +12,7 @@ import pandas as pd
 from .config import load_config
 from .download import download_public_file
 from .provenance import sha256_file
+from .rates import RATE_MULTIPLIER
 
 
 SMALL_CELL_THRESHOLD = 5
@@ -467,6 +468,70 @@ def _write_download_csv(path: Path, series: dict[str, list[dict[str, Any]]]) -> 
                 writer.writerow({"indicatorId": indicator_id, **observation})
 
 
+CURATED_MUNICIPAL_INDICATORS = (
+    "sih-pneumonia",
+    "sim-lung",
+    "sim-all-malignant-neoplasms",
+    "sim-acute-myocardial-infarction",
+)
+
+
+def _municipality_summaries(
+    catalog: list[dict[str, Any]],
+    series: dict[str, list[dict[str, Any]]],
+    municipal_series: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    indicators = {str(item["id"]): item for item in catalog}
+    municipality_codes = sorted({
+        str(row["geographyId"])
+        for indicator_id in CURATED_MUNICIPAL_INDICATORS
+        for row in municipal_series[indicator_id]["observations"]
+    })
+    municipalities: dict[str, list[dict[str, Any]]] = {}
+    for municipality_code in municipality_codes:
+        items: list[dict[str, Any]] = []
+        for indicator_id in CURATED_MUNICIPAL_INDICATORS:
+            indicator = indicators[indicator_id]
+            rows = [
+                row for row in municipal_series[indicator_id]["observations"]
+                if row["geographyId"] == municipality_code
+            ]
+            latest = max(rows, key=lambda row: int(row["period"])) if rows else None
+            state = next((
+                row for row in series[indicator_id]
+                if latest and row["geographyId"] == "rj_total" and row["period"] == latest["period"]
+            ), None)
+            brazil = next((
+                row for row in series[indicator_id]
+                if latest and row["geographyId"] == "brazil_total" and row["period"] == latest["period"]
+            ), None)
+            rest_value = None
+            if latest and state and not latest["suppressed"] and latest["count"] is not None:
+                denominator = state["denominator"] - latest["denominator"]
+                count = state["count"] - latest["count"]
+                if denominator > 0 and count >= 0:
+                    rest_value = count / denominator * RATE_MULTIPLIER
+            items.append({
+                "indicatorId": indicator_id,
+                "period": latest["period"] if latest else None,
+                "value": latest["value"] if latest else None,
+                "count": latest["count"] if latest else None,
+                "unit": indicator["unit"],
+                "dataStatus": latest["dataStatus"] if latest else "unavailable",
+                "suppressionStatus": "suppressed" if latest and latest["suppressed"] else "published" if latest else "unavailable",
+                "restOfStateValue": _finite_or_none(rest_value),
+                "brazilValue": brazil["value"] if brazil and not brazil["suppressed"] else None,
+                "comparisonAvailable": rest_value is not None,
+                "unavailableReason": latest.get("suppressionReason") if latest and latest["suppressed"] else None,
+            })
+        municipalities[municipality_code] = items
+    return {
+        "schemaVersion": "1.0.0",
+        "generatedAt": _utc_now(),
+        "municipalities": municipalities,
+    }
+
+
 def build_portal_data(
     root: Path,
     release_id: str = "technical-beta",
@@ -525,6 +590,7 @@ def build_portal_data(
             "temporalPolicy": "comparable_across_available_periods",
         }
     topology = _build_topology(root, acquire_geography)
+    summaries = _municipality_summaries(catalog, series, municipal_series)
 
     _write_json(output_root / "catalog.json", {
         "schemaVersion": "1.1.0",
@@ -548,6 +614,7 @@ def build_portal_data(
         _write_json(output_root / "maps" / "rj" / f"{indicator_id}.json", maps[indicator_id])
         _write_json(output_root / "municipal-series" / f"{indicator_id}.json", municipal_series[indicator_id])
     _write_json(output_root / "geography" / "rj.topojson", topology)
+    _write_json(output_root / "municipality-summaries.json", summaries)
     _write_download_csv(output_root / "downloads" / "series-publicas.csv", series)
 
     artifacts = []
