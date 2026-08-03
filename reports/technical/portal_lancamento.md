@@ -1,24 +1,36 @@
 # Pré-voo de lançamento do Portal Observatório Saúde & Ambiente
 
-Verificação: `2026-08-03T17:06:00+00:00`
-Release: `beta-cardiorespiratorio-integrado`
-Status: **public_release_ready**
+Verificação: `2026-08-03T18:43:25+00:00`
+Release: `statewide-profiles-preview`
+Status: **blocked_for_public_release**
 
 ## Resumo
 
-- Bloqueios públicos: **0**
+- Bloqueios públicos: **2**
 - Avisos: **3**
 - Indicadores: **45**
 - Observações públicas: **2700**
 - Células suprimidas: **93**
 - Indicadores SIM elegíveis para perfis: **30**
-- Observações de perfis idade/sexo: **1440**
+- Observações de perfis idade/sexo: **44160**
 - Valores municipais no mapa: **2528**
 - Células municipais suprimidas no mapa: **1612**
 - Comparadores Brasil no SIH: **15/15**
 - Vazamentos de supressão no download: **0**
 
 ## Achados
+
+### [BLOCKER] A release ainda está marcada como beta técnica
+
+status=technical_beta_not_for_public_release
+
+Ação: Concluir as revisões e mudar o status somente após aprovação formal.
+
+### [BLOCKER] Há portões de revisão pendentes
+
+accessibilityReview, epidemiologyReview
+
+Ação: Registrar revisão epidemiológica, acessibilidade e proveniência no manifesto.
 
 ### [WARNING] Existem anos sem denominador oficial
 
