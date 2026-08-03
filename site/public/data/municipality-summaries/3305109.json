@@ -1,11 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-03T19:42:41.510Z",
+  "generatedAt": "2026-08-03T21:09:47+00:00",
   "municipalityCode": "3305109",
   "items": [
     {
       "indicatorId": "sih-acute-bronchitis-bronchiolitis",
       "period": "2022",
+      "metricKind": "crude_rate_per_100k",
       "value": 23.358021779654482,
       "count": 103,
       "unit": "internações/AIHs de residentes",
@@ -19,6 +20,7 @@
     {
       "indicatorId": "sih-acute-myocardial-infarction",
       "period": "2022",
+      "metricKind": "crude_rate_per_100k",
       "value": 62.13687347209056,
       "count": 274,
       "unit": "internações/AIHs de residentes",
@@ -30,8 +32,23 @@
       "unavailableReason": null
     },
     {
+      "indicatorId": "sih-alzheimer",
+      "period": "2022",
+      "metricKind": "crude_rate_per_100k",
+      "value": null,
+      "count": null,
+      "unit": "internações/AIHs de residentes",
+      "dataStatus": "source_observed",
+      "suppressionStatus": "suppressed",
+      "restOfStateValue": null,
+      "brazilValue": 0.8006667062043042,
+      "comparisonAvailable": false,
+      "unavailableReason": "small_cell_lt_5"
+    },
+    {
       "indicatorId": "sih-asthma",
       "period": "2022",
+      "metricKind": "crude_rate_per_100k",
       "value": 18.822483570012835,
       "count": 83,
       "unit": "internações/AIHs de residentes",
@@ -45,6 +62,7 @@
     {
       "indicatorId": "sih-cardiac-arrhythmia",
       "period": "2022",
+      "metricKind": "crude_rate_per_100k",
       "value": 20.18314503290533,
       "count": 89,
       "unit": "internações/AIHs de residentes",
@@ -58,6 +76,7 @@
     {
       "indicatorId": "sih-cardio-all",
       "period": "2022",
+      "metricKind": "crude_rate_per_100k",
       "value": 415.2285230926928,
       "count": 1831,
       "unit": "internações/AIHs de residentes",
@@ -71,6 +90,7 @@
     {
       "indicatorId": "sih-cardiorespiratory-all",
       "period": "2022",
+      "metricKind": "crude_rate_per_100k",
       "value": 732.489420857126,
       "count": 3230,
       "unit": "internações/AIHs de residentes",
@@ -84,6 +104,7 @@
     {
       "indicatorId": "sih-cerebrovascular",
       "period": "2022",
+      "metricKind": "crude_rate_per_100k",
       "value": 132.210938811054,
       "count": 583,
       "unit": "internações/AIHs de residentes",
@@ -97,6 +118,7 @@
     {
       "indicatorId": "sih-copd",
       "period": "2022",
+      "metricKind": "crude_rate_per_100k",
       "value": 9.978184061211623,
       "count": 44,
       "unit": "internações/AIHs de residentes",
@@ -108,8 +130,23 @@
       "unavailableReason": null
     },
     {
+      "indicatorId": "sih-dementias-all",
+      "period": "2022",
+      "metricKind": "crude_rate_per_100k",
+      "value": 2.721322925784988,
+      "count": 12,
+      "unit": "internações/AIHs de residentes",
+      "dataStatus": "source_observed",
+      "suppressionStatus": "published",
+      "restOfStateValue": 3.6633292797612844,
+      "brazilValue": 1.4826614098285118,
+      "comparisonAvailable": true,
+      "unavailableReason": null
+    },
+    {
       "indicatorId": "sih-heart-failure",
       "period": "2022",
+      "metricKind": "crude_rate_per_100k",
       "value": 60.54943509871598,
       "count": 267,
       "unit": "internações/AIHs de residentes",
@@ -123,6 +160,7 @@
     {
       "indicatorId": "sih-hypertension",
       "period": "2022",
+      "metricKind": "crude_rate_per_100k",
       "value": 26.30612161592155,
       "count": 116,
       "unit": "internações/AIHs de residentes",
@@ -136,6 +174,7 @@
     {
       "indicatorId": "sih-ischemic-heart-disease",
       "period": "2022",
+      "metricKind": "crude_rate_per_100k",
       "value": 106.35837101609661,
       "count": 469,
       "unit": "internações/AIHs de residentes",
@@ -149,6 +188,7 @@
     {
       "indicatorId": "sih-pneumoconiosis",
       "period": "2022",
+      "metricKind": "crude_rate_per_100k",
       "value": null,
       "count": null,
       "unit": "internações/AIHs de residentes",
@@ -162,6 +202,7 @@
     {
       "indicatorId": "sih-pneumonia",
       "period": "2025",
+      "metricKind": "crude_rate_per_100k",
       "value": 169.34510603361608,
       "count": 790,
       "unit": "internações/AIHs de residentes",
@@ -175,6 +216,7 @@
     {
       "indicatorId": "sih-pulmonary-embolism",
       "period": "2022",
+      "metricKind": "crude_rate_per_100k",
       "value": 1.5874383733745765,
       "count": 7,
       "unit": "internações/AIHs de residentes",
@@ -188,6 +230,7 @@
     {
       "indicatorId": "sih-resp-all",
       "period": "2022",
+      "metricKind": "crude_rate_per_100k",
       "value": 317.2608977644332,
       "count": 1399,
       "unit": "internações/AIHs de residentes",
@@ -201,6 +244,7 @@
     {
       "indicatorId": "sim-acute-bronchitis-bronchiolitis",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": null,
       "count": null,
       "unit": "óbitos de residentes pela causa básica",
@@ -214,6 +258,7 @@
     {
       "indicatorId": "sim-acute-myocardial-infarction",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 39.653960251727625,
       "count": 185,
       "unit": "óbitos de residentes pela causa básica",
@@ -227,6 +272,7 @@
     {
       "indicatorId": "sim-all-malignant-neoplasms",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 122.82010391481045,
       "count": 573,
       "unit": "óbitos de residentes pela causa básica",
@@ -238,8 +284,23 @@
       "unavailableReason": null
     },
     {
+      "indicatorId": "sim-alzheimer",
+      "period": "2022",
+      "metricKind": "age_sex_standardized_rate_per_100k",
+      "value": 13.21858646735733,
+      "count": 54,
+      "unit": "óbitos de residentes pela causa básica",
+      "dataStatus": "source_observed",
+      "suppressionStatus": "published",
+      "restOfStateValue": 12.387766395888036,
+      "brazilValue": null,
+      "comparisonAvailable": true,
+      "unavailableReason": null
+    },
+    {
       "indicatorId": "sim-asthma",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": null,
       "count": null,
       "unit": "óbitos de residentes pela causa básica",
@@ -253,6 +314,7 @@
     {
       "indicatorId": "sim-bladder",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 1.7147658487233568,
       "count": 8,
       "unit": "óbitos de residentes pela causa básica",
@@ -266,6 +328,7 @@
     {
       "indicatorId": "sim-breast",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 13.075089596515596,
       "count": 61,
       "unit": "óbitos de residentes pela causa básica",
@@ -279,6 +342,7 @@
     {
       "indicatorId": "sim-cardiac-arrhythmia",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 12.646398134334756,
       "count": 59,
       "unit": "óbitos de residentes pela causa básica",
@@ -292,6 +356,7 @@
     {
       "indicatorId": "sim-cardio-all",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 193.33984944355848,
       "count": 902,
       "unit": "óbitos de residentes pela causa básica",
@@ -305,6 +370,7 @@
     {
       "indicatorId": "sim-cardiorespiratory-all",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 290.652811358609,
       "count": 1356,
       "unit": "óbitos de residentes pela causa básica",
@@ -318,6 +384,7 @@
     {
       "indicatorId": "sim-cerebrovascular",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 54.01512423478574,
       "count": 252,
       "unit": "óbitos de residentes pela causa básica",
@@ -331,6 +398,7 @@
     {
       "indicatorId": "sim-cervix",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 4.286914621808392,
       "count": 20,
       "unit": "óbitos de residentes pela causa básica",
@@ -344,6 +412,7 @@
     {
       "indicatorId": "sim-colorectal",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 15.86158410069105,
       "count": 74,
       "unit": "óbitos de residentes pela causa básica",
@@ -357,6 +426,7 @@
     {
       "indicatorId": "sim-copd",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 17.36200421832399,
       "count": 81,
       "unit": "óbitos de residentes pela causa básica",
@@ -368,8 +438,23 @@
       "unavailableReason": null
     },
     {
+      "indicatorId": "sim-dementias-all",
+      "period": "2022",
+      "metricKind": "age_sex_standardized_rate_per_100k",
+      "value": 13.68012520034463,
+      "count": 56,
+      "unit": "óbitos de residentes pela causa básica",
+      "dataStatus": "source_observed",
+      "suppressionStatus": "published",
+      "restOfStateValue": 14.487866272530177,
+      "brazilValue": null,
+      "comparisonAvailable": true,
+      "unavailableReason": null
+    },
+    {
       "indicatorId": "sim-heart-failure",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 16.50462129396231,
       "count": 77,
       "unit": "óbitos de residentes pela causa básica",
@@ -383,6 +468,7 @@
     {
       "indicatorId": "sim-hypertension",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 43.7265291424456,
       "count": 204,
       "unit": "óbitos de residentes pela causa básica",
@@ -396,6 +482,7 @@
     {
       "indicatorId": "sim-influenza",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": null,
       "count": null,
       "unit": "óbitos de residentes pela causa básica",
@@ -409,6 +496,7 @@
     {
       "indicatorId": "sim-ischemic-heart-disease",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 43.94087487353602,
       "count": 205,
       "unit": "óbitos de residentes pela causa básica",
@@ -422,6 +510,7 @@
     {
       "indicatorId": "sim-leukemia",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 3.4295316974467136,
       "count": 16,
       "unit": "óbitos de residentes pela causa básica",
@@ -435,6 +524,7 @@
     {
       "indicatorId": "sim-liver",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 2.5721487730850354,
       "count": 12,
       "unit": "óbitos de residentes pela causa básica",
@@ -448,6 +538,7 @@
     {
       "indicatorId": "sim-lung",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 11.14597801670182,
       "count": 52,
       "unit": "óbitos de residentes pela causa básica",
@@ -461,6 +552,7 @@
     {
       "indicatorId": "sim-multiple-myeloma",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 1.9291115798137763,
       "count": 9,
       "unit": "óbitos de residentes pela causa básica",
@@ -474,6 +566,7 @@
     {
       "indicatorId": "sim-myelodysplastic-syndromes",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": null,
       "count": null,
       "unit": "óbitos de residentes pela causa básica",
@@ -487,6 +580,7 @@
     {
       "indicatorId": "sim-non-hodgkin-lymphoma",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 2.786494504175455,
       "count": 13,
       "unit": "óbitos de residentes pela causa básica",
@@ -500,6 +594,7 @@
     {
       "indicatorId": "sim-pancreas",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 6.644717663803007,
       "count": 31,
       "unit": "óbitos de residentes pela causa básica",
@@ -513,6 +608,7 @@
     {
       "indicatorId": "sim-pneumoconiosis",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": null,
       "count": null,
       "unit": "óbitos de residentes pela causa básica",
@@ -526,6 +622,7 @@
     {
       "indicatorId": "sim-pneumonia",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 58.516384587684556,
       "count": 273,
       "unit": "óbitos de residentes pela causa básica",
@@ -539,6 +636,7 @@
     {
       "indicatorId": "sim-prostate",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 7.502100588164686,
       "count": 35,
       "unit": "óbitos de residentes pela causa básica",
@@ -552,6 +650,7 @@
     {
       "indicatorId": "sim-pulmonary-embolism",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 3.643877428537133,
       "count": 17,
       "unit": "óbitos de residentes pela causa básica",
@@ -565,6 +664,7 @@
     {
       "indicatorId": "sim-resp-all",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 97.31296191505051,
       "count": 454,
       "unit": "óbitos de residentes pela causa básica",
@@ -578,6 +678,7 @@
     {
       "indicatorId": "sim-stomach",
       "period": "2024",
+      "metricKind": "crude_rate_per_100k",
       "value": 4.286914621808392,
       "count": 20,
       "unit": "óbitos de residentes pela causa básica",

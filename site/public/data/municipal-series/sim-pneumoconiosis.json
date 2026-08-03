@@ -20,6 +20,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -38,6 +39,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -56,6 +58,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -74,6 +77,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -92,6 +96,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -110,6 +115,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -128,6 +134,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -146,6 +153,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -164,6 +172,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -182,6 +191,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -200,6 +210,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -218,6 +229,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -236,6 +248,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -254,6 +267,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -272,6 +286,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -290,6 +305,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -308,6 +324,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -326,6 +343,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -344,6 +362,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -362,6 +381,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -380,6 +400,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -398,6 +419,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -416,6 +438,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -434,6 +457,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -452,6 +476,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -470,6 +495,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -488,6 +514,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -506,6 +533,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -524,6 +552,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -542,6 +571,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -560,6 +590,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -578,6 +609,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -596,6 +628,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -614,6 +647,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -632,6 +666,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -650,6 +685,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -668,6 +704,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -686,6 +723,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -704,6 +742,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -722,6 +761,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -740,6 +780,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -758,6 +799,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -776,6 +818,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -794,6 +837,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -812,6 +856,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -830,6 +875,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -848,6 +894,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -866,6 +913,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -884,6 +932,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -902,6 +951,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -920,6 +970,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -938,6 +989,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -956,6 +1008,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -974,6 +1027,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -992,6 +1046,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1010,6 +1065,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1028,6 +1084,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1046,6 +1103,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1064,6 +1122,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1082,6 +1141,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1100,6 +1160,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1118,6 +1179,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1136,6 +1198,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1154,6 +1217,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1172,6 +1236,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1190,6 +1255,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1208,6 +1274,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1226,6 +1293,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1244,6 +1312,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1262,6 +1331,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1280,6 +1350,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1298,6 +1369,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1316,6 +1388,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1334,6 +1407,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1352,6 +1426,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1370,6 +1445,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1388,6 +1464,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1406,6 +1483,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1424,6 +1502,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1442,6 +1521,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1460,6 +1540,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1478,6 +1559,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1496,6 +1578,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1514,6 +1597,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1532,6 +1616,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1550,6 +1635,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1568,6 +1654,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1586,6 +1673,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1604,6 +1692,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1622,6 +1711,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1640,6 +1730,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1658,6 +1749,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1676,6 +1768,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1694,6 +1787,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1712,6 +1806,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1730,6 +1825,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1748,6 +1844,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1766,6 +1863,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1784,6 +1882,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1802,6 +1901,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1820,6 +1920,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1838,6 +1939,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1856,6 +1958,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1874,6 +1977,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1892,6 +1996,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1910,6 +2015,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1928,6 +2034,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1946,6 +2053,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1964,6 +2072,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -1982,6 +2091,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2000,6 +2110,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2018,6 +2129,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2036,6 +2148,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2054,6 +2167,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2072,6 +2186,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2090,6 +2205,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2108,6 +2224,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2126,6 +2243,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2144,6 +2262,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2162,6 +2281,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2180,6 +2300,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2198,6 +2319,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2216,6 +2338,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2234,6 +2357,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2252,6 +2376,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2270,6 +2395,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2288,6 +2414,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2306,6 +2433,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2324,6 +2452,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2342,6 +2471,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2360,6 +2490,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2378,6 +2509,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2396,6 +2528,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2414,6 +2547,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2432,6 +2566,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2450,6 +2585,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2468,6 +2604,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2486,6 +2623,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2504,6 +2642,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2522,6 +2661,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2540,6 +2680,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2558,6 +2699,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2576,6 +2718,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2594,6 +2737,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2612,6 +2756,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2630,6 +2775,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2648,6 +2794,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2666,6 +2813,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2684,6 +2832,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2702,6 +2851,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2720,6 +2870,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2738,6 +2889,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2756,6 +2908,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2774,6 +2927,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2792,6 +2946,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2810,6 +2965,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2828,6 +2984,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2846,6 +3003,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2864,6 +3022,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2882,6 +3041,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2900,6 +3060,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2918,6 +3079,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2936,6 +3098,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2954,6 +3117,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2972,6 +3136,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -2990,6 +3155,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3008,6 +3174,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3026,6 +3193,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3044,6 +3212,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3062,6 +3231,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3080,6 +3250,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3098,6 +3269,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3116,6 +3288,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3134,6 +3307,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3152,6 +3326,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3170,6 +3345,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3188,6 +3364,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3206,6 +3383,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3224,6 +3402,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3242,6 +3421,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3260,6 +3440,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3278,6 +3459,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3296,6 +3478,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"
@@ -3314,6 +3497,7 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
       "suppressionReason": "small_cell_lt_5",
       "suppressionStatus": "suppressed"

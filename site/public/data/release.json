@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "releaseId": "statewide-profiles-preview",
-  "generatedAt": "2026-08-03T18:43:09+00:00",
+  "releaseId": "technical-beta",
+  "generatedAt": "2026-08-03T21:09:50+00:00",
   "status": "technical_beta_not_for_public_release",
   "smallCellThreshold": 5,
   "primaryComparator": "rest_of_rj_excluding_selected_municipality",
@@ -13,7 +13,7 @@
   },
   "reviewSignoff": {},
   "coverage": {
-    "indicatorCount": 45,
+    "indicatorCount": 49,
     "respiratoryStart": 2008,
     "cardiovascularStart": 2008,
     "cardiorespiratoryStart": 2008,
@@ -32,13 +32,23 @@
   "artifacts": [
     {
       "path": "catalog.json",
-      "bytes": 112153,
-      "sha256": "8413418879997211b39a07b3cd223a543d5a8aad8d20744d6686624abf073763"
+      "bytes": 146290,
+      "sha256": "5bf23c7abd903b7ff82261e19983dc3422b4c87305e710787cc45d9b698f1ea7"
+    },
+    {
+      "path": "comparisons/sim-alzheimer.json",
+      "bytes": 1014400,
+      "sha256": "f6fc703f228bf05d7ccb40ab52c76a6c33d3211ddbf75752b6342d3f360f179d"
+    },
+    {
+      "path": "comparisons/sim-dementias-all.json",
+      "bytes": 1019883,
+      "sha256": "110592db376af15de28e25c4d5ec5f3ce716da66b4a62a7c39f8ae08540ff4e4"
     },
     {
       "path": "downloads/series-publicas.csv",
-      "bytes": 638247,
-      "sha256": "c12e7a87c2d5ba33e2c2f1780339126ef279fc0987c011772e0b7a72b3de8fff"
+      "bytes": 1208096,
+      "sha256": "63eeacfd0d263311b0c2ae9c26f36062c95748c7d88d9cdb7de7a3823023b373"
     },
     {
       "path": "geography/rj.topojson",
@@ -59,6 +69,11 @@
       "path": "maps/rj/sih-acute-myocardial-infarction.json",
       "bytes": 57061,
       "sha256": "8cd3efe31b84c46852806b146ce9940486ed12d36d9461624ddaf974dfa30eaa"
+    },
+    {
+      "path": "maps/rj/sih-alzheimer.json",
+      "bytes": 53443,
+      "sha256": "508104448abf528d5637912725d94ea1544e7d53f687602bf14030225d9a5d37"
     },
     {
       "path": "maps/rj/sih-asthma.json",
@@ -89,6 +104,11 @@
       "path": "maps/rj/sih-copd.json",
       "bytes": 54609,
       "sha256": "c02afa0ca19e7ef1386349f3fbb829ffe6052fae597b8162654e440aa6bbea98"
+    },
+    {
+      "path": "maps/rj/sih-dementias-all.json",
+      "bytes": 54022,
+      "sha256": "3dcf40c0a7b74ef58077406afccf220b3d26521753e291eda03a2734dbff81fc"
     },
     {
       "path": "maps/rj/sih-heart-failure.json",
@@ -141,6 +161,11 @@
       "sha256": "0a4c9d4de6b3fa0d97e6cd9f011cc0d81ce19c1ca0de0139146d52dcce7b5578"
     },
     {
+      "path": "maps/rj/sim-alzheimer.json",
+      "bytes": 137000,
+      "sha256": "92f63bb77634fac34fb7a8d670eecbd3e0188de7d3d0ae8a8a0061fa106d2266"
+    },
+    {
       "path": "maps/rj/sim-asthma.json",
       "bytes": 53094,
       "sha256": "ea6fd8b7ab13e369bbeb69bea09ea4fcb5684746a0a6233ea0a4ca5eba2ad868"
@@ -189,6 +214,11 @@
       "path": "maps/rj/sim-copd.json",
       "bytes": 54404,
       "sha256": "5cbea4e3e282d496dcd942acba70b58c8a0fc85f93736454c96f96a37271028a"
+    },
+    {
+      "path": "maps/rj/sim-dementias-all.json",
+      "bytes": 138093,
+      "sha256": "19c517126bf6f03e66117911c6322378b2757844868028763f7ba8e6b96515fa"
     },
     {
       "path": "maps/rj/sim-heart-failure.json",
@@ -277,688 +307,708 @@
     },
     {
       "path": "municipal-series/sih-acute-bronchitis-bronchiolitis.json",
-      "bytes": 56522,
-      "sha256": "e8079a8e36c994b1ec32c4adaf11ebc634152206c7370aed6f81dde3a4400d8f"
+      "bytes": 60018,
+      "sha256": "4268b9c7228e5d57a24e092649d3db1e3cc14774da201cf28fb3803b76a365df"
     },
     {
       "path": "municipal-series/sih-acute-myocardial-infarction.json",
-      "bytes": 56764,
-      "sha256": "819a197368315e8fd0c71bfc4ce8bf415306f060677c4d197397bca9f12c123f"
+      "bytes": 60260,
+      "sha256": "3024252cf471e6ca8302400e85800b9e4a5e100e23a67749508aaddbe8f5a918"
+    },
+    {
+      "path": "municipal-series/sih-alzheimer.json",
+      "bytes": 56642,
+      "sha256": "dbfee286e931f36df7025fe6cdc2a0dc2015c57523e0529862fc8a187e2f748b"
     },
     {
       "path": "municipal-series/sih-asthma.json",
-      "bytes": 54052,
-      "sha256": "71989f48e9f358ebb6f58c9e7a03664e8b4bae70dcd06a52da5d128626255aa1"
+      "bytes": 57548,
+      "sha256": "2fba119f0902c3554d1c67aaa172f340f7d023bf37b8bda4ef6852b0f509cc97"
     },
     {
       "path": "municipal-series/sih-cardiac-arrhythmia.json",
-      "bytes": 55708,
-      "sha256": "d9f4cd6b0f4e2c590ed9810a4318c1a008ea7cd4394f2021266875cff43ffc39"
+      "bytes": 59204,
+      "sha256": "8ab9690fbea8b4475779e0c5aef2886ae61f937fa4172c64cc565cb86cfa0bb7"
     },
     {
       "path": "municipal-series/sih-cardio-all.json",
-      "bytes": 55382,
-      "sha256": "2a0e2aa26572fc65776759350abd756771b0b8aff1ab77201c1acf98334155f4"
+      "bytes": 58878,
+      "sha256": "dae10a328280f856d096ec50ecf0a98204ec9195b7da9ce00a9f0e71e3052d9a"
     },
     {
       "path": "municipal-series/sih-cardiorespiratory-all.json",
-      "bytes": 56469,
-      "sha256": "62913c3ac9413929be035d484347ccb4f96c8b6c6c8ade8b04f68c484e99e23f"
+      "bytes": 59965,
+      "sha256": "a8fcf55988ca96718c1a913742b8d58a84c84ca9dfdb1987db6960875c37a583"
     },
     {
       "path": "municipal-series/sih-cerebrovascular.json",
-      "bytes": 55799,
-      "sha256": "b2ad8c67667c127a969d1e5cd2db4db4ffa53bcf728992145e06c44f07ce0e6c"
+      "bytes": 59295,
+      "sha256": "40df8e4a55b14df326c77081bee4c4b401026b3e017d487cf859c9fdc259b78f"
     },
     {
       "path": "municipal-series/sih-copd.json",
-      "bytes": 54313,
-      "sha256": "c2d805726e7d20f8fd8b2a6e1540d75904b052476d4fcd154b05a63ae01c2443"
+      "bytes": 57809,
+      "sha256": "ec1e6a6544841185bf25766d3d320f17c123177b3e2fd112bd943fa6c2b04007"
+    },
+    {
+      "path": "municipal-series/sih-dementias-all.json",
+      "bytes": 57220,
+      "sha256": "b03c2267bbfa7aa8b322ec2a7c032f68f7cfedae0502f2cffc86302dcccfa066"
     },
     {
       "path": "municipal-series/sih-heart-failure.json",
-      "bytes": 55496,
-      "sha256": "bb4fc3cc57ab884f8b8aa1979600c706b609535f8a18de0fe85ff1c10803cf16"
+      "bytes": 58992,
+      "sha256": "cfca91a58b628e4b4b348622a93a0b3e2714bb2a5046ed286471600d5998329f"
     },
     {
       "path": "municipal-series/sih-hypertension.json",
-      "bytes": 55124,
-      "sha256": "50959559e23ac20ce3c79469fdaeab67af1d7aa7991e44d69110f1670c64f053"
+      "bytes": 58620,
+      "sha256": "4d36b4a6fb195ecefcf11ea2e7daf9624d25fb559c8ee6d3bd3baa07b795762f"
     },
     {
       "path": "municipal-series/sih-ischemic-heart-disease.json",
-      "bytes": 56475,
-      "sha256": "072c6c1052e8bf2765505d422d9069631966afd92448240cb131f20a137c4088"
+      "bytes": 59971,
+      "sha256": "adb1a345db1d916b453c54a4c0c96207137e97b09f6e2fe49dc2dd99a97a7f88"
     },
     {
       "path": "municipal-series/sih-pneumoconiosis.json",
-      "bytes": 53468,
-      "sha256": "f1b36c7434b13a148799c7a38e8dc2cb50210833c34e2158ae5d5bf667c9ebb9"
+      "bytes": 56964,
+      "sha256": "7f64149c21acf8f6b4f002038862ff1a50edb2b8a5f3d1a39ef75a5c41b3d5d7"
     },
     {
       "path": "municipal-series/sih-pneumonia.json",
-      "bytes": 934069,
-      "sha256": "baff666e898fcc05d51a7a8a25a221c6a4c4dbd85fbe05c39c5e71bb2794db7b"
+      "bytes": 993501,
+      "sha256": "646f30efbf50f24c7160f7fb58554684eb9ef805995b91fbf08c874cd432118c"
     },
     {
       "path": "municipal-series/sih-pulmonary-embolism.json",
-      "bytes": 54248,
-      "sha256": "6a1a8743b18feff8b6bbfda6c364f7be1a28cfdbf9ac4735eb1225f246c5dce6"
+      "bytes": 57744,
+      "sha256": "ed3394b8e8a1ec6177e64afaf746c625261d8f3d093be2434be782b08d30f5eb"
     },
     {
       "path": "municipal-series/sih-resp-all.json",
-      "bytes": 55164,
-      "sha256": "5533a6016b40259efdfdc308d8f5b0432de6976c3629f074396440f2759e5594"
+      "bytes": 58660,
+      "sha256": "a46fd13406db0174a0c5fc1ebe181759cede862884b9c4d343071dc43f0d6c56"
     },
     {
       "path": "municipal-series/sim-acute-bronchitis-bronchiolitis.json",
-      "bytes": 109576,
-      "sha256": "5a4cf68988a5f921bd21802fefd12ce63439abce3cd5f9152be81f467e39a2c1"
+      "bytes": 116568,
+      "sha256": "3ce414f325227b9ff37b23694ac051b831d5b6aba2ef8312bd43b306f2d6b223"
     },
     {
       "path": "municipal-series/sim-acute-myocardial-infarction.json",
-      "bytes": 113235,
-      "sha256": "8711c7056441d99bd0ba4fc879cd0288717dac6961a7d96d16524d83fb236687"
+      "bytes": 120227,
+      "sha256": "57a29c14ab0c2f731b832ce5656963308f8a17b760c210e2be265d1c8f50f0d2"
     },
     {
       "path": "municipal-series/sim-all-malignant-neoplasms.json",
-      "bytes": 113108,
-      "sha256": "a1e5f6a4cde08cc0831dfea60462c5a8137b340e16195f4e02007037ad37da6f"
+      "bytes": 120100,
+      "sha256": "0ce4870b90df81f8cc18d1804ab27f07400073f328cec25bb5b74c82de0a3aa2"
+    },
+    {
+      "path": "municipal-series/sim-alzheimer.json",
+      "bytes": 873023,
+      "sha256": "7635b9785859ad6bfa9a9b5e67817d21be907375b4b73c0e44214396753ab458"
     },
     {
       "path": "municipal-series/sim-asthma.json",
-      "bytes": 105390,
-      "sha256": "065d2d8ffc77acb80eb0fc89c0894dba90c31f54fa3810c20e29f5a11015fb8c"
+      "bytes": 112382,
+      "sha256": "fb03db77e775afe1b8b01ce81033b03a848eba059a01fa4abc82f6d18ed5f631"
     },
     {
       "path": "municipal-series/sim-bladder.json",
-      "bytes": 106302,
-      "sha256": "88bd510ccf24cbf1b016b3800d0963ae3b184bff95953f6d8de77ae73d85e55a"
+      "bytes": 113294,
+      "sha256": "c1fec1893b581e84c98ee51aa35e8a88286b81a2b2b68ac3b689ac341dd5f56a"
     },
     {
       "path": "municipal-series/sim-breast.json",
-      "bytes": 107581,
-      "sha256": "69077ebcebc3958b7496cd8e7df65429bb5ce976acba74afc59cc10820a33af4"
+      "bytes": 114573,
+      "sha256": "9e002009fef07195befe5a2cebb50fdfd14ca5e48110c9465ecf1ac7600fe4bd"
     },
     {
       "path": "municipal-series/sim-cardiac-arrhythmia.json",
-      "bytes": 109348,
-      "sha256": "2a858af1961093a3f450dcc40f762c37e3d6e102c79a3638cef27607ef64c78a"
+      "bytes": 116340,
+      "sha256": "166e1ecf2eff5b1771f88a72ce6ffd41bc92e3daaa506d6087a4d12d7f5392e0"
     },
     {
       "path": "municipal-series/sim-cardio-all.json",
-      "bytes": 110556,
-      "sha256": "11e232e07eceab915cb63dd4ad0879c8659ea070cfd92cef1355b72e0b92b653"
+      "bytes": 117548,
+      "sha256": "d9d9ad7d47585423d4b1e20384be1bddfd1e8efa4e69561dca12fabd2dce522d"
     },
     {
       "path": "municipal-series/sim-cardiorespiratory-all.json",
-      "bytes": 112536,
-      "sha256": "ea6dd57164acb746e671e3876bdba514a711c3d776f7e37978530b699b7749a1"
+      "bytes": 119528,
+      "sha256": "653ec3bb51996bf54ee28495979bfbb9a137933a27861cbdc934e62d3f8153f3"
     },
     {
       "path": "municipal-series/sim-cerebrovascular.json",
-      "bytes": 110952,
-      "sha256": "70b0f74808d11d894ec40cf6fe9f3d4d0b7dd0646efd6a05554694e366f1ee62"
+      "bytes": 117944,
+      "sha256": "9eaeec6c6cac6d97104e1d07cbe2a2129c5307e545984c331a1fcafb6e1c6ba6"
     },
     {
       "path": "municipal-series/sim-cervix.json",
-      "bytes": 106215,
-      "sha256": "40453a73316dc4b2be62dcd97f62bfcede1955740996bd31936f4d39e351faca"
+      "bytes": 113207,
+      "sha256": "d51da1384cbccc61d45547052cea994ac4833b7d70701109e9160ead77df73e6"
     },
     {
       "path": "municipal-series/sim-colorectal.json",
-      "bytes": 108467,
-      "sha256": "c1aab993b3f28dafd2ec5065ecb21df014a7e655b8b0ceae1a5beab76fd7afa4"
+      "bytes": 115459,
+      "sha256": "8a2efd3d46e5d769adf4e8c87a16dd61a96acf4b134493f3bf028f2ee1ae6525"
     },
     {
       "path": "municipal-series/sim-copd.json",
-      "bytes": 107937,
-      "sha256": "643059f5d57ee0c94705daaf873e38acd8e653447416dc27b881b6b8e1eb9c5b"
+      "bytes": 114929,
+      "sha256": "105821a7a88fb2e6c43644e4cbdc0ecf0b5005b08cda210f9a3fab0685d3d4a5"
+    },
+    {
+      "path": "municipal-series/sim-dementias-all.json",
+      "bytes": 880337,
+      "sha256": "9706d569711dab605f0eeadcef0b69f339713588a96687dc83401cbb8245914f"
     },
     {
       "path": "municipal-series/sim-heart-failure.json",
-      "bytes": 109807,
-      "sha256": "f537e2fed9d949a1a60b2fd5092c76ca980e26c212afd03ed35a14ecd4d08369"
+      "bytes": 116799,
+      "sha256": "61ed657a91f6225f19c74d738ced7ec05913bf87e0059d5bda6c26a87ebe5574"
     },
     {
       "path": "municipal-series/sim-hypertension.json",
-      "bytes": 110278,
-      "sha256": "9e40725dc1f312627eca6aa51942d53356b228e341f7a9aa60a727bf0ec7ccb9"
+      "bytes": 117270,
+      "sha256": "2ec8a145fa97263cfe06a4969cf771efe4953f6ae68483a14e55996ec7ff2cd1"
     },
     {
       "path": "municipal-series/sim-influenza.json",
-      "bytes": 105805,
-      "sha256": "46b1ee5f2fe6944ef1ef15595665a271ed9b42021f1664bf7d05523070c4926e"
+      "bytes": 112797,
+      "sha256": "42fd7f094a59f557ad9fc71b24e05793e94ec030c8b39d2ec390e9aeb183ab9e"
     },
     {
       "path": "municipal-series/sim-ischemic-heart-disease.json",
-      "bytes": 112370,
-      "sha256": "f2d2ce866a08f003e693a973bb93f3fb09d07ccfec0b7d0b5e4c3159ac5f2613"
+      "bytes": 119362,
+      "sha256": "758cb8dd2cf8500a0b311949a0c14789637e6311e3ba4b22dce83b34a8b064c9"
     },
     {
       "path": "municipal-series/sim-leukemia.json",
-      "bytes": 106583,
-      "sha256": "6e710adf48b3ced0857b4b629e6c615efab04b55832f91e46b8f0064784c00a6"
+      "bytes": 113575,
+      "sha256": "a71dea90a2dd665a616e44d99fb70180b9ec52e9980a29e00e1d9b0131771570"
     },
     {
       "path": "municipal-series/sim-liver.json",
-      "bytes": 106367,
-      "sha256": "29d124caf6fc203abbb4dbcfe860c96cddfc073d43bd5e1893be9cc5e2c085a9"
+      "bytes": 113359,
+      "sha256": "d437c83b6ff576143d362693ac7b2fb46a5321d59d3ce3555a80d0164a423283"
     },
     {
       "path": "municipal-series/sim-lung.json",
-      "bytes": 107540,
-      "sha256": "184b82ccd408def54c802ad9ad9370aa71b6dc1724b0a587f2ad92dd42ebe80d"
+      "bytes": 114532,
+      "sha256": "fb6653731c83b69bc94fe5081b69c621c848db53c696c21b74d66c2c5c207b92"
     },
     {
       "path": "municipal-series/sim-multiple-myeloma.json",
-      "bytes": 107784,
-      "sha256": "7f32a17bde63476674e779a72971b52a0e8a167d2bb5e4bbb677ab1e2804c4b5"
+      "bytes": 114776,
+      "sha256": "da0a667f3d998a8bd1847b26ecfac5aec936a0a18c19fb2ff3ee634ddfffa5fa"
     },
     {
       "path": "municipal-series/sim-myelodysplastic-syndromes.json",
-      "bytes": 108854,
-      "sha256": "bea91f32cc02d3dfd837b9806245f9d70e87451a837ca4c0d11a81f9e4068075"
+      "bytes": 115846,
+      "sha256": "f7b93175e019a1e0710a0f1e6e278ab093b53063abbcf5d8fac8c9b8cbfb5095"
     },
     {
       "path": "municipal-series/sim-non-hodgkin-lymphoma.json",
-      "bytes": 108572,
-      "sha256": "661ce7d00994da687d6f7dc639980d92263767df0e716dec1fa4539103f8ee2c"
+      "bytes": 115564,
+      "sha256": "20f04b437c61622247fa0721ea5f725dd8097d98154ba5b78c34c8e2a6da1804"
     },
     {
       "path": "municipal-series/sim-pancreas.json",
-      "bytes": 107386,
-      "sha256": "00bf62c0ddc70bc0c218d76b628bae19e6ebba9c3c82e7a3b54024ccd9e25bf3"
+      "bytes": 114378,
+      "sha256": "854b39fe02bfb10c044d82c2c0e48b88b630750fe81ea1aced5f544ff5270760"
     },
     {
       "path": "municipal-series/sim-pneumoconiosis.json",
-      "bytes": 106480,
-      "sha256": "25b9af091c627ddaa1171b6f6ba9342149cbffa3d7c3b84c8a148cc775351335"
+      "bytes": 113472,
+      "sha256": "d44c70f4eb6b498403bf245030cfe63eb9a0729dd38bf6f9278ca92773064e54"
     },
     {
       "path": "municipal-series/sim-pneumonia.json",
-      "bytes": 109949,
-      "sha256": "cdd994b12b60175088861bfe137b6f4f1565c41b0ed49a63475dd60deb8dd73d"
+      "bytes": 116941,
+      "sha256": "fe6d3794b6d3eda3b68e69786d9366085cc86e1680a6e3e531d3c82fca146e0b"
     },
     {
       "path": "municipal-series/sim-prostate.json",
-      "bytes": 107646,
-      "sha256": "614476a75b03c34a0abf92806d944f78da9607ee1e68d6927389f8f8284d2664"
+      "bytes": 114638,
+      "sha256": "699e678cec9d0b66b1b83bb7b98c942d088c28702f3c9123bb32619a1947081e"
     },
     {
       "path": "municipal-series/sim-pulmonary-embolism.json",
-      "bytes": 108267,
-      "sha256": "7dba7ad183d9cd4527330c6a2134a44b3cecde75be5c33187b5ce7dde5520b58"
+      "bytes": 115259,
+      "sha256": "336fa608f80a3f27fe63ae5d0fdd1d1603e006e9e36aea45c51e7c4554d1053b"
     },
     {
       "path": "municipal-series/sim-resp-all.json",
-      "bytes": 110066,
-      "sha256": "19930196a045f1c4e941327f75f07211fce92d09b8872f87d991798323a70596"
+      "bytes": 117058,
+      "sha256": "c8ad9d2cc11e3ba3ec0efe7ba1b4e76f9380f4a16f3e492fae0ad49bf086f289"
     },
     {
       "path": "municipal-series/sim-stomach.json",
-      "bytes": 107112,
-      "sha256": "60e559a4f7ad34d53c70fa10f6b308150303625b0b5bfb6a42d0f9b1efab9f47"
+      "bytes": 114104,
+      "sha256": "76574590499cf9fc432411b4c2be8e243dc24479367648000f63c76314085b8d"
     },
     {
       "path": "municipality-summaries/3300100.json",
-      "bytes": 18960,
-      "sha256": "9ae3fcc1b5ea368e9f83c406bf41e96c593691e37a7597f7e0d766067d0f2dd8"
+      "bytes": 23413,
+      "sha256": "dc1d16a0e56f14fed8063f3fe53eb718f7a906c7d7d7fd5161a12a8d0386c6c9"
     },
     {
       "path": "municipality-summaries/3300159.json",
-      "bytes": 18803,
-      "sha256": "ceecf033e66c8069995532ad214cc2315bed54b28410762010daa93a5ff2cf8b"
+      "bytes": 23234,
+      "sha256": "77155b819272f93b4a06aeb937f5fa224eea8c283c94a86eb934bdde017beae9"
     },
     {
       "path": "municipality-summaries/3300209.json",
-      "bytes": 18900,
-      "sha256": "788a58fa038c0236294db853e88352e5dae113265e13b50a399167507cfa9055"
+      "bytes": 23352,
+      "sha256": "6c4dd9c232bf82dcd2f42e74825f57cccbbd6833428c0e02d38b2253fdd5596d"
     },
     {
       "path": "municipality-summaries/3300225.json",
-      "bytes": 18802,
-      "sha256": "807c51c03421af5b8a0103b5b47a30045c6b872d5dc84f2a43513f23c4c4f068"
+      "bytes": 23233,
+      "sha256": "275fac2acc171954ee1263a4f41d0bde6f4ab617a99c392320f0832c1004c3d0"
     },
     {
       "path": "municipality-summaries/3300233.json",
-      "bytes": 18879,
-      "sha256": "4e6b66d4ab0f52671bfecb172a6cf770ff34d3d6aa44030a090b3720a84f5889"
+      "bytes": 23310,
+      "sha256": "1c53a003729df52b71a9293b143e1635561eaeae7c08fe0474008dfe3d805909"
     },
     {
       "path": "municipality-summaries/3300258.json",
-      "bytes": 18827,
-      "sha256": "592ef8b6073f8fae009b326ff5abe19c517262d229c9196d366431ea97f1c820"
+      "bytes": 23278,
+      "sha256": "a9773dd6d73c47956e9011517b4796d45145179606ce56bedf36f03727c3decf"
     },
     {
       "path": "municipality-summaries/3300308.json",
-      "bytes": 18911,
-      "sha256": "470b43993d97db1c79ed11dfaa42146af3ac2089c376d8c7a9e3bdee48dddcc1"
+      "bytes": 23384,
+      "sha256": "a29cc912ca0902169a8a96d0fd282e76d77857e421798cd43e524e246efc6463"
     },
     {
       "path": "municipality-summaries/3300407.json",
-      "bytes": 18961,
-      "sha256": "dc8fe246303819e366884d1569cd69089815a46abc8debaff8575732d9192ae8"
+      "bytes": 23429,
+      "sha256": "3c7452f820d689b0fb0d8dbe9d1fa5b65be64fcdda14a7f3003d917683f932b3"
     },
     {
       "path": "municipality-summaries/3300456.json",
-      "bytes": 19005,
-      "sha256": "196e7e801c994687f2c95ac604e3496ea4bb7f489077ada69f6c70f8eb086c92"
+      "bytes": 23454,
+      "sha256": "753c8e3324345e4668a57fb71a90c31667ddac219ee4035140689e2fecad33f0"
     },
     {
       "path": "municipality-summaries/3300506.json",
-      "bytes": 18822,
-      "sha256": "5a4a80387b1ce6c3687fb7ae5e1341f85ae20512c232f108a94e07d617dbf7df"
+      "bytes": 23272,
+      "sha256": "eaefde18db612a3c1031ed72cc74caef992bd01fb19872fbd1ce92f24439c149"
     },
     {
       "path": "municipality-summaries/3300605.json",
-      "bytes": 18863,
-      "sha256": "a7c1c001a93994c8fcc02dd88c72de95a2c21729a6d0aab3f22e906ffea12511"
+      "bytes": 23316,
+      "sha256": "15250717fd64702c76a2fd38aa6c5da694718e00b84d31b5036299bdb7e836e2"
     },
     {
       "path": "municipality-summaries/3300704.json",
-      "bytes": 18949,
-      "sha256": "bf190d48a80bc538fbc781fda2cd348cc344c89d1a007b9577ea144116ab409a"
+      "bytes": 23402,
+      "sha256": "27b1755b4c80c4b8ba3e690bfe87017dd177f714bbc7ce4655498797b6e64764"
     },
     {
       "path": "municipality-summaries/3300803.json",
-      "bytes": 18877,
-      "sha256": "7ccc1c39dd57cb1b399d969c0f184724ce1b69f155598403e3e10af6418c4f39"
+      "bytes": 23327,
+      "sha256": "3fd8f2235546e69f4e9200e536402f12c7e7eb2e443b57957e78aa742908a869"
     },
     {
       "path": "municipality-summaries/3300902.json",
-      "bytes": 18804,
-      "sha256": "97527fa3dac5eb6810883ea4fcad80d45277c2514a4d627b035c907e38ba4d45"
+      "bytes": 23235,
+      "sha256": "02806bbd1069ec6f85978cb1280d8b7c589f4c98ffb49cedd591d609a250d48b"
     },
     {
       "path": "municipality-summaries/3300936.json",
-      "bytes": 18742,
-      "sha256": "cfbeb6cb58ce1e7afe26cce4cce36f93a1d6a7fa81964a93bbe872196f7cf0c4"
+      "bytes": 23173,
+      "sha256": "44de8d9a8602d4547638dd5e5ec8d3f1a2d75e7da897f29bb23bab4ccd1b09b6"
     },
     {
       "path": "municipality-summaries/3300951.json",
-      "bytes": 18706,
-      "sha256": "9c76cb9f1345e5d0f1c64473bd73acec567fc5f2b6f701c8df054ae77f65a8f3"
+      "bytes": 23137,
+      "sha256": "510ef42db3f73aceb281559245de835db7e6de78fc7c6862579830484bfb1112"
     },
     {
       "path": "municipality-summaries/3301009.json",
-      "bytes": 19010,
-      "sha256": "5ea7740c0748ac6a52a2864ef9b84124a56df2eb6ee25914538baf0d90c28abe"
+      "bytes": 23480,
+      "sha256": "25e5aa56e19e5108c895158d26b57c33f7c73003e612b6f1a763d016492303f2"
     },
     {
       "path": "municipality-summaries/3301108.json",
-      "bytes": 18817,
-      "sha256": "b2d72c24f70e7121e041d68609b63cf5320468576504c5b5025176d828135d87"
+      "bytes": 23257,
+      "sha256": "83d2d6902a966b44c99ad9b8e6b3cfeb838b4a250eca4747c0df5d8c0b34ec45"
     },
     {
       "path": "municipality-summaries/3301157.json",
-      "bytes": 18768,
-      "sha256": "5bde8d107b0a161d44447058d8b6c5a059c3fcbfcc2391475ea4002096c699cb"
+      "bytes": 23208,
+      "sha256": "85e786c5283dc1f7a7e7e720f146eeffc65cde6e5f5f9f72658bc5bae0d7088d"
     },
     {
       "path": "municipality-summaries/3301207.json",
-      "bytes": 18800,
-      "sha256": "2ccff7fd8ca49b52986e05742cd6bc569bf8ad39c1235f761ea18ab3766c42d6"
+      "bytes": 23250,
+      "sha256": "9b83fa3734acf4ef2ce519eb1d7ca3589292aff181196bf60eac84ae678eee59"
     },
     {
       "path": "municipality-summaries/3301306.json",
-      "bytes": 18854,
-      "sha256": "d51eb2c4172387c1f7e789bf1b6fd74a1035a073f7db04eba403dad90958fa2f"
+      "bytes": 23285,
+      "sha256": "cca1771471b54f531697b9e98c1ca5391a097345e2c96f0565232db0255843a1"
     },
     {
       "path": "municipality-summaries/3301405.json",
-      "bytes": 18772,
-      "sha256": "fa4a5514b20da50c405389d28cb7644d98ffa09142083b2c5d21d129a40a8469"
+      "bytes": 23203,
+      "sha256": "bd0afd822591b56995122c4c0954c3dd70d7ce47ed0597df0a64f74b159e27d8"
     },
     {
       "path": "municipality-summaries/3301504.json",
-      "bytes": 18803,
-      "sha256": "d3003a5df5ff01856bdf0c2eed036935c0367c5d646080b608bb2f8d8ab8e331"
+      "bytes": 23253,
+      "sha256": "745a51915dda8c075002e7859bd831e654ac5726bb85a63d01d93c593cf99ed3"
     },
     {
       "path": "municipality-summaries/3301603.json",
-      "bytes": 18758,
-      "sha256": "fb05a928ae348a3a9b009a4f002263a269ee42187ccf76f335db5a90522a367a"
+      "bytes": 23198,
+      "sha256": "c4c9dfe43c3a62ddd91d645efecd7b98a1151be2b48177ffe32d11d5ecb4336a"
     },
     {
       "path": "municipality-summaries/3301702.json",
-      "bytes": 19039,
-      "sha256": "f16a9942671cd4fa833d565a09b07d3a55f9e817c47e84d86739684eddc4d88a"
+      "bytes": 23503,
+      "sha256": "7e6baec669b0775496718a03233ff79dd285ec5e6185d14ccf768497bcedf136"
     },
     {
       "path": "municipality-summaries/3301801.json",
-      "bytes": 18796,
-      "sha256": "6612f41bbc21dec5c66182b2fa073b6a9e733c40c8fe8a93674efa9a37c79f09"
+      "bytes": 23227,
+      "sha256": "0af2a2c45a31552539cff70d49c249fe9e524473b803e018f0d0c450787ddc49"
     },
     {
       "path": "municipality-summaries/3301850.json",
-      "bytes": 18888,
-      "sha256": "6c4b09d36c1cdf1253c4924a220c3f38cdade9fe63681edc3327aad7834dd20b"
+      "bytes": 23338,
+      "sha256": "5f0606f7be42694fa34d6b215365a492f5047c540a4c3e32c7fc20a5fbe8899b"
     },
     {
       "path": "municipality-summaries/3301876.json",
-      "bytes": 18826,
-      "sha256": "ad5bb5795db9acf87cb5b8a7474dcedeb50cd68318c2f108659924d82235a0a5"
+      "bytes": 23277,
+      "sha256": "5ac7b65c41d74650dca4d3230a356475f5c6eb2a11c2059f05de7fec3c496978"
     },
     {
       "path": "municipality-summaries/3301900.json",
-      "bytes": 18981,
-      "sha256": "2a01a4adc09d6780aa385dd11b5acb36c8d6b288e4245646a057ae78c3157c57"
+      "bytes": 23433,
+      "sha256": "d2f2021f7397d87eb7e5b492cc7f501a4dec882655303b6cf90afab2a4b5880e"
     },
     {
       "path": "municipality-summaries/3302007.json",
-      "bytes": 18901,
-      "sha256": "e49dc1e864ec01d6219eff98ccb8ce02ab88b20fa84eebed58bf3d3472bc1566"
+      "bytes": 23354,
+      "sha256": "463317f0f06bb51c15994becd97186bce460e94bd3700c3bd53ace1a1e2c01f8"
     },
     {
       "path": "municipality-summaries/3302056.json",
-      "bytes": 18792,
-      "sha256": "4c6203d746f86f68a65bd579a1c64daaf91274196e00d6dbd255e1fc4fd9f78c"
+      "bytes": 23242,
+      "sha256": "927466524b7305014b80044d57dde80fe338ea01bdfa48f2544221d7a32fb41d"
     },
     {
       "path": "municipality-summaries/3302106.json",
-      "bytes": 18845,
-      "sha256": "cde9c3947eabf083f1d393704bf6c26d5beaefb805bc2fccf079c4416cf4acef"
+      "bytes": 23295,
+      "sha256": "bab0bea07ca56559aed6120f53d2352dffbfe1de3e7068b04edfcb60b6ead54c"
     },
     {
       "path": "municipality-summaries/3302205.json",
-      "bytes": 18946,
-      "sha256": "0702030d5ddecb741e5bc9bc6a590a81bfbbb2b355df61a54e493d22254b07c4"
+      "bytes": 23410,
+      "sha256": "e033297dbf14816c49d039a15834b48431f5f931426254c2eea3a6dde270de58"
     },
     {
       "path": "municipality-summaries/3302254.json",
-      "bytes": 18816,
-      "sha256": "96d9992e8fb648eae2dbf23c29fa0ffcad4b530c547169e1546607efce9ba5e0"
+      "bytes": 23247,
+      "sha256": "4ba68d7700b03b927304ac2a75b305efe1b1713a79ca7e38107e53707e1ba45f"
     },
     {
       "path": "municipality-summaries/3302270.json",
-      "bytes": 18889,
-      "sha256": "b4fac922466f369fe435cbc01e6c2abe57b89cda3333aa53aac1cdecee190512"
+      "bytes": 23336,
+      "sha256": "deba2214074e465f113d0bebe9ac1ec7ac5af598cc4a8397ece898e591607d6a"
     },
     {
       "path": "municipality-summaries/3302304.json",
-      "bytes": 18700,
-      "sha256": "8f484898b6ca9fcf13aeb515d0ee88ae2597e39f39085ac3e77836a31b588d03"
+      "bytes": 23131,
+      "sha256": "586df4011a54d9e8a3b88f3a675a7534b6d7c97cb552d936808a377f02c698ed"
     },
     {
       "path": "municipality-summaries/3302403.json",
-      "bytes": 18962,
-      "sha256": "abc0f165112c33180c7576d870b45bcd37b61e04d7e001e8d8c135aac2a73e4e"
+      "bytes": 23415,
+      "sha256": "ddc5255063dcc00373549991be4f37cbdfdb890fd8b7d59b9b64302ae1606d40"
     },
     {
       "path": "municipality-summaries/3302452.json",
-      "bytes": 18755,
-      "sha256": "ea84b3a441f7a66732ccdf57ea126e20ac69160b9946c846f90afa03a2df6399"
+      "bytes": 23186,
+      "sha256": "536f3cdf6f941ac9eea3eb67d7e54107dcf1c60fb34a8fcf6f56ca06dde22feb"
     },
     {
       "path": "municipality-summaries/3302502.json",
-      "bytes": 18952,
-      "sha256": "0ab4b64019d9fd88d421f07dfb474ff334714da22a2fa588acd37a13eb61216d"
+      "bytes": 23403,
+      "sha256": "b4da809cb72368fbb42aada0cdac2292a1303a21b3650e09b0c7529063ecb45d"
     },
     {
       "path": "municipality-summaries/3302601.json",
-      "bytes": 18879,
-      "sha256": "1bde538d331ffbe38876c6cbe0482ac46134b19fab62826a4a84c5cd8fd2a24c"
+      "bytes": 23310,
+      "sha256": "2ed919688c071cb4bb9d15f99d2ed4a9a0ac12a534a1633aedae3c3452e38c8b"
     },
     {
       "path": "municipality-summaries/3302700.json",
-      "bytes": 18983,
-      "sha256": "0cde77764f9f197106a92174f760bfd42c931ca75cb8e5fb16088dc0a54ba2a5"
+      "bytes": 23456,
+      "sha256": "a6c73f3a6e38f17a5fb4a153acfa620c2ca1e3c5c39c898a30b90e0d69425fb7"
     },
     {
       "path": "municipality-summaries/3302809.json",
-      "bytes": 18793,
-      "sha256": "4063c18c3b16372a3b55799e76b0c67f883baa82455bfa56a207e88ee698fe51"
+      "bytes": 23233,
+      "sha256": "4afa71b04f6969bb71d7d71f4e4b686d8eadc7064a8a447382b6001dfc849003"
     },
     {
       "path": "municipality-summaries/3302858.json",
-      "bytes": 18916,
-      "sha256": "8146522920f8d2586034f3773e5845e502ba4fae3644072ca3e6040d3c450f58"
+      "bytes": 23368,
+      "sha256": "1f8fffd78f6e97f9b208870217b7a02ddcc227d2091c203c9ca99d5cdd29af56"
     },
     {
       "path": "municipality-summaries/3302908.json",
-      "bytes": 18859,
-      "sha256": "38cd8dd45ed477a2b994a007f6a7724f0eeb6c7fce4f5cd244efdc28c0c50728"
+      "bytes": 23311,
+      "sha256": "959e82dd97e9f201d133dbe465d60e52838eef9335f5e1344f628d1df2fae72f"
     },
     {
       "path": "municipality-summaries/3303005.json",
-      "bytes": 18847,
-      "sha256": "1fe517ed2a561c993f9646ef8f53f2651371ecc40aa834a59ba0c103631e3a38"
+      "bytes": 23298,
+      "sha256": "4d1242e4ef5522de462cd0595781ec16d680c8e3c32bf74158378d7d0e0d21f7"
     },
     {
       "path": "municipality-summaries/3303104.json",
-      "bytes": 18780,
-      "sha256": "cbffd9f8b57c091f76b50891682e2c7bb3c6781a5111f163c4a120212eab4f17"
+      "bytes": 23230,
+      "sha256": "0b0b0100e9927928363d195943925ec42b75bcf0837ab7be708c13f624bb4d0c"
     },
     {
       "path": "municipality-summaries/3303203.json",
-      "bytes": 18913,
-      "sha256": "5b8b3155f25c19918169c85cb408a821aedfaa288a34e3279cb052f3e8c7c313"
+      "bytes": 23364,
+      "sha256": "4c45cde06d113663015e83d77e9341d9a55a5d4ae11431b720edaa85420f2332"
     },
     {
       "path": "municipality-summaries/3303302.json",
-      "bytes": 19025,
-      "sha256": "ed2b947f536bb4d9e187f6c6be90916d4ae67b1f9fa9d6059d21d08ac512b763"
+      "bytes": 23496,
+      "sha256": "704463de552064b918225420cae08ceaf392f8476a63835b365b50a19ab424a1"
     },
     {
       "path": "municipality-summaries/3303401.json",
-      "bytes": 18975,
-      "sha256": "45081cc6595fb3ec6334e034e7865b9c1216a7309e3e35bf01161b8bff188e92"
+      "bytes": 23428,
+      "sha256": "ad40c29627922d87005b4a969cb88ea16ebae5a28a0e6e262b1628474a05c6a3"
     },
     {
       "path": "municipality-summaries/3303500.json",
-      "bytes": 19020,
-      "sha256": "333aba2e52d3059fd72a4171e53490c4f28254a0569ed2cae6bccba129449a69"
+      "bytes": 23484,
+      "sha256": "28c0d59dd732616c7a3bbffa0d363ee458553bea5097258f0e4a6cf11f550e52"
     },
     {
       "path": "municipality-summaries/3303609.json",
-      "bytes": 18855,
-      "sha256": "2485afbb2fa8eab5cbda4702f5ad42dc71e0dc8f31c179ffcef5ca4e99efdb5f"
+      "bytes": 23286,
+      "sha256": "ddd2c66d501ecf813c6014f9120d442ef2c104e16d179f9ce38d736338ada69b"
     },
     {
       "path": "municipality-summaries/3303708.json",
-      "bytes": 18864,
-      "sha256": "44b1818f804a38a287510f5578bebb4d56b56cc5cbacabf5e54992d48c5a0d80"
+      "bytes": 23303,
+      "sha256": "3838f8bc5589bafd0833a820815ddd3da83b96ff3e710ad8197c8e462b75f050"
     },
     {
       "path": "municipality-summaries/3303807.json",
-      "bytes": 18850,
-      "sha256": "b1d75cf0e48901fc8801b5d61b9a3045da5d5f1bb71090520a5ece748eabc3f1"
+      "bytes": 23281,
+      "sha256": "f40e9c4bee53aae499cceef0953e9365c2b684f8a6380ab9f4208660d5404a14"
     },
     {
       "path": "municipality-summaries/3303856.json",
-      "bytes": 18836,
-      "sha256": "471bf18887587089ee25a79f065c3940d1e4c925531a65722c480622fe788b22"
+      "bytes": 23286,
+      "sha256": "0142eca4868ca8054b81dc1812d7f2b417550b905774bca3a1b5bd749d114ed3"
     },
     {
       "path": "municipality-summaries/3303906.json",
-      "bytes": 18991,
-      "sha256": "c1f5c3bde29585eba9818b7cbfb1c41cb0cd1424e0293319d2096d3ee466a1c8"
+      "bytes": 23465,
+      "sha256": "be001e6c49e22cd52da1e916ae03e89bde1db6099eb85c353be9dac61974a5da"
     },
     {
       "path": "municipality-summaries/3303955.json",
-      "bytes": 18825,
-      "sha256": "f5561ec0544536355d28684a2fa8bcece58829bc6297294c4b91c253477ba585"
+      "bytes": 23265,
+      "sha256": "09fe9f6810ac6c3c86a69ddaec1e4fe0c664a37eeb6e149dbd1914661a5c0e87"
     },
     {
       "path": "municipality-summaries/3304003.json",
-      "bytes": 18839,
-      "sha256": "22a8c5c94b8b02690230985898d10da648cdd2b9e2b8b22e478939adf1951084"
+      "bytes": 23270,
+      "sha256": "219bafbefe964ae57511e0ff998c3fc6b5911fc2c342683411c0a63034f5ffba"
     },
     {
       "path": "municipality-summaries/3304102.json",
-      "bytes": 18761,
-      "sha256": "1cfc7c5fc1ff4da8b158eb3a51f348e593e1727c95e0a3becc5e0eb006ad700e"
+      "bytes": 23201,
+      "sha256": "3a6f29cf66b184915130fad6c01b019f7d685cfcd8e0a1ff91fa96bcb332bba0"
     },
     {
       "path": "municipality-summaries/3304110.json",
-      "bytes": 18806,
-      "sha256": "ce6e4f6ef4f3be5928c515876c628974475ef2dcc80c5676682db5a9dfe065da"
+      "bytes": 23237,
+      "sha256": "4e6513c048f1fe9afb4c28aec27c90daa0a976fc088769b98508c8c0570e3d2c"
     },
     {
       "path": "municipality-summaries/3304128.json",
-      "bytes": 18797,
-      "sha256": "ec471e26c61d83a668ce51bbee2cc9209d1bb43776ecbfcb78fc53df0147db7b"
+      "bytes": 23238,
+      "sha256": "f1534edab6086d3ec7140865d625488e6e788612aa5a7183d6ab62b09f2cc46b"
     },
     {
       "path": "municipality-summaries/3304144.json",
-      "bytes": 18900,
-      "sha256": "dc5656e4ada820810b39a9c2c579d87d1b3d2683624ef6839fc458d0d6d395f5"
+      "bytes": 23352,
+      "sha256": "fe040c251c05ee940ca04267c950d08776bf7b61c72a4620de8faf452c2fb56a"
     },
     {
       "path": "municipality-summaries/3304151.json",
-      "bytes": 18825,
-      "sha256": "c978874db4d80efa3379fa18a5ec61fce867fe98baa57cb980fd6d43081ca396"
+      "bytes": 23256,
+      "sha256": "9a1f168fd65a28058b811a7212c4171002253bbeeb10e4ab98945753219ab26d"
     },
     {
       "path": "municipality-summaries/3304201.json",
-      "bytes": 18973,
-      "sha256": "1c050c0286248ad469a67553ed23b4928926a4fa5906f779080634ba6a86863e"
+      "bytes": 23424,
+      "sha256": "7c321cb2bbf473019a1e151da0b4b8dbb49edfe0ab4c691f878543360e031a45"
     },
     {
       "path": "municipality-summaries/3304300.json",
-      "bytes": 18859,
-      "sha256": "72908ac0a357963bdb4c511a750116f2ecb1f18f004e87043c5d126939496738"
+      "bytes": 23318,
+      "sha256": "2a45e1df05b6adea69be78150c99c1506d86ff930a4856680eb65551b29ca3a3"
     },
     {
       "path": "municipality-summaries/3304409.json",
-      "bytes": 18790,
-      "sha256": "674cf610b13381b8f7f4cc81853bf4d82364ee0142b72b06a4f88cac7bf6ce80"
+      "bytes": 23221,
+      "sha256": "4ade79e72e5288dd97f086cf5c68ca9f22bace92a63ba782fcc01b18ff8e6f33"
     },
     {
       "path": "municipality-summaries/3304508.json",
-      "bytes": 18789,
-      "sha256": "504623affc1ca2a0d2e259aaf547e5b74c4f4b063628b4ae34c6c4af889ab839"
+      "bytes": 23220,
+      "sha256": "02ba9fb37a73ff0f585339f837305baf8857f5f7e4a6d0d97da2ad7b095b0519"
     },
     {
       "path": "municipality-summaries/3304524.json",
-      "bytes": 18926,
-      "sha256": "5968a4e079bfed8550e46b7f2065e01d6a0958a108449e87bcda3331cbb465bc"
+      "bytes": 23378,
+      "sha256": "b58d36e14fa4920c47b28b0da46d6590bfaf0abe8b2a56b6a96c63c005ee8c48"
     },
     {
       "path": "municipality-summaries/3304557.json",
-      "bytes": 19104,
-      "sha256": "c73a331f4e97f256e7aab668ffd1fc9a120fae7ecdae1623be746bdea3161da5"
+      "bytes": 23579,
+      "sha256": "06b1637a9f3a25756ebb6147cb2a4cd527f85d92ce1e391750ce79f9f9ce0ca7"
     },
     {
       "path": "municipality-summaries/3304607.json",
-      "bytes": 18773,
-      "sha256": "04c881546cb2ab7f39eb09ebd4f6054a9e21cdc433fd347b5edaa2912ef8c914"
+      "bytes": 23204,
+      "sha256": "4737265354848696c9f81dddda28f97243bd03554d378de13c57e2347b9c3994"
     },
     {
       "path": "municipality-summaries/3304706.json",
-      "bytes": 18852,
-      "sha256": "8ead23a38aea697449e443ea9ae0f7b55b43fcac5992ad879fc82d32c078599d"
+      "bytes": 23302,
+      "sha256": "2903ce4fada4ca281a07f04fea11d722aa91a74c18a58ec2b9442e2ef5de7042"
     },
     {
       "path": "municipality-summaries/3304755.json",
-      "bytes": 18839,
-      "sha256": "2552cba4538ae1da8be4264bad086fe05ca6fd8c987a4c5f25eb3e6c172004a5"
+      "bytes": 23280,
+      "sha256": "4fad197e22141d00eec5f6c5d48b88b1d2634566058caf3d71e0a90ffc0e4707"
     },
     {
       "path": "municipality-summaries/3304805.json",
-      "bytes": 18831,
-      "sha256": "2e642f856f33e47b2b1527dec960ad00f61e6ea6b99b0ac2a7eb5050aa7c79de"
+      "bytes": 23284,
+      "sha256": "ded9f7aa3d6531eecfb8d6082f16025d0e76373b4bd446cf52fe9390cc633c2a"
     },
     {
       "path": "municipality-summaries/3304904.json",
-      "bytes": 19066,
-      "sha256": "be46cdd85347010edac09bf93083d154269fff7124b88a0e77cd07478418908e"
+      "bytes": 23542,
+      "sha256": "cb04f9ba4260971b03dd6208f0a8b1f09c1f1f39dbb18f006e7561eb8b11ff2b"
     },
     {
       "path": "municipality-summaries/3305000.json",
-      "bytes": 18873,
-      "sha256": "030453a811ba0e0ab95682fd0afcbd97bb9419b54cff40424cc9d4d8f57edef2"
+      "bytes": 23304,
+      "sha256": "3b49f5e536a558eee3654edcbd359002fb92e67e2b391ccc73fec28c6e71a837"
     },
     {
       "path": "municipality-summaries/3305109.json",
-      "bytes": 18987,
-      "sha256": "3e85adb0ac3cb72215449056aa57453423e549c855575b0d0c9d04a4c2bcee42"
+      "bytes": 23448,
+      "sha256": "711c2cda2ca6ca5cecabfea7ea99141e47315908d20f068131b59d3b4c349eda"
     },
     {
       "path": "municipality-summaries/3305133.json",
-      "bytes": 18696,
-      "sha256": "5fac35ed2042a06d0746d0add8a9f3b62612ad529859554b8673d56a6b52b9be"
+      "bytes": 23127,
+      "sha256": "c90b27951ae06d0b4a0ac5f0a0a53ee27d9d463cc53d3885d744455a8d15d970"
     },
     {
       "path": "municipality-summaries/3305158.json",
-      "bytes": 18831,
-      "sha256": "7137a01cfbfa4cf82ebdcf6077590c14da2dc15dbb4c96c48750447f731a93be"
+      "bytes": 23262,
+      "sha256": "7979cc38f7589f12f5f078921f3f950fe38f30db3ba26528f44fa439f13ebea8"
     },
     {
       "path": "municipality-summaries/3305208.json",
-      "bytes": 18884,
-      "sha256": "a40d46de45e347aac074bb1f54f88fb0281ce10934dfcafa38d5a4dd92249f25"
+      "bytes": 23315,
+      "sha256": "4f9586c4663d6978130a9a0e3b15556b297955e99cf8dcbca2fb23bc7279cda7"
     },
     {
       "path": "municipality-summaries/3305307.json",
-      "bytes": 18744,
-      "sha256": "065769936ded2582ecf861851360b95b1bfce2835b91e6c3779298259c53e76c"
+      "bytes": 23177,
+      "sha256": "83d605c8fdd0319b3f9b22d5ffb371a0bfaffd5d838086a114eb007a3151c4da"
     },
     {
       "path": "municipality-summaries/3305406.json",
-      "bytes": 18772,
-      "sha256": "5d386b615619dd5d21f6a786a2adab1cb771a745fbacd1da349ac7c4239ae835"
+      "bytes": 23203,
+      "sha256": "eda973e53843ae3ca8d4b0a0a6d54a9af625c285021f15efb320395692fe1814"
     },
     {
       "path": "municipality-summaries/3305505.json",
-      "bytes": 18896,
-      "sha256": "1edc1436c5b88c737591ff1c174978cc8ad5c13147654ab52ff7ed3dbad48f4a"
+      "bytes": 23347,
+      "sha256": "4f99e44c7d37e41b41e111fc109fda1a7affb2d842a0649a9e726a5bcb8166d5"
     },
     {
       "path": "municipality-summaries/3305554.json",
-      "bytes": 18865,
-      "sha256": "a46ec381fef31401c425a2511c67179e7d09391fffc65e268d5b1c6f95f216cc"
+      "bytes": 23296,
+      "sha256": "753da784e5615237123c9ea641787256f89d4d3cd097b1cfd705ecabbfa79f4b"
     },
     {
       "path": "municipality-summaries/3305604.json",
-      "bytes": 18806,
-      "sha256": "11e7199eb136e771823f9a0eb61359b7768e2119b55141c9a6f1b53592838d11"
+      "bytes": 23247,
+      "sha256": "1b748bbcbd17aadc78f7dee54135eefcffcdc6f762df5cd9f7c99af2c30d0987"
     },
     {
       "path": "municipality-summaries/3305703.json",
-      "bytes": 18774,
-      "sha256": "ff31cb3654abd16042515eb1b9015be5d8462016863e2115a02c232cc7d72e7e"
+      "bytes": 23205,
+      "sha256": "35f58fc5d6aa78f228a23b254a47a996c77a8784607694877576f91d327c0a25"
     },
     {
       "path": "municipality-summaries/3305752.json",
-      "bytes": 18793,
-      "sha256": "8e658d19d01ebd0eba5c2fd864a702670a17282d18f48e39f45701909c604b32"
+      "bytes": 23224,
+      "sha256": "980277a60abc77f99f4b60c8a097177d607038f316ed622d729f9581b09ec698"
     },
     {
       "path": "municipality-summaries/3305802.json",
-      "bytes": 18952,
-      "sha256": "23294a30bc9486028cae3d54b61ff398ee580e95e38dbb069a038ea67ffac30d"
+      "bytes": 23404,
+      "sha256": "1c943e174cc64957cf7cb07b98759f754e792aaf1a671f7b4b42ea62a6c2e0f1"
     },
     {
       "path": "municipality-summaries/3305901.json",
-      "bytes": 18750,
-      "sha256": "8d6e625fd7919402393501cbd29abe506d87dd48f3ab0532e843b7663d9786b6"
+      "bytes": 23181,
+      "sha256": "2062862718f42b673a85569a1d49e0bbc4c8d432993d15dc065589ab18392efd"
     },
     {
       "path": "municipality-summaries/3306008.json",
-      "bytes": 18895,
-      "sha256": "f8a0e6d6cbc79747a79007e7a236598c2f631315798f1a7757a77748e6dc157d"
+      "bytes": 23348,
+      "sha256": "acac87a2d7ea7c7abe0f746bf642681fa968b1fcc6f9112fc8cd5a839e184f45"
     },
     {
       "path": "municipality-summaries/3306107.json",
-      "bytes": 18885,
-      "sha256": "2c40452ce97fdd7c8e15ebca8e037420ccbac761b0bc041ff0f58983454f46bd"
+      "bytes": 23355,
+      "sha256": "9299fe443b7443b0368b5670995ebeca28b8bd4e307afa57a3f82eb40505c709"
     },
     {
       "path": "municipality-summaries/3306156.json",
-      "bytes": 18759,
-      "sha256": "27d8dc1ba318873ad39d22a912f82fb118c46a920be17be51a80fe2c7508eb83"
+      "bytes": 23190,
+      "sha256": "7339e7f685e3757b09d901d5e47ddb6dccd865ea77fac56c37eeb86caa521248"
     },
     {
       "path": "municipality-summaries/3306206.json",
-      "bytes": 18858,
-      "sha256": "101986e0e06dc3cd7e26440d7daddd9ede6f8d8df0af06d63d32530ff79d42ae"
+      "bytes": 23310,
+      "sha256": "42aff8c30ee74feb38f0449b0856b78a6df239122732b38d3638e2f3a2114efc"
     },
     {
       "path": "municipality-summaries/3306305.json",
-      "bytes": 19008,
-      "sha256": "e5334f3f387e9cf33804f2ee31ae88fafe49d5b6ef7e3575fff2a73f214394b8"
+      "bytes": 23469,
+      "sha256": "6981b590bac3564079fe216e54aa17c159d016947fb90fda8b4330669601c2a0"
     },
     {
       "path": "profiles/sih-acute-bronchitis-bronchiolitis.json",
@@ -969,6 +1019,11 @@
       "path": "profiles/sih-acute-myocardial-infarction.json",
       "bytes": 110,
       "sha256": "c4680530ef893bf903a731a38bd8b6d49b0cf6a08792ba0ad9ed125f98b6a4ef"
+    },
+    {
+      "path": "profiles/sih-alzheimer.json",
+      "bytes": 92,
+      "sha256": "7db5c6e848e18679dd8f56cc6a4a3f0d9aeed0273540c63fc4d88ce2d411517b"
     },
     {
       "path": "profiles/sih-asthma.json",
@@ -999,6 +1054,11 @@
       "path": "profiles/sih-copd.json",
       "bytes": 87,
       "sha256": "403e4405d9ae33d1850dbd3a26f9f04d937c49d3bc337238142a10fa64be2f67"
+    },
+    {
+      "path": "profiles/sih-dementias-all.json",
+      "bytes": 96,
+      "sha256": "5a4bbd585a65b9225d183e14e8ad7647b83319f6f48b5d03e19ea93f8eca3364"
     },
     {
       "path": "profiles/sih-heart-failure.json",
@@ -1051,6 +1111,11 @@
       "sha256": "25edfcac8120cc1d41567bfb7c98520ed51c074b89f6a741418f86683ed767a3"
     },
     {
+      "path": "profiles/sim-alzheimer.json",
+      "bytes": 680180,
+      "sha256": "100bcfcce8f94fa425edd247da54fcbd0280d7531a4159fbb508b349f7a1f645"
+    },
+    {
       "path": "profiles/sim-asthma.json",
       "bytes": 673593,
       "sha256": "edb9e24e25e978056a2191aabd715ff1197bbeae75dfa0427583d890c515784a"
@@ -1099,6 +1164,11 @@
       "path": "profiles/sim-copd.json",
       "bytes": 674451,
       "sha256": "5d1630e936266c04d02002f6376c7f1bdd333088be9dd8574f48798d8f9a8849"
+    },
+    {
+      "path": "profiles/sim-dementias-all.json",
+      "bytes": 686548,
+      "sha256": "fbd69ebffe6944e785ca131a662013667f863b14257b3c99f97b0996efe97931"
     },
     {
       "path": "profiles/sim-heart-failure.json",
@@ -1187,253 +1257,248 @@
     },
     {
       "path": "series/sih-acute-bronchitis-bronchiolitis.json",
-      "bytes": 42270,
-      "sha256": "f769a4d41c8d6ade8c9396b29e803a0445ec93149b37ae57fd8202f76757cda2"
+      "bytes": 44854,
+      "sha256": "3735b81f1f1b6bfe626c2d407dccc19f1182e75693bf4a4591a3f9877dbde154"
     },
     {
       "path": "series/sih-acute-myocardial-infarction.json",
-      "bytes": 42032,
-      "sha256": "0f0127eab2201ff00e2b48eb2dcd38d2fcc4f203fd6ad279c1c42f177911c714"
+      "bytes": 44616,
+      "sha256": "92519058b978ed15c8dc86ef17459543116114c59a553aab8951a12e3e650770"
+    },
+    {
+      "path": "series/sih-alzheimer.json",
+      "bytes": 59052,
+      "sha256": "c7f5f84535bf7799ea8dc7d5db59e263ca9c7df91f04184c6ce5ea337b2cb480"
     },
     {
       "path": "series/sih-asthma.json",
-      "bytes": 40590,
-      "sha256": "aab8ed97d671ebc12cbca9d28b2f32f1e97ab7fff46a009593d8e643eb2022b1"
+      "bytes": 43174,
+      "sha256": "700b047202721d8ba0450b8e93d3f16089523124526133376304f9e72843463d"
     },
     {
       "path": "series/sih-cardiac-arrhythmia.json",
-      "bytes": 41457,
-      "sha256": "c7c91cc44eb858242ddf1b02b489886b974077b058f54a000ec341545a1d4bca"
+      "bytes": 44041,
+      "sha256": "f4dd229fc6499046aa1e73b0189a39d34fc79e8e2bc617d04eb4546d3364ce12"
     },
     {
       "path": "series/sih-cardio-all.json",
-      "bytes": 40904,
-      "sha256": "a8b98d59916fbb9a92ed8ecbe587d3fabe0da683d76f29abef4a30e8fce9a3fb"
+      "bytes": 43488,
+      "sha256": "4af9789939a1a33ae7b909feaac87681ab05d0c9a7662094ccb574d953fb6579"
     },
     {
       "path": "series/sih-cardiorespiratory-all.json",
-      "bytes": 41722,
-      "sha256": "3cda72f3089ccb697a38ddae2bcae670285289aff627fbe49bec8bea630c554f"
+      "bytes": 44306,
+      "sha256": "dda8bdc4dabb66600370802b4c38bf471216a38d06dfb170d8b2543ac927c0f4"
     },
     {
       "path": "series/sih-cerebrovascular.json",
-      "bytes": 41268,
-      "sha256": "70d3073794176204c5a45a1fdbe59c7010028077a53005a4aee8d28238655d2a"
+      "bytes": 43852,
+      "sha256": "59e0ffbc09ea22eee364d561b7e80a5e618c4afe7a7e7bd34adb9488eb657695"
     },
     {
       "path": "series/sih-copd.json",
-      "bytes": 40458,
-      "sha256": "2937a35ca63092d7c71ae5002f0cb5096ea3452337e4102c3d14534fde6bae4c"
+      "bytes": 43042,
+      "sha256": "429d470155359f6883afbbe31aa14a2458677e847c1566556bbdd93822658cd8"
+    },
+    {
+      "path": "series/sih-dementias-all.json",
+      "bytes": 59670,
+      "sha256": "dcaf1dcf15b2496451fc12c5282ef9d6e39eb2ce26b726d09c31decfc5d96537"
     },
     {
       "path": "series/sih-heart-failure.json",
-      "bytes": 41121,
-      "sha256": "00bf3e63ca8243d06a047829ab4236d661d5fe86af85efe0b82fc3cd34005bcd"
+      "bytes": 43705,
+      "sha256": "eb5c2fad0d86f89e4d3c7b972ab3025c53dfb9df6bfe5d6431a2e096ba98da92"
     },
     {
       "path": "series/sih-hypertension.json",
-      "bytes": 41024,
-      "sha256": "6e47c67c1a2496c4750c6ef95aedc94267cbc0435926f894501865c615694058"
+      "bytes": 43608,
+      "sha256": "3c4cd16256499dbe668e8a698b28ceec0646d81425ba72445bbe3fcb5da287a3"
     },
     {
       "path": "series/sih-ischemic-heart-disease.json",
-      "bytes": 41766,
-      "sha256": "0f0814832be76b435a616f68919b277a36c3d17138583fbbac98e65cb45a3173"
+      "bytes": 44350,
+      "sha256": "10ea9493b001c9a4c80e9a7f285b5044d3a3661b02d9bae19153aa77e9152a93"
     },
     {
       "path": "series/sih-pneumoconiosis.json",
-      "bytes": 40815,
-      "sha256": "6c2b8928ef83f0b6981f6a027e543ed2e7697e0a6bcee5bc498ba52418386030"
+      "bytes": 43399,
+      "sha256": "e1b1ad855ce902e76cbb990ec2b9a4813d16e3f6e5d3ba61280f35a22f8107b6"
     },
     {
       "path": "series/sih-pneumonia.json",
-      "bytes": 40896,
-      "sha256": "91dc747376aa6057f09340eb59920d5c9f3d597822491b17375ed3925c7af8c1"
+      "bytes": 43480,
+      "sha256": "8a3470b6c5b541a23526e5a1251edec149679a3bcf80738b6c7bf548fc4cdfc1"
     },
     {
       "path": "series/sih-pulmonary-embolism.json",
-      "bytes": 41351,
-      "sha256": "6781257a0ae0513913b42b59dd96f46b02918757cfe4dc0a5cd5bbaefe33a6e9"
+      "bytes": 43935,
+      "sha256": "dafde08e7676cde5b45edda0a626f269b2dbdabc809bbc5da201382211d75e39"
     },
     {
       "path": "series/sih-resp-all.json",
-      "bytes": 40775,
-      "sha256": "9c7276163d168493532947bb54a564eebb70cbd17eb63a89feefbabbb9c59e7a"
+      "bytes": 43359,
+      "sha256": "4193f33457430ae6dd843b8416b898d8d52bcfd3f1f8de4071ef557c5258857b"
     },
     {
       "path": "series/sim-acute-bronchitis-bronchiolitis.json",
-      "bytes": 34902,
-      "sha256": "f952377266859baa00bb2a44b77cb3cfc2bd72d44374cf7bc243b152cf570de1"
+      "bytes": 37030,
+      "sha256": "47e34085c6a9141ab7a3997f6de15809673bd8927906507ef599df91f70514c6"
     },
     {
       "path": "series/sim-acute-myocardial-infarction.json",
-      "bytes": 35124,
-      "sha256": "79a129e738188cc8b6a2fe5ce62608d9c8863f542210339242211b92f6212799"
+      "bytes": 37252,
+      "sha256": "ce9281e49b04437d9573f09cb64a5b4ef80fb09b3e6135b5175ee65089c246be"
     },
     {
       "path": "series/sim-all-malignant-neoplasms.json",
-      "bytes": 34942,
-      "sha256": "11a742cf8f9e2ee40cf81911a364c418ce865b6c2655fca78b5bffd194da9aa5"
+      "bytes": 37070,
+      "sha256": "8f29afdb8236eb3128512dbf3b8696eae4bc62365121f6000ab609b8b6012685"
+    },
+    {
+      "path": "series/sim-alzheimer.json",
+      "bytes": 836760,
+      "sha256": "5d20b0f052a5821e448bda6052fc257e53cf2e1615b3b95c343283e4623e35ae"
     },
     {
       "path": "series/sim-asthma.json",
-      "bytes": 33549,
-      "sha256": "64e3f2734616ba8f19cadb6c9da5c80705d24adc9e9fc2a974b0f0543cb49181"
+      "bytes": 35677,
+      "sha256": "d7d22a1e66142c915305cae8e7c1a600c61785c9b20edf256ce12083ed9df944"
     },
     {
       "path": "series/sim-bladder.json",
-      "bytes": 33887,
-      "sha256": "88c12b438159dfa3545c09bb440036a17ecb218c540d847df08238e415db05b9"
+      "bytes": 36015,
+      "sha256": "975918ae248b8f727535a49311a89a0e4effeb357f226b4a8ba5a110779e9e46"
     },
     {
       "path": "series/sim-breast.json",
-      "bytes": 33890,
-      "sha256": "00df47c11c189663f4c70d3e9d14bcee4968c25179e26cecdb1cb0a85eebc174"
+      "bytes": 36018,
+      "sha256": "0df3d9258d9f2d76cd2c2a0e018f1abe850a9fcf43000d28c2099944e409f563"
     },
     {
       "path": "series/sim-cardiac-arrhythmia.json",
-      "bytes": 34561,
-      "sha256": "c26f6767cd95b4b89d3f192a15b025c223b1ef608d9e4762bfdbe641266f1d82"
+      "bytes": 36689,
+      "sha256": "fdb9e583566fca814e0a945f0a865cecefc2a134ca7ef32940a44204dcba3cf2"
     },
     {
       "path": "series/sim-cardio-all.json",
-      "bytes": 34260,
-      "sha256": "449984ca9a076e8bbb4c3ab8de326d15d999f3064b3c8a651b4bc6bfa2170ad8"
+      "bytes": 36388,
+      "sha256": "5ee2413813b1e4c32ceed15fa70097d4894a2e07a6f0dc664c1356050f2d202f"
     },
     {
       "path": "series/sim-cardiorespiratory-all.json",
-      "bytes": 34865,
-      "sha256": "95ec02d80c91f5887dd86a122db7df54a36109c66c3b63e8b4bfda521227b18f"
+      "bytes": 36993,
+      "sha256": "d9ad41c79a50e9d4588805536fdc8df5a707d421a2b4b41d8c92700d384d3961"
     },
     {
       "path": "series/sim-cerebrovascular.json",
-      "bytes": 34443,
-      "sha256": "2447e3362fea21f54b5f86a6f098d191cf9c6eaf34fb61b5a794ea464e0d5867"
+      "bytes": 36571,
+      "sha256": "b9a7e6a090de952e83d786a9e8d167f0140db1afa188239a292e658feacbd025"
     },
     {
       "path": "series/sim-cervix.json",
-      "bytes": 33780,
-      "sha256": "8a7917248004bc37e22b4f037e68d8cc516d7cdd4efc636054b70712a3fb79cc"
+      "bytes": 35908,
+      "sha256": "9f44d97e38ea5b1870d703679ea1de717d5cc1f232274c2305c15305925bd06f"
     },
     {
       "path": "series/sim-colorectal.json",
-      "bytes": 34120,
-      "sha256": "3b172fe539d6700608d33ddb6cf088a7df2a030d343e4a84a94b57a2f046a655"
+      "bytes": 36248,
+      "sha256": "7509ad5dd9e4120224540d561c227013608f752f4877787b9196cc0f1bc32284"
     },
     {
       "path": "series/sim-copd.json",
-      "bytes": 33773,
-      "sha256": "26976971aa3ef134412b35608ccc004fc9d9b0beab10ca3de9ac4e498b685ee7"
+      "bytes": 35901,
+      "sha256": "a65230c8d7937fbdc88ece6f2fa1a671b82c17d738b67a407800e5283105f20b"
+    },
+    {
+      "path": "series/sim-dementias-all.json",
+      "bytes": 843735,
+      "sha256": "ff79248a4f77cc712fcb2b381b9148a9826dc81ecc7461293594dd45a8655fa9"
     },
     {
       "path": "series/sim-heart-failure.json",
-      "bytes": 34374,
-      "sha256": "a7476284101aa023152511f00f67fd74cc84e8f591007ab96046e2ae3e13ed39"
+      "bytes": 36502,
+      "sha256": "0d678cddb5f2ec1e96d602a1fe26d31de60f3ca35c9b6776a6fc902d18a3ba0b"
     },
     {
       "path": "series/sim-hypertension.json",
-      "bytes": 34268,
-      "sha256": "692b95569910e48d278c0dce4ad528ede6ca897c715dc464eb6976a7a58bc725"
+      "bytes": 36396,
+      "sha256": "ed9548bb6a9deb4f8fa424a1a334c57a78d31474910127252976e2480b43eb25"
     },
     {
       "path": "series/sim-influenza.json",
-      "bytes": 33734,
-      "sha256": "bac530b74911f82de22f78cddc05c8ab66e223b761594599612e7e66bdadeac2"
+      "bytes": 35862,
+      "sha256": "adef9425be01aa1eabd18221b9083ba75694b3e76f22c66e3bbba9cefb49eb8e"
     },
     {
       "path": "series/sim-ischemic-heart-disease.json",
-      "bytes": 34815,
-      "sha256": "22950b87535990772ab7e7a53c8879d4233636e89ee787b064e6e5b1917ae77b"
+      "bytes": 36943,
+      "sha256": "dec6d943c82b5d996601845b3c9ddb5dc8ceaad5af483edd60370f6dd69991d4"
     },
     {
       "path": "series/sim-leukemia.json",
-      "bytes": 33940,
-      "sha256": "99b0c352ef01a7c1d4b10cb7c104b91f66de04dea3380c662b0c7dc63a80cb2f"
+      "bytes": 36068,
+      "sha256": "5b34f0dac675593dab88db627804052dc340b8489af76959ec2cc721c3e4a8a0"
     },
     {
       "path": "series/sim-liver.json",
-      "bytes": 33715,
-      "sha256": "bc70e6e15d339d9c71ed8092ac0828eed3bb6980d1127695d56dd605b29ed4e6"
+      "bytes": 35843,
+      "sha256": "c283e600dce5741be40d8646924bc5d198441b60ef1dd1d91535e4fd4dbdbdec"
     },
     {
       "path": "series/sim-lung.json",
-      "bytes": 33787,
-      "sha256": "0c77c99dc78dbc059d4c3d5139413890676973dcbef4deb3cd8eb7314ad1fafe"
+      "bytes": 35915,
+      "sha256": "8596a0b077ae05460619abf1a18bee906fa8d8a9d6237b6d91b488ff07ae37f8"
     },
     {
       "path": "series/sim-multiple-myeloma.json",
-      "bytes": 34304,
-      "sha256": "ed020fbaa39ab7e0c3f560c98fa95a16071be7b4e69c38fc2b3c7d99c8efcbc3"
+      "bytes": 36432,
+      "sha256": "eb5dbcb285629b8716c6a58032e024046d306bb6bcc0698edf099b2f454243b1"
     },
     {
       "path": "series/sim-myelodysplastic-syndromes.json",
-      "bytes": 34694,
-      "sha256": "41d84041ef3bc249b328fdb876c32c7455dce86a99b197688a500128a0dad038"
+      "bytes": 36822,
+      "sha256": "69b51ccbce199daed4b2dd35c640b07ad737df228d5778c5e530ef1516bc1175"
     },
     {
       "path": "series/sim-non-hodgkin-lymphoma.json",
-      "bytes": 34584,
-      "sha256": "2c71316053fabebd30df37c781a37eadb04d45ffc9c3c2534e72d8f6ccf0adff"
+      "bytes": 36712,
+      "sha256": "2e176f75b25b71574aaca7abf0e77b7a4f1be7f3daddd3557529b27f68507534"
     },
     {
       "path": "series/sim-pancreas.json",
-      "bytes": 33915,
-      "sha256": "6638fd25d2963c66e923996baa3216e9562042fbb4ba30b673d719f3c0c52f60"
+      "bytes": 36043,
+      "sha256": "5501d0ca727e090b20202e7ba779a5c1118ed45c4d9f648becfb93b1e0c43d70"
     },
     {
       "path": "series/sim-pneumoconiosis.json",
-      "bytes": 34040,
-      "sha256": "aaf3e6935ffc823732b62cff227f6da83c82ce0434900d6a18fdf48d9fff0482"
+      "bytes": 36168,
+      "sha256": "2495a62cea9f49a688e8e0fd4df8424c4fd986e0972db4ffafb7b6f2e758f2fd"
     },
     {
       "path": "series/sim-pneumonia.json",
-      "bytes": 34008,
-      "sha256": "f93117850e1ccbfa65a2bc3c676d78b24eae4478f5dbbf59585cb34dc0457eff"
+      "bytes": 36136,
+      "sha256": "f4f9104953644cde2a98871aa9581a8923f408bb6dbc28f8d70398d550ea08d3"
     },
     {
       "path": "series/sim-prostate.json",
-      "bytes": 33908,
-      "sha256": "2b2af3d141a1d1e2e2d3ee79c58f793e7d2495fe4e9f36821e35bbbb914a650f"
+      "bytes": 36036,
+      "sha256": "c5fcee0f22d1eaed01ed02a40f007054a2a169114dfe6374a1732e6360402a35"
     },
     {
       "path": "series/sim-pulmonary-embolism.json",
-      "bytes": 34488,
-      "sha256": "924f3356cddb62fc767ce18d6eb066cb639e282928e3dea9e0899035dec8ebbf"
+      "bytes": 36616,
+      "sha256": "4280e208b6fc23e08f6dd7c63a5abc5b3a5d646a5458bd4f342b8b47a391e417"
     },
     {
       "path": "series/sim-resp-all.json",
-      "bytes": 33969,
-      "sha256": "a2ad5ac768352d1964bc37d03be6678480820fe32c8a40a987ac759493f34741"
+      "bytes": 36097,
+      "sha256": "ec92c604de641a51a22e14cdcc126eaee6585fae19a84a5ea82731cd44cbe071"
     },
     {
       "path": "series/sim-stomach.json",
-      "bytes": 33868,
-      "sha256": "4a86fb82d6c59e421f7133ff59f76445f9223788e57ad1364593b6cffd21051e"
+      "bytes": 35996,
+      "sha256": "2cd447dfc0b78369506dd8799145b1988e3b019f849a4d129812f705ae431cf3"
     }
-  ],
-  "readiness": {
-    "status": "blocked_for_public_release",
-    "publicationAllowed": false,
-    "blockerCount": 2,
-    "warningCount": 3,
-    "indicatorCount": 45,
-    "seriesFiles": 45,
-    "profileFiles": 45,
-    "mapFiles": 45,
-    "observations": 2700,
-    "suppressedObservations": 93,
-    "profileObservations": 44160,
-    "profileEligibleIndicators": 30,
-    "mapValues": 2528,
-    "mapSuppressedValues": 1612,
-    "sihIndicators": 15,
-    "sihWithBrazilComparator": 15,
-    "missingDenominatorYears": [
-      2023
-    ],
-    "downloadSuppressionLeaks": 0,
-    "profileSuppressionLeaks": 0,
-    "profileMunicipalityCount": 92,
-    "checkedAt": "2026-08-03T18:43:25+00:00"
-  }
+  ]
 }
