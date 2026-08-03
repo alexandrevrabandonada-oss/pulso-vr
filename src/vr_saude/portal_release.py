@@ -24,9 +24,12 @@ REQUIRED_OBSERVATION_FIELDS = {
     "suppressed",
     "manifestRef",
 }
-PRIMARY_GEOGRAPHY = "rest_of_rj_excluding_vr"
-VOLTA_REDONDA_GEOGRAPHY = "volta_redonda"
 BRAZIL_GEOGRAPHY = "brazil_total"
+REQUIRED_PROFILE_FIELDS = {
+    "municipalityCode", "indicatorId", "period", "ageGroup", "sex", "count",
+    "denominator", "ratePer100k", "ciLow", "ciHigh", "suppressionStatus",
+    "dataStatus", "manifestRef",
+}
 
 
 def _utc_now() -> str:
@@ -85,6 +88,8 @@ def assess_portal_release(root: Path) -> dict[str, Any]:
     source_counts: dict[str, int] = {}
     status_counts: dict[str, int] = {}
     download_suppression_leaks: list[dict[str, Any]] = []
+    profile_suppression_leaks: list[dict[str, Any]] = []
+    profile_municipality_codes: set[str] = set()
     indicators_without_profiles: list[str] = []
     profile_eligible_indicators: list[str] = []
     indicators_without_maps: list[str] = []
@@ -141,6 +146,18 @@ def assess_portal_release(root: Path) -> dict[str, Any]:
             profile_payload = _read_json(profile_path)
             count = len(profile_payload.get("observations", []))
             profile_observations += count
+            statewide_profile = indicator.get("profileCoverage", {}).get("status") == "available"
+            for observation in profile_payload.get("observations", []) if statewide_profile else []:
+                missing = sorted(REQUIRED_PROFILE_FIELDS - observation.keys())
+                if missing:
+                    schema_missing.append({"indicatorId": indicator_id, "profileMissing": missing})
+                code = observation.get("municipalityCode")
+                if code:
+                    profile_municipality_codes.add(str(code))
+                if observation.get("suppressionStatus") == "suppressed":
+                    leaked = [field for field in ("count", "ratePer100k", "ciLow", "ciHigh") if observation.get(field) is not None]
+                    if leaked:
+                        profile_suppression_leaks.append({"indicatorId": indicator_id, "municipalityCode": code, "fields": leaked})
             if profile_required and count == 0:
                 indicators_without_profiles.append(indicator_id)
         elif profile_required:
@@ -267,6 +284,28 @@ def assess_portal_release(root: Path) -> dict[str, Any]:
                 "Interromper a release e remover os campos antes de disponibilizar o CSV.",
             )
         )
+    if profile_suppression_leaks:
+        findings.append(
+            _finding(
+                "profile-suppression-leak", "blocker",
+                "Um perfil público expõe uma célula protegida",
+                f"{len(profile_suppression_leaks)} células mantêm numerador, taxa ou intervalo.",
+                "Remover os campos derivados antes de gerar os JSON públicos.",
+            )
+        )
+    sim_profile_indicators = [
+        item for item in indicators
+        if item.get("source") == "SIM" and item.get("profileCoverage", {}).get("status") == "available"
+    ]
+    if sim_profile_indicators and len(profile_municipality_codes) != 92:
+        findings.append(
+            _finding(
+                "profile-municipality-coverage", "blocker",
+                "A cobertura municipal dos perfis não contém 92 códigos",
+                f"Foram encontrados {len(profile_municipality_codes)} códigos municipais nos perfis SIM.",
+                "Reconciliar a matriz municipal e regenerar os contratos públicos.",
+            )
+        )
 
     non_verified_sources = []
     source_catalog = root / "metadata" / "source_catalog.csv"
@@ -325,12 +364,15 @@ def assess_portal_release(root: Path) -> dict[str, Any]:
             "sihWithBrazilComparator": sih_with_brazil,
             "missingDenominatorYears": missing_denominators,
             "downloadSuppressionLeaks": len(download_suppression_leaks),
+            "profileSuppressionLeaks": len(profile_suppression_leaks),
+            "profileMunicipalityCount": len(profile_municipality_codes),
         },
         "checks": {
             "requiredObservationFields": sorted(REQUIRED_OBSERVATION_FIELDS),
             "schemaMissing": schema_missing,
             "unsuppressedSmallCells": unsuppressed_small_cells,
             "downloadSuppressionLeaks": download_suppression_leaks,
+            "profileSuppressionLeaks": profile_suppression_leaks,
             "mapStatusCounts": map_status_counts,
             "sourceCounts": source_counts,
             "dataStatusCounts": status_counts,

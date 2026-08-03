@@ -1,6 +1,6 @@
 import { AlertTriangle, Info } from 'lucide-react'
 
-export function StatusNotice({ provisional, source }: { provisional: boolean; source: 'SIH' | 'SIM' }) {
+export function StatusNotice({ provisional, source }: { provisional: boolean; source: 'SIH' | 'SIM' | 'SIA' }) {
   return (
     <div className="status-notices">
       {provisional ? (

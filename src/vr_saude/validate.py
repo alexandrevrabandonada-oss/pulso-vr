@@ -81,8 +81,8 @@ def validate_project(root: Path | None = None) -> list[str]:
     except Exception as exc:  # pragma: no cover - message is user-facing
         return [f"configuration load failed: {exc}"]
 
-    if not all(outcomes.get(section) for section in ("respiratory", "cardiovascular", "cardiorespiratory", "cancer")):
-        issues.append("outcomes.yml must define respiratory, cardiovascular, cardiorespiratory and cancer outcomes")
+    if not all(outcomes.get(section) for section in ("respiratory", "cardiovascular", "cardiorespiratory", "cancer", "neurological")):
+        issues.append("outcomes.yml must define respiratory, cardiovascular, cardiorespiratory, cancer and neurological outcomes")
     if periods.get("breaks", {}).get("respiratory_pandemic_start") != "2020-03":
         issues.append("periods.yml must define respiratory break at 2020-03")
     if periods.get("breaks", {}).get("oncology_line_start") != "2022-03":
@@ -91,8 +91,8 @@ def validate_project(root: Path | None = None) -> list[str]:
     if vr.get("ibge_code_7") != "3306305":
         issues.append("territories.yml must define Volta Redonda IBGE code 3306305")
     primary_rule = territories.get("comparators", {}).get("primary", {}).get("rule", "")
-    if "3306305" not in primary_rule or "except" not in primary_rule.lower():
-        issues.append("primary comparator must exclude Volta Redonda")
+    if "selected municipality" not in primary_rule.lower() or "denominator" not in primary_rule.lower():
+        issues.append("primary comparator must exclude the selected municipality from numerator and denominator")
     if sources.get("sources", {}).get("sih", {}).get("primary", {}).get("territory") != "residence in RJ":
         issues.append("SIH source must declare residence in RJ")
 

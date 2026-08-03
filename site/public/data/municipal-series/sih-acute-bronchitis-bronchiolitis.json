@@ -19,8 +19,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -36,8 +38,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -53,8 +57,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -70,8 +76,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -87,8 +95,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -104,8 +114,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -121,8 +133,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -138,8 +152,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -155,8 +171,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -172,8 +190,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -189,8 +209,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -206,8 +228,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -223,8 +247,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -240,8 +266,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -257,8 +285,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -274,8 +304,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -291,8 +323,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -308,8 +342,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -325,8 +361,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -342,8 +380,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -359,8 +399,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -376,8 +418,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -393,8 +437,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -410,8 +456,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -427,8 +475,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -444,8 +494,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -461,8 +513,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -478,8 +532,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -495,8 +551,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -512,8 +570,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -529,8 +589,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -546,8 +608,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -563,8 +627,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -580,8 +646,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -597,8 +665,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -614,8 +684,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -631,8 +703,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -648,8 +722,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -665,8 +741,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -682,8 +760,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -699,8 +779,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -716,8 +798,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -733,8 +817,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -750,8 +836,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -767,8 +855,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -784,8 +874,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -801,8 +893,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -818,8 +912,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -835,8 +931,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -852,8 +950,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -869,8 +969,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -886,8 +988,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -903,8 +1007,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -920,8 +1026,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -937,8 +1045,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -954,8 +1064,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -971,8 +1083,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -988,8 +1102,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -1005,8 +1121,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1022,8 +1140,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1039,8 +1159,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1056,8 +1178,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -1073,8 +1197,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1090,8 +1216,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1107,8 +1235,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -1124,8 +1254,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -1141,8 +1273,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1158,8 +1292,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1175,8 +1311,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1192,8 +1330,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1209,8 +1349,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1226,8 +1368,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1243,8 +1387,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1260,8 +1406,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1277,8 +1425,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1294,8 +1444,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -1311,8 +1463,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1328,8 +1482,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1345,8 +1501,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -1362,8 +1520,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -1379,8 +1539,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1396,8 +1558,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1413,8 +1577,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1430,8 +1596,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -1447,8 +1615,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1464,8 +1634,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1481,8 +1653,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -1498,8 +1672,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1515,8 +1691,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -1532,8 +1710,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIH",
@@ -1549,8 +1729,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1566,8 +1748,10 @@
       "dataStatus": "source_observed",
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sih_municipal_map_2022_manifest.json",
+      "geographyBasis": "residence",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     }
   ],
   "note": "Série municipal publicada somente para anos validados por residência; lacunas não são interpoladas."

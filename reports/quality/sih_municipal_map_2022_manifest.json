@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T14:14:10+00:00",
+  "generated_at": "2026-08-03T19:35:11+00:00",
   "status": "reconciled_with_annual_series",
   "year": 2022,
   "municipalities": 92,
@@ -18,13 +18,15 @@
     "cardiac_arrhythmia",
     "heart_failure",
     "cerebrovascular",
-    "cardiorespiratory_all"
+    "cardiorespiratory_all",
+    "alzheimer",
+    "dementias_all"
   ],
-  "rows": 1380,
-  "suppressed_cells_lt_5": 276,
+  "rows": 1564,
+  "suppressed_cells_lt_5": 432,
   "reconciliation": {},
   "output_path": "data\\processed\\sih_municipal_map_rates_2022.parquet",
-  "output_sha256": "1d557515c1f220252065201921814eac6c7e78b81c951336e1a967750bb8f628",
+  "output_sha256": "7a7b024925f8c3250932ff09a5dcc1ec4d41365909d3b07ac322f9adbafc1af1",
   "rules": {
     "residence": "SIH TabNet NR/RJ por município de residência",
     "rate": "AIHs / população residente × 100.000",

@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAt": "2026-08-03T17:06:00+00:00",
-  "releaseId": "beta-cardiorespiratorio-integrado",
-  "status": "public_release_ready",
-  "publicationAllowed": true,
+  "checkedAt": "2026-08-03T18:43:25+00:00",
+  "releaseId": "statewide-profiles-preview",
+  "status": "blocked_for_public_release",
+  "publicationAllowed": false,
   "summary": {
-    "blockerCount": 0,
+    "blockerCount": 2,
     "warningCount": 3,
     "indicatorCount": 45,
     "seriesFiles": 45,
@@ -13,7 +13,7 @@
     "mapFiles": 45,
     "observations": 2700,
     "suppressedObservations": 93,
-    "profileObservations": 1440,
+    "profileObservations": 44160,
     "profileEligibleIndicators": 30,
     "mapValues": 2528,
     "mapSuppressedValues": 1612,
@@ -22,7 +22,9 @@
     "missingDenominatorYears": [
       2023
     ],
-    "downloadSuppressionLeaks": 0
+    "downloadSuppressionLeaks": 0,
+    "profileSuppressionLeaks": 0,
+    "profileMunicipalityCount": 92
   },
   "checks": {
     "requiredObservationFields": [
@@ -44,6 +46,7 @@
     "schemaMissing": [],
     "unsuppressedSmallCells": [],
     "downloadSuppressionLeaks": [],
+    "profileSuppressionLeaks": [],
     "mapStatusCounts": {
       "validated_sih_2022_municipal_residence_rates_crude": 14,
       "validated_sih_2025_municipal_residence_rates_crude": 1,
@@ -57,7 +60,10 @@
       "source_observed": 2640,
       "provisional": 60
     },
-    "pendingPublicationGates": [],
+    "pendingPublicationGates": [
+      "accessibilityReview",
+      "epidemiologyReview"
+    ],
     "nonVerifiedSources": [
       {
         "sourceId": "sih_legacy_ftp",
@@ -113,6 +119,20 @@
   "indicatorsWithoutMaps": [],
   "findings": [
     {
+      "id": "release-not-public",
+      "severity": "blocker",
+      "title": "A release ainda está marcada como beta técnica",
+      "detail": "status=technical_beta_not_for_public_release",
+      "action": "Concluir as revisões e mudar o status somente após aprovação formal."
+    },
+    {
+      "id": "review-gates-pending",
+      "severity": "blocker",
+      "title": "Há portões de revisão pendentes",
+      "detail": "accessibilityReview, epidemiologyReview",
+      "action": "Registrar revisão epidemiológica, acessibilidade e proveniência no manifesto."
+    },
+    {
       "id": "denominator-gaps",
       "severity": "warning",
       "title": "Existem anos sem denominador oficial",
@@ -135,6 +155,8 @@
     }
   ],
   "nextActions": [
+    "Concluir as revisões e mudar o status somente após aprovação formal.",
+    "Registrar revisão epidemiológica, acessibilidade e proveniência no manifesto.",
     "Manter esses anos como lacunas; para 2023, monitorar eventual publicação oficial compatível e regenerar as séries somente após validação, sem interpolar.",
     "Resolver ou marcar claramente como fonte futura fora do escopo da release.",
     "Manter o rótulo provisório e indicar a data de atualização da fonte."

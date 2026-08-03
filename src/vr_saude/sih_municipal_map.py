@@ -1,3 +1,4 @@
+
 from __future__ import annotations
 
 import html
@@ -35,6 +36,31 @@ QUERIES = {
     "cerebrovascular": ("lista", ["177", "178", "179", "180"]),
     "cardiorespiratory_all": ("chapter", ["9", "10"]),
 }
+NEUROLOGICAL_PATTERNS = {
+    "alzheimer": ("alzheimer", "g30", "f00.0", "f00.1", "f00.2"),
+    "dementias_all": ("alzheimer", "demência", "demencia", "g30", "f00", "f01", "f02", "f03"),
+}
+
+
+def _diagnostic_query(definition: str, outcome_id: str) -> tuple[str, list[str]]:
+    patterns = NEUROLOGICAL_PATTERNS.get(outcome_id)
+    if patterns is None:
+        return QUERIES[outcome_id]
+    normalized_definition = html.unescape(definition)
+    options = re.findall(
+        r'<OPTION\s+VALUE="([^"]+)"[^>]*>\s*(.*?)(?=\n\s*<OPTION|\n\s*</SELECT>)',
+        normalized_definition,
+        re.IGNORECASE | re.DOTALL,
+    )
+    selected = [
+        value for value, label in options
+        if any(pattern in re.sub(r"\s+", " ", label).lower() for pattern in patterns)
+    ]
+    if not selected:
+        raise ValueError(
+            f"SIH TabNet definition has no validated Alzheimer/dementia diagnostic options for {outcome_id}"
+        )
+    return "lista", sorted(set(selected))
 
 
 def _population(root: Path, year: int) -> pd.DataFrame:
@@ -71,8 +97,36 @@ def _raw_path(root: Path, year: int, outcome_id: str) -> Path:
     return root / "data" / "raw" / f"sih_tabnet_nrrj_municipal_map_v3_{year}_{outcome_id}.html"
 
 
-def _query(root: Path, definition: str, year: int, outcome_id: str, timeout: int = 60) -> tuple[str, dict[str, int], Path]:
-    kind, selectors = QUERIES[outcome_id]
+def _write_neurological_unavailable(root: Path, year: int, outcome_ids: list[str], reason: str) -> None:
+    manifest = {
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "status": "unavailable_no_validated_diagnostic_dimension",
+        "year": year,
+        "outcome_ids": [outcome_id for outcome_id in outcome_ids if outcome_id in NEUROLOGICAL_PATTERNS],
+        "geography_basis": "residence",
+        "measure": "hospitalization",
+        "notes": [
+            "The current SIH TabNet definition did not expose validated Alzheimer/dementia diagnostic options.",
+            "No procedure or generic hospitalization category was substituted for a diagnosis.",
+            "No residence-based SIH rate is published until the diagnostic dimension is validated.",
+        ],
+        "reason": reason,
+    }
+    manifest_path = root / "reports" / "quality" / "sih_neurological_manifest.json"
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    report_path = root / "reports" / "technical" / "sih_alzheimer_demencias.md"
+    report_path.write_text(
+        "# Internações SIH por Alzheimer e demências\n\n"
+        "A publicação está indisponível nesta aquisição porque a definição TabNet consultada não expôs "
+        "uma dimensão diagnóstica validável para os códigos G30.x/F00.x e F01–F03. "
+        "Não foram usados procedimentos ou categorias genéricas como substitutos.\n",
+        encoding="utf-8",
+    )
+
+
+def _query(root: Path, definition: str, year: int, outcome_id: str, query: tuple[str, list[str]], timeout: int = 60) -> tuple[str, dict[str, int], Path]:
+    kind, selectors = query
     fields: list[tuple[str, str]] = [
         ("Linha", "Município"),
         ("Coluna", "--Não-Ativa--"),
@@ -127,15 +181,22 @@ def build_sih_municipal_map(
     if workers < 1 or workers > 8:
         raise ValueError("workers must be between 1 and 8")
     selected_outcomes = list(QUERIES) if not outcome_ids else list(dict.fromkeys(outcome_ids))
-    unknown = sorted(set(selected_outcomes) - set(QUERIES))
+    known = set(QUERIES) | set(NEUROLOGICAL_PATTERNS)
+    unknown = sorted(set(selected_outcomes) - known)
     if unknown:
         raise ValueError(f"unknown SIH municipal outcomes: {', '.join(unknown)}")
     definition = urllib.request.urlopen(urllib.request.Request(SIH_RESIDENCE_DEF_URL, headers={"User-Agent": USER_AGENT}), timeout=60).read().decode("latin1")
+    try:
+        queries = {outcome_id: _diagnostic_query(definition, outcome_id) for outcome_id in selected_outcomes}
+    except ValueError as exc:
+        if any(outcome_id in NEUROLOGICAL_PATTERNS for outcome_id in selected_outcomes):
+            _write_neurological_unavailable(root, year, selected_outcomes, str(exc))
+        raise
     population = _population(root, year)
     futures = {}
     with ThreadPoolExecutor(max_workers=workers) as executor:
         for outcome_id in selected_outcomes:
-            futures[executor.submit(_query, root, definition, year, outcome_id)] = outcome_id
+            futures[executor.submit(_query, root, definition, year, outcome_id, queries[outcome_id])] = outcome_id
         results = {}
         for future in as_completed(futures):
             outcome_id = futures[future]

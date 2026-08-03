@@ -53,4 +53,10 @@ describe('deriveExplorerState', () => {
     expect(explorerStateSearch(state)).toContain('&ano_mapa=2022')
     expect(deriveExplorerState('indicador=sim-lung&ano_mapa=ontem', indicators).mapPeriod).toBeNull()
   })
+
+  it('does not silently select Volta Redonda without a municipality parameter', () => {
+    const state = deriveExplorerState('indicador=sim-lung', indicators)
+    expect(state.municipalityCode).toBeNull()
+    expect(explorerStateSearch(state)).not.toContain('municipio=3306305')
+  })
 })

@@ -8,7 +8,7 @@ import pandas as pd
 
 from .config import load_config
 from .mortality import period_status
-from .outcomes import _matches_cid
+from .outcomes import OUTCOME_SECTIONS, _matches_cid
 from .provenance import sha256_file
 from .rates import RATE_MULTIPLIER, poisson_count_interval
 
@@ -17,7 +17,7 @@ def _definitions(root: Path) -> list[dict[str, object]]:
     config = load_config("outcomes.yml", root)
     return [
         item
-        for section in ("respiratory", "cardiovascular", "cardiorespiratory", "cancer")
+        for section in OUTCOME_SECTIONS
         for item in config.get(section, [])
         if "SIM" in item.get("source", []) and item.get("code_ranges")
     ]

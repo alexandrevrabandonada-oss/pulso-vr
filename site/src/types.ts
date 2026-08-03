@@ -1,13 +1,38 @@
-export type Theme = 'respiratory' | 'cardiovascular' | 'cardiorespiratory' | 'cancer'
-export type MetricKind = 'crude_rate_per_100k' | 'count'
+export type Theme = 'respiratory' | 'cardiovascular' | 'cardiorespiratory' | 'cancer' | 'neurological'
+export type MetricKind = 'crude_rate_per_100k' | 'age_sex_standardized_rate_per_100k' | 'count'
+export type SuppressionStatus = 'published' | 'suppressed' | 'aggregated' | 'unavailable'
+export type ShareTemplate = 'answer' | 'evolution' | 'map'
+export type ShareFormat = 'og' | 'feed' | 'story'
+export type ShareTarget = 'native' | 'whatsapp' | 'facebook' | 'instagram' | 'copy' | 'download'
+export type ShareRoute = 'municipality' | 'explorer' | 'profile' | 'indicator'
+
+export interface ShareContext {
+  municipalityCode?: string
+  indicatorId?: string
+  period?: string
+  metricKind?: MetricKind
+  template: ShareTemplate
+  format: ShareFormat
+  route?: ShareRoute
+}
+
+export interface CoverageSummary {
+  municipalityCount: number
+  publishableMunicipalityCount: number
+  firstPeriod: string | null
+  lastPeriod: string | null
+  periods: string[]
+  missingPeriods: string[]
+  provisionalPeriods: string[]
+}
 
 export interface Indicator {
   id: string
-  source: 'SIH' | 'SIM'
+  source: 'SIH' | 'SIM' | 'SIA'
   outcomeId: string
   label: string
   theme: Theme
-  measure: 'hospitalization' | 'mortality'
+  measure: 'hospitalization' | 'mortality' | 'ambulatory_production'
   measureLabel: string
   definition: string
   unit: string
@@ -19,10 +44,31 @@ export interface Indicator {
   yearEnd: number
   municipalPeriods?: string[]
   standardization: string
+  geographyBasis?: 'residence' | 'establishment'
+  standardPopulation?: string | null
+  standardizationDimensions?: string[]
+  standardizedRateAvailability?: string
+  metricPeriod?: Partial<Record<MetricKind, string>>
+  unavailableReason?: string | null
   mapStatus: string
   profileAvailability?: 'available_2022_sim_age_sex' | 'not_applicable_current_release' | string
   allowsConclusion: string
   doesNotAllowConclusion: string
+  synonyms?: string[]
+  geographicCoverage?: Pick<CoverageSummary, 'municipalityCount' | 'publishableMunicipalityCount'>
+  temporalCoverage?: Omit<CoverageSummary, 'municipalityCount' | 'publishableMunicipalityCount'>
+  profileCoverage?: {
+    status: 'available' | 'pilot' | 'unavailable'
+    municipalityCount: number
+    publishableMunicipalityCount: number
+    periods: string[]
+    ageGroups: string[]
+    sexes: string[]
+    unavailableReason?: string | null
+  }
+  comparisonAvailability?: { restOfState: boolean; brazil: boolean; reason?: string }
+  updatedAt?: string
+  methodologyUrl?: string
 }
 
 export interface Catalog {
@@ -30,17 +76,40 @@ export interface Catalog {
   geographies: Record<string, string>
   indicators: Indicator[]
   futureCapabilities: string[]
+  discovery?: { generatedAt: string; municipalityCount: number }
+}
+
+export interface MunicipalitySummaryItem {
+  indicatorId: string
+  period: string | null
+  metricKind?: MetricKind | null
+  value: number | null
+  count: number | null
+  unit: string
+  dataStatus: string
+  suppressionStatus: SuppressionStatus
+  restOfStateValue: number | null
+  brazilValue: number | null
+  comparisonAvailable: boolean
+  unavailableReason?: string | null
+}
+
+export interface MunicipalitySummaryPayload {
+  schemaVersion: string
+  generatedAt: string
+  municipalityCode: string
+  items: MunicipalitySummaryItem[]
 }
 
 export interface Observation {
-  source: 'SIH' | 'SIM'
+  source: 'SIH' | 'SIM' | 'SIA'
   outcomeId: string
   geographyId: string
   period: string
   metricKind: string
   value: number | null
   count: number | null
-  denominator: number
+  denominator: number | null
   ciLow: number | null
   ciHigh: number | null
   dataStatus: string
@@ -48,11 +117,23 @@ export interface Observation {
   manifestRef: string
   suppressed: boolean
   suppressionReason: string | null
+  suppressionStatus?: SuppressionStatus
 }
 
-export interface ProfileObservation extends Observation {
+export interface ProfileObservation {
+  municipalityCode: string
+  indicatorId: string
+  period: string
   ageGroup: string
   sex: string
+  count: number | null
+  denominator: number | null
+  ratePer100k: number | null
+  ciLow: number | null
+  ciHigh: number | null
+  suppressionStatus: 'published' | 'suppressed' | 'not_applicable' | 'unavailable'
+  dataStatus: string
+  manifestRef: string
 }
 
 export interface SeriesPayload {
@@ -72,23 +153,7 @@ export interface ProfilePayload {
   observations: ProfileObservation[]
 }
 
-export interface MapValue {
-  source: 'SIH' | 'SIM'
-  outcomeId: string
-  geographyId: string
-  period: string
-  metricKind: string
-  value: number | null
-  count: number | null
-  denominator: number
-  ciLow: number | null
-  ciHigh: number | null
-  dataStatus: string
-  periodStatus: string
-  manifestRef: string
-  suppressed: boolean
-  suppressionReason: string | null
-}
+export type MapValue = Observation
 
 export interface MapPayload {
   schemaVersion: string
@@ -97,6 +162,9 @@ export interface MapPayload {
   period?: string
   values: MapValue[]
   note: string
+  metricKind?: MetricKind
+  alternatives?: Array<{ metricKind: MetricKind; period: string; values: MapValue[] }>
+  mapScale?: { domain: [number, number] | null; method: 'fixed_indicator_metric'; unit: string; temporalPolicy: 'comparable_across_available_periods' }
 }
 
 export interface Release {

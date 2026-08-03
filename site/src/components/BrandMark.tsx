@@ -1,6 +1,6 @@
 export function BrandMark({ compact = false }: { compact?: boolean }) {
   return (
-    <span className="brand" aria-label="Observatório de doenças cardiorrespiratórias, respiratórias e câncer — Rio de Janeiro">
+    <span className="brand" aria-label="Observatório Estadual de Saúde do Rio de Janeiro">
       <svg className="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
         <circle cx="32" cy="32" r="19" fill="none" stroke="currentColor" strokeWidth="8" />
         <circle cx="32" cy="32" r="6" fill="#e3530f" />
@@ -8,7 +8,7 @@ export function BrandMark({ compact = false }: { compact?: boolean }) {
       </svg>
       <span className="brand__text">
         <span className="brand__name">Observatório</span>
-        {compact ? null : <span className="brand__descriptor">Doenças cardiorrespiratórias, respiratórias e câncer — RJ</span>}
+        {compact ? null : <span className="brand__descriptor">Estadual de Saúde do RJ</span>}
       </span>
     </span>
   )

@@ -1,3 +1,4 @@
+
 from __future__ import annotations
 
 import json
@@ -45,6 +46,7 @@ AGE_CODE_TO_GROUP = {
 }
 AGE_CATEGORY_CODES = list(AGE_CODE_TO_GROUP)
 API_ROOT = "https://apisidra.ibge.gov.br/values/t/9514"
+BRAZIL_STANDARD_RAW = "ibge_sidra_9514_age_sex_brazil_2022.json"
 
 
 def _municipality_codes(root: Path) -> list[str]:
@@ -74,6 +76,51 @@ def _query_url(codes: list[str]) -> str:
         f"{API_ROOT}/n6/{locality}/p/{YEAR}/v/{VARIABLE_ID}"
         f"/c2/{sexes}/c286/113635/c287/{ages}"
     )
+
+
+def _brazil_query_url() -> str:
+    sexes = "4,5"
+    ages = ",".join(AGE_CATEGORY_CODES)
+    return f"{API_ROOT}/n1/1/p/{YEAR}/v/{VARIABLE_ID}/c2/{sexes}/c286/113635/c287/{ages}"
+
+
+def acquire_brazil_age_sex_population(root: Path) -> Path:
+    """Acquire the Brazil 2022 age-sex standard used for direct standardization."""
+    return download_public_file(
+        root,
+        source_id="ibge_sidra_9514_age_sex_brazil_2022",
+        url=_brazil_query_url(),
+        filename=BRAZIL_STANDARD_RAW,
+        period=str(YEAR),
+        territory="Brasil",
+    )
+
+
+def harmonize_brazil_age_sex_population(root: Path) -> Path:
+    raw_path = root / "data" / "raw" / BRAZIL_STANDARD_RAW
+    if not raw_path.exists():
+        raise FileNotFoundError(f"Brazil age-sex raw payload is missing: {raw_path}")
+    frame = _read_payload(raw_path, root)
+    expected = len(AGE_GROUPS) * len(SEX_CODES)
+    if len(frame) != expected or frame[["age_group", "sex"]].duplicated().any():
+        raise ValueError(f"Brazil age-sex standard must contain {expected} unique cells")
+    output = root / "data" / "processed" / "population_age_sex_brazil_2022.parquet"
+    output.parent.mkdir(parents=True, exist_ok=True)
+    frame.to_parquet(output, index=False)
+    manifest = {
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "status": "validated_census_2022_brazil_age_sex_standard",
+        "year": YEAR,
+        "rows": int(len(frame)),
+        "population": int(frame["population"].sum()),
+        "output_path": str(output.relative_to(root)),
+        "output_sha256": sha256_file(output),
+        "input_file": {"path": str(raw_path.relative_to(root)), "sha256": sha256_file(raw_path)},
+    }
+    manifest_path = root / "reports" / "quality" / "population_age_sex_brazil_manifest.json"
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return output
 
 
 def acquire_age_sex_population(

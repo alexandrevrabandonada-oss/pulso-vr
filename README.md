@@ -1,10 +1,10 @@
-# vr_saude_ambiental
+# Observatório Estadual de Saúde do Rio de Janeiro
 
 Estudo reproduzível e observatório estadual sobre internações respiratórias e
 cardiovasculares, pandemia, poluição, mortalidade por câncer, assistência
-oncológica e exposição ocupacional no Rio de Janeiro. Volta Redonda permanece
-como município de referência; o portal apresenta também os 92 municípios do
-estado quando houver dados municipais validados.
+oncológica e exposição ocupacional no Rio de Janeiro. Os 92 municípios ocupam
+a mesma posição na experiência pública quando houver dados validados. Volta
+Redonda permanece apenas como recorte histórico da pesquisa.
 
 ## Status da primeira execução
 
@@ -20,8 +20,8 @@ SIVEP, mas nenhuma hipótese causal é considerada confirmada.
 ## Comparação e períodos
 
 A comparação primária é o município selecionado versus o restante do Estado do
-Rio, excluindo Volta Redonda quando essa é a referência; para a visão estadual,
-cada município é comparado ao agregado estadual equivalente. Comparações
+Rio, sempre excluindo dinamicamente a cidade selecionada do numerador e do
+denominador agregados. Não se usa média simples das taxas municipais. Comparações
 secundárias incluem o Médio Paraíba sem Volta Redonda, municípios comparáveis
 definidos a priori e o Brasil quando numerador e denominador forem equivalentes.
 O código IBGE de Volta Redonda usado no SIDRA é `3306305`.
@@ -78,6 +78,7 @@ python scripts/run_cli.py sivep-monthly
 python scripts/run_cli.py sim-mortality-rates
 python scripts/run_cli.py sim-age-sex-profile
 python scripts/run_cli.py sim-age-sex-rates
+python scripts/run_cli.py sim-municipal-profiles
 python scripts/run_cli.py sim-municipal-map
 python scripts/run_cli.py portal-data --release-id beta-local --acquire-geography
 python scripts/run_cli.py portal-preflight
@@ -101,7 +102,8 @@ npm test
 npm run build
 ```
 
-A versão atual está aprovada para publicação estática, com avisos explícitos.
+A versão em desenvolvimento permanece bloqueada para publicação até uma nova
+validação manual estadual de teclado, leitor de tela, zoom e conteúdo epidemiológico.
 Mortalidade por câncer vem do SIM e não é incidência; o comparador Brasil está
 disponível para as séries SIM nacionais.
 O comparador Brasil do SIH foi adquirido pela tabela oficial NRBR, agregado por
@@ -114,17 +116,25 @@ auditável; `sih-municipal-map` registra a consulta, os hashes e a reconciliaç�
 O pré-voo de lançamento grava o diagnóstico em
 `reports/quality/portal_release_preflight.json`,
 `reports/technical/portal_lancamento.md` e no download público
-`site/public/data/launch-readiness.json`. A release atual está aprovada para
-publicação estática, com três avisos explícitos; os mapas municipais estão
-disponíveis em snapshot 2022. O módulo de perfis cobre os 30 indicadores SIM com dados de
-2022; SIH não é apresentado como perfil nesta versão. O ano 2010 usa a
+`site/public/data/launch-readiness.json`. Os mapas municipais estão disponíveis
+nos anos validados. O módulo de perfis municipais cobre os 32 indicadores SIM
+do catálogo com taxas específicas de 2022, supressão primária e complementar;
+SIH não é apresentado como perfil nesta versão. O ano 2010 usa a
 população residente do Censo 2010; 2023 permanece como lacuna de denominador,
 sem interpolação.
+
+A área “Saúde neurológica” inclui mortalidade SIM por Alzheimer e pelo conjunto
+Alzheimer e outras demências, internações/AIHs SIH em 2022 e perfis SIM de
+2022. A comparação principal usa taxa diretamente padronizada por idade e sexo
+pela população do Brasil no Censo 2022; a evolução permanece bruta, com 2023
+como lacuna real. Os indicadores se sobrepõem e não devem ser somados. SIA
+permanece explicitamente indisponível por falta de dimensão diagnóstica e
+residência validadas.
 O inventário resumido de lacunas e critérios de fechamento está em
 `reports/technical/lacunas_dados_portal.md`.
-As revisões epidemiológica e de acessibilidade, aprovadas pelo responsável do
-projeto com base nas evidências técnicas, estão em `reports/reviews/`. O
-registro da decisão está em `reports/reviews/release_signoff.json`.
+As revisões anteriores estão em `reports/reviews/`, mas mudanças na jornada
+municipal invalidam o aceite de acessibilidade até nova evidência manual. O
+registro histórico da decisão permanece em `reports/reviews/release_signoff.json`.
 
 Cada arquivo baixado permanece em `data/raw/`, recebe um arquivo `.sha256` e
 é registrado em `metadata/extraction_log.csv`. A aquisição nunca substitui um
@@ -247,3 +257,15 @@ cobertura só será liberada depois de reconciliar os totais com a fonte oficial
 Ainda faltam, entre outros, dados
 históricos de qualidade do ar em resolução diária, registros de câncer,
 cobertura de planos privados e dados ocupacionais legalmente acessíveis.
+
+## Identidade e experiência pública
+
+O portal usa um sistema visual expressivo baseado em amarelo, preto, branco e
+laranja. Superfícies translúcidas ficam restritas à navegação, busca, abas e
+overlays; valores, comparações, gráficos, tabelas e metodologia permanecem em
+superfícies opacas e de alto contraste. A interface deve funcionar sem
+`backdrop-filter` e respeitar `prefers-reduced-motion`.
+
+Observatório Estadual de Saúde do RJ e VR Abandonada são apresentados como
+realização conjunta. Esse co-branding é institucional e nunca substitui a
+identificação das fontes epidemiológicas, da proveniência e da metodologia.

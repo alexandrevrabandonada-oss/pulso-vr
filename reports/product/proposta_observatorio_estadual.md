@@ -97,7 +97,7 @@ o valor suprimido como zero.
 
 ### Etapa analítica
 
-- taxas específicas e padronizadas por idade;
+- taxas específicas municipais por idade e sexo em 2022; taxas padronizadas permanecem uma etapa posterior;
 - perfis municipais por sexo e grupos etários;
 - camadas assistenciais de câncer separadas de mortalidade;
 - integração documentada com qualidade do ar, meteorologia e vigilância de SRAG.

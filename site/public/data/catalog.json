@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "geographies": {
     "volta_redonda": "Volta Redonda",
     "rest_of_rj_excluding_vr": "RJ sem Volta Redonda",
@@ -34,13 +34,51 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "bronquite aguda e bronquiolite aguda"
+      ],
+      "updatedAt": "2026-08-03T21:09:33+00:00",
+      "methodologyUrl": "/indicadores/sih-acute-bronchitis-bronchiolitis",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 67
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-acute-myocardial-infarction",
@@ -69,13 +107,54 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "ataque cardíaco",
+        "iam",
+        "infarto",
+        "infarto agudo do miocárdio"
+      ],
+      "updatedAt": "2026-08-03T21:09:33+00:00",
+      "methodologyUrl": "/indicadores/sih-acute-myocardial-infarction",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 86
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-asthma",
@@ -104,13 +183,51 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "asma"
+      ],
+      "updatedAt": "2026-08-03T21:09:33+00:00",
+      "methodologyUrl": "/indicadores/sih-asthma",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 57
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-cardiac-arrhythmia",
@@ -139,13 +256,51 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "transtornos de condução e arritmias cardíacas"
+      ],
+      "updatedAt": "2026-08-03T21:09:33+00:00",
+      "methodologyUrl": "/indicadores/sih-cardiac-arrhythmia",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 79
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-cardio-all",
@@ -174,13 +329,51 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "todas as doenças do aparelho circulatório"
+      ],
+      "updatedAt": "2026-08-03T21:09:33+00:00",
+      "methodologyUrl": "/indicadores/sih-cardio-all",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-cardiorespiratory-all",
@@ -210,13 +403,51 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "todas as doenças cardiorrespiratórias"
+      ],
+      "updatedAt": "2026-08-03T21:09:33+00:00",
+      "methodologyUrl": "/indicadores/sih-cardiorespiratory-all",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-cerebrovascular",
@@ -245,13 +476,51 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "doenças cerebrovasculares"
+      ],
+      "updatedAt": "2026-08-03T21:09:33+00:00",
+      "methodologyUrl": "/indicadores/sih-cerebrovascular",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 91
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-copd",
@@ -280,13 +549,51 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "bronquite enfisema e outr doenç pulm obstr crôn"
+      ],
+      "updatedAt": "2026-08-03T21:09:33+00:00",
+      "methodologyUrl": "/indicadores/sih-copd",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 75
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-heart-failure",
@@ -315,13 +622,51 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "insuficiência cardíaca"
+      ],
+      "updatedAt": "2026-08-03T21:09:33+00:00",
+      "methodologyUrl": "/indicadores/sih-heart-failure",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 88
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-hypertension",
@@ -350,13 +695,51 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "doenças hipertensivas"
+      ],
+      "updatedAt": "2026-08-03T21:09:33+00:00",
+      "methodologyUrl": "/indicadores/sih-hypertension",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 77
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-ischemic-heart-disease",
@@ -385,13 +768,51 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "doenças isquêmicas do coração"
+      ],
+      "updatedAt": "2026-08-03T21:09:33+00:00",
+      "methodologyUrl": "/indicadores/sih-ischemic-heart-disease",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-pneumoconiosis",
@@ -420,13 +841,51 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "pneumoconiose"
+      ],
+      "updatedAt": "2026-08-03T21:09:33+00:00",
+      "methodologyUrl": "/indicadores/sih-pneumoconiosis",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 4
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-pneumonia",
@@ -455,10 +914,22 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sih_2025_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "infecção pulmonar",
+        "pneumonia"
+      ],
+      "updatedAt": "2026-08-03T21:09:33+00:00",
+      "methodologyUrl": "/indicadores/sih-pneumonia",
       "municipalPeriods": [
         "2008",
         "2009",
@@ -477,7 +948,54 @@
         "2022",
         "2024",
         "2025"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2008",
+        "lastPeriod": "2025",
+        "periods": [
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2024",
+          "2025"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": [
+          "2025"
+        ]
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-pulmonary-embolism",
@@ -506,13 +1024,51 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "embolia pulmonar"
+      ],
+      "updatedAt": "2026-08-03T21:09:33+00:00",
+      "methodologyUrl": "/indicadores/sih-pulmonary-embolism",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 21
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-resp-all",
@@ -541,13 +1097,390 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "10 doenças do aparelho respiratório"
+      ],
+      "updatedAt": "2026-08-03T21:09:33+00:00",
+      "methodologyUrl": "/indicadores/sih-resp-all",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
+    },
+    {
+      "id": "sih-alzheimer",
+      "source": "SIH",
+      "outcomeId": "alzheimer",
+      "label": "Doença de Alzheimer",
+      "theme": "neurological",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "G30",
+        "F00.0-F00.2"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "3300100",
+        "3300159",
+        "3300209",
+        "3300225",
+        "3300233",
+        "3300258",
+        "3300308",
+        "3300407",
+        "3300456",
+        "3300506",
+        "3300605",
+        "3300704",
+        "3300803",
+        "3300902",
+        "3300936",
+        "3300951",
+        "3301009",
+        "3301108",
+        "3301157",
+        "3301207",
+        "3301306",
+        "3301405",
+        "3301504",
+        "3301603",
+        "3301702",
+        "3301801",
+        "3301850",
+        "3301876",
+        "3301900",
+        "3302007",
+        "3302056",
+        "3302106",
+        "3302205",
+        "3302254",
+        "3302270",
+        "3302304",
+        "3302403",
+        "3302452",
+        "3302502",
+        "3302601",
+        "3302700",
+        "3302809",
+        "3302858",
+        "3302908",
+        "3303005",
+        "3303104",
+        "3303203",
+        "3303302",
+        "3303401",
+        "3303500",
+        "3303609",
+        "3303708",
+        "3303807",
+        "3303856",
+        "3303906",
+        "3303955",
+        "3304003",
+        "3304102",
+        "3304110",
+        "3304128",
+        "3304144",
+        "3304151",
+        "3304201",
+        "3304300",
+        "3304409",
+        "3304508",
+        "3304524",
+        "3304557",
+        "3304607",
+        "3304706",
+        "3304755",
+        "3304805",
+        "3304904",
+        "3305000",
+        "3305109",
+        "3305133",
+        "3305158",
+        "3305208",
+        "3305307",
+        "3305406",
+        "3305505",
+        "3305554",
+        "3305604",
+        "3305703",
+        "3305752",
+        "3305802",
+        "3305901",
+        "3306008",
+        "3306107",
+        "3306156",
+        "3306206",
+        "3306305",
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2022,
+      "yearEnd": 2022,
+      "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "alzheimer",
+        "demência de alzheimer",
+        "doença de alzheimer",
+        "perda de memória"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sih-alzheimer",
+      "municipalPeriods": [
+        "2022"
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 10
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": false,
+        "reason": "national_standardized_equivalent_unavailable"
+      }
+    },
+    {
+      "id": "sih-dementias-all",
+      "source": "SIH",
+      "outcomeId": "dementias_all",
+      "label": "Doença de Alzheimer e outras demências",
+      "theme": "neurological",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "G30",
+        "F00-F03"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "3300100",
+        "3300159",
+        "3300209",
+        "3300225",
+        "3300233",
+        "3300258",
+        "3300308",
+        "3300407",
+        "3300456",
+        "3300506",
+        "3300605",
+        "3300704",
+        "3300803",
+        "3300902",
+        "3300936",
+        "3300951",
+        "3301009",
+        "3301108",
+        "3301157",
+        "3301207",
+        "3301306",
+        "3301405",
+        "3301504",
+        "3301603",
+        "3301702",
+        "3301801",
+        "3301850",
+        "3301876",
+        "3301900",
+        "3302007",
+        "3302056",
+        "3302106",
+        "3302205",
+        "3302254",
+        "3302270",
+        "3302304",
+        "3302403",
+        "3302452",
+        "3302502",
+        "3302601",
+        "3302700",
+        "3302809",
+        "3302858",
+        "3302908",
+        "3303005",
+        "3303104",
+        "3303203",
+        "3303302",
+        "3303401",
+        "3303500",
+        "3303609",
+        "3303708",
+        "3303807",
+        "3303856",
+        "3303906",
+        "3303955",
+        "3304003",
+        "3304102",
+        "3304110",
+        "3304128",
+        "3304144",
+        "3304151",
+        "3304201",
+        "3304300",
+        "3304409",
+        "3304508",
+        "3304524",
+        "3304557",
+        "3304607",
+        "3304706",
+        "3304755",
+        "3304805",
+        "3304904",
+        "3305000",
+        "3305109",
+        "3305133",
+        "3305158",
+        "3305208",
+        "3305307",
+        "3305406",
+        "3305505",
+        "3305554",
+        "3305604",
+        "3305703",
+        "3305752",
+        "3305802",
+        "3305901",
+        "3306008",
+        "3306107",
+        "3306156",
+        "3306206",
+        "3306305",
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2022,
+      "yearEnd": 2022,
+      "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
+      "synonyms": [
+        "alzheimer",
+        "demência",
+        "demências",
+        "doença de alzheimer e outras demências",
+        "perda de memória"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sih-dementias-all",
+      "municipalPeriods": [
+        "2022"
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 18
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "municipalityCount": 0,
+        "publishableMunicipalityCount": 0,
+        "periods": [],
+        "ageGroups": [],
+        "sexes": [],
+        "unavailableReason": "municipal_profile_not_validated_for_source"
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": false,
+        "reason": "national_standardized_equivalent_unavailable"
+      }
     },
     {
       "id": "sim-acute-bronchitis-bronchiolitis",
@@ -557,7 +1490,7 @@
       "theme": "respiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -576,14 +1509,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "bronquite e bronquiolite agudas"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-acute-bronchitis-bronchiolitis",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 3
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 1,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-acute-myocardial-infarction",
@@ -593,7 +1581,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -612,14 +1600,72 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "ataque cardíaco",
+        "iam",
+        "infarto",
+        "infarto agudo do miocárdio"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-acute-myocardial-infarction",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 90
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 62,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-all-malignant-neoplasms",
@@ -629,7 +1675,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -648,14 +1694,289 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "cancer",
+        "câncer",
+        "neoplasias",
+        "todas as neoplasias malignas"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-all-malignant-neoplasms",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 78,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
+    },
+    {
+      "id": "sim-alzheimer",
+      "source": "SIM",
+      "outcomeId": "alzheimer",
+      "label": "Doença de Alzheimer",
+      "theme": "neurological",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "G30",
+        "F00.0-F00.2"
+      ],
+      "availableMetrics": [
+        "age_sex_standardized_rate_per_100k",
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "3300100",
+        "3300159",
+        "3300209",
+        "3300225",
+        "3300233",
+        "3300258",
+        "3300308",
+        "3300407",
+        "3300456",
+        "3300506",
+        "3300605",
+        "3300704",
+        "3300803",
+        "3300902",
+        "3300936",
+        "3300951",
+        "3301009",
+        "3301108",
+        "3301157",
+        "3301207",
+        "3301306",
+        "3301405",
+        "3301504",
+        "3301603",
+        "3301702",
+        "3301801",
+        "3301850",
+        "3301876",
+        "3301900",
+        "3302007",
+        "3302056",
+        "3302106",
+        "3302205",
+        "3302254",
+        "3302270",
+        "3302304",
+        "3302403",
+        "3302452",
+        "3302502",
+        "3302601",
+        "3302700",
+        "3302809",
+        "3302858",
+        "3302908",
+        "3303005",
+        "3303104",
+        "3303203",
+        "3303302",
+        "3303401",
+        "3303500",
+        "3303609",
+        "3303708",
+        "3303807",
+        "3303856",
+        "3303906",
+        "3303955",
+        "3304003",
+        "3304102",
+        "3304110",
+        "3304128",
+        "3304144",
+        "3304151",
+        "3304201",
+        "3304300",
+        "3304409",
+        "3304508",
+        "3304524",
+        "3304557",
+        "3304607",
+        "3304706",
+        "3304755",
+        "3304805",
+        "3304904",
+        "3305000",
+        "3305109",
+        "3305133",
+        "3305158",
+        "3305208",
+        "3305307",
+        "3305406",
+        "3305505",
+        "3305554",
+        "3305604",
+        "3305703",
+        "3305752",
+        "3305802",
+        "3305901",
+        "3306008",
+        "3306107",
+        "3306156",
+        "3306206",
+        "3306305",
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "age_sex_standardized_2022_and_crude_annual",
+      "geographyBasis": "residence",
+      "standardPopulation": "Brasil — Censo 2022",
+      "standardizationDimensions": [
+        "age_group",
+        "sex"
+      ],
+      "standardizedRateAvailability": "available_2022",
+      "metricPeriod": {
+        "age_sex_standardized_rate_per_100k": "2022"
+      },
+      "unavailableReason": null,
+      "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "alzheimer",
+        "demência de alzheimer",
+        "doença de alzheimer",
+        "perda de memória"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-alzheimer",
+      "municipalPeriods": [
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2024"
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 70
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2010",
+        "lastPeriod": "2024",
+        "periods": [
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 36,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": false,
+        "reason": "national_standardized_equivalent_unavailable"
+      }
     },
     {
       "id": "sim-asthma",
@@ -665,7 +1986,7 @@
       "theme": "respiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -684,14 +2005,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "asma e estado de mal asmático"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-asthma",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 9
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 3,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-bladder",
@@ -701,7 +2077,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -720,14 +2096,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "bexiga"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-bladder",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 23
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 8,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-breast",
@@ -737,7 +2168,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -756,14 +2187,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "mama"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-breast",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 51
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 29,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-cardiac-arrhythmia",
@@ -773,7 +2259,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -792,14 +2278,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "transtornos de condução e arritmias cardíacas"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-cardiac-arrhythmia",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 52
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 19,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-cardio-all",
@@ -809,7 +2350,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -828,14 +2369,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "todas as doenças do aparelho circulatório"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-cardio-all",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 91,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-cardiorespiratory-all",
@@ -845,7 +2441,7 @@
       "theme": "cardiorespiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -865,14 +2461,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "todas as doenças cardiorrespiratórias"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-cardiorespiratory-all",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-cerebrovascular",
@@ -882,7 +2533,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -901,14 +2552,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "doenças cerebrovasculares"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-cerebrovascular",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 61,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-cervix",
@@ -918,7 +2624,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -937,14 +2643,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "colo do útero"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-cervix",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 24
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 11,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-colorectal",
@@ -954,7 +2715,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -973,14 +2734,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "cólon e reto"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-colorectal",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 60
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 22,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-copd",
@@ -990,7 +2806,7 @@
       "theme": "respiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1009,14 +2825,287 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "bronquite crônica, enfisema e dpoc"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-copd",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 73
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 35,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
+    },
+    {
+      "id": "sim-dementias-all",
+      "source": "SIM",
+      "outcomeId": "dementias_all",
+      "label": "Doença de Alzheimer e outras demências",
+      "theme": "neurological",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "G30",
+        "F00-F03"
+      ],
+      "availableMetrics": [
+        "age_sex_standardized_rate_per_100k",
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "3300100",
+        "3300159",
+        "3300209",
+        "3300225",
+        "3300233",
+        "3300258",
+        "3300308",
+        "3300407",
+        "3300456",
+        "3300506",
+        "3300605",
+        "3300704",
+        "3300803",
+        "3300902",
+        "3300936",
+        "3300951",
+        "3301009",
+        "3301108",
+        "3301157",
+        "3301207",
+        "3301306",
+        "3301405",
+        "3301504",
+        "3301603",
+        "3301702",
+        "3301801",
+        "3301850",
+        "3301876",
+        "3301900",
+        "3302007",
+        "3302056",
+        "3302106",
+        "3302205",
+        "3302254",
+        "3302270",
+        "3302304",
+        "3302403",
+        "3302452",
+        "3302502",
+        "3302601",
+        "3302700",
+        "3302809",
+        "3302858",
+        "3302908",
+        "3303005",
+        "3303104",
+        "3303203",
+        "3303302",
+        "3303401",
+        "3303500",
+        "3303609",
+        "3303708",
+        "3303807",
+        "3303856",
+        "3303906",
+        "3303955",
+        "3304003",
+        "3304102",
+        "3304110",
+        "3304128",
+        "3304144",
+        "3304151",
+        "3304201",
+        "3304300",
+        "3304409",
+        "3304508",
+        "3304524",
+        "3304557",
+        "3304607",
+        "3304706",
+        "3304755",
+        "3304805",
+        "3304904",
+        "3305000",
+        "3305109",
+        "3305133",
+        "3305158",
+        "3305208",
+        "3305307",
+        "3305406",
+        "3305505",
+        "3305554",
+        "3305604",
+        "3305703",
+        "3305752",
+        "3305802",
+        "3305901",
+        "3306008",
+        "3306107",
+        "3306156",
+        "3306206",
+        "3306305",
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "age_sex_standardized_2022_and_crude_annual",
+      "geographyBasis": "residence",
+      "standardPopulation": "Brasil — Censo 2022",
+      "standardizationDimensions": [
+        "age_group",
+        "sex"
+      ],
+      "standardizedRateAvailability": "available_2022",
+      "metricPeriod": {
+        "age_sex_standardized_rate_per_100k": "2022"
+      },
+      "unavailableReason": null,
+      "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "alzheimer",
+        "demência",
+        "demências",
+        "doença de alzheimer e outras demências",
+        "perda de memória"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-dementias-all",
+      "municipalPeriods": [
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2024"
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 75
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2010",
+        "lastPeriod": "2024",
+        "periods": [
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 41,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": false,
+        "reason": "national_standardized_equivalent_unavailable"
+      }
     },
     {
       "id": "sim-heart-failure",
@@ -1026,7 +3115,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1045,14 +3134,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "insuficiência cardíaca"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-heart-failure",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 76
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 34,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-hypertension",
@@ -1062,7 +3206,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1081,14 +3225,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "doenças hipertensivas"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-hypertension",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 87
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 55,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-influenza",
@@ -1098,7 +3297,7 @@
       "theme": "respiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1117,14 +3316,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "influenza"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-influenza",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 8
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 2,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-ischemic-heart-disease",
@@ -1134,7 +3388,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1153,14 +3407,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "doenças isquêmicas do coração"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-ischemic-heart-disease",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 91
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 67,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-leukemia",
@@ -1170,7 +3479,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1189,14 +3498,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "leucemias"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-leukemia",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 26
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 5,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-liver",
@@ -1206,7 +3570,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1225,14 +3589,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "fígado"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-liver",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 34
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 9,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-lung",
@@ -1242,7 +3661,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1261,14 +3680,73 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "bronquios",
+        "câncer de pulmão",
+        "pulmão",
+        "traqueia",
+        "traqueia, brônquios e pulmão"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-lung",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 63
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 25,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-multiple-myeloma",
@@ -1278,7 +3756,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1297,14 +3775,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "mieloma múltiplo"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-multiple-myeloma",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 19
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 4,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-myelodysplastic-syndromes",
@@ -1314,7 +3847,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1333,14 +3866,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "síndromes mielodisplásicas"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-myelodysplastic-syndromes",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 5
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 1,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-non-hodgkin-lymphoma",
@@ -1350,7 +3938,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1369,14 +3957,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "linfoma não hodgkin"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-non-hodgkin-lymphoma",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 20
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 5,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-pancreas",
@@ -1386,7 +4029,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1405,14 +4048,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "pâncreas"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-pancreas",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 43
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 13,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-pneumoconiosis",
@@ -1422,7 +4120,7 @@
       "theme": "respiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1441,14 +4139,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "pneumoconioses"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-pneumoconiosis",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 0
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 0,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-pneumonia",
@@ -1458,7 +4211,7 @@
       "theme": "respiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1477,14 +4230,71 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "infecção pulmonar",
+        "pneumonia",
+        "pneumonias"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-pneumonia",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 67,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-prostate",
@@ -1494,7 +4304,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1513,14 +4323,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "próstata"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-prostate",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 51
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 32,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-pulmonary-embolism",
@@ -1530,7 +4395,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1549,14 +4414,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "embolia pulmonar"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-pulmonary-embolism",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 27
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 7,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-resp-all",
@@ -1566,7 +4486,7 @@
       "theme": "respiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1585,14 +4505,69 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "todas as doenças respiratórias"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-resp-all",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 83,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-stomach",
@@ -1602,7 +4577,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1621,19 +4596,78 @@
       "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
+      "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
+      "standardizedRateAvailability": "not_available",
+      "metricPeriod": {},
+      "unavailableReason": null,
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
+      "synonyms": [
+        "estômago"
+      ],
+      "updatedAt": "2026-08-03T21:09:34+00:00",
+      "methodologyUrl": "/indicadores/sim-stomach",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 41
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "available",
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 15,
+        "periods": [
+          "2022"
+        ],
+        "ageGroups": [
+          "<1",
+          "1-4",
+          "5-14",
+          "15-24",
+          "25-44",
+          "45-64",
+          "65-74",
+          "75+"
+        ],
+        "sexes": [
+          "masculino",
+          "feminino"
+        ],
+        "unavailableReason": null
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     }
   ],
   "futureCapabilities": [
     "air_quality",
     "meteorology",
     "neighborhoods"
-  ]
+  ],
+  "discovery": {
+    "generatedAt": "2026-08-03T21:09:44+00:00",
+    "municipalityCount": 92
+  }
 }

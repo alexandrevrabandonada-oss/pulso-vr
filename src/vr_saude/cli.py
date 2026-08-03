@@ -18,10 +18,17 @@ from .interrupted_respiratory import build_interrupted_respiratory
 from .logging_utils import configure_logging
 from .layout_validation import write_layout_manifest
 from .mortality import build_mortality_rates
+from .municipal_profiles import build_municipal_age_sex_profiles
+from .neurological import build_neurological_rates
 from .oncology_diagnoses import build_oncology_diagnoses
 from .outcomes import build_outcome_counts
 from .population import acquire_population, harmonize_population
-from .population_age_sex import acquire_age_sex_population, harmonize_age_sex_population
+from .population_age_sex import (
+    acquire_age_sex_population,
+    acquire_brazil_age_sex_population,
+    harmonize_age_sex_population,
+    harmonize_brazil_age_sex_population,
+)
 from .portal_data import build_portal_data
 from .portal_release import write_portal_preflight
 from .provenance import sha256_file
@@ -30,8 +37,16 @@ from .rates import build_respiratory_rates
 from .reporting import write_respiratory_report
 from .sih_morbidity import query_morbidity_series, query_national_morbidity_series
 from .sih_municipal_map import build_sih_municipal_map
-from .sih_tabnet import query_residence, query_residence_series, save_query_response, write_harmonized_series
+from .sih_tabnet import (
+    query_residence,
+    query_residence_series,
+    save_query_response,
+    write_harmonized_series,
+)
 from .sim_municipal_map import build_sim_municipal_map
+from .sia import build_sia_alzheimer_production
+from .sih_neurological import build_sih_neurological_rates
+from .standardization import build_sim_neurological_standardized_rates
 from .sources import get_sample_source
 from .surveillance import build_sivep_surveillance_summary
 from .sivep_monthly import build_sivep_monthly
@@ -49,8 +64,11 @@ def _quality_report(root: Path) -> Path:
     with log_path.open("r", encoding="utf-8-sig", newline="") as handle:
         rows = list(csv.DictReader(handle))
     raw_files = [
-        path for path in (root / "data" / "raw").iterdir()
-        if path.is_file() and path.name not in {"README.md", ".gitkeep"} and not path.name.endswith(".sha256")
+        path
+        for path in (root / "data" / "raw").iterdir()
+        if path.is_file()
+        and path.name not in {"README.md", ".gitkeep"}
+        and not path.name.endswith(".sha256")
     ]
     status_counts: dict[str, int] = {}
     for row in rows:
@@ -104,49 +122,51 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "metadata" / "source_catalog.csv",
         root / "metadata" / "extraction_log.csv",
     ]
-    generated_outputs = [
-        quality_report,
-        root / "reports" / "quality" / "raw_samples_validation.md",
-        root / "reports" / "quality" / "raw_samples_validation.json",
-        root / "reports" / "quality" / "territory_code_validation.md",
-        root / "reports" / "quality" / "territory_code_validation.json",
-        root / "metadata" / "layout_manifest.json",
-        root / "metadata" / "discovered_resources_sim.json",
-        root / "metadata" / "discovered_resources_sivep.json",
-        root / "reports" / "quality" / "harmonization_manifest.json",
-        root / "reports" / "quality" / "population_denominator_manifest.json",
-        root / "reports" / "quality" / "population_age_sex_manifest.json",
-        root / "reports" / "quality" / "respiratory_rates_manifest.json",
-        root / "reports" / "quality" / "respiratory_its_manifest.json",
-        root / "reports" / "quality" / "outcome_counts_manifest.json",
-        root / "reports" / "quality" / "sivep_surveillance_manifest.json",
-        root / "reports" / "quality" / "sivep_monthly_manifest.json",
-        root / "reports" / "quality" / "sim_mortality_rates_manifest.json",
-        root / "reports" / "quality" / "sim_age_sex_profile_manifest.json",
-        root / "reports" / "quality" / "sim_age_sex_rates_manifest.json",
-        root / "reports" / "quality" / "sim_municipal_map_2022_manifest.json",
-        root / "reports" / "quality" / "sih_municipal_map_2022_manifest.json",
-        root / "reports" / "quality" / "portal_accessibility_audit.json",
-        root / "reports" / "technical" / "fase3_respiratorio.md",
-        root / "reports" / "technical" / "denominadores.md",
-        root / "reports" / "technical" / "denominadores_idade_sexo_2022.md",
-        root / "reports" / "technical" / "taxas_respiratorias.md",
-        root / "reports" / "technical" / "serie_interrompida_respiratoria.md",
-        root / "reports" / "technical" / "desfechos_sim_sivep.md",
-        root / "reports" / "technical" / "pandemia_sivep.md",
-        root / "reports" / "technical" / "sivep_mensal.md",
-        root / "reports" / "technical" / "mortalidade_sim.md",
-        root / "reports" / "technical" / "perfil_etario_sexual_sim.md",
-        root / "reports" / "technical" / "taxas_sim_idade_sexo_2022.md",
-        root / "reports" / "technical" / "mapa_municipal_sim_2022.md",
-        root / "reports" / "technical" / "mapa_municipal_sih_2022.md",
-        root / "reports" / "reviews" / "epidemiology_review_draft.md",
-        root / "reports" / "reviews" / "accessibility_review_draft.md",
-        root / "reports" / "technical" / "diagnosticos_painel_oncologia.md",
-        root / "reports" / "technical" / "territorialidade_cancer_bairros.md",
-        root / "reports" / "quality" / "painel_oncologia_diagnoses_manifest.json",
-    ] + sorted((root / "reports" / "quality").glob("sih_series_*.json")) + sorted(
-        (root / "reports" / "quality").glob("sih_morbidity_*.json")
+    generated_outputs = (
+        [
+            quality_report,
+            root / "reports" / "quality" / "raw_samples_validation.md",
+            root / "reports" / "quality" / "raw_samples_validation.json",
+            root / "reports" / "quality" / "territory_code_validation.md",
+            root / "reports" / "quality" / "territory_code_validation.json",
+            root / "metadata" / "layout_manifest.json",
+            root / "metadata" / "discovered_resources_sim.json",
+            root / "metadata" / "discovered_resources_sivep.json",
+            root / "reports" / "quality" / "harmonization_manifest.json",
+            root / "reports" / "quality" / "population_denominator_manifest.json",
+            root / "reports" / "quality" / "population_age_sex_manifest.json",
+            root / "reports" / "quality" / "respiratory_rates_manifest.json",
+            root / "reports" / "quality" / "respiratory_its_manifest.json",
+            root / "reports" / "quality" / "outcome_counts_manifest.json",
+            root / "reports" / "quality" / "sivep_surveillance_manifest.json",
+            root / "reports" / "quality" / "sivep_monthly_manifest.json",
+            root / "reports" / "quality" / "sim_mortality_rates_manifest.json",
+            root / "reports" / "quality" / "sim_age_sex_profile_manifest.json",
+            root / "reports" / "quality" / "sim_age_sex_rates_manifest.json",
+            root / "reports" / "quality" / "sim_municipal_map_2022_manifest.json",
+            root / "reports" / "quality" / "sih_municipal_map_2022_manifest.json",
+            root / "reports" / "quality" / "portal_accessibility_audit.json",
+            root / "reports" / "technical" / "fase3_respiratorio.md",
+            root / "reports" / "technical" / "denominadores.md",
+            root / "reports" / "technical" / "denominadores_idade_sexo_2022.md",
+            root / "reports" / "technical" / "taxas_respiratorias.md",
+            root / "reports" / "technical" / "serie_interrompida_respiratoria.md",
+            root / "reports" / "technical" / "desfechos_sim_sivep.md",
+            root / "reports" / "technical" / "pandemia_sivep.md",
+            root / "reports" / "technical" / "sivep_mensal.md",
+            root / "reports" / "technical" / "mortalidade_sim.md",
+            root / "reports" / "technical" / "perfil_etario_sexual_sim.md",
+            root / "reports" / "technical" / "taxas_sim_idade_sexo_2022.md",
+            root / "reports" / "technical" / "mapa_municipal_sim_2022.md",
+            root / "reports" / "technical" / "mapa_municipal_sih_2022.md",
+            root / "reports" / "reviews" / "epidemiology_review_draft.md",
+            root / "reports" / "reviews" / "accessibility_review_draft.md",
+            root / "reports" / "technical" / "diagnosticos_painel_oncologia.md",
+            root / "reports" / "technical" / "territorialidade_cancer_bairros.md",
+            root / "reports" / "quality" / "painel_oncologia_diagnoses_manifest.json",
+        ]
+        + sorted((root / "reports" / "quality").glob("sih_series_*.json"))
+        + sorted((root / "reports" / "quality").glob("sih_morbidity_*.json"))
     )
     raw_samples = [
         {
@@ -155,7 +175,9 @@ def _manifest(root: Path, quality_report: Path) -> Path:
             "sha256": sha256_file(path),
         }
         for path in sorted((root / "data" / "raw").iterdir())
-        if path.is_file() and not path.name.endswith(".sha256") and path.name not in {"README.md", ".gitkeep"}
+        if path.is_file()
+        and not path.name.endswith(".sha256")
+        and path.name not in {"README.md", ".gitkeep"}
     ]
     derived_artifact_paths = [
         *sorted((root / "data" / "interim").iterdir()),
@@ -194,7 +216,9 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         ],
     }
     destination = root / "outputs" / "results_manifest.json"
-    destination.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    destination.write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
     return destination
 
 
@@ -203,16 +227,26 @@ def _parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("validate", help="validate project structure and configurations")
     subparsers.add_parser("all", help="validate and build initial quality/manifest artifacts")
-    subparsers.add_parser("validate-raw", help="validate hashes and structural integrity of raw samples")
+    subparsers.add_parser(
+        "validate-raw", help="validate hashes and structural integrity of raw samples"
+    )
     subparsers.add_parser("validate-layout", help="validate source-specific layouts of raw samples")
     subparsers.add_parser("validate-territories", help="validate residence codes for Volta Redonda")
-    harmonize = subparsers.add_parser("harmonize", help="create interim named-field Parquet outputs")
+    harmonize = subparsers.add_parser(
+        "harmonize", help="create interim named-field Parquet outputs"
+    )
     harmonize.add_argument("--source", choices=("all", "sim", "sivep"), default="all")
-    harmonize.add_argument("--year", type=int, action="append", help="harmonize only this year; repeatable")
-    sih_query = subparsers.add_parser("sih-query", help="query one official SIH TabNet month by residence")
+    harmonize.add_argument(
+        "--year", type=int, action="append", help="harmonize only this year; repeatable"
+    )
+    sih_query = subparsers.add_parser(
+        "sih-query", help="query one official SIH TabNet month by residence"
+    )
     sih_query.add_argument("--year", type=int, default=2024)
     sih_query.add_argument("--month", type=int, default=1)
-    sih_series = subparsers.add_parser("sih-series", help="query and harmonize a monthly SIH TabNet range")
+    sih_series = subparsers.add_parser(
+        "sih-series", help="query and harmonize a monthly SIH TabNet range"
+    )
     sih_series.add_argument("--start-year", type=int, required=True)
     sih_series.add_argument("--start-month", type=int, required=True)
     sih_series.add_argument("--end-year", type=int, required=True)
@@ -261,6 +295,12 @@ def _parser() -> argparse.ArgumentParser:
         help="harmonize SIDRA 9514 Census 2022 age-sex denominators",
     )
     subparsers.add_parser(
+        "population-brazil-age-sex-acquire", help="download Brazil 2022 age-sex standard"
+    )
+    subparsers.add_parser(
+        "population-brazil-age-sex-harmonize", help="harmonize Brazil 2022 age-sex standard"
+    )
+    subparsers.add_parser(
         "respiratory-rates",
         help="calculate crude annual respiratory rates with exact Poisson intervals",
     )
@@ -285,12 +325,28 @@ def _parser() -> argparse.ArgumentParser:
         help="calculate sampled SIM crude mortality rates with Poisson intervals",
     )
     subparsers.add_parser(
+        "sim-neurological-rates", help="calculate SIM Alzheimer/dementia crude residence rates"
+    )
+    neurological_sih = subparsers.add_parser(
+        "sih-neurological-rates", help="calculate 2022 SIH neurological residence rates"
+    )
+    neurological_sih.add_argument("--year", type=int, default=2022)
+    subparsers.add_parser(
         "sim-age-sex-profile",
         help="describe SIM deaths by broad age group and sex",
     )
     subparsers.add_parser(
         "sim-age-sex-rates",
         help="calculate SIM 2022 specific crude rates by age group and sex",
+    )
+    subparsers.add_parser(
+        "sim-neurological-standardized",
+        help="calculate 2022 age-sex standardized neurological rates",
+    )
+    subparsers.add_parser("sia-alzheimer", help="record unavailable SIA diagnostic coverage")
+    subparsers.add_parser(
+        "sim-municipal-profiles",
+        help="calculate validated SIM 2022 municipal rates by age group and sex",
     )
     sim_municipal_map = subparsers.add_parser(
         "sim-municipal-map",
@@ -304,7 +360,9 @@ def _parser() -> argparse.ArgumentParser:
     sih_municipal_map.add_argument("--year", type=int, default=2022)
     sih_municipal_map.add_argument("--workers", type=int, default=4)
     sih_municipal_map.add_argument(
-        "--outcome", action="append", dest="outcomes",
+        "--outcome",
+        action="append",
+        dest="outcomes",
         help="limit acquisition to one or more configured outcome IDs (repeatable)",
     )
     subparsers.add_parser(
@@ -335,7 +393,9 @@ def _parser() -> argparse.ArgumentParser:
     subparsers.add_parser("sources", help="list verified sample acquisition identifiers")
     acquire = subparsers.add_parser("acquire", help="download one public sample idempotently")
     acquire.add_argument("--source", help="sample source identifier")
-    acquire.add_argument("--dataset", choices=("sim", "sivep"), help="discover a year-specific resource")
+    acquire.add_argument(
+        "--dataset", choices=("sim", "sivep"), help="discover a year-specific resource"
+    )
     acquire.add_argument("--year", type=int, help="year for dynamic official resource discovery")
     return parser
 
@@ -345,7 +405,9 @@ def main(argv: list[str] | None = None) -> int:
     args = _parser().parse_args(argv)
     logger = configure_logging(root)
     if args.command == "sources":
-        for source_id in sorted(__import__("vr_saude.download", fromlist=["SAMPLE_SOURCES"]).SAMPLE_SOURCES):
+        for source_id in sorted(
+            __import__("vr_saude.download", fromlist=["SAMPLE_SOURCES"]).SAMPLE_SOURCES
+        ):
             print(source_id)
         return 0
     if args.command == "validate":
@@ -412,7 +474,9 @@ def main(argv: list[str] | None = None) -> int:
             print(f"ERROR: SIH TabNet query failed: {exc}", file=sys.stderr)
             return 1
         print(f"SIH TabNet response: {destination}")
-        print(f"Volta Redonda / {args.year:04d}-{args.month:02d}: {result.hospitalizations} internações")
+        print(
+            f"Volta Redonda / {args.year:04d}-{args.month:02d}: {result.hospitalizations} internações"
+        )
         return 0
     if args.command == "sih-series":
         try:
@@ -518,6 +582,22 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Age-sex denominator Parquet: {denominator}")
         print(f"Age-sex population report: {report}")
         return 0
+    if args.command == "population-brazil-age-sex-acquire":
+        try:
+            output = acquire_brazil_age_sex_population(root)
+        except (OSError, ValueError, RuntimeError) as exc:
+            print(f"ERROR: Brazil age-sex acquisition failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Brazil age-sex raw payload: {output}")
+        return 0
+    if args.command == "population-brazil-age-sex-harmonize":
+        try:
+            output = harmonize_brazil_age_sex_population(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: Brazil age-sex harmonization failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Brazil age-sex standard: {output}")
+        return 0
     if args.command == "respiratory-rates":
         try:
             output, manifest, report = build_respiratory_rates(root)
@@ -578,6 +658,26 @@ def main(argv: list[str] | None = None) -> int:
         print(f"SIM mortality rates manifest: {manifest}")
         print(f"SIM mortality rates report: {report}")
         return 0
+    if args.command == "sim-neurological-rates":
+        try:
+            output, manifest, report = build_neurological_rates(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: SIM neurological rates failed: {exc}", file=sys.stderr)
+            return 1
+        print(output)
+        print(manifest)
+        print(report)
+        return 0
+    if args.command == "sih-neurological-rates":
+        try:
+            output, manifest, report = build_sih_neurological_rates(root, year=args.year)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: SIH neurological rates failed: {exc}", file=sys.stderr)
+            return 1
+        print(output)
+        print(manifest)
+        print(report)
+        return 0
     if args.command == "sim-age-sex-profile":
         try:
             output, manifest, report = build_age_sex_profile(root)
@@ -597,6 +697,36 @@ def main(argv: list[str] | None = None) -> int:
         print(f"SIM age-sex rates Parquet: {output}")
         print(f"SIM age-sex rates manifest: {manifest}")
         print(f"SIM age-sex rates report: {report}")
+        return 0
+    if args.command == "sim-neurological-standardized":
+        try:
+            output, manifest, report = build_sim_neurological_standardized_rates(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: neurological standardization failed: {exc}", file=sys.stderr)
+            return 1
+        print(output)
+        print(manifest)
+        print(report)
+        return 0
+    if args.command == "sia-alzheimer":
+        try:
+            output, manifest, report = build_sia_alzheimer_production(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: SIA Alzheimer validation failed: {exc}", file=sys.stderr)
+            return 1
+        print(output or "unavailable")
+        print(manifest)
+        print(report)
+        return 0
+    if args.command == "sim-municipal-profiles":
+        try:
+            output, manifest, report = build_municipal_age_sex_profiles(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: SIM municipal profiles failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"SIM municipal profile Parquet: {output}")
+        print(f"SIM municipal profile manifest: {manifest}")
+        print(f"SIM municipal profile report: {report}")
         return 0
     if args.command == "sim-municipal-map":
         try:
@@ -662,7 +792,9 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "discover":
         resources = discover_resources(args.dataset)
         destination = root / "metadata" / f"discovered_resources_{args.dataset}.json"
-        destination.write_text(json.dumps(resources, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        destination.write_text(
+            json.dumps(resources, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        )
         print(f"Discovered {len(resources)} resources: {destination}")
         return 0
     if args.command == "acquire":
@@ -723,7 +855,9 @@ def main(argv: list[str] | None = None) -> int:
         territory_failures = [item for item in territory_results if not item["ok"]]
         if territory_failures:
             for item in territory_failures:
-                print(f"ERROR: territory validation {item['path']}: {item['errors']}", file=sys.stderr)
+                print(
+                    f"ERROR: territory validation {item['path']}: {item['errors']}", file=sys.stderr
+                )
             return 1
         quality = _quality_report(root)
         respiratory_report = None

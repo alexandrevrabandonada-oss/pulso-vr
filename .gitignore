@@ -30,3 +30,4 @@ data/processed/*
 outputs/*.log
 outputs/*.xlsx
 outputs/*.parquet
+.vercel
