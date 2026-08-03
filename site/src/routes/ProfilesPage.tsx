@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { useLocation, useSearch } from 'wouter'
 import { usePortal } from '../context/usePortal'
 import { loadProfile } from '../lib/data'
 import { formatMetric } from '../lib/format'
@@ -9,8 +10,11 @@ const AGE_ORDER = ['<1', '1-4', '5-14', '15-24', '25-44', '45-64', '65-74', '75+
 
 export function ProfilesPage() {
   const { catalog } = usePortal()
+  const search = useSearch()
+  const [, navigate] = useLocation()
   const available = catalog.indicators.filter((item) => item.source === 'SIM')
-  const [indicatorId, setIndicatorId] = useState(available.find((item) => item.outcomeId === 'all_malignant_neoplasms')?.id ?? available[0].id)
+  const requested = new URLSearchParams(search).get('indicador')
+  const [indicatorId, setIndicatorId] = useState(available.some((item) => item.id === requested) ? requested! : available.find((item) => item.outcomeId === 'all_malignant_neoplasms')?.id ?? available[0].id)
   const [rows, setRows] = useState<ProfileObservation[] | null>(null)
   useEffect(() => {
     setRows(null)
@@ -31,8 +35,9 @@ export function ProfilesPage() {
   const max = Math.max(...profile.flatMap((item) => [item.feminino ?? 0, item.masculino ?? 0]), 1)
   return (
     <main className="content-page profiles-page">
-      <header className="content-page__header"><p>População</p><h1>Perfis por idade e sexo</h1><span>Recurso estadual em expansão. Nesta release, o perfil validado está disponível para Volta Redonda em 2022; células menores que cinco estão suprimidas.</span></header>
-      <label className="profile-selector">Indicador<select value={indicatorId} onChange={(event) => setIndicatorId(event.target.value)}>{available.map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}</select></label>
+      <header className="content-page__header"><p>Piloto de cobertura limitada</p><h1>Perfis por idade e sexo</h1><span>Esta página ainda não representa os 92 municípios. Nesta release, o recorte validado está disponível somente para Volta Redonda em 2022; a expansão municipal permanece bloqueada até validação de numeradores e denominadores.</span></header>
+      <div className="profile-coverage-warning" role="status"><strong>Não use este piloto como perfil estadual.</strong><span>Células menores que cinco estão suprimidas e não representam zero.</span></div>
+      <label className="profile-selector">Indicador<select value={indicatorId} onChange={(event) => { setIndicatorId(event.target.value); navigate(`/perfis?indicador=${event.target.value}`, { replace: true }) }}>{available.map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}</select></label>
       {rows ? (
         <section className="profile-chart" aria-labelledby="profile-title">
           <div className="profile-chart__heading"><div><h2 id="profile-title">{indicator.label}</h2><p>Recorte disponível: Volta Redonda · 2022 · taxa específica por 100 mil</p></div><div className="profile-legend"><span><i />Feminino</span><span><i />Masculino</span></div></div>

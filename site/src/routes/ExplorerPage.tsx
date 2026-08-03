@@ -32,7 +32,7 @@ export function ExplorerPage() {
   )
   const { indicator, theme, metric, territory, municipalityCode, mapPeriod: requestedMapPeriod, startYear, endYear } = explorerState
   const [observations, setObservations] = useState<Observation[] | null>(null)
-  const [mapPayload, setMapPayload] = useState<{ values: import('../types').MapValue[]; status: string } | null>(null)
+  const [mapPayload, setMapPayload] = useState<{ values: import('../types').MapValue[]; status: string; scaleDomain?: [number, number] | null } | null>(null)
   const [municipalObservations, setMunicipalObservations] = useState<Observation[] | null>(null)
   const [selectedMapPeriod, setSelectedMapPeriod] = useState<string | null>(null)
   const [activeTab, setActiveTab] = useState<'map' | 'series'>('map')
@@ -65,7 +65,7 @@ export function ExplorerPage() {
     Promise.all([loadSeries(indicator.id), loadMap(indicator.id), loadMunicipalSeries(indicator.id)]).then(([seriesPayload, nextMap, municipalSeries]) => {
       if (active) {
         setObservations(seriesPayload.observations)
-        setMapPayload({ values: nextMap.values, status: nextMap.status })
+        setMapPayload({ values: nextMap.values, status: nextMap.status, scaleDomain: nextMap.mapScale?.domain })
         setMunicipalObservations(municipalSeries.observations)
         setSelectedMapPeriod(nextMap.period ?? municipalSeries.periods.at(-1) ?? null)
       }
@@ -258,7 +258,7 @@ export function ExplorerPage() {
       {observations ? (
         <>
           <section className={`explorer-map-row${activeTab === 'series' ? ' is-mobile-hidden' : ''}`}>
-            <TerritoryMap topology={topology} values={mapValues} status={mapPayload?.status} period={municipalPeriod ?? undefined} selectedCode={selectedMunicipalityCode} onSelect={selectMunicipality} />
+            <TerritoryMap topology={topology} values={mapValues} scaleDomain={mapPayload?.scaleDomain} status={mapPayload?.status} period={municipalPeriod ?? undefined} selectedCode={selectedMunicipalityCode} onSelect={selectMunicipality} />
             <aside className="comparison-panel">
               {selectedMunicipality ? <>
                 <h2>Comparação municipal</h2>

@@ -17,17 +17,19 @@ interface TerritoryMapProps {
   period?: string
   selectedCode?: string | null
   onSelect?: (code: string) => void
+  scaleDomain?: [number, number] | null
 }
 
-export function TerritoryMap({ topology, compact = false, values = [], status = '', period, selectedCode = null, onSelect }: TerritoryMapProps) {
+export function TerritoryMap({ topology, compact = false, values = [], status = '', period, selectedCode = null, onSelect, scaleDomain = null }: TerritoryMapProps) {
   const [focused, setFocused] = useState<MapFeatureProperties | null>(null)
   const valuesByCode = useMemo(() => new Map(values.map((value) => [value.geographyId, value])), [values])
   const isSihMap = status.startsWith('validated_sih_')
   const hasPublishedMap = status.startsWith('validated_')
   const valueRange = useMemo(() => {
     const published = values.map((value) => value.value).filter((value): value is number => value !== null)
+    if (scaleDomain) return { min: scaleDomain[0], max: scaleDomain[1] }
     return published.length ? { min: Math.min(...published), max: Math.max(...published) } : null
-  }, [values])
+  }, [scaleDomain, values])
   const mapColor = (value: number | null | undefined) => {
     if (value === null || value === undefined || !valueRange) return undefined
     const span = valueRange.max - valueRange.min
@@ -86,7 +88,7 @@ export function TerritoryMap({ topology, compact = false, values = [], status = 
         </svg>
         <div className="map-legend" aria-hidden="true">
           <span><i className="map-legend__selected" />Município selecionado</span>
-          {hasPublishedMap ? <><span><i className="map-legend__scale map-legend__scale--low" />Menor taxa publicada</span><span><i className="map-legend__scale map-legend__scale--high" />Maior taxa publicada</span></> : <span><i />Demais municípios do RJ</span>}
+          {hasPublishedMap ? <><span><i className="map-legend__scale map-legend__scale--low" />{valueRange?.min.toFixed(1) ?? 'Menor taxa'}</span><span><i className="map-legend__scale map-legend__scale--high" />{valueRange?.max.toFixed(1) ?? 'Maior taxa'}</span></> : <span><i />92 municípios do RJ</span>}
         </div>
         {selected ? (
           <div className="map-tooltip" aria-live="polite">
@@ -97,7 +99,7 @@ export function TerritoryMap({ topology, compact = false, values = [], status = 
       </div>
       <div className="territory-map__note">
         <strong>{hasPublishedMap ? `Mapa municipal · ${isSihMap ? 'SIH' : 'SIM'} ${period ?? values[0]?.period ?? ''}` : 'Mapa contextual'}</strong>
-        <span>{hasPublishedMap ? (isSihMap ? 'Taxa bruta de internações por residência; AIHs são eventos e células menores que cinco estão suprimidas.' : 'Taxa bruta de mortalidade por residência; células menores que cinco estão suprimidas.') : 'Taxas municipais serão ativadas somente após validação por residência.'}</span>
+        <span>{hasPublishedMap ? `${isSihMap ? 'Taxa bruta de internações por residência; AIHs são eventos' : 'Taxa bruta de mortalidade por residência'}; células menores que cinco estão suprimidas. A escala é fixa para os períodos disponíveis deste indicador.` : 'Malha dos 92 municípios; nenhuma cidade é usada como referência padrão.'}</span>
       </div>
     </div>
   )

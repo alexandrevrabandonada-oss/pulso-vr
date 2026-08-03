@@ -1,28 +1,17 @@
-import { ArrowRight, ChartNoAxesCombined, Download, FileSearch, Map, MapPin, Users } from 'lucide-react'
-import { FormEvent, useEffect, useMemo, useState } from 'react'
+import { ArrowRight, ChartNoAxesCombined, Download, FileSearch, Map, Users } from 'lucide-react'
+import { useMemo } from 'react'
 import { Link, useLocation } from 'wouter'
+import { DiscoverySearch } from '../components/DiscoverySearch'
 import { TerritoryMap } from '../components/TerritoryMap'
-import { TimeSeriesChart } from '../components/TimeSeriesChart'
-import { loadSeries } from '../lib/data'
-import { findMunicipality, municipalProperties } from '../lib/municipalities'
-import type { Observation } from '../types'
+import { municipalProperties } from '../lib/municipalities'
 import { usePortal } from '../context/usePortal'
 
 export function HomePage() {
-  const { catalog, topology } = usePortal()
+  const { catalog, topology, release } = usePortal()
   const [, navigate] = useLocation()
   const municipalities = useMemo(() => municipalProperties(topology), [topology])
-  const [cityQuery, setCityQuery] = useState('')
-  const cityMatch = useMemo(() => findMunicipality(cityQuery, municipalities), [cityQuery, municipalities])
-  const indicator = catalog.indicators.find((item) => item.id === 'sih-resp-all') ?? catalog.indicators[0]
-  const [observations, setObservations] = useState<Observation[]>([])
-  useEffect(() => {
-    loadSeries(indicator.id).then((payload) => setObservations(payload.observations))
-  }, [indicator.id])
-  const openCity = (event: FormEvent) => {
-    event.preventDefault()
-    if (cityMatch) navigate(`/explorador?municipio=${cityMatch.code}`)
-  }
+  const openCity = (municipalityCode: string, indicatorId: string) => navigate(`/municipios/${municipalityCode}?indicador=${indicatorId}`)
+  const updatedAt = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'medium' }).format(new Date(release.generatedAt))
   return (
     <main>
       <section className="home-hero">
@@ -30,39 +19,21 @@ export function HomePage() {
           <p className="hero-eyebrow">Observatório estadual de saúde</p>
           <h1>Doenças no Rio de Janeiro, cidade por cidade</h1>
           <p>Escolha qualquer uma das 92 cidades, consulte internações e óbitos por residência e compare sua taxa com o restante do estado e com o Brasil.</p>
-          <form className="home-city-search" onSubmit={openCity} role="search">
-            <label htmlFor="home-city-input">Comece pela sua cidade</label>
-            <div>
-              <MapPin aria-hidden="true" />
-              <input id="home-city-input" list="home-city-options" value={cityQuery} onChange={(event) => setCityQuery(event.target.value)} placeholder="Digite o município" autoComplete="off" />
-              <button type="submit" disabled={!cityMatch} aria-label={cityMatch ? `Abrir dados de ${cityMatch.name}` : 'Digite o nome de uma cidade'}><span>Ver dados</span><ArrowRight /></button>
-            </div>
-            <datalist id="home-city-options">{municipalities.map((municipality) => <option value={municipality.name} key={municipality.code} />)}</datalist>
-          </form>
+          <DiscoverySearch municipalities={municipalities} indicators={catalog.indicators} onOpen={openCity} />
           <div className="hero-actions hero-actions--secondary">
             <Link href="/explorador" className="secondary-button">Explorar primeiro</Link>
             <Link href="/metodos" className="secondary-button">Como ler os dados</Link>
           </div>
-          <p className="hero-method-note">Informação pública, por residência e com limitações visíveis.</p>
+          <p className="hero-method-note">92 municípios · atualização {updatedAt} · dados por residência e limitações visíveis.</p>
         </div>
         <div className="home-hero__data" aria-label="Prévia do explorador de dados">
           <div className="data-preview__heading">
             <span>Prévia dos dados</span>
-            <strong>{indicator.label}</strong>
+            <strong>Todos os municípios, sem cidade padrão</strong>
           </div>
           <div className="data-preview__visuals">
             <TerritoryMap topology={topology} compact />
-            {observations.length ? (
-              <TimeSeriesChart
-                compact
-                indicator={indicator}
-                observations={observations}
-                metric="crude_rate_per_100k"
-                geographyLabels={{ ...catalog.geographies, rj_total: 'Estado do Rio de Janeiro' }}
-                geographies={['rj_total', 'brazil_total']}
-                startYear={2018}
-              />
-            ) : <div className="data-preview__loading" aria-live="polite">Carregando prévia da série…</div>}
+            <div className="home-examples"><strong>Perguntas que você pode responder</strong><Link href="/explorador?indicador=sih-pneumonia">Como está a pneumonia?</Link><Link href="/explorador?indicador=sim-lung">Mortalidade por câncer de pulmão</Link><Link href="/explorador">Comparar uma cidade com o restante do RJ</Link></div>
           </div>
         </div>
         <div className="river-rule" aria-hidden="true">
