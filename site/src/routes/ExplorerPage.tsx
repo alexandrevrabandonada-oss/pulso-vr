@@ -1,4 +1,4 @@
-import { ArrowRight, Check, ChevronDown, Copy, FileText, Info, MapPin } from 'lucide-react'
+import { ArrowRight, ChevronDown, FileText, Info, MapPin } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useSearch } from 'wouter'
 import { ExplorerFilters } from '../components/ExplorerFilters'
@@ -8,6 +8,7 @@ import { MunicipalTable } from '../components/MunicipalTable'
 import { MunicipalityPicker } from '../components/MunicipalityPicker'
 import { StatusNotice } from '../components/StatusNotice'
 import { SeriesInsights } from '../components/SeriesInsights'
+import { ShareButton } from '../components/ShareButton'
 import { TerritoryMap } from '../components/TerritoryMap'
 import { TimeSeriesChart } from '../components/TimeSeriesChart'
 import { usePortal } from '../context/usePortal'
@@ -37,7 +38,6 @@ export function ExplorerPage() {
   const [municipalObservations, setMunicipalObservations] = useState<Observation[] | null>(null)
   const [selectedMapPeriod, setSelectedMapPeriod] = useState<string | null>(null)
   const [activeTab, setActiveTab] = useState<'map' | 'series'>('series')
-  const [linkCopied, setLinkCopied] = useState(false)
   const activeGeographies = territory === 'all' ? LEGACY_AGGREGATE_GEO_ORDER : LEGACY_AGGREGATE_GEO_ORDER.filter((id) => id === territory)
   const municipalities = useMemo(() => municipalProperties(topology), [topology])
   const selectedMunicipalityCode = useMemo(
@@ -184,38 +184,12 @@ export function ExplorerPage() {
     })
     saveCsvFile(`observatorio-${indicator.id}-${startYear}-${endYear}.csv`, csv)
   }
-  const copyAnalysisLink = async () => {
-    const confirmCopy = () => {
-      setLinkCopied(true)
-      window.setTimeout(() => setLinkCopied(false), 2200)
-    }
-    try {
-      await navigator.clipboard.writeText(window.location.href)
-      confirmCopy()
-    } catch {
-      const input = document.createElement('textarea')
-      input.value = window.location.href
-      input.setAttribute('readonly', '')
-      input.style.position = 'fixed'
-      input.style.opacity = '0'
-      document.body.appendChild(input)
-      input.select()
-      const copied = document.execCommand('copy')
-      input.remove()
-      if (copied) confirmCopy()
-      else window.prompt('Copie o link desta análise:', window.location.href)
-    }
-  }
-
   return (
     <main className="explorer-page">
       <div className="explorer-title-row">
         <div><h1>Explorador de dados</h1><p>Compare territórios sem perder de vista fonte, unidade e grau de certeza.</p></div>
         <div className="explorer-title-actions">
-          <button type="button" className="share-analysis" onClick={copyAnalysisLink} aria-live="polite">
-            {linkCopied ? <Check aria-hidden="true" /> : <Copy aria-hidden="true" />}
-            {linkCopied ? 'Link copiado' : 'Copiar análise'}
-          </button>
+          <ShareButton className="share-analysis" label="Compartilhar análise" surface="explorer" context={{ municipalityCode: selectedMunicipalityCode || undefined, indicatorId: indicator.id, period: `${startYear}-${endYear}`, metricKind: metric, template: activeTab === 'map' ? 'map' : 'evolution', format: 'og', route: 'explorer' }} />
           <span className="beta-status">{release.status === 'public_release_ready' ? 'Release aprovada' : 'Beta técnica'} · {release.releaseId}</span>
         </div>
       </div>

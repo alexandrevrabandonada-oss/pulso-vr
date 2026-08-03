@@ -1,5 +1,6 @@
 import { AlertCircle, ArrowLeft, CheckCircle2, Database, ExternalLink } from 'lucide-react'
 import { Link, useParams } from 'wouter'
+import { ShareButton } from '../components/ShareButton'
 import { usePortal } from '../context/usePortal'
 
 export function IndicatorPage() {
@@ -34,7 +35,7 @@ export function IndicatorPage() {
         </dl>
       </section>
       {indicator.theme === 'neurological' ? <section className="definition-lead"><h2>Limites específicos</h2><p>Alzheimer e o conjunto amplo de demências se sobrepõem e nunca devem ser somados. O SIM registra óbitos de residentes pela causa básica; não mede prevalência, incidência ou todas as pessoas diagnosticadas. A série bruta possui lacuna em 2023.</p></section> : null}
-      <div className="content-actions"><Link href="/dados"><Database />Acessar dados públicos</Link><Link href="/metodos"><ExternalLink />Ler metodologia completa</Link></div>
+      <div className="content-actions"><ShareButton surface="indicator" context={{ indicatorId: indicator.id, template: 'answer', format: 'og', route: 'indicator' }} /><Link href="/dados"><Database />Acessar dados públicos</Link><Link href="/metodos"><ExternalLink />Ler metodologia completa</Link></div>
     </main>
   )
 }

@@ -1,10 +1,11 @@
-import { ArrowRight, ChartNoAxesCombined, Download, FileText, Map, Share2, Users } from 'lucide-react'
+import { ArrowRight, ChartNoAxesCombined, Download, FileText, Map, Users } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useRoute, useSearch } from 'wouter'
 import { DiscoverySearch } from '../components/DiscoverySearch'
 import { DataGlossary } from '../components/DataGlossary'
 import { LoadingState } from '../components/LoadingState'
 import { SeriesInsights } from '../components/SeriesInsights'
+import { ShareButton } from '../components/ShareButton'
 import { TerritoryMap } from '../components/TerritoryMap'
 import { TimeSeriesChart } from '../components/TimeSeriesChart'
 import { usePortal } from '../context/usePortal'
@@ -69,7 +70,6 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
   const [mapMetric, setMapMetric] = useState<'age_sex_standardized_rate_per_100k' | 'crude_rate_per_100k'>('age_sex_standardized_rate_per_100k')
   const [activeTab, setActiveTab] = useState<'evolution' | 'map' | 'profile' | null>(null)
   const [detailError, setDetailError] = useState<string | null>(null)
-  const [linkCopied, setLinkCopied] = useState(false)
 
   useEffect(() => {
     let active = true
@@ -126,11 +126,6 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
     saveCsvFile(`${municipality.name}-${indicator.id}.csv`, csv)
     trackEvent('download_completed', { surface: 'municipality' })
   }
-  const share = async () => {
-    await navigator.clipboard.writeText(window.location.href)
-    setLinkCopied(true)
-    trackEvent('share_completed', { surface: 'municipality' })
-  }
 
   return (
     <main className="municipality-page">
@@ -147,7 +142,7 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
         <div className="municipality-answer__interpretation"><span>3 · Como interpretar</span><strong>Leitura orientada pelo contexto</strong><p>{indicator.allowsConclusion}</p></div>
       </section>
       {isNeurological ? <section className="municipality-method"><FileText /><div><h2>Por que padronizar?</h2><p>Municípios mais envelhecidos podem apresentar taxas brutas maiores apenas pela composição etária. A taxa de 2022 ajusta idade e sexo usando a população do Brasil no Censo 2022, tornando a comparação municipal mais justa. Ela não mede prevalência nem todas as pessoas com diagnóstico.</p><p><strong>Dado recente:</strong> a mortalidade bruta de 2024 aparece na evolução. O ano de 2023 permanece como lacuna e não é interpolado.</p></div></section> : null}
-      <div className="municipality-actions"><button type="button" onClick={download}><Download />Baixar este recorte</button><button type="button" onClick={share}><Share2 />{linkCopied ? 'Link copiado' : 'Copiar link'}</button><Link href={`/explorador?indicador=${indicator.id}&municipio=${municipality.code}`}>Abrir análise avançada <ArrowRight /></Link></div>
+      <div className="municipality-actions"><button type="button" onClick={download}><Download />Baixar este recorte</button><ShareButton surface="municipality" context={{ municipalityCode: municipality.code, indicatorId: indicator.id, period: period ?? undefined, metricKind: answerMetric, template: 'answer', format: 'og', route: 'municipality' }} /><Link href={`/explorador?indicador=${indicator.id}&municipio=${municipality.code}`}>Abrir análise avançada <ArrowRight /></Link></div>
       <section className="municipality-explore" aria-labelledby="explore-title">
         <div className="municipality-explore__heading"><span>3 · Evolução e contexto</span><h2 id="explore-title">Explore quando precisar</h2><p>A resposta principal está acima. Abra apenas a visualização que ajuda sua pergunta.</p></div>
         <div className="municipality-tabs glass-surface" role="tablist" aria-label="Detalhes do indicador">
@@ -156,6 +151,7 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
           <button type="button" role="tab" aria-selected={activeTab === 'profile'} onClick={() => { setActiveTab('profile'); trackEvent('map_series_toggled', { surface: 'municipality', tab: 'profile' }) }}><Users />Perfil</button>
         </div>
         <div className="municipality-tabpanel" role="tabpanel">
+          {activeTab === 'evolution' || activeTab === 'map' ? <div className="visual-share"><ShareButton surface={`municipality_${activeTab}`} label={`Compartilhar ${activeTab === 'map' ? 'mapa' : 'evolução'}`} context={{ municipalityCode: municipality.code, indicatorId: indicator.id, period: activeTab === 'map' ? visibleMapPeriod : period ?? undefined, metricKind: activeTab === 'map' ? mapMetric : 'crude_rate_per_100k', template: activeTab, format: 'og', route: 'municipality' }} /></div> : null}
           {!activeTab ? <div className="municipality-tab-empty"><strong>Nenhuma visualização carregada</strong><p>Escolha evolução, mapa ou perfil para continuar.</p></div> : null}
           {activeTab === 'evolution' ? series && municipalSeries ? <div>{isNeurological ? <p>A evolução abaixo usa exclusivamente a taxa bruta. A linha é interrompida em 2023 e não se conecta à taxa padronizada de 2022.</p> : null}<SeriesInsights municipalityName={municipality.name} observations={comparisonSeries} /><TimeSeriesChart indicator={indicator} observations={comparisonSeries} metric="crude_rate_per_100k" geographyLabels={labels} geographies={Object.keys(labels)} startYear={indicator.yearStart} endYear={indicator.yearEnd} /></div> : detailError ? <div className="municipality-inline-error"><strong>{detailError}</strong><button type="button" onClick={() => { setActiveTab(null); setTimeout(() => setActiveTab('evolution'), 0) }}>Tentar novamente</button></div> : <LoadingState label="Carregando evolução…" /> : null}
           {activeTab === 'map' ? map ? <div>{isNeurological && mapAlternative ? <div className="metric-switch" role="group" aria-label="Métrica do mapa"><button type="button" className={mapMetric === 'age_sex_standardized_rate_per_100k' ? 'is-selected' : ''} onClick={() => setMapMetric('age_sex_standardized_rate_per_100k')}>Padronizada · 2022</button><button type="button" className={mapMetric === 'crude_rate_per_100k' ? 'is-selected' : ''} onClick={() => setMapMetric('crude_rate_per_100k')}>Bruta · 2024</button></div> : null}<TerritoryMap topology={topology} values={visibleMapValues} scaleDomain={mapMetric === 'age_sex_standardized_rate_per_100k' ? map.mapScale?.domain : undefined} status={map.status} period={visibleMapPeriod} selectedCode={municipality.code} onSelect={(code) => navigate(`/municipios/${code}?indicador=${indicator.id}`)} /></div> : detailError ? <div className="municipality-inline-error"><strong>{detailError}</strong><button type="button" onClick={() => { setActiveTab(null); setTimeout(() => setActiveTab('map'), 0) }}>Tentar novamente</button></div> : <LoadingState label="Carregando mapa contextual…" /> : null}

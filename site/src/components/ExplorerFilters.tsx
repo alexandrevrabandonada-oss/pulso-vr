@@ -1,4 +1,4 @@
-import { Download, Filter, Share2, X } from 'lucide-react'
+import { Download, Filter, X } from 'lucide-react'
 import { useRef, useState } from 'react'
 import { trackEvent } from '../lib/analytics'
 import type { Indicator, MetricKind, Theme } from '../types'
@@ -24,16 +24,6 @@ export function ExplorerFilters(props: FilterProps) {
   const triggerRef = useRef<HTMLButtonElement>(null)
   const selected = props.indicators.find((item) => item.id === props.indicatorId)!
   const years = Array.from({ length: selected.yearEnd - selected.yearStart + 1 }, (_, index) => selected.yearStart + index)
-  const share = async () => {
-    const url = window.location.href
-    try {
-      if (navigator.share) await navigator.share({ title: 'Observatório Saúde & Ambiente', url })
-      else await navigator.clipboard.writeText(url)
-      setFeedback('Link pronto para compartilhar.')
-    } catch (error) {
-      if ((error as DOMException).name !== 'AbortError') setFeedback('Não foi possível compartilhar este link.')
-    }
-  }
   const close = () => {
     setOpen(false)
     window.requestAnimationFrame(() => triggerRef.current?.focus())
@@ -96,7 +86,6 @@ export function ExplorerFilters(props: FilterProps) {
         </div>
         <div className="filter-actions">
           <button className="icon-action" type="button" onClick={() => { props.onDownload(); setFeedback('Recorte baixado em CSV.') }}><Download />Baixar recorte</button>
-          <button className="icon-action" type="button" onClick={share}><Share2 />Compartilhar</button>
         </div>
         <span className="sr-only" aria-live="polite">{feedback}</span>
         <button className="filter-rail__apply" type="button" onClick={close}>Aplicar filtros</button>

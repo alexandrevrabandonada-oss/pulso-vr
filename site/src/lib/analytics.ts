@@ -1,6 +1,6 @@
 const ALLOWED_EVENTS = new Set([
   'discovery_search', 'municipality_opened', 'indicator_selected', 'filters_opened',
-  'map_series_toggled', 'download_completed', 'share_completed', 'data_load_error',
+  'map_series_toggled', 'download_completed', 'share_opened', 'share_template_selected', 'share_completed', 'share_failed', 'data_load_error',
   'first_answer_rendered', 'interpretation_opened', 'profile_opened',
 ])
 
