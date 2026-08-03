@@ -114,6 +114,15 @@ p { line-height: 1.65; }
 .filter-rail__mobile-heading, .filter-rail__apply, .filter-backdrop, .mobile-selection-summary, .mobile-view-tabs { display: none; }
 
 .explorer-map-row { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(330px, .85fr); border-bottom: 1px solid var(--line); }
+.map-period-control { width: var(--page); min-height: 58px; margin: 0 auto; display: flex; align-items: stretch; justify-content: space-between; border: 3px solid var(--ink); border-bottom: 0; background: #fff; }
+.map-period-control > div:first-child { display: flex; flex-direction: column; justify-content: center; gap: 3px; padding: 9px 16px; }
+.map-period-control span { font-size: .66rem; font-weight: 900; text-transform: uppercase; }
+.map-period-control small { color: var(--muted); font-size: .62rem; }
+.map-period-control > div:last-child { display: flex; align-items: stretch; }
+.map-period-control button { min-width: 72px; border: 0; border-left: 2px solid var(--ink); background: #fff; color: var(--ink); font: 900 .75rem/1 var(--sans); cursor: pointer; }
+.map-period-control button[aria-pressed="true"] { background: var(--ink); color: var(--yellow); }
+.map-period-control button:hover:not([aria-pressed="true"]) { background: var(--yellow-soft); }
+.map-period-control button:focus-visible { position: relative; z-index: 1; outline: 3px solid var(--orange); outline-offset: -5px; }
 .explorer-map-row .territory-map { padding: 10px 22px 7px 0; border-right: 1px solid var(--line); }
 .territory-map__canvas { position: relative; height: 320px; background: var(--ocean); overflow: hidden; }
 .territory-map__canvas svg { width: 100%; height: 100%; }
@@ -348,6 +357,11 @@ p { line-height: 1.65; }
   .filter-rail__apply { display: block; grid-column: 1 / -1; min-height: 48px; border: 0; background: var(--teal); color: #fff; font-weight: 600; }
   .filter-backdrop { display: block; position: fixed; z-index: 55; inset: 0; border: 0; background: rgba(10,28,33,.48); }
   .mobile-view-tabs { width: var(--page); margin: auto; display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); }
+  .map-period-control { min-height: 0; display: block; border-width: 2px; }
+  .map-period-control > div:first-child { padding: 10px 12px; border-bottom: 2px solid var(--ink); }
+  .map-period-control > div:last-child { overflow-x: auto; }
+  .map-period-control button { flex: 1 0 72px; min-height: 46px; }
+  .map-period-control button:first-child { border-left: 0; }
   .mobile-view-tabs button { min-height: 50px; border: 0; background: #fff; font-weight: 600; }
   .mobile-view-tabs button + button { border-left: 1px solid var(--line); }
   .mobile-view-tabs .is-active { background: var(--teal); color: #fff; }

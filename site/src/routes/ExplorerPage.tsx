@@ -34,6 +34,7 @@ export function ExplorerPage() {
   const [observations, setObservations] = useState<Observation[] | null>(null)
   const [mapPayload, setMapPayload] = useState<{ values: import('../types').MapValue[]; status: string } | null>(null)
   const [municipalObservations, setMunicipalObservations] = useState<Observation[] | null>(null)
+  const [selectedMapPeriod, setSelectedMapPeriod] = useState<string | null>(null)
   const [activeTab, setActiveTab] = useState<'map' | 'series'>('map')
   const activeGeographies = territory === 'all' ? GEO_ORDER : GEO_ORDER.filter((id) => id === territory)
   const municipalities = useMemo(() => municipalProperties(topology), [topology])
@@ -42,8 +43,12 @@ export function ExplorerPage() {
     [municipalities, municipalityCode],
   )
   const selectedMunicipality = municipalities.find((item) => item.code === selectedMunicipalityCode) ?? null
-  const selectedMunicipalValue = mapPayload?.values.find((item) => item.geographyId === selectedMunicipalityCode) ?? null
-  const municipalPeriod = selectedMunicipalValue?.period ?? mapPayload?.values[0]?.period ?? null
+  const availableMapPeriods = useMemo(() => [...new Set((municipalObservations ?? []).map((item) => item.period))].sort((a, b) => Number(a) - Number(b)), [municipalObservations])
+  const municipalPeriod = selectedMapPeriod ?? mapPayload?.values[0]?.period ?? null
+  const mapValues = useMemo(() => municipalPeriod && municipalObservations
+    ? municipalObservations.filter((item) => item.period === municipalPeriod)
+    : mapPayload?.values ?? [], [mapPayload, municipalObservations, municipalPeriod])
+  const selectedMunicipalValue = mapValues.find((item) => item.geographyId === selectedMunicipalityCode) ?? null
 
   useEffect(() => {
     const canonicalSearch = explorerStateSearch(explorerState)
@@ -55,11 +60,13 @@ export function ExplorerPage() {
     setObservations(null)
     setMapPayload(null)
     setMunicipalObservations(null)
+    setSelectedMapPeriod(null)
     Promise.all([loadSeries(indicator.id), loadMap(indicator.id), loadMunicipalSeries(indicator.id)]).then(([seriesPayload, nextMap, municipalSeries]) => {
       if (active) {
         setObservations(seriesPayload.observations)
         setMapPayload({ values: nextMap.values, status: nextMap.status })
         setMunicipalObservations(municipalSeries.observations)
+        setSelectedMapPeriod(nextMap.period ?? municipalSeries.periods.at(-1) ?? null)
       }
     })
     return () => { active = false }
@@ -193,10 +200,20 @@ export function ExplorerPage() {
         <button role="tab" aria-selected={activeTab === 'map'} className={activeTab === 'map' ? 'is-active' : ''} onClick={() => setActiveTab('map')}>Mapa</button>
         <button role="tab" aria-selected={activeTab === 'series'} className={activeTab === 'series' ? 'is-active' : ''} onClick={() => setActiveTab('series')}>Série temporal</button>
       </div>
+      {availableMapPeriods.length > 1 && selectedMunicipality ? (
+        <nav className="map-period-control" aria-label="Escolher ano do mapa municipal">
+          <div><span>Ano do mapa</span><small>Compare a distribuição entre cidades</small></div>
+          <div>
+            {[...availableMapPeriods].reverse().map((period) => (
+              <button key={period} type="button" aria-pressed={municipalPeriod === period} onClick={() => setSelectedMapPeriod(period)}>{period}</button>
+            ))}
+          </div>
+        </nav>
+      ) : null}
       {observations ? (
         <>
           <section className={`explorer-map-row${activeTab === 'series' ? ' is-mobile-hidden' : ''}`}>
-            <TerritoryMap topology={topology} values={mapPayload?.values} status={mapPayload?.status} period={municipalPeriod ?? undefined} selectedCode={selectedMunicipalityCode} onSelect={selectMunicipality} />
+            <TerritoryMap topology={topology} values={mapValues} status={mapPayload?.status} period={municipalPeriod ?? undefined} selectedCode={selectedMunicipalityCode} onSelect={selectMunicipality} />
             <aside className="comparison-panel">
               {selectedMunicipality ? <>
                 <h2>Comparação municipal</h2>
@@ -225,7 +242,7 @@ export function ExplorerPage() {
               </div>}
             </aside>
           </section>
-          {mapPayload && mapPayload.values.length > 0 && selectedMunicipality ? (
+          {mapValues.length > 0 && selectedMunicipality ? (
             <>
               <section className="municipal-detail" aria-labelledby="municipal-detail-title">
                 <div className="municipal-detail__heading">
@@ -240,7 +257,7 @@ export function ExplorerPage() {
                   <div><span>Comparado ao Brasil</span><strong>{relativeDifferenceLabel(brazilRatio)}</strong><small>{brazilAtMunicipalPeriod ? `${formatMetric(brazilAtMunicipalPeriod.value, 'crude_rate_per_100k')} no Brasil` : 'quando a fonte é equivalente'}</small></div>
                 </div>
               </section>
-              <MunicipalTable municipalities={municipalities} values={mapPayload.values} measureLabel={indicator.measureLabel} selectedCode={selectedMunicipalityCode} onSelect={selectMunicipality} />
+              <MunicipalTable municipalities={municipalities} values={mapValues} measureLabel={indicator.measureLabel} selectedCode={selectedMunicipalityCode} onSelect={selectMunicipality} />
             </>
           ) : null}
           {selectedMunicipality ? <section className={`explorer-series${activeTab === 'map' ? '' : ' is-mobile-primary'}`}>
