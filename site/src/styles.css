@@ -405,6 +405,51 @@ p { line-height: 1.65; }
   .release-summary dl div:first-child { border-left: 0; padding-left: 0; }
 }
 
+/* Guided municipality journey */
+.home-hero__copy .municipality-picker { width: 100%; grid-template-columns: 1fr; gap: 14px; margin: 0; padding: 16px; border-bottom: 3px solid var(--ink); }
+.home-hero__copy .municipality-picker > div:first-child { display: none; }
+.home-hero__guide { grid-template-rows: auto 1fr auto; padding: 20px 28px 28px; background: var(--yellow-soft); }
+.home-journey { display: grid; align-content: center; gap: 0; margin: 0; padding: 0; list-style: none; }
+.home-journey li { display: grid; grid-template-columns: 48px 1fr; gap: 16px; padding: 22px 0; border-bottom: 1px solid var(--ink); }
+.home-journey li > span { display: grid; width: 42px; height: 42px; place-items: center; border: 2px solid var(--ink); background: var(--yellow); font-weight: 900; }
+.home-journey strong { font-family: var(--serif); font-size: 1.2rem; }
+.home-journey p { margin: 4px 0 0; color: var(--muted); font-size: .72rem; }
+.home-hero__guide .home-examples { margin: 0 -28px -28px; }
+.home-hero__guide .home-examples span { font-family: var(--serif); font-size: 1rem; }
+.municipality-inline-error, .municipality-tab-empty { min-height: 180px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; padding: 24px; text-align: center; }
+.municipality-inline-error button { min-height: 44px; border: 2px solid var(--ink); padding: 0 16px; background: var(--ink); color: var(--yellow); font-weight: 900; cursor: pointer; }
+.municipality-answer__intro small { display: block; margin-top: 14px; color: var(--muted); }
+.municipality-explore { margin-top: 28px; border: 3px solid var(--ink); background: #fff; }
+.municipality-explore__heading { padding: 22px 24px; border-bottom: 1px solid var(--ink); }
+.municipality-explore__heading > span { font-size: .62rem; font-weight: 900; text-transform: uppercase; }
+.municipality-explore__heading h2 { margin: 5px 0; font-size: 1.8rem; }
+.municipality-explore__heading p { margin: 0; color: var(--muted); font-size: .72rem; }
+.municipality-tabs { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 2px solid var(--ink); }
+.municipality-tabs button { min-height: 52px; display: flex; align-items: center; justify-content: center; gap: 9px; border: 0; border-right: 1px solid var(--ink); background: #fff; font-weight: 900; text-transform: uppercase; cursor: pointer; }
+.municipality-tabs button:last-child { border-right: 0; }
+.municipality-tabs button[aria-selected="true"] { background: var(--ink); color: var(--yellow); }
+.municipality-tabs svg { width: 18px; }
+.municipality-tabpanel { min-height: 220px; }
+.municipality-tabpanel .territory-map { border: 0; }
+.municipality-profile-callout { min-height: 220px; display: grid; grid-template-columns: 48px 1fr; align-items: center; gap: 18px; max-width: 680px; padding: 28px; }
+.municipality-profile-callout > svg { width: 40px; height: 40px; }
+.municipality-profile-callout p { margin: 7px 0 12px; }
+.mobile-view-tabs { width: var(--page); margin: 14px auto 0; display: grid; grid-template-columns: 1fr 1fr; border: 2px solid var(--ink); }
+.mobile-view-tabs button { min-height: 48px; border: 0; background: #fff; font-weight: 900; text-transform: uppercase; cursor: pointer; }
+.mobile-view-tabs button + button { border-left: 2px solid var(--ink); }
+.mobile-view-tabs .is-active { background: var(--ink); color: var(--yellow); }
+.explorer-series-empty { width: var(--page); min-height: 260px; margin: 0 auto; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; border: 3px solid var(--ink); padding: 24px; text-align: center; }
+.explorer-series-empty svg { width: 34px; height: 34px; }
+.explorer-series-empty h2, .explorer-series-empty p { margin: 0; }
+
+@media (max-width: 760px) {
+  .home-hero__data.home-hero__guide { display: block; padding: 20px 18px; border-left: 0; border-top: 3px solid var(--ink); }
+  .home-hero__guide .home-examples { margin: 0 -18px -20px; }
+  .municipality-tabs { grid-template-columns: 1fr; }
+  .municipality-tabs button { min-height: 48px; border-right: 0; border-bottom: 1px solid var(--ink); }
+  .municipality-tabs button:last-child { border-bottom: 0; }
+}
+
 @media (max-width: 560px) {
   .content-page__header h1 {
     display: block;
@@ -413,6 +458,10 @@ p { line-height: 1.65; }
     font-size: 2rem;
     overflow-wrap: anywhere;
   }
+}
+
+@media (max-width: 760px) {
+  .home-hero__data.home-hero__guide { display: block; }
 }
 
 /* Jornada pública estadual */

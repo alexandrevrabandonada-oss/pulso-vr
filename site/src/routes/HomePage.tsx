@@ -1,16 +1,15 @@
 import { ArrowRight, ChartNoAxesCombined, Download, FileSearch, Map, Users } from 'lucide-react'
 import { useMemo } from 'react'
 import { Link, useLocation } from 'wouter'
-import { DiscoverySearch } from '../components/DiscoverySearch'
-import { TerritoryMap } from '../components/TerritoryMap'
+import { MunicipalityPicker } from '../components/MunicipalityPicker'
 import { municipalProperties } from '../lib/municipalities'
 import { usePortal } from '../context/usePortal'
 
 export function HomePage() {
-  const { catalog, topology, release } = usePortal()
+  const { topology, release } = usePortal()
   const [, navigate] = useLocation()
   const municipalities = useMemo(() => municipalProperties(topology), [topology])
-  const openCity = (municipalityCode: string, indicatorId: string) => navigate(`/municipios/${municipalityCode}?indicador=${indicatorId}`)
+  const openCity = (municipalityCode: string) => navigate(`/municipios/${municipalityCode}`)
   const updatedAt = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'medium' }).format(new Date(release.generatedAt))
   return (
     <main>
@@ -19,22 +18,20 @@ export function HomePage() {
           <p className="hero-eyebrow">Observatório estadual de saúde</p>
           <h1>Doenças no Rio de Janeiro, cidade por cidade</h1>
           <p>Escolha qualquer uma das 92 cidades, consulte internações e óbitos por residência e compare sua taxa com o restante do estado e com o Brasil.</p>
-          <DiscoverySearch municipalities={municipalities} indicators={catalog.indicators} onOpen={openCity} />
+          <MunicipalityPicker municipalities={municipalities} selectedCode={null} onSelect={openCity} />
           <div className="hero-actions hero-actions--secondary">
             <Link href="/explorador" className="secondary-button">Explorar primeiro</Link>
             <Link href="/metodos" className="secondary-button">Como ler os dados</Link>
           </div>
           <p className="hero-method-note">92 municípios · atualização {updatedAt} · dados por residência e limitações visíveis.</p>
         </div>
-        <div className="home-hero__data" aria-label="Prévia do explorador de dados">
+        <div className="home-hero__data home-hero__guide" aria-label="Como consultar os dados">
           <div className="data-preview__heading">
-            <span>Prévia dos dados</span>
-            <strong>Todos os municípios, sem cidade padrão</strong>
+            <span>Uma resposta em poucos passos</span>
+            <strong>Comece pela cidade, sem filtros técnicos</strong>
           </div>
-          <div className="data-preview__visuals">
-            <TerritoryMap topology={topology} compact />
-            <div className="home-examples"><strong>Perguntas que você pode responder</strong><Link href="/explorador?indicador=sih-pneumonia">Como está a pneumonia?</Link><Link href="/explorador?indicador=sim-lung">Mortalidade por câncer de pulmão</Link><Link href="/explorador">Comparar uma cidade com o restante do RJ</Link></div>
-          </div>
+          <ol className="home-journey"><li><span>1</span><div><strong>Escolha sua cidade</strong><p>Busque qualquer um dos 92 municípios.</p></div></li><li><span>2</span><div><strong>Veja os principais indicadores</strong><p>Comece por uma visão geral neutra e organizada.</p></div></li><li><span>3</span><div><strong>Entenda o resultado</strong><p>Leia valor, comparação e evolução antes dos detalhes técnicos.</p></div></li></ol>
+          <div className="home-examples"><strong>Perguntas que você poderá responder</strong><span>Como está a pneumonia na minha cidade?</span><span>Como a cidade se compara ao restante do RJ?</span><span>O indicador aumentou ou diminuiu?</span></div>
         </div>
         <div className="river-rule" aria-hidden="true">
           <svg viewBox="0 0 800 72" preserveAspectRatio="none"><path d="M0 38C90 5 130 66 220 34S350 57 430 31 560 55 640 30 720 52 800 22" /><path d="M0 51C90 18 130 79 220 47S350 70 430 44 560 68 640 43 720 65 800 35" /></svg>
