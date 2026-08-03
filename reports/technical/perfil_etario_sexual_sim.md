@@ -1,12 +1,12 @@
 # Perfil etário e sexual dos óbitos no SIM
 
-Execução: 2026-08-02T23:29:54+00:00
+Execução: 2026-08-03T00:02:02+00:00
 
 Este produto descreve a distribuição dos óbitos de residentes por grupo etário amplo e sexo. A coluna de proporção é a participação dentro do desfecho, ano e território; não é uma taxa populacional.
 
 - Anos disponíveis: **[2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]**.
 - Anos exibidos nesta tabela: **[2020, 2024]**.
-- Não há denominador por idade e sexo; portanto não são calculadas taxas específicas nem padronização.
+- Este perfil é descritivo; as taxas específicas SIM 2022 usam denominadores separados e são publicadas em outro produto. Não há padronização neste perfil.
 - Células menores que cinco são exibidas como <5.
 
 ## Perfil selecionado

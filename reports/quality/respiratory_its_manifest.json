@@ -1,0 +1,111 @@
+{
+  "generated_at": "2026-08-03T00:13:58+00:00",
+  "status": "descriptive_interrupted_time_series_no_causal_inference",
+  "duplicate_rows_removed_from_input": 18,
+  "month_count_by_year": {
+    "2008": 12,
+    "2009": 12,
+    "2010": 12,
+    "2011": 12,
+    "2012": 12,
+    "2013": 12,
+    "2014": 12,
+    "2015": 12,
+    "2016": 12,
+    "2017": 12,
+    "2018": 12,
+    "2019": 12,
+    "2020": 12,
+    "2021": 12,
+    "2022": 12,
+    "2023": 12,
+    "2024": 12,
+    "2025": 12,
+    "2026": 5
+  },
+  "complete_sih_years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "partial_sih_years": [
+    2026
+  ],
+  "missing_denominator_years": [
+    2010,
+    2023
+  ],
+  "eligible_years": [
+    2008,
+    2009,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2024,
+    2025
+  ],
+  "pandemic_start": "2020-03",
+  "model_rows": 12,
+  "fitted_models": 12,
+  "suppressed_models": 0,
+  "output_path": "data\\processed\\sih_respiratory_interrupted_series.parquet",
+  "output_sha256": "78ad20f3498298d5e57924878ba393729c99763a537f1bbc1bfb61488ac9c91c",
+  "model_output_path": "data\\processed\\sih_respiratory_interrupted_models.parquet",
+  "model_output_sha256": "da4e069ce6f8c2654fe23d1a0c9098d535acef2603075051b6a347ccba1f5374",
+  "report_path": "reports\\technical\\serie_interrompida_respiratoria.md",
+  "input_paths": [
+    {
+      "path": "data\\interim\\sih_morbidity_2008_2017.csv",
+      "sha256": "fac4ff0a020d6717230b77c3617400d4995496677f15cb8536c6e20877d1aaa8"
+    },
+    {
+      "path": "data\\interim\\sih_morbidity_2018_2026.csv",
+      "sha256": "4d82442080e1c5fa0a994766b7efcbdfee3e01a76d830a30321bcc16a0e0a5e5"
+    },
+    {
+      "path": "data\\interim\\sih_morbidity_2024_2024.csv",
+      "sha256": "77038aa2aa0b531fbe39f27b270d73cf14a6871df2c7eb8a39bd0d15a112b705"
+    }
+  ],
+  "model": {
+    "family": "Poisson GLM",
+    "offset": "log(annual resident population / 12)",
+    "terms": [
+      "time_index",
+      "pandemic_step",
+      "post_pandemic_time",
+      "month indicators"
+    ],
+    "covariance": "HAC maxlags=12 with HC0 fallback"
+  },
+  "notes": [
+    "SIH observations are aggregated AIH events and not unique persons.",
+    "2020-03 is a pre-specified respiratory pandemic break.",
+    "Missing denominator years are excluded rather than interpolated.",
+    "This model is descriptive/associative and does not estimate causality."
+  ]
+}

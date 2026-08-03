@@ -225,7 +225,8 @@ def _write_report(root: Path, rates: pd.DataFrame, metadata: dict[str, object]) 
         "## Limitações",
         "",
         "- Os arquivos SIM de 2010–2024 foram adquiridos e harmonizados; o status definitivo/preliminar de cada recurso permanece uma dimensão de proveniência e não é misturado automaticamente.",
-        "- Não há padronização por idade, denominador por idade/sexo, causas múltiplas, mortalidade prematura ou anos potenciais de vida perdidos nesta camada.",
+        "- Esta camada não faz padronização, causas múltiplas, mortalidade prematura ou "
+        "anos potenciais de vida perdidos; taxas específicas SIM 2022 estão em produto separado.",
         "- 2020–2022 deve ser interpretado à luz da interrupção assistencial oncológica; não é uma linha de base normal.",
         "- O comparador exclui Volta Redonda por residência e não autoriza inferência causal.",
     ]
@@ -260,7 +261,7 @@ def build_mortality_rates(root: Path) -> tuple[Path, Path, Path]:
             "The three available SIM years are not a continuous annual series and are not used for trend inference.",
             "SIM deaths are not incident cancer cases.",
             "Small cells are suppressed in the technical report.",
-            "No age standardization, causal inference, or ecological attribution to CSN is produced.",
+            "No age standardization, premature mortality, causal inference, or ecological attribution to CSN is produced.",
         ],
     }
     manifest_path = root / "reports" / "quality" / "sim_mortality_rates_manifest.json"

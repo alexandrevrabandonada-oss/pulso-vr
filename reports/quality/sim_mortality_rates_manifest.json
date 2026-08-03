@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T23:16:41+00:00",
+  "generated_at": "2026-08-03T00:02:07+00:00",
   "status": "sampled_sim_crude_mortality_rates_no_incidence_estimate",
   "observed_years": [
     2010,
@@ -81,6 +81,6 @@
     "The three available SIM years are not a continuous annual series and are not used for trend inference.",
     "SIM deaths are not incident cancer cases.",
     "Small cells are suppressed in the technical report.",
-    "No age standardization, causal inference, or ecological attribution to CSN is produced."
+    "No age standardization, premature mortality, causal inference, or ecological attribution to CSN is produced."
   ]
 }

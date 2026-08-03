@@ -12,8 +12,8 @@ perguntas, catálogo de fontes, configurações, validações automatizadas e
 downloaders idempotentes. A Fase 2 já validou a descoberta dinâmica no portal
 oficial, adquiriu amostras SIM 2010/2020/2024 e SIVEP 2019/2020 e confirmou o
 código DATASUS de residência de Volta Redonda. Ainda não há resultado
-epidemiológico: a rota SIH foi exercitada em um mês, mas nenhuma hipótese é
-considerada confirmada.
+etiológico confirmado: há resultados preliminares descritivos de SIH, SIM e
+SIVEP, mas nenhuma hipótese causal é considerada confirmada.
 
 ## Comparação e períodos
 
@@ -63,6 +63,7 @@ python scripts/run_cli.py population-harmonize --start-year 2008 --end-year 2025
 python scripts/run_cli.py population-age-sex-acquire
 python scripts/run_cli.py population-age-sex-harmonize
 python scripts/run_cli.py respiratory-rates
+python scripts/run_cli.py respiratory-its
 python scripts/run_cli.py outcome-counts
 python scripts/run_cli.py sivep-summary
 python scripts/run_cli.py sim-mortality-rates
@@ -117,8 +118,8 @@ mas 2010 e 2023 permanecem fora das taxas por falta de denominador populacional;
 o relatório está em `reports/technical/mortalidade_sim.md`.
 O perfil descritivo por grupos etários amplos e sexo está em
 `data/processed/sim_mortality_age_sex_profile.parquet`; ele mostra
-contagens e proporções dentro do desfecho, sem taxas específicas ou
-padronização, pois os denominadores por idade/sexo ainda não foram obtidos.
+contagens e proporções dentro do desfecho, sem substituir as taxas específicas
+de 2022, que são produzidas em separado.
 O relatório está em `reports/technical/perfil_etario_sexual_sim.md`.
 Os denominadores por idade e sexo do Censo 2022 são harmonizados da tabela
 SIDRA 9514 em `data/processed/population_age_sex_denominators_2022.parquet`.
@@ -134,8 +135,13 @@ Também está disponível a primeira série respiratória agregada do SIH em
 `data/interim/sih_morbidity_2008_2017.csv` e
 `data/interim/sih_morbidity_2018_2026.csv`, com o relatório técnico em
 `reports/technical/fase3_respiratorio.md`. Esses arquivos ainda não liberam
-taxas: o denominador por idade/sexo e a reconciliação independente continuam
-pendentes.
+taxas específicas do SIH, porque a extração agregada não contém idade/sexo.
+A série temporal interrompida respiratória, com ruptura pré-especificada em
+março de 2020, está em `data/processed/sih_respiratory_interrupted_series.parquet`
+e seus coeficientes estão em
+`data/processed/sih_respiratory_interrupted_models.parquet`; o relatório está em
+`reports/technical/serie_interrompida_respiratoria.md`. A reconciliação
+independente com totais externos ainda permanece pendente.
 
 ## Princípios analíticos
 

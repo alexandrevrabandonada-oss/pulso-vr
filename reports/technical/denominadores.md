@@ -1,6 +1,6 @@
 # Denominadores populacionais
 
-Execução: 2026-08-02T21:53:11+00:00
+Execução: 2026-08-03T00:02:00+00:00
 
 ## Regra
 
@@ -71,6 +71,6 @@ A população anual é obtida da SIDRA. A tabela 6579 é usada para estimativas 
 - Anos sem VR: **nenhum**.
 - Chaves municipais duplicadas: **0**.
 
-Esses denominadores permitem taxas brutas agregadas. Ainda não há denominador por idade/sexo nesta etapa; portanto taxas específicas e padronizadas continuam pendentes.
+Esses denominadores permitem taxas brutas agregadas. Denominadores por idade/sexo foram harmonizados separadamente para 2022; ainda não há uma série completa compatível para padronização temporal.
 
 2026 não é tratado como zero: não há estimativa anual correspondente no arquivo adquirido.

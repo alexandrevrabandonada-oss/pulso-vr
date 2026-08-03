@@ -1,8 +1,8 @@
 {
   "project": "vr_saude_ambiental",
   "code_version": "0.1.0",
-  "run_at": "2026-08-02T23:54:18+00:00",
-  "status": "preliminary_no_epidemiological_results",
+  "run_at": "2026-08-03T00:14:02+00:00",
+  "status": "preliminary_descriptive_analyses_no_causal_inference",
   "inputs": [
     {
       "path": "config\\outcomes.yml",
@@ -32,7 +32,7 @@
   "outputs": [
     {
       "path": "reports\\quality\\quality_report_initial.md",
-      "sha256": "fa2dc9f6a377a9abfac3d75a4962121afeb9ebf8546be142955a41967d9a9b40"
+      "sha256": "3e58ed4a1fa09344b534c34945da36c8ad04aa67923192d015ee9b175581c773"
     },
     {
       "path": "reports\\quality\\raw_samples_validation.md",
@@ -68,7 +68,7 @@
     },
     {
       "path": "reports\\quality\\population_denominator_manifest.json",
-      "sha256": "4842ec9b61ea50dd9f8c867224f88120482b0457d64ec1607aedf0eeb23c3dd5"
+      "sha256": "69cf60935f2a9c1ef6b615dc3988cc497356ea3a95326de77c8d299dd669452f"
     },
     {
       "path": "reports\\quality\\population_age_sex_manifest.json",
@@ -77,6 +77,10 @@
     {
       "path": "reports\\quality\\respiratory_rates_manifest.json",
       "sha256": "3bb9f074ece3be04db321704c52ec35b27b85803491c2201c6c26301c1bffe8b"
+    },
+    {
+      "path": "reports\\quality\\respiratory_its_manifest.json",
+      "sha256": "ed3a462551909baceffda615a3e5ca95c4cb7a6bfad94589dcca3b1d05b0bbdb"
     },
     {
       "path": "reports\\quality\\outcome_counts_manifest.json",
@@ -88,11 +92,11 @@
     },
     {
       "path": "reports\\quality\\sim_mortality_rates_manifest.json",
-      "sha256": "c4df2b31eda90fe34785b44bf78f730d4b9e7f23c5ccb5d3949eb1b45c1e5c6f"
+      "sha256": "15f249b25663e978b34bcc47f8afeaa9627276aabaef14a9142fa715a32b3886"
     },
     {
       "path": "reports\\quality\\sim_age_sex_profile_manifest.json",
-      "sha256": "69b3c7c06170df1e14c1fa02d6e1f94e16a0a7952a60489e37b4f659b4c259d6"
+      "sha256": "8614a8783192d13658f598f5696dcb6bd42a2b98e4fdac1b4df9500d1ae2b10d"
     },
     {
       "path": "reports\\quality\\sim_age_sex_rates_manifest.json",
@@ -100,11 +104,11 @@
     },
     {
       "path": "reports\\technical\\fase3_respiratorio.md",
-      "sha256": "5c3aace4d333ed52aa5065ccc9c37022b4ac755ee3c1ab3d412f0dc6e3cda561"
+      "sha256": "00d0ee862925daecee8adba2ac201634c8d96763b15e7e810fbcb66b81d2bebf"
     },
     {
       "path": "reports\\technical\\denominadores.md",
-      "sha256": "4dcf9ed0bb18ace67c50299708969601491036e4e6a78f1878b7d051a1b697f5"
+      "sha256": "c5addf3483282670ca75f32894236d02e2d1fbf5c0685064a8a666ac9e51d282"
     },
     {
       "path": "reports\\technical\\denominadores_idade_sexo_2022.md",
@@ -113,6 +117,10 @@
     {
       "path": "reports\\technical\\taxas_respiratorias.md",
       "sha256": "669f68b4ab58aec28ad0dcf5339d263290d7a583ff0ca642cf2b7dfb27cc6be0"
+    },
+    {
+      "path": "reports\\technical\\serie_interrompida_respiratoria.md",
+      "sha256": "8708a1bf2306113596671b384cace20634a38d720a4dc9f528f9f3496bbab25d"
     },
     {
       "path": "reports\\technical\\desfechos_sim_sivep.md",
@@ -124,11 +132,11 @@
     },
     {
       "path": "reports\\technical\\mortalidade_sim.md",
-      "sha256": "e68e1781aff08865d5eb1d9e231bf1e3e6e22e537ff1e606b49b2fbe9d21d53f"
+      "sha256": "327c2618ac4d5836443943eeaec3b69d2eb5d743ee2acb32214d836435e15809"
     },
     {
       "path": "reports\\technical\\perfil_etario_sexual_sim.md",
-      "sha256": "3366bfe35f18624ccbb932cf82e47aec20c6ce0d69a2996a587700629f557f0d"
+      "sha256": "e24247906f48499f113cf1ab530b02e5dbd5addf73502cb3e96575ee22ba4f9b"
     },
     {
       "path": "reports\\technical\\taxas_sim_idade_sexo_2022.md",
@@ -3849,6 +3857,16 @@
       "path": "data\\processed\\respiratory_rates_annual.parquet",
       "bytes": 33070,
       "sha256": "2a13bde7d697c685f663acd15935d8ee73242a96636e690a8e511f00eec686ed"
+    },
+    {
+      "path": "data\\processed\\sih_respiratory_interrupted_models.parquet",
+      "bytes": 19671,
+      "sha256": "da4e069ce6f8c2654fe23d1a0c9098d535acef2603075051b6a347ccba1f5374"
+    },
+    {
+      "path": "data\\processed\\sih_respiratory_interrupted_series.parquet",
+      "bytes": 61830,
+      "sha256": "78ad20f3498298d5e57924878ba393729c99763a537f1bbc1bfb61488ac9c91c"
     },
     {
       "path": "data\\processed\\sim_mortality_age_sex_profile.parquet",

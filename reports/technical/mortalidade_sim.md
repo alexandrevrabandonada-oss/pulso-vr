@@ -1,6 +1,6 @@
 # Mortalidade por causas selecionadas no SIM
 
-Execução: 2026-08-02T23:16:42+00:00
+Execução: 2026-08-03T00:02:07+00:00
 
 A contagem representa óbitos de residentes classificados pela causa básica. A taxa é óbitos/população residente × 100.000, com intervalo exato de Poisson. Isso não mede incidência de câncer nem risco etiológico.
 
@@ -178,6 +178,6 @@ O arquivo processado também contém os demais desfechos definidos em `config/ou
 ## Limitações
 
 - Os arquivos SIM de 2010–2024 foram adquiridos e harmonizados; o status definitivo/preliminar de cada recurso permanece uma dimensão de proveniência e não é misturado automaticamente.
-- Não há padronização por idade, denominador por idade/sexo, causas múltiplas, mortalidade prematura ou anos potenciais de vida perdidos nesta camada.
+- Esta camada não faz padronização, causas múltiplas, mortalidade prematura ou anos potenciais de vida perdidos; taxas específicas SIM 2022 estão em produto separado.
 - 2020–2022 deve ser interpretado à luz da interrupção assistencial oncológica; não é uma linha de base normal.
 - O comparador exclui Volta Redonda por residência e não autoriza inferência causal.

@@ -1,6 +1,6 @@
 # Relatório inicial de qualidade
 
-Execução: 2026-08-02T23:54:14+00:00
+Execução: 2026-08-03T00:13:57+00:00
 
 ## Escopo
 
@@ -23,4 +23,4 @@ Contagem por status: `{"complete": 1, "downloaded": 704, "empty": 1, "failed": 1
 - O catálogo dinâmico de recursos SIM/SIVEP e os layouts observados foram preservados em metadata/.
 - A série SIH harmonizada em data/interim/ é descritiva e mantém o vínculo com cada resposta HTML bruta.
 - A reconciliação de totais oficiais ainda não foi executada.
-- Não há resultado negativo ou positivo sobre saúde de Volta Redonda nesta fase.
+- Há resultados preliminares descritivos, mas nenhuma hipótese causal ou etiológica foi confirmada.

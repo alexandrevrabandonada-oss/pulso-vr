@@ -14,6 +14,7 @@ from .download import download_public_file
 from .discovery import discover_resources, select_resource
 from .age_sex import build_age_sex_profile
 from .harmonize import harmonize_sources
+from .interrupted_respiratory import build_interrupted_respiratory
 from .logging_utils import configure_logging
 from .layout_validation import write_layout_manifest
 from .mortality import build_mortality_rates
@@ -79,7 +80,7 @@ def _quality_report(root: Path) -> Path:
                 "- O catálogo dinâmico de recursos SIM/SIVEP e os layouts observados foram preservados em metadata/.",
                 "- A série SIH harmonizada em data/interim/ é descritiva e mantém o vínculo com cada resposta HTML bruta.",
                 "- A reconciliação de totais oficiais ainda não foi executada.",
-                "- Não há resultado negativo ou positivo sobre saúde de Volta Redonda nesta fase.",
+                "- Há resultados preliminares descritivos, mas nenhuma hipótese causal ou etiológica foi confirmada.",
             ]
         )
         + "\n",
@@ -110,6 +111,7 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "reports" / "quality" / "population_denominator_manifest.json",
         root / "reports" / "quality" / "population_age_sex_manifest.json",
         root / "reports" / "quality" / "respiratory_rates_manifest.json",
+        root / "reports" / "quality" / "respiratory_its_manifest.json",
         root / "reports" / "quality" / "outcome_counts_manifest.json",
         root / "reports" / "quality" / "sivep_surveillance_manifest.json",
         root / "reports" / "quality" / "sim_mortality_rates_manifest.json",
@@ -119,6 +121,7 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "reports" / "technical" / "denominadores.md",
         root / "reports" / "technical" / "denominadores_idade_sexo_2022.md",
         root / "reports" / "technical" / "taxas_respiratorias.md",
+        root / "reports" / "technical" / "serie_interrompida_respiratoria.md",
         root / "reports" / "technical" / "desfechos_sim_sivep.md",
         root / "reports" / "technical" / "pandemia_sivep.md",
         root / "reports" / "technical" / "mortalidade_sim.md",
@@ -153,7 +156,7 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         "project": "vr_saude_ambiental",
         "code_version": __version__,
         "run_at": _utc_now(),
-        "status": "preliminary_no_epidemiological_results",
+        "status": "preliminary_descriptive_analyses_no_causal_inference",
         "inputs": [
             {"path": str(path.relative_to(root)), "sha256": sha256_file(path)}
             for path in tracked_inputs
@@ -233,6 +236,10 @@ def _parser() -> argparse.ArgumentParser:
     subparsers.add_parser(
         "respiratory-rates",
         help="calculate crude annual respiratory rates with exact Poisson intervals",
+    )
+    subparsers.add_parser(
+        "respiratory-its",
+        help="fit a descriptive interrupted time series at March 2020",
     )
     subparsers.add_parser(
         "outcome-counts",
@@ -436,6 +443,16 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Respiratory rates manifest: {manifest}")
         print(f"Respiratory rates report: {report}")
         return 0
+    if args.command == "respiratory-its":
+        try:
+            output, manifest, report = build_interrupted_respiratory(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: respiratory interrupted series failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Respiratory interrupted series Parquet: {output}")
+        print(f"Respiratory interrupted series manifest: {manifest}")
+        print(f"Respiratory interrupted series report: {report}")
+        return 0
     if args.command == "outcome-counts":
         try:
             output, manifest, report = build_outcome_counts(root)
@@ -556,11 +573,24 @@ def main(argv: list[str] | None = None) -> int:
         respiratory_report = None
         if list((root / "data" / "interim").glob("sih_morbidity_*.csv")):
             respiratory_report = write_respiratory_report(root)
+        if (
+            respiratory_report
+            and (root / "data" / "processed" / "population_denominators.parquet").exists()
+        ):
+            try:
+                _, _, respiratory_its_report = build_interrupted_respiratory(root)
+            except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+                print(f"ERROR: respiratory interrupted series failed: {exc}", file=sys.stderr)
+                return 1
+        else:
+            respiratory_its_report = None
         manifest = _manifest(root, quality)
         print(f"Raw validation report: {raw_report}")
         print(f"Quality report: {quality}")
         if respiratory_report:
             print(f"Respiratory report: {respiratory_report}")
+        if respiratory_its_report:
+            print(f"Respiratory interrupted series report: {respiratory_its_report}")
         print(f"Results manifest: {manifest}")
         return 0
     return 2

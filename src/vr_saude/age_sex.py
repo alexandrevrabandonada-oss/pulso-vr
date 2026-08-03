@@ -116,7 +116,8 @@ def _write_report(root: Path, profile: pd.DataFrame, available_years: list[int])
         "",
         f"- Anos disponíveis: **{available_years}**.",
         f"- Anos exibidos nesta tabela: **{display_years}**.",
-        "- Não há denominador por idade e sexo; portanto não são calculadas taxas específicas nem padronização.",
+        "- Este perfil é descritivo; as taxas específicas SIM 2022 usam denominadores "
+        "separados e são publicadas em outro produto. Não há padronização neste perfil.",
         "- Células menores que cinco são exibidas como <5.",
         "",
         "## Perfil selecionado",

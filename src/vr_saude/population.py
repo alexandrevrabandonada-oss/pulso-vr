@@ -245,8 +245,9 @@ def _write_report(root: Path, years: list[int], municipality: pd.DataFrame, deno
             f"- Anos sem VR: **{manifest['denominator']['missing_vr_years'] or 'nenhum'}**.",
             f"- Chaves municipais duplicadas: **{manifest['municipality']['duplicate_keys']}**.",
             "",
-            "Esses denominadores permitem taxas brutas agregadas. Ainda não há denominador "
-            "por idade/sexo nesta etapa; portanto taxas específicas e padronizadas continuam pendentes.",
+            "Esses denominadores permitem taxas brutas agregadas. Denominadores por idade/sexo "
+            "foram harmonizados separadamente para 2022; ainda não há uma série completa "
+            "compatível para padronização temporal.",
             "",
             "2026 não é tratado como zero: não há estimativa anual correspondente no arquivo adquirido.",
         ]
