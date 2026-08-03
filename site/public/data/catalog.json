@@ -37,7 +37,7 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
       "synonyms": [
         "bronquite aguda e bronquiolite aguda"
       ],
@@ -104,7 +104,7 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
       "synonyms": [
         "ataque cardíaco",
         "iam",
@@ -174,7 +174,7 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
       "synonyms": [
         "asma"
       ],
@@ -241,7 +241,7 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
       "synonyms": [
         "transtornos de condução e arritmias cardíacas"
       ],
@@ -308,7 +308,7 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
       "synonyms": [
         "todas as doenças do aparelho circulatório"
       ],
@@ -376,7 +376,7 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
       "synonyms": [
         "todas as doenças cardiorrespiratórias"
       ],
@@ -443,7 +443,7 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
       "synonyms": [
         "doenças cerebrovasculares"
       ],
@@ -510,7 +510,7 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
       "synonyms": [
         "bronquite enfisema e outr doenç pulm obstr crôn"
       ],
@@ -577,7 +577,7 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
       "synonyms": [
         "insuficiência cardíaca"
       ],
@@ -644,7 +644,7 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
       "synonyms": [
         "doenças hipertensivas"
       ],
@@ -711,7 +711,7 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
       "synonyms": [
         "doenças isquêmicas do coração"
       ],
@@ -778,7 +778,7 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
       "synonyms": [
         "pneumoconiose"
       ],
@@ -845,7 +845,7 @@
       "mapStatus": "validated_sih_2025_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
       "synonyms": [
         "infecção pulmonar",
         "pneumonia"
@@ -949,7 +949,7 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
       "synonyms": [
         "embolia pulmonar"
       ],
@@ -1016,7 +1016,7 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença.",
       "synonyms": [
         "10 doenças do aparelho respiratório"
       ],
@@ -1061,7 +1061,7 @@
       "theme": "respiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1083,7 +1083,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "bronquite e bronquiolite agudas"
       ],
@@ -1146,7 +1146,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1168,7 +1168,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "ataque cardíaco",
         "iam",
@@ -1234,7 +1234,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1256,7 +1256,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "cancer",
         "câncer",
@@ -1322,7 +1322,7 @@
       "theme": "respiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1344,7 +1344,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "asma e estado de mal asmático"
       ],
@@ -1407,7 +1407,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1429,7 +1429,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "bexiga"
       ],
@@ -1492,7 +1492,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1514,7 +1514,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "mama"
       ],
@@ -1577,7 +1577,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1599,7 +1599,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "transtornos de condução e arritmias cardíacas"
       ],
@@ -1662,7 +1662,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1684,7 +1684,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "todas as doenças do aparelho circulatório"
       ],
@@ -1747,7 +1747,7 @@
       "theme": "cardiorespiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1770,7 +1770,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "todas as doenças cardiorrespiratórias"
       ],
@@ -1833,7 +1833,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1855,7 +1855,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "doenças cerebrovasculares"
       ],
@@ -1918,7 +1918,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -1940,7 +1940,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "colo do útero"
       ],
@@ -2003,7 +2003,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -2025,7 +2025,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "cólon e reto"
       ],
@@ -2088,7 +2088,7 @@
       "theme": "respiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -2110,7 +2110,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "bronquite crônica, enfisema e dpoc"
       ],
@@ -2173,7 +2173,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -2195,7 +2195,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "insuficiência cardíaca"
       ],
@@ -2258,7 +2258,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -2280,7 +2280,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "doenças hipertensivas"
       ],
@@ -2343,7 +2343,7 @@
       "theme": "respiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -2365,7 +2365,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "influenza"
       ],
@@ -2428,7 +2428,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -2450,7 +2450,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "doenças isquêmicas do coração"
       ],
@@ -2513,7 +2513,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -2535,7 +2535,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "leucemias"
       ],
@@ -2598,7 +2598,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -2620,7 +2620,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "fígado"
       ],
@@ -2683,7 +2683,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -2705,7 +2705,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "bronquios",
         "câncer de pulmão",
@@ -2772,7 +2772,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -2794,7 +2794,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "mieloma múltiplo"
       ],
@@ -2857,7 +2857,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -2879,7 +2879,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "síndromes mielodisplásicas"
       ],
@@ -2942,7 +2942,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -2964,7 +2964,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "linfoma não hodgkin"
       ],
@@ -3027,7 +3027,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -3049,7 +3049,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "pâncreas"
       ],
@@ -3112,7 +3112,7 @@
       "theme": "respiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -3134,7 +3134,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "pneumoconioses"
       ],
@@ -3197,7 +3197,7 @@
       "theme": "respiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -3219,7 +3219,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "infecção pulmonar",
         "pneumonia",
@@ -3284,7 +3284,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -3306,7 +3306,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "próstata"
       ],
@@ -3369,7 +3369,7 @@
       "theme": "cardiovascular",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -3391,7 +3391,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "embolia pulmonar"
       ],
@@ -3454,7 +3454,7 @@
       "theme": "respiratory",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -3476,7 +3476,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "todas as doenças respiratórias"
       ],
@@ -3539,7 +3539,7 @@
       "theme": "cancer",
       "measure": "mortality",
       "measureLabel": "Mortalidade",
-      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença.",
       "unit": "óbitos de residentes pela causa básica",
       "sourceLabel": "SIM — Ministério da Saúde",
       "cidRanges": [
@@ -3561,7 +3561,7 @@
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença.",
       "synonyms": [
         "estômago"
       ],

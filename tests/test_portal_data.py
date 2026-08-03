@@ -1,8 +1,12 @@
 import json
+from pathlib import Path
 
 import pandas as pd
 
 from vr_saude.portal_data import _municipal_map_payloads, _municipal_series_payloads, _municipality_summaries, _topology_geometry, suppress_public_observation
+
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_publication_suppresses_small_cells_before_frontend() -> None:
@@ -99,9 +103,23 @@ def test_municipality_summary_is_lightweight_dynamic_and_suppression_safe() -> N
             "count": 200, "denominator": 1_000_000, "dataStatus": "source_observed", "suppressed": False,
         }]
     payload = _municipality_summaries(catalog, aggregate, municipal)
-    items = payload["municipalities"]["3300100"]
+    items = payload["3300100"]
     published = next(item for item in items if item["indicatorId"] == "sih-pneumonia")
     protected = next(item for item in items if item["indicatorId"] == "sim-lung")
     assert round(published["restOfStateValue"], 2) == 21.11
     assert protected["value"] is None and protected["count"] is None
     assert protected["restOfStateValue"] is None
+
+
+def test_published_municipality_summaries_cover_state_without_protected_leaks() -> None:
+    paths = sorted((ROOT / "site" / "public" / "data" / "municipality-summaries").glob("*.json"))
+    assert len(paths) == 92
+    for path in paths:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        assert payload["municipalityCode"] == path.stem
+        assert len(payload["items"]) == 45
+        for item in payload["items"]:
+            if item["suppressionStatus"] == "suppressed":
+                assert item["value"] is None
+                assert item["count"] is None
+                assert item["restOfStateValue"] is None

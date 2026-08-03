@@ -2,13 +2,14 @@ import { ArrowRight, ChartNoAxesCombined, Download, FileText, Map, Share2, Users
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useRoute, useSearch } from 'wouter'
 import { DiscoverySearch } from '../components/DiscoverySearch'
+import { DataGlossary } from '../components/DataGlossary'
 import { LoadingState } from '../components/LoadingState'
 import { SeriesInsights } from '../components/SeriesInsights'
 import { TerritoryMap } from '../components/TerritoryMap'
 import { TimeSeriesChart } from '../components/TimeSeriesChart'
 import { usePortal } from '../context/usePortal'
 import { trackEvent } from '../lib/analytics'
-import { loadMap, loadMunicipalitySummaries, loadMunicipalSeries, loadSeries } from '../lib/data'
+import { loadMap, loadMunicipalitySummary, loadMunicipalSeries, loadSeries } from '../lib/data'
 import { formatMetric, statusLabel } from '../lib/format'
 import { buildMunicipalComparisonSeries, rateRatio, relativeDifferenceLabel } from '../lib/municipalComparison'
 import { municipalProperties } from '../lib/municipalities'
@@ -33,8 +34,8 @@ function MunicipalityOverview({ municipalityCode }: { municipalityCode: string }
   const [loadFailed, setLoadFailed] = useState(false)
   useEffect(() => {
     let active = true
-    loadMunicipalitySummaries()
-      .then((payload) => { if (active) setItems(payload.municipalities[municipalityCode] ?? []) })
+    loadMunicipalitySummary(municipalityCode)
+      .then((payload) => { if (active) setItems(payload.items) })
       .catch(() => { if (active) setLoadFailed(true); trackEvent('data_load_error', { surface: 'municipality_overview' }) })
     return () => { active = false }
   }, [municipalityCode])
@@ -72,9 +73,9 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
   useEffect(() => {
     let active = true
     setSummary(undefined); setSeries(null); setMunicipalSeries(null); setMap(null); setActiveTab(null); setDetailError(null)
-    loadMunicipalitySummaries().then((payload) => {
+    loadMunicipalitySummary(municipalityCode).then((payload) => {
       if (!active) return
-      setSummary(payload.municipalities[municipalityCode]?.find((item) => item.indicatorId === indicator.id) ?? null)
+      setSummary(payload.items.find((item) => item.indicatorId === indicator.id) ?? null)
       trackEvent('first_answer_rendered', { surface: 'municipality', indicatorId: indicator.id })
     }).catch(() => { if (active) setSummary(null); trackEvent('data_load_error', { surface: 'municipality_summary' }) })
     return () => { active = false }
@@ -101,13 +102,15 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
 
   if (!municipality) return <main className="content-page"><h1>Município não encontrado</h1><p>Use um código IBGE válido de um dos 92 municípios do Rio de Janeiro.</p><Link href="/">Voltar ao início</Link></main>
   if (summary === undefined) return <main className="content-page"><LoadingState label={`Carregando resposta de ${municipality.name}…`} /></main>
+  if (summary === null) return <main className="content-page"><h1>Resposta temporariamente indisponível</h1><p>Não foi possível carregar o resumo de {indicator.label} para {municipality.name}. Nenhum valor foi substituído por zero.</p><button type="button" onClick={() => window.location.reload()}>Tentar novamente</button></main>
 
   const latest = summary
   const period = latest?.period ?? null
   const comparisonSeries = series && municipalSeries ? buildMunicipalComparisonSeries(municipality.code, municipalSeries, series) : []
   const labels = { selected_municipality: municipality.name, rest_of_rj_excluding_selected: `RJ sem ${municipality.name}`, brazil_total: 'Brasil' }
   const ratio = rateRatio(latest?.value, latest?.restOfStateValue)
-  const status = statusLabel(latest?.dataStatus ?? '')
+  const status = statusLabel(latest.dataStatus)
+  const eventLabel = indicator.measure === 'hospitalization' ? 'internações/AIHs registradas' : 'óbitos de residentes registrados'
   const open = (code: string, indicatorId: string) => navigate(`/municipios/${code}?indicador=${indicatorId}`)
   const download = async () => {
     const [seriesPayload, municipalPayload] = series && municipalSeries ? [{ observations: series }, { observations: municipalSeries }] : await Promise.all([loadSeries(indicator.id), loadMunicipalSeries(indicator.id)])
@@ -132,7 +135,7 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
       </section>
       <section className={`municipality-answer${latest?.suppressionStatus === 'suppressed' ? ' is-suppressed' : ''}`} aria-labelledby="municipality-answer-title">
         <div className="municipality-answer__intro"><span>O que este indicador mede</span><h2 id="municipality-answer-title">{indicator.label}</h2><p>{indicator.definition}</p><small>{indicator.measureLabel} · {period ?? 'sem período publicável'} · {status}</small></div>
-        <div className="municipality-answer__value"><span>1 · Valor</span><strong>{latest?.suppressionStatus === 'suppressed' ? 'Dado protegido' : formatMetric(latest?.value ?? null, 'crude_rate_per_100k')}</strong>{latest?.suppressionStatus !== 'suppressed' ? <><span>por 100 mil habitantes</span><small>{formatMetric(latest?.count ?? null, 'count')} eventos registrados</small></> : <small>Célula pequena protegida. A ausência do valor não significa zero.</small>}</div>
+        <div className="municipality-answer__value"><span>1 · Valor</span><strong>{latest.suppressionStatus === 'suppressed' ? 'Dado protegido' : formatMetric(latest.value, 'crude_rate_per_100k')}</strong>{latest.suppressionStatus !== 'suppressed' ? <><span>por 100 mil habitantes</span><small>{formatMetric(latest.count, 'count')} {eventLabel}</small></> : <small>Célula pequena protegida. A ausência do valor não significa zero.</small>}</div>
         <div className="municipality-answer__comparison"><span>2 · Comparação</span><strong>{latest?.comparisonAvailable ? relativeDifferenceLabel(ratio) : 'Comparação indisponível'}</strong><small>RJ sem {municipality.name}: {formatMetric(latest?.restOfStateValue ?? null, 'crude_rate_per_100k')}</small>{indicator.comparisonAvailability?.brazil ? <small>Brasil: {formatMetric(latest?.brazilValue ?? null, 'crude_rate_per_100k')}</small> : <small>Brasil não exibido: definição ou período não equivalentes.</small>}</div>
       </section>
       <div className="municipality-actions"><button type="button" onClick={download}><Download />Baixar este recorte</button><button type="button" onClick={share}><Share2 />{linkCopied ? 'Link copiado' : 'Copiar link'}</button><Link href={`/explorador?indicador=${indicator.id}&municipio=${municipality.code}`}>Abrir análise avançada <ArrowRight /></Link></div>
@@ -150,6 +153,7 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
           {activeTab === 'profile' ? <div className="municipality-profile-callout"><Users /><div><strong>Perfil por idade e sexo</strong><p>{indicator.profileCoverage?.status === 'available' ? 'Há perfil municipal publicável para 2022.' : 'Este perfil ainda não está disponível para a fonte selecionada.'}</p>{indicator.profileCoverage?.status === 'available' ? <Link href={`/perfis?municipio=${municipality.code}&indicador=${indicator.id}&periodo=2022`}>Abrir perfil de 2022 <ArrowRight /></Link> : <Link href={`/indicadores/${indicator.id}`}>Entender a indisponibilidade</Link>}</div></div> : null}
         </div>
       </section>
+      <DataGlossary />
       <section className="municipality-method"><FileText /><div><h2>Como interpretar</h2><p><strong>O que permite concluir:</strong> {indicator.allowsConclusion}</p><p><strong>O que não permite concluir:</strong> {indicator.doesNotAllowConclusion}</p><Link href={`/indicadores/${indicator.id}`}>Ver fonte, CID e limitações</Link></div></section>
     </main>
   )

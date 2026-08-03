@@ -73,10 +73,11 @@ export interface MunicipalitySummaryItem {
   unavailableReason?: string | null
 }
 
-export interface MunicipalitySummariesPayload {
+export interface MunicipalitySummaryPayload {
   schemaVersion: string
   generatedAt: string
-  municipalities: Record<string, MunicipalitySummaryItem[]>
+  municipalityCode: string
+  items: MunicipalitySummaryItem[]
 }
 
 export interface Observation {

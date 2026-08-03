@@ -441,6 +441,13 @@ p { line-height: 1.65; }
 .explorer-series-empty { width: var(--page); min-height: 260px; margin: 0 auto; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; border: 3px solid var(--ink); padding: 24px; text-align: center; }
 .explorer-series-empty svg { width: 34px; height: 34px; }
 .explorer-series-empty h2, .explorer-series-empty p { margin: 0; }
+.data-glossary { border: 3px solid var(--ink); border-top: 0; background: #fff; }
+.data-glossary summary { min-height: 52px; display: flex; align-items: center; gap: 10px; padding: 0 20px; font-size: .72rem; font-weight: 900; text-transform: uppercase; cursor: pointer; }
+.data-glossary summary svg { width: 19px; }
+.data-glossary dl { display: grid; grid-template-columns: repeat(2, 1fr); margin: 0; border-top: 1px solid var(--ink); }
+.data-glossary dl div { padding: 18px 20px; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.data-glossary dt { margin-bottom: 6px; font-weight: 900; }
+.data-glossary dd { margin: 0; color: var(--muted); font-size: .7rem; line-height: 1.5; }
 
 @media (max-width: 760px) {
   .home-hero__data.home-hero__guide { display: block; padding: 20px 18px; border-left: 0; border-top: 3px solid var(--ink); }
@@ -448,6 +455,8 @@ p { line-height: 1.65; }
   .municipality-tabs { grid-template-columns: 1fr; }
   .municipality-tabs button { min-height: 48px; border-right: 0; border-bottom: 1px solid var(--ink); }
   .municipality-tabs button:last-child { border-bottom: 0; }
+  .data-glossary dl { grid-template-columns: 1fr; }
+  .data-glossary dl div { border-right: 0; }
 }
 
 @media (max-width: 560px) {

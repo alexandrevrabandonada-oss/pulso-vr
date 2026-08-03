@@ -47,7 +47,7 @@ SOURCE_DEFINITIONS = {
         "sourceLabel": "SIM — Ministério da Saúde",
         "definition": (
             "Óbitos de residentes classificados pela causa básica no Sistema de Informação "
-            "sobre Mortalidade. Mortalidade por câncer não representa incidência."
+            "sobre Mortalidade. Esses óbitos não representam incidência, prevalência ou todos os casos existentes da doença."
         ),
     },
 }
@@ -190,7 +190,9 @@ def _build_catalog_and_series(root: Path) -> tuple[list[dict[str, Any]], dict[st
                         "comparações descritivas com os territórios disponíveis."
                     ),
                     "doesNotAllowConclusion": (
-                        "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+                        "Não mede causalidade ambiental, risco individual, incidência ou prevalência da doença."
+                        if source == "SIM"
+                        else "Não representa pessoas únicas, casos novos, incidência ou prevalência da doença."
                     ),
                     "synonyms": _indicator_synonyms(str(outcome_id), str(outcome_frame.iloc[0]["outcome_label"])),
                     "updatedAt": _utc_now(),
@@ -468,29 +470,22 @@ def _write_download_csv(path: Path, series: dict[str, list[dict[str, Any]]]) -> 
                 writer.writerow({"indicatorId": indicator_id, **observation})
 
 
-CURATED_MUNICIPAL_INDICATORS = (
-    "sih-pneumonia",
-    "sim-lung",
-    "sim-all-malignant-neoplasms",
-    "sim-acute-myocardial-infarction",
-)
-
-
 def _municipality_summaries(
     catalog: list[dict[str, Any]],
     series: dict[str, list[dict[str, Any]]],
     municipal_series: dict[str, dict[str, Any]],
 ) -> dict[str, Any]:
     indicators = {str(item["id"]): item for item in catalog}
+    indicator_ids = sorted(indicators)
     municipality_codes = sorted({
         str(row["geographyId"])
-        for indicator_id in CURATED_MUNICIPAL_INDICATORS
+        for indicator_id in indicator_ids
         for row in municipal_series[indicator_id]["observations"]
     })
     municipalities: dict[str, list[dict[str, Any]]] = {}
     for municipality_code in municipality_codes:
         items: list[dict[str, Any]] = []
-        for indicator_id in CURATED_MUNICIPAL_INDICATORS:
+        for indicator_id in indicator_ids:
             indicator = indicators[indicator_id]
             rows = [
                 row for row in municipal_series[indicator_id]["observations"]
@@ -525,11 +520,7 @@ def _municipality_summaries(
                 "unavailableReason": latest.get("suppressionReason") if latest and latest["suppressed"] else None,
             })
         municipalities[municipality_code] = items
-    return {
-        "schemaVersion": "1.0.0",
-        "generatedAt": _utc_now(),
-        "municipalities": municipalities,
-    }
+    return municipalities
 
 
 def build_portal_data(
@@ -614,7 +605,13 @@ def build_portal_data(
         _write_json(output_root / "maps" / "rj" / f"{indicator_id}.json", maps[indicator_id])
         _write_json(output_root / "municipal-series" / f"{indicator_id}.json", municipal_series[indicator_id])
     _write_json(output_root / "geography" / "rj.topojson", topology)
-    _write_json(output_root / "municipality-summaries.json", summaries)
+    for municipality_code, items in summaries.items():
+        _write_json(output_root / "municipality-summaries" / f"{municipality_code}.json", {
+            "schemaVersion": "1.0.0",
+            "generatedAt": _utc_now(),
+            "municipalityCode": municipality_code,
+            "items": items,
+        })
     _write_download_csv(output_root / "downloads" / "series-publicas.csv", series)
 
     artifacts = []
