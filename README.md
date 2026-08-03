@@ -249,3 +249,15 @@ cobertura só será liberada depois de reconciliar os totais com a fonte oficial
 Ainda faltam, entre outros, dados
 históricos de qualidade do ar em resolução diária, registros de câncer,
 cobertura de planos privados e dados ocupacionais legalmente acessíveis.
+
+## Identidade e experiência pública
+
+O portal usa um sistema visual expressivo baseado em amarelo, preto, branco e
+laranja. Superfícies translúcidas ficam restritas à navegação, busca, abas e
+overlays; valores, comparações, gráficos, tabelas e metodologia permanecem em
+superfícies opacas e de alto contraste. A interface deve funcionar sem
+`backdrop-filter` e respeitar `prefers-reduced-motion`.
+
+Observatório Estadual de Saúde do RJ e VR Abandonada são apresentados como
+realização conjunta. Esse co-branding é institucional e nunca substitui a
+identificação das fontes epidemiológicas, da proveniência e da metodologia.
