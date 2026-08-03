@@ -18,6 +18,7 @@ from .interrupted_respiratory import build_interrupted_respiratory
 from .logging_utils import configure_logging
 from .layout_validation import write_layout_manifest
 from .mortality import build_mortality_rates
+from .municipal_profiles import build_municipal_age_sex_profiles
 from .oncology_diagnoses import build_oncology_diagnoses
 from .outcomes import build_outcome_counts
 from .population import acquire_population, harmonize_population
@@ -291,6 +292,10 @@ def _parser() -> argparse.ArgumentParser:
     subparsers.add_parser(
         "sim-age-sex-rates",
         help="calculate SIM 2022 specific crude rates by age group and sex",
+    )
+    subparsers.add_parser(
+        "sim-municipal-profiles",
+        help="calculate validated SIM 2022 municipal rates by age group and sex",
     )
     sim_municipal_map = subparsers.add_parser(
         "sim-municipal-map",
@@ -597,6 +602,16 @@ def main(argv: list[str] | None = None) -> int:
         print(f"SIM age-sex rates Parquet: {output}")
         print(f"SIM age-sex rates manifest: {manifest}")
         print(f"SIM age-sex rates report: {report}")
+        return 0
+    if args.command == "sim-municipal-profiles":
+        try:
+            output, manifest, report = build_municipal_age_sex_profiles(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: SIM municipal profiles failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"SIM municipal profile Parquet: {output}")
+        print(f"SIM municipal profile manifest: {manifest}")
+        print(f"SIM municipal profile report: {report}")
         return 0
     if args.command == "sim-municipal-map":
         try:
