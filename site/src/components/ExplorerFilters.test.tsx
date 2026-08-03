@@ -13,6 +13,14 @@ const indicator: Indicator = {
 }
 
 describe('ExplorerFilters', () => {
+  it('keeps technical adjustments behind an explicit control', () => {
+    render(<ExplorerFilters theme="respiratory" indicators={[indicator]} indicatorId={indicator.id} metric="crude_rate_per_100k" startYear={2008} endYear={2025} onTheme={vi.fn()} onIndicator={vi.fn()} onMetric={vi.fn()} onStartYear={vi.fn()} onEndYear={vi.fn()} onDownload={vi.fn()} />)
+    const button = screen.getByRole('button', { name: 'Ajustar análise' })
+    expect(button).toHaveAttribute('aria-expanded', 'false')
+    fireEvent.click(button)
+    expect(screen.getByRole('button', { name: 'Fechar ajustes' })).toHaveAttribute('aria-expanded', 'true')
+  })
+
   it('changes the metric through a real button control', () => {
     const onMetric = vi.fn()
     render(<ExplorerFilters theme="respiratory" indicators={[indicator]} indicatorId={indicator.id} metric="crude_rate_per_100k" startYear={2008} endYear={2025} onTheme={vi.fn()} onIndicator={vi.fn()} onMetric={onMetric} onStartYear={vi.fn()} onEndYear={vi.fn()} onDownload={vi.fn()} />)

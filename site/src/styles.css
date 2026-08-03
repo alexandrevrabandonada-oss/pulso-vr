@@ -847,12 +847,20 @@ button, select, input, .primary-button, .icon-action, .content-actions a { borde
 .quick-reading--warning .quick-reading__main h2 { color: var(--ink); }
 .quick-reading--warning > p { border-left-color: var(--ink); color: var(--muted); }
 .filter-rail {
+  display: none;
   position: sticky;
   top: 76px;
   z-index: 20;
   grid-template-columns: .7fr 1.8fr .55fr .55fr 1.1fr auto;
   box-shadow: 0 4px 0 rgba(11,11,11,.12);
 }
+.filter-rail--open { display: grid; }
+.analysis-summary { width: var(--page); min-height: 70px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 22px; padding: 11px 14px; border: 3px solid var(--ink); border-top: 0; background: #fff; }
+.analysis-summary > div { min-width: 0; display: grid; gap: 3px; }
+.analysis-summary span { font-size: .56rem; font-weight: 900; text-transform: uppercase; }
+.analysis-summary strong { overflow: hidden; font-size: .76rem; text-overflow: ellipsis; white-space: nowrap; }
+.analysis-summary small { color: var(--muted); font-size: .6rem; }
+.analysis-summary button { flex: 0 0 auto; min-height: 40px; display: flex; align-items: center; gap: 8px; border: 2px solid var(--ink); padding: 0 13px; background: var(--ink); color: var(--yellow); font-size: .62rem; font-weight: 900; text-transform: uppercase; cursor: pointer; }
 .icon-action, .metric-switch button, .filter-rail select { cursor: pointer; }
 .icon-action:hover, .metric-switch button:hover:not(.is-selected) { background: var(--yellow-soft); }
 .comparison-list > div { min-height: 46px; }
@@ -949,6 +957,9 @@ button, select, input, .primary-button, .icon-action, .content-actions a { borde
   .indicator-results { grid-template-columns: 1fr; }
   .indicator-results button:nth-child(odd) { border-right: 0; }
   .selection-summary { display: none; }
+  .analysis-summary { width: var(--page); margin: 10px auto 16px; align-items: stretch; flex-direction: column; gap: 10px; padding: 13px; border-top: 3px solid var(--ink); }
+  .analysis-summary strong { font-size: .8rem; white-space: normal; }
+  .analysis-summary button { justify-content: center; width: 100%; min-height: 46px; }
   .municipality-picker { width: var(--page); grid-template-columns: 1fr; gap: 14px; padding: 16px; border-bottom: 3px solid var(--ink); }
   .municipality-picker h2 { font-size: 1.35rem; }
   .municipality-search__control { grid-template-columns: 38px minmax(0, 1fr) 48px; }

@@ -34,14 +34,17 @@ export function ExplorerFilters(props: FilterProps) {
   }
   return (
     <>
-      <div className="mobile-selection-summary">
-        <strong>{selected.measureLabel}: {selected.label}</strong>
-        <button type="button" onClick={() => setOpen(true)}><Filter size={20} />Filtros</button>
-        <span>{props.startYear}–{props.endYear} · Município, restante do RJ e Brasil · Todas as idades</span>
+      <div className="analysis-summary">
+        <div>
+          <span>Análise atual</span>
+          <strong>{selected.measureLabel}: {selected.label}</strong>
+          <small>{props.startYear}–{props.endYear} · {props.metric === 'count' ? 'Contagens' : 'Taxa por 100 mil'} · cidade, restante do RJ e Brasil</small>
+        </div>
+        <button type="button" aria-expanded={open} onClick={() => setOpen((current) => !current)}><Filter size={18} />{open ? 'Fechar ajustes' : 'Ajustar análise'}</button>
       </div>
       <section className={`filter-rail${open ? ' filter-rail--open' : ''}`} aria-label="Filtros do explorador">
         <div className="filter-rail__mobile-heading">
-          <strong>Filtros</strong>
+          <strong>Ajustar análise</strong>
           <button type="button" aria-label="Fechar filtros" onClick={() => setOpen(false)}><X /></button>
         </div>
         <label>
