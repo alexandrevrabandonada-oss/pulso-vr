@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-08-03T16:55:52+00:00",
+  "status": "validated_sim_2024_municipal_residence_rates_crude",
+  "year": 2024,
+  "municipalities": 92,
+  "outcome_ids": [
+    "acute_bronchitis_bronchiolitis",
+    "acute_myocardial_infarction",
+    "all_malignant_neoplasms",
+    "asthma",
+    "bladder",
+    "breast",
+    "cardiac_arrhythmia",
+    "cardio_all",
+    "cardiorespiratory_all",
+    "cerebrovascular",
+    "cervix",
+    "colorectal",
+    "copd",
+    "covid19",
+    "heart_failure",
+    "hypertension",
+    "influenza",
+    "ischemic_heart_disease",
+    "leukemia",
+    "liver",
+    "lung",
+    "multiple_myeloma",
+    "myelodysplastic_syndromes",
+    "non_hodgkin_lymphoma",
+    "pancreas",
+    "pneumoconiosis",
+    "pneumonia",
+    "prostate",
+    "pulmonary_embolism",
+    "resp_all",
+    "stomach"
+  ],
+  "rows": 2852,
+  "suppressed_cells_lt_5": 1429,
+  "output_path": "data\\processed\\sim_municipal_map_rates_2024.parquet",
+  "output_sha256": "8895c341ce10f73c8b01435bfbf1453bcf2ac46222c5090933097ae867eade01",
+  "input_files": [
+    {
+      "path": "data\\raw\\sim_mortalidade_geral_2024_csv.zip",
+      "sha256": "13db250c90908e85d1ef9fb9cd7caa08583fb1912108b0f3260605aca0e9b787"
+    },
+    {
+      "path": "data\\interim\\sim_2024_harmonized.parquet",
+      "sha256": "ae0969906883b23d48645a7de6dbf64a3c87289e487a5a67b3abbbc4326ea4e5"
+    },
+    {
+      "path": "data/processed/population_rj_municipality.parquet",
+      "sha256": "73259db6f634050ef06c4a259d666789c50a3d9ae900f0334a785fa9541f8df8"
+    }
+  ],
+  "rules": {
+    "residence": "CODMUNRES DATASUS six-digit code mapped to IBGE seven-digit municipality code",
+    "rate": "SIM underlying-cause deaths of residents divided by the validated 2024 resident population times 100,000",
+    "interval": "exact Poisson 95% interval",
+    "suppression": "count < 5 is withheld before portal publication"
+  },
+  "notes": [
+    "This is a 2024 municipal snapshot; continuity depends on separately validated years.",
+    "SIM cancer mortality is not incidence.",
+    "No causal inference or attribution to CSN is produced."
+  ]
+}

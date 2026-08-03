@@ -1,6 +1,6 @@
 # Pré-voo de lançamento do Portal Observatório Saúde & Ambiente
 
-Verificação: `2026-08-03T16:50:43+00:00`
+Verificação: `2026-08-03T16:56:18+00:00`
 Release: `beta-cardiorespiratorio-integrado`
 Status: **public_release_ready**
 

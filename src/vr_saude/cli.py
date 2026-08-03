@@ -292,10 +292,11 @@ def _parser() -> argparse.ArgumentParser:
         "sim-age-sex-rates",
         help="calculate SIM 2022 specific crude rates by age group and sex",
     )
-    subparsers.add_parser(
+    sim_municipal_map = subparsers.add_parser(
         "sim-municipal-map",
-        help="calculate validated SIM 2022 municipal residence rates for the RJ map",
+        help="calculate validated SIM municipal residence rates for the RJ map",
     )
+    sim_municipal_map.add_argument("--year", type=int, default=2022)
     sih_municipal_map = subparsers.add_parser(
         "sih-municipal-map",
         help="query validated SIH annual municipal residence rates for the RJ map",
@@ -599,7 +600,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if args.command == "sim-municipal-map":
         try:
-            output, manifest, report = build_sim_municipal_map(root)
+            output, manifest, report = build_sim_municipal_map(root, year=args.year)
         except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
             print(f"ERROR: SIM municipal map failed: {exc}", file=sys.stderr)
             return 1
