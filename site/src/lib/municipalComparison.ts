@@ -22,6 +22,13 @@ export function rateRatio(value: number | null | undefined, comparator: number |
   return value / comparator
 }
 
+export function relativeDifferenceLabel(ratio: number | null) {
+  if (ratio === null) return 'Comparação indisponível'
+  const difference = Math.round(Math.abs((ratio - 1) * 100))
+  if (difference === 0) return 'Taxa semelhante'
+  return `${difference}% ${ratio > 1 ? 'acima' : 'abaixo'}`
+}
+
 export function buildMunicipalComparisonSeries(
   municipalityCode: string,
   municipalObservations: Observation[],

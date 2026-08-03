@@ -14,7 +14,7 @@ import { usePortal } from '../context/usePortal'
 import { loadMap, loadMunicipalSeries, loadSeries } from '../lib/data'
 import { deriveExplorerState, explorerStateSearch } from '../lib/explorerState'
 import { formatMetric, metricLabel, statusLabel } from '../lib/format'
-import { buildMunicipalComparisonSeries, rateRatio, restOfStateExcludingMunicipality } from '../lib/municipalComparison'
+import { buildMunicipalComparisonSeries, rateRatio, relativeDifferenceLabel, restOfStateExcludingMunicipality } from '../lib/municipalComparison'
 import { buildFilteredSeriesCsv, saveCsvFile } from '../lib/publicDownload'
 import type { MapFeatureProperties, Observation, Theme } from '../types'
 
@@ -101,23 +101,28 @@ export function ExplorerPage() {
       const brazil = observations?.find((item) => item.geographyId === 'brazil_total' && item.period === municipalPeriod) ?? null
       const selectedValue = metric === 'count' ? selectedMunicipalValue.count : selectedMunicipalValue.value
       const difference = rateRatio(selectedMunicipalValue.value, restOfState?.value)
+      const eventLabel = indicator.measure === 'hospitalization' ? 'internações hospitalares' : 'óbitos'
       return {
         year: municipalPeriod,
-        headline: selectedMunicipalValue.suppressed ? `${selectedMunicipality.name}: dado não publicado` : `${formatMetric(selectedValue, metric)} em ${selectedMunicipality.name}`,
+        headline: selectedMunicipalValue.suppressed
+          ? `${selectedMunicipality.name}: dado não publicado`
+          : metric === 'count'
+            ? `${formatMetric(selectedValue, metric)} ${eventLabel} registrados em ${selectedMunicipality.name}`
+            : `${formatMetric(selectedValue, metric)} ${eventLabel} por 100 mil habitantes em ${selectedMunicipality.name}`,
         comparison: selectedMunicipalValue.suppressed
           ? 'Célula pequena protegida pela regra de supressão'
           : metric === 'count'
             ? 'Contagem de eventos; use a taxa para comparar territórios'
             : difference === null
               ? 'Comparação estadual indisponível'
-              : `${Math.abs((difference - 1) * 100).toLocaleString('pt-BR', { maximumFractionDigits: 0 })}% ${difference >= 1 ? 'acima' : 'abaixo'} do restante do RJ`,
+              : `${relativeDifferenceLabel(difference)} do restante do RJ`,
         detail: selectedMunicipalValue.suppressed
           ? 'O número não é zero. A contagem foi ocultada para proteger células pequenas.'
           : `RJ sem ${selectedMunicipality.name}: ${formatMetric(metric === 'count' ? restOfState?.count ?? null : restOfState?.value ?? null, metric)} · Brasil: ${formatMetric(metric === 'count' ? brazil?.count ?? null : brazil?.value ?? null, metric)}`,
       }
     }
     return null
-  }, [metric, municipalPeriod, observations, selectedMunicipality, selectedMunicipalValue])
+  }, [indicator.measure, metric, municipalPeriod, observations, selectedMunicipality, selectedMunicipalValue])
   const provisional = observations?.some((item) => Number(item.period) >= startYear && Number(item.period) <= endYear && item.dataStatus === 'provisional') ?? false
   const stateTotalAtMunicipalPeriod = observations?.find((item) => item.geographyId === 'rj_total' && item.period === municipalPeriod) ?? null
   const brazilAtMunicipalPeriod = observations?.find((item) => item.geographyId === 'brazil_total' && item.period === municipalPeriod) ?? null
@@ -237,8 +242,8 @@ export function ExplorerPage() {
                 <div className="municipal-metrics">
                   <div><span>{indicator.measureLabel}</span><strong>{selectedMunicipalValue?.suppressed ? 'Não publicado' : formatMetric(selectedMunicipalValue?.count ?? null, 'count')}</strong><small>número bruto</small></div>
                   <div><span>Taxa bruta</span><strong>{selectedMunicipalValue?.suppressed ? 'Não publicado' : formatMetric(selectedMunicipalValue?.value ?? null, 'crude_rate_per_100k')}</strong><small>por 100 mil habitantes</small></div>
-                  <div><span>Vs. RJ sem {selectedMunicipality.name}</span><strong>{stateRatio ? `${stateRatio.toFixed(2).replace('.', ',')}×` : '—'}</strong><small>{restOfState ? `${formatMetric(restOfState.value, 'crude_rate_per_100k')} no comparador` : 'indisponível com célula suprimida'}</small></div>
-                  <div><span>Vs. Brasil</span><strong>{brazilRatio ? `${brazilRatio.toFixed(2).replace('.', ',')}×` : '—'}</strong><small>{brazilAtMunicipalPeriod ? `${formatMetric(brazilAtMunicipalPeriod.value, 'crude_rate_per_100k')} no Brasil` : 'quando a fonte é equivalente'}</small></div>
+                  <div><span>Comparado ao restante do RJ</span><strong>{relativeDifferenceLabel(stateRatio)}</strong><small>{restOfState ? `${formatMetric(restOfState.value, 'crude_rate_per_100k')} no RJ sem a cidade` : 'indisponível com célula suprimida'}</small></div>
+                  <div><span>Comparado ao Brasil</span><strong>{relativeDifferenceLabel(brazilRatio)}</strong><small>{brazilAtMunicipalPeriod ? `${formatMetric(brazilAtMunicipalPeriod.value, 'crude_rate_per_100k')} no Brasil` : 'quando a fonte é equivalente'}</small></div>
                 </div>
               </section>
               <MunicipalTable municipalities={municipalities} values={mapPayload.values} measureLabel={indicator.measureLabel} selectedCode={selectedMunicipalityCode} onSelect={selectMunicipality} />

@@ -20,12 +20,6 @@ describe('ExplorerFilters', () => {
     expect(onMetric).toHaveBeenCalledWith('count')
   })
 
-  it('exposes disabled age and sex controls honestly', () => {
-    render(<ExplorerFilters theme="respiratory" indicators={[indicator]} indicatorId={indicator.id} metric="crude_rate_per_100k" startYear={2008} endYear={2025} onTheme={vi.fn()} onIndicator={vi.fn()} onMetric={vi.fn()} onStartYear={vi.fn()} onEndYear={vi.fn()} onDownload={vi.fn()} />)
-    expect(screen.getByRole('combobox', { name: /Faixa etária/ })).toBeDisabled()
-    expect(screen.getByRole('combobox', { name: 'Sexo' })).toBeDisabled()
-  })
-
   it('downloads the visible cut through a button action', () => {
     const onDownload = vi.fn()
     render(<ExplorerFilters theme="respiratory" indicators={[indicator]} indicatorId={indicator.id} metric="crude_rate_per_100k" startYear={2008} endYear={2025} onTheme={vi.fn()} onIndicator={vi.fn()} onMetric={vi.fn()} onStartYear={vi.fn()} onEndYear={vi.fn()} onDownload={onDownload} />)

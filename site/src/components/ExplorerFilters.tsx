@@ -73,15 +73,6 @@ export function ExplorerFilters(props: FilterProps) {
             {years.filter((year) => year >= props.startYear).map((year) => <option key={year}>{year}</option>)}
           </select>
         </label>
-        <label>
-          Faixa etária
-          <select disabled aria-describedby="age-help"><option>Todas as idades</option></select>
-          <span className="sr-only" id="age-help">Série temporal disponível para todas as idades</span>
-        </label>
-        <label>
-          Sexo
-          <select disabled><option>Ambos os sexos</option></select>
-        </label>
         <div className="metric-switch" role="group" aria-label="Medida exibida">
           <button type="button" className={props.metric === 'crude_rate_per_100k' ? 'is-selected' : ''} onClick={() => props.onMetric('crude_rate_per_100k')}>Taxa por 100 mil</button>
           <button type="button" className={props.metric === 'count' ? 'is-selected' : ''} onClick={() => props.onMetric('count')}>Contagens</button>
