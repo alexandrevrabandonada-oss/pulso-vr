@@ -50,7 +50,7 @@ export function TerritoryMap({ topology, compact = false, values = [], status = 
     }
   }, [topology, compact])
 
-  const selected = focused ?? features.find((item) => item.properties.code === selectedCode)?.properties ?? features.find((item) => item.properties.isVoltaRedonda)?.properties ?? null
+  const selected = focused ?? features.find((item) => item.properties.code === selectedCode)?.properties ?? null
   return (
     <div className={`territory-map${compact ? ' territory-map--compact' : ''}`}>
       <div className="territory-map__canvas">
@@ -60,7 +60,6 @@ export function TerritoryMap({ topology, compact = false, values = [], status = 
           <rect width="100%" height="100%" className="map-ocean" />
           <g>
             {features.map((item, index) => {
-              const isVr = item.properties.isVoltaRedonda
               const mapValue = valuesByCode.get(item.properties.code)
               const hasPublishedValue = mapValue?.value !== null && mapValue?.value !== undefined
               const isSelected = selectedCode === item.properties.code
@@ -69,7 +68,7 @@ export function TerritoryMap({ topology, compact = false, values = [], status = 
                 <path
                   key={item.properties.code}
                   d={paths[index]}
-                  className={`${isVr ? 'map-municipality map-municipality--vr' : 'map-municipality'}${hasPublishedValue ? ' map-municipality--has-data' : ''}${isSelected ? ' map-municipality--selected' : ''}`}
+                  className={`map-municipality${hasPublishedValue ? ' map-municipality--has-data' : ''}${isSelected ? ' map-municipality--selected' : ''}`}
                   style={hasPublishedValue ? { fill: mapColor(mapValue?.value) } : undefined}
                   tabIndex={isAccessible ? 0 : -1}
                   aria-hidden={isAccessible ? undefined : true}
