@@ -20,7 +20,7 @@ import { municipalProperties } from '../lib/municipalities'
 import { buildFilteredSeriesCsv, saveCsvFile } from '../lib/publicDownload'
 import type { Observation, Theme } from '../types'
 
-const GEO_ORDER = ['volta_redonda', 'rest_of_rj_excluding_vr', 'brazil_total']
+const LEGACY_AGGREGATE_GEO_ORDER = ['volta_redonda', 'rest_of_rj_excluding_vr', 'brazil_total']
 
 export function ExplorerPage() {
   const { catalog, release, topology } = usePortal()
@@ -36,9 +36,9 @@ export function ExplorerPage() {
   const [mapPayload, setMapPayload] = useState<{ values: import('../types').MapValue[]; status: string; scaleDomain?: [number, number] | null } | null>(null)
   const [municipalObservations, setMunicipalObservations] = useState<Observation[] | null>(null)
   const [selectedMapPeriod, setSelectedMapPeriod] = useState<string | null>(null)
-  const [activeTab, setActiveTab] = useState<'map' | 'series'>('map')
+  const [activeTab, setActiveTab] = useState<'map' | 'series'>('series')
   const [linkCopied, setLinkCopied] = useState(false)
-  const activeGeographies = territory === 'all' ? GEO_ORDER : GEO_ORDER.filter((id) => id === territory)
+  const activeGeographies = territory === 'all' ? LEGACY_AGGREGATE_GEO_ORDER : LEGACY_AGGREGATE_GEO_ORDER.filter((id) => id === territory)
   const municipalities = useMemo(() => municipalProperties(topology), [topology])
   const selectedMunicipalityCode = useMemo(
     () => municipalities.some((item) => item.code === municipalityCode) ? municipalityCode : null,
@@ -60,19 +60,31 @@ export function ExplorerPage() {
   useEffect(() => {
     let active = true
     setObservations(null)
-    setMapPayload(null)
-    setMunicipalObservations(null)
-    setSelectedMapPeriod(null)
-    Promise.all([loadSeries(indicator.id), loadMap(indicator.id), loadMunicipalSeries(indicator.id)]).then(([seriesPayload, nextMap, municipalSeries]) => {
+    setMapPayload(null); setMunicipalObservations(null); setSelectedMapPeriod(null)
+    loadSeries(indicator.id).then((seriesPayload) => { if (active) setObservations(seriesPayload.observations) })
+    return () => { active = false }
+  }, [indicator.id])
+
+  useEffect(() => {
+    if (activeTab !== 'map' || (mapPayload && municipalObservations)) return
+    let active = true
+    Promise.all([loadMap(indicator.id), loadMunicipalSeries(indicator.id)]).then(([nextMap, municipalSeries]) => {
       if (active) {
-        setObservations(seriesPayload.observations)
         setMapPayload({ values: nextMap.values, status: nextMap.status, scaleDomain: nextMap.mapScale?.domain })
         setMunicipalObservations(municipalSeries.observations)
         setSelectedMapPeriod(nextMap.period ?? municipalSeries.periods.at(-1) ?? null)
       }
-    })
+    }).catch(() => trackEvent('data_load_error', { surface: 'explorer_map' }))
     return () => { active = false }
-  }, [indicator.id])
+  }, [activeTab, indicator.id, mapPayload, municipalObservations])
+
+  useEffect(() => {
+    if (activeTab !== 'series' || !selectedMunicipalityCode || municipalObservations) return
+    let active = true
+    loadMunicipalSeries(indicator.id).then((payload) => { if (active) setMunicipalObservations(payload.observations) })
+      .catch(() => trackEvent('data_load_error', { surface: 'explorer_series' }))
+    return () => { active = false }
+  }, [activeTab, indicator.id, municipalObservations, selectedMunicipalityCode])
 
   useEffect(() => {
     if (requestedMapPeriod && availableMapPeriods.includes(requestedMapPeriod)) {
@@ -246,7 +258,7 @@ export function ExplorerPage() {
         <button role="tab" aria-selected={activeTab === 'map'} className={activeTab === 'map' ? 'is-active' : ''} onClick={() => { setActiveTab('map'); trackEvent('map_series_toggled', { tab: 'map' }) }}>Mapa</button>
         <button role="tab" aria-selected={activeTab === 'series'} className={activeTab === 'series' ? 'is-active' : ''} onClick={() => { setActiveTab('series'); trackEvent('map_series_toggled', { tab: 'series' }) }}>Série temporal</button>
       </div>
-      {availableMapPeriods.length > 1 && selectedMunicipality ? (
+      {activeTab === 'map' && availableMapPeriods.length > 1 && selectedMunicipality ? (
         <nav className="map-period-control" aria-label="Escolher ano do mapa municipal">
           <div><span>Ano do mapa</span><small>Compare a distribuição entre cidades</small></div>
           <div>
@@ -258,7 +270,7 @@ export function ExplorerPage() {
       ) : null}
       {observations ? (
         <>
-          <section className={`explorer-map-row${activeTab === 'series' ? ' is-mobile-hidden' : ''}`}>
+          {activeTab === 'map' ? <section className="explorer-map-row">
             <TerritoryMap topology={topology} values={mapValues} scaleDomain={mapPayload?.scaleDomain} status={mapPayload?.status} period={municipalPeriod ?? undefined} selectedCode={selectedMunicipalityCode} onSelect={selectMunicipality} />
             <aside className="comparison-panel">
               {selectedMunicipality ? <>
@@ -287,8 +299,8 @@ export function ExplorerPage() {
                 <a href="#municipality-input">Buscar uma cidade <ArrowRight /></a>
               </div>}
             </aside>
-          </section>
-          {mapValues.length > 0 && selectedMunicipality ? (
+          </section> : null}
+          {activeTab === 'map' && mapValues.length > 0 && selectedMunicipality ? (
             <>
               <section className="municipal-detail" aria-labelledby="municipal-detail-title">
                 <div className="municipal-detail__heading">
@@ -306,7 +318,7 @@ export function ExplorerPage() {
               <MunicipalTable municipalities={municipalities} values={mapValues} measureLabel={indicator.measureLabel} selectedCode={selectedMunicipalityCode} onSelect={selectMunicipality} />
             </>
           ) : null}
-          {selectedMunicipality ? <section className={`explorer-series${activeTab === 'map' ? '' : ' is-mobile-primary'}`}>
+          {activeTab === 'series' && selectedMunicipality ? <section className="explorer-series is-mobile-primary">
             <SeriesInsights municipalityName={selectedMunicipality.name} observations={municipalChartObservations} />
             <div className="series-scope-note"><Info /><p><strong>Cobertura municipal validada:</strong> {municipalChartObservations.length ? [...new Set(municipalChartObservations.map((item) => item.period))].join(', ') : 'em preparação'}. Anos ausentes permanecem como lacunas e não são interpolados.</p></div>
             <TimeSeriesChart
@@ -318,7 +330,7 @@ export function ExplorerPage() {
               endYear={endYear}
               geographies={municipalChartGeographies}
             />
-          </section> : null}
+          </section> : activeTab === 'series' ? <section className="explorer-series-empty"><MapPin /><h2>Escolha uma cidade para ver a evolução</h2><p>A série municipal será carregada somente depois da seleção.</p><a href="#municipality-input">Escolher cidade</a></section> : null}
           <details className="indicator-definition">
             <summary><FileText />O que este indicador mostra?<ChevronDown /></summary>
             <div>
