@@ -5,11 +5,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
+import duckdb
 from scipy.stats import chi2
 
 from .config import load_config
 from .mortality import period_status
-from .outcomes import _matches_cid, _normalize_code, _sex_labels, _sim_age_groups
 from .population_age_sex import AGE_GROUPS
 from .provenance import sha256_file
 from .rates import RATE_MULTIPLIER
@@ -55,55 +55,99 @@ def complementary_suppression(frame: pd.DataFrame) -> pd.DataFrame:
     return result
 
 
-def _load_inputs(root: Path) -> tuple[pd.DataFrame, pd.DataFrame, Path, Path]:
+def _load_inputs(root: Path) -> tuple[pd.DataFrame, Path, Path]:
     sim_path = root / "data" / "interim" / f"sim_{YEAR}_harmonized.parquet"
     population_path = root / "data" / "processed" / "population_age_sex_2022.parquet"
     if not sim_path.exists() or not population_path.exists():
         raise FileNotFoundError("municipal SIM profiles require harmonized SIM 2022 and Censo 2022 age-sex denominators")
-    sim = pd.read_parquet(
-        sim_path,
-        columns=["municipality_code_datasus", "residence_code_valid", "sex_raw", "age_raw", "underlying_cause"],
-    )
     population = pd.read_parquet(population_path)
-    return sim, population, sim_path, population_path
+    return population, sim_path, population_path
+
+
+def _cid_rules(definitions: list[dict[str, object]]) -> pd.DataFrame:
+    rows: list[dict[str, object]] = []
+    for definition in definitions:
+        for raw_expression in definition["code_ranges"]:
+            expression = str(raw_expression).upper().replace(".", "").replace(" ", "")
+            if "-" not in expression:
+                rows.append({
+                    "outcome_id": str(definition["id"]),
+                    "kind": "prefix" if len(expression) == 3 else "exact",
+                    "expression": expression,
+                    "letter": expression[0],
+                    "start_number": int(expression[1:3]),
+                    "end_number": int(expression[1:3]),
+                })
+                continue
+            start, end = expression.split("-", 1)
+            rows.append({
+                "outcome_id": str(definition["id"]), "kind": "range", "expression": expression,
+                "letter": start[0], "start_number": int(start[1:3]), "end_number": int(end[1:3]),
+            })
+    return pd.DataFrame(rows)
+
+
+def _classified_counts(sim_path: Path, definitions: list[dict[str, object]]) -> pd.DataFrame:
+    connection = duckdb.connect(database=":memory:")
+    connection.register("cid_rules", _cid_rules(definitions))
+    path = str(sim_path).replace("'", "''")
+    query = f"""
+        WITH normalized AS (
+          SELECT source_row_number,
+                 trim(CAST(municipality_code_datasus AS VARCHAR)) AS municipality_code_datasus,
+                 upper(replace(trim(CAST(underlying_cause AS VARCHAR)), '.', '')) AS cause,
+                 trim(CAST(sex_raw AS VARCHAR)) AS sex_code,
+                 try_cast(age_raw AS INTEGER) AS age_value
+          FROM read_parquet('{path}')
+          WHERE coalesce(residence_code_valid, false)
+            AND regexp_full_match(trim(CAST(municipality_code_datasus AS VARCHAR)), '33[0-9]{{4}}')
+        ), dimensions AS (
+          SELECT *,
+            CASE sex_code WHEN '1' THEN 'masculino' WHEN '2' THEN 'feminino' ELSE 'ignorado' END AS sex,
+            CASE
+              WHEN age_value BETWEEN 0 AND 364 THEN '<1'
+              WHEN age_value BETWEEN 365 AND 399 THEN '1-4'
+              WHEN age_value BETWEEN 400 AND 404 THEN CASE WHEN age_value=400 THEN '<1' ELSE '1-4' END
+              WHEN age_value BETWEEN 405 AND 414 THEN '5-14'
+              WHEN age_value BETWEEN 415 AND 424 THEN '15-24'
+              WHEN age_value BETWEEN 425 AND 444 THEN '25-44'
+              WHEN age_value BETWEEN 445 AND 464 THEN '45-64'
+              WHEN age_value BETWEEN 465 AND 474 THEN '65-74'
+              WHEN age_value BETWEEN 475 AND 499 THEN '75+'
+              ELSE 'ignorado' END AS age_group
+          FROM normalized
+        ), cause_map AS (
+          SELECT DISTINCT causes.cause, r.outcome_id
+          FROM (SELECT DISTINCT cause FROM normalized) causes
+          JOIN cid_rules r ON
+            (r.kind='exact' AND causes.cause=r.expression)
+            OR (r.kind='prefix' AND starts_with(causes.cause,r.expression))
+            OR (r.kind='range' AND substr(causes.cause,1,1)=r.letter
+                AND try_cast(substr(causes.cause,2,2) AS INTEGER) BETWEEN r.start_number AND r.end_number)
+        ), classified AS (
+          SELECT d.source_row_number, d.municipality_code_datasus, d.age_group, d.sex, m.outcome_id
+          FROM dimensions d
+          JOIN cause_map m USING (cause)
+        )
+        SELECT municipality_code_datasus, outcome_id, age_group, sex, count(*)::BIGINT AS count
+        FROM classified
+        GROUP BY ALL
+    """
+    try:
+        return connection.execute(query).fetchdf()
+    finally:
+        connection.close()
 
 
 def _build_rates(root: Path) -> tuple[pd.DataFrame, dict[str, object], Path, Path]:
-    sim, population, sim_path, population_path = _load_inputs(root)
+    population, sim_path, population_path = _load_inputs(root)
     definitions = _definitions(root)
-    residence = _normalize_code(sim["municipality_code_datasus"])
-    eligible_residence = sim["residence_code_valid"].fillna(False) & residence.str.fullmatch(r"33\d{4}")
-    sex = _sex_labels(sim["sex_raw"], "SIM")
-    age_group = _sim_age_groups(sim["age_raw"])
-    codes = _normalize_code(sim["underlying_cause"])
-    distinct_codes = pd.Series(codes.unique(), dtype="string")
-    valid_dimensions = eligible_residence & sex.isin(SEXES) & age_group.isin(AGE_GROUPS)
-
-    lookup_rows: list[pd.DataFrame] = []
-    for definition in definitions:
-        outcome_id = str(definition["id"])
-        matching = distinct_codes.loc[_matches_cid(distinct_codes, list(definition["code_ranges"]))]
-        lookup_rows.append(pd.DataFrame({"underlying_cause": matching, "outcome_id": outcome_id}))
-    lookup = pd.concat(lookup_rows, ignore_index=True)
-    base = pd.DataFrame({
-        "municipality_code_datasus": residence.loc[eligible_residence],
-        "underlying_cause": codes.loc[eligible_residence],
-        "age_group": age_group.loc[eligible_residence],
-        "sex": sex.loc[eligible_residence],
-        "dimensions_valid": valid_dimensions.loc[eligible_residence],
-        "count": 1,
-    }).groupby(
-        ["municipality_code_datasus", "underlying_cause", "age_group", "sex", "dimensions_valid"],
-        as_index=False,
-        dropna=False,
-    )["count"].sum()
-    classified = base.merge(lookup, on="underlying_cause", how="inner", validate="many_to_many")
+    classified = _classified_counts(sim_path, definitions)
     classified_totals = classified.groupby("outcome_id")["count"].sum().astype(int).to_dict()
-    ignored_by_outcome = (
-        classified.loc[~classified["dimensions_valid"]].groupby("outcome_id")["count"].sum().astype(int).to_dict()
-    )
+    valid_dimensions = classified["age_group"].isin(AGE_GROUPS) & classified["sex"].isin(SEXES)
+    ignored_by_outcome = classified.loc[~valid_dimensions].groupby("outcome_id")["count"].sum().astype(int).to_dict()
     ignored_by_outcome = {str(item["id"]): int(ignored_by_outcome.get(str(item["id"]), 0)) for item in definitions}
-    counts = classified.loc[classified["dimensions_valid"]].groupby(
+    counts = classified.loc[valid_dimensions].groupby(
         ["municipality_code_datasus", "outcome_id", "age_group", "sex"], as_index=False
     )["count"].sum()
 
