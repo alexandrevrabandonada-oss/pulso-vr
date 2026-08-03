@@ -10,7 +10,7 @@ from scipy.stats import chi2
 
 from .config import load_config
 from .mortality import period_status
-from .outcomes import OUTCOME_SECTIONS, _matches_cid, _normalize_code
+from .outcomes import _matches_cid, _normalize_code
 from .population_age_sex import AGE_GROUPS
 from .provenance import sha256_file
 from .rates import RATE_MULTIPLIER
@@ -19,13 +19,14 @@ from .rates import RATE_MULTIPLIER
 YEAR = 2022
 SEXES = ["masculino", "feminino"]
 SMALL_CELL_THRESHOLD = 5
+PROFILE_OUTCOME_SECTIONS = ("respiratory", "cardiovascular", "cardiorespiratory", "cancer")
 
 
 def _definitions(root: Path) -> list[dict[str, object]]:
     config = load_config("outcomes.yml", root)
     definitions = [
         item
-        for section in OUTCOME_SECTIONS
+        for section in PROFILE_OUTCOME_SECTIONS
         for item in config.get(section, [])
         if "SIM" in item.get("source", []) and item.get("code_ranges") and item["id"] != "covid19"
     ]
