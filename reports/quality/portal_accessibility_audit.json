@@ -5,9 +5,10 @@
   "routes": [
     {"path": "/", "main": true, "h1": 1, "nav": 2, "consoleErrorsOrWarnings": 0},
     {"path": "/explorador", "main": true, "h1": 1, "nav": 2, "consoleErrorsOrWarnings": 0},
+    {"path": "/municipios/3304557", "main": true, "h1": 1, "nav": 2, "consoleErrorsOrWarnings": 0},
     {"path": "/municipios/3304557?indicador=sim-lung", "main": true, "h1": 1, "nav": 2, "consoleErrorsOrWarnings": 0},
     {"path": "/indicadores/sim-resp-all", "main": true, "h1": 1, "nav": 2, "consoleErrorsOrWarnings": 0},
-    {"path": "/perfis", "main": true, "h1": 1, "nav": 2, "consoleErrorsOrWarnings": 0},
+    {"path": "/perfis?municipio=3304557&indicador=sim-lung&periodo=2022", "main": true, "h1": 1, "nav": 2, "consoleErrorsOrWarnings": 0},
     {"path": "/metodos", "main": true, "h1": 1, "nav": 2, "consoleErrorsOrWarnings": 0},
     {"path": "/dados", "main": true, "h1": 1, "nav": 2, "consoleErrorsOrWarnings": 0}
   ],
@@ -23,7 +24,7 @@
     "consoleErrorsOrWarnings": 0
   },
   "limitations": [
-    "A nova rota municipal e a jornada combinada exigem nova validação manual com leitor de tela e zoom 200% antes da próxima publicação.",
-    "O portão foi atualizado pelo signoff do responsável pelo projeto em reports/reviews/release_signoff.json."
+    "A visão geral municipal, os perfis estaduais e o carregamento progressivo exigem nova validação manual com leitor de tela, teclado e zoom 200% antes da próxima publicação.",
+    "O aceite histórico em reports/reviews/release_signoff.json não libera automaticamente esta implementação atualizada."
   ]
 }
