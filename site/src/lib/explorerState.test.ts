@@ -46,4 +46,11 @@ describe('deriveExplorerState', () => {
     expect(explorerStateSearch(state)).toContain('&municipio=3306305')
     expect(deriveExplorerState('municipio=volta-redonda', indicators).municipalityCode).toBeNull()
   })
+
+  it('persists a valid map year and rejects malformed values', () => {
+    const state = deriveExplorerState('indicador=sim-lung&ano_mapa=2022', indicators)
+    expect(state.mapPeriod).toBe('2022')
+    expect(explorerStateSearch(state)).toContain('&ano_mapa=2022')
+    expect(deriveExplorerState('indicador=sim-lung&ano_mapa=ontem', indicators).mapPeriod).toBeNull()
+  })
 })

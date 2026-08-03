@@ -10,6 +10,7 @@ export interface ExplorerState {
   metric: MetricKind
   territory: string
   municipalityCode: string | null
+  mapPeriod: string | null
   startYear: number
   endYear: number
 }
@@ -39,10 +40,12 @@ export function deriveExplorerState(search: string, indicators: Indicator[]): Ex
   const territory = requestedTerritory && TERRITORIES.has(requestedTerritory) ? requestedTerritory : 'all'
   const requestedMunicipality = params.get('municipio')
   const municipalityCode = requestedMunicipality && /^\d{7}$/.test(requestedMunicipality) ? requestedMunicipality : null
+  const requestedMapPeriod = params.get('ano_mapa')
+  const mapPeriod = requestedMapPeriod && /^\d{4}$/.test(requestedMapPeriod) ? requestedMapPeriod : null
   let startYear = boundedYear(params.get('inicio'), indicator.yearStart, indicator.yearStart, indicator.yearEnd)
   let endYear = boundedYear(params.get('fim'), indicator.yearEnd, indicator.yearStart, indicator.yearEnd)
   if (startYear > endYear) [startYear, endYear] = [endYear, startYear]
-  return { indicator, theme: indicator.theme, metric, territory, municipalityCode, startYear, endYear }
+  return { indicator, theme: indicator.theme, metric, territory, municipalityCode, mapPeriod, startYear, endYear }
 }
 
 export function explorerStateSearch(state: ExplorerState) {
@@ -55,5 +58,6 @@ export function explorerStateSearch(state: ExplorerState) {
     fim: String(state.endYear),
   })
   if (state.municipalityCode) params.set('municipio', state.municipalityCode)
+  if (state.mapPeriod) params.set('ano_mapa', state.mapPeriod)
   return params.toString()
 }

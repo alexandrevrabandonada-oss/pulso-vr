@@ -30,7 +30,7 @@ export function ExplorerPage() {
     () => deriveExplorerState(search, catalog.indicators),
     [search, catalog.indicators],
   )
-  const { indicator, theme, metric, territory, municipalityCode, startYear, endYear } = explorerState
+  const { indicator, theme, metric, territory, municipalityCode, mapPeriod: requestedMapPeriod, startYear, endYear } = explorerState
   const [observations, setObservations] = useState<Observation[] | null>(null)
   const [mapPayload, setMapPayload] = useState<{ values: import('../types').MapValue[]; status: string } | null>(null)
   const [municipalObservations, setMunicipalObservations] = useState<Observation[] | null>(null)
@@ -72,6 +72,12 @@ export function ExplorerPage() {
     return () => { active = false }
   }, [indicator.id])
 
+  useEffect(() => {
+    if (requestedMapPeriod && availableMapPeriods.includes(requestedMapPeriod)) {
+      setSelectedMapPeriod(requestedMapPeriod)
+    }
+  }, [availableMapPeriods, requestedMapPeriod])
+
   const update = (changes: Record<string, string | number>) => {
     const next = new URLSearchParams(searchParams)
     Object.entries(changes).forEach(([key, value]) => next.set(key, String(value)))
@@ -92,7 +98,17 @@ export function ExplorerPage() {
   }
   const onIndicator = (value: string) => {
     const nextIndicator = catalog.indicators.find((item) => item.id === value)!
-    update({ indicador: value, tema: nextIndicator.theme, inicio: nextIndicator.yearStart, fim: nextIndicator.yearEnd })
+    const next = new URLSearchParams(searchParams)
+    next.set('indicador', value)
+    next.set('tema', nextIndicator.theme)
+    next.set('inicio', String(nextIndicator.yearStart))
+    next.set('fim', String(nextIndicator.yearEnd))
+    next.delete('ano_mapa')
+    navigate(`/explorador?${next.toString()}`)
+  }
+  const selectMapPeriod = (period: string) => {
+    setSelectedMapPeriod(period)
+    update({ ano_mapa: period })
   }
 
   const quickReading = useMemo(() => {
@@ -205,7 +221,7 @@ export function ExplorerPage() {
           <div><span>Ano do mapa</span><small>Compare a distribuição entre cidades</small></div>
           <div>
             {[...availableMapPeriods].reverse().map((period) => (
-              <button key={period} type="button" aria-pressed={municipalPeriod === period} onClick={() => setSelectedMapPeriod(period)}>{period}</button>
+              <button key={period} type="button" aria-pressed={municipalPeriod === period} onClick={() => selectMapPeriod(period)}>{period}</button>
             ))}
           </div>
         </nav>
