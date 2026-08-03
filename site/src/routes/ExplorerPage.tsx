@@ -196,7 +196,7 @@ export function ExplorerPage() {
       {observations ? (
         <>
           <section className={`explorer-map-row${activeTab === 'series' ? ' is-mobile-hidden' : ''}`}>
-            <TerritoryMap topology={topology} values={mapPayload?.values} status={mapPayload?.status} selectedCode={selectedMunicipalityCode} onSelect={selectMunicipality} />
+            <TerritoryMap topology={topology} values={mapPayload?.values} status={mapPayload?.status} period={municipalPeriod ?? undefined} selectedCode={selectedMunicipalityCode} onSelect={selectMunicipality} />
             <aside className="comparison-panel">
               {selectedMunicipality ? <>
                 <h2>Comparação municipal</h2>

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "releaseId": "beta-cardiorespiratorio-integrado",
-  "generatedAt": "2026-08-03T16:56:16+00:00",
+  "generatedAt": "2026-08-03T17:05:55+00:00",
   "status": "public_release_ready",
   "smallCellThreshold": 5,
   "primaryComparator": "rest_of_rj_excluding_vr",
@@ -51,7 +51,7 @@
     {
       "path": "catalog.json",
       "bytes": 63496,
-      "sha256": "3b087468621c036ba8e85e1139a5688d0c96e7e0525d75036774315adbc03a3d"
+      "sha256": "578d4001c719c972635bca07a7d5b120cc076dc8c89cc06e0c43bb2953cff0fe"
     },
     {
       "path": "downloads/series-publicas.csv",
@@ -65,8 +65,8 @@
     },
     {
       "path": "launch-readiness.json",
-      "bytes": 4190,
-      "sha256": "5c6c27bafead50465058f7adb54a5000adf04bf1767e756726e9efa92a0d2fe2"
+      "bytes": 4254,
+      "sha256": "6219a31638e502e9bc17264ee15236dd9a25b5a2694371dd2d5711df36a3de86"
     },
     {
       "path": "maps/rj/sih-acute-bronchitis-bronchiolitis.json",
@@ -130,8 +130,8 @@
     },
     {
       "path": "maps/rj/sih-pneumonia.json",
-      "bytes": 51507,
-      "sha256": "906a0c35c78a0ba02e7f410ac5a55dd8cc3016e328f1a0918259c63ece64f371"
+      "bytes": 50369,
+      "sha256": "f86d4267d6621acfda203b2343e7a4f0ad926549386a300581b6d35ec599baeb"
     },
     {
       "path": "maps/rj/sih-pulmonary-embolism.json",
@@ -145,153 +145,153 @@
     },
     {
       "path": "maps/rj/sim-acute-bronchitis-bronchiolitis.json",
-      "bytes": 51070,
-      "sha256": "5137f4c7f9789024ad25ee2cc88767d741d3a4aa9a72316c1bd73d09a8c76c7d"
+      "bytes": 51098,
+      "sha256": "135dd6fde63e3c4c6f4a005c77f2a2b67b7c1fc830da42f638709f78aa22e77c"
     },
     {
       "path": "maps/rj/sim-acute-myocardial-infarction.json",
-      "bytes": 53058,
-      "sha256": "a57ea2dddf8127c00b6762a9be91b437f31fe40dc680b5bf967399e6df0fc13a"
+      "bytes": 52936,
+      "sha256": "8481c142918847dd8963c9951c834f09ca5febebfdf1f2c20fc5a344896fb9ff"
     },
     {
       "path": "maps/rj/sim-all-malignant-neoplasms.json",
-      "bytes": 53017,
-      "sha256": "005444bd8d3bb568632719d57a93a5a31039c0edf4ad3124b1bd10a57eb84e64"
+      "bytes": 52855,
+      "sha256": "0b8dc1c76d1ef05189476ab5e4499a105c20d7550974b93e190026f295529121"
     },
     {
       "path": "maps/rj/sim-asthma.json",
-      "bytes": 48969,
-      "sha256": "3339c4b826da415d568836901fbe2dd6c435faecf02c7e0a5717d0f04fe0703a"
+      "bytes": 48999,
+      "sha256": "f98fd234fc0564b6072665b7adc6c852918b93659557f727067049efec418f0b"
     },
     {
       "path": "maps/rj/sim-bladder.json",
-      "bytes": 49546,
-      "sha256": "443034aee463c2b7e661a9037f78ec602116306cd66cfea265847f13e974e14b"
+      "bytes": 49358,
+      "sha256": "7abcfc8384b0d58e8413a06edad31ae694d2de4fba8ccc5338b6326d635e7004"
     },
     {
       "path": "maps/rj/sim-breast.json",
-      "bytes": 50207,
-      "sha256": "2948a034797ce21f559d4770d89d2392cee3baa5e474c0436b8d0f211d2714c2"
+      "bytes": 50032,
+      "sha256": "a2cb19d880b06270bf50bd06720186e10bff8b923f35d9d2e80c90780d23bbd3"
     },
     {
       "path": "maps/rj/sim-cardiac-arrhythmia.json",
-      "bytes": 50849,
-      "sha256": "eacbcd3d46e00f3c2069022e1c5bfd3e619a2d4acb893062342f4892585a2d76"
+      "bytes": 51160,
+      "sha256": "04c91eabf59cb0fb29222a2ddd2c0bb09b8b93a23a57dc9379fd9a766b719cb0"
     },
     {
       "path": "maps/rj/sim-cardio-all.json",
-      "bytes": 51638,
-      "sha256": "10eb2edf6887d5b5ab963e749144d78bb8d59db337947c7a3ecd549f1a56ca3b"
+      "bytes": 51669,
+      "sha256": "bd70071d0e51ecbf0e291a9b33ba22fdc8eed80fffb332b58db352ec986d5ed2"
     },
     {
       "path": "maps/rj/sim-cardiorespiratory-all.json",
-      "bytes": 52650,
-      "sha256": "eb1e11fa48ac3c7c224c1dcc298df46366d48722d7c7ec4690523679c9d501ec"
+      "bytes": 52648,
+      "sha256": "e20a0561877db3a337cc0e834282f922c03a4fbb1faf49d62d0f4eeb7a6f0440"
     },
     {
       "path": "maps/rj/sim-cerebrovascular.json",
-      "bytes": 51896,
-      "sha256": "4a588bdf8fb2b5f6d88472d36d4e9d136783b6e5c375f2622845fb3f57124a66"
+      "bytes": 51802,
+      "sha256": "8e98cdd6769842dc9484e56e5356e9644c2ba09179b2533b9d34c2e6827348f8"
     },
     {
       "path": "maps/rj/sim-cervix.json",
-      "bytes": 49482,
-      "sha256": "19b91a13003b58ce6e9c1171b29b28dd4a487db6d98de4aee8cf9fa27c81f556"
+      "bytes": 49338,
+      "sha256": "c63e3669f1e9ddd9b620cc9c69ce83000fdec63d0f4275f824f24716d47d2508"
     },
     {
       "path": "maps/rj/sim-colorectal.json",
-      "bytes": 50560,
-      "sha256": "0b007a39672b26d70e96260d33590262ccd153d17aceb479a65330d3bb3d651d"
+      "bytes": 50575,
+      "sha256": "0d1d6bcac93bbd20cc134a05abae4535f43062d5621e511dc34e25a0d7cc4671"
     },
     {
       "path": "maps/rj/sim-copd.json",
-      "bytes": 50258,
-      "sha256": "97acc21fb8db4fb9cb5c4a77fd9d88f612187adf41c93b02d20531e994906c99"
+      "bytes": 50372,
+      "sha256": "1876395766dc8e4bf4a2cf6f92a15de36cdcf2aabf8f7fb61486b76969f5f3a5"
     },
     {
       "path": "maps/rj/sim-heart-failure.json",
-      "bytes": 51313,
-      "sha256": "81ec2b85e670a322fcb7cde495a8424a87642ca8cbd8f59d0567c4b9b6507335"
+      "bytes": 51204,
+      "sha256": "a0ed97887f7b26adf58423f51c94e91ba8c1cdc5cf736db33a25f4c4c40e243c"
     },
     {
       "path": "maps/rj/sim-hypertension.json",
-      "bytes": 51530,
-      "sha256": "d7b15960dcc80161b0faafaf6d0af96a77df2afc645136a2b4a83d7fb86ed636"
+      "bytes": 51485,
+      "sha256": "6bdbe86c083d6ef70ddf8fafb6aa5e3404050d7d21bc410cbe6dd71562f88e9e"
     },
     {
       "path": "maps/rj/sim-influenza.json",
-      "bytes": 49213,
-      "sha256": "a9932a5496806b7c125e70d9ad5ef5b8abbbac43bd9a5488709133379a521b4a"
+      "bytes": 49168,
+      "sha256": "a0b4aeadda6bcdb9b017f6cf92b2ce22b4c792084c2a0d892aaccc7ccc56dc3c"
     },
     {
       "path": "maps/rj/sim-ischemic-heart-disease.json",
-      "bytes": 52603,
-      "sha256": "a9905e388444e76b8f1061040a34912eb9b8e09205c95f4da32fb0fcf8eff50d"
+      "bytes": 52523,
+      "sha256": "12bf9994d7f605c94357c496b592953e56c08d5a93fb64f65aa01ea12e92fa1e"
     },
     {
       "path": "maps/rj/sim-leukemia.json",
-      "bytes": 49635,
-      "sha256": "e64a123e2f1229fd01131e2330072d19100ad8246235564422f4f8c2cd794d31"
+      "bytes": 49555,
+      "sha256": "8fb9a465101e7c37469b7cf96e01a4c69d68010a83dca114e39f809d47de1627"
     },
     {
       "path": "maps/rj/sim-liver.json",
-      "bytes": 49531,
-      "sha256": "df24fa6981807109dade58189f005d0e07998679327b9d127350ef5cb9fc74e3"
+      "bytes": 49454,
+      "sha256": "4cc64e4fbd1233e31f5f11a1d61377d07e49165a4b0dd258474838364ed11008"
     },
     {
       "path": "maps/rj/sim-lung.json",
-      "bytes": 50127,
-      "sha256": "2a5594848c642eb7cbdb16cd474a6c5af5c96a2018c06293ea2a6f40a22aa4c6"
+      "bytes": 50083,
+      "sha256": "0ba6e1411a34b2cb7b8c4fa81d54dad640cb47a3a4fc464a2c54ab396c754e4d"
     },
     {
       "path": "maps/rj/sim-multiple-myeloma.json",
-      "bytes": 50283,
-      "sha256": "1fd3e4dc55a812781e638de4187a33c2709fe9ea4ba60d1e990b431035b66546"
+      "bytes": 50104,
+      "sha256": "ce73f8c9875f56bea92dc96a549e3524b64ffa2a98448e0ba5ce581b7718c51a"
     },
     {
       "path": "maps/rj/sim-myelodysplastic-syndromes.json",
-      "bytes": 50814,
-      "sha256": "9bc1f49c707403051effca2463282855770b9e2f11a41ce8ba274844b07ac859"
+      "bytes": 50628,
+      "sha256": "87dc5ee23b5070cd8ff0a49ddd77e597f527267d3362c55c7e8356fa112aa91e"
     },
     {
       "path": "maps/rj/sim-non-hodgkin-lymphoma.json",
-      "bytes": 50656,
-      "sha256": "52872c359c1b8d1751ee9e3f8d0c8f2e18914b43dff8091b49f87c6f16fe23ef"
+      "bytes": 50525,
+      "sha256": "d34419d249b97ec4a53f929d6a2a25bf32ada64a0361dd8f1ccdc1d54ddfe8fd"
     },
     {
       "path": "maps/rj/sim-pancreas.json",
-      "bytes": 50040,
-      "sha256": "147ced4b0f56b85e07f02019e744de88eb145400158e2ffdfb92a554fe2be86c"
+      "bytes": 49986,
+      "sha256": "a102dc39bf54c46e04aef70534a2f12eae304a369c12b599bfbf527895ec3525"
     },
     {
       "path": "maps/rj/sim-pneumoconiosis.json",
-      "bytes": 49525,
-      "sha256": "2de941ab93aaa9717cbcbd1b50a6faa2bb0dc5d964b66c6aa5f00062363f0485"
+      "bytes": 49526,
+      "sha256": "ac57199d358b02bb65549aecad62677ffe81ce042b3151359e7f105a3d1689fe"
     },
     {
       "path": "maps/rj/sim-pneumonia.json",
-      "bytes": 51304,
-      "sha256": "256f81b5fb84e9a128b38b192b571da57768741239dd33f46d0192e592e1b7f4"
+      "bytes": 51388,
+      "sha256": "c01a1e91bdd7c2bc9dd34ba89d73afad28f83c9f251ee0660bb5d996fa14a582"
     },
     {
       "path": "maps/rj/sim-prostate.json",
-      "bytes": 50233,
-      "sha256": "e448c3bf5ec6af17a4a6502fa215e0499384115b2c4a0492f36039a4b0abc07f"
+      "bytes": 50062,
+      "sha256": "d8d01656664d9d79295d0f446450a9010b0a174a74732bd2c274fe4c0e522dd9"
     },
     {
       "path": "maps/rj/sim-pulmonary-embolism.json",
-      "bytes": 50413,
-      "sha256": "7e29796c372fdfd9c155f2e37f74a2800e1d76fba19aac9b5c88d4a04cd56f65"
+      "bytes": 50471,
+      "sha256": "9d7bf3b126c4c99661ca7f5832bd253e686cb61d7247425bf6aa4d3f9f4748bd"
     },
     {
       "path": "maps/rj/sim-resp-all.json",
-      "bytes": 51392,
-      "sha256": "6610b5ee596ccc959cd1de8b5aa743873f772ff0949e6adc6b617f3a70984b83"
+      "bytes": 51423,
+      "sha256": "7e43b110b55d318888e4fc3e5ab555c2f09601584d009424b8a532171b7b0cb7"
     },
     {
       "path": "maps/rj/sim-stomach.json",
-      "bytes": 50024,
-      "sha256": "fa9574ceaa948daac97c0e6561f9be07dafc063a6b7639e0411f581866006734"
+      "bytes": 49723,
+      "sha256": "75cb8416ef7d9c55af9d4b80abcfa280b36664ac183d6551a60e63b5ce5d2454"
     },
     {
       "path": "municipal-series/sih-acute-bronchitis-bronchiolitis.json",
@@ -982,14 +982,14 @@
     "suppressedObservations": 93,
     "profileObservations": 1440,
     "profileEligibleIndicators": 30,
-    "mapValues": 2499,
-    "mapSuppressedValues": 1641,
+    "mapValues": 2528,
+    "mapSuppressedValues": 1612,
     "sihIndicators": 15,
     "sihWithBrazilComparator": 15,
     "missingDenominatorYears": [
       2023
     ],
     "downloadSuppressionLeaks": 0,
-    "checkedAt": "2026-08-03T16:56:18+00:00"
+    "checkedAt": "2026-08-03T17:06:00+00:00"
   }
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAt": "2026-08-03T16:56:18+00:00",
+  "checkedAt": "2026-08-03T17:06:00+00:00",
   "releaseId": "beta-cardiorespiratorio-integrado",
   "status": "public_release_ready",
   "publicationAllowed": true,
@@ -15,8 +15,8 @@
     "suppressedObservations": 93,
     "profileObservations": 1440,
     "profileEligibleIndicators": 30,
-    "mapValues": 2499,
-    "mapSuppressedValues": 1641,
+    "mapValues": 2528,
+    "mapSuppressedValues": 1612,
     "sihIndicators": 15,
     "sihWithBrazilComparator": 15,
     "missingDenominatorYears": [
@@ -45,8 +45,9 @@
     "unsuppressedSmallCells": [],
     "downloadSuppressionLeaks": [],
     "mapStatusCounts": {
-      "validated_sih_2022_municipal_residence_rates_crude": 15,
-      "validated_sim_2022_municipal_residence_rates_crude": 30
+      "validated_sih_2022_municipal_residence_rates_crude": 14,
+      "validated_sih_2025_municipal_residence_rates_crude": 1,
+      "validated_sim_2024_municipal_residence_rates_crude": 30
     },
     "sourceCounts": {
       "SIH": 1020,

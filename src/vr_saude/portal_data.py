@@ -143,13 +143,6 @@ def _build_catalog_and_series(root: Path) -> tuple[list[dict[str, Any]], dict[st
     ]
     catalog: list[dict[str, Any]] = []
     series: dict[str, list[dict[str, Any]]] = {}
-    sih_map_manifest = root / "reports" / "quality" / "sih_municipal_map_2022_manifest.json"
-    sih_map_valid = False
-    if sih_map_manifest.exists():
-        try:
-            sih_map_valid = json.loads(sih_map_manifest.read_text(encoding="utf-8")).get("status") == "reconciled_with_annual_series"
-        except json.JSONDecodeError:
-            sih_map_valid = False
     for source, path in sources:
         if not path.exists():
             continue
@@ -157,6 +150,7 @@ def _build_catalog_and_series(root: Path) -> tuple[list[dict[str, Any]], dict[st
         for outcome_id, outcome_frame in frame.groupby("outcome_id", sort=True):
             source_definition = SOURCE_DEFINITIONS[source]
             indicator_id = _indicator_id(source, str(outcome_id))
+            latest_map = _latest_validated_municipal_frame(root, source, str(outcome_id))
             observations = _series_observations(outcome_frame, source)
             geography_ids = sorted({item["geographyId"] for item in observations})
             available_metrics = ["crude_rate_per_100k", "count"]
@@ -179,10 +173,8 @@ def _build_catalog_and_series(root: Path) -> tuple[list[dict[str, Any]], dict[st
                     "yearEnd": max(int(item["period"]) for item in observations),
                     "standardization": "crude_only",
                     "mapStatus": (
-                        "validated_sim_2022_municipal_residence_rates_crude"
-                        if source == "SIM" and (root / "data" / "processed" / "sim_municipal_map_rates_2022.parquet").exists()
-                        else "validated_sih_2022_municipal_residence_rates_crude"
-                        if source == "SIH" and sih_map_valid and (root / "data" / "processed" / "sih_municipal_map_rates_2022.parquet").exists()
+                        f"validated_{source.lower()}_{latest_map[2]}_municipal_residence_rates_crude"
+                        if latest_map
                         else "context_only_pending_validated_municipal_rates"
                     ),
                     "profileAvailability": (
@@ -204,26 +196,13 @@ def _build_catalog_and_series(root: Path) -> tuple[list[dict[str, Any]], dict[st
 
 
 def _municipal_map_payloads(root: Path, catalog: Iterable[dict[str, Any]]) -> dict[str, dict[str, Any]]:
-    sim_path = root / "data" / "processed" / "sim_municipal_map_rates_2022.parquet"
-    sih_path = root / "data" / "processed" / "sih_municipal_map_rates_2022.parquet"
-    sih_manifest = root / "reports" / "quality" / "sih_municipal_map_2022_manifest.json"
-    sih_valid = False
-    if sih_manifest.exists():
-        try:
-            sih_valid = json.loads(sih_manifest.read_text(encoding="utf-8")).get("status") == "reconciled_with_annual_series"
-        except json.JSONDecodeError:
-            sih_valid = False
-    frames = {
-        "SIM": pd.read_parquet(sim_path) if sim_path.exists() else pd.DataFrame(),
-        "SIH": pd.read_parquet(sih_path) if sih_valid and sih_path.exists() else pd.DataFrame(),
-    }
     payloads: dict[str, dict[str, Any]] = {}
     for indicator in catalog:
         indicator_id = str(indicator["id"])
         outcome_id = str(indicator["outcomeId"])
         source = str(indicator.get("source"))
-        frame = frames.get(source, pd.DataFrame())
-        if frame.empty:
+        latest = _latest_validated_municipal_frame(root, source, outcome_id)
+        if latest is None:
             payloads[indicator_id] = {
                 "schemaVersion": "1.0.0",
                 "indicatorId": indicator_id,
@@ -232,11 +211,7 @@ def _municipal_map_payloads(root: Path, catalog: Iterable[dict[str, Any]]) -> di
                 "note": "A malha é contextual; taxas municipais só serão publicadas após validação por residência.",
             }
             continue
-        manifest_ref = (
-            "reports/quality/sim_municipal_map_2022_manifest.json"
-            if source == "SIM"
-            else "reports/quality/sih_municipal_map_2022_manifest.json"
-        )
+        frame, manifest_ref, year = latest
         selected = frame.loc[frame["outcome_id"].eq(outcome_id)]
         values: list[dict[str, Any]] = []
         for row in selected.itertuples(index=False):
@@ -260,16 +235,16 @@ def _municipal_map_payloads(root: Path, catalog: Iterable[dict[str, Any]]) -> di
             "schemaVersion": "1.0.0",
             "indicatorId": indicator_id,
             "status": (
-                "validated_sim_2022_municipal_residence_rates_crude"
+                f"validated_sim_{year}_municipal_residence_rates_crude"
                 if source == "SIM"
-                else "validated_sih_2022_municipal_residence_rates_crude"
+                else f"validated_sih_{year}_municipal_residence_rates_crude"
             ),
-            "period": "2022",
+            "period": year,
             "values": values,
             "note": (
-                "Taxa bruta municipal de mortalidade SIM 2022 por residência; células <5 suprimidas."
+                f"Taxa bruta municipal de mortalidade SIM {year} por residência; células <5 suprimidas."
                 if source == "SIM"
-                else "Taxa bruta municipal de internações SIH 2022 por residência; AIHs são eventos e células <5 estão suprimidas."
+                else f"Taxa bruta municipal de internações SIH {year} por residência; AIHs são eventos e células <5 estão suprimidas."
             ),
         }
     return payloads
@@ -293,6 +268,20 @@ def _validated_municipal_frames(root: Path, source: str) -> list[tuple[pd.DataFr
         if valid:
             frames.append((pd.read_parquet(path), str(manifest_path.relative_to(root)).replace("\\", "/")))
     return frames
+
+
+def _latest_validated_municipal_frame(root: Path, source: str, outcome_id: str | None = None) -> tuple[pd.DataFrame, str, str] | None:
+    frames = _validated_municipal_frames(root, source)
+    if outcome_id is not None:
+        frames = [
+            (frame.loc[frame["outcome_id"].eq(outcome_id)].copy(), manifest_ref)
+            for frame, manifest_ref in frames
+            if frame["outcome_id"].eq(outcome_id).any()
+        ]
+    if not frames:
+        return None
+    frame, manifest_ref = max(frames, key=lambda item: int(item[0]["year"].max()))
+    return frame, manifest_ref, str(int(frame["year"].max()))
 
 
 def _municipal_series_payloads(root: Path, catalog: Iterable[dict[str, Any]]) -> dict[str, dict[str, Any]]:

@@ -14,11 +14,12 @@ interface TerritoryMapProps {
   compact?: boolean
   values?: MapValue[]
   status?: string
+  period?: string
   selectedCode?: string | null
   onSelect?: (code: string) => void
 }
 
-export function TerritoryMap({ topology, compact = false, values = [], status = '', selectedCode = null, onSelect }: TerritoryMapProps) {
+export function TerritoryMap({ topology, compact = false, values = [], status = '', period, selectedCode = null, onSelect }: TerritoryMapProps) {
   const [focused, setFocused] = useState<MapFeatureProperties | null>(null)
   const valuesByCode = useMemo(() => new Map(values.map((value) => [value.geographyId, value])), [values])
   const isSihMap = status.startsWith('validated_sih_')
@@ -95,7 +96,7 @@ export function TerritoryMap({ topology, compact = false, values = [], status = 
         ) : null}
       </div>
       <div className="territory-map__note">
-        <strong>{hasPublishedMap ? `Mapa municipal · ${isSihMap ? 'SIH 2022' : 'SIM 2022'}` : 'Mapa contextual'}</strong>
+        <strong>{hasPublishedMap ? `Mapa municipal · ${isSihMap ? 'SIH' : 'SIM'} ${period ?? values[0]?.period ?? ''}` : 'Mapa contextual'}</strong>
         <span>{hasPublishedMap ? (isSihMap ? 'Taxa bruta de internações por residência; AIHs são eventos e células menores que cinco estão suprimidas.' : 'Taxa bruta de mortalidade por residência; células menores que cinco estão suprimidas.') : 'Taxas municipais serão ativadas somente após validação por residência.'}</span>
       </div>
     </div>

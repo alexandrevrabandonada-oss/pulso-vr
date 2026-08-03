@@ -1,6 +1,6 @@
 # Pré-voo de lançamento do Portal Observatório Saúde & Ambiente
 
-Verificação: `2026-08-03T16:56:18+00:00`
+Verificação: `2026-08-03T17:06:00+00:00`
 Release: `beta-cardiorespiratorio-integrado`
 Status: **public_release_ready**
 
@@ -13,8 +13,8 @@ Status: **public_release_ready**
 - Células suprimidas: **93**
 - Indicadores SIM elegíveis para perfis: **30**
 - Observações de perfis idade/sexo: **1440**
-- Valores municipais no mapa: **2499**
-- Células municipais suprimidas no mapa: **1641**
+- Valores municipais no mapa: **2528**
+- Células municipais suprimidas no mapa: **1612**
 - Comparadores Brasil no SIH: **15/15**
 - Vazamentos de supressão no download: **0**
 
