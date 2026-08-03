@@ -26,6 +26,8 @@ O código deve produzir tabelas, figuras, relatórios e manifestos rastreáveis.
   Prevenir 50+ e deve ser tratado como provisório quando aplicável.
 - Associações ecológicas não autorizam atribuir causalidade à CSN.
 - Células pequenas são suprimidas ou agregadas antes de qualquer publicação.
+- Perfis municipais com uma única célula primária protegida por estrato exigem
+  supressão complementar antes da geração de JSON ou CSV público.
 - Nunca versionar dados restritos, dados pessoais, credenciais, tokens ou
   arquivos de acesso institucional.
 
@@ -39,6 +41,10 @@ O código deve produzir tabelas, figuras, relatórios e manifestos rastreáveis.
 - `src/vr_saude/`: código de produção; notebooks são exploratórios.
 - `reports/`: protocolo, plano estatístico, qualidade e relatórios públicos.
 - `requests/`: minutas de LAI, ética e parcerias.
+
+Pipelines e relatórios históricos centrados em Volta Redonda permanecem
+identificados como pesquisa histórica. Contratos em `site/public/data/` e
+jornadas públicas são estaduais e não podem herdar esse município como padrão.
 
 ## Comandos
 

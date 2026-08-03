@@ -78,6 +78,7 @@ python scripts/run_cli.py sivep-monthly
 python scripts/run_cli.py sim-mortality-rates
 python scripts/run_cli.py sim-age-sex-profile
 python scripts/run_cli.py sim-age-sex-rates
+python scripts/run_cli.py sim-municipal-profiles
 python scripts/run_cli.py sim-municipal-map
 python scripts/run_cli.py portal-data --release-id beta-local --acquire-geography
 python scripts/run_cli.py portal-preflight
@@ -101,7 +102,8 @@ npm test
 npm run build
 ```
 
-A versão atual está aprovada para publicação estática, com avisos explícitos.
+A versão em desenvolvimento permanece bloqueada para publicação até uma nova
+validação manual estadual de teclado, leitor de tela, zoom e conteúdo epidemiológico.
 Mortalidade por câncer vem do SIM e não é incidência; o comparador Brasil está
 disponível para as séries SIM nacionais.
 O comparador Brasil do SIH foi adquirido pela tabela oficial NRBR, agregado por
@@ -114,17 +116,17 @@ auditável; `sih-municipal-map` registra a consulta, os hashes e a reconciliaç�
 O pré-voo de lançamento grava o diagnóstico em
 `reports/quality/portal_release_preflight.json`,
 `reports/technical/portal_lancamento.md` e no download público
-`site/public/data/launch-readiness.json`. A release atual está aprovada para
-publicação estática, com três avisos explícitos; os mapas municipais estão
-disponíveis em snapshot 2022. O módulo de perfis cobre os 30 indicadores SIM com dados de
-2022; SIH não é apresentado como perfil nesta versão. O ano 2010 usa a
+`site/public/data/launch-readiness.json`. Os mapas municipais estão disponíveis
+nos anos validados. O módulo de perfis municipais cobre os 30 indicadores SIM
+do catálogo com taxas específicas de 2022, supressão primária e complementar;
+SIH não é apresentado como perfil nesta versão. O ano 2010 usa a
 população residente do Censo 2010; 2023 permanece como lacuna de denominador,
 sem interpolação.
 O inventário resumido de lacunas e critérios de fechamento está em
 `reports/technical/lacunas_dados_portal.md`.
-As revisões epidemiológica e de acessibilidade, aprovadas pelo responsável do
-projeto com base nas evidências técnicas, estão em `reports/reviews/`. O
-registro da decisão está em `reports/reviews/release_signoff.json`.
+As revisões anteriores estão em `reports/reviews/`, mas mudanças na jornada
+municipal invalidam o aceite de acessibilidade até nova evidência manual. O
+registro histórico da decisão permanece em `reports/reviews/release_signoff.json`.
 
 Cada arquivo baixado permanece em `data/raw/`, recebe um arquivo `.sha256` e
 é registrado em `metadata/extraction_log.csv`. A aquisição nunca substitui um
