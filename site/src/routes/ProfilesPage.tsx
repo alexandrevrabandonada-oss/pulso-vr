@@ -51,7 +51,7 @@ export function ProfilesPage() {
         trackEvent('data_load_error', { surface: 'profiles' })
       })
     return () => { active = false }
-  }, [indicatorId, period])
+  }, [indicatorId, municipalityCode, period])
 
   const profile = useMemo(() => {
     const selected = (rows ?? []).filter((row) => row.municipalityCode === municipalityCode && row.period === period)
