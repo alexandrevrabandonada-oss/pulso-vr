@@ -1,24 +1,25 @@
 import { ArrowRight, ChartNoAxesCombined, Download, FileSearch, Map, Users } from 'lucide-react'
 import { useMemo } from 'react'
 import { Link, useLocation } from 'wouter'
-import { MunicipalityPicker } from '../components/MunicipalityPicker'
+import { DiscoverySearch } from '../components/DiscoverySearch'
 import { CoBrandBlock } from '../components/CoBrandBlock'
 import { municipalProperties } from '../lib/municipalities'
 import { usePortal } from '../context/usePortal'
 
 export function HomePage() {
-  const { topology, release } = usePortal()
+  const { catalog, topology, release } = usePortal()
   const [, navigate] = useLocation()
   const municipalities = useMemo(() => municipalProperties(topology), [topology])
-  const openCity = (municipalityCode: string) => navigate(`/municipios/${municipalityCode}`)
+  const openData = (municipalityCode: string, indicatorId: string) => navigate(`/municipios/${municipalityCode}?indicador=${indicatorId}`)
   const updatedAt = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'medium' }).format(new Date(release.generatedAt))
   return (
     <main>
       <section className="home-hero">
         <div className="home-hero__copy">
           <h1>Saúde no Rio de Janeiro, cidade por cidade</h1>
-          <p>Dados públicos para entender, comparar e acompanhar a saúde nos 92 municípios do estado.</p>
-          <MunicipalityPicker municipalities={municipalities} selectedCode={null} onSelect={openCity} />
+          <p>Dados públicos para entender, comparar e acompanhar a saúde nos 92 municípios do estado. Comece escolhendo uma cidade e um assunto.</p>
+          <div className="home-discovery-intro"><strong>Comece por uma pergunta</strong><span>Escolha a cidade e o tema para receber uma resposta principal.</span></div>
+          <DiscoverySearch municipalities={municipalities} indicators={catalog.indicators} onOpen={openData} />
           <div className="hero-actions hero-actions--secondary">
             <Link href="/explorador" className="secondary-button">Explorar primeiro</Link>
             <Link href="/metodos" className="secondary-button">Como ler os dados</Link>

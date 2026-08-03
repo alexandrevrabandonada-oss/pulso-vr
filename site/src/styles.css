@@ -723,6 +723,10 @@ body .home-hero__copy { background: transparent; border: 0; }
 body .home-hero__territory { background: transparent; border: 0; }
 body .home-hero__copy h1 { text-transform: none; }
 body .lenses-section h2 { display: block; width: auto; padding: 0; background: transparent; color: var(--ink); text-transform: none; }
+body .home-discovery-intro { display: grid; gap: 4px; width: min(720px, 100%); margin: 18px 0 8px; }
+body .home-discovery-intro strong { font-size: .68rem; letter-spacing: .04em; text-transform: uppercase; }
+body .home-discovery-intro span { font-size: .72rem; line-height: 1.35; }
+body .home-hero__copy .discovery-search { width: min(720px, 100%); margin-top: 0; border: 3px solid var(--ink); border-radius: 30px 8px 30px 30px; box-shadow: var(--shadow-2); }
 body .municipality-hero { border: 0; border-radius: 0 0 var(--radius-lg) var(--radius-lg); background: var(--yellow); }
 body .municipality-hero h1 { font-family: Inter, Arial, sans-serif; font-weight: 900; letter-spacing: -.07em; }
 body .municipality-answer { display: grid; grid-template-columns: 1.2fr .72fr .9fr 1fr; border: 1px solid var(--line-soft); border-radius: var(--radius-lg) 8px var(--radius-lg) var(--radius-lg); background: #fff; box-shadow: var(--shadow-1); }
@@ -751,6 +755,7 @@ body .lenses-row a { min-height: 44px; align-items: center; }
   body .home-hero__territory { display: none; }
   body .home-hero .municipality-picker { padding: 8px; border-radius: 28px; }
   body .home-hero__copy .municipality-picker { width: 100%; max-width: 100%; align-self: stretch; margin-inline: 0; }
+  body .home-hero__copy .discovery-search { width: 100%; max-width: 100%; border-radius: 26px 8px 26px 26px; }
   body .home-hero .municipality-search__control { grid-template-columns: 38px minmax(0, 1fr) 48px; }
   body .home-hero .municipality-search__control button { margin: 4px; }
   body .question-rail > a { min-height: 76px; }
@@ -1562,4 +1567,8 @@ button, select, input, .primary-button, .icon-action, .content-actions a { borde
     font-size: 2rem;
     overflow-wrap: anywhere;
   }
+}
+/* Final mobile guard: keep the home headline inside the viewport. */
+@media (max-width: 760px) {
+  body .home-hero__copy h1 { max-width: 100%; font-size: clamp(2.6rem, 12vw, 3.45rem); line-height: .94; overflow-wrap: anywhere; }
 }
