@@ -1,6 +1,6 @@
 # Denominadores populacionais
 
-Execução: 2026-08-03T00:02:00+00:00
+Execução: 2026-08-03T00:56:57+00:00
 
 ## Regra
 
@@ -15,51 +15,67 @@ A população anual é obtida da SIDRA. A tabela 6579 é usada para estimativas 
 
 | ano | território | população | origem |
 |---:|---|---:|---|
+| 2008 | brazil_total | 189612823 | annual_estimate |
 | 2008 | rest_of_rj_excluding_vr | 15612551 | annual_estimate |
 | 2008 | rj_total | 15872362 | annual_estimate |
 | 2008 | volta_redonda | 259811 | annual_estimate |
+| 2009 | brazil_total | 191480630 | annual_estimate |
 | 2009 | rest_of_rj_excluding_vr | 15749026 | annual_estimate |
 | 2009 | rj_total | 16010429 | annual_estimate |
 | 2009 | volta_redonda | 261403 | annual_estimate |
+| 2011 | brazil_total | 192379287 | annual_estimate |
 | 2011 | rest_of_rj_excluding_vr | 15853666 | annual_estimate |
 | 2011 | rj_total | 16112678 | annual_estimate |
 | 2011 | volta_redonda | 259012 | annual_estimate |
+| 2012 | brazil_total | 193946886 | annual_estimate |
 | 2012 | rest_of_rj_excluding_vr | 15971185 | annual_estimate |
 | 2012 | rj_total | 16231365 | annual_estimate |
 | 2012 | volta_redonda | 260180 | annual_estimate |
+| 2013 | brazil_total | 201032714 | annual_estimate |
 | 2013 | rest_of_rj_excluding_vr | 16107657 | annual_estimate |
 | 2013 | rj_total | 16369179 | annual_estimate |
 | 2013 | volta_redonda | 261522 | annual_estimate |
+| 2014 | brazil_total | 202768562 | annual_estimate |
 | 2014 | rest_of_rj_excluding_vr | 16198914 | annual_estimate |
 | 2014 | rj_total | 16461173 | annual_estimate |
 | 2014 | volta_redonda | 262259 | annual_estimate |
+| 2015 | brazil_total | 204450049 | annual_estimate |
 | 2015 | rest_of_rj_excluding_vr | 16287054 | annual_estimate |
 | 2015 | rj_total | 16550024 | annual_estimate |
 | 2015 | volta_redonda | 262970 | annual_estimate |
+| 2016 | brazil_total | 206081432 | annual_estimate |
 | 2016 | rest_of_rj_excluding_vr | 16372337 | annual_estimate |
 | 2016 | rj_total | 16635996 | annual_estimate |
 | 2016 | volta_redonda | 263659 | annual_estimate |
+| 2017 | brazil_total | 207660929 | annual_estimate |
 | 2017 | rest_of_rj_excluding_vr | 16453755 | annual_estimate |
 | 2017 | rj_total | 16718956 | annual_estimate |
 | 2017 | volta_redonda | 265201 | annual_estimate |
+| 2018 | brazil_total | 208494900 | annual_estimate |
 | 2018 | rest_of_rj_excluding_vr | 16887962 | annual_estimate |
 | 2018 | rj_total | 17159960 | annual_estimate |
 | 2018 | volta_redonda | 271998 | annual_estimate |
+| 2019 | brazil_total | 210147125 | annual_estimate |
 | 2019 | rest_of_rj_excluding_vr | 16991931 | annual_estimate |
 | 2019 | rj_total | 17264943 | annual_estimate |
 | 2019 | volta_redonda | 273012 | annual_estimate |
+| 2020 | brazil_total | 211755692 | annual_estimate |
 | 2020 | rest_of_rj_excluding_vr | 17092201 | annual_estimate |
 | 2020 | rj_total | 17366189 | annual_estimate |
 | 2020 | volta_redonda | 273988 | annual_estimate |
+| 2021 | brazil_total | 213317639 | annual_estimate |
 | 2021 | rest_of_rj_excluding_vr | 17188424 | annual_estimate |
 | 2021 | rj_total | 17463349 | annual_estimate |
 | 2021 | volta_redonda | 274925 | annual_estimate |
+| 2022 | brazil_total | 203080756 | census_2022 |
 | 2022 | rest_of_rj_excluding_vr | 15793611 | census_2022 |
 | 2022 | rj_total | 16055174 | census_2022 |
 | 2022 | volta_redonda | 261563 | census_2022 |
+| 2024 | brazil_total | 212583750 | annual_estimate |
 | 2024 | rest_of_rj_excluding_vr | 16939781 | annual_estimate |
 | 2024 | rj_total | 17219679 | annual_estimate |
 | 2024 | volta_redonda | 279898 | annual_estimate |
+| 2025 | brazil_total | 213421037 | annual_estimate |
 | 2025 | rest_of_rj_excluding_vr | 16943576 | annual_estimate |
 | 2025 | rj_total | 17223547 | annual_estimate |
 | 2025 | volta_redonda | 279971 | annual_estimate |

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T00:02:00+00:00",
+  "generated_at": "2026-08-03T00:56:57+00:00",
   "status": "validated_denominators_no_rates",
   "requested_years": [
     2008,
@@ -191,15 +191,40 @@
     },
     "missing_vr_years": [],
     "incomplete_years": [],
-    "rows": 48,
+    "rows": 64,
     "path": "data\\processed\\population_denominators.parquet",
-    "sha256": "0363ab5e56a15773eb483bbbfb993b612a629af79f3cb2ed1da5c789955d316e"
+    "sha256": "f683d66885397f3c5bd8799679feaeded3f37f0f852ff4fc1cefe10f4f775671"
+  },
+  "brazil_denominator": {
+    "municipality_count_by_year": {
+      "2008": 5565,
+      "2009": 5565,
+      "2011": 5565,
+      "2012": 5570,
+      "2013": 5570,
+      "2014": 5570,
+      "2015": 5570,
+      "2016": 5570,
+      "2017": 5570,
+      "2018": 5570,
+      "2019": 5570,
+      "2020": 5570,
+      "2021": 5570,
+      "2022": 5570,
+      "2024": 5570,
+      "2025": 5571
+    },
+    "missing_years": [
+      2010,
+      2023
+    ]
   },
   "notes": [
     "2022 is sourced from SIDRA table 9514 Censo population resident, total sex and total age.",
     "Other requested years use SIDRA table 6579 resident population estimates when available.",
     "Missing years are explicit and are not interpolated or replaced by zero.",
     "The rest-of-RJ comparator excludes IBGE code 3306305 by construction.",
+    "Brazil totals are population-weighted aggregates of all municipalities in each official SIDRA payload.",
     "No age-specific denominator or epidemiological rate is produced by this step."
   ]
 }

@@ -1,0 +1,630 @@
+{
+  "schemaVersion": "1.0.0",
+  "geographies": {
+    "volta_redonda": "Volta Redonda",
+    "rest_of_rj_excluding_vr": "RJ sem Volta Redonda",
+    "rj_total": "Rio de Janeiro (total)",
+    "brazil_total": "Brasil"
+  },
+  "indicators": [
+    {
+      "id": "sih-acute-bronchitis-bronchiolitis",
+      "source": "SIH",
+      "outcomeId": "acute_bronchitis_bronchiolitis",
+      "label": "Bronquite aguda e bronquiolite aguda",
+      "theme": "respiratory",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "J20-J21"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2008,
+      "yearEnd": 2025,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sih-asthma",
+      "source": "SIH",
+      "outcomeId": "asthma",
+      "label": "Asma",
+      "theme": "respiratory",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "J45-J46"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2008,
+      "yearEnd": 2025,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sih-copd",
+      "source": "SIH",
+      "outcomeId": "copd",
+      "label": "Bronquite enfisema e outr doenç pulm obstr crôn",
+      "theme": "respiratory",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "J40-J44"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2008,
+      "yearEnd": 2025,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sih-pneumoconiosis",
+      "source": "SIH",
+      "outcomeId": "pneumoconiosis",
+      "label": "Pneumoconiose",
+      "theme": "respiratory",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "J60-J65"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2008,
+      "yearEnd": 2025,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sih-pneumonia",
+      "source": "SIH",
+      "outcomeId": "pneumonia",
+      "label": "Pneumonia",
+      "theme": "respiratory",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "J12-J18"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2008,
+      "yearEnd": 2025,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sih-resp-all",
+      "source": "SIH",
+      "outcomeId": "resp_all",
+      "label": "10 Doenças do aparelho respiratório",
+      "theme": "respiratory",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "J00-J99"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2008,
+      "yearEnd": 2025,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-acute-bronchitis-bronchiolitis",
+      "source": "SIM",
+      "outcomeId": "acute_bronchitis_bronchiolitis",
+      "label": "Bronquite e bronquiolite agudas",
+      "theme": "respiratory",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "J20-J21"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2011,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-all-malignant-neoplasms",
+      "source": "SIM",
+      "outcomeId": "all_malignant_neoplasms",
+      "label": "Todas as neoplasias malignas",
+      "theme": "cancer",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "C00-C97"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2011,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-asthma",
+      "source": "SIM",
+      "outcomeId": "asthma",
+      "label": "Asma e estado de mal asmático",
+      "theme": "respiratory",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "J45-J46"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2011,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-breast",
+      "source": "SIM",
+      "outcomeId": "breast",
+      "label": "Mama",
+      "theme": "cancer",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "C50"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2024,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-colorectal",
+      "source": "SIM",
+      "outcomeId": "colorectal",
+      "label": "Cólon e reto",
+      "theme": "cancer",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "C18-C21"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2011,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-copd",
+      "source": "SIM",
+      "outcomeId": "copd",
+      "label": "Bronquite crônica, enfisema e DPOC",
+      "theme": "respiratory",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "J40-J44"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2011,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-influenza",
+      "source": "SIM",
+      "outcomeId": "influenza",
+      "label": "Influenza",
+      "theme": "respiratory",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "J09-J11"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2011,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-leukemia",
+      "source": "SIM",
+      "outcomeId": "leukemia",
+      "label": "Leucemias",
+      "theme": "cancer",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "C91-C95"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2011,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-lung",
+      "source": "SIM",
+      "outcomeId": "lung",
+      "label": "Traqueia, brônquios e pulmão",
+      "theme": "cancer",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "C33-C34"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2011,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-non-hodgkin-lymphoma",
+      "source": "SIM",
+      "outcomeId": "non_hodgkin_lymphoma",
+      "label": "Linfoma não Hodgkin",
+      "theme": "cancer",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "C82-C86"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2011,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-pneumoconiosis",
+      "source": "SIM",
+      "outcomeId": "pneumoconiosis",
+      "label": "Pneumoconioses",
+      "theme": "respiratory",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "J60-J65"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2011,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-pneumonia",
+      "source": "SIM",
+      "outcomeId": "pneumonia",
+      "label": "Pneumonias",
+      "theme": "respiratory",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "J12-J18"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2011,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-prostate",
+      "source": "SIM",
+      "outcomeId": "prostate",
+      "label": "Próstata",
+      "theme": "cancer",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "C61"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2011,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-resp-all",
+      "source": "SIM",
+      "outcomeId": "resp_all",
+      "label": "Todas as doenças respiratórias",
+      "theme": "respiratory",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "J00-J99"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2011,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    }
+  ],
+  "futureCapabilities": [
+    "air_quality",
+    "meteorology",
+    "neighborhoods"
+  ]
+}

@@ -21,6 +21,7 @@ from .mortality import build_mortality_rates
 from .outcomes import build_outcome_counts
 from .population import acquire_population, harmonize_population
 from .population_age_sex import acquire_age_sex_population, harmonize_age_sex_population
+from .portal_data import build_portal_data
 from .provenance import sha256_file
 from .raw_validation import write_raw_validation_report
 from .rates import build_respiratory_rates
@@ -267,6 +268,16 @@ def _parser() -> argparse.ArgumentParser:
     subparsers.add_parser(
         "sim-age-sex-rates",
         help="calculate SIM 2022 specific crude rates by age group and sex",
+    )
+    portal_data = subparsers.add_parser(
+        "portal-data",
+        help="publish privacy-safe static JSON/TopoJSON artifacts for the portal",
+    )
+    portal_data.add_argument("--release-id", default="technical-beta")
+    portal_data.add_argument(
+        "--acquire-geography",
+        action="store_true",
+        help="download the official IBGE RJ municipality mesh when it is absent",
     )
     discover = subparsers.add_parser("discover", help="save the current official resource catalog")
     discover.add_argument("--dataset", choices=("sim", "sivep"), required=True)
@@ -519,6 +530,19 @@ def main(argv: list[str] | None = None) -> int:
         print(f"SIM age-sex rates Parquet: {output}")
         print(f"SIM age-sex rates manifest: {manifest}")
         print(f"SIM age-sex rates report: {report}")
+        return 0
+    if args.command == "portal-data":
+        try:
+            output, release = build_portal_data(
+                root,
+                release_id=args.release_id,
+                acquire_geography=args.acquire_geography,
+            )
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: portal data publication failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Portal data directory: {output}")
+        print(f"Portal release manifest: {release}")
         return 0
     if args.command == "discover":
         resources = discover_resources(args.dataset)

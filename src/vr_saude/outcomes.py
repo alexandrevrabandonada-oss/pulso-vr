@@ -107,7 +107,9 @@ def _sex_labels(raw: pd.Series, source: str) -> pd.Series:
 def _geography(code: pd.Series, vr_code: str) -> pd.Series:
     code = _normalize_code(code)
     in_rj = code.str.fullmatch(r"33\d{4}").fillna(False)
-    geography = pd.Series("fora_rj", index=code.index, dtype="string")
+    in_brazil = code.str.fullmatch(r"\d{6}").fillna(False)
+    geography = pd.Series("outside_brazil", index=code.index, dtype="string")
+    geography.loc[in_brazil & ~in_rj] = "rest_of_brazil_excluding_rj"
     geography.loc[in_rj & code.eq(vr_code)] = "volta_redonda"
     geography.loc[in_rj & code.ne(vr_code)] = "rest_of_rj_excluding_vr"
     return geography
@@ -123,7 +125,8 @@ def _classification_rows(
 ) -> pd.DataFrame:
     geography = _geography(chunk["municipality_code_datasus"], vr_code)
     in_rj = geography.isin(["volta_redonda", "rest_of_rj_excluding_vr"])
-    if not in_rj.any():
+    eligible = geography.ne("outside_brazil") if source == "SIM" else in_rj
+    if not eligible.any():
         return pd.DataFrame()
     if source == "SIM":
         codes = _normalize_code(chunk["underlying_cause"])
@@ -155,7 +158,7 @@ def _classification_rows(
         unit = "notificação de SRAG de residente; vigilância, não incidência"
     rows: list[pd.DataFrame] = []
     for outcome_id, mask in outcome_masks.items():
-        selected = in_rj & mask
+        selected = eligible & mask
         if not selected.any():
             continue
         frame = pd.DataFrame(
@@ -207,9 +210,22 @@ def _source_files(root: Path) -> list[Path]:
 
 
 def _rj_totals(data: pd.DataFrame) -> pd.DataFrame:
+    data = data.loc[data["geography"].isin(["volta_redonda", "rest_of_rj_excluding_vr"])]
     keys = [column for column in data.columns if column not in {"geography", "count"}]
     total = data.groupby(keys, dropna=False, as_index=False)["count"].sum()
     total["geography"] = "rj_total"
+    return total[data.columns]
+
+
+def _brazil_totals(data: pd.DataFrame) -> pd.DataFrame:
+    data = data.loc[
+        data["geography"].isin(
+            ["volta_redonda", "rest_of_rj_excluding_vr", "rest_of_brazil_excluding_rj"]
+        )
+    ]
+    keys = [column for column in data.columns if column not in {"geography", "count"}]
+    total = data.groupby(keys, dropna=False, as_index=False)["count"].sum()
+    total["geography"] = "brazil_total"
     return total[data.columns]
 
 
@@ -253,8 +269,8 @@ def _write_outcome_report(root: Path, data: pd.DataFrame, metadata: dict[str, An
         "- `covid19`: `CLASSI_FIN=5`.",
         "- `TP_IDADE=1/2/3` é tratado como dia/mês/ano para formar grupos etários amplos.",
         "",
-        "SIM 2010/2020/2024 são amostras adquiridas nesta fase; não formam uma série anual "
-        "completa. Causas múltiplas não são usadas para classificar estes resultados. "
+        "SIM 2010–2024 foi harmonizado como série anual adquirida; SIVEP 2019–2025 foi "
+        "adquirido em versões datadas. Causas múltiplas não são usadas para classificar estes resultados. "
         "Não há ajuste, padronização etária, incidência ou atribuição causal.",
     ]
     report.parent.mkdir(parents=True, exist_ok=True)
@@ -319,7 +335,7 @@ def build_outcome_counts(root: Path) -> tuple[Path, Path, Path]:
     data = pd.concat(all_rows, ignore_index=True)
     group_columns = [column for column in data.columns if column != "count"]
     data = data.groupby(group_columns, dropna=False, as_index=False)["count"].sum()
-    data = pd.concat([data, _rj_totals(data)], ignore_index=True)
+    data = pd.concat([data, _rj_totals(data), _brazil_totals(data)], ignore_index=True)
     data = data.sort_values(["source", "source_year", "outcome_id", "geography", "sex", "age_group"]).reset_index(drop=True)
     output = root / "data" / "processed" / "outcome_counts_sim_sivep.parquet"
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -340,7 +356,7 @@ def build_outcome_counts(root: Path) -> tuple[Path, Path, Path]:
             "sivep_srag": "all eligible SIVEP records",
             "sivep_influenza": "CLASSI_FIN=1",
             "sivep_covid19": "CLASSI_FIN=5",
-            "territory": "residence code beginning 33; VR=330630; rest RJ excludes VR",
+            "territory": "residence code; VR=330630; rest RJ excludes VR; Brazil total aggregates all valid Brazilian municipality codes",
         },
         "notes": [
             "SIM records are deaths, not incident cancer or respiratory cases.",

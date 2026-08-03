@@ -205,6 +205,38 @@ def _denominator_frame(root: Path, municipality: pd.DataFrame) -> tuple[pd.DataF
     return denominator, metadata
 
 
+def _brazil_denominator_frame(root: Path, years: list[int]) -> tuple[pd.DataFrame, dict[str, object]]:
+    rows: list[dict[str, object]] = []
+    municipality_counts: dict[str, int] = {}
+    missing_years: list[int] = []
+    for year in years:
+        path = root / "data" / "raw" / raw_filename(year)
+        frame = _read_sidra_payload(path)
+        if frame.empty:
+            missing_years.append(year)
+            continue
+        municipality_counts[str(year)] = int(frame["municipality_code_ibge"].nunique())
+        _, source_status = _population_source(path)
+        rows.append(
+            {
+                "year": year,
+                "geography": "brazil_total",
+                "municipality_code_ibge_vr": str(
+                    load_config("territories.yml", root)["volta_redonda"]["ibge_code_7"]
+                ),
+                "population": int(frame["population"].sum()),
+                "unit": "pessoas",
+                "source_status": source_status,
+                "source_files": str(path.relative_to(root)),
+                "source_sha256s": sha256_file(path),
+            }
+        )
+    return pd.DataFrame(rows), {
+        "municipality_count_by_year": municipality_counts,
+        "missing_years": missing_years,
+    }
+
+
 def _write_report(root: Path, years: list[int], municipality: pd.DataFrame, denominator: pd.DataFrame, manifest: dict[str, object]) -> Path:
     report = root / "reports" / "technical" / "denominadores.md"
     available = sorted(denominator["year"].unique().tolist()) if not denominator.empty else []
@@ -261,6 +293,10 @@ def harmonize_population(root: Path, start_year: int, end_year: int) -> tuple[Pa
     years = requested_years(start_year, end_year)
     municipality, municipality_metadata = _municipality_frame(root, years)
     denominator, denominator_metadata = _denominator_frame(root, municipality)
+    brazil_denominator, brazil_metadata = _brazil_denominator_frame(root, years)
+    if not brazil_denominator.empty:
+        denominator = pd.concat([denominator, brazil_denominator], ignore_index=True)
+        denominator = denominator.sort_values(["year", "geography"]).reset_index(drop=True)
     processed = root / "data" / "processed"
     processed.mkdir(parents=True, exist_ok=True)
     municipality_path = processed / "population_rj_municipality.parquet"
@@ -289,11 +325,13 @@ def harmonize_population(root: Path, start_year: int, end_year: int) -> tuple[Pa
             "path": str(denominator_path.relative_to(root)),
             "sha256": sha256_file(denominator_path),
         },
+        "brazil_denominator": brazil_metadata,
         "notes": [
             "2022 is sourced from SIDRA table 9514 Censo population resident, total sex and total age.",
             "Other requested years use SIDRA table 6579 resident population estimates when available.",
             "Missing years are explicit and are not interpolated or replaced by zero.",
             "The rest-of-RJ comparator excludes IBGE code 3306305 by construction.",
+            "Brazil totals are population-weighted aggregates of all municipalities in each official SIDRA payload.",
             "No age-specific denominator or epidemiological rate is produced by this step.",
         ],
     }

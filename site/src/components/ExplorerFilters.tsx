@@ -1,0 +1,100 @@
+import { Download, Filter, Share2, X } from 'lucide-react'
+import { useState } from 'react'
+import type { Indicator, MetricKind, Theme } from '../types'
+
+interface FilterProps {
+  theme: Theme
+  indicators: Indicator[]
+  indicatorId: string
+  territory: string
+  metric: MetricKind
+  startYear: number
+  endYear: number
+  onTheme: (value: Theme) => void
+  onIndicator: (value: string) => void
+  onTerritory: (value: string) => void
+  onMetric: (value: MetricKind) => void
+  onStartYear: (value: number) => void
+  onEndYear: (value: number) => void
+}
+
+export function ExplorerFilters(props: FilterProps) {
+  const [open, setOpen] = useState(false)
+  const selected = props.indicators.find((item) => item.id === props.indicatorId)!
+  const years = Array.from({ length: selected.yearEnd - selected.yearStart + 1 }, (_, index) => selected.yearStart + index)
+  const share = async () => {
+    const url = window.location.href
+    if (navigator.share) await navigator.share({ title: 'Observatório Saúde & Ambiente', url })
+    else await navigator.clipboard.writeText(url)
+  }
+  return (
+    <>
+      <div className="mobile-selection-summary">
+        <strong>{selected.measureLabel}: {selected.label}</strong>
+        <button type="button" onClick={() => setOpen(true)}><Filter size={20} />Filtros</button>
+        <span>{props.startYear}–{props.endYear} · {props.territory === 'all' ? 'Territórios comparados' : 'Território selecionado'} · Todas as idades</span>
+      </div>
+      <section className={`filter-rail${open ? ' filter-rail--open' : ''}`} aria-label="Filtros do explorador">
+        <div className="filter-rail__mobile-heading">
+          <strong>Filtros</strong>
+          <button type="button" aria-label="Fechar filtros" onClick={() => setOpen(false)}><X /></button>
+        </div>
+        <label>
+          Tema
+          <select value={props.theme} onChange={(event) => props.onTheme(event.target.value as Theme)}>
+            <option value="respiratory">Respiratórias</option>
+            <option value="cancer">Câncer</option>
+          </select>
+        </label>
+        <label className="filter-rail__indicator">
+          Indicador
+          <select value={props.indicatorId} onChange={(event) => props.onIndicator(event.target.value)}>
+            {props.indicators.filter((item) => item.theme === props.theme).map((item) => (
+              <option value={item.id} key={item.id}>{item.measureLabel}: {item.label}</option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Território
+          <select value={props.territory} onChange={(event) => props.onTerritory(event.target.value)}>
+            <option value="all">Todos comparados</option>
+            <option value="volta_redonda">Volta Redonda</option>
+            <option value="rest_of_rj_excluding_vr">RJ sem Volta Redonda</option>
+            <option value="brazil_total">Brasil</option>
+          </select>
+        </label>
+        <label>
+          Início
+          <select value={props.startYear} onChange={(event) => props.onStartYear(Number(event.target.value))}>
+            {years.filter((year) => year <= props.endYear).map((year) => <option key={year}>{year}</option>)}
+          </select>
+        </label>
+        <label>
+          Fim
+          <select value={props.endYear} onChange={(event) => props.onEndYear(Number(event.target.value))}>
+            {years.filter((year) => year >= props.startYear).map((year) => <option key={year}>{year}</option>)}
+          </select>
+        </label>
+        <label>
+          Faixa etária
+          <select disabled aria-describedby="age-help"><option>Todas as idades</option></select>
+          <span className="sr-only" id="age-help">Série temporal disponível para todas as idades</span>
+        </label>
+        <label>
+          Sexo
+          <select disabled><option>Ambos os sexos</option></select>
+        </label>
+        <div className="metric-switch" role="group" aria-label="Medida exibida">
+          <button type="button" className={props.metric === 'crude_rate_per_100k' ? 'is-selected' : ''} onClick={() => props.onMetric('crude_rate_per_100k')}>Taxa por 100 mil</button>
+          <button type="button" className={props.metric === 'count' ? 'is-selected' : ''} onClick={() => props.onMetric('count')}>Contagens</button>
+        </div>
+        <div className="filter-actions">
+          <a className="icon-action" href="/data/downloads/series-publicas.csv" download><Download />Baixar dados</a>
+          <button className="icon-action" type="button" onClick={share}><Share2 />Compartilhar</button>
+        </div>
+        <button className="filter-rail__apply" type="button" onClick={() => setOpen(false)}>Aplicar filtros</button>
+      </section>
+      {open ? <button className="filter-backdrop" aria-label="Fechar filtros" onClick={() => setOpen(false)} /> : null}
+    </>
+  )
+}

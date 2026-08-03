@@ -4,6 +4,7 @@ Esta validação testa sidecar SHA-256 e integridade estrutural básica; não su
 
 | arquivo | bytes | hash | formato | status | detalhes |
 |---|---:|---|---|---|---|
+| ibge_malha_municipal_rj_minima.geojson | 8782 | OK | OK | OK | {"features": 92, "geojson_type": "FeatureCollection", "json_type": "dict"} |
 | ibge_sidra_6579_population_2008.json | 1508483 | OK | OK | OK | {"json_type": "list"} |
 | ibge_sidra_6579_population_2009.json | 1508496 | OK | OK | OK | {"json_type": "list"} |
 | ibge_sidra_6579_population_2010.json | 352 | OK | OK | OK | {"json_type": "list"} |
@@ -707,5 +708,10 @@ Esta validação testa sidecar SHA-256 e integridade estrutural básica; não su
 | sim_2023_DO23OPEN.csv | 506687313 | OK | OK | OK | {"columns": 86, "delimiter": ";", "missing_required_fields": [], "required_fields_present": ["CAUSABAS", "CODMUNRES", "IDADE", "SEXO"]} |
 | sim_mortalidade_geral_2024_csv.zip | 98076266 | OK | OK | OK | {"first_members": ["DO24OPEN.csv"], "members": 1} |
 | sivep_2020_INFLUD20-23-03-2026.parquet | 87148508 | OK | OK | OK | {"columns": 194, "row_groups": 1, "rows": 1206920} |
+| sivep_2021_INFLUD21-23-03-2026.parquet | 127023754 | OK | OK | OK | {"columns": 194, "row_groups": 1, "rows": 1745672} |
+| sivep_2022_INFLUD22-23-03-2026.parquet | 43750567 | OK | OK | OK | {"columns": 194, "row_groups": 1, "rows": 560577} |
+| sivep_2023_INFLUD23-23-03-2026.parquet | 22121151 | OK | OK | OK | {"columns": 194, "row_groups": 1, "rows": 279453} |
+| sivep_2024_INFLUD24-23-03-2026.parquet | 21222050 | OK | OK | OK | {"columns": 194, "row_groups": 1, "rows": 267986} |
+| sivep_2025_INFLUD25-27-07-2026.parquet | 26780040 | OK | OK | OK | {"columns": 194, "row_groups": 1, "rows": 336260} |
 | sivep_srag_2019_2026-03-23.parquet | 3447406 | OK | OK | OK | {"columns": 194, "row_groups": 1, "rows": 48941} |
 | sivep_srag_dicionario_2019_2025.pdf | 1052922 | OK | OK | OK | {"header": "%PDF-"} |

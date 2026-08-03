@@ -1,18 +1,25 @@
 {
-  "generated_at": "2026-08-02T23:15:21+00:00",
+  "generated_at": "2026-08-03T00:52:29+00:00",
   "status": "surveillance_notification_rates_no_incidence_estimate",
-  "rows": 15,
+  "rows": 80,
   "available_years": [
     2019,
-    2020
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
   ],
-  "missing_denominator_years": [],
+  "missing_denominator_years": [
+    2023
+  ],
   "output_path": "data\\processed\\sivep_surveillance_summary.parquet",
-  "output_sha256": "ea3ba705a584d5e4e5a553f2d509baf5f823a5968beafd59f0b52be64431cfbc",
+  "output_sha256": "ce9fa253ca4856e74fa6b819c7516809c4604d8e19b76823c16b0a9fe34d406c",
   "input_files": [
     {
       "path": "data\\processed\\outcome_counts_sim_sivep.parquet",
-      "sha256": "5609061246398e2b6f2707c1b492a2e56c1e8afd693100aa288c30cf8f765d16"
+      "sha256": "95283b8db2e2792c29d7d9b7d77c24ec6f81fde4dc002c455a7dd95239f96413"
     },
     {
       "path": "data\\processed\\population_denominators.parquet",
@@ -33,7 +40,7 @@
   },
   "notes": [
     "Notification rates are not incidence rates and should not be interpreted as risk of infection.",
-    "SIVEP coverage and case definitions change over time; 2019 and 2020 are not automatically comparable.",
+    "SIVEP coverage and case definitions change over time; 2019-2025 are not automatically comparable.",
     "Small counts are suppressed in the technical report.",
     "No causal or interrupted time-series inference is produced."
   ]

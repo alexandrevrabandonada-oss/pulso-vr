@@ -11,8 +11,8 @@ estrutura das Fases 0–1 foi criada, com protocolo preliminar, matriz de
 perguntas, catálogo de fontes, configurações, validações automatizadas e
 downloaders idempotentes. A Fase 2 já validou a descoberta dinâmica no portal
 oficial, adquiriu a série SIM 2010–2024 e arquivos SIVEP versionados de 2019–2025 e confirmou o
-código DATASUS de residência de Volta Redonda. Ainda não há resultado
-Não há resultado etiológico confirmado: há resultados preliminares descritivos de SIH, SIM e
+código DATASUS de residência de Volta Redonda. Não há resultado etiológico
+confirmado: há resultados preliminares descritivos de SIH, SIM e
 SIVEP, mas nenhuma hipótese causal é considerada confirmada.
 
 ## Comparação e períodos
@@ -70,8 +70,29 @@ python scripts/run_cli.py sivep-monthly
 python scripts/run_cli.py sim-mortality-rates
 python scripts/run_cli.py sim-age-sex-profile
 python scripts/run_cli.py sim-age-sex-rates
+python scripts/run_cli.py portal-data --release-id beta-local --acquire-geography
 python scripts/run_cli.py harmonize --source all
 ```
+
+## Portal estático
+
+O portal público está em `site/` e consome exclusivamente os agregados seguros
+gerados por `portal-data`. O comando publica `release.json`, catálogo, séries,
+perfis, mapa contextual, downloads e hashes em `site/public/data/`; contagens
+menores que cinco chegam ao site apenas como valores nulos suprimidos.
+
+```text
+cd site
+npm install
+npm run dev
+npm test
+npm run build
+```
+
+A versão atual é uma beta técnica. Mortalidade por câncer vem do SIM e não é
+incidência; o comparador Brasil está disponível para as séries SIM nacionais.
+No SIH, o comparador nacional e as taxas municipais do mapa permanecem em
+preparação até aquisição e reconciliação oficial por residência.
 
 Cada arquivo baixado permanece em `data/raw/`, recebe um arquivo `.sha256` e
 é registrado em `metadata/extraction_log.csv`. A aquisição nunca substitui um
@@ -173,6 +194,7 @@ src/vr_saude/           código de produção
 tests/                  testes automatizados
 reports/                protocolo, qualidade e relatórios
 requests/               LAI, ética e parcerias
+site/                   portal React/Vite e artefatos públicos estáticos
 ```
 
 ## Limitações atuais

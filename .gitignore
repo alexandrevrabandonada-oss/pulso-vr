@@ -6,6 +6,11 @@ __pycache__/
 *.egg-info/
 .coverage
 htmlcov/
+site/node_modules/
+site/dist/
+site/*.tsbuildinfo
+site/vite.config.js
+site/vite.config.d.ts
 
 # Raw/interim/processed data are not versioned by default. Keep README files
 # and checksums, but never commit restricted, personal or sensitive data.

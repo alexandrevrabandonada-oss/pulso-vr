@@ -13,7 +13,7 @@ from .provenance import sha256_file
 from .rates import RATE_MULTIPLIER, poisson_count_interval
 
 
-GEOGRAPHIES = ["rj_total", "volta_redonda", "rest_of_rj_excluding_vr"]
+GEOGRAPHIES = ["brazil_total", "rj_total", "volta_redonda", "rest_of_rj_excluding_vr"]
 ALPHA = 0.05
 
 

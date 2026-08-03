@@ -1,6 +1,6 @@
 # Mortalidade por causas selecionadas no SIM
 
-Execução: 2026-08-03T00:02:07+00:00
+Execução: 2026-08-03T01:04:36+00:00
 
 A contagem representa óbitos de residentes classificados pela causa básica. A taxa é óbitos/população residente × 100.000, com intervalo exato de Poisson. Isso não mede incidência de câncer nem risco etiológico.
 

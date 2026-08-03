@@ -1,11 +1,12 @@
 {
-  "generated_at": "2026-08-02T23:15:13+00:00",
+  "generated_at": "2026-08-03T01:04:27+00:00",
   "status": "interim_outcome_counts_no_incidence_estimate",
-  "rows": 6939,
+  "rows": 17795,
   "outcome_ids": [
     "acute_bronchitis_bronchiolitis",
     "all_malignant_neoplasms",
     "asthma",
+    "breast",
     "colorectal",
     "copd",
     "covid19",
@@ -19,9 +20,9 @@
     "resp_all",
     "srag"
   ],
-  "input_file_count": 17,
-  "residence_rj_rows": 2269657,
-  "residence_vr_rows": 35894,
+  "input_file_count": 22,
+  "residence_rj_rows": 2514321,
+  "residence_vr_rows": 42295,
   "input_files": [
     {
       "source": "SIM",
@@ -209,16 +210,71 @@
       "rows": 1206920,
       "residence_rj_rows": 123918,
       "residence_vr_rows": 1525
+    },
+    {
+      "source": "SIVEP-SRAG",
+      "source_year": 2021,
+      "input_path": "data\\raw\\sivep_2021_INFLUD21-23-03-2026.parquet",
+      "input_sha256": "ecad01062f23715551a1e5e82fa1d9b28f0ea25e2c486a49518a15bf489ee790",
+      "harmonized_path": "data\\interim\\sivep_2021_harmonized.parquet",
+      "harmonized_sha256": "cd24265621e9359ce228c3379b5f2df92e79076e1d99d034cdaf0337530ea36e",
+      "rows": 1745672,
+      "residence_rj_rows": 144786,
+      "residence_vr_rows": 2973
+    },
+    {
+      "source": "SIVEP-SRAG",
+      "source_year": 2022,
+      "input_path": "data\\raw\\sivep_2022_INFLUD22-23-03-2026.parquet",
+      "input_sha256": "93aab4d4ef3ad87250d0179935156329f02a3b6947341654c06c1be26e67b9f1",
+      "harmonized_path": "data\\interim\\sivep_2022_harmonized.parquet",
+      "harmonized_sha256": "a9d3226cbf8f918b538d9a13b3026fbadb6ddac10c2015492a37a840a755fd7f",
+      "rows": 560577,
+      "residence_rj_rows": 38726,
+      "residence_vr_rows": 1277
+    },
+    {
+      "source": "SIVEP-SRAG",
+      "source_year": 2023,
+      "input_path": "data\\raw\\sivep_2023_INFLUD23-23-03-2026.parquet",
+      "input_sha256": "3adfca92884f4b213caaf81b1adf83e18416b19842c273a7e20c4ba9c9440070",
+      "harmonized_path": "data\\interim\\sivep_2023_harmonized.parquet",
+      "harmonized_sha256": "eca3cf4b869b24d1fb84d6c166fabd650394ccbafa4fd9760f76d964924cc5e1",
+      "rows": 279453,
+      "residence_rj_rows": 19640,
+      "residence_vr_rows": 733
+    },
+    {
+      "source": "SIVEP-SRAG",
+      "source_year": 2024,
+      "input_path": "data\\raw\\sivep_2024_INFLUD24-23-03-2026.parquet",
+      "input_sha256": "015135a33779ce28e2a0c43a83c06b7e76c11144ec47463a54687f8ca5e23f5a",
+      "harmonized_path": "data\\interim\\sivep_2024_harmonized.parquet",
+      "harmonized_sha256": "76ccd46080ab1db62e48ad318f361ae60d4a45ae8bdcf7fc0a489d9a2993fa2d",
+      "rows": 267986,
+      "residence_rj_rows": 18190,
+      "residence_vr_rows": 592
+    },
+    {
+      "source": "SIVEP-SRAG",
+      "source_year": 2025,
+      "input_path": "data\\raw\\sivep_2025_INFLUD25-27-07-2026.parquet",
+      "input_sha256": "6b5f1b2dccc9a6bbe05af492b5011dee04f53f3edbe598f58845134ff034601d",
+      "harmonized_path": "data\\interim\\sivep_2025_harmonized.parquet",
+      "harmonized_sha256": "22227f3ed2fe885f493412270affce15fadf5b635a9e920483daa628bb02001a",
+      "rows": 336260,
+      "residence_rj_rows": 23322,
+      "residence_vr_rows": 826
     }
   ],
   "output_path": "data\\processed\\outcome_counts_sim_sivep.parquet",
-  "output_sha256": "5609061246398e2b6f2707c1b492a2e56c1e8afd693100aa288c30cf8f765d16",
+  "output_sha256": "95283b8db2e2792c29d7d9b7d77c24ec6f81fde4dc002c455a7dd95239f96413",
   "rules": {
     "sim": "underlying_cause classified by CID-10 ranges from config/outcomes.yml",
     "sivep_srag": "all eligible SIVEP records",
     "sivep_influenza": "CLASSI_FIN=1",
     "sivep_covid19": "CLASSI_FIN=5",
-    "territory": "residence code beginning 33; VR=330630; rest RJ excludes VR"
+    "territory": "residence code; VR=330630; rest RJ excludes VR; Brazil total aggregates all valid Brazilian municipality codes"
   },
   "notes": [
     "SIM records are deaths, not incident cancer or respiratory cases.",

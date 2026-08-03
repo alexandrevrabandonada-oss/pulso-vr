@@ -1,0 +1,347 @@
+{
+  "schemaVersion": "1.0.0",
+  "releaseId": "beta-2026-08-02",
+  "generatedAt": "2026-08-03T01:23:50+00:00",
+  "status": "technical_beta_not_for_public_release",
+  "smallCellThreshold": 5,
+  "primaryComparator": "rest_of_rj_excluding_vr",
+  "secondaryComparator": "brazil_total",
+  "publicationGate": {
+    "epidemiologyReview": "pending",
+    "accessibilityReview": "pending",
+    "provenanceReview": "generated"
+  },
+  "coverage": {
+    "indicatorCount": 20,
+    "respiratoryStart": 2008,
+    "cancerStart": 2011,
+    "latestObservedYear": 2025,
+    "missingDenominatorYears": [
+      2010,
+      2023
+    ]
+  },
+  "notes": [
+    "No causal conclusion is authorized by this release.",
+    "SIH hospitalizations are events/AIHs, not unique people or new cases.",
+    "SIM cancer mortality is not population incidence.",
+    "Municipality geometry is contextual until municipal outcome rates are validated."
+  ],
+  "artifacts": [
+    {
+      "path": "catalog.json",
+      "bytes": 25323,
+      "sha256": "96220227820f869171d2d20a4bc290d9c519d2b9ede06b6f3069d6b6c3d59240"
+    },
+    {
+      "path": "downloads/series-publicas.csv",
+      "bytes": 223420,
+      "sha256": "d9c7f4b09c2474855bb6e26ba32e92dff45953fe759d5cf9edc24bd57b3b0690"
+    },
+    {
+      "path": "geography/rj.topojson",
+      "bytes": 124965,
+      "sha256": "8d47499524f94d2935c49d0d608efbe8d8a5b3f35b5ecbf8125eb07d5e942cd2"
+    },
+    {
+      "path": "maps/rj/sih-acute-bronchitis-bronchiolitis.json",
+      "bytes": 281,
+      "sha256": "76dc8e256d469aeaf3264f1b96735c161fee498129320e052ecfe093ebe8f5b6"
+    },
+    {
+      "path": "maps/rj/sih-asthma.json",
+      "bytes": 257,
+      "sha256": "3311cd82670b03aba0615d04d9840fb273b55fe584c1d61bcaf8d9ccc95f4b25"
+    },
+    {
+      "path": "maps/rj/sih-copd.json",
+      "bytes": 255,
+      "sha256": "b2f99fcb9f0aae3c5598125dbb8d5f4a3a2da4e60475c96c46f6420aab4ce0e2"
+    },
+    {
+      "path": "maps/rj/sih-pneumoconiosis.json",
+      "bytes": 265,
+      "sha256": "897936871e741af223dffc8c36e59afe8bdf81b9f17f9406f3707efb7cba5d52"
+    },
+    {
+      "path": "maps/rj/sih-pneumonia.json",
+      "bytes": 260,
+      "sha256": "5bb7053eb80b69a30d83eabd3988ad0c978949432efef87b503f6d080cd48bd2"
+    },
+    {
+      "path": "maps/rj/sih-resp-all.json",
+      "bytes": 259,
+      "sha256": "1ffa71620717153464c52fe0d31c676f32c47bc7c369d80db61a22d05fb743b6"
+    },
+    {
+      "path": "maps/rj/sim-acute-bronchitis-bronchiolitis.json",
+      "bytes": 281,
+      "sha256": "ca0ec5ba327ab624dffc87c66e8b3efe1d802e9723e85a6cca4d77c2cb1eebf2"
+    },
+    {
+      "path": "maps/rj/sim-all-malignant-neoplasms.json",
+      "bytes": 274,
+      "sha256": "ee60c58b3a65968529be7d887a615956eb6a737a705e8f426cc92f3115cb011c"
+    },
+    {
+      "path": "maps/rj/sim-asthma.json",
+      "bytes": 257,
+      "sha256": "622433c7b3a8f58fd6093d2d218ccabf298e6f3f39e66ebeb6623d54b22a203c"
+    },
+    {
+      "path": "maps/rj/sim-breast.json",
+      "bytes": 257,
+      "sha256": "275676b1edd99dcd2bfb6019e9fe3dec111491e7be4a767524758d1716c4dfb5"
+    },
+    {
+      "path": "maps/rj/sim-colorectal.json",
+      "bytes": 261,
+      "sha256": "143975760e310c94324ece36353e1392e0c6bed6ca2a85d6b4a87b98c122827c"
+    },
+    {
+      "path": "maps/rj/sim-copd.json",
+      "bytes": 255,
+      "sha256": "69f8e3c41420adbacdbdab3159e24b19746bc3c76db653f6e8f06416d027340d"
+    },
+    {
+      "path": "maps/rj/sim-influenza.json",
+      "bytes": 260,
+      "sha256": "ce42463aa53519f83a3f4914cc9b88a284aa4f7c831414ca4ca3c6782a706eb5"
+    },
+    {
+      "path": "maps/rj/sim-leukemia.json",
+      "bytes": 259,
+      "sha256": "7fe6c953954f9ee520ef7a9aa800e8f5bd1c300e82b6ca026f5ba0928c7a5d1b"
+    },
+    {
+      "path": "maps/rj/sim-lung.json",
+      "bytes": 255,
+      "sha256": "1930615dd015c8e8dc22d4110c3342b7f3f95c0923ad751a3d37cd4ad6c401df"
+    },
+    {
+      "path": "maps/rj/sim-non-hodgkin-lymphoma.json",
+      "bytes": 271,
+      "sha256": "8ed9dac8431020aed1c671150743d33c44758fe0808f048eaf500bcf9d68045c"
+    },
+    {
+      "path": "maps/rj/sim-pneumoconiosis.json",
+      "bytes": 265,
+      "sha256": "2f48e3af89a584f56eecb7dbbe74374add6b09149072c00868418ed3de73ae58"
+    },
+    {
+      "path": "maps/rj/sim-pneumonia.json",
+      "bytes": 260,
+      "sha256": "caa0e88b191736d38f82d65a0e6f2dfbf803cfff43ffc1689dde59ade5821e90"
+    },
+    {
+      "path": "maps/rj/sim-prostate.json",
+      "bytes": 259,
+      "sha256": "e505fc3ad9fb3cf25947ca5733c08d5cf1a7774b8b1262628a3a548c6df82679"
+    },
+    {
+      "path": "maps/rj/sim-resp-all.json",
+      "bytes": 259,
+      "sha256": "2916eee1db2938b2bc5ebe215965198a74009232f346dfcd6c1ad4ef3bd093ef"
+    },
+    {
+      "path": "profiles/sih-acute-bronchitis-bronchiolitis.json",
+      "bytes": 113,
+      "sha256": "2a001185b6b8081621bd194bce8a2458be1e9edf100b84afb0a863480de3361f"
+    },
+    {
+      "path": "profiles/sih-asthma.json",
+      "bytes": 89,
+      "sha256": "f13b4a356484a7d9f158b2b724a8ed21d5eb1d468e9ae7e6a345504c77ed9603"
+    },
+    {
+      "path": "profiles/sih-copd.json",
+      "bytes": 87,
+      "sha256": "403e4405d9ae33d1850dbd3a26f9f04d937c49d3bc337238142a10fa64be2f67"
+    },
+    {
+      "path": "profiles/sih-pneumoconiosis.json",
+      "bytes": 97,
+      "sha256": "9c3b85de1c350cb4ee36f4cfb11cb0d3bc73d975416ce519368be0e1ea54a489"
+    },
+    {
+      "path": "profiles/sih-pneumonia.json",
+      "bytes": 92,
+      "sha256": "fbe02424ad225511cd7fa2e9af531e3903dd8065706a28ba8e8644c2f833f7d6"
+    },
+    {
+      "path": "profiles/sih-resp-all.json",
+      "bytes": 91,
+      "sha256": "6fcc28a33a862de26c6ed9a630ccb7fec25a0bf07324e5d2791a1bc411b60951"
+    },
+    {
+      "path": "profiles/sim-acute-bronchitis-bronchiolitis.json",
+      "bytes": 30272,
+      "sha256": "387525913d882a8f7ab7f2bdd9308067d08827ef6ce1c553bf174017e5313d9e"
+    },
+    {
+      "path": "profiles/sim-all-malignant-neoplasms.json",
+      "bytes": 30874,
+      "sha256": "38baaa93713247b12ff0fd13d08f92c3b79a00478ca2af3b106b969d97f76986"
+    },
+    {
+      "path": "profiles/sim-asthma.json",
+      "bytes": 29425,
+      "sha256": "1d942d45595e5c33d755c92a6406357035107cda1c0d347deef30035f94f8ad6"
+    },
+    {
+      "path": "profiles/sim-breast.json",
+      "bytes": 89,
+      "sha256": "216e173e29d8faa0041e2dc21472434856ceed50cd4d56a95b765fe3531c8037"
+    },
+    {
+      "path": "profiles/sim-colorectal.json",
+      "bytes": 29795,
+      "sha256": "0eaa4e1186389f015545a3e3d09b24fd64ea89fae713638d050f3395cbbba050"
+    },
+    {
+      "path": "profiles/sim-copd.json",
+      "bytes": 29409,
+      "sha256": "35e6c5041c4217047bc0d97da6f0fe5926ca33e50a1806b9e64d9f0a7be4c147"
+    },
+    {
+      "path": "profiles/sim-influenza.json",
+      "bytes": 29379,
+      "sha256": "b2793e1f21525d25fc276d1ae0e04ce00ff48ff6a0fa86e41694d4bd43073332"
+    },
+    {
+      "path": "profiles/sim-leukemia.json",
+      "bytes": 29771,
+      "sha256": "506c033e274df79a9e9eed4b9585e0927dcc8c36b4bbf56f88e5deeaa05992a8"
+    },
+    {
+      "path": "profiles/sim-lung.json",
+      "bytes": 29465,
+      "sha256": "e744bf3b3fa6f098eb759a3c189d9db1009dfac17d5f04c3d8ea0bc827f6a74a"
+    },
+    {
+      "path": "profiles/sim-non-hodgkin-lymphoma.json",
+      "bytes": 30204,
+      "sha256": "f4db5aa9c75276826f36898deed1b6daf11486a95680cf4085773ce01d3875ff"
+    },
+    {
+      "path": "profiles/sim-pneumoconiosis.json",
+      "bytes": 29327,
+      "sha256": "94b7135123eb5e8b70089b4ebe21c27bdc02832186ac37b65125a42bc7431d3f"
+    },
+    {
+      "path": "profiles/sim-pneumonia.json",
+      "bytes": 30062,
+      "sha256": "a978554ac694c980b124f09646b6f34b7c28109f22806a1da4d7c48e7c0cfa13"
+    },
+    {
+      "path": "profiles/sim-prostate.json",
+      "bytes": 29341,
+      "sha256": "d80390592d464f6a5a612df14c4428ccf7c49966b27af864ba0ed52ea02caa4c"
+    },
+    {
+      "path": "profiles/sim-resp-all.json",
+      "bytes": 30084,
+      "sha256": "db95fc2aa0e560899977d43c1baccfc076c719984e6f27c84d6ff7b041d18086"
+    },
+    {
+      "path": "series/sih-acute-bronchitis-bronchiolitis.json",
+      "bytes": 27898,
+      "sha256": "8abeba52b0ac3fb6f6a311b785a902b0fba6ce5c4bca19547f1dd228c3983283"
+    },
+    {
+      "path": "series/sih-asthma.json",
+      "bytes": 26708,
+      "sha256": "e9e6cbed55b4126e4f77aa91882185da3938be86373ec0f223bdd050e084cffe"
+    },
+    {
+      "path": "series/sih-copd.json",
+      "bytes": 26613,
+      "sha256": "ee8224063872e22b1d4a9857a7494ba87228cc6525532ad67b6a4d3ea2ef016c"
+    },
+    {
+      "path": "series/sih-pneumoconiosis.json",
+      "bytes": 26751,
+      "sha256": "83459885910d42edb1516025afef9bee9b63187570db1766d74597dca7e1e2c7"
+    },
+    {
+      "path": "series/sih-pneumonia.json",
+      "bytes": 26933,
+      "sha256": "4b30dfdf04f46b28d8a6aa8aadec482f1756d1662250010c4457b93f04b3ecf8"
+    },
+    {
+      "path": "series/sih-resp-all.json",
+      "bytes": 26836,
+      "sha256": "3760657ff3015cce2f857f58a9b52ffd7061070f0df3f6fb0a7a0dad6a3c25db"
+    },
+    {
+      "path": "series/sim-acute-bronchitis-bronchiolitis.json",
+      "bytes": 30271,
+      "sha256": "01cdc6292b5c7d52aa5e449d2b8ecb66e3b714999b23c36b0ace4c425e9d5a51"
+    },
+    {
+      "path": "series/sim-all-malignant-neoplasms.json",
+      "bytes": 30323,
+      "sha256": "6b620dc8d2c0a1dc0d985229a24c8083b3c22a96f8d8c8e19c0c3a4771e02ba6"
+    },
+    {
+      "path": "series/sim-asthma.json",
+      "bytes": 29021,
+      "sha256": "f0e7a3f153dfa2b41fdc4a2be37e05c24d4d5b5b020c306f1e55ac8a9481b476"
+    },
+    {
+      "path": "series/sim-breast.json",
+      "bytes": 2227,
+      "sha256": "c65184616bd9c4ce55bd0b4af433c4f30bc04360456f13c1a2bf8fe3eddc1384"
+    },
+    {
+      "path": "series/sim-colorectal.json",
+      "bytes": 29559,
+      "sha256": "8d9dfa9e88ebb47a77687b26dc5c9eb4e0a9b4d517c5c7b787b89e35e00c4de1"
+    },
+    {
+      "path": "series/sim-copd.json",
+      "bytes": 29233,
+      "sha256": "56e01414b73a5399a1aad46b2e0a364bf46823003c8e0e8a0e012b47baa787fd"
+    },
+    {
+      "path": "series/sim-influenza.json",
+      "bytes": 29185,
+      "sha256": "92629669c5912bf8cc34a01d7a1e8c8cc0f2a406aa5bef80fd253181b1627e33"
+    },
+    {
+      "path": "series/sim-leukemia.json",
+      "bytes": 29392,
+      "sha256": "cc72375072b34425b5f89946546b4bedb85b667514003fbe516da5f60f6b6737"
+    },
+    {
+      "path": "series/sim-lung.json",
+      "bytes": 29252,
+      "sha256": "e8d1e641fbf3dc2861b6f729636e8ddfb000267814a5480c5c939d8e3a74a325"
+    },
+    {
+      "path": "series/sim-non-hodgkin-lymphoma.json",
+      "bytes": 29984,
+      "sha256": "f7de1215c714094ab1dfbf123baafdd11a998264d83d2245117a3715eef465b2"
+    },
+    {
+      "path": "series/sim-pneumoconiosis.json",
+      "bytes": 29471,
+      "sha256": "95f2243f21856f01c5383c509ca37ad56e6c23e1d2f5d44e036d43571dae8ad9"
+    },
+    {
+      "path": "series/sim-pneumonia.json",
+      "bytes": 29449,
+      "sha256": "63b1a7d44954810b2c71e0a260b659a10782d3c7b1024eca6c064f1f83deb930"
+    },
+    {
+      "path": "series/sim-prostate.json",
+      "bytes": 29362,
+      "sha256": "771cc789517c760dd07696af27d556bb2038e604dffa553401563889f4ee2730"
+    },
+    {
+      "path": "series/sim-resp-all.json",
+      "bytes": 29421,
+      "sha256": "0351c064c8ad88320bb889c30c3d8612ab2afe4c0d4cac29e0ed1a8d05b599ff"
+    }
+  ]
+}

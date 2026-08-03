@@ -333,6 +333,96 @@
     "missing_required_fields": []
   },
   {
+    "path": "data\\raw\\sivep_2021_INFLUD21-23-03-2026.parquet",
+    "source": "SIVEP",
+    "format": "PARQUET",
+    "ok": true,
+    "errors": [],
+    "rows": 1745672,
+    "columns": 194,
+    "required_fields_present": [
+      "CLASSI_FIN",
+      "CO_MUN_RES",
+      "CS_SEXO",
+      "DT_SIN_PRI",
+      "EVOLUCAO",
+      "NU_IDADE_N"
+    ],
+    "missing_required_fields": []
+  },
+  {
+    "path": "data\\raw\\sivep_2022_INFLUD22-23-03-2026.parquet",
+    "source": "SIVEP",
+    "format": "PARQUET",
+    "ok": true,
+    "errors": [],
+    "rows": 560577,
+    "columns": 194,
+    "required_fields_present": [
+      "CLASSI_FIN",
+      "CO_MUN_RES",
+      "CS_SEXO",
+      "DT_SIN_PRI",
+      "EVOLUCAO",
+      "NU_IDADE_N"
+    ],
+    "missing_required_fields": []
+  },
+  {
+    "path": "data\\raw\\sivep_2023_INFLUD23-23-03-2026.parquet",
+    "source": "SIVEP",
+    "format": "PARQUET",
+    "ok": true,
+    "errors": [],
+    "rows": 279453,
+    "columns": 194,
+    "required_fields_present": [
+      "CLASSI_FIN",
+      "CO_MUN_RES",
+      "CS_SEXO",
+      "DT_SIN_PRI",
+      "EVOLUCAO",
+      "NU_IDADE_N"
+    ],
+    "missing_required_fields": []
+  },
+  {
+    "path": "data\\raw\\sivep_2024_INFLUD24-23-03-2026.parquet",
+    "source": "SIVEP",
+    "format": "PARQUET",
+    "ok": true,
+    "errors": [],
+    "rows": 267986,
+    "columns": 194,
+    "required_fields_present": [
+      "CLASSI_FIN",
+      "CO_MUN_RES",
+      "CS_SEXO",
+      "DT_SIN_PRI",
+      "EVOLUCAO",
+      "NU_IDADE_N"
+    ],
+    "missing_required_fields": []
+  },
+  {
+    "path": "data\\raw\\sivep_2025_INFLUD25-27-07-2026.parquet",
+    "source": "SIVEP",
+    "format": "PARQUET",
+    "ok": true,
+    "errors": [],
+    "rows": 336260,
+    "columns": 194,
+    "required_fields_present": [
+      "CLASSI_FIN",
+      "CO_MUN_RES",
+      "CS_SEXO",
+      "DT_SIN_PRI",
+      "EVOLUCAO",
+      "NU_IDADE_N"
+    ],
+    "missing_required_fields": []
+  },
+  {
     "path": "data\\raw\\sivep_srag_2019_2026-03-23.parquet",
     "source": "SIVEP",
     "format": "PARQUET",

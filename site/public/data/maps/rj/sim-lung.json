@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "1.0.0",
+  "indicatorId": "sim-lung",
+  "status": "context_only_pending_validated_municipal_rates",
+  "values": [],
+  "note": "A malha é contextual; taxas municipais só serão publicadas após validação por residência."
+}
