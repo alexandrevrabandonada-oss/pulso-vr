@@ -13,12 +13,42 @@ export interface SeriesInsight {
   provisional: Observation | null
 }
 
+export interface SeriesSummary {
+  first: Observation
+  latest: Observation
+  previous: Observation
+  periodChange: number
+  restDifference: number | null
+  brazilDifference: number | null
+  availablePeriods: string[]
+}
+
 function average(values: number[]) {
   return values.reduce((sum, value) => sum + value, 0) / values.length
 }
 
 function percentChange(value: number, reference: number) {
   return reference > 0 ? (value / reference - 1) * 100 : 0
+}
+
+export function deriveSeriesSummary(observations: Observation[]): SeriesSummary | null {
+  const selected = observations
+    .filter((item) => item.geographyId === 'selected_municipality' && item.value !== null && !item.suppressed)
+    .sort((left, right) => Number(left.period) - Number(right.period))
+  if (selected.length < 2) return null
+  const latest = selected.at(-1)!
+  const previous = selected.at(-2)!
+  const rest = observations.find((item) => item.geographyId === 'rest_of_rj_excluding_selected' && item.period === latest.period)
+  const brazil = observations.find((item) => item.geographyId === 'brazil_total' && item.period === latest.period)
+  return {
+    first: selected[0],
+    latest,
+    previous,
+    periodChange: percentChange(latest.value!, previous.value!),
+    restDifference: rest?.value ? percentChange(latest.value!, rest.value) : null,
+    brazilDifference: brazil?.value ? percentChange(latest.value!, brazil.value) : null,
+    availablePeriods: selected.map((item) => item.period),
+  }
 }
 
 export function deriveSeriesInsight(observations: Observation[]): SeriesInsight | null {

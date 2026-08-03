@@ -1,5 +1,5 @@
 import { Activity, ArrowDownRight, ArrowUpRight, Equal } from 'lucide-react'
-import { deriveSeriesInsight } from '../lib/seriesInsights'
+import { deriveSeriesInsight, deriveSeriesSummary } from '../lib/seriesInsights'
 import { formatMetric } from '../lib/format'
 import type { Observation } from '../types'
 
@@ -26,7 +26,35 @@ function ChangeIcon({ value }: { value: number }) {
 
 export function SeriesInsights({ municipalityName, observations }: SeriesInsightsProps) {
   const insight = deriveSeriesInsight(observations)
-  if (!insight) return null
+  const summary = deriveSeriesSummary(observations)
+  if (!summary) return null
+  if (!insight) return (
+    <section className="series-insights series-insights--compact" aria-labelledby="series-insights-title">
+      <div className="series-insights__intro">
+        <span>Leitura da série</span>
+        <h2 id="series-insights-title">O que os anos disponíveis mostram?</h2>
+        <p>Comparação descritiva de taxas brutas. Anos ausentes não são estimados.</p>
+      </div>
+      <div className="series-insight">
+        <ChangeIcon value={summary.periodChange} />
+        <span>{summary.previous.period} → {summary.latest.period}</span>
+        <strong>{comparison(summary.periodChange, `de ${summary.previous.period}`)}</strong>
+        <small>{formatMetric(summary.previous.value, 'crude_rate_per_100k')} → {formatMetric(summary.latest.value, 'crude_rate_per_100k')} por 100 mil</small>
+      </div>
+      <div className="series-insight">
+        <Activity aria-hidden="true" />
+        <span>Restante do RJ · {summary.latest.period}</span>
+        <strong>{comparison(summary.restDifference, 'do restante do RJ')}</strong>
+        <small>Comparador exclui {municipalityName}</small>
+      </div>
+      <div className="series-insight">
+        <Activity aria-hidden="true" />
+        <span>Brasil · {summary.latest.period}</span>
+        <strong>{comparison(summary.brazilDifference, 'do Brasil')}</strong>
+        <small>Anos publicados: {summary.availablePeriods.join(', ')}</small>
+      </div>
+    </section>
+  )
   return (
     <section className="series-insights" aria-labelledby="series-insights-title">
       <div className="series-insights__intro">

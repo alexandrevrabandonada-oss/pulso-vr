@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { Observation } from '../types'
-import { deriveSeriesInsight, describeDirection } from './seriesInsights'
+import { deriveSeriesInsight, deriveSeriesSummary, describeDirection } from './seriesInsights'
 
 const point = (geographyId: string, period: string, value: number, dataStatus = 'source_observed') => ({
   geographyId, period, value, dataStatus, count: 10, denominator: 100_000,
@@ -25,5 +25,19 @@ describe('series insights', () => {
   it('uses neutral language for small changes', () => {
     expect(describeDirection(3)).toBe('estável em relação a')
     expect(describeDirection(-8)).toBe('abaixo de')
+  })
+
+  it('summarizes sparse municipal series without interpolating missing years', () => {
+    const observations = [
+      point('selected_municipality', '2022', 10),
+      point('selected_municipality', '2024', 15),
+      point('rest_of_rj_excluding_selected', '2024', 20),
+      point('brazil_total', '2024', 12),
+    ]
+    const summary = deriveSeriesSummary(observations)!
+    expect(summary.availablePeriods).toEqual(['2022', '2024'])
+    expect(summary.periodChange).toBeCloseTo(50)
+    expect(summary.restDifference).toBeCloseTo(-25)
+    expect(summary.brazilDifference).toBeCloseTo(25)
   })
 })

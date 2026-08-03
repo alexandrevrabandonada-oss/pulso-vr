@@ -179,7 +179,7 @@ export function ExplorerPage() {
         <section className={`quick-reading${metric === 'count' ? ' quick-reading--warning' : ''}`} aria-labelledby="quick-reading-title">
           <div className="quick-reading__label">
             <span>Leitura rápida</span>
-            <small>Último dado disponível · {quickReading.year}</small>
+            <small>Dado do mapa municipal · {quickReading.year}</small>
           </div>
           <div className="quick-reading__main">
             <h2 id="quick-reading-title">{quickReading.headline}</h2>
@@ -231,7 +231,7 @@ export function ExplorerPage() {
                 <div className="municipal-detail__heading">
                   <p className="eyebrow">Ficha municipal · snapshot {municipalPeriod}</p>
                   <h2 id="municipal-detail-title">{selectedMunicipality.name}</h2>
-                  <p>Município de residência · {indicator.measureLabel.toLowerCase()}. A camada municipal atualmente validada é um snapshot de 2022.</p>
+                  <p>Município de residência · {indicator.measureLabel.toLowerCase()}. Valores referentes ao período municipal selecionado: {municipalPeriod}.</p>
                 </div>
                 <div className="municipal-metrics">
                   <div><span>{indicator.measureLabel}</span><strong>{selectedMunicipalValue?.suppressed ? 'Não publicado' : formatMetric(selectedMunicipalValue?.count ?? null, 'count')}</strong><small>número bruto</small></div>
@@ -244,7 +244,7 @@ export function ExplorerPage() {
             </>
           ) : null}
           {selectedMunicipality ? <section className={`explorer-series${activeTab === 'map' ? '' : ' is-mobile-primary'}`}>
-            {indicator.id === 'sih-pneumonia' && selectedMunicipality ? <SeriesInsights municipalityName={selectedMunicipality.name} observations={municipalChartObservations} /> : null}
+            <SeriesInsights municipalityName={selectedMunicipality.name} observations={municipalChartObservations} />
             <div className="series-scope-note"><Info /><p><strong>Cobertura municipal validada:</strong> {municipalChartObservations.length ? [...new Set(municipalChartObservations.map((item) => item.period))].join(', ') : 'em preparação'}. Anos ausentes permanecem como lacunas e não são interpolados.</p></div>
             <TimeSeriesChart
               indicator={indicator}
