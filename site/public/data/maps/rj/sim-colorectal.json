@@ -19,7 +19,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -36,7 +37,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -53,7 +55,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -70,7 +73,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -87,7 +91,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -104,7 +109,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -121,7 +127,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -138,7 +145,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -155,7 +163,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -172,7 +181,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -189,7 +199,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -206,7 +217,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -223,7 +235,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -240,7 +253,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -257,7 +271,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -274,7 +289,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -291,7 +307,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -308,7 +325,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -325,7 +343,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -342,7 +361,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -359,7 +379,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -376,7 +397,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -393,7 +415,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -410,7 +433,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -427,7 +451,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -444,7 +469,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -461,7 +487,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -478,7 +505,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -495,7 +523,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -512,7 +541,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -529,7 +559,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -546,7 +577,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -563,7 +595,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -580,7 +613,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -597,7 +631,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -614,7 +649,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -631,7 +667,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -648,7 +685,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -665,7 +703,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -682,7 +721,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -699,7 +739,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -716,7 +757,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -733,7 +775,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -750,7 +793,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -767,7 +811,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -784,7 +829,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -801,7 +847,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -818,7 +865,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -835,7 +883,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -852,7 +901,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -869,7 +919,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -886,7 +937,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -903,7 +955,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -920,7 +973,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -937,7 +991,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -954,7 +1009,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -971,7 +1027,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -988,7 +1045,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1005,7 +1063,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1022,7 +1081,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1039,7 +1099,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1056,7 +1117,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1073,7 +1135,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1090,7 +1153,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1107,7 +1171,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1124,7 +1189,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1141,7 +1207,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1158,7 +1225,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1175,7 +1243,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1192,7 +1261,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1209,7 +1279,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1226,7 +1297,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1243,7 +1315,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1260,7 +1333,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1277,7 +1351,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1294,7 +1369,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1311,7 +1387,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1328,7 +1405,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1345,7 +1423,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1362,7 +1441,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1379,7 +1459,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1396,7 +1477,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1413,7 +1495,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1430,7 +1513,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1447,7 +1531,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1464,7 +1549,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1481,7 +1567,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1498,7 +1585,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1515,7 +1603,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1532,7 +1621,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -1549,7 +1639,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -1566,8 +1657,18 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_municipal_map_2024_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     }
   ],
-  "note": "Taxa bruta municipal de mortalidade SIM 2024 por residência; células <5 suprimidas."
+  "note": "Taxa bruta municipal de mortalidade SIM 2024 por residência; células <5 suprimidas.",
+  "mapScale": {
+    "domain": [
+      4.522594884040667,
+      39.53194180898166
+    ],
+    "method": "fixed_indicator_metric",
+    "unit": "crude_rate_per_100k",
+    "temporalPolicy": "comparable_across_available_periods"
+  }
 }

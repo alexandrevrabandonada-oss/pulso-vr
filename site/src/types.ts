@@ -1,5 +1,16 @@
 export type Theme = 'respiratory' | 'cardiovascular' | 'cardiorespiratory' | 'cancer'
 export type MetricKind = 'crude_rate_per_100k' | 'count'
+export type SuppressionStatus = 'published' | 'suppressed' | 'aggregated' | 'unavailable'
+
+export interface CoverageSummary {
+  municipalityCount: number
+  publishableMunicipalityCount: number
+  firstPeriod: string | null
+  lastPeriod: string | null
+  periods: string[]
+  missingPeriods: string[]
+  provisionalPeriods: string[]
+}
 
 export interface Indicator {
   id: string
@@ -23,6 +34,13 @@ export interface Indicator {
   profileAvailability?: 'available_2022_sim_age_sex' | 'not_applicable_current_release' | string
   allowsConclusion: string
   doesNotAllowConclusion: string
+  synonyms?: string[]
+  geographicCoverage?: Pick<CoverageSummary, 'municipalityCount' | 'publishableMunicipalityCount'>
+  temporalCoverage?: Omit<CoverageSummary, 'municipalityCount' | 'publishableMunicipalityCount'>
+  profileCoverage?: { status: 'available' | 'pilot' | 'unavailable'; geographies: string[]; periods: string[]; dimensions: string[] }
+  comparisonAvailability?: { restOfState: boolean; brazil: boolean; reason?: string }
+  updatedAt?: string
+  methodologyUrl?: string
 }
 
 export interface Catalog {
@@ -30,6 +48,7 @@ export interface Catalog {
   geographies: Record<string, string>
   indicators: Indicator[]
   futureCapabilities: string[]
+  discovery?: { generatedAt: string; municipalityCount: number }
 }
 
 export interface Observation {
@@ -48,6 +67,7 @@ export interface Observation {
   manifestRef: string
   suppressed: boolean
   suppressionReason: string | null
+  suppressionStatus?: SuppressionStatus
 }
 
 export interface ProfileObservation extends Observation {
@@ -97,6 +117,7 @@ export interface MapPayload {
   period?: string
   values: MapValue[]
   note: string
+  mapScale?: { domain: [number, number] | null; method: 'fixed_indicator_metric'; unit: string; temporalPolicy: 'comparable_across_available_periods' }
 }
 
 export interface Release {

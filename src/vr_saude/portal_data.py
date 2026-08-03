@@ -68,9 +68,11 @@ def suppress_public_observation(observation: dict[str, Any]) -> dict[str, Any]:
             observation[field] = None
         observation["suppressed"] = True
         observation["suppressionReason"] = "small_cell_lt_5"
+        observation["suppressionStatus"] = "suppressed"
     else:
         observation["suppressed"] = False
         observation["suppressionReason"] = None
+        observation["suppressionStatus"] = "published" if observation.get("value") is not None else "unavailable"
     return observation
 
 
@@ -189,10 +191,23 @@ def _build_catalog_and_series(root: Path) -> tuple[list[dict[str, Any]], dict[st
                     "doesNotAllowConclusion": (
                         "Não mede causalidade ambiental, risco individual ou incidência de câncer."
                     ),
+                    "synonyms": _indicator_synonyms(str(outcome_id), str(outcome_frame.iloc[0]["outcome_label"])),
+                    "updatedAt": _utc_now(),
+                    "methodologyUrl": f"/indicadores/{indicator_id}",
                 }
             )
             series[indicator_id] = observations
     return catalog, series
+
+
+def _indicator_synonyms(outcome_id: str, label: str) -> list[str]:
+    common = {
+        "lung": ["pulmão", "câncer de pulmão", "bronquios", "traqueia"],
+        "pneumonia": ["pneumonia", "infecção pulmonar"],
+        "acute_myocardial_infarction": ["infarto", "ataque cardíaco", "iam"],
+        "all_malignant_neoplasms": ["câncer", "cancer", "neoplasias"],
+    }
+    return sorted({label.lower(), *common.get(outcome_id, [])})
 
 
 def _municipal_map_payloads(root: Path, catalog: Iterable[dict[str, Any]]) -> dict[str, dict[str, Any]]:
@@ -465,14 +480,56 @@ def build_portal_data(
     maps = _municipal_map_payloads(root, catalog)
     municipal_series = _municipal_series_payloads(root, catalog)
     for indicator in catalog:
-        indicator["municipalPeriods"] = municipal_series[str(indicator["id"])]["periods"]
+        indicator_id = str(indicator["id"])
+        municipal_payload = municipal_series[indicator_id]
+        periods = municipal_payload["periods"]
+        public_rows = [item for item in municipal_payload["observations"] if item.get("value") is not None and not item.get("suppressed")]
+        public_codes = {item["geographyId"] for item in public_rows}
+        provisional_periods = sorted({item["period"] for item in municipal_payload["observations"] if item.get("dataStatus") == "provisional"})
+        missing_periods: list[str] = []
+        if periods:
+            available = {int(period) for period in periods}
+            missing_periods = [str(year) for year in range(min(available), max(available) + 1) if year not in available]
+        indicator["municipalPeriods"] = periods
+        indicator["geographicCoverage"] = {
+            "municipalityCount": 92,
+            "publishableMunicipalityCount": len(public_codes),
+        }
+        indicator["temporalCoverage"] = {
+            "firstPeriod": periods[0] if periods else None,
+            "lastPeriod": periods[-1] if periods else None,
+            "periods": periods,
+            "missingPeriods": missing_periods,
+            "provisionalPeriods": provisional_periods,
+        }
+        profile_rows = profiles.get(indicator_id, [])
+        profile_geographies = sorted({item["geographyId"] for item in profile_rows})
+        indicator["profileCoverage"] = {
+            "status": "pilot" if profile_rows else "unavailable",
+            "geographies": profile_geographies,
+            "periods": sorted({item["period"] for item in profile_rows}),
+            "dimensions": ["age", "sex"] if profile_rows else [],
+        }
+        indicator["comparisonAvailability"] = {
+            "restOfState": True,
+            "brazil": "brazil_total" in indicator["geographyIds"],
+            "reason": None if "brazil_total" in indicator["geographyIds"] else "national_equivalent_unavailable",
+        }
+        values = [item["value"] for item in municipal_payload["observations"] if item.get("value") is not None]
+        maps[indicator_id]["mapScale"] = {
+            "domain": [min(values), max(values)] if values else None,
+            "method": "fixed_indicator_metric",
+            "unit": "crude_rate_per_100k",
+            "temporalPolicy": "comparable_across_available_periods",
+        }
     topology = _build_topology(root, acquire_geography)
 
     _write_json(output_root / "catalog.json", {
-        "schemaVersion": "1.0.0",
+        "schemaVersion": "1.1.0",
         "geographies": GEOGRAPHY_LABELS,
         "indicators": catalog,
         "futureCapabilities": ["air_quality", "meteorology", "neighborhoods"],
+        "discovery": {"generatedAt": _utc_now(), "municipalityCount": 92},
     })
     for indicator in catalog:
         indicator_id = indicator["id"]
@@ -536,7 +593,7 @@ def build_portal_data(
         "generatedAt": _utc_now(),
         "status": release_status,
         "smallCellThreshold": SMALL_CELL_THRESHOLD,
-        "primaryComparator": "rest_of_rj_excluding_vr",
+        "primaryComparator": "rest_of_rj_excluding_selected_municipality",
         "secondaryComparator": "brazil_total",
         "publicationGate": publication_gate,
         "reviewSignoff": review_signoff,

@@ -17,7 +17,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -34,7 +35,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -51,7 +53,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -68,7 +71,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -85,7 +89,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -102,7 +107,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -119,7 +125,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -136,7 +143,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -153,7 +161,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -170,7 +179,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -187,7 +197,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -204,7 +215,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -221,7 +233,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -238,7 +251,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -255,7 +269,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -272,7 +287,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -289,7 +305,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -306,7 +323,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -323,7 +341,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -340,7 +359,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -357,7 +377,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -374,7 +395,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -391,7 +413,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -408,7 +431,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -425,7 +449,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -442,7 +467,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -459,7 +485,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -476,7 +503,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -493,7 +521,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -510,7 +539,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -527,7 +557,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -544,7 +575,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -561,7 +593,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -578,7 +611,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -595,7 +629,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -612,7 +647,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -629,7 +665,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -646,7 +683,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -663,7 +701,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -680,7 +719,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -697,7 +737,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -714,7 +755,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -731,7 +773,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -748,7 +791,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -765,7 +809,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -782,7 +827,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -799,7 +845,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -816,7 +863,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -833,7 +881,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -850,7 +899,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -867,7 +917,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -884,7 +935,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -901,7 +953,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -918,7 +971,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -935,7 +989,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -952,7 +1007,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -969,7 +1025,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -986,7 +1043,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1003,7 +1061,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1020,7 +1079,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1037,7 +1097,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1054,7 +1115,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1071,7 +1133,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1088,7 +1151,8 @@
       "periodStatus": "complete_annual",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1105,7 +1169,8 @@
       "periodStatus": "provisional_2025",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1122,7 +1187,8 @@
       "periodStatus": "provisional_2025",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1139,7 +1205,8 @@
       "periodStatus": "provisional_2025",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIH",
@@ -1156,7 +1223,8 @@
       "periodStatus": "provisional_2025",
       "manifestRef": "reports/quality/respiratory_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     }
   ]
 }

@@ -17,7 +17,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -34,7 +35,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -51,7 +53,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -68,7 +71,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -85,7 +89,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -102,7 +107,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -119,7 +125,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -136,7 +143,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -153,7 +161,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -170,7 +179,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -187,7 +197,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -204,7 +215,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -221,7 +233,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -238,7 +251,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -255,7 +269,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -272,7 +287,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -289,7 +305,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -306,7 +323,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -323,7 +341,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -340,7 +359,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -357,7 +377,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -374,7 +395,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -391,7 +413,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -408,7 +431,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -425,7 +449,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -442,7 +467,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -459,7 +485,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -476,7 +503,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -493,7 +521,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -510,7 +539,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -527,7 +557,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -544,7 +575,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -561,7 +593,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -578,7 +611,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -595,7 +629,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -612,7 +647,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -629,7 +665,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -646,7 +683,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -663,7 +701,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -680,7 +719,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -697,7 +737,8 @@
       "periodStatus": "respiratory_pandemic",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -714,7 +755,8 @@
       "periodStatus": "respiratory_pandemic",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -731,7 +773,8 @@
       "periodStatus": "respiratory_pandemic",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -748,7 +791,8 @@
       "periodStatus": "respiratory_pandemic",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -765,7 +809,8 @@
       "periodStatus": "respiratory_pandemic",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -782,7 +827,8 @@
       "periodStatus": "respiratory_pandemic",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -799,7 +845,8 @@
       "periodStatus": "respiratory_pandemic",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -816,7 +863,8 @@
       "periodStatus": "respiratory_pandemic",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -833,7 +881,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -850,7 +899,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -867,7 +917,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -884,7 +935,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     },
     {
       "source": "SIM",
@@ -901,7 +953,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -918,7 +971,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -935,7 +989,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": false,
-      "suppressionReason": null
+      "suppressionReason": null,
+      "suppressionStatus": "published"
     },
     {
       "source": "SIM",
@@ -952,7 +1007,8 @@
       "periodStatus": "source_year_observed",
       "manifestRef": "reports/quality/sim_mortality_rates_manifest.json",
       "suppressed": true,
-      "suppressionReason": "small_cell_lt_5"
+      "suppressionReason": "small_cell_lt_5",
+      "suppressionStatus": "suppressed"
     }
   ]
 }

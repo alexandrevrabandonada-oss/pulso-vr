@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "geographies": {
     "volta_redonda": "Volta Redonda",
     "rest_of_rj_excluding_vr": "RJ sem Volta Redonda",
@@ -38,9 +38,38 @@
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "bronquite aguda e bronquiolite aguda"
+      ],
+      "updatedAt": "2026-08-03T17:36:34+00:00",
+      "methodologyUrl": "/indicadores/sih-acute-bronchitis-bronchiolitis",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 67
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "geographies": [],
+        "periods": [],
+        "dimensions": []
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-acute-myocardial-infarction",
@@ -73,9 +102,41 @@
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "ataque cardíaco",
+        "iam",
+        "infarto",
+        "infarto agudo do miocárdio"
+      ],
+      "updatedAt": "2026-08-03T17:36:34+00:00",
+      "methodologyUrl": "/indicadores/sih-acute-myocardial-infarction",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 86
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "geographies": [],
+        "periods": [],
+        "dimensions": []
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-asthma",
@@ -108,9 +169,38 @@
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "asma"
+      ],
+      "updatedAt": "2026-08-03T17:36:34+00:00",
+      "methodologyUrl": "/indicadores/sih-asthma",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 57
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "geographies": [],
+        "periods": [],
+        "dimensions": []
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-cardiac-arrhythmia",
@@ -143,9 +233,38 @@
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "transtornos de condução e arritmias cardíacas"
+      ],
+      "updatedAt": "2026-08-03T17:36:34+00:00",
+      "methodologyUrl": "/indicadores/sih-cardiac-arrhythmia",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 79
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "geographies": [],
+        "periods": [],
+        "dimensions": []
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-cardio-all",
@@ -178,9 +297,38 @@
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "todas as doenças do aparelho circulatório"
+      ],
+      "updatedAt": "2026-08-03T17:36:34+00:00",
+      "methodologyUrl": "/indicadores/sih-cardio-all",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "geographies": [],
+        "periods": [],
+        "dimensions": []
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-cardiorespiratory-all",
@@ -214,9 +362,38 @@
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "todas as doenças cardiorrespiratórias"
+      ],
+      "updatedAt": "2026-08-03T17:36:34+00:00",
+      "methodologyUrl": "/indicadores/sih-cardiorespiratory-all",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "geographies": [],
+        "periods": [],
+        "dimensions": []
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-cerebrovascular",
@@ -249,9 +426,38 @@
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "doenças cerebrovasculares"
+      ],
+      "updatedAt": "2026-08-03T17:36:34+00:00",
+      "methodologyUrl": "/indicadores/sih-cerebrovascular",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 91
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "geographies": [],
+        "periods": [],
+        "dimensions": []
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-copd",
@@ -284,9 +490,38 @@
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "bronquite enfisema e outr doenç pulm obstr crôn"
+      ],
+      "updatedAt": "2026-08-03T17:36:34+00:00",
+      "methodologyUrl": "/indicadores/sih-copd",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 75
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "geographies": [],
+        "periods": [],
+        "dimensions": []
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-heart-failure",
@@ -319,9 +554,38 @@
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "insuficiência cardíaca"
+      ],
+      "updatedAt": "2026-08-03T17:36:34+00:00",
+      "methodologyUrl": "/indicadores/sih-heart-failure",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 88
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "geographies": [],
+        "periods": [],
+        "dimensions": []
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-hypertension",
@@ -354,9 +618,38 @@
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "doenças hipertensivas"
+      ],
+      "updatedAt": "2026-08-03T17:36:34+00:00",
+      "methodologyUrl": "/indicadores/sih-hypertension",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 77
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "geographies": [],
+        "periods": [],
+        "dimensions": []
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-ischemic-heart-disease",
@@ -389,9 +682,38 @@
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "doenças isquêmicas do coração"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sih-ischemic-heart-disease",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "geographies": [],
+        "periods": [],
+        "dimensions": []
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-pneumoconiosis",
@@ -424,9 +746,38 @@
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "pneumoconiose"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sih-pneumoconiosis",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 4
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "geographies": [],
+        "periods": [],
+        "dimensions": []
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-pneumonia",
@@ -459,6 +810,12 @@
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "infecção pulmonar",
+        "pneumonia"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sih-pneumonia",
       "municipalPeriods": [
         "2008",
         "2009",
@@ -477,7 +834,51 @@
         "2022",
         "2024",
         "2025"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2008",
+        "lastPeriod": "2025",
+        "periods": [
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2024",
+          "2025"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": [
+          "2025"
+        ]
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "geographies": [],
+        "periods": [],
+        "dimensions": []
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-pulmonary-embolism",
@@ -510,9 +911,38 @@
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "embolia pulmonar"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sih-pulmonary-embolism",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 21
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "geographies": [],
+        "periods": [],
+        "dimensions": []
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sih-resp-all",
@@ -545,9 +975,38 @@
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "10 doenças do aparelho respiratório"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sih-resp-all",
       "municipalPeriods": [
         "2022"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2022",
+        "periods": [
+          "2022"
+        ],
+        "missingPeriods": [],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "unavailable",
+        "geographies": [],
+        "periods": [],
+        "dimensions": []
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-acute-bronchitis-bronchiolitis",
@@ -580,10 +1039,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "bronquite e bronquiolite agudas"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-acute-bronchitis-bronchiolitis",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 3
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-acute-myocardial-infarction",
@@ -616,10 +1116,54 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "ataque cardíaco",
+        "iam",
+        "infarto",
+        "infarto agudo do miocárdio"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-acute-myocardial-infarction",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 90
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-all-malignant-neoplasms",
@@ -652,10 +1196,54 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "cancer",
+        "câncer",
+        "neoplasias",
+        "todas as neoplasias malignas"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-all-malignant-neoplasms",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-asthma",
@@ -688,10 +1276,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "asma e estado de mal asmático"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-asthma",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 9
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-bladder",
@@ -724,10 +1353,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "bexiga"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-bladder",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 23
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-breast",
@@ -760,10 +1430,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "mama"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-breast",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 51
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-cardiac-arrhythmia",
@@ -796,10 +1507,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "transtornos de condução e arritmias cardíacas"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-cardiac-arrhythmia",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 52
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-cardio-all",
@@ -832,10 +1584,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "todas as doenças do aparelho circulatório"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-cardio-all",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-cardiorespiratory-all",
@@ -869,10 +1662,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "todas as doenças cardiorrespiratórias"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-cardiorespiratory-all",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-cerebrovascular",
@@ -905,10 +1739,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "doenças cerebrovasculares"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-cerebrovascular",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-cervix",
@@ -941,10 +1816,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "colo do útero"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-cervix",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 24
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-colorectal",
@@ -977,10 +1893,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "cólon e reto"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-colorectal",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 60
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-copd",
@@ -1013,10 +1970,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "bronquite crônica, enfisema e dpoc"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-copd",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 73
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-heart-failure",
@@ -1049,10 +2047,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "insuficiência cardíaca"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-heart-failure",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 76
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-hypertension",
@@ -1085,10 +2124,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "doenças hipertensivas"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-hypertension",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 87
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-influenza",
@@ -1121,10 +2201,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "influenza"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-influenza",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 8
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-ischemic-heart-disease",
@@ -1157,10 +2278,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "doenças isquêmicas do coração"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-ischemic-heart-disease",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 91
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-leukemia",
@@ -1193,10 +2355,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "leucemias"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-leukemia",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 26
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-liver",
@@ -1229,10 +2432,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "fígado"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-liver",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 34
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-lung",
@@ -1265,10 +2509,55 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "bronquios",
+        "câncer de pulmão",
+        "pulmão",
+        "traqueia",
+        "traqueia, brônquios e pulmão"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-lung",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 63
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-multiple-myeloma",
@@ -1301,10 +2590,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "mieloma múltiplo"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-multiple-myeloma",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 19
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-myelodysplastic-syndromes",
@@ -1337,10 +2667,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "síndromes mielodisplásicas"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-myelodysplastic-syndromes",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 5
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-non-hodgkin-lymphoma",
@@ -1373,10 +2744,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "linfoma não hodgkin"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-non-hodgkin-lymphoma",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 20
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-pancreas",
@@ -1409,10 +2821,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "pâncreas"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-pancreas",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 43
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-pneumoconiosis",
@@ -1445,10 +2898,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "pneumoconioses"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-pneumoconiosis",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 0
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-pneumonia",
@@ -1481,10 +2975,53 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "infecção pulmonar",
+        "pneumonia",
+        "pneumonias"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-pneumonia",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-prostate",
@@ -1517,10 +3054,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "próstata"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-prostate",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 51
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-pulmonary-embolism",
@@ -1553,10 +3131,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "embolia pulmonar"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-pulmonary-embolism",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 27
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-resp-all",
@@ -1589,10 +3208,51 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "todas as doenças respiratórias"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-resp-all",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 92
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     },
     {
       "id": "sim-stomach",
@@ -1625,15 +3285,60 @@
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "synonyms": [
+        "estômago"
+      ],
+      "updatedAt": "2026-08-03T17:36:35+00:00",
+      "methodologyUrl": "/indicadores/sim-stomach",
       "municipalPeriods": [
         "2022",
         "2024"
-      ]
+      ],
+      "geographicCoverage": {
+        "municipalityCount": 92,
+        "publishableMunicipalityCount": 41
+      },
+      "temporalCoverage": {
+        "firstPeriod": "2022",
+        "lastPeriod": "2024",
+        "periods": [
+          "2022",
+          "2024"
+        ],
+        "missingPeriods": [
+          "2023"
+        ],
+        "provisionalPeriods": []
+      },
+      "profileCoverage": {
+        "status": "pilot",
+        "geographies": [
+          "rest_of_rj_excluding_vr",
+          "rj_total",
+          "volta_redonda"
+        ],
+        "periods": [
+          "2022"
+        ],
+        "dimensions": [
+          "age",
+          "sex"
+        ]
+      },
+      "comparisonAvailability": {
+        "restOfState": true,
+        "brazil": true,
+        "reason": null
+      }
     }
   ],
   "futureCapabilities": [
     "air_quality",
     "meteorology",
     "neighborhoods"
-  ]
+  ],
+  "discovery": {
+    "generatedAt": "2026-08-03T17:36:38+00:00",
+    "municipalityCount": 92
+  }
 }
