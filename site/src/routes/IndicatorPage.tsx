@@ -26,7 +26,7 @@ export function IndicatorPage() {
           <div><dt>Unidade observada</dt><dd>{indicator.unit}</dd></div>
           <div><dt>Medidas disponíveis</dt><dd>Contagem e taxa bruta por 100 mil</dd></div>
           <div><dt>Território</dt><dd>Município de residência</dd></div>
-          <div><dt>Comparador primário</dt><dd>RJ sem Volta Redonda</dd></div>
+          <div><dt>Comparador primário</dt><dd>Restante do RJ, excluindo o município selecionado</dd></div>
           <div><dt>Padronização</dt><dd>Taxa bruta; não equivale a taxa padronizada por idade</dd></div>
           <div><dt>CID-10</dt><dd>{indicator.cidRanges.join(', ') || 'Definição própria da fonte'}</dd></div>
         </dl>

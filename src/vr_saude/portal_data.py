@@ -275,6 +275,63 @@ def _municipal_map_payloads(root: Path, catalog: Iterable[dict[str, Any]]) -> di
     return payloads
 
 
+def _validated_municipal_frames(root: Path, source: str) -> list[tuple[pd.DataFrame, str]]:
+    frames: list[tuple[pd.DataFrame, str]] = []
+    prefix = source.lower()
+    for path in sorted((root / "data" / "processed").glob(f"{prefix}_municipal_map_rates_*.parquet")):
+        year_text = path.stem.rsplit("_", 1)[-1]
+        if not year_text.isdigit():
+            continue
+        manifest_path = root / "reports" / "quality" / f"{prefix}_municipal_map_{year_text}_manifest.json"
+        if not manifest_path.exists():
+            continue
+        try:
+            status = str(json.loads(manifest_path.read_text(encoding="utf-8")).get("status", ""))
+        except (OSError, json.JSONDecodeError):
+            continue
+        valid = status.startswith("validated_sim_") if source == "SIM" else status == "reconciled_with_annual_series"
+        if valid:
+            frames.append((pd.read_parquet(path), str(manifest_path.relative_to(root)).replace("\\", "/")))
+    return frames
+
+
+def _municipal_series_payloads(root: Path, catalog: Iterable[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    by_source = {source: _validated_municipal_frames(root, source) for source in ("SIM", "SIH")}
+    payloads: dict[str, dict[str, Any]] = {}
+    for indicator in catalog:
+        indicator_id = str(indicator["id"])
+        outcome_id = str(indicator["outcomeId"])
+        source = str(indicator["source"])
+        observations: list[dict[str, Any]] = []
+        for frame, manifest_ref in by_source[source]:
+            for row in frame.loc[frame["outcome_id"].eq(outcome_id)].itertuples(index=False):
+                item = {
+                    "source": source,
+                    "outcomeId": outcome_id,
+                    "geographyId": str(row.municipality_code_ibge),
+                    "period": str(int(row.year)),
+                    "metricKind": "crude_rate_per_100k",
+                    "value": _finite_or_none(row.rate_per_100k),
+                    "count": int(row.count),
+                    "denominator": int(row.population),
+                    "ciLow": _finite_or_none(row.rate_ci_lower_per_100k),
+                    "ciHigh": _finite_or_none(row.rate_ci_upper_per_100k),
+                    "dataStatus": "provisional" if str(row.period_status) == "provisional" else "source_observed",
+                    "periodStatus": str(row.period_status),
+                    "manifestRef": manifest_ref,
+                }
+                observations.append(suppress_public_observation(item))
+        periods = sorted({item["period"] for item in observations})
+        payloads[indicator_id] = {
+            "schemaVersion": "1.0.0",
+            "indicatorId": indicator_id,
+            "periods": periods,
+            "observations": observations,
+            "note": "Série municipal publicada somente para anos validados por residência; lacunas não são interpoladas.",
+        }
+    return payloads
+
+
 def _profile_payload(root: Path, catalog: Iterable[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
     path = root / "data" / "processed" / "sim_mortality_age_sex_rates_2022.parquet"
     if not path.exists():
@@ -417,6 +474,7 @@ def build_portal_data(
         raise ValueError("no validated rate artifacts are available for portal publication")
     profiles = _profile_payload(root, catalog)
     maps = _municipal_map_payloads(root, catalog)
+    municipal_series = _municipal_series_payloads(root, catalog)
     topology = _build_topology(root, acquire_geography)
 
     _write_json(output_root / "catalog.json", {
@@ -438,6 +496,7 @@ def build_portal_data(
             "observations": profiles.get(indicator_id, []),
         })
         _write_json(output_root / "maps" / "rj" / f"{indicator_id}.json", maps[indicator_id])
+        _write_json(output_root / "municipal-series" / f"{indicator_id}.json", municipal_series[indicator_id])
     _write_json(output_root / "geography" / "rj.topojson", topology)
     _write_download_csv(output_root / "downloads" / "series-publicas.csv", series)
 

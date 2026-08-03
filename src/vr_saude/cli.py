@@ -302,6 +302,10 @@ def _parser() -> argparse.ArgumentParser:
     )
     sih_municipal_map.add_argument("--year", type=int, default=2022)
     sih_municipal_map.add_argument("--workers", type=int, default=4)
+    sih_municipal_map.add_argument(
+        "--outcome", action="append", dest="outcomes",
+        help="limit acquisition to one or more configured outcome IDs (repeatable)",
+    )
     subparsers.add_parser(
         "oncology-diagnoses",
         help="harmonize Painel-Oncologia registered diagnoses by residence",
@@ -605,7 +609,9 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if args.command == "sih-municipal-map":
         try:
-            output, manifest, report = build_sih_municipal_map(root, year=args.year, workers=args.workers)
+            output, manifest, report = build_sih_municipal_map(
+                root, year=args.year, workers=args.workers, outcome_ids=args.outcomes
+            )
         except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
             print(f"ERROR: SIH municipal map failed: {exc}", file=sys.stderr)
             return 1

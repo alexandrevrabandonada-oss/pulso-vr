@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "releaseId": "beta-cardiorespiratorio-integrado",
-  "generatedAt": "2026-08-03T14:45:02+00:00",
+  "generatedAt": "2026-08-03T16:02:02+00:00",
   "status": "public_release_ready",
   "smallCellThreshold": 5,
   "primaryComparator": "rest_of_rj_excluding_vr",
@@ -292,6 +292,231 @@
       "path": "maps/rj/sim-stomach.json",
       "bytes": 50024,
       "sha256": "fa9574ceaa948daac97c0e6561f9be07dafc063a6b7639e0411f581866006734"
+    },
+    {
+      "path": "municipal-series/sih-acute-bronchitis-bronchiolitis.json",
+      "bytes": 52725,
+      "sha256": "7b3074cc0c4df41813923c38d343fd5cff89f3b344bf75a6b083ea4755a3aee6"
+    },
+    {
+      "path": "municipal-series/sih-acute-myocardial-infarction.json",
+      "bytes": 52986,
+      "sha256": "6bc6eaa3f9f4ecc12624c26ed27d8da89c204ea8e5a92de4a2ae49ac16897474"
+    },
+    {
+      "path": "municipal-series/sih-asthma.json",
+      "bytes": 50245,
+      "sha256": "33093d4af604126961b3c2cab1a1484bf5e66cb1c1bb7c73cec5b50183c5cbd9"
+    },
+    {
+      "path": "municipal-series/sih-cardiac-arrhythmia.json",
+      "bytes": 51923,
+      "sha256": "e7db74cd988015568d362abc6081cad291f5ea3e98002d3e23981fe705a5a43f"
+    },
+    {
+      "path": "municipal-series/sih-cardio-all.json",
+      "bytes": 51610,
+      "sha256": "e2f762e968b3f387ae4bd06b4f93a62f176c688d486fb71e6e03a3b967efb9e7"
+    },
+    {
+      "path": "municipal-series/sih-cardiorespiratory-all.json",
+      "bytes": 52697,
+      "sha256": "01a50ba1384782286d56bcd15fba0111792a240f4fb4bc465ee5924b8bb1a63a"
+    },
+    {
+      "path": "municipal-series/sih-cerebrovascular.json",
+      "bytes": 52026,
+      "sha256": "6e0c27880060eb371a62d35708b9eed993f2d656de0490bddb7ade890bfccdf8"
+    },
+    {
+      "path": "municipal-series/sih-copd.json",
+      "bytes": 50524,
+      "sha256": "796d836940d11022a6d60ce3354554d03d86b1eb31f363933ab82a4a970a5c88"
+    },
+    {
+      "path": "municipal-series/sih-heart-failure.json",
+      "bytes": 51720,
+      "sha256": "64090afa7065deafa8897fa188eb5425170595da681de45586aa3e47f8243c99"
+    },
+    {
+      "path": "municipal-series/sih-hypertension.json",
+      "bytes": 51337,
+      "sha256": "8158b72916a8a3d89d5f504aac245d78ac50e602c1c8e1967813bf977a186a4f"
+    },
+    {
+      "path": "municipal-series/sih-ischemic-heart-disease.json",
+      "bytes": 52703,
+      "sha256": "a41cba3ee8b4437242d846fd5b92b1337fb13d0ceed5faef473fda766e86c581"
+    },
+    {
+      "path": "municipal-series/sih-pneumoconiosis.json",
+      "bytes": 49608,
+      "sha256": "3918e293c319cd0865b8e34db137d3fa3aa6f5775b050006d3a5591387d0cec9"
+    },
+    {
+      "path": "municipal-series/sih-pneumonia.json",
+      "bytes": 869925,
+      "sha256": "ec2a98d1079e4658ab52057fe0c6fba32cfe5a41346749c15da756ef5f4e859a"
+    },
+    {
+      "path": "municipal-series/sih-pulmonary-embolism.json",
+      "bytes": 50405,
+      "sha256": "aa0b341eac5c3de71128cfc13823a4fff4a3c346e8cd5ac62ab6627db947ec7f"
+    },
+    {
+      "path": "municipal-series/sih-resp-all.json",
+      "bytes": 51392,
+      "sha256": "3b9e4465c7492e94214c52a8b72072d86b296e8b8cf0704a3a4134680edec51c"
+    },
+    {
+      "path": "municipal-series/sim-acute-bronchitis-bronchiolitis.json",
+      "bytes": 51040,
+      "sha256": "0315eceff6ae62a9e04587e99fcf4a80776719ae3eabc2ea29b91988dcb23110"
+    },
+    {
+      "path": "municipal-series/sim-acute-myocardial-infarction.json",
+      "bytes": 53028,
+      "sha256": "e287d4d46d53cd2e48ea34346d9f9e425f93bb2710f8cedbf6ebff7ee422d2fc"
+    },
+    {
+      "path": "municipal-series/sim-all-malignant-neoplasms.json",
+      "bytes": 52987,
+      "sha256": "6cc1bbe8fab676e9f3d88aaca970f83874b9beb10ea71f215429fb34531392a2"
+    },
+    {
+      "path": "municipal-series/sim-asthma.json",
+      "bytes": 48939,
+      "sha256": "69726f4aa658d2004d6dbda88167222efda41b7dc65564a0ded385aff5856ff5"
+    },
+    {
+      "path": "municipal-series/sim-bladder.json",
+      "bytes": 49516,
+      "sha256": "19239095770ea4af7689ed72ed6eaf6a39b193debe6666f85dd57c3ac771e5db"
+    },
+    {
+      "path": "municipal-series/sim-breast.json",
+      "bytes": 50177,
+      "sha256": "49881bc7b31e5c037cca520b022af4c2478179bb11abc74ddb422810903f764b"
+    },
+    {
+      "path": "municipal-series/sim-cardiac-arrhythmia.json",
+      "bytes": 50819,
+      "sha256": "0e1e9e03e8e4d526b2b8c54fcdd4bbda90fdbf3ab0cd6dc2d914e1ac14ef395e"
+    },
+    {
+      "path": "municipal-series/sim-cardio-all.json",
+      "bytes": 51608,
+      "sha256": "c24f28cd2bd5dd29face2fe39ebec2fa9e4f127f55709e79c3257f1434289772"
+    },
+    {
+      "path": "municipal-series/sim-cardiorespiratory-all.json",
+      "bytes": 52620,
+      "sha256": "7eaf04608e89ee887fd4ff860eaffdea84538ddf59880f98924e814cf9656f51"
+    },
+    {
+      "path": "municipal-series/sim-cerebrovascular.json",
+      "bytes": 51866,
+      "sha256": "4a3610ab8d786434866bc34e7186297905d57dea3d9c6fb30eae3eea8d1fa65a"
+    },
+    {
+      "path": "municipal-series/sim-cervix.json",
+      "bytes": 49452,
+      "sha256": "3c81a6980aaf250f6b4f85c90d588350cd45706318c532a7d6c51d2a36ca374f"
+    },
+    {
+      "path": "municipal-series/sim-colorectal.json",
+      "bytes": 50530,
+      "sha256": "c6e379fe01ead81f8f90028e36bbed171a9f6cede9ba565f4127631c5393feb2"
+    },
+    {
+      "path": "municipal-series/sim-copd.json",
+      "bytes": 50228,
+      "sha256": "3ae6110ecdd2ff7ed4d85b23ae983ca544933d706aa1d2d0b2ab200b5302281a"
+    },
+    {
+      "path": "municipal-series/sim-heart-failure.json",
+      "bytes": 51283,
+      "sha256": "0c4e1132313ff2367da8d0b63d4ea70f083de266fa2613187a9c00f6cbb8bccb"
+    },
+    {
+      "path": "municipal-series/sim-hypertension.json",
+      "bytes": 51500,
+      "sha256": "e17c95eb7e58f7b8a470c1f388cb58e5c26094465d2a10f24e207e5b16ff5ef0"
+    },
+    {
+      "path": "municipal-series/sim-influenza.json",
+      "bytes": 49183,
+      "sha256": "76818ad21b483a86ef62641d14d92b91b6f8808fff6710077effe5b4f7fd6852"
+    },
+    {
+      "path": "municipal-series/sim-ischemic-heart-disease.json",
+      "bytes": 52573,
+      "sha256": "f4fe9bbfa59735186395c29e38c645b4182d973c7f00865cae4ffa1bd6b223fe"
+    },
+    {
+      "path": "municipal-series/sim-leukemia.json",
+      "bytes": 49605,
+      "sha256": "3b6e3bb37085b4cef3776beb3d7b623f218a0fc069f1075b45bf744089ae79c4"
+    },
+    {
+      "path": "municipal-series/sim-liver.json",
+      "bytes": 49501,
+      "sha256": "0149df5ac12482ce7102e8e6591e725ea11f2145e28a6b66df4d54effbe518f7"
+    },
+    {
+      "path": "municipal-series/sim-lung.json",
+      "bytes": 50097,
+      "sha256": "6ff4d428493ea4d7f2ee52523ec66e44b3e37993bbce09a0ec87acd6d9556c33"
+    },
+    {
+      "path": "municipal-series/sim-multiple-myeloma.json",
+      "bytes": 50253,
+      "sha256": "2dda12b14d9b1da12bc806b889391abc310d2b48d9a38116a6d0dd13fce11d2b"
+    },
+    {
+      "path": "municipal-series/sim-myelodysplastic-syndromes.json",
+      "bytes": 50784,
+      "sha256": "c9c3155b0fccf5ad09811665ea4542f97a18e6893992fb34a47b6b0b155b882c"
+    },
+    {
+      "path": "municipal-series/sim-non-hodgkin-lymphoma.json",
+      "bytes": 50626,
+      "sha256": "03641a45ff4c5eb1bbc6e1de7c0d2ff0498a7a0780f516076b3b1fc4bfae1e9b"
+    },
+    {
+      "path": "municipal-series/sim-pancreas.json",
+      "bytes": 50010,
+      "sha256": "f133f145511b9e25225412bfd7fcba76fe6dfd12a02ce8d5609a9d4c6aa8ed23"
+    },
+    {
+      "path": "municipal-series/sim-pneumoconiosis.json",
+      "bytes": 49495,
+      "sha256": "02f28b6d9e239ca71dd081e836878534e5668fe81332274ad4919b71fe75f707"
+    },
+    {
+      "path": "municipal-series/sim-pneumonia.json",
+      "bytes": 51274,
+      "sha256": "02c1f687dfc3ec4ac81c64988cf1d136ee11ec51e0d094a4327e67abb0cb6822"
+    },
+    {
+      "path": "municipal-series/sim-prostate.json",
+      "bytes": 50203,
+      "sha256": "cb4188eaf019a367f1bda1db85aff3869d370f1c14c4bfa7ee2c4b9a1fe0750a"
+    },
+    {
+      "path": "municipal-series/sim-pulmonary-embolism.json",
+      "bytes": 50383,
+      "sha256": "717847e3bd87c973062bcfbe2b6ba88b7003b252afac26519cbb4a82641472fb"
+    },
+    {
+      "path": "municipal-series/sim-resp-all.json",
+      "bytes": 51362,
+      "sha256": "939af43b0f3404532dba3f3743a18b966bf1a8604c5df4419a410169dffa6234"
+    },
+    {
+      "path": "municipal-series/sim-stomach.json",
+      "bytes": 49994,
+      "sha256": "71169df093b713cb3aead28e873879e26a8830a1d8918f4b7912b154ac69c152"
     },
     {
       "path": "profiles/sih-acute-bronchitis-bronchiolitis.json",
@@ -743,28 +968,5 @@
       "bytes": 31572,
       "sha256": "159be9be08dec96e2d0b5cf689b8ffece592e0f3d3e1b1e501c945d7c5feab74"
     }
-  ],
-  "readiness": {
-    "status": "public_release_ready",
-    "publicationAllowed": true,
-    "blockerCount": 0,
-    "warningCount": 3,
-    "indicatorCount": 45,
-    "seriesFiles": 45,
-    "profileFiles": 45,
-    "mapFiles": 45,
-    "observations": 2700,
-    "suppressedObservations": 93,
-    "profileObservations": 1440,
-    "profileEligibleIndicators": 30,
-    "mapValues": 2499,
-    "mapSuppressedValues": 1641,
-    "sihIndicators": 15,
-    "sihWithBrazilComparator": 15,
-    "missingDenominatorYears": [
-      2023
-    ],
-    "downloadSuppressionLeaks": 0,
-    "checkedAt": "2026-08-03T14:47:33+00:00"
-  }
+  ]
 }

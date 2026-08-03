@@ -1,4 +1,4 @@
-import type { Catalog, MapPayload, ProfilePayload, Release, SeriesPayload } from '../types'
+import type { Catalog, MapPayload, MunicipalSeriesPayload, ProfilePayload, Release, SeriesPayload } from '../types'
 
 const jsonCache = new Map<string, Promise<unknown>>()
 
@@ -28,6 +28,10 @@ export function loadPortalFoundation() {
 
 export function loadSeries(indicatorId: string) {
   return fetchJson<SeriesPayload>(`/data/series/${indicatorId}.json`)
+}
+
+export function loadMunicipalSeries(indicatorId: string) {
+  return fetchJson<MunicipalSeriesPayload>(`/data/municipal-series/${indicatorId}.json`)
 }
 
 export function loadProfile(indicatorId: string) {

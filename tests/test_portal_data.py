@@ -1,4 +1,8 @@
-from vr_saude.portal_data import _topology_geometry, suppress_public_observation
+import json
+
+import pandas as pd
+
+from vr_saude.portal_data import _municipal_series_payloads, _topology_geometry, suppress_public_observation
 
 
 def test_publication_suppresses_small_cells_before_frontend() -> None:
@@ -34,3 +38,24 @@ def test_topology_conversion_keeps_polygon_as_arc_reference() -> None:
     )
     assert converted == {"type": "Polygon", "arcs": [[0]]}
     assert arcs == [[[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.0, 0.0]]]
+
+
+def test_municipal_series_uses_only_validated_years_and_suppresses_small_cells(tmp_path) -> None:
+    processed = tmp_path / "data" / "processed"
+    quality = tmp_path / "reports" / "quality"
+    processed.mkdir(parents=True)
+    quality.mkdir(parents=True)
+    frame = pd.DataFrame([{
+        "municipality_code_ibge": "3300100", "outcome_id": "lung", "year": 2022,
+        "count": 4, "population": 100_000, "rate_per_100k": 4.0,
+        "rate_ci_lower_per_100k": 1.0, "rate_ci_upper_per_100k": 8.0,
+        "period_status": "source_year_observed",
+    }])
+    frame.to_parquet(processed / "sim_municipal_map_rates_2022.parquet", index=False)
+    (quality / "sim_municipal_map_2022_manifest.json").write_text(
+        json.dumps({"status": "validated_sim_2022_municipal_residence_rates_crude"}), encoding="utf-8"
+    )
+    payload = _municipal_series_payloads(tmp_path, [{"id": "sim-lung", "outcomeId": "lung", "source": "SIM"}])
+    assert payload["sim-lung"]["periods"] == ["2022"]
+    assert payload["sim-lung"]["observations"][0]["count"] is None
+    assert payload["sim-lung"]["observations"][0]["suppressed"] is True

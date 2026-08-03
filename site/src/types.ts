@@ -60,6 +60,11 @@ export interface SeriesPayload {
   observations: Observation[]
 }
 
+export interface MunicipalSeriesPayload extends SeriesPayload {
+  periods: string[]
+  note: string
+}
+
 export interface ProfilePayload {
   schemaVersion: string
   indicatorId: string

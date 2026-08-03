@@ -6,13 +6,11 @@ interface FilterProps {
   theme: Theme
   indicators: Indicator[]
   indicatorId: string
-  territory: string
   metric: MetricKind
   startYear: number
   endYear: number
   onTheme: (value: Theme) => void
   onIndicator: (value: string) => void
-  onTerritory: (value: string) => void
   onMetric: (value: MetricKind) => void
   onStartYear: (value: number) => void
   onEndYear: (value: number) => void
@@ -39,7 +37,7 @@ export function ExplorerFilters(props: FilterProps) {
       <div className="mobile-selection-summary">
         <strong>{selected.measureLabel}: {selected.label}</strong>
         <button type="button" onClick={() => setOpen(true)}><Filter size={20} />Filtros</button>
-        <span>{props.startYear}–{props.endYear} · {props.territory === 'all' ? 'Territórios comparados' : 'Território selecionado'} · Todas as idades</span>
+        <span>{props.startYear}–{props.endYear} · Município, restante do RJ e Brasil · Todas as idades</span>
       </div>
       <section className={`filter-rail${open ? ' filter-rail--open' : ''}`} aria-label="Filtros do explorador">
         <div className="filter-rail__mobile-heading">
@@ -61,15 +59,6 @@ export function ExplorerFilters(props: FilterProps) {
             {props.indicators.filter((item) => item.theme === props.theme).map((item) => (
               <option value={item.id} key={item.id}>{item.measureLabel}: {item.label}</option>
             ))}
-          </select>
-        </label>
-        <label>
-          Território
-          <select value={props.territory} onChange={(event) => props.onTerritory(event.target.value)}>
-            <option value="all">Todos comparados</option>
-            <option value="volta_redonda">Volta Redonda</option>
-            <option value="rest_of_rj_excluding_vr">RJ sem Volta Redonda</option>
-            <option value="brazil_total">Brasil</option>
           </select>
         </label>
         <label>
@@ -104,7 +93,7 @@ export function ExplorerFilters(props: FilterProps) {
         <span className="sr-only" aria-live="polite">{feedback}</span>
         <button className="filter-rail__apply" type="button" onClick={() => setOpen(false)}>Aplicar filtros</button>
       </section>
-      {open ? <button className="filter-backdrop" aria-label="Fechar filtros" onClick={() => setOpen(false)} /> : null}
+      {open ? <button className="filter-backdrop" aria-label="Fechar painel de filtros" onClick={() => setOpen(false)} /> : null}
     </>
   )
 }

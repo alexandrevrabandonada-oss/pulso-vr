@@ -146,6 +146,23 @@ def _write_rate_report(root: Path, rates: pd.DataFrame, metadata: dict[str, obje
             f"| {values['year']} | {values['geography']} | {int(values['count'])} | "
             f"{values['rate_per_100k']:.2f} | {values['rate_ci_lower_per_100k']:.2f}–{values['rate_ci_upper_per_100k']:.2f} |"
         )
+    pneumonia = rates.loc[
+        (rates["outcome_id"] == "pneumonia")
+        & (rates["year"].isin([2024, 2025]))
+        & (rates["geography"].isin(["volta_redonda", "rest_of_rj_excluding_vr", "rj_total", "brazil_total"]))
+    ].copy()
+    pneumonia_table = pneumonia.pivot(index="year", columns="geography", values=["count", "rate_per_100k"])
+    pneumonia_rows = []
+    for year, row in pneumonia_table.sort_index().iterrows():
+        vr_rate = row[("rate_per_100k", "volta_redonda")]
+        rj_rate = row[("rate_per_100k", "rj_total")]
+        br_rate = row[("rate_per_100k", "brazil_total")]
+        pneumonia_rows.append(
+            f"| {year} | {int(row[('count', 'volta_redonda')])} / {vr_rate:.1f} | "
+            f"{int(row[('count', 'rj_total')])} / {rj_rate:.1f} | "
+            f"{int(row[('count', 'brazil_total')])} / {br_rate:.1f} | "
+            f"{vr_rate / rj_rate:.2f} | {vr_rate / br_rate:.2f} |"
+        )
     lines = [
         "# Taxas respiratórias brutas",
         "",
@@ -166,6 +183,14 @@ def _write_rate_report(root: Path, rates: pd.DataFrame, metadata: dict[str, obje
         "| ano | território | internações | taxa/100 mil | IC 95%/100 mil |",
         "|---:|---|---:|---:|---:|",
         *rows,
+        "",
+        "## Desfecho específico: pneumonia",
+        "",
+        "A coluna apresenta `internações / taxa por 100 mil`. O SIH registra AIHs/internações do SUS; não representa diagnósticos novos nem pessoas únicas.",
+        "",
+        "| ano | Volta Redonda | RJ total | Brasil | razão VR/RJ | razão VR/Brasil |",
+        "|---:|---:|---:|---:|---:|---:|",
+        *pneumonia_rows,
         "",
         "As taxas por pneumonia, bronquite/bronquiolite aguda, DPOC, asma e pneumoconiose "
         "estão no Parquet processado. Células pequenas devem ser suprimidas ou agregadas "

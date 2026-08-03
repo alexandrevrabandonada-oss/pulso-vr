@@ -50,7 +50,7 @@ def append_extraction_log(root: Path, values: dict[str, Any]) -> None:
     row = {field: "" for field in LOG_FIELDS}
     row.update({key: "" if value is None else str(value) for key, value in values.items()})
     with path.open("a", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=LOG_FIELDS)
+        writer = csv.DictWriter(handle, fieldnames=LOG_FIELDS, lineterminator="\n")
         if not exists:
             writer.writeheader()
         writer.writerow(row)

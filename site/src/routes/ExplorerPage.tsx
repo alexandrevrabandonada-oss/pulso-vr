@@ -1,19 +1,30 @@
-import { ChevronDown, FileText, Info } from 'lucide-react'
+import { ArrowRight, ChevronDown, FileText, Info } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useSearch } from 'wouter'
 import { ExplorerFilters } from '../components/ExplorerFilters'
+import { IndicatorFinder } from '../components/IndicatorFinder'
 import { LoadingState } from '../components/LoadingState'
+import { MunicipalTable } from '../components/MunicipalTable'
 import { StatusNotice } from '../components/StatusNotice'
+import { SeriesInsights } from '../components/SeriesInsights'
 import { TerritoryMap } from '../components/TerritoryMap'
 import { TimeSeriesChart } from '../components/TimeSeriesChart'
 import { usePortal } from '../context/usePortal'
-import { loadMap, loadSeries } from '../lib/data'
+import { loadMap, loadMunicipalSeries, loadSeries } from '../lib/data'
 import { deriveExplorerState, explorerStateSearch } from '../lib/explorerState'
 import { formatMetric, metricLabel, statusLabel } from '../lib/format'
+import { buildMunicipalComparisonSeries, rateRatio, restOfStateExcludingMunicipality } from '../lib/municipalComparison'
 import { buildFilteredSeriesCsv, saveCsvFile } from '../lib/publicDownload'
-import type { Observation, Theme } from '../types'
+import type { MapFeatureProperties, Observation, Theme } from '../types'
 
 const GEO_ORDER = ['volta_redonda', 'rest_of_rj_excluding_vr', 'brazil_total']
+
+function municipalProperties(topology: unknown): MapFeatureProperties[] {
+  const typed = topology as { objects?: { municipalities?: { geometries?: Array<{ properties?: MapFeatureProperties }> } } }
+  return (typed.objects?.municipalities?.geometries ?? [])
+    .map((geometry) => geometry.properties)
+    .filter((properties): properties is MapFeatureProperties => Boolean(properties))
+}
 
 export function ExplorerPage() {
   const { catalog, release, topology } = usePortal()
@@ -24,11 +35,20 @@ export function ExplorerPage() {
     () => deriveExplorerState(search, catalog.indicators),
     [search, catalog.indicators],
   )
-  const { indicator, theme, metric, territory, startYear, endYear } = explorerState
+  const { indicator, theme, metric, territory, municipalityCode, startYear, endYear } = explorerState
   const [observations, setObservations] = useState<Observation[] | null>(null)
   const [mapPayload, setMapPayload] = useState<{ values: import('../types').MapValue[]; status: string } | null>(null)
+  const [municipalObservations, setMunicipalObservations] = useState<Observation[] | null>(null)
   const [activeTab, setActiveTab] = useState<'map' | 'series'>('map')
   const activeGeographies = territory === 'all' ? GEO_ORDER : GEO_ORDER.filter((id) => id === territory)
+  const municipalities = useMemo(() => municipalProperties(topology), [topology])
+  const selectedMunicipalityCode = useMemo(
+    () => municipalities.some((item) => item.code === municipalityCode) ? municipalityCode : '3306305',
+    [municipalities, municipalityCode],
+  )
+  const selectedMunicipality = municipalities.find((item) => item.code === selectedMunicipalityCode) ?? null
+  const selectedMunicipalValue = mapPayload?.values.find((item) => item.geographyId === selectedMunicipalityCode) ?? null
+  const municipalPeriod = selectedMunicipalValue?.period ?? mapPayload?.values[0]?.period ?? null
 
   useEffect(() => {
     const canonicalSearch = explorerStateSearch(explorerState)
@@ -39,10 +59,12 @@ export function ExplorerPage() {
     let active = true
     setObservations(null)
     setMapPayload(null)
-    Promise.all([loadSeries(indicator.id), loadMap(indicator.id)]).then(([seriesPayload, nextMap]) => {
+    setMunicipalObservations(null)
+    Promise.all([loadSeries(indicator.id), loadMap(indicator.id), loadMunicipalSeries(indicator.id)]).then(([seriesPayload, nextMap, municipalSeries]) => {
       if (active) {
         setObservations(seriesPayload.observations)
         setMapPayload({ values: nextMap.values, status: nextMap.status })
+        setMunicipalObservations(municipalSeries.observations)
       }
     })
     return () => { active = false }
@@ -53,6 +75,7 @@ export function ExplorerPage() {
     Object.entries(changes).forEach(([key, value]) => next.set(key, String(value)))
     navigate(`/explorador?${next.toString()}`, { replace: true })
   }
+  const selectMunicipality = (code: string) => update({ municipio: code })
   const onTheme = (value: Theme) => {
     const nextIndicator = catalog.indicators.find((item) => item.theme === value)!
     navigate(`/explorador?${new URLSearchParams({
@@ -62,6 +85,7 @@ export function ExplorerPage() {
       territorio: 'all',
       inicio: String(nextIndicator.yearStart),
       fim: String(nextIndicator.yearEnd),
+      ...(municipalityCode ? { municipio: municipalityCode } : {}),
     }).toString()}`)
   }
   const onIndicator = (value: string) => {
@@ -77,7 +101,94 @@ export function ExplorerPage() {
       return { geographyId, latest }
     })
   }, [observations, startYear, endYear, metric])
+  const quickReading = useMemo(() => {
+    if (selectedMunicipality && selectedMunicipalValue && municipalPeriod) {
+      const stateTotal = observations?.find((item) => item.geographyId === 'rj_total' && item.period === municipalPeriod) ?? null
+      const restOfState = restOfStateExcludingMunicipality(selectedMunicipalValue, stateTotal)
+      const brazil = observations?.find((item) => item.geographyId === 'brazil_total' && item.period === municipalPeriod) ?? null
+      const selectedValue = metric === 'count' ? selectedMunicipalValue.count : selectedMunicipalValue.value
+      const difference = rateRatio(selectedMunicipalValue.value, restOfState?.value)
+      return {
+        year: municipalPeriod,
+        headline: selectedMunicipalValue.suppressed ? `${selectedMunicipality.name}: dado não publicado` : `${formatMetric(selectedValue, metric)} em ${selectedMunicipality.name}`,
+        comparison: selectedMunicipalValue.suppressed
+          ? 'Célula pequena protegida pela regra de supressão'
+          : metric === 'count'
+            ? 'Contagem de eventos; use a taxa para comparar territórios'
+            : difference === null
+              ? 'Comparação estadual indisponível'
+              : `${Math.abs((difference - 1) * 100).toLocaleString('pt-BR', { maximumFractionDigits: 0 })}% ${difference >= 1 ? 'acima' : 'abaixo'} do restante do RJ`,
+        detail: selectedMunicipalValue.suppressed
+          ? 'O número não é zero. A contagem foi ocultada para proteger células pequenas.'
+          : `RJ sem ${selectedMunicipality.name}: ${formatMetric(metric === 'count' ? restOfState?.count ?? null : restOfState?.value ?? null, metric)} · Brasil: ${formatMetric(metric === 'count' ? brazil?.count ?? null : brazil?.value ?? null, metric)}`,
+      }
+    }
+    const visible = comparison.filter(({ geographyId, latest }) => activeGeographies.includes(geographyId) && latest)
+    if (!visible.length) return null
+    if (territory !== 'all') {
+      const selected = visible[0]
+      const value = metric === 'count' ? selected.latest!.count : selected.latest!.value
+      return {
+        year: selected.latest!.period,
+        headline: `${formatMetric(value, metric)} em ${catalog.geographies[selected.geographyId]}`,
+        comparison: metric === 'count' ? 'Contagem de eventos registrados' : 'Taxa por 100 mil habitantes',
+        detail: metric === 'count'
+          ? 'Use a taxa por 100 mil para comparar territórios com populações diferentes.'
+          : 'Taxa bruta: diferenças de idade entre populações ainda podem influenciar o resultado.',
+      }
+    }
+    const vr = comparison.find(({ geographyId }) => geographyId === 'volta_redonda')?.latest
+    const rest = comparison.find(({ geographyId }) => geographyId === 'rest_of_rj_excluding_vr')?.latest
+    const brazil = comparison.find(({ geographyId }) => geographyId === 'brazil_total')?.latest
+    if (!vr) return null
+    if (metric === 'count') {
+      return {
+        year: vr.period,
+        headline: `${formatMetric(vr.count, metric)} eventos em Volta Redonda`,
+        comparison: 'Contagens não são comparáveis diretamente entre territórios',
+        detail: 'O tamanho das populações é muito diferente. Troque para taxa por 100 mil antes de comparar.',
+      }
+    }
+    const samePeriodRest = rest?.period === vr.period ? rest : undefined
+    const samePeriodBrazil = brazil?.period === vr.period ? brazil : undefined
+    const difference = vr.value !== null && samePeriodRest?.value
+      ? ((vr.value / samePeriodRest.value) - 1) * 100
+      : null
+    const direction = difference === null ? null : difference >= 0 ? 'acima' : 'abaixo'
+    return {
+      year: vr.period,
+      headline: `${formatMetric(vr.value, metric)} em Volta Redonda`,
+      comparison: difference === null
+        ? 'Sem comparação territorial no mesmo ano'
+        : `${Math.abs(difference).toLocaleString('pt-BR', { maximumFractionDigits: 0 })}% ${direction} do restante do RJ`,
+      detail: [
+        samePeriodRest?.value !== null && samePeriodRest?.value !== undefined
+          ? `RJ sem Volta Redonda: ${formatMetric(samePeriodRest.value, metric)}`
+          : null,
+        samePeriodBrazil?.value !== null && samePeriodBrazil?.value !== undefined
+          ? `Brasil: ${formatMetric(samePeriodBrazil.value, metric)}`
+          : null,
+      ].filter(Boolean).join(' · ') || 'Comparadores ainda não disponíveis para este período.',
+    }
+  }, [activeGeographies, catalog.geographies, comparison, metric, municipalPeriod, observations, selectedMunicipality, selectedMunicipalValue, territory])
   const provisional = observations?.some((item) => Number(item.period) >= startYear && Number(item.period) <= endYear && item.dataStatus === 'provisional') ?? false
+  const stateTotalAtMunicipalPeriod = observations?.find((item) => item.geographyId === 'rj_total' && item.period === municipalPeriod) ?? null
+  const brazilAtMunicipalPeriod = observations?.find((item) => item.geographyId === 'brazil_total' && item.period === municipalPeriod) ?? null
+  const restOfState = restOfStateExcludingMunicipality(selectedMunicipalValue, stateTotalAtMunicipalPeriod)
+  const stateRatio = rateRatio(selectedMunicipalValue?.value, restOfState?.value)
+  const brazilRatio = rateRatio(selectedMunicipalValue?.value, brazilAtMunicipalPeriod?.value)
+  const municipalChartObservations = useMemo(
+    () => observations && municipalObservations
+      ? buildMunicipalComparisonSeries(selectedMunicipalityCode ?? '3306305', municipalObservations, observations)
+      : [],
+    [municipalObservations, observations, selectedMunicipalityCode],
+  )
+  const municipalChartGeographies = ['selected_municipality', 'rest_of_rj_excluding_selected', 'brazil_total']
+  const municipalChartLabels = {
+    ...catalog.geographies,
+    selected_municipality: selectedMunicipality?.name ?? 'Município selecionado',
+    rest_of_rj_excluding_selected: `RJ sem ${selectedMunicipality?.name ?? 'o município selecionado'}`,
+  }
   const downloadFiltered = () => {
     if (!observations) return
     const csv = buildFilteredSeriesCsv(observations, {
@@ -96,22 +207,56 @@ export function ExplorerPage() {
         <div><h1>Explorador de dados</h1><p>Compare territórios sem perder de vista fonte, unidade e grau de certeza.</p></div>
         <span className="beta-status">{release.status === 'public_release_ready' ? 'Release aprovada' : 'Beta técnica'} · {release.releaseId}</span>
       </div>
+      <IndicatorFinder indicators={catalog.indicators} onSelect={onIndicator} />
+      <section className="municipality-picker" aria-labelledby="municipality-picker-title">
+        <div>
+          <span>1 · Escolha o território</span>
+          <h2 id="municipality-picker-title">Qual cidade você quer conhecer?</h2>
+          <p>A seleção atualiza o mapa, a ficha e os comparadores; o link pode ser compartilhado.</p>
+        </div>
+        <label>
+          Município do Rio de Janeiro
+          <select value={selectedMunicipalityCode ?? '3306305'} onChange={(event) => selectMunicipality(event.target.value)}>
+            {[...municipalities].sort((left, right) => left.name.localeCompare(right.name, 'pt-BR')).map((municipality) => (
+              <option value={municipality.code} key={municipality.code}>{municipality.name}</option>
+            ))}
+          </select>
+        </label>
+      </section>
       <ExplorerFilters
         theme={theme}
         indicators={catalog.indicators}
         indicatorId={indicator.id}
-        territory={territory}
         metric={metric}
         startYear={startYear}
         endYear={endYear}
         onTheme={onTheme}
         onIndicator={onIndicator}
-        onTerritory={(value) => update({ territorio: value })}
         onMetric={(value) => update({ medida: value })}
         onStartYear={(value) => update({ inicio: value })}
         onEndYear={(value) => update({ fim: value })}
         onDownload={downloadFiltered}
       />
+      <section className="selection-summary" aria-label="Resumo da consulta atual">
+        <div><span>Indicador</span><strong>{indicator.measureLabel}: {indicator.label}</strong></div>
+        <div><span>Cidade escolhida</span><strong>{selectedMunicipality?.name ?? 'Volta Redonda'} · RJ sem a cidade · Brasil</strong></div>
+        <div><span>Período</span><strong>{startYear}–{endYear}</strong></div>
+        <Link href={`/indicadores/${indicator.id}`}>Entenda este indicador <ArrowRight /></Link>
+      </section>
+      {quickReading ? (
+        <section className={`quick-reading${metric === 'count' ? ' quick-reading--warning' : ''}`} aria-labelledby="quick-reading-title">
+          <div className="quick-reading__label">
+            <span>Leitura rápida</span>
+            <small>Último dado disponível · {quickReading.year}</small>
+          </div>
+          <div className="quick-reading__main">
+            <h2 id="quick-reading-title">{quickReading.headline}</h2>
+            <strong>{quickReading.comparison}</strong>
+          </div>
+          <p>{quickReading.detail}</p>
+          {metric === 'count' ? <button type="button" onClick={() => update({ medida: 'crude_rate_per_100k' })}>Comparar por taxa <ArrowRight /></button> : null}
+        </section>
+      ) : null}
       <div className="mobile-view-tabs" role="tablist" aria-label="Visualização principal">
         <button role="tab" aria-selected={activeTab === 'map'} className={activeTab === 'map' ? 'is-active' : ''} onClick={() => setActiveTab('map')}>Mapa</button>
         <button role="tab" aria-selected={activeTab === 'series'} className={activeTab === 'series' ? 'is-active' : ''} onClick={() => setActiveTab('series')}>Série temporal</button>
@@ -119,33 +264,57 @@ export function ExplorerPage() {
       {observations ? (
         <>
           <section className={`explorer-map-row${activeTab === 'series' ? ' is-mobile-hidden' : ''}`}>
-            <TerritoryMap topology={topology} values={mapPayload?.values} status={mapPayload?.status} />
+            <TerritoryMap topology={topology} values={mapPayload?.values} status={mapPayload?.status} selectedCode={selectedMunicipalityCode} onSelect={selectMunicipality} />
             <aside className="comparison-panel">
-              <h2>Comparação no período selecionado</h2>
-              <p>{startYear} a {endYear} · {metricLabel(metric)}</p>
+              <h2>Comparação municipal</h2>
+              <p>{municipalPeriod ?? 'Período disponível'} · {metricLabel(metric)}</p>
               <div className="comparison-list">
-                {comparison.filter(({ geographyId }) => activeGeographies.includes(geographyId)).map(({ geographyId, latest }) => (
-                  <div key={geographyId} className={!latest ? 'is-unavailable' : ''}>
-                    <span><i data-geography={geographyId} />{catalog.geographies[geographyId]}</span>
-                    {latest ? (
-                      <strong>{formatMetric(metric === 'count' ? latest.count : latest.value, metric)} <small>em {latest.period}</small></strong>
-                    ) : <strong>Em preparação</strong>}
-                  </div>
-                ))}
+                <div className={!selectedMunicipalValue || selectedMunicipalValue.suppressed ? 'is-unavailable' : ''}>
+                  <span><i data-geography="selected_municipality" />{selectedMunicipality?.name ?? 'Município selecionado'}</span>
+                  <strong>{selectedMunicipalValue?.suppressed ? 'Não publicado' : formatMetric(metric === 'count' ? selectedMunicipalValue?.count ?? null : selectedMunicipalValue?.value ?? null, metric)}</strong>
+                </div>
+                <div className={!restOfState ? 'is-unavailable' : ''}>
+                  <span><i data-geography="rest_of_rj_excluding_selected" />RJ sem {selectedMunicipality?.name ?? 'o município'}</span>
+                  <strong>{restOfState ? formatMetric(metric === 'count' ? restOfState.count : restOfState.value, metric) : 'Não disponível'}</strong>
+                </div>
+                <div className={!brazilAtMunicipalPeriod ? 'is-unavailable' : ''}>
+                  <span><i data-geography="brazil_total" />Brasil</span>
+                  <strong>{formatMetric(metric === 'count' ? brazilAtMunicipalPeriod?.count ?? null : brazilAtMunicipalPeriod?.value ?? null, metric)}</strong>
+                </div>
               </div>
               <div className="comparison-explain"><Info /><p>As taxas usam contagens e populações agregadas do território, não a média simples dos municípios.</p></div>
               <StatusNotice provisional={provisional} source={indicator.source} />
             </aside>
           </section>
+          {mapPayload && mapPayload.values.length > 0 && selectedMunicipality ? (
+            <>
+              <section className="municipal-detail" aria-labelledby="municipal-detail-title">
+                <div className="municipal-detail__heading">
+                  <p className="eyebrow">Ficha municipal · snapshot {municipalPeriod}</p>
+                  <h2 id="municipal-detail-title">{selectedMunicipality.name}</h2>
+                  <p>Município de residência · {indicator.measureLabel.toLowerCase()}. A camada municipal atualmente validada é um snapshot de 2022.</p>
+                </div>
+                <div className="municipal-metrics">
+                  <div><span>{indicator.measureLabel}</span><strong>{selectedMunicipalValue?.suppressed ? 'Não publicado' : formatMetric(selectedMunicipalValue?.count ?? null, 'count')}</strong><small>número bruto</small></div>
+                  <div><span>Taxa bruta</span><strong>{selectedMunicipalValue?.suppressed ? 'Não publicado' : formatMetric(selectedMunicipalValue?.value ?? null, 'crude_rate_per_100k')}</strong><small>por 100 mil habitantes</small></div>
+                  <div><span>Vs. RJ sem {selectedMunicipality.name}</span><strong>{stateRatio ? `${stateRatio.toFixed(2).replace('.', ',')}×` : '—'}</strong><small>{restOfState ? `${formatMetric(restOfState.value, 'crude_rate_per_100k')} no comparador` : 'indisponível com célula suprimida'}</small></div>
+                  <div><span>Vs. Brasil</span><strong>{brazilRatio ? `${brazilRatio.toFixed(2).replace('.', ',')}×` : '—'}</strong><small>{brazilAtMunicipalPeriod ? `${formatMetric(brazilAtMunicipalPeriod.value, 'crude_rate_per_100k')} no Brasil` : 'quando a fonte é equivalente'}</small></div>
+                </div>
+              </section>
+              <MunicipalTable municipalities={municipalities} values={mapPayload.values} measureLabel={indicator.measureLabel} selectedCode={selectedMunicipalityCode} onSelect={selectMunicipality} />
+            </>
+          ) : null}
           <section className={`explorer-series${activeTab === 'map' ? '' : ' is-mobile-primary'}`}>
+            {indicator.id === 'sih-pneumonia' && selectedMunicipality ? <SeriesInsights municipalityName={selectedMunicipality.name} observations={municipalChartObservations} /> : null}
+            <div className="series-scope-note"><Info /><p><strong>Cobertura municipal validada:</strong> {municipalChartObservations.length ? [...new Set(municipalChartObservations.map((item) => item.period))].join(', ') : 'em preparação'}. Anos ausentes permanecem como lacunas e não são interpolados.</p></div>
             <TimeSeriesChart
               indicator={indicator}
-              observations={observations}
+              observations={municipalChartObservations}
               metric={metric}
-              geographyLabels={catalog.geographies}
+              geographyLabels={municipalChartLabels}
               startYear={startYear}
               endYear={endYear}
-              geographies={activeGeographies}
+              geographies={municipalChartGeographies}
             />
           </section>
           <details className="indicator-definition">

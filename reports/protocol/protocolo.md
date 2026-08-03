@@ -1,4 +1,5 @@
-# Protocolo preliminar — Saúde ambiental e epidemiologia em Volta Redonda
+# Protocolo preliminar — Observatório estadual de saúde cardiorrespiratória,
+# respiratória e câncer
 
 **Versão:** 0.1.0  
 **Data:** 2026-08-02  
@@ -6,12 +7,15 @@
 
 ## 1. Pergunta e desenho
 
-O estudo avaliará se residentes de Volta Redonda apresentam excesso de
-internações respiratórias e cardiovasculares e mortalidade por câncer em comparação com o restante
-do Estado do Rio de Janeiro, excluindo Volta Redonda. Será um programa de
+O estudo avaliará a distribuição de internações respiratórias e
+cardiovasculares e mortalidade por câncer entre os residentes dos 92 municípios
+do Estado do Rio de Janeiro. Volta Redonda será o município de referência para
+as análises aprofundadas e será comparada com o restante do estado, excluindo
+Volta Redonda. Será um programa de
 análises observacionais com três componentes:
 
-1. séries populacionais de internações e óbitos por residência;
+1. séries populacionais de internações e óbitos por residência para cada
+   município, com agregados estaduais e nacionais equivalentes;
 2. séries temporais de SRAG, vírus respiratórios, poluição e meteorologia;
 3. avaliação de assistência oncológica e, se autorizada, estudo ocupacional.
 
@@ -20,12 +24,15 @@ causalidade à CSN ou a um poluente a partir de comparações ecológicas.
 
 ## 2. População e comparadores
 
-- População principal: moradores de Volta Redonda, município IBGE `3306305`.
+- População principal: moradores dos 92 municípios do RJ; Volta Redonda,
+  município IBGE `3306305`, é o município de referência.
 - Comparador primário: moradores dos demais municípios do RJ.
 - Comparadores secundários: Médio Paraíba sem Volta Redonda, municípios
   comparáveis selecionados antes da inspeção dos desfechos e evolução interna.
 - A unidade territorial de risco é residência. Internações em hospitais de
   outros municípios serão mantidas quando o residente for de Volta Redonda.
+- A visão municipal exibirá contagem, taxa bruta, intervalo de confiança,
+  população e posição descritiva no conjunto de municípios publicáveis.
 
 ## 3. Desfechos
 
@@ -95,6 +102,9 @@ serão tratadas como limitações e, quando possível, como rupturas.
 
 - Taxas brutas e específicas por 100 mil; IC de Poisson.
 - Razão de taxas, diferença absoluta e excesso atribuível descritivo.
+- Comparação de cada município com o restante do RJ e, quando equivalente, com
+  o Brasil; “média estadual” não será calculada como média simples das taxas
+  municipais.
 - Padronização direta com o mesmo padrão etário nos dois territórios.
 - Regressão segmentada e série temporal interrompida para tendências.
 - Séries diárias de poluição com defasagens 0–7 e 0–14 dias, controlando
@@ -128,6 +138,7 @@ acordo institucional e aprovação ética. O plano correspondente está em
 
 Catálogo, dicionários, relatório de qualidade, plano estatístico, tabelas CSV
 e XLSX, figuras acessíveis, relatório técnico, resumo executivo, versão pública,
-minutas de LAI, lista de faltantes, anexo de limitações e manifesto de
-resultados. Nesta versão preliminar, produtos com números observados ainda não
-foram liberados.
+mapa e tabela dos 92 municípios, fichas municipais, minutas de LAI, lista de
+faltantes, anexo de limitações e manifesto de resultados. A release atual
+libera apenas os snapshots municipais validados descritos no inventário de
+lacunas; séries municipais históricas continuam como próxima etapa.

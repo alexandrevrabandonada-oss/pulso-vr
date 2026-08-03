@@ -7,6 +7,8 @@ const COLORS: Record<string, string> = {
   rest_of_rj_excluding_vr: '#f2d400',
   brazil_total: '#e34b13',
   rj_total: '#6b6b60',
+  selected_municipality: '#0b0b0b',
+  rest_of_rj_excluding_selected: '#f2d400',
 }
 
 const ORDER = ['volta_redonda', 'rest_of_rj_excluding_vr', 'brazil_total']
@@ -128,7 +130,7 @@ export function TimeSeriesChart({
       <div className="time-chart__scroller">
         <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-labelledby="series-title series-desc">
           <title id="series-title">{indicator.label}: {metricLabel(metric)}</title>
-          <desc id="series-desc">Comparação temporal entre Volta Redonda, o restante do Rio de Janeiro e o Brasil quando disponível. Lacunas não são interpoladas.</desc>
+          <desc id="series-desc">Comparação temporal entre os territórios selecionados quando disponível. Lacunas não são interpoladas.</desc>
           {ticks.map((tick) => (
             <g key={tick}>
               <line x1={margins.left} x2={width - margins.right} y1={y(tick)} y2={y(tick)} className="chart-grid" />

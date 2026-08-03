@@ -1,6 +1,6 @@
 # Taxas respiratórias brutas
 
-Execução: 2026-08-03T14:29:16+00:00
+Execução: 2026-08-03T16:05:31+00:00
 
 A taxa é calculada como internações agregadas do SIH / população residente × 100.000. O intervalo é exato de Poisson para a contagem. A razão compara a taxa de VR com a do restante do RJ, que exclui o código IBGE 3306305.
 
@@ -48,6 +48,15 @@ A taxa é calculada como internações agregadas do SIH / população residente 
 | 2024 | volta_redonda | 2329 | 832.09 | 798.63–866.58 |
 | 2025 | rest_of_rj_excluding_vr | 70294 | 414.87 | 411.81–417.95 |
 | 2025 | volta_redonda | 2233 | 797.58 | 764.84–831.37 |
+
+## Desfecho específico: pneumonia
+
+A coluna apresenta `internações / taxa por 100 mil`. O SIH registra AIHs/internações do SUS; não representa diagnósticos novos nem pessoas únicas.
+
+| ano | Volta Redonda | RJ total | Brasil | razão VR/RJ | razão VR/Brasil |
+|---:|---:|---:|---:|---:|---:|
+| 2024 | 1303 / 465.5 | 42737 / 248.2 | 703463 / 330.9 | 1.88 | 1.41 |
+| 2025 | 1167 / 416.8 | 39988 / 232.2 | 704457 / 330.1 | 1.80 | 1.26 |
 
 As taxas por pneumonia, bronquite/bronquiolite aguda, DPOC, asma e pneumoconiose estão no Parquet processado. Células pequenas devem ser suprimidas ou agregadas antes de qualquer publicação; este relatório não publica tabelas anuais desses subgrupos raros.
 

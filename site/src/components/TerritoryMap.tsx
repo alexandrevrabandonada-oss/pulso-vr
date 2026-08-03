@@ -14,9 +14,11 @@ interface TerritoryMapProps {
   compact?: boolean
   values?: MapValue[]
   status?: string
+  selectedCode?: string | null
+  onSelect?: (code: string) => void
 }
 
-export function TerritoryMap({ topology, compact = false, values = [], status = '' }: TerritoryMapProps) {
+export function TerritoryMap({ topology, compact = false, values = [], status = '', selectedCode = null, onSelect }: TerritoryMapProps) {
   const [focused, setFocused] = useState<MapFeatureProperties | null>(null)
   const valuesByCode = useMemo(() => new Map(values.map((value) => [value.geographyId, value])), [values])
   const isSihMap = status.startsWith('validated_sih_')
@@ -48,40 +50,42 @@ export function TerritoryMap({ topology, compact = false, values = [], status = 
     }
   }, [topology, compact])
 
-  const selected = focused ?? features.find((item) => item.properties.isVoltaRedonda)?.properties ?? null
+  const selected = focused ?? features.find((item) => item.properties.code === selectedCode)?.properties ?? features.find((item) => item.properties.isVoltaRedonda)?.properties ?? null
   return (
     <div className={`territory-map${compact ? ' territory-map--compact' : ''}`}>
       <div className="territory-map__canvas">
         <svg viewBox={compact ? '0 0 500 285' : '0 0 900 460'} role="img" aria-labelledby="map-title map-desc">
           <title id="map-title">Mapa dos municípios do Estado do Rio de Janeiro</title>
-          <desc id="map-desc">Volta Redonda está destacada. {hasPublishedMap ? `Valores municipais ${isSihMap ? 'de internações SIH' : 'de mortalidade SIM'} estão disponíveis no período indicado; células pequenas são suprimidas.` : 'A malha é usada como contexto territorial e não representa taxas municipais ainda não validadas.'}</desc>
+          <desc id="map-desc">O município selecionado está destacado. {hasPublishedMap ? `Valores municipais ${isSihMap ? 'de internações SIH' : 'de mortalidade SIM'} estão disponíveis no período indicado; células pequenas são suprimidas.` : 'A malha é usada como contexto territorial e não representa taxas municipais ainda não validadas.'}</desc>
           <rect width="100%" height="100%" className="map-ocean" />
           <g>
             {features.map((item, index) => {
               const isVr = item.properties.isVoltaRedonda
               const mapValue = valuesByCode.get(item.properties.code)
               const hasPublishedValue = mapValue?.value !== null && mapValue?.value !== undefined
-              const isAccessible = isVr || hasPublishedValue
+              const isSelected = selectedCode === item.properties.code
+              const isAccessible = Boolean(onSelect)
               return (
                 <path
                   key={item.properties.code}
                   d={paths[index]}
-                  className={`${isVr ? 'map-municipality map-municipality--vr' : 'map-municipality'}${hasPublishedValue ? ' map-municipality--has-data' : ''}`}
+                  className={`${isVr ? 'map-municipality map-municipality--vr' : 'map-municipality'}${hasPublishedValue ? ' map-municipality--has-data' : ''}${isSelected ? ' map-municipality--selected' : ''}`}
                   style={hasPublishedValue ? { fill: mapColor(mapValue?.value) } : undefined}
                   tabIndex={isAccessible ? 0 : -1}
                   aria-hidden={isAccessible ? undefined : true}
-                  aria-label={`${item.properties.name}${isVr ? ', Volta Redonda destacada' : ''}${hasPublishedValue ? `, taxa ${mapValue.value?.toFixed(1)} por 100 mil em ${mapValue.period}` : ''}`}
+                  aria-label={`${item.properties.name}${isSelected ? ', município selecionado' : ''}${hasPublishedValue ? `, taxa ${mapValue.value?.toFixed(1)} por 100 mil em ${mapValue.period}` : ''}`}
                   onMouseEnter={() => setFocused(item.properties)}
                   onMouseLeave={() => setFocused(null)}
                   onFocus={() => setFocused(item.properties)}
                   onBlur={() => setFocused(null)}
+                  onClick={() => onSelect?.(item.properties.code)}
                 />
               )
             })}
           </g>
         </svg>
         <div className="map-legend" aria-hidden="true">
-          <span><i className="map-legend__vr" />Volta Redonda</span>
+          <span><i className="map-legend__selected" />Município selecionado</span>
           {hasPublishedMap ? <><span><i className="map-legend__scale map-legend__scale--low" />Menor taxa publicada</span><span><i className="map-legend__scale map-legend__scale--high" />Maior taxa publicada</span></> : <span><i />Demais municípios do RJ</span>}
         </div>
         {selected ? (

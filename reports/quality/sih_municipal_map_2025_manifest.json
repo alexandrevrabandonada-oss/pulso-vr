@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-08-03T15:54:36+00:00",
+  "status": "reconciled_with_annual_series",
+  "year": 2025,
+  "municipalities": 92,
+  "outcome_ids": [
+    "pneumonia"
+  ],
+  "rows": 92,
+  "suppressed_cells_lt_5": 0,
+  "reconciliation": {},
+  "output_path": "data\\processed\\sih_municipal_map_rates_2025.parquet",
+  "output_sha256": "63352dd3ee9cc52eb0eb92c33339a8e40cc05a361deb93470bd41eeeefb6e1d5",
+  "rules": {
+    "residence": "SIH TabNet NR/RJ por município de residência",
+    "rate": "AIHs / população residente × 100.000",
+    "interval": "IC 95% exato de Poisson",
+    "suppression": "count < 5 withheld before frontend"
+  },
+  "notes": [
+    "Annual municipal snapshot aggregated from 12 monthly NR/RJ archives.",
+    "An AIH is an event, not a unique person.",
+    "No causal inference is produced."
+  ]
+}

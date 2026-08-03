@@ -1,8 +1,10 @@
 # vr_saude_ambiental
 
-Estudo reproduzível sobre internações respiratórias e cardiovasculares,
-pandemia, poluição, mortalidade por câncer, assistência oncológica e exposição
-ocupacional em Volta Redonda, Rio de Janeiro.
+Estudo reproduzível e observatório estadual sobre internações respiratórias e
+cardiovasculares, pandemia, poluição, mortalidade por câncer, assistência
+oncológica e exposição ocupacional no Rio de Janeiro. Volta Redonda permanece
+como município de referência; o portal apresenta também os 92 municípios do
+estado quando houver dados municipais validados.
 
 ## Status da primeira execução
 
@@ -17,10 +19,12 @@ SIVEP, mas nenhuma hipótese causal é considerada confirmada.
 
 ## Comparação e períodos
 
-A comparação primária é Volta Redonda versus o restante do Estado do Rio,
-excluindo Volta Redonda. Comparações secundárias incluem o Médio Paraíba sem
-Volta Redonda, municípios comparáveis definidos a priori e a evolução interna
-do município. O código IBGE de Volta Redonda usado no SIDRA é `3306305`.
+A comparação primária é o município selecionado versus o restante do Estado do
+Rio, excluindo Volta Redonda quando essa é a referência; para a visão estadual,
+cada município é comparado ao agregado estadual equivalente. Comparações
+secundárias incluem o Médio Paraíba sem Volta Redonda, municípios comparáveis
+definidos a priori e o Brasil quando numerador e denominador forem equivalentes.
+O código IBGE de Volta Redonda usado no SIDRA é `3306305`.
 
 Os períodos completos estão em `config/periods.yml`. Março de 2020 é a ruptura
 da análise respiratória; 2020–2022 é período de interrupção assistencial para

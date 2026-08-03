@@ -39,4 +39,11 @@ describe('deriveExplorerState', () => {
     const query = explorerStateSearch(deriveExplorerState('tema=cancer', indicators))
     expect(query).toBe('tema=cancer&indicador=sim-lung&territorio=all&medida=crude_rate_per_100k&inicio=2011&fim=2024')
   })
+
+  it('persists a valid municipality code without accepting arbitrary territory text', () => {
+    const state = deriveExplorerState('indicador=sim-lung&municipio=3306305', indicators)
+    expect(state.municipalityCode).toBe('3306305')
+    expect(explorerStateSearch(state)).toContain('&municipio=3306305')
+    expect(deriveExplorerState('municipio=volta-redonda', indicators).municipalityCode).toBeNull()
+  })
 })

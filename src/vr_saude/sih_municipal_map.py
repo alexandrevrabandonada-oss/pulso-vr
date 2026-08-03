@@ -116,16 +116,25 @@ def _query(root: Path, definition: str, year: int, outcome_id: str, timeout: int
     return outcome_id, rows, path
 
 
-def build_sih_municipal_map(root: Path, year: int = YEAR, workers: int = 4) -> tuple[Path, Path, Path]:
+def build_sih_municipal_map(
+    root: Path,
+    year: int = YEAR,
+    workers: int = 4,
+    outcome_ids: list[str] | None = None,
+) -> tuple[Path, Path, Path]:
     if year < 2008 or year > 2025:
         raise ValueError("SIH municipal map year must be between 2008 and 2025")
     if workers < 1 or workers > 8:
         raise ValueError("workers must be between 1 and 8")
+    selected_outcomes = list(QUERIES) if not outcome_ids else list(dict.fromkeys(outcome_ids))
+    unknown = sorted(set(selected_outcomes) - set(QUERIES))
+    if unknown:
+        raise ValueError(f"unknown SIH municipal outcomes: {', '.join(unknown)}")
     definition = urllib.request.urlopen(urllib.request.Request(SIH_RESIDENCE_DEF_URL, headers={"User-Agent": USER_AGENT}), timeout=60).read().decode("latin1")
     population = _population(root, year)
     futures = {}
     with ThreadPoolExecutor(max_workers=workers) as executor:
-        for outcome_id in QUERIES:
+        for outcome_id in selected_outcomes:
             futures[executor.submit(_query, root, definition, year, outcome_id)] = outcome_id
         results = {}
         for future in as_completed(futures):
@@ -142,7 +151,7 @@ def build_sih_municipal_map(root: Path, year: int = YEAR, workers: int = 4) -> t
             if outcome_id not in results:
                 raise last_error or RuntimeError(f"SIH map query failed: {outcome_id}")
     rows: list[dict[str, object]] = []
-    for outcome_id in QUERIES:
+    for outcome_id in selected_outcomes:
         _, counts, path = results[outcome_id]
         for municipality in population.itertuples(index=False):
             count = int(counts[municipality.municipality_code_datasus])
@@ -184,7 +193,7 @@ def build_sih_municipal_map(root: Path, year: int = YEAR, workers: int = 4) -> t
     manifest = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "status": reconciliation_status,
-        "year": year, "municipalities": 92, "outcome_ids": list(QUERIES), "rows": len(frame),
+        "year": year, "municipalities": 92, "outcome_ids": selected_outcomes, "rows": len(frame),
         "suppressed_cells_lt_5": int((frame["count"] < 5).sum()),
         "reconciliation": reconciliation,
         "output_path": str(output.relative_to(root)), "output_sha256": sha256_file(output),
@@ -197,7 +206,7 @@ def build_sih_municipal_map(root: Path, year: int = YEAR, workers: int = 4) -> t
     report_path = root / "reports" / "technical" / f"mapa_municipal_sih_{year}.md"
     report_path.write_text(
         f"# Camada municipal SIH {year}\n\n"
-        f"A camada agrega 12 competências NR/RJ por município de residência para {len(QUERIES)} desfechos. "
+        f"A camada agrega 12 competências NR/RJ por município de residência para {len(selected_outcomes)} desfechos. "
         "AIHs são eventos de internação, não pessoas únicas. Células menores que cinco são suprimidas antes da publicação.\n"
         f"Reconciliação com a série agregada anual: **{reconciliation_status}**.\n"
         + (f"Divergências: `{json.dumps(reconciliation, ensure_ascii=False)}`\n" if reconciliation else ""),
