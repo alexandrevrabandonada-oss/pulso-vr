@@ -5,7 +5,7 @@ import { TerritoryMap } from '../components/TerritoryMap'
 import { TimeSeriesChart } from '../components/TimeSeriesChart'
 import { loadSeries } from '../lib/data'
 import type { Observation } from '../types'
-import { usePortal } from '../context/PortalContext'
+import { usePortal } from '../context/usePortal'
 
 export function HomePage() {
   const { catalog, topology } = usePortal()
@@ -19,7 +19,7 @@ export function HomePage() {
       <section className="home-hero">
         <div className="home-hero__copy">
           <h1>Saúde em Volta Redonda, vista no território e no tempo</h1>
-          <p>Explore dados de doenças respiratórias e câncer, compare Volta Redonda com o restante do Rio de Janeiro e acompanhe o comparador nacional conforme cada série é validada.</p>
+          <p>Explore dados de doenças respiratórias, cardiovasculares e cardiorrespiratórias, compare Volta Redonda com o restante do Rio de Janeiro e acompanhe o comparador nacional conforme cada série é validada.</p>
           <Link href="/explorador" className="primary-button">Explorar os dados <ArrowRight /></Link>
           <p className="hero-method-note">Informação pública, por residência e com limitações visíveis.</p>
         </div>

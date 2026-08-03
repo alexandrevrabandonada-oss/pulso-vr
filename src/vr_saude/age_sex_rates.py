@@ -98,7 +98,7 @@ def _build_rates(root: Path) -> tuple[pd.DataFrame, Path, Path]:
     comparison = rates.pivot_table(
         index=["year", "outcome_id", "age_group", "sex"],
         columns="geography",
-        values=["count", "rate_per_100k"],
+        values=["count", "rate_per_100k", "population"],
         aggfunc="first",
     )
     comparison.columns = ["_".join(column).strip() for column in comparison.columns.to_flat_index()]
@@ -118,8 +118,13 @@ def _build_rates(root: Path) -> tuple[pd.DataFrame, Path, Path]:
         - rates["rate_per_100k_rest_of_rj_excluding_vr"]
     )
     intervals = [
-        _rate_ratio_interval(int(vr), int(rest))
-        for vr, rest in zip(rates["count_volta_redonda"], rates["count_rest_of_rj_excluding_vr"])
+        _rate_ratio_interval(int(vr), int(rest), pop_vr, pop_rest)
+        for vr, rest, pop_vr, pop_rest in zip(
+            rates["count_volta_redonda"],
+            rates["count_rest_of_rj_excluding_vr"],
+            rates["population_volta_redonda"],
+            rates["population_rest_of_rj_excluding_vr"],
+        )
     ]
     rates["rate_ratio_ci_lower"] = [interval[0] for interval in intervals]
     rates["rate_ratio_ci_upper"] = [interval[1] for interval in intervals]

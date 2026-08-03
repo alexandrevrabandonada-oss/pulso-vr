@@ -1,6 +1,6 @@
 # Perfil etário e sexual dos óbitos no SIM
 
-Execução: 2026-08-03T00:02:02+00:00
+Execução: 2026-08-03T02:19:22+00:00
 
 Este produto descreve a distribuição dos óbitos de residentes por grupo etário amplo e sexo. A coluna de proporção é a participação dentro do desfecho, ano e território; não é uma taxa populacional.
 
@@ -42,6 +42,20 @@ Este produto descreve a distribuição dos óbitos de residentes por grupo etár
 | 2020 | volta_redonda | all_malignant_neoplasms | 75+ | masculino | 67 | 15.30 |
 | 2020 | volta_redonda | all_malignant_neoplasms | 75+ | feminino | 56 | 12.79 |
 | 2020 | volta_redonda | all_malignant_neoplasms | ignorado | feminino | <5 | <5 |
+| 2020 | rest_of_rj_excluding_vr | bladder | 25-44 | masculino | <5 | <5 |
+| 2020 | rest_of_rj_excluding_vr | bladder | 25-44 | feminino | 5 | 0.98 |
+| 2020 | rest_of_rj_excluding_vr | bladder | 45-64 | masculino | 52 | 10.16 |
+| 2020 | rest_of_rj_excluding_vr | bladder | 45-64 | feminino | 41 | 8.01 |
+| 2020 | rest_of_rj_excluding_vr | bladder | 65-74 | masculino | 86 | 16.80 |
+| 2020 | rest_of_rj_excluding_vr | bladder | 65-74 | feminino | 51 | 9.96 |
+| 2020 | rest_of_rj_excluding_vr | bladder | 75+ | masculino | 187 | 36.52 |
+| 2020 | rest_of_rj_excluding_vr | bladder | 75+ | feminino | 88 | 17.19 |
+| 2020 | volta_redonda | bladder | 45-64 | masculino | <5 | <5 |
+| 2020 | volta_redonda | bladder | 45-64 | feminino | <5 | <5 |
+| 2020 | volta_redonda | bladder | 65-74 | masculino | <5 | <5 |
+| 2020 | volta_redonda | bladder | 65-74 | feminino | <5 | <5 |
+| 2020 | volta_redonda | bladder | 75+ | masculino | <5 | <5 |
+| 2020 | volta_redonda | bladder | 75+ | feminino | <5 | <5 |
 | 2020 | rest_of_rj_excluding_vr | colorectal | 15-24 | masculino | <5 | <5 |
 | 2020 | rest_of_rj_excluding_vr | colorectal | 15-24 | feminino | <5 | <5 |
 | 2020 | rest_of_rj_excluding_vr | colorectal | 25-44 | masculino | 51 | 2.19 |
@@ -102,6 +116,19 @@ Este produto descreve a distribuição dos óbitos de residentes por grupo etár
 | 2020 | volta_redonda | lung | 65-74 | feminino | 8 | 15.38 |
 | 2020 | volta_redonda | lung | 75+ | masculino | 10 | 19.23 |
 | 2020 | volta_redonda | lung | 75+ | feminino | 5 | 9.62 |
+| 2020 | rest_of_rj_excluding_vr | multiple_myeloma | 25-44 | masculino | 6 | 1.83 |
+| 2020 | rest_of_rj_excluding_vr | multiple_myeloma | 25-44 | feminino | <5 | <5 |
+| 2020 | rest_of_rj_excluding_vr | multiple_myeloma | 45-64 | masculino | 67 | 20.49 |
+| 2020 | rest_of_rj_excluding_vr | multiple_myeloma | 45-64 | feminino | 41 | 12.54 |
+| 2020 | rest_of_rj_excluding_vr | multiple_myeloma | 65-74 | masculino | 66 | 20.18 |
+| 2020 | rest_of_rj_excluding_vr | multiple_myeloma | 65-74 | feminino | 39 | 11.93 |
+| 2020 | rest_of_rj_excluding_vr | multiple_myeloma | 75+ | masculino | 44 | 13.46 |
+| 2020 | rest_of_rj_excluding_vr | multiple_myeloma | 75+ | feminino | 63 | 19.27 |
+| 2020 | volta_redonda | multiple_myeloma | 45-64 | masculino | <5 | <5 |
+| 2020 | volta_redonda | multiple_myeloma | 45-64 | feminino | <5 | <5 |
+| 2020 | volta_redonda | multiple_myeloma | 65-74 | masculino | <5 | <5 |
+| 2020 | volta_redonda | multiple_myeloma | 65-74 | feminino | <5 | <5 |
+| 2020 | volta_redonda | multiple_myeloma | 75+ | feminino | <5 | <5 |
 | 2020 | rest_of_rj_excluding_vr | non_hodgkin_lymphoma | 1-4 | masculino | <5 | <5 |
 | 2020 | rest_of_rj_excluding_vr | non_hodgkin_lymphoma | 5-14 | masculino | <5 | <5 |
 | 2020 | rest_of_rj_excluding_vr | non_hodgkin_lymphoma | 5-14 | feminino | <5 | <5 |
@@ -184,6 +211,20 @@ Este produto descreve a distribuição dos óbitos de residentes por grupo etár
 | 2024 | volta_redonda | all_malignant_neoplasms | 65-74 | feminino | 78 | 15.82 |
 | 2024 | volta_redonda | all_malignant_neoplasms | 75+ | masculino | 77 | 15.62 |
 | 2024 | volta_redonda | all_malignant_neoplasms | 75+ | feminino | 89 | 18.05 |
+| 2024 | rest_of_rj_excluding_vr | bladder | 25-44 | masculino | <5 | <5 |
+| 2024 | rest_of_rj_excluding_vr | bladder | 25-44 | feminino | <5 | <5 |
+| 2024 | rest_of_rj_excluding_vr | bladder | 45-64 | masculino | 53 | 8.94 |
+| 2024 | rest_of_rj_excluding_vr | bladder | 45-64 | feminino | 42 | 7.08 |
+| 2024 | rest_of_rj_excluding_vr | bladder | 65-74 | masculino | 108 | 18.21 |
+| 2024 | rest_of_rj_excluding_vr | bladder | 65-74 | feminino | 64 | 10.79 |
+| 2024 | rest_of_rj_excluding_vr | bladder | 75+ | masculino | 200 | 33.73 |
+| 2024 | rest_of_rj_excluding_vr | bladder | 75+ | feminino | 121 | 20.40 |
+| 2024 | rest_of_rj_excluding_vr | bladder | ignorado | feminino | <5 | <5 |
+| 2024 | volta_redonda | bladder | 45-64 | feminino | <5 | <5 |
+| 2024 | volta_redonda | bladder | 65-74 | masculino | <5 | <5 |
+| 2024 | volta_redonda | bladder | 65-74 | feminino | <5 | <5 |
+| 2024 | volta_redonda | bladder | 75+ | masculino | <5 | <5 |
+| 2024 | volta_redonda | bladder | 75+ | feminino | <5 | <5 |
 | 2024 | rest_of_rj_excluding_vr | colorectal | 15-24 | masculino | 6 | 0.21 |
 | 2024 | rest_of_rj_excluding_vr | colorectal | 15-24 | feminino | <5 | <5 |
 | 2024 | rest_of_rj_excluding_vr | colorectal | 25-44 | masculino | 65 | 2.24 |
@@ -249,6 +290,17 @@ Este produto descreve a distribuição dos óbitos de residentes por grupo etár
 | 2024 | volta_redonda | lung | 65-74 | feminino | 9 | 15.00 |
 | 2024 | volta_redonda | lung | 75+ | masculino | 14 | 23.33 |
 | 2024 | volta_redonda | lung | 75+ | feminino | 7 | 11.67 |
+| 2024 | rest_of_rj_excluding_vr | multiple_myeloma | 25-44 | masculino | <5 | <5 |
+| 2024 | rest_of_rj_excluding_vr | multiple_myeloma | 25-44 | feminino | <5 | <5 |
+| 2024 | rest_of_rj_excluding_vr | multiple_myeloma | 45-64 | masculino | 58 | 15.63 |
+| 2024 | rest_of_rj_excluding_vr | multiple_myeloma | 45-64 | feminino | 64 | 17.25 |
+| 2024 | rest_of_rj_excluding_vr | multiple_myeloma | 65-74 | masculino | 58 | 15.63 |
+| 2024 | rest_of_rj_excluding_vr | multiple_myeloma | 65-74 | feminino | 59 | 15.90 |
+| 2024 | rest_of_rj_excluding_vr | multiple_myeloma | 75+ | masculino | 64 | 17.25 |
+| 2024 | rest_of_rj_excluding_vr | multiple_myeloma | 75+ | feminino | 65 | 17.52 |
+| 2024 | volta_redonda | multiple_myeloma | 45-64 | feminino | <5 | <5 |
+| 2024 | volta_redonda | multiple_myeloma | 65-74 | feminino | <5 | <5 |
+| 2024 | volta_redonda | multiple_myeloma | 75+ | feminino | <5 | <5 |
 | 2024 | rest_of_rj_excluding_vr | non_hodgkin_lymphoma | 5-14 | masculino | <5 | <5 |
 | 2024 | rest_of_rj_excluding_vr | non_hodgkin_lymphoma | 15-24 | masculino | <5 | <5 |
 | 2024 | rest_of_rj_excluding_vr | non_hodgkin_lymphoma | 25-44 | masculino | 22 | 5.67 |

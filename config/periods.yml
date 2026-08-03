@@ -25,6 +25,42 @@ respiratory:
     end: "2026-12"
     status: provisional
 
+cardiovascular:
+  - id: cardio_2008_2019
+    start: "2008-01"
+    end: "2019-12"
+    status: definitive_or_source_specific
+  - id: cardio_2020_2021
+    start: "2020-01"
+    end: "2021-12"
+    status: pandemic_context
+  - id: cardio_2022_2024
+    start: "2022-01"
+    end: "2024-12"
+    status: definitive_or_source_specific
+  - id: cardio_2025_2026
+    start: "2025-01"
+    end: "2026-12"
+    status: provisional
+
+cardiorespiratory:
+  - id: cardioresp_2008_2019
+    start: "2008-01"
+    end: "2019-12"
+    status: definitive_or_source_specific
+  - id: cardioresp_2020_2021
+    start: "2020-01"
+    end: "2021-12"
+    status: pandemic_context
+  - id: cardioresp_2022_2024
+    start: "2022-01"
+    end: "2024-12"
+    status: definitive_or_source_specific
+  - id: cardioresp_2025_2026
+    start: "2025-01"
+    end: "2026-12"
+    status: provisional
+
 cancer:
   - id: cancer_2010_2014
     start: "2010-01"

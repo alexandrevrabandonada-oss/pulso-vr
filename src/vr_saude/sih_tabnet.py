@@ -54,10 +54,10 @@ def _definition_municipality_value(definition: str, code: str) -> str:
     return match.group(1)
 
 
-def _archive_value(definition: str, year: int, month: int) -> str:
+def _archive_value(definition: str, year: int, month: int, prefix: str = "nrrj") -> str:
     if not 1 <= month <= 12:
         raise ValueError("month must be between 1 and 12")
-    archive = f"nrrj{year % 100:02d}{month:02d}.dbf"
+    archive = f"{prefix}{year % 100:02d}{month:02d}.dbf"
     if not re.search(rf'<OPTION\s+VALUE="{re.escape(archive)}"', definition, re.IGNORECASE):
         raise LookupError(f"SIH TabNet definition does not list archive {archive}")
     return archive

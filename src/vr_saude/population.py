@@ -12,6 +12,7 @@ from .provenance import sha256_file
 
 
 ESTIMATE_URL_TEMPLATE = "https://apisidra.ibge.gov.br/values/t/6579/n6/all/p/{year}/v/9324"
+CENSUS_2010_URL = "https://apisidra.ibge.gov.br/values/t/202/n6/all/p/2010/v/93"
 CENSUS_URL = "https://apisidra.ibge.gov.br/values/t/9514/n6/all/p/2022/v/93"
 RJ_MUNICIPALITY_COUNT = 92
 
@@ -25,12 +26,16 @@ def requested_years(start_year: int, end_year: int) -> list[int]:
 
 
 def raw_filename(year: int) -> str:
+    if year == 2010:
+        return "ibge_sidra_202_population_2010.json"
     if year == 2022:
         return "ibge_sidra_9514_population_2022.json"
     return f"ibge_sidra_6579_population_{year}.json"
 
 
 def raw_url(year: int) -> str:
+    if year == 2010:
+        return CENSUS_2010_URL
     return CENSUS_URL if year == 2022 else ESTIMATE_URL_TEMPLATE.format(year=year)
 
 
@@ -44,7 +49,13 @@ def acquire_population(
         paths.append(
             download_public_file(
                 root,
-                source_id=("ibge_sidra_9514_population_2022" if year == 2022 else f"ibge_sidra_6579_population_{year}"),
+                source_id=(
+                    "ibge_sidra_202_population_2010"
+                    if year == 2010
+                    else "ibge_sidra_9514_population_2022"
+                    if year == 2022
+                    else f"ibge_sidra_6579_population_{year}"
+                ),
                 url=raw_url(year),
                 filename=raw_filename(year),
                 period=str(year),
@@ -76,6 +87,8 @@ def _read_sidra_payload(path: Path) -> pd.DataFrame:
 
 
 def _population_source(path: Path) -> tuple[str, str]:
+    if "202_population_2010" in path.name:
+        return "202", "census_2010"
     if "9514" in path.name:
         return "9514", "census_2022"
     return "6579", "annual_estimate"

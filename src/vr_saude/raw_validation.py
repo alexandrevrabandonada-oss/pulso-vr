@@ -68,16 +68,26 @@ def validate_raw_file(path: Path) -> dict[str, Any]:
             with path.open("rb") as handle:
                 header_line = handle.readline().decode("latin1").strip()
             fields = {field.strip().strip('"') for field in next(csv.reader([header_line], delimiter=";"))}
-            missing = sorted(SIM_REQUIRED_FIELDS - fields)
-            result["format_ok"] = not missing
-            result["format_details"] = {
-                "delimiter": ";",
-                "columns": len(fields),
-                "required_fields_present": sorted(SIM_REQUIRED_FIELDS & fields),
-                "missing_required_fields": missing,
-            }
-            if missing:
-                result["errors"].append("missing_required_fields:" + ",".join(missing))
+            panel_csv = len(fields) == 2 and "Casos" in fields
+            if panel_csv:
+                result["format_ok"] = True
+                result["format_details"] = {
+                    "delimiter": ";",
+                    "columns": len(fields),
+                    "source_layout": "Painel-Oncologia TabNet two-column result",
+                    "fields": sorted(fields),
+                }
+            else:
+                missing = sorted(SIM_REQUIRED_FIELDS - fields)
+                result["format_ok"] = not missing
+                result["format_details"] = {
+                    "delimiter": ";",
+                    "columns": len(fields),
+                    "required_fields_present": sorted(SIM_REQUIRED_FIELDS & fields),
+                    "missing_required_fields": missing,
+                }
+                if missing:
+                    result["errors"].append("missing_required_fields:" + ",".join(missing))
         elif suffix == ".pdf":
             header = path.read_bytes()[:5]
             result["format_ok"] = header == b"%PDF-"

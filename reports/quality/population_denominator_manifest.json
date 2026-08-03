@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T00:56:57+00:00",
+  "generated_at": "2026-08-03T14:29:13+00:00",
   "status": "validated_denominators_no_rates",
   "requested_years": [
     2008,
@@ -24,6 +24,7 @@
   "available_years": [
     2008,
     2009,
+    2010,
     2011,
     2012,
     2013,
@@ -40,13 +41,13 @@
     2025
   ],
   "missing_years": [
-    2010,
     2023
   ],
   "municipality": {
     "source_by_year": {
       "2008": "annual_estimate",
       "2009": "annual_estimate",
+      "2010": "census_2010",
       "2011": "annual_estimate",
       "2012": "annual_estimate",
       "2013": "annual_estimate",
@@ -63,7 +64,6 @@
       "2025": "annual_estimate"
     },
     "missing_payload_years": [
-      2010,
       2023
     ],
     "input_files": [
@@ -77,6 +77,12 @@
         "year": 2009,
         "path": "data\\raw\\ibge_sidra_6579_population_2009.json",
         "sha256": "334db98a2e79906e988dd70eb2e31840c5519709658882c48baddff1575a23bc",
+        "rows_in_rj": 92
+      },
+      {
+        "year": 2010,
+        "path": "data\\raw\\ibge_sidra_202_population_2010.json",
+        "sha256": "0085643b839fc99a68713aa96c17a3faa59e9641538acd3aafa598bf32fccb22",
         "rows_in_rj": 92
       },
       {
@@ -166,14 +172,15 @@
     ],
     "duplicate_keys": 0,
     "invalid_codes": [],
-    "rows": 1472,
+    "rows": 1564,
     "path": "data\\processed\\population_rj_municipality.parquet",
-    "sha256": "8404f579875498adddecdb244df78603a67ebb410c611bc87bb2bb7dab5b7173"
+    "sha256": "73259db6f634050ef06c4a259d666789c50a3d9ae900f0334a785fa9541f8df8"
   },
   "denominator": {
     "municipality_count_by_year": {
       "2008": 92,
       "2009": 92,
+      "2010": 92,
       "2011": 92,
       "2012": 92,
       "2013": 92,
@@ -191,14 +198,15 @@
     },
     "missing_vr_years": [],
     "incomplete_years": [],
-    "rows": 64,
+    "rows": 68,
     "path": "data\\processed\\population_denominators.parquet",
-    "sha256": "f683d66885397f3c5bd8799679feaeded3f37f0f852ff4fc1cefe10f4f775671"
+    "sha256": "713e0b8c8387c32e42da8a74c23e10df42ad73d9b2b11c397f5835571ba587d6"
   },
   "brazil_denominator": {
     "municipality_count_by_year": {
       "2008": 5565,
       "2009": 5565,
+      "2010": 5565,
       "2011": 5565,
       "2012": 5570,
       "2013": 5570,
@@ -215,7 +223,6 @@
       "2025": 5571
     },
     "missing_years": [
-      2010,
       2023
     ]
   },

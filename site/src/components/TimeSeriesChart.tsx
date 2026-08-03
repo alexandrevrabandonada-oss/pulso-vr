@@ -3,10 +3,10 @@ import type { Indicator, MetricKind, Observation } from '../types'
 import { formatMetric, metricLabel } from '../lib/format'
 
 const COLORS: Record<string, string> = {
-  volta_redonda: '#00545a',
-  rest_of_rj_excluding_vr: '#155bb8',
-  brazil_total: '#e3530f',
-  rj_total: '#8a959b',
+  volta_redonda: '#0b0b0b',
+  rest_of_rj_excluding_vr: '#f2d400',
+  brazil_total: '#e34b13',
+  rj_total: '#6b6b60',
 }
 
 const ORDER = ['volta_redonda', 'rest_of_rj_excluding_vr', 'brazil_total']
@@ -101,6 +101,8 @@ export function TimeSeriesChart({
 
   const markers = indicator.theme === 'cancer'
     ? [{ year: 2020, label: '2020–2022' }, { year: 2022, label: 'mar/2022' }]
+    : indicator.theme === 'cardiovascular' || indicator.theme === 'cardiorespiratory'
+      ? [{ year: 2020, label: '2020–2021' }]
     : [{ year: 2020, label: 'mar/2020' }]
   if (model.maxYear >= 2025) markers.push({ year: 2025, label: '2025 provisório' })
   const tableYears = [...new Set(observations

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { usePortal } from '../context/PortalContext'
+import { usePortal } from '../context/usePortal'
 import { loadProfile } from '../lib/data'
 import { formatMetric } from '../lib/format'
 import type { ProfileObservation } from '../types'

@@ -15,6 +15,19 @@
     "ok": true
   },
   {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\ibge_sidra_202_population_2010.json",
+    "filename": "ibge_sidra_202_population_2010.json",
+    "bytes": 1868763,
+    "sha256": "0085643b839fc99a68713aa96c17a3faa59e9641538acd3aafa598bf32fccb22",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "json_type": "list"
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
     "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\ibge_sidra_6579_population_2008.json",
     "filename": "ibge_sidra_6579_population_2008.json",
     "bytes": 1508483,
@@ -322,6 +335,3322 @@
     "format_ok": true,
     "format_details": {
       "json_type": "list"
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\painel_oncologia_brasil_2013_2024.csv",
+    "filename": "painel_oncologia_brasil_2013_2024.csv",
+    "bytes": 253,
+    "sha256": "4d1982d9473966a997c2cac544daa81e2e9bc606a82f305610f162302b57173b",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "delimiter": ";",
+      "columns": 2,
+      "source_layout": "Painel-Oncologia TabNet two-column result",
+      "fields": [
+        "Ano do diagnóstico",
+        "Casos"
+      ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\painel_oncologia_rj_2013_2024.csv",
+    "filename": "painel_oncologia_rj_2013_2024.csv",
+    "bytes": 240,
+    "sha256": "95883f7ac82f8273219a56e13361522be85fc887b7424700330ab7dca292c566",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "delimiter": ";",
+      "columns": 2,
+      "source_layout": "Painel-Oncologia TabNet two-column result",
+      "fields": [
+        "Ano do diagnóstico",
+        "Casos"
+      ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\painel_oncologia_vr_2013_2024.csv",
+    "filename": "painel_oncologia_vr_2013_2024.csv",
+    "bytes": 214,
+    "sha256": "8ff518759759570549c18defe21d1d3efb538b5695d6eebdf6ec53821f157a4b",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "delimiter": ";",
+      "columns": 2,
+      "source_layout": "Painel-Oncologia TabNet two-column result",
+      "fields": [
+        "Ano do diagnóstico",
+        "Casos"
+      ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\painel_oncologia_vr_detalhado_2024.csv",
+    "filename": "painel_oncologia_vr_detalhado_2024.csv",
+    "bytes": 2884,
+    "sha256": "661983f109a911c4a91608a353de1d0be796fa70e2bd4ca4e18444eed414302e",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "delimiter": ";",
+      "columns": 2,
+      "source_layout": "Painel-Oncologia TabNet two-column result",
+      "fields": [
+        "Casos",
+        "Diagnóstico Detalhado"
+      ]
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2008_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2008_01.html",
+    "bytes": 20822,
+    "sha256": "003c2dd7fafa5c07236ffb45a5d207188480968eeb585d01b32902a7239c8a33",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2008_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2008_02.html",
+    "bytes": 20887,
+    "sha256": "49dde0b8f69e4642f75ce9cc6a007828ca2b3bc3660df2fa144047f512d24318",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2008_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2008_03.html",
+    "bytes": 20899,
+    "sha256": "a209693dda9eeb8a692c06c98d6eb4915fab52fe3ae82b622f2918cae5cdb731",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2008_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2008_04.html",
+    "bytes": 20901,
+    "sha256": "e1e3efcfd5bcb5a465254c3d34869b9012fd8fd96ddbd4bfb8f607468642172d",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2008_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2008_05.html",
+    "bytes": 20908,
+    "sha256": "070c685488c09e2e651026c1b51f65fa86aa500e32f9e1bcb710796b1182513f",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2008_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2008_06.html",
+    "bytes": 20915,
+    "sha256": "b98d19559aa2c9c37d09d4c51ece484822089fe040ec53192744a2cf39fc6dce",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2008_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2008_07.html",
+    "bytes": 20914,
+    "sha256": "8d762c6ed644704154cd76f4c8fc5dfbb409251ffc5744834e83a4ae602fa883",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2008_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2008_08.html",
+    "bytes": 20916,
+    "sha256": "e3ddf9a8c92a49716c7b0182cefabfc89eb5e22af4a2699b095f18f4d2844dbb",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2008_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2008_09.html",
+    "bytes": 20917,
+    "sha256": "7a6c31240ae41898e9969ec0334776faca3fa41a9745a0b8116e0981354e6714",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2008_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2008_10.html",
+    "bytes": 20909,
+    "sha256": "95cffe00140e87db5751710a5e2e48a7ef87351249ff7ff2e1edec26080ba765",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2008_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2008_11.html",
+    "bytes": 20900,
+    "sha256": "3e5ffe13c8fd73b7cc219bb9b1f654c945a3701eb4a32041a6cef8ebf7d4aed7",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2008_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2008_12.html",
+    "bytes": 20898,
+    "sha256": "8abc03814df94bfa8297abbe369e6305380f8e1a3d25f06bc1761c2a3b8fc9b9",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2009_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2009_01.html",
+    "bytes": 20885,
+    "sha256": "4457276ca3f27b01ae8aec32c6d80d95861ed5a2ad66e0626a6c4cdbf8aac528",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2009_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2009_02.html",
+    "bytes": 20890,
+    "sha256": "c173a15efdca47190fb666f623fb9e62316d8ae2acf2b6b65a68426ca1927797",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2009_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2009_03.html",
+    "bytes": 20902,
+    "sha256": "749a9c8647d6a8d5beafca1a89d1f95c4e81e6e1463d70e2142c5baf6fad3320",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2009_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2009_04.html",
+    "bytes": 20902,
+    "sha256": "23ec4998952b0820d22d5546f061a120c25426ac66c78e7fc47644205622f9a4",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2009_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2009_05.html",
+    "bytes": 20903,
+    "sha256": "97fff39fcc0ffbb9547f5714e19fbbec7128f46ccaab83f0abaf0a0718af8a62",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2009_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2009_06.html",
+    "bytes": 20902,
+    "sha256": "7917a4b91aaead78e010254b035f642ee4a2cae3404aec5530c05985d9cc8626",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2009_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2009_07.html",
+    "bytes": 20911,
+    "sha256": "7e9db9e533d3fefcc7f867425f0ffb172457d506c7ab1f1c00744d0091a28658",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2009_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2009_08.html",
+    "bytes": 20909,
+    "sha256": "3614f6c3da091fe1aeb0c61bb27ce2ca777b13f840b8214154aea58b67ab7f7e",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2009_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2009_09.html",
+    "bytes": 20905,
+    "sha256": "5f4732b6e8ffb92105b78b0e07f31f068623f7d1b814289e0af4b1bd8f6cf7d4",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2009_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2009_10.html",
+    "bytes": 20907,
+    "sha256": "620ce39a64fecaa12e759473d6f361e1cc5f4d8dfe32561bc48fc67cea2e5fa3",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2009_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2009_11.html",
+    "bytes": 20909,
+    "sha256": "660eedc624481c2cd9ad6d30a3b6be90ffbcfc9cef2983e68a3888eca319e11a",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2009_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2009_12.html",
+    "bytes": 20906,
+    "sha256": "828de13b3380633e7d4473045f2a52c234fddd42de3bda50586cf4617c872b85",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2010_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2010_01.html",
+    "bytes": 20900,
+    "sha256": "62c0cc7e81e0270d9b1cbca7ae16e85ceebe13a15d4e0c838267fa3f3f4699d6",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2010_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2010_02.html",
+    "bytes": 20896,
+    "sha256": "9209a787b94e094c808168947d1e941904d094823cd87d7089e8f6c25def63ba",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2010_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2010_03.html",
+    "bytes": 20912,
+    "sha256": "ac3f550201247ca1498d1762196fa46bb1cbbcd42659ad06628190b1b8410b82",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2010_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2010_04.html",
+    "bytes": 20911,
+    "sha256": "38cb1d12f57c10613bcb5ec5fc1b1364264ffa6cf6b57eaf7043c84315f4412a",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2010_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2010_05.html",
+    "bytes": 20907,
+    "sha256": "1cc2839fcb8ba23251830954b343f6eeda54d8b3c4928fd870498387efd55e57",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2010_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2010_06.html",
+    "bytes": 20907,
+    "sha256": "40b6aba97c749dc4fb4160d22f33f96c5e5ed3a8d3ee4738a8d5fd8456bcb697",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2010_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2010_07.html",
+    "bytes": 20910,
+    "sha256": "1ebe532e28969de47645c90c84895b08b61529423c5638d72b84e9a9aecc3977",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2010_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2010_08.html",
+    "bytes": 20916,
+    "sha256": "67ade9d73b5d60b78957066badff5b4e9a2d1170b22425ec7414cb0c1e06ff12",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2010_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2010_09.html",
+    "bytes": 20910,
+    "sha256": "86583d8b1e01c6ff930f8a16fdd8ad1fd096d59ca8fb3897c30c3284cb52b694",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2010_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2010_10.html",
+    "bytes": 20905,
+    "sha256": "1b1635bd727313636f998a208d1bf2cfa4e4669a228bc824ef4dff9488d62393",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2010_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2010_11.html",
+    "bytes": 20908,
+    "sha256": "ce85809b257c4b74df546ea99c765c8ac116e4b1c7a6667713dd4b28c94f4abf",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2010_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2010_12.html",
+    "bytes": 20905,
+    "sha256": "bf7b425c7ca5990c61818b163039aa8c74e6ac63c9ab7ae1537a8c3d89df7e40",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2011_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2011_01.html",
+    "bytes": 20903,
+    "sha256": "36f5237c17f484554395d6ce6a0c2b48f00e20ed2ce91f38ff1654e7f7879420",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2011_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2011_02.html",
+    "bytes": 20904,
+    "sha256": "5dae017ca27d7fe55dc96ca5968477f125f09b8c801d1b30a2c13792791b6421",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2011_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2011_03.html",
+    "bytes": 20912,
+    "sha256": "b698716b8ed31e06f59b733ea6018c45f2784dc444256a5d54e8165954c07fa7",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2011_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2011_04.html",
+    "bytes": 20910,
+    "sha256": "980852d279dc168226cea407be492b4bbb7f86e270578473ee0cb1c3bd79d365",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2011_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2011_05.html",
+    "bytes": 20908,
+    "sha256": "825af3b14cdeb3f925c15522b13938a1b73079247a639035c4134d97cb348065",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2011_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2011_06.html",
+    "bytes": 20906,
+    "sha256": "754aa1ed9e2ab25dcd3ee532cf8134ea9834a3d3c99d567ff3dcb574ab01d281",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2011_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2011_07.html",
+    "bytes": 20915,
+    "sha256": "25f79613fc1526eb1304e2571c370fb7ddcbddaab4f25a9a9904e2aa3d08e37e",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2011_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2011_08.html",
+    "bytes": 20906,
+    "sha256": "743fe1e033c736c660847e0a1d8a3de97bb8ffc709662ef4c5eb6b00f8ff28f3",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2011_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2011_09.html",
+    "bytes": 20909,
+    "sha256": "3c2dc286dcce48d57ae022fd86e8190bf82f7121fcff638a595ad8912e13cea5",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2011_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2011_10.html",
+    "bytes": 20906,
+    "sha256": "36306eeca0a174c5d4933102d1273a78c5b5e02f97758eb152d89a424278180e",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2011_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2011_11.html",
+    "bytes": 20909,
+    "sha256": "20f9cd8f5893cca06dc4821e5f9bac54bece61aa87065f011b7230ea19d64653",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2011_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2011_12.html",
+    "bytes": 20908,
+    "sha256": "1a7e6197ddb1a8a270203ec554b7b32a161adf32305e703dd40f255b13696cd1",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2012_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2012_01.html",
+    "bytes": 20902,
+    "sha256": "8bbc4d63c723ab8e4ee2ab08f331b4ade2828c38fb33206f9636a49a932c4109",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2012_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2012_02.html",
+    "bytes": 20901,
+    "sha256": "a47fe7e2126a79bda2b6457ae1cf00c5f931e73107e6b82a5153d85cd2b2de8b",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2012_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2012_03.html",
+    "bytes": 20914,
+    "sha256": "e8eea927cc1da3a6ef3b1efb80511fa7c756c2ed42377bfbb53e9d0535202d84",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2012_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2012_04.html",
+    "bytes": 20911,
+    "sha256": "5b3a6608634aad4b477af6d35b17eb332be4570b4dcac3e97bd14d0b656b2019",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2012_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2012_05.html",
+    "bytes": 20910,
+    "sha256": "63f08c00b0f7f56e2162a777014107526434832c656c9371f13c140215df4ff5",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2012_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2012_06.html",
+    "bytes": 20905,
+    "sha256": "6a6dd7590bd93a3da6439e6f12396caa82338409ead9a1c398cf26251cab468b",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2012_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2012_07.html",
+    "bytes": 20904,
+    "sha256": "fa30809eecd67fe9c3724560298766b767c443252ec93fd467e28b668ad56e4b",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2012_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2012_08.html",
+    "bytes": 20905,
+    "sha256": "9dacdaf4aa759443b84af4695d5410866e52254df6880449d59d8e0e607e7000",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2012_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2012_09.html",
+    "bytes": 20900,
+    "sha256": "38fb0c8b496194fb62f74ebe457419f7f0347562c945ec755b739e8e4b91c292",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2012_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2012_10.html",
+    "bytes": 20909,
+    "sha256": "4953e111fd751b67ad5dadf3f8622a6ad98febb95c7e8d2865bfb9de34e346f7",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2012_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2012_11.html",
+    "bytes": 20900,
+    "sha256": "b8b0d4a64797fd44cd4ce81b7a50cf56e13fdf958cf5ee6a61c376ffb0adae61",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2012_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2012_12.html",
+    "bytes": 20893,
+    "sha256": "ec9e14aa87ae3c7fca9edc20c4939438e98adf1bc9ae6ed2a3b371079e1e7d63",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2013_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2013_01.html",
+    "bytes": 20901,
+    "sha256": "d75ed62f168f8b63a68bc4fcb8519738530c1d83598ae577730eead6f2d7b627",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2013_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2013_02.html",
+    "bytes": 20892,
+    "sha256": "bea0110e3c4def662f554ffe090b6df3e9b7942db011f015b74252016d3ffc26",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2013_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2013_03.html",
+    "bytes": 20905,
+    "sha256": "a608e4dff6aa69408a4d1e91d7d60971f4e797f973d27facb632cdb3586f4065",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2013_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2013_04.html",
+    "bytes": 20906,
+    "sha256": "c8bbc3b11505baf025a5f6ba1dd824f7baaf98efa6470a3d1f0825afb26be6d9",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2013_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2013_05.html",
+    "bytes": 20913,
+    "sha256": "db945b4d2f42d9e02847c9abcf5c079a8b4430dce3c478195fda639161bb52d9",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2013_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2013_06.html",
+    "bytes": 20904,
+    "sha256": "a03873013bf1e11f1ca5165a2e4d195be265311a9ab681a74819e9ff395d69f6",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2013_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2013_07.html",
+    "bytes": 20915,
+    "sha256": "34b8d68731810f75a81a59a8c287266046dfa528fc6a0775ff75e619ef07576f",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2013_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2013_08.html",
+    "bytes": 20910,
+    "sha256": "60e7edc2a65522989a2e7cac616bc2d5286a57c19f28d154d1be5c042ec7242c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2013_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2013_09.html",
+    "bytes": 20909,
+    "sha256": "9c33bb36d8cdf2f90ca7f69fb780e7843e7c67b698e606f0e8c98b620250ec98",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2013_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2013_10.html",
+    "bytes": 20918,
+    "sha256": "ab9bdcc088f981bfe82fa224f7da8265efabad059034c8a0118c3a1279c2d29e",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2013_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2013_11.html",
+    "bytes": 20908,
+    "sha256": "7342b7a1071d47460272feb7ff500c3e992ff275c4d5cb9f349abb550657f020",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2013_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2013_12.html",
+    "bytes": 20904,
+    "sha256": "017b4aec1f11b1a12582cf147e65e0caaa65f352d0bd318abf6565c97830b61c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2014_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2014_01.html",
+    "bytes": 20900,
+    "sha256": "b724889357a9ff42563fb890b832ffdea810e1619d66b0344d6e32d3dd75e624",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2014_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2014_02.html",
+    "bytes": 20904,
+    "sha256": "8d554f5edf136e2642a35a800e550473bf8fb9a62cdc01f7b138ff34246b891e",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2014_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2014_03.html",
+    "bytes": 20900,
+    "sha256": "b12c152e3beeb0fcb690c6ba134a8d86d784d757e186e2f47e86b1543fc97c66",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2014_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2014_04.html",
+    "bytes": 20906,
+    "sha256": "6f235b363bc7777b9ab26e9efb32c74cffc0d5e66171f05e6fa4e97fca1ece58",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2014_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2014_05.html",
+    "bytes": 20908,
+    "sha256": "7e5bbb54b2aae7e47aad0a3d5e4f7b4f1f21f9a5978793509ed03026131f54fc",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2014_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2014_06.html",
+    "bytes": 20908,
+    "sha256": "ea5d42804222ce778992c09697646fead566f3c4ffd3f84bb486350982ea4870",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2014_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2014_07.html",
+    "bytes": 20915,
+    "sha256": "c50bfa56831d9008310126cb5300818dda880e02d6f26cf6aefb2fc04134d68c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2014_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2014_08.html",
+    "bytes": 20918,
+    "sha256": "8e791fbed863b07ab2ea7235f67e43ff9f455b694aadc7ed7fceb163caa7b85c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2014_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2014_09.html",
+    "bytes": 20919,
+    "sha256": "49a0817428f5790290925c0372508b136acdd5b1c9558523e233273ad808fe21",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2014_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2014_10.html",
+    "bytes": 20923,
+    "sha256": "04b0d2e9cd33b0b08f31a54d342e2c5ab0c099c593f29ebbd3ae347ca74a3f0a",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2014_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2014_11.html",
+    "bytes": 20913,
+    "sha256": "43f0cdbcb4d9e52c527f98853c714424bb407970f8c6dacf28e26082fa213e9a",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2014_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2014_12.html",
+    "bytes": 20904,
+    "sha256": "5cdf7239bb938ba7c157cdba9a623b082189bbfbfb57420612bdbffa1a762768",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2015_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2015_01.html",
+    "bytes": 20905,
+    "sha256": "16864fa2323531c1b987576ceb5a6b1e4a03a8086276beb5eb47fbf481672d99",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2015_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2015_02.html",
+    "bytes": 20909,
+    "sha256": "489d348205d66a2d08d8a7edce4c1dcf1a053e170b1b3e49e93d9d6575326c66",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2015_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2015_03.html",
+    "bytes": 20927,
+    "sha256": "884f974fc8b36179a9fe175569b05be0041bf92fb6a9a5f0a648db01ab851a32",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2015_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2015_04.html",
+    "bytes": 20922,
+    "sha256": "c2505454d04a6a4d1caa6fc786f5cd8f57625c07c1ac60d5d859327224639d43",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2015_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2015_05.html",
+    "bytes": 20926,
+    "sha256": "c384a381e6c40136cb1470cd922639095553b1f7b92789d284448122c56f1e50",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2015_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2015_06.html",
+    "bytes": 20909,
+    "sha256": "e6788e27c4278c10bf4d08a9e161e66b94f8e07be148f213971c374bfb5912e2",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2015_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2015_07.html",
+    "bytes": 20915,
+    "sha256": "fe96193988f8d9603e174888f8b0c568864164d260a3808cc51387fdae016914",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2015_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2015_08.html",
+    "bytes": 20917,
+    "sha256": "68d0259cd06e04e54abc7dce516719b860f4114068e85e490252391fe16df70c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2015_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2015_09.html",
+    "bytes": 20911,
+    "sha256": "5eb90743733b99837dfae352b086b6e53b360dd306ec531289ef9a106dad81ed",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2015_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2015_10.html",
+    "bytes": 20914,
+    "sha256": "3ebb62c51dc98d824deb658a249156f5462b32d5792e102e311ef1531df07bf6",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2015_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2015_11.html",
+    "bytes": 20908,
+    "sha256": "7977a7661dc826070466a1191a3f5e3d3a9bda4a57f46f98073287e5b2973823",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2015_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2015_12.html",
+    "bytes": 20901,
+    "sha256": "20a27fbcf3623cff223b158c2328ba32a0bd61b41c2e5d3a4a386f0f0b8ff53e",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2016_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2016_01.html",
+    "bytes": 20897,
+    "sha256": "f00bc46c530b11c0f4f76d6704571e70054ecfc52981256193e521a5954f0d9e",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2016_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2016_02.html",
+    "bytes": 20908,
+    "sha256": "e9cf89bbd8d2ef7c97fc812f17567ea883eef259e6767c587fa8874a303fd67f",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2016_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2016_03.html",
+    "bytes": 20912,
+    "sha256": "1ab55cb62eb2dae6d1936c255138dc56b5ab2c8028ff5cb7ede255cd5b996e51",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2016_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2016_04.html",
+    "bytes": 20920,
+    "sha256": "c0883d384c91a4ffb99646f3aeabb6be4661fa000e4fb5498a370167dbf7859f",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2016_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2016_05.html",
+    "bytes": 20918,
+    "sha256": "9156ac151d3a14344b134cbcf37994dc8d522e1defc37d0d82f3b55dbe722373",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2016_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2016_06.html",
+    "bytes": 20918,
+    "sha256": "0595761cd89335e5b761658d55a4a023654ac85e66cf07244b2be7aaa64131c3",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2016_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2016_07.html",
+    "bytes": 20911,
+    "sha256": "906ed861f961d73a20d06bebb18c3c6c6739a27505f28170c15e79a0f68684ef",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2016_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2016_08.html",
+    "bytes": 20914,
+    "sha256": "5f730efd4807b1c0162802fa126f153802e81a53ee515202a6f9e617886ef076",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2016_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2016_09.html",
+    "bytes": 20909,
+    "sha256": "05035ed3c504c9329610eebf933f31a4ac290758dd34cf2d724ae39190ec5527",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2016_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2016_10.html",
+    "bytes": 20908,
+    "sha256": "635e382733f9f20daf15b67a2fe6d84249b2c4d85e9e8df004f18ee1641b522c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2016_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2016_11.html",
+    "bytes": 20903,
+    "sha256": "d7b114b67b3205a887198aae2f501fb17f549d0fde04f12ee0e33264991b7012",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2016_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2016_12.html",
+    "bytes": 20908,
+    "sha256": "6f9e48d14d0d7e74be1e22cbc50a9695e137fd75318a916bf882a8c977b87e9f",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2017_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2017_01.html",
+    "bytes": 20907,
+    "sha256": "65a1663c907f4ef0265d482a33ef269bbcaf7b3d228305fcfed640a9372c611d",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2017_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2017_02.html",
+    "bytes": 20904,
+    "sha256": "3e48cf6d3be83ac9652585f5589c49b6cb1c6f5c6bc67551cb01e2dcd280467f",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2017_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2017_03.html",
+    "bytes": 20915,
+    "sha256": "d3661b2f75406a82d14e9ebb9ced6e1078edc221e4d5248f633be106e98bb516",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2017_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2017_04.html",
+    "bytes": 20907,
+    "sha256": "15d325bccef71f0daffe294a30d45ca4b33be972a080c60f4c438a4713e3159e",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2017_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2017_05.html",
+    "bytes": 20920,
+    "sha256": "7baca30cc0fd5f9c15062ff15b0668afabfcc0d1416b4a92fc3b570e99d3eea7",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2017_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2017_06.html",
+    "bytes": 20908,
+    "sha256": "8799966394cd00a8f888383f1a818f34f3bf34df7331fb588dbea013a1609d0b",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2017_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2017_07.html",
+    "bytes": 20913,
+    "sha256": "a0047a8f17b98ebe07b5149238d8d0c4c76397a4f3352280dda0f2586b4a20f5",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2017_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2017_08.html",
+    "bytes": 20918,
+    "sha256": "3ff5b9f34e386dad2e2f2c31ce477edf721d553f58fd5d209a48eddd6cb6e81a",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2017_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2017_09.html",
+    "bytes": 20913,
+    "sha256": "6dd5cc17acc654f2f3ff8bf85e28d501c87967320db5574580714d98c131c322",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2017_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2017_10.html",
+    "bytes": 20917,
+    "sha256": "13f0714d94a775c188b5beb44d16fd7155d005d1bb314db704844b889a829b6b",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2017_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2017_11.html",
+    "bytes": 20913,
+    "sha256": "1430f1e132aa5a0fa807ce8cd0159ea5d9a1c81f27d6b7055984ca4e7f40081b",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2017_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2017_12.html",
+    "bytes": 20912,
+    "sha256": "a3e500950823d424b6af52bd542e460ecdca0bb15755ee106e0e670b10602d94",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2018_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2018_01.html",
+    "bytes": 20920,
+    "sha256": "206e8fbba8b82184ac2ab91b3751258474a5361c00c6bcc2cf90f985def1c639",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2018_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2018_02.html",
+    "bytes": 20914,
+    "sha256": "6ceefd5a561b554250c7434ac4b854e0fdf9f74b6131b948656a62e2f3a94830",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2018_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2018_03.html",
+    "bytes": 20924,
+    "sha256": "40273b04df7aead9b1082aa1767d738a051db6c34cec7be8a45ae9c3c5ccf385",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2018_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2018_04.html",
+    "bytes": 20921,
+    "sha256": "4b2fd538d4a37df2c54f8415d4ed4e98e0be1b380253fd80125b9b3fe9cecff5",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2018_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2018_05.html",
+    "bytes": 20924,
+    "sha256": "cd56f236bd72501dd72f8d5630ceb22d9fc68dfe904cc60f2f23fd12c6ecd191",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2018_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2018_06.html",
+    "bytes": 20915,
+    "sha256": "4baf1400e9886895bade1d929e7b28deb1172767943df832a66971868716a648",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2018_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2018_07.html",
+    "bytes": 20922,
+    "sha256": "c395f06fa1a75d8377ddf27cbece25273230c9c56fde35e88e39beb696c6d9fd",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2018_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2018_08.html",
+    "bytes": 20929,
+    "sha256": "65eec682644444254c29f41738bc399b00fbcecdff219b13376a92a7aeb444f7",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2018_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2018_09.html",
+    "bytes": 20919,
+    "sha256": "780d7cba9ec8a611466b35156d9d446bd7031f968687a29b76cd92c704785809",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2018_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2018_10.html",
+    "bytes": 20925,
+    "sha256": "4153006cc43aa396e90ae8639e3c54e1f4e8ddfe2ebffaea2315f5243ec61704",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2018_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2018_11.html",
+    "bytes": 20921,
+    "sha256": "d15d7c3ee9ddd1a672caad7cf195e27a0ba74ce0f9173e11aa614e5617bba75c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2018_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2018_12.html",
+    "bytes": 20913,
+    "sha256": "8dd60320d2cecc7df92b3c1208f63809cbfeb722f4eccaf6b2d9316024fe9696",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2019_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2019_01.html",
+    "bytes": 20921,
+    "sha256": "fd76bdf140e3aa5ab6660cd559b23fc1e4c975a461fe07da237743b55c7b7f35",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2019_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2019_02.html",
+    "bytes": 20919,
+    "sha256": "021325a98d1f0ec8804dd8d77e9ae2bcaaaf339a697f152233fc790f6b41a296",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2019_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2019_03.html",
+    "bytes": 20921,
+    "sha256": "336be71d6f9356625979b620ee2f3794ba607c2988b55b931bfabae2487e43a4",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2019_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2019_04.html",
+    "bytes": 20926,
+    "sha256": "775ceb79d12f6c98dd827f648a5fc158284db1da99a5161449c2a61a5ad8e4fa",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2019_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2019_05.html",
+    "bytes": 20934,
+    "sha256": "4d2478cb5bad5b8265d9771791495618bc6b8239684f66b8c5c369aacff2f55e",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2019_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2019_06.html",
+    "bytes": 20925,
+    "sha256": "799f0fce886613aa9c5b64988f4de6612c95c674e99e615fa209b8700d91fce0",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2019_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2019_07.html",
+    "bytes": 20933,
+    "sha256": "0e0e0eac95f0f3e3c64f4eef56b020b059829dcef980611680c61f2e5169a8c8",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2019_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2019_08.html",
+    "bytes": 20937,
+    "sha256": "c18beeba0a549074651664031a334c0ffef88759f6c6079a646f503a40b59dab",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2019_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2019_09.html",
+    "bytes": 20938,
+    "sha256": "63f2fe8fd5c761f578f62f4d038122e46c3f70f4c71d07429ed08a886dcde934",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2019_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2019_10.html",
+    "bytes": 20943,
+    "sha256": "9495994be5484d6fbca5e061d15eeeafcedb675e76ac91ed5836279cd311ad50",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2019_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2019_11.html",
+    "bytes": 20934,
+    "sha256": "6dd5758f65a28b2b91cb97b2c0525e1d7ec7291d8380d985ad4a6e9ecfdc1b22",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2019_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2019_12.html",
+    "bytes": 20923,
+    "sha256": "df4bf3cdb10790f2a3cbfa149d34db04efa33e514ca754933cec1e4ca8a8d79c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2020_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2020_01.html",
+    "bytes": 20935,
+    "sha256": "b4dcd40b9d12dee01a65a4c598ea74e0f04f52e508363336bc4e50025ee236a5",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2020_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2020_02.html",
+    "bytes": 20927,
+    "sha256": "b9209b1fd9dea9d5aee88fd3444ba2a820e5605d0fc5cd6e16ebfab7d55c9e38",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2020_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2020_03.html",
+    "bytes": 20918,
+    "sha256": "25b0a9c2362927c33cced1ae8ac1e184076da2c2415af881836bf765cd6c9cf4",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2020_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2020_04.html",
+    "bytes": 20859,
+    "sha256": "267f8e5d61f603d2193c03d05a775ac9ac95756661979e37e6c8009903362100",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2020_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2020_05.html",
+    "bytes": 20851,
+    "sha256": "f81d9f6373886a88a5012ba98144f0046ac174190ec64c1a097d2c65f3286c8c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2020_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2020_06.html",
+    "bytes": 20846,
+    "sha256": "c898f378d200452a1f1e9df21128e256e30661918a021e8722a8c697cc3b052c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2020_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2020_07.html",
+    "bytes": 20862,
+    "sha256": "34b3179ae86d4b897c6b561c5ab4cb9b741f7f2dc10e79c57d6f18fe126ad3b2",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2020_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2020_08.html",
+    "bytes": 20870,
+    "sha256": "ded2c74aa9c513caed0657f4254db2ce98b6647f581c7332462e04c70ac9d0b7",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2020_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2020_09.html",
+    "bytes": 20878,
+    "sha256": "3d8be7e3958fa89e4a18bc19de2254b3dbc5990b457dcd3d700dddabadce80a7",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2020_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2020_10.html",
+    "bytes": 20895,
+    "sha256": "27cc626c05920d478f3ad289b93c8d879b49db8fd0bcecafae6dd122d61f0dc0",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2020_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2020_11.html",
+    "bytes": 20894,
+    "sha256": "dbd428ca64ea64c52882ab3bae96dd2bb143b8caed5bafb13bf52c77491c0250",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2020_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2020_12.html",
+    "bytes": 20888,
+    "sha256": "c98ada40554dbe59629051fd0eb1e6eb736df6f5b70b688909dac935fef3d6d0",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2021_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2021_01.html",
+    "bytes": 20884,
+    "sha256": "0141bf3e1851168e04ea320c99c7b7890a7225199a4ed45d3e23c412ae7efdc0",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2021_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2021_02.html",
+    "bytes": 20879,
+    "sha256": "a23ae35916c3dd9fd1b5b05f475db3284bab1f9ea598e1dc9a7e85cccd120d7c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2021_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2021_03.html",
+    "bytes": 20881,
+    "sha256": "89d258eed0d6a1836bf94bfa8032cdd2e32a11c9f68f5c3a742e053b9a8533e7",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2021_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2021_04.html",
+    "bytes": 20869,
+    "sha256": "147214ebb6d8383d3b3bec0a19fdbac89b46ab31590e376a215f2f7932364834",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2021_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2021_05.html",
+    "bytes": 20879,
+    "sha256": "ac0c054feaca54e8c9363b81b019e6c41dd4aec2d5c4bb53a4193a5bbfc1f52c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2021_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2021_06.html",
+    "bytes": 20883,
+    "sha256": "4d02c2f90a42c43055403bd7d2041c047b8540847446946c7558f8f7267a63f5",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2021_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2021_07.html",
+    "bytes": 20901,
+    "sha256": "7324b4f2c638d1d804b96ff9c6350ace12664a94713adaeb87f6864e523e0967",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2021_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2021_08.html",
+    "bytes": 20912,
+    "sha256": "a4953fb8b96ba7e330462d1c8607b0f79b860d11d4456e266b0067c65b34ad88",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2021_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2021_09.html",
+    "bytes": 20910,
+    "sha256": "ecd6336f5fc32396b9b22b272bc27e486c5b3759409daabe21caa56266871fc4",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2021_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2021_10.html",
+    "bytes": 20913,
+    "sha256": "6a96fe4cc255650d19d9bd6d4e708146ccfb26816494530c8ad2d94248c95e9a",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2021_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2021_11.html",
+    "bytes": 20912,
+    "sha256": "166944f479d467e4222cf6e57068c94df882fa482ecc34dd43ca06979469e02f",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2021_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2021_12.html",
+    "bytes": 20920,
+    "sha256": "3586d4cc3f7c356007f82f6d7485d7b17101ac2350b92eaefa21c6e99f1fcb58",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2022_01.html",
+    "bytes": 20912,
+    "sha256": "4009ebde83376ee7c7c955e35e65519ab660851b74cd37912785e96f026c4d7c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2022_02.html",
+    "bytes": 20912,
+    "sha256": "1cc0b2efeb5aeb19bbc687d556cbea90598edb76f680041d7af152adaddd1e35",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2022_03.html",
+    "bytes": 20931,
+    "sha256": "ea8f9b72a6a87cbc364158506994e1a81b1c0e9af67a9c43bdcd2184ba6df467",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2022_04.html",
+    "bytes": 20930,
+    "sha256": "e37d899b39cb3461d4e7870178bb0c0f7b481a56b109b18fe7ca4704ffc91960",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2022_05.html",
+    "bytes": 20933,
+    "sha256": "28a4f6569ca6d6e97fd495bf229f75c3e96ba95a8f6700bb3542ef622b3fc7e9",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2022_06.html",
+    "bytes": 20929,
+    "sha256": "cc73c1ecf834174cf207d4af07c2d1608f08f32a74bb4390298867b8096b17ed",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2022_07.html",
+    "bytes": 20935,
+    "sha256": "1eed5577f95a083fc808858d6e60ecba5b53283e9db584dbd832117b3232f692",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2022_08.html",
+    "bytes": 20944,
+    "sha256": "29d0b92077fa1929915342cce8d64091e025923a1816e4b942606640627ec52d",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2022_09.html",
+    "bytes": 20940,
+    "sha256": "fdbd1c9ba3f87a49052f6d4b6c0886e1ce4018faa6bc3846186d3d8a3438199e",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2022_10.html",
+    "bytes": 20941,
+    "sha256": "724284ad91e8e640c60eb41320f70cfe29505402fdd1c531d1d1277dcfc9e47f",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2022_11.html",
+    "bytes": 20929,
+    "sha256": "ebc55ffe027631fe83b689ccf8bca4247f081bdbd023dcfb951f86ae9b5b423e",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2022_12.html",
+    "bytes": 20935,
+    "sha256": "4d051a2ed408d052bbd61822bb65c07e141aeec90da81c39e105fa8a69fd3734",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2023_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2023_01.html",
+    "bytes": 20939,
+    "sha256": "988159c1e7349e03737918423bfb89e8f5f928e31f7487c900cc9159ec220235",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2023_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2023_02.html",
+    "bytes": 20928,
+    "sha256": "895d8223b8dfbf334d95dbfa0e7dfc8a68c2eb1a7a7f973f4420493e5beb5b26",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2023_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2023_03.html",
+    "bytes": 20950,
+    "sha256": "286a0f92b6b47975f695a84c1d044ba1882affb5bc4f0e5691dae1ec134d4930",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2023_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2023_04.html",
+    "bytes": 20937,
+    "sha256": "bdbdba35f03bfed54cc97ab893a25d703921145a8101546a330f5aeaef0a133c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2023_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2023_05.html",
+    "bytes": 20945,
+    "sha256": "ccf05c04ed068594c6fab1795238f179287cbf03707d7a7c6acd05cee807663b",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2023_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2023_06.html",
+    "bytes": 20944,
+    "sha256": "ad908fe991ec4956d6ee3302698d7ee4bb097f65d8b565c60edbc54133f8c4a5",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2023_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2023_07.html",
+    "bytes": 20949,
+    "sha256": "2cf59369303b1b828b3d62660db1b3ee4a92084d8a38fb50ad92da25522657e8",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2023_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2023_08.html",
+    "bytes": 20956,
+    "sha256": "dde6248c2f21c7eef9d17087f332d66f2df90003031081ffdeb1e72ece85da20",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2023_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2023_09.html",
+    "bytes": 20955,
+    "sha256": "8b6dc0d2aeab90b71d5e851d136fdb79df3947d44a7e422ad784c69cee37878b",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2023_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2023_10.html",
+    "bytes": 20951,
+    "sha256": "e812cc4b1462de5b6d9663ba9c6673751ee4e3b989ee7a1536cb94883b0de27b",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2023_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2023_11.html",
+    "bytes": 20948,
+    "sha256": "7162e077a3c2d6f90266787187981723f6f44633e4bef87c31fb7dcaa346bbed",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2023_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2023_12.html",
+    "bytes": 20945,
+    "sha256": "7b907b06bfe19f4554cca31ad3165bc80446deca2f43330d58d3879e57a20c44",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2024_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2024_01.html",
+    "bytes": 20948,
+    "sha256": "fa479f11fa84dbfb4047e5bea9bd7c1c07be764d12b9e665d319a1d96c59a625",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2024_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2024_02.html",
+    "bytes": 20949,
+    "sha256": "8d330517c6555de50f96af732fc1bfb4e43859b41049309ea99833cb94341568",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2024_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2024_03.html",
+    "bytes": 20959,
+    "sha256": "96a35a477fe34014a0c4ade40e47d24128f3bf572cae2bf3a8fda5f113297d4e",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2024_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2024_04.html",
+    "bytes": 20957,
+    "sha256": "71bea53240da671845bae7b7005ccaebfa900d80dcc4f0683ae98d82d86ca1a6",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2024_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2024_05.html",
+    "bytes": 20957,
+    "sha256": "0fa4134013892d8ac63c9a80526ed4fb42bd3b6bc899f92c2ddc9d4d9f3f2e35",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2024_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2024_06.html",
+    "bytes": 20952,
+    "sha256": "94a2f521d3f39af089f915752fb3adfb57afeac33422fb577215e6c044667323",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2024_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2024_07.html",
+    "bytes": 20954,
+    "sha256": "70e1ea846c662c2035b71b7c3ebb5b3997b84f256c658568b3261895f5fa0ced",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2024_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2024_08.html",
+    "bytes": 20961,
+    "sha256": "7a6fc0421619bc122ab9843dc7777a343e95710d3351656ddd77ae6f16b828d0",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2024_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2024_09.html",
+    "bytes": 20963,
+    "sha256": "91b302c065564a0e4d0b066be2e1951b5a51e4d6a9e389487d2b7a8bb8a40758",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2024_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2024_10.html",
+    "bytes": 20963,
+    "sha256": "1e9703c155bc753864e3d1dfed87fca6f4915d74d81ce14dc96b42491251d145",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2024_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2024_11.html",
+    "bytes": 20953,
+    "sha256": "af39d55965e9c48fccd15b4b702f02a39a6baad6ad3e2bb6bf69a647c42f6811",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2024_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2024_12.html",
+    "bytes": 20945,
+    "sha256": "42d70ce215a374790683df69d37a7545cbf2700a85458432e94df8bd13c969c9",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2025_01.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2025_01.html",
+    "bytes": 20955,
+    "sha256": "b2cba0d3fd823da638b45f2b6005c904fa62f1c5e82e635d25f86053f104817e",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2025_02.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2025_02.html",
+    "bytes": 20955,
+    "sha256": "dd57a7489953179aa68f9dbf539ffa3c8efb63d583d162a1acd4b0277c2692f8",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2025_03.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2025_03.html",
+    "bytes": 20957,
+    "sha256": "ff6a6b5574cc1f10cb34f33d87bf917034f360315cf18d2dd4433ee6f9281c61",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2025_04.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2025_04.html",
+    "bytes": 20961,
+    "sha256": "eb1ea02f82f576ae31ef9d01904d4328dd42e825388afa1b2c7db50754d9af86",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2025_05.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2025_05.html",
+    "bytes": 20963,
+    "sha256": "1daa513e452aa44c878aee7693cb5689998d5aa10b87b6f80d6b326985aedd6a",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2025_06.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2025_06.html",
+    "bytes": 20958,
+    "sha256": "beb32f4b74d2f98dc8e2482bfc77b5d0ee304d0752327716a40250b7007f9383",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2025_07.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2025_07.html",
+    "bytes": 20966,
+    "sha256": "54ab9d25cbf815d6f06ff61cf8e3376aec79500f18a86b36116a0230882ed99b",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2025_08.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2025_08.html",
+    "bytes": 20971,
+    "sha256": "7e8f72bb6352a60b075106aeac13291c9f4fdbb54f69f69d92c15d8fdc94c9cb",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2025_09.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2025_09.html",
+    "bytes": 20969,
+    "sha256": "fe269d2fe1297e4e786f0b5bd9d2332511f67fc3ac474db87dbab68058c2b2c4",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2025_10.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2025_10.html",
+    "bytes": 20968,
+    "sha256": "ea833fecd9014265c5dfd90a1dce6a65cc3849a62d311895b89780f3b01f4fea",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2025_11.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2025_11.html",
+    "bytes": 20962,
+    "sha256": "abc9ac632165d088c7acda52780d9c7c2e672417f51bb97136a56f1249b9cc82",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2025_12.html",
+    "filename": "sih_tabnet_nrbr_morbidity_brazil_total_2025_12.html",
+    "bytes": 20955,
+    "sha256": "ae8da88fa838860b2c1d4d07aceade5c19a699831f9a6b3d3eafe141351ef8a9",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
     },
     "errors": [],
     "ok": true
@@ -10261,6 +13590,681 @@
     "filename": "sih_tabnet_nrrj_morbidity_volta_redonda_2026_05.html",
     "bytes": 20390,
     "sha256": "55fbe756f784c1b93557d2dd95f89cf1282d27bc22213032c4b9fe0f6a671144",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_2022_acute_bronchitis_bronchiolitis.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_2022_acute_bronchitis_bronchiolitis.html",
+    "bytes": 5134,
+    "sha256": "6dd6d8e0d1577a0e317bb4c88911521487ef162be097c807fe15b07316026ff8",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_2022_acute_myocardial_infarction.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_2022_acute_myocardial_infarction.html",
+    "bytes": 5181,
+    "sha256": "af2dc49545f14afa9199f2f88aee5b7d2674880ffe84d195b49392edbf4449ce",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_2022_asthma.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_2022_asthma.html",
+    "bytes": 5160,
+    "sha256": "8e17015ad4deb9ecda190da8b07141317e629009ab7e8c0cecd2b429ad36cb7d",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_2022_cardiac_arrhythmia.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_2022_cardiac_arrhythmia.html",
+    "bytes": 5248,
+    "sha256": "105562f9d5a66ae6d7fb2731be6ab2a2badd1b1ddb0285ecfccdadc1dfc7bf02",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_2022_cardio_all.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_2022_cardio_all.html",
+    "bytes": 5290,
+    "sha256": "1991317182b029538923218ee8c97ac509466d6b67a0be7843a2959089d8280f",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_2022_cardiorespiratory_all.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_2022_cardiorespiratory_all.html",
+    "bytes": 5361,
+    "sha256": "72ef9eef28c9216c9c8d087ecd3424617404f5a0651b2ad1a38b4a4c3a2574ef",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_2022_cerebrovascular.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_2022_cerebrovascular.html",
+    "bytes": 5320,
+    "sha256": "eef2b2e435cd68496fd25115d4d5f1d438f72741b9c8e389f3c2d8bd3bc00daa",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_2022_copd.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_2022_copd.html",
+    "bytes": 5168,
+    "sha256": "14d7dad23d5dc7f9535b920209b1b8b50c227b7c1082caa403b163d34a93f748",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_2022_heart_failure.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_2022_heart_failure.html",
+    "bytes": 5184,
+    "sha256": "6fb063c203bfbc122a947b12c57f9c8d9a8e0ce2b6e9207b11aa5ae184ae0b55",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_2022_hypertension.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_2022_hypertension.html",
+    "bytes": 5191,
+    "sha256": "ebdda37364f9c528c7e23f65cc7a8cf05fea2bfd2cc371cb4d3996f0d69d50c3",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_2022_ischemic_heart_disease.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_2022_ischemic_heart_disease.html",
+    "bytes": 5273,
+    "sha256": "c681722e8639e038d27398355b79e3c5e19b9154d60e2159a0886531e34f0e07",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_2022_pneumoconiosis.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_2022_pneumoconiosis.html",
+    "bytes": 5121,
+    "sha256": "3435fca293ee1dc06b9b4c508bedbccb2eb568019adbf791890a363245740675",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_2022_pneumonia.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_2022_pneumonia.html",
+    "bytes": 5272,
+    "sha256": "4fd55298bcfe0f4c37f2ddf6bfdc3f50e605019e941d8e4d695c716f80b66978",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_2022_pulmonary_embolism.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_2022_pulmonary_embolism.html",
+    "bytes": 5065,
+    "sha256": "ac42d428962749be4b665b79d01e5be6d6bbab70e09ac88d53687f1100f05878",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_2022_resp_all.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_2022_resp_all.html",
+    "bytes": 5275,
+    "sha256": "0ecd1ae6112fa47b56bae9254bc13c860012e1c5f5ef4ef9295f49b65e865ffb",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v2_2022_acute_bronchitis_bronchiolitis.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v2_2022_acute_bronchitis_bronchiolitis.html",
+    "bytes": 5134,
+    "sha256": "6dd6d8e0d1577a0e317bb4c88911521487ef162be097c807fe15b07316026ff8",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v2_2022_acute_myocardial_infarction.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v2_2022_acute_myocardial_infarction.html",
+    "bytes": 5181,
+    "sha256": "af2dc49545f14afa9199f2f88aee5b7d2674880ffe84d195b49392edbf4449ce",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v2_2022_asthma.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v2_2022_asthma.html",
+    "bytes": 5089,
+    "sha256": "e42fd2fc1645e2bd4e6ff74cfc90c8a86de9d9c2d1950c1e85df74d90bb9773c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v2_2022_cardiac_arrhythmia.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v2_2022_cardiac_arrhythmia.html",
+    "bytes": 5177,
+    "sha256": "cdeddbb8cc79fbb2d6b5c36ad99e3f92bbb472fd14a0fe4ab8dc9f802b840b55",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v2_2022_cardio_all.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v2_2022_cardio_all.html",
+    "bytes": 5290,
+    "sha256": "1991317182b029538923218ee8c97ac509466d6b67a0be7843a2959089d8280f",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v2_2022_cardiorespiratory_all.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v2_2022_cardiorespiratory_all.html",
+    "bytes": 5361,
+    "sha256": "72ef9eef28c9216c9c8d087ecd3424617404f5a0651b2ad1a38b4a4c3a2574ef",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v2_2022_cerebrovascular.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v2_2022_cerebrovascular.html",
+    "bytes": 5372,
+    "sha256": "7e7d7f680b17f472b9ee7b21f2930bca4aeb2f8728052b35f9f224a48a72226c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v2_2022_copd.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v2_2022_copd.html",
+    "bytes": 5168,
+    "sha256": "14d7dad23d5dc7f9535b920209b1b8b50c227b7c1082caa403b163d34a93f748",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v2_2022_heart_failure.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v2_2022_heart_failure.html",
+    "bytes": 5255,
+    "sha256": "536dceca3605fa5984a3c135d8e31ff7fceb66e6dd7112846e1c5cd9b9faa065",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v2_2022_hypertension.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v2_2022_hypertension.html",
+    "bytes": 5191,
+    "sha256": "ebdda37364f9c528c7e23f65cc7a8cf05fea2bfd2cc371cb4d3996f0d69d50c3",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v2_2022_ischemic_heart_disease.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v2_2022_ischemic_heart_disease.html",
+    "bytes": 5273,
+    "sha256": "c681722e8639e038d27398355b79e3c5e19b9154d60e2159a0886531e34f0e07",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v2_2022_pneumoconiosis.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v2_2022_pneumoconiosis.html",
+    "bytes": 5050,
+    "sha256": "640ee84aef20924bc4cd45df92a36a77892390cb04b55ed4ab61c0616c80c5e3",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v2_2022_pneumonia.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v2_2022_pneumonia.html",
+    "bytes": 5201,
+    "sha256": "3d031481189b53cc3cab9442836364902fede590a8f9079ed7d2254c1acae778",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v2_2022_pulmonary_embolism.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v2_2022_pulmonary_embolism.html",
+    "bytes": 5065,
+    "sha256": "ac42d428962749be4b665b79d01e5be6d6bbab70e09ac88d53687f1100f05878",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v2_2022_resp_all.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v2_2022_resp_all.html",
+    "bytes": 5275,
+    "sha256": "0ecd1ae6112fa47b56bae9254bc13c860012e1c5f5ef4ef9295f49b65e865ffb",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v3_2022_acute_bronchitis_bronchiolitis.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v3_2022_acute_bronchitis_bronchiolitis.html",
+    "bytes": 5205,
+    "sha256": "5af6cc01752f52767120de73e81d036bf657168ac4e095d2b862e7fb270ac5de",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v3_2022_acute_myocardial_infarction.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v3_2022_acute_myocardial_infarction.html",
+    "bytes": 5181,
+    "sha256": "af2dc49545f14afa9199f2f88aee5b7d2674880ffe84d195b49392edbf4449ce",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v3_2022_asthma.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v3_2022_asthma.html",
+    "bytes": 5089,
+    "sha256": "e42fd2fc1645e2bd4e6ff74cfc90c8a86de9d9c2d1950c1e85df74d90bb9773c",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v3_2022_cardiac_arrhythmia.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v3_2022_cardiac_arrhythmia.html",
+    "bytes": 5177,
+    "sha256": "cdeddbb8cc79fbb2d6b5c36ad99e3f92bbb472fd14a0fe4ab8dc9f802b840b55",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v3_2022_cardio_all.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v3_2022_cardio_all.html",
+    "bytes": 5290,
+    "sha256": "1991317182b029538923218ee8c97ac509466d6b67a0be7843a2959089d8280f",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v3_2022_cardiorespiratory_all.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v3_2022_cardiorespiratory_all.html",
+    "bytes": 5361,
+    "sha256": "72ef9eef28c9216c9c8d087ecd3424617404f5a0651b2ad1a38b4a4c3a2574ef",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v3_2022_cerebrovascular.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v3_2022_cerebrovascular.html",
+    "bytes": 5320,
+    "sha256": "eef2b2e435cd68496fd25115d4d5f1d438f72741b9c8e389f3c2d8bd3bc00daa",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v3_2022_copd.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v3_2022_copd.html",
+    "bytes": 5239,
+    "sha256": "64051850ee6ee06a2d5e00e2e5f81f69b1969e66a14e214971b6d422fef44244",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v3_2022_heart_failure.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v3_2022_heart_failure.html",
+    "bytes": 5184,
+    "sha256": "6fb063c203bfbc122a947b12c57f9c8d9a8e0ce2b6e9207b11aa5ae184ae0b55",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v3_2022_hypertension.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v3_2022_hypertension.html",
+    "bytes": 5191,
+    "sha256": "ebdda37364f9c528c7e23f65cc7a8cf05fea2bfd2cc371cb4d3996f0d69d50c3",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v3_2022_ischemic_heart_disease.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v3_2022_ischemic_heart_disease.html",
+    "bytes": 5273,
+    "sha256": "c681722e8639e038d27398355b79e3c5e19b9154d60e2159a0886531e34f0e07",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v3_2022_pneumoconiosis.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v3_2022_pneumoconiosis.html",
+    "bytes": 5121,
+    "sha256": "3435fca293ee1dc06b9b4c508bedbccb2eb568019adbf791890a363245740675",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v3_2022_pneumonia.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v3_2022_pneumonia.html",
+    "bytes": 5201,
+    "sha256": "3d031481189b53cc3cab9442836364902fede590a8f9079ed7d2254c1acae778",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v3_2022_pulmonary_embolism.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v3_2022_pulmonary_embolism.html",
+    "bytes": 5065,
+    "sha256": "ac42d428962749be4b665b79d01e5be6d6bbab70e09ac88d53687f1100f05878",
+    "hash_ok": true,
+    "format_ok": true,
+    "format_details": {
+      "tabnet_title": true,
+      "total_label": true,
+      "source_label": true
+    },
+    "errors": [],
+    "ok": true
+  },
+  {
+    "path": "C:\\Users\\Micro\\OneDrive\\Documentos\\Mapa Doenças VR\\data\\raw\\sih_tabnet_nrrj_municipal_map_v3_2022_resp_all.html",
+    "filename": "sih_tabnet_nrrj_municipal_map_v3_2022_resp_all.html",
+    "bytes": 5275,
+    "sha256": "0ecd1ae6112fa47b56bae9254bc13c860012e1c5f5ef4ef9295f49b65e865ffb",
     "hash_ok": true,
     "format_ok": true,
     "format_details": {

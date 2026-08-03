@@ -1,16 +1,16 @@
 {
   "project": "vr_saude_ambiental",
   "code_version": "0.1.0",
-  "run_at": "2026-08-03T01:37:34+00:00",
+  "run_at": "2026-08-03T03:02:06+00:00",
   "status": "preliminary_descriptive_analyses_no_causal_inference",
   "inputs": [
     {
       "path": "config\\outcomes.yml",
-      "sha256": "636bebc990e41423489817aafae1df68a5c2bcb16db4aae723bf7314a927bf28"
+      "sha256": "5915e67fdc1ef1193c4460b4c4c38621f381d1e2e272eb1f157573a59e67cdb7"
     },
     {
       "path": "config\\periods.yml",
-      "sha256": "cef73203854bc16ff2ce430b9ecadbe2da47164164bbb726bf4f1e66080a35eb"
+      "sha256": "cd7e6725cab3cf1af06f68a3fa3d7ac4bbd8facebee02d8d9925d62acbe426f4"
     },
     {
       "path": "config\\sources.yml",
@@ -22,37 +22,37 @@
     },
     {
       "path": "metadata\\source_catalog.csv",
-      "sha256": "990a2df44deef15a7ab3c621b4af5268ba323b8ff9044697955aae62ad476371"
+      "sha256": "60f471a56e73459f3def7c51fe3eb76cabb7102a9ef141491ced88479042e54d"
     },
     {
       "path": "metadata\\extraction_log.csv",
-      "sha256": "d95f154de940c0b27e422c87139ee0159ef106bef5bfc7b3084c5329573e6a31"
+      "sha256": "60c497976f1eaf509aff7c28fb8ae464b31c2a6cf8e25bbdf9003e212857d0ec"
     }
   ],
   "outputs": [
     {
       "path": "reports\\quality\\quality_report_initial.md",
-      "sha256": "ff7f8b54bc12ccec38835f0a9f7024f5fa3573b13b28d0624eb17c643bf75c85"
+      "sha256": "17d3d4dda62861e424b7e50a4cba79424565fd652fe76fcb3313293c110df738"
     },
     {
       "path": "reports\\quality\\raw_samples_validation.md",
-      "sha256": "6fbb044de7dc9747a8ee62caf96c8bae364ce1a39bb2cd62c5ebabeca632509e"
+      "sha256": "08c6dfa8720341ecc9e0560277aea83693c11100ea3d714a8ada7acc02a4e707"
     },
     {
       "path": "reports\\quality\\raw_samples_validation.json",
-      "sha256": "25cb9aecab415b7f22ef8ca2e835f30021942eed5ee2f0f80a75ba25542ee969"
+      "sha256": "bac10a4f748beb62ee1ded9f62ba83c5a58c52ce0c002672409338ccb1b74801"
     },
     {
       "path": "reports\\quality\\territory_code_validation.md",
-      "sha256": "97d22d38673cd77387540833e1ec61756cbceac59d8c04c6f22c5ed06f3dfb2b"
+      "sha256": "688277e2d3add4f2f0e8198c8bca02b46b88dfdaf3c19f79dd36b101acd95062"
     },
     {
       "path": "reports\\quality\\territory_code_validation.json",
-      "sha256": "693b7a851c82223f2fd0dd0ecdc5c67a4c99f67599d83c5f6d10aa30eed8c23c"
+      "sha256": "1297acb4c84d36268e3bb36b2d9b63f601de063e87e3818a19f59abf210c893b"
     },
     {
       "path": "metadata\\layout_manifest.json",
-      "sha256": "de88417cc60659d49051bb0c3c4d418d1801bc4d2695fa1b2d3d4a038e2d3886"
+      "sha256": "d9806338ae8bcccde00ca5bf26001617d8550fdd2159689dc20050ca3b1e1088"
     },
     {
       "path": "metadata\\discovered_resources_sim.json",
@@ -64,7 +64,7 @@
     },
     {
       "path": "reports\\quality\\harmonization_manifest.json",
-      "sha256": "d0c070aefa93962f8669e987ad680902ccd92ff9dedc1322e8f8755f0c9bda73"
+      "sha256": "de57c226a2d1125e5397acfdf1d6dbea7b0f9ebc753c9f6655c03e6f8a71c766"
     },
     {
       "path": "reports\\quality\\population_denominator_manifest.json",
@@ -76,39 +76,39 @@
     },
     {
       "path": "reports\\quality\\respiratory_rates_manifest.json",
-      "sha256": "3bb9f074ece3be04db321704c52ec35b27b85803491c2201c6c26301c1bffe8b"
+      "sha256": "023b96339613f014b1135a3e1f06665e890173ca4b7e1cbcf383ac8080dcc84d"
     },
     {
       "path": "reports\\quality\\respiratory_its_manifest.json",
-      "sha256": "8e76e188d55971e77e31d01f0b6c25e5ce56508773f37aea53ad8cee9f0ae4cb"
+      "sha256": "0f9ccf88e71359e47637d0c1208a2fcdcf6e8f8aac0bfc65fb5179a004538064"
     },
     {
       "path": "reports\\quality\\outcome_counts_manifest.json",
-      "sha256": "97430b5e3294d291d5b9f23fb145feb473848924fa15917359b561fc5d530aef"
+      "sha256": "621ae5caaa3f66ced85180ad51639dd9c8387e1b235fc56ca96db57cf2741d4c"
     },
     {
       "path": "reports\\quality\\sivep_surveillance_manifest.json",
-      "sha256": "104cc2a18462ee3e98358ffa594533a118c040b408e5d96b7b481ce5f46b6b69"
+      "sha256": "f061a335c5ebb9628882a97fcb74227eefba03efc27b712351f015b93414cd4c"
     },
     {
       "path": "reports\\quality\\sivep_monthly_manifest.json",
-      "sha256": "1b75e622ac2eece30a6d79db875a76ad04c2a89f32c48a29fdda794f51e10f1c"
+      "sha256": "650b4492c73dde7bee2ebb6d11ec445d42bbd2e69e27aeded2b1df1982b5ced0"
     },
     {
       "path": "reports\\quality\\sim_mortality_rates_manifest.json",
-      "sha256": "526ce58aad8d3515907e100201ecfb9a57a070b1a9a5b8af642c7ab126be9dc3"
+      "sha256": "eb31d46dd42b676aa09ea36396a74a0d68065e16b32f3f084fac450b3d989998"
     },
     {
       "path": "reports\\quality\\sim_age_sex_profile_manifest.json",
-      "sha256": "8614a8783192d13658f598f5696dcb6bd42a2b98e4fdac1b4df9500d1ae2b10d"
+      "sha256": "e38c4f64710d4949ec4a5d5fb926b1611db3770d375a42e16bbb72e390bca2b4"
     },
     {
       "path": "reports\\quality\\sim_age_sex_rates_manifest.json",
-      "sha256": "397ce89c6249e2c9fc95982ed4bb7ab33dffa2bdb41758c3c6898dec7ade81b5"
+      "sha256": "7708187722bcf4805f219020d09d5420dd4127495f0572df8e27b8bf3b4738ea"
     },
     {
       "path": "reports\\technical\\fase3_respiratorio.md",
-      "sha256": "3cd25d87f6dcf70bac6fe341d0fdd7cdb4a93adb65bace88e639418fefa72ddf"
+      "sha256": "58b273459997cd860cec5248e21fb2003d061d5b2a12d1db8dc03813705e4596"
     },
     {
       "path": "reports\\technical\\denominadores.md",
@@ -120,35 +120,43 @@
     },
     {
       "path": "reports\\technical\\taxas_respiratorias.md",
-      "sha256": "669f68b4ab58aec28ad0dcf5339d263290d7a583ff0ca642cf2b7dfb27cc6be0"
+      "sha256": "df8f881131f85069b5730e481ba8e7685e97490cbc3d884bec4bc03ff20948c1"
     },
     {
       "path": "reports\\technical\\serie_interrompida_respiratoria.md",
-      "sha256": "e6efe2e084a2e2085e2c60759e5b179b371943c8bc34234e90f5d1cd034b70cf"
+      "sha256": "a28438f777417d4b41bc0a754dc215f7a28b83487a8932297784ffce1452d80d"
     },
     {
       "path": "reports\\technical\\desfechos_sim_sivep.md",
-      "sha256": "cbf7dc2c258bdc804524acd236ab3206058a4d738f62a5113b18fb9f7ea7cb74"
+      "sha256": "b3f0df228bc986c3c84cdf1094fc941efc76fc3c7d0629404cde28dab254ae1b"
     },
     {
       "path": "reports\\technical\\pandemia_sivep.md",
-      "sha256": "2d7749d5023693f43f861998507e0e5921e46ca10e781e77d8a669dcca8b1c7f"
+      "sha256": "54e7f0ceac6114fa6690a0edca89c09f70f7aa239145cb046b658d5efe802196"
     },
     {
       "path": "reports\\technical\\sivep_mensal.md",
-      "sha256": "8c7997c3d1859f458618ed8857e2cd99f8b5c75e186624134372272edc42fa92"
+      "sha256": "2a189dfd77c87799d704dc76e83f587b2663068aaa673e0f5ec2b7248e76e58b"
     },
     {
       "path": "reports\\technical\\mortalidade_sim.md",
-      "sha256": "582501259aa321babcccea101450ccd2d613de7f291e80203db944e5688af9f6"
+      "sha256": "f78162fba865ba27861bfbf1f7c59282734f4573c27a40d4cf04a93aa9b5b6d3"
     },
     {
       "path": "reports\\technical\\perfil_etario_sexual_sim.md",
-      "sha256": "e24247906f48499f113cf1ab530b02e5dbd5addf73502cb3e96575ee22ba4f9b"
+      "sha256": "3d753f43598a3a68f7e8f6aa79a9474f29024874b941bb5f5d764dd74917526b"
     },
     {
       "path": "reports\\technical\\taxas_sim_idade_sexo_2022.md",
-      "sha256": "a7eed2d825efd11cc8fcf1857e98b9e012ca84202121058854554ef49172add2"
+      "sha256": "ee4196db7a72508ef7d676b5c8fe23eb08ad98b3cd013539fda7cf9c7a6338ad"
+    },
+    {
+      "path": "reports\\technical\\diagnosticos_painel_oncologia.md",
+      "sha256": "5ff0cf0f19c9d45f4c362e2886d45ef36be197cb23945cb38f8f52d5a264be53"
+    },
+    {
+      "path": "reports\\quality\\painel_oncologia_diagnoses_manifest.json",
+      "sha256": "e5ad8404bc3e31199ac1e5d0b15bbda4942419a74f4997a8aa460407a7cf371b"
     },
     {
       "path": "reports\\quality\\sih_series_2008_2017.json",
@@ -172,11 +180,11 @@
     },
     {
       "path": "reports\\quality\\sih_morbidity_2008_2017.json",
-      "sha256": "be2b78cd5d463c0e6e2a808396d01134883d928277bb00f6e0e4c4047765bc22"
+      "sha256": "0579e38d7661844794dd6d43d947a5c99071da83c7a446149b84bb2a04079a71"
     },
     {
       "path": "reports\\quality\\sih_morbidity_2018_2026.json",
-      "sha256": "87db6258eb2f59e61d62dc51bb2b2c544b0fad9150dc53295cf1e86daff4bcea"
+      "sha256": "cc8471548036eb69500cc8150027930827728b4b348a39905050e0d3ef37b722"
     },
     {
       "path": "reports\\quality\\sih_morbidity_2024_2024.json",
@@ -308,6 +316,21 @@
       "path": "data\\raw\\ibge_sidra_9514_vr_2022.json",
       "bytes": 945,
       "sha256": "a9967cedd8616ac8cb51d979b91d11ab2a1cac739edf73a6a43a918fabe05d2a"
+    },
+    {
+      "path": "data\\raw\\painel_oncologia_rj_2013_2024.csv",
+      "bytes": 240,
+      "sha256": "95883f7ac82f8273219a56e13361522be85fc887b7424700330ab7dca292c566"
+    },
+    {
+      "path": "data\\raw\\painel_oncologia_vr_2013_2024.csv",
+      "bytes": 214,
+      "sha256": "8ff518759759570549c18defe21d1d3efb538b5695d6eebdf6ec53821f157a4b"
+    },
+    {
+      "path": "data\\raw\\painel_oncologia_vr_detalhado_2024.csv",
+      "bytes": 2884,
+      "sha256": "661983f109a911c4a91608a353de1d0be796fa70e2bd4ca4e18444eed414302e"
     },
     {
       "path": "data\\raw\\sih_tabnet_nrrj_2008_01.html",
@@ -3730,6 +3753,11 @@
       "sha256": "6b5f1b2dccc9a6bbe05af492b5011dee04f53f3edbe598f58845134ff034601d"
     },
     {
+      "path": "data\\raw\\sivep_2026_INFLUD26-27-07-2026.parquet",
+      "bytes": 13806135,
+      "sha256": "6584f741159f80b231d6ef54a03989dc0f6cfdd4028075aaa710b98e210894a6"
+    },
+    {
       "path": "data\\raw\\sivep_srag_2019_2026-03-23.parquet",
       "bytes": 3447406,
       "sha256": "748519f593d4438b94ba781320ec127e473594853a6aa25a90ef1c18338e761a"
@@ -3748,13 +3776,13 @@
     },
     {
       "path": "data\\interim\\sih_morbidity_2008_2017.csv",
-      "bytes": 604730,
-      "sha256": "fac4ff0a020d6717230b77c3617400d4995496677f15cb8536c6e20877d1aaa8"
+      "bytes": 1438120,
+      "sha256": "b28d4dfc8b7fb7aeca4a90a470e42f203c15025b3116727c56e567ce6a66f231"
     },
     {
       "path": "data\\interim\\sih_morbidity_2018_2026.csv",
-      "bytes": 509097,
-      "sha256": "4d82442080e1c5fa0a994766b7efcbdfee3e01a76d830a30321bcc16a0e0a5e5"
+      "bytes": 1210563,
+      "sha256": "be0c3911479f5635ddbbf91130a0686f391b145a5086ec1ba3b7c941480ae747"
     },
     {
       "path": "data\\interim\\sih_morbidity_2024_2024.csv",
@@ -3892,9 +3920,24 @@
       "sha256": "22227f3ed2fe885f493412270affce15fadf5b635a9e920483daa628bb02001a"
     },
     {
+      "path": "data\\interim\\sivep_2026_harmonized.parquet",
+      "bytes": 1923117,
+      "sha256": "afc08323ffb5ae63cc272cf35d0ab69c43537bd8e8c0824dc46e15bbf50d2c71"
+    },
+    {
       "path": "data\\processed\\outcome_counts_sim_sivep.parquet",
-      "bytes": 55556,
-      "sha256": "95283b8db2e2792c29d7d9b7d77c24ec6f81fde4dc002c455a7dd95239f96413"
+      "bytes": 103529,
+      "sha256": "4454834f0ff0852b9c1d66e22014c8e8c7101df3a432daa8425de3ee411a81c8"
+    },
+    {
+      "path": "data\\processed\\painel_oncologia_diagnoses.parquet",
+      "bytes": 6296,
+      "sha256": "09269477f801c73df49a6838473788905d67fab2024ec476aca40c95be10666d"
+    },
+    {
+      "path": "data\\processed\\painel_oncologia_diagnoses_detail_2024.parquet",
+      "bytes": 5059,
+      "sha256": "8f6c343116a8cf9611dd5fac1aea7c3fe1ead0977764837e4100c076a98a8394"
     },
     {
       "path": "data\\processed\\population_age_sex_2022.parquet",
@@ -3918,8 +3961,8 @@
     },
     {
       "path": "data\\processed\\respiratory_rates_annual.parquet",
-      "bytes": 33070,
-      "sha256": "2a13bde7d697c685f663acd15935d8ee73242a96636e690a8e511f00eec686ed"
+      "bytes": 61791,
+      "sha256": "740e07344fb7c4b428043c2e10333a70bfcbed16636906b10193e59e87baef0d"
     },
     {
       "path": "data\\processed\\sih_respiratory_interrupted_models.parquet",
@@ -3933,28 +3976,28 @@
     },
     {
       "path": "data\\processed\\sim_mortality_age_sex_profile.parquet",
-      "bytes": 70670,
-      "sha256": "11ae598020a21e5004e91f763fc95f3219b9e81c4d033245aac159733a097862"
+      "bytes": 215847,
+      "sha256": "34aeb8471987a113a65d4544766b9889f07e5263bf453d26028a588622e230c6"
     },
     {
       "path": "data\\processed\\sim_mortality_age_sex_rates_2022.parquet",
-      "bytes": 37621,
-      "sha256": "ab3bdebda51a25b72e5459f03e770bb3abdcc66d8a78ca25b6a7f921b008dc9b"
+      "bytes": 50028,
+      "sha256": "1c3017268a8781fff5b022a0ed45352674f5f99f671e0936bac7ca64efa75394"
     },
     {
       "path": "data\\processed\\sim_mortality_rates_sample.parquet",
-      "bytes": 57831,
-      "sha256": "763c052bc71ff5f8ac2adff66177bfca1ab743db0f71819e6dbf57c38387b91d"
+      "bytes": 114923,
+      "sha256": "aea1e7751bc47e9dd591a9d98b42809b6c60daaa01b355a19bfdfb13577489fc"
     },
     {
       "path": "data\\processed\\sivep_monthly_surveillance.parquet",
-      "bytes": 22146,
-      "sha256": "3bf7ab23f266ee0008564eb5408c325dacaf8677afc4278c231626f50c5a0744"
+      "bytes": 22919,
+      "sha256": "db5c1dd3702bc8bf6f2574749506c94c86068219c2877a8a019dd23a35c95c78"
     },
     {
       "path": "data\\processed\\sivep_surveillance_summary.parquet",
-      "bytes": 13792,
-      "sha256": "ce9fa253ca4856e74fa6b819c7516809c4604d8e19b76823c16b0a9fe34d406c"
+      "bytes": 14443,
+      "sha256": "38c94a5b2aff06731ff232d50857903db0b82af509bd6d06787366a0dbd2dc6b"
     }
   ],
   "results": [],

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T01:04:36+00:00",
+  "generated_at": "2026-08-03T14:32:51+00:00",
   "status": "sampled_sim_crude_mortality_rates_no_incidence_estimate",
   "observed_years": [
     2010,
@@ -19,6 +19,7 @@
     2024
   ],
   "available_years": [
+    2010,
     2011,
     2012,
     2013,
@@ -34,42 +35,56 @@
     2024
   ],
   "missing_denominator_years": [
-    2010,
     2023
   ],
   "outcome_ids": [
     "acute_bronchitis_bronchiolitis",
+    "acute_myocardial_infarction",
     "all_malignant_neoplasms",
     "asthma",
+    "bladder",
     "breast",
+    "cardiac_arrhythmia",
+    "cardio_all",
+    "cardiorespiratory_all",
+    "cerebrovascular",
+    "cervix",
     "colorectal",
     "copd",
+    "heart_failure",
+    "hypertension",
     "influenza",
+    "ischemic_heart_disease",
     "leukemia",
+    "liver",
     "lung",
+    "multiple_myeloma",
+    "myelodysplastic_syndromes",
     "non_hodgkin_lymphoma",
+    "pancreas",
     "pneumoconiosis",
     "pneumonia",
     "prostate",
-    "resp_all"
+    "pulmonary_embolism",
+    "resp_all",
+    "stomach"
   ],
   "coverage_status": "annual_sim_source_years_observed_2010_2024_rates_limited_by_denominator",
   "missing_source_years_between_2010_2024": [],
   "missing_rate_years_between_2010_2024": [
-    2010,
     2023
   ],
-  "rows": 680,
+  "rows": 1680,
   "output_path": "data\\processed\\sim_mortality_rates_sample.parquet",
-  "output_sha256": "763c052bc71ff5f8ac2adff66177bfca1ab743db0f71819e6dbf57c38387b91d",
+  "output_sha256": "3ca2678c2b976d0eba4f5f3919e6be988182d86b2b89518b8ee1cce58531c2ef",
   "input_files": [
     {
       "path": "data\\processed\\outcome_counts_sim_sivep.parquet",
-      "sha256": "95283b8db2e2792c29d7d9b7d77c24ec6f81fde4dc002c455a7dd95239f96413"
+      "sha256": "d92c57774ff503fb790870ae2f4a1f8a886198ab2e684e4b5c33282b2a8fae69"
     },
     {
       "path": "data\\processed\\population_denominators.parquet",
-      "sha256": "f683d66885397f3c5bd8799679feaeded3f37f0f852ff4fc1cefe10f4f775671"
+      "sha256": "713e0b8c8387c32e42da8a74c23e10df42ad73d9b2b11c397f5835571ba587d6"
     }
   ],
   "rules": {

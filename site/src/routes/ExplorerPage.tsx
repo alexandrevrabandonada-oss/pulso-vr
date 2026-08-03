@@ -6,10 +6,12 @@ import { LoadingState } from '../components/LoadingState'
 import { StatusNotice } from '../components/StatusNotice'
 import { TerritoryMap } from '../components/TerritoryMap'
 import { TimeSeriesChart } from '../components/TimeSeriesChart'
-import { usePortal } from '../context/PortalContext'
-import { loadSeries } from '../lib/data'
+import { usePortal } from '../context/usePortal'
+import { loadMap, loadSeries } from '../lib/data'
+import { deriveExplorerState, explorerStateSearch } from '../lib/explorerState'
 import { formatMetric, metricLabel, statusLabel } from '../lib/format'
-import type { MetricKind, Observation, Theme } from '../types'
+import { buildFilteredSeriesCsv, saveCsvFile } from '../lib/publicDownload'
+import type { Observation, Theme } from '../types'
 
 const GEO_ORDER = ['volta_redonda', 'rest_of_rj_excluding_vr', 'brazil_total']
 
@@ -18,21 +20,31 @@ export function ExplorerPage() {
   const [, navigate] = useLocation()
   const search = useSearch()
   const searchParams = useMemo(() => new URLSearchParams(search), [search])
-  const requestedId = searchParams.get('indicador') ?? 'sih-resp-all'
-  const indicator = catalog.indicators.find((item) => item.id === requestedId) ?? catalog.indicators[0]
-  const theme = (searchParams.get('tema') as Theme | null) ?? indicator.theme
-  const metric = (searchParams.get('medida') as MetricKind | null) ?? 'crude_rate_per_100k'
-  const territory = searchParams.get('territorio') ?? 'all'
-  const startYear = Number(searchParams.get('inicio') ?? indicator.yearStart)
-  const endYear = Number(searchParams.get('fim') ?? indicator.yearEnd)
+  const explorerState = useMemo(
+    () => deriveExplorerState(search, catalog.indicators),
+    [search, catalog.indicators],
+  )
+  const { indicator, theme, metric, territory, startYear, endYear } = explorerState
   const [observations, setObservations] = useState<Observation[] | null>(null)
+  const [mapPayload, setMapPayload] = useState<{ values: import('../types').MapValue[]; status: string } | null>(null)
   const [activeTab, setActiveTab] = useState<'map' | 'series'>('map')
   const activeGeographies = territory === 'all' ? GEO_ORDER : GEO_ORDER.filter((id) => id === territory)
 
   useEffect(() => {
+    const canonicalSearch = explorerStateSearch(explorerState)
+    if (canonicalSearch !== search) navigate(`/explorador?${canonicalSearch}`, { replace: true })
+  }, [explorerState, navigate, search])
+
+  useEffect(() => {
     let active = true
     setObservations(null)
-    loadSeries(indicator.id).then((payload) => { if (active) setObservations(payload.observations) })
+    setMapPayload(null)
+    Promise.all([loadSeries(indicator.id), loadMap(indicator.id)]).then(([seriesPayload, nextMap]) => {
+      if (active) {
+        setObservations(seriesPayload.observations)
+        setMapPayload({ values: nextMap.values, status: nextMap.status })
+      }
+    })
     return () => { active = false }
   }, [indicator.id])
 
@@ -66,12 +78,23 @@ export function ExplorerPage() {
     })
   }, [observations, startYear, endYear, metric])
   const provisional = observations?.some((item) => Number(item.period) >= startYear && Number(item.period) <= endYear && item.dataStatus === 'provisional') ?? false
+  const downloadFiltered = () => {
+    if (!observations) return
+    const csv = buildFilteredSeriesCsv(observations, {
+      indicatorId: indicator.id,
+      metric,
+      geographies: activeGeographies,
+      startYear,
+      endYear,
+    })
+    saveCsvFile(`observatorio-${indicator.id}-${startYear}-${endYear}.csv`, csv)
+  }
 
   return (
     <main className="explorer-page">
       <div className="explorer-title-row">
         <div><h1>Explorador de dados</h1><p>Compare territórios sem perder de vista fonte, unidade e grau de certeza.</p></div>
-        <span className="beta-status">Beta técnica · {release.releaseId}</span>
+        <span className="beta-status">{release.status === 'public_release_ready' ? 'Release aprovada' : 'Beta técnica'} · {release.releaseId}</span>
       </div>
       <ExplorerFilters
         theme={theme}
@@ -87,6 +110,7 @@ export function ExplorerPage() {
         onMetric={(value) => update({ medida: value })}
         onStartYear={(value) => update({ inicio: value })}
         onEndYear={(value) => update({ fim: value })}
+        onDownload={downloadFiltered}
       />
       <div className="mobile-view-tabs" role="tablist" aria-label="Visualização principal">
         <button role="tab" aria-selected={activeTab === 'map'} className={activeTab === 'map' ? 'is-active' : ''} onClick={() => setActiveTab('map')}>Mapa</button>
@@ -95,7 +119,7 @@ export function ExplorerPage() {
       {observations ? (
         <>
           <section className={`explorer-map-row${activeTab === 'series' ? ' is-mobile-hidden' : ''}`}>
-            <TerritoryMap topology={topology} />
+            <TerritoryMap topology={topology} values={mapPayload?.values} status={mapPayload?.status} />
             <aside className="comparison-panel">
               <h2>Comparação no período selecionado</h2>
               <p>{startYear} a {endYear} · {metricLabel(metric)}</p>

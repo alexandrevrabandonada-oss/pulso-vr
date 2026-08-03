@@ -1,4 +1,4 @@
-export type Theme = 'respiratory' | 'cancer'
+export type Theme = 'respiratory' | 'cardiovascular' | 'cardiorespiratory' | 'cancer'
 export type MetricKind = 'crude_rate_per_100k' | 'count'
 
 export interface Indicator {
@@ -19,6 +19,7 @@ export interface Indicator {
   yearEnd: number
   standardization: string
   mapStatus: string
+  profileAvailability?: 'available_2022_sim_age_sex' | 'not_applicable_current_release' | string
   allowsConclusion: string
   doesNotAllowConclusion: string
 }
@@ -65,6 +66,33 @@ export interface ProfilePayload {
   observations: ProfileObservation[]
 }
 
+export interface MapValue {
+  source: 'SIH' | 'SIM'
+  outcomeId: string
+  geographyId: string
+  period: string
+  metricKind: string
+  value: number | null
+  count: number | null
+  denominator: number
+  ciLow: number | null
+  ciHigh: number | null
+  dataStatus: string
+  periodStatus: string
+  manifestRef: string
+  suppressed: boolean
+  suppressionReason: string | null
+}
+
+export interface MapPayload {
+  schemaVersion: string
+  indicatorId: string
+  status: string
+  period?: string
+  values: MapValue[]
+  note: string
+}
+
 export interface Release {
   schemaVersion: string
   releaseId: string
@@ -77,11 +105,29 @@ export interface Release {
   coverage: {
     indicatorCount: number
     respiratoryStart: number
+    cardiovascularStart?: number
+    cardiorespiratoryStart?: number
     cancerStart: number
     latestObservedYear: number
     missingDenominatorYears: number[]
   }
   notes: string[]
+  readiness?: {
+    status: string
+    publicationAllowed: boolean
+    blockerCount: number
+    warningCount: number
+    indicatorCount: number
+    observations: number
+    suppressedObservations: number
+    profileObservations?: number
+    profileEligibleIndicators?: number
+    mapValues: number
+    sihIndicators: number
+    sihWithBrazilComparator: number
+    missingDenominatorYears: number[]
+    checkedAt: string
+  }
   artifacts: Array<{ path: string; bytes: number; sha256: string }>
 }
 

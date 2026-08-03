@@ -41,7 +41,13 @@ def _matches_cid(codes: pd.Series, ranges: list[str]) -> pd.Series:
     for expression in ranges:
         expression = expression.upper().replace(".", "").replace(" ", "")
         if "-" not in expression:
-            result |= codes.eq(expression)
+            # A three-character CID-10 category (e.g. C50) includes its
+            # four-character subcategories (e.g. C509). Longer expressions
+            # remain exact to preserve codes such as U071.
+            if len(expression) == 3:
+                result |= codes.str.startswith(expression)
+            else:
+                result |= codes.eq(expression)
             continue
         start, end = expression.split("-", 1)
         if len(start) < 3 or len(end) < 3 or start[0] != end[0]:
@@ -55,7 +61,7 @@ def _matches_cid(codes: pd.Series, ranges: list[str]) -> pd.Series:
 def _definitions(root: Path, source: str) -> list[dict[str, Any]]:
     config = load_config("outcomes.yml", root)
     definitions: list[dict[str, Any]] = []
-    for section in ("respiratory", "cancer"):
+    for section in ("respiratory", "cardiovascular", "cardiorespiratory", "cancer"):
         for item in config.get(section, []):
             if source in item.get("source", []) and item.get("code_ranges"):
                 definitions.append(item)
@@ -269,8 +275,9 @@ def _write_outcome_report(root: Path, data: pd.DataFrame, metadata: dict[str, An
         "- `covid19`: `CLASSI_FIN=5`.",
         "- `TP_IDADE=1/2/3` é tratado como dia/mês/ano para formar grupos etários amplos.",
         "",
-        "SIM 2010–2024 foi harmonizado como série anual adquirida; SIVEP 2019–2025 foi "
-        "adquirido em versões datadas. Causas múltiplas não são usadas para classificar estes resultados. "
+        "SIM 2010–2024 foi harmonizado como série anual adquirida; SIVEP 2019–2026 foi "
+        "adquirido em versões datadas, com 2026 parcial e provisório. Causas múltiplas não são usadas "
+        "para classificar estes resultados. "
         "Não há ajuste, padronização etária, incidência ou atribuição causal.",
     ]
     report.parent.mkdir(parents=True, exist_ok=True)

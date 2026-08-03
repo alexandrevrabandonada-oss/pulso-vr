@@ -1,0 +1,37 @@
+{
+  "source_id": "sih_tabnet_nrrj_morbidity",
+  "geography": "residência; RJ total, Volta Redonda e restante do RJ excluindo VR",
+  "municipality_code_datasus": "330630",
+  "period_start": "2018-01",
+  "period_end": "2025-12",
+  "rows": 4320,
+  "expected_rows": 4320,
+  "raw_response_count": 192,
+  "target_labels": {
+    "resp_all": "10 Doenças do aparelho respiratório",
+    "pneumonia": "Pneumonia",
+    "acute_bronchitis_bronchiolitis": "Bronquite aguda e bronquiolite aguda",
+    "copd": "Bronquite enfisema e outr doenç pulm obstr crôn",
+    "asthma": "Asma",
+    "pneumoconiosis": "Pneumoconiose",
+    "cardio_all": "Todas as doenças do aparelho circulatório",
+    "hypertension": "Doenças hipertensivas",
+    "ischemic_heart_disease": "Doenças isquêmicas do coração",
+    "acute_myocardial_infarction": "Infarto agudo do miocárdio",
+    "pulmonary_embolism": "Embolia pulmonar",
+    "cardiac_arrhythmia": "Transtornos de condução e arritmias cardíacas",
+    "heart_failure": "Insuficiência cardíaca",
+    "cerebrovascular": "Doenças cerebrovasculares",
+    "cardiorespiratory_all": "Todas as doenças cardiorrespiratórias"
+  },
+  "derived_comparator": "rj_total - volta_redonda",
+  "negative_values": [],
+  "status": "validated_structure_only_no_epidemiological_estimate",
+  "notes": [
+    "SIH counts are aggregated hospitalizations/AIH, not unique persons or incident cases.",
+    "Rest of RJ is algebraically derived after querying the RJ total and Volta Redonda by residence.",
+    "TabNet's Lista Morb CID-10 is used for named respiratory and cardiovascular groups; aggregate cardiovascular groups are sums of their displayed subcategories.",
+    "In the official TabNet legend, '-' is a numeric zero not resulting from rounding and is retained as 0.",
+    "No denominator, rate, confidence interval, or causal estimate is produced here."
+  ]
+}

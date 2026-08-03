@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-08-03T03:09:57+00:00",
+  "status": "descriptive_registered_diagnoses_not_population_incidence",
+  "years_observed": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "years_with_denominator": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2024
+  ],
+  "years_without_denominator": [
+    2023
+  ],
+  "total_cases_brazil_2013_2024": 3539971,
+  "total_cases_volta_redonda_2013_2024": 5813,
+  "total_cases_rj_2013_2024": 245558,
+  "total_cases_rest_of_rj_excluding_vr_2013_2024": 239745,
+  "mean_annual_registration_rate_per_100k": {
+    "brazil_total": 135.7,
+    "rest_of_rj_excluding_vr": 116.13,
+    "volta_redonda": 175.45
+  },
+  "outputs": [
+    {
+      "path": "data\\processed\\painel_oncologia_diagnoses.parquet",
+      "sha256": "5db1c0ffffe36f92c1c184ce39cd37df3c4ba1d0c96ff9ef73c0cf426b94b7b3",
+      "rows": 36
+    },
+    {
+      "path": "data\\processed\\painel_oncologia_diagnoses_detail_2024.parquet",
+      "sha256": "8f6c343116a8cf9611dd5fac1aea7c3fe1ead0977764837e4100c076a98a8394",
+      "rows": 51
+    },
+    {
+      "path": "reports\\technical\\diagnosticos_painel_oncologia.md",
+      "sha256": "ad25925e8b67fe04426854973ae2ce570abc8cc4ac17fdf397751cce7cc1b2d9"
+    }
+  ],
+  "input_files": [
+    {
+      "path": "data\\raw\\painel_oncologia_brasil_2013_2024.csv",
+      "sha256": "4d1982d9473966a997c2cac544daa81e2e9bc606a82f305610f162302b57173b"
+    },
+    {
+      "path": "data\\raw\\painel_oncologia_vr_2013_2024.csv",
+      "sha256": "8ff518759759570549c18defe21d1d3efb538b5695d6eebdf6ec53821f157a4b"
+    },
+    {
+      "path": "data\\raw\\painel_oncologia_rj_2013_2024.csv",
+      "sha256": "95883f7ac82f8273219a56e13361522be85fc887b7424700330ab7dca292c566"
+    },
+    {
+      "path": "data\\raw\\painel_oncologia_vr_detalhado_2024.csv",
+      "sha256": "661983f109a911c4a91608a353de1d0be796fa70e2bd4ca4e18444eed414302e"
+    }
+  ],
+  "rules": {
+    "territory": "municipality of residence; Volta Redonda=330630, rest of RJ excludes Volta Redonda, Brazil is the national total",
+    "panel_category": "Neoplasias Malignas (Lei no 12.732/12)",
+    "rate": "registered cases divided by resident population times 100,000; descriptive coverage-dependent measure",
+    "small_cells": "counts below five are omitted from the public technical table"
+  },
+  "notes": [
+    "Painel-Oncologia sources are SIA BPA-I/APAC, SIH and SISCAN.",
+    "The panel output is not treated as population incidence.",
+    "2020-2022 are marked as cancer care disruption years.",
+    "No causal inference or ecological attribution to CSN is authorized."
+  ]
+}

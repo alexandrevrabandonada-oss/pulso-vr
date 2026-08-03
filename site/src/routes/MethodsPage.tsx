@@ -1,4 +1,4 @@
-import { usePortal } from '../context/PortalContext'
+import { usePortal } from '../context/usePortal'
 
 export function MethodsPage() {
   const { release } = usePortal()

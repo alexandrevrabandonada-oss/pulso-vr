@@ -1,44 +1,30 @@
 from __future__ import annotations
 
 import json
-import math
 from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
-from scipy.stats import norm
-
 from .config import load_config
 from .provenance import sha256_file
-from .rates import RATE_MULTIPLIER, poisson_count_interval
+from .rates import RATE_MULTIPLIER, _rate_ratio_interval, poisson_count_interval
 
 
 GEOGRAPHIES = ["brazil_total", "rj_total", "volta_redonda", "rest_of_rj_excluding_vr"]
 ALPHA = 0.05
 
 
-def _rate_ratio_interval(
-    count_vr: int,
-    count_rest: int,
-    alpha: float = ALPHA,
-) -> tuple[float | None, float | None]:
-    if count_vr <= 0 or count_rest <= 0:
-        return None, None
-    ratio = count_vr / count_rest
-    z = float(norm.ppf(1 - alpha / 2))
-    standard_error = math.sqrt(1 / count_vr + 1 / count_rest)
-    return math.exp(math.log(ratio) - z * standard_error), math.exp(math.log(ratio) + z * standard_error)
-
-
-def _outcome_sections(root: Path) -> tuple[set[str], set[str]]:
+def _outcome_sections(root: Path) -> tuple[set[str], set[str], set[str], set[str]]:
     config = load_config("outcomes.yml", root)
     respiratory = {item["id"] for item in config.get("respiratory", []) if "SIM" in item.get("source", [])}
+    cardiovascular = {item["id"] for item in config.get("cardiovascular", []) if "SIM" in item.get("source", [])}
+    cardiorespiratory = {item["id"] for item in config.get("cardiorespiratory", []) if "SIM" in item.get("source", [])}
     cancer = {item["id"] for item in config.get("cancer", []) if "SIM" in item.get("source", [])}
-    return respiratory, cancer
+    return respiratory, cardiovascular, cardiorespiratory, cancer
 
 
 def period_status(root: Path, year: int, outcome_id: str) -> str:
-    respiratory, cancer = _outcome_sections(root)
+    respiratory, cardiovascular, cardiorespiratory, cancer = _outcome_sections(root)
     if outcome_id in cancer:
         if 2020 <= year <= 2022:
             return "cancer_care_disruption"
@@ -49,6 +35,16 @@ def period_status(root: Path, year: int, outcome_id: str) -> str:
             return "respiratory_pandemic"
         if year >= 2025:
             return "respiratory_provisional"
+    if outcome_id in cardiovascular:
+        if 2020 <= year <= 2021:
+            return "cardiovascular_pandemic_context"
+        if year >= 2025:
+            return "cardiovascular_provisional"
+    if outcome_id in cardiorespiratory:
+        if 2020 <= year <= 2021:
+            return "cardiorespiratory_pandemic_context"
+        if year >= 2025:
+            return "cardiorespiratory_provisional"
     return "source_year_observed"
 
 
@@ -134,7 +130,7 @@ def _build_rates(root: Path) -> tuple[pd.DataFrame, dict[str, object], Path, Pat
     comparison = counts.pivot_table(
         index=["source_year", "outcome_id"],
         columns="geography",
-        values=["count", "rate_per_100k"],
+        values=["count", "rate_per_100k", "population"],
         aggfunc="first",
     )
     comparison.columns = ["_".join(column).strip() for column in comparison.columns.to_flat_index()]
@@ -147,8 +143,13 @@ def _build_rates(root: Path) -> tuple[pd.DataFrame, dict[str, object], Path, Pat
         counts["rate_per_100k_volta_redonda"] - counts["rate_per_100k_rest_of_rj_excluding_vr"]
     )
     intervals = [
-        _rate_ratio_interval(int(vr), int(rest))
-        for vr, rest in zip(counts["count_volta_redonda"], counts["count_rest_of_rj_excluding_vr"])
+        _rate_ratio_interval(int(vr), int(rest), pop_vr, pop_rest)
+        for vr, rest, pop_vr, pop_rest in zip(
+            counts["count_volta_redonda"],
+            counts["count_rest_of_rj_excluding_vr"],
+            counts["population_volta_redonda"],
+            counts["population_rest_of_rj_excluding_vr"],
+        )
     ]
     counts["rate_ratio_ci_lower"] = [interval[0] for interval in intervals]
     counts["rate_ratio_ci_upper"] = [interval[1] for interval in intervals]
@@ -208,7 +209,7 @@ def _write_report(root: Path, rates: pd.DataFrame, metadata: dict[str, object]) 
         f"- Anos elegíveis para taxa após o denominador: **{metadata['available_years']}**.",
         f"- Anos observados sem denominador, excluídos sem interpolação: **{metadata['missing_denominator_years']}**.",
         f"- Anos sem taxa entre 2010 e 2024, sem interpolação: **{metadata['missing_rate_years_between_2010_2024']}**.",
-        "- Os arquivos SIM cobrem todos os anos de 2010 a 2024 nesta execução; as taxas não são contínuas porque 2010 e 2023 não têm denominador populacional disponível.",
+        "- Os arquivos SIM cobrem todos os anos de 2010 a 2024 nesta execução; 2010 usa o Censo 2010 e 2023 permanece sem denominador populacional compatível.",
         "- 2020 é marcado como interrupção assistencial para câncer e período pandêmico para causas respiratórias.",
         "- Células menores que cinco suprimem contagem, taxa e intervalo nesta apresentação.",
         "",

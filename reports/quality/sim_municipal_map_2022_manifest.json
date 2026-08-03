@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-08-03T13:25:46+00:00",
+  "status": "validated_sim_2022_municipal_residence_rates_crude",
+  "year": 2022,
+  "municipalities": 92,
+  "outcome_ids": [
+    "acute_bronchitis_bronchiolitis",
+    "acute_myocardial_infarction",
+    "all_malignant_neoplasms",
+    "asthma",
+    "bladder",
+    "breast",
+    "cardiac_arrhythmia",
+    "cardio_all",
+    "cardiorespiratory_all",
+    "cerebrovascular",
+    "cervix",
+    "colorectal",
+    "copd",
+    "covid19",
+    "heart_failure",
+    "hypertension",
+    "influenza",
+    "ischemic_heart_disease",
+    "leukemia",
+    "liver",
+    "lung",
+    "multiple_myeloma",
+    "myelodysplastic_syndromes",
+    "non_hodgkin_lymphoma",
+    "pancreas",
+    "pneumoconiosis",
+    "pneumonia",
+    "prostate",
+    "pulmonary_embolism",
+    "resp_all",
+    "stomach"
+  ],
+  "rows": 2852,
+  "suppressed_cells_lt_5": 1457,
+  "output_path": "data\\processed\\sim_municipal_map_rates_2022.parquet",
+  "output_sha256": "d4613bf2c534eb628c568bde92067d90d828044b1d3029c61a36935f2664ab63",
+  "input_files": [
+    {
+      "path": "data\\raw\\sim_2022_DO22OPEN.csv",
+      "sha256": "044568561aa08b8c93aafbe2eaa13e10ff4234fac37f8d30b917e4c3562f3f7d"
+    },
+    {
+      "path": "data/processed/population_rj_municipality.parquet",
+      "sha256": "8404f579875498adddecdb244df78603a67ebb410c611bc87bb2bb7dab5b7173"
+    }
+  ],
+  "rules": {
+    "residence": "CODMUNRES DATASUS six-digit code mapped to IBGE seven-digit municipality code",
+    "rate": "SIM underlying-cause deaths of residents divided by Censo 2022 resident population times 100,000",
+    "interval": "exact Poisson 95% interval",
+    "suppression": "count < 5 is withheld before portal publication"
+  },
+  "notes": [
+    "This is a 2022 municipal snapshot, not a continuous time series.",
+    "SIM cancer mortality is not incidence.",
+    "No causal inference or attribution to CSN is produced."
+  ]
+}

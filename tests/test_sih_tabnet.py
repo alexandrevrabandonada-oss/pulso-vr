@@ -10,6 +10,7 @@ DEFINITION = """
 def test_tabnet_definition_parsing():
     assert _definition_municipality_value(DEFINITION, "330630") == "93"
     assert _archive_value(DEFINITION, 2024, 1) == "nrrj2401.dbf"
+    assert _archive_value(DEFINITION.replace("nrrj", "nrbr"), 2024, 1, prefix="nrbr") == "nrbr2401.dbf"
 
 
 def test_tabnet_result_parsing():

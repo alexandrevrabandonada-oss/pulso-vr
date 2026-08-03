@@ -1,15 +1,15 @@
 # Denominadores populacionais
 
-Execução: 2026-08-03T00:56:57+00:00
+Execução: 2026-08-03T14:29:13+00:00
 
 ## Regra
 
 A população anual é obtida da SIDRA. A tabela 6579 é usada para estimativas anuais; 2022 usa a população residente observada no Censo da tabela 9514. A soma do RJ é feita a partir dos municípios cujo código IBGE começa por 33, e o comparador é essa soma menos Volta Redonda.
 
 - Anos solicitados: **2008–2025**.
-- Anos disponíveis: **2008, 2009, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024, 2025**.
-- Anos ausentes, sem interpolação: **2010, 2023**.
-- Linhas municipais RJ: **1472**.
+- Anos disponíveis: **2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024, 2025**.
+- Anos ausentes, sem interpolação: **2023**.
+- Linhas municipais RJ: **1564**.
 
 ## Denominadores agregados
 
@@ -23,6 +23,10 @@ A população anual é obtida da SIDRA. A tabela 6579 é usada para estimativas 
 | 2009 | rest_of_rj_excluding_vr | 15749026 | annual_estimate |
 | 2009 | rj_total | 16010429 | annual_estimate |
 | 2009 | volta_redonda | 261403 | annual_estimate |
+| 2010 | brazil_total | 190755799 | census_2010 |
+| 2010 | rest_of_rj_excluding_vr | 15732126 | census_2010 |
+| 2010 | rj_total | 15989929 | census_2010 |
+| 2010 | volta_redonda | 257803 | census_2010 |
 | 2011 | brazil_total | 192379287 | annual_estimate |
 | 2011 | rest_of_rj_excluding_vr | 15853666 | annual_estimate |
 | 2011 | rj_total | 16112678 | annual_estimate |

@@ -50,10 +50,16 @@ def _load_denominators(root: Path) -> pd.DataFrame:
     return data
 
 
-def _rate_ratio_interval(count_vr: int, count_rest: int, alpha: float = ALPHA) -> tuple[float | None, float | None]:
-    if count_vr <= 0 or count_rest <= 0:
+def _rate_ratio_interval(
+    count_vr: int,
+    count_rest: int,
+    population_vr: int | float,
+    population_rest: int | float,
+    alpha: float = ALPHA,
+) -> tuple[float | None, float | None]:
+    if count_vr <= 0 or count_rest <= 0 or population_vr <= 0 or population_rest <= 0:
         return None, None
-    ratio = count_vr / count_rest
+    ratio = (count_vr / population_vr) / (count_rest / population_rest)
     z = float(norm.ppf(1 - alpha / 2))
     standard_error = math.sqrt(1 / count_vr + 1 / count_rest)
     return math.exp(math.log(ratio) - z * standard_error), math.exp(math.log(ratio) + z * standard_error)
@@ -96,7 +102,7 @@ def _annual_rate_frame(root: Path) -> tuple[pd.DataFrame, dict[str, object], lis
     comparison = counts.pivot_table(
         index=["year", "outcome_id"],
         columns="geography",
-        values=["count", "rate_per_100k"],
+        values=["count", "rate_per_100k", "denominator"],
         aggfunc="first",
     )
     comparison.columns = ["_".join(column).strip() for column in comparison.columns.to_flat_index()]
@@ -105,8 +111,13 @@ def _annual_rate_frame(root: Path) -> tuple[pd.DataFrame, dict[str, object], lis
     counts["rate_ratio_vr_vs_rest"] = counts["rate_per_100k_volta_redonda"] / counts["rate_per_100k_rest_of_rj_excluding_vr"]
     counts["rate_difference_vr_minus_rest_per_100k"] = counts["rate_per_100k_volta_redonda"] - counts["rate_per_100k_rest_of_rj_excluding_vr"]
     ratio_intervals = [
-        _rate_ratio_interval(int(vr), int(rest))
-        for vr, rest in zip(counts["count_volta_redonda"], counts["count_rest_of_rj_excluding_vr"])
+        _rate_ratio_interval(int(vr), int(rest), pop_vr, pop_rest)
+        for vr, rest, pop_vr, pop_rest in zip(
+            counts["count_volta_redonda"],
+            counts["count_rest_of_rj_excluding_vr"],
+            counts["denominator_volta_redonda"],
+            counts["denominator_rest_of_rj_excluding_vr"],
+        )
     ]
     counts["rate_ratio_ci_lower"] = [interval[0] for interval in ratio_intervals]
     counts["rate_ratio_ci_upper"] = [interval[1] for interval in ratio_intervals]

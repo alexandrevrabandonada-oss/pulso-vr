@@ -1,16 +1,19 @@
-import type { Catalog, ProfilePayload, Release, SeriesPayload } from '../types'
+import type { Catalog, MapPayload, ProfilePayload, Release, SeriesPayload } from '../types'
 
 const jsonCache = new Map<string, Promise<unknown>>()
 
 async function fetchJson<T>(path: string): Promise<T> {
   if (!jsonCache.has(path)) {
-    jsonCache.set(
-      path,
-      fetch(path).then(async (response) => {
+    const request = fetch(path)
+      .then(async (response) => {
         if (!response.ok) throw new Error(`Falha ao carregar ${path}: ${response.status}`)
         return response.json()
-      }),
-    )
+      })
+      .catch((error) => {
+        jsonCache.delete(path)
+        throw error
+      })
+    jsonCache.set(path, request)
   }
   return jsonCache.get(path) as Promise<T>
 }
@@ -29,4 +32,8 @@ export function loadSeries(indicatorId: string) {
 
 export function loadProfile(indicatorId: string) {
   return fetchJson<ProfilePayload>(`/data/profiles/${indicatorId}.json`)
+}
+
+export function loadMap(indicatorId: string) {
+  return fetchJson<MapPayload>(`/data/maps/rj/${indicatorId}.json`)
 }

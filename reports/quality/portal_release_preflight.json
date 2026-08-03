@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0.0",
+  "checkedAt": "2026-08-03T14:47:33+00:00",
+  "releaseId": "beta-cardiorespiratorio-integrado",
+  "status": "public_release_ready",
+  "publicationAllowed": true,
+  "summary": {
+    "blockerCount": 0,
+    "warningCount": 3,
+    "indicatorCount": 45,
+    "seriesFiles": 45,
+    "profileFiles": 45,
+    "mapFiles": 45,
+    "observations": 2700,
+    "suppressedObservations": 93,
+    "profileObservations": 1440,
+    "profileEligibleIndicators": 30,
+    "mapValues": 2499,
+    "mapSuppressedValues": 1641,
+    "sihIndicators": 15,
+    "sihWithBrazilComparator": 15,
+    "missingDenominatorYears": [
+      2023
+    ],
+    "downloadSuppressionLeaks": 0
+  },
+  "checks": {
+    "requiredObservationFields": [
+      "ciHigh",
+      "ciLow",
+      "count",
+      "dataStatus",
+      "denominator",
+      "geographyId",
+      "manifestRef",
+      "metricKind",
+      "outcomeId",
+      "period",
+      "periodStatus",
+      "source",
+      "suppressed",
+      "value"
+    ],
+    "schemaMissing": [],
+    "unsuppressedSmallCells": [],
+    "downloadSuppressionLeaks": [],
+    "mapStatusCounts": {
+      "validated_sih_2022_municipal_residence_rates_crude": 15,
+      "validated_sim_2022_municipal_residence_rates_crude": 30
+    },
+    "sourceCounts": {
+      "SIH": 1020,
+      "SIM": 1680
+    },
+    "dataStatusCounts": {
+      "source_observed": 2640,
+      "provisional": 60
+    },
+    "pendingPublicationGates": [],
+    "nonVerifiedSources": [
+      {
+        "sourceId": "sih_legacy_ftp",
+        "status": "failed_initial_check"
+      },
+      {
+        "sourceId": "inmet",
+        "status": "pending_endpoint"
+      },
+      {
+        "sourceId": "rhc",
+        "status": "to_request"
+      },
+      {
+        "sourceId": "occupational_data",
+        "status": "to_request"
+      }
+    ]
+  },
+  "indicatorsWithoutProfiles": [],
+  "profileEligibleIndicators": [
+    "sim-acute-bronchitis-bronchiolitis",
+    "sim-acute-myocardial-infarction",
+    "sim-all-malignant-neoplasms",
+    "sim-asthma",
+    "sim-bladder",
+    "sim-breast",
+    "sim-cardiac-arrhythmia",
+    "sim-cardio-all",
+    "sim-cardiorespiratory-all",
+    "sim-cerebrovascular",
+    "sim-cervix",
+    "sim-colorectal",
+    "sim-copd",
+    "sim-heart-failure",
+    "sim-hypertension",
+    "sim-influenza",
+    "sim-ischemic-heart-disease",
+    "sim-leukemia",
+    "sim-liver",
+    "sim-lung",
+    "sim-multiple-myeloma",
+    "sim-myelodysplastic-syndromes",
+    "sim-non-hodgkin-lymphoma",
+    "sim-pancreas",
+    "sim-pneumoconiosis",
+    "sim-pneumonia",
+    "sim-prostate",
+    "sim-pulmonary-embolism",
+    "sim-resp-all",
+    "sim-stomach"
+  ],
+  "indicatorsWithoutMaps": [],
+  "findings": [
+    {
+      "id": "denominator-gaps",
+      "severity": "warning",
+      "title": "Existem anos sem denominador oficial",
+      "detail": "2023",
+      "action": "Manter esses anos como lacunas; para 2023, monitorar eventual publicação oficial compatível e regenerar as séries somente após validação, sem interpolar."
+    },
+    {
+      "id": "source-catalog-open-items",
+      "severity": "warning",
+      "title": "O catálogo de fontes ainda tem itens fora de verified",
+      "detail": "sih_legacy_ftp=failed_initial_check, inmet=pending_endpoint, rhc=to_request, occupational_data=to_request",
+      "action": "Resolver ou marcar claramente como fonte futura fora do escopo da release."
+    },
+    {
+      "id": "provisional-observations",
+      "severity": "warning",
+      "title": "A série contém observações provisórias",
+      "detail": "60 observações com dataStatus=provisional.",
+      "action": "Manter o rótulo provisório e indicar a data de atualização da fonte."
+    }
+  ],
+  "nextActions": [
+    "Manter esses anos como lacunas; para 2023, monitorar eventual publicação oficial compatível e regenerar as séries somente após validação, sem interpolar.",
+    "Resolver ou marcar claramente como fonte futura fora do escopo da release.",
+    "Manter o rótulo provisório e indicar a data de atualização da fonte."
+  ]
+}

@@ -1,6 +1,6 @@
 import { AlertCircle, ArrowLeft, CheckCircle2, Database, ExternalLink } from 'lucide-react'
 import { Link, useParams } from 'wouter'
-import { usePortal } from '../context/PortalContext'
+import { usePortal } from '../context/usePortal'
 
 export function IndicatorPage() {
   const { id } = useParams()

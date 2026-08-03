@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-03T00:02:02+00:00",
+  "generated_at": "2026-08-03T02:19:22+00:00",
   "status": "descriptive_sim_age_sex_profile_no_specific_rates",
-  "rows": 6207,
+  "rows": 18991,
   "available_years": [
     2010,
     2011,
@@ -23,28 +23,38 @@
     "acute_bronchitis_bronchiolitis",
     "all_malignant_neoplasms",
     "asthma",
+    "bladder",
+    "breast",
+    "cervix",
     "colorectal",
     "copd",
     "influenza",
     "leukemia",
+    "liver",
     "lung",
+    "multiple_myeloma",
+    "myelodysplastic_syndromes",
     "non_hodgkin_lymphoma",
+    "pancreas",
     "pneumoconiosis",
     "pneumonia",
     "prostate",
-    "resp_all"
+    "resp_all",
+    "stomach"
   ],
   "geographies": [
+    "brazil_total",
+    "rest_of_brazil_excluding_rj",
     "rest_of_rj_excluding_vr",
     "rj_total",
     "volta_redonda"
   ],
   "output_path": "data\\processed\\sim_mortality_age_sex_profile.parquet",
-  "output_sha256": "11ae598020a21e5004e91f763fc95f3219b9e81c4d033245aac159733a097862",
+  "output_sha256": "34aeb8471987a113a65d4544766b9889f07e5263bf453d26028a588622e230c6",
   "input_files": [
     {
       "path": "data\\processed\\outcome_counts_sim_sivep.parquet",
-      "sha256": "5609061246398e2b6f2707c1b492a2e56c1e8afd693100aa288c30cf8f765d16"
+      "sha256": "b5e8582640f2dd78ee36819156d18fcc678b615faecc5ac11db6086882e41f2d"
     }
   ],
   "rules": {

@@ -1,6 +1,6 @@
 # Série temporal interrompida — internações respiratórias do SIH
 
-Execução: 2026-08-03T01:37:30+00:00
+Execução: 2026-08-03T03:02:02+00:00
 
 O modelo usa contagens mensais de internações/AIH de residentes, com offset da população anual dividida por 12, indicadores de março de 2020 e tendência pós-intervenção, além de indicadores mensais de sazonalidade. Os intervalos usam covariância robusta HAC com 12 defasagens quando disponível.
 
@@ -35,8 +35,8 @@ Células com menos de cinco eventos totais não são publicadas. As estimativas 
 
 ## Proveniência
 
-- `data\interim\sih_morbidity_2008_2017.csv` — SHA-256 `fac4ff0a020d6717230b77c3617400d4995496677f15cb8536c6e20877d1aaa8`
-- `data\interim\sih_morbidity_2018_2026.csv` — SHA-256 `4d82442080e1c5fa0a994766b7efcbdfee3e01a76d830a30321bcc16a0e0a5e5`
+- `data\interim\sih_morbidity_2008_2017.csv` — SHA-256 `b28d4dfc8b7fb7aeca4a90a470e42f203c15025b3116727c56e567ce6a66f231`
+- `data\interim\sih_morbidity_2018_2026.csv` — SHA-256 `be0c3911479f5635ddbbf91130a0686f391b145a5086ec1ba3b7c941480ae747`
 - `data\interim\sih_morbidity_2024_2024.csv` — SHA-256 `77038aa2aa0b531fbe39f27b270d73cf14a6871df2c7eb8a39bd0d15a112b705`
 
 A ausência de dados de idade/sexo no SIH impede taxas específicas neste produto; as taxas específicas SIM 2022 são um produto separado. Nenhuma associação ecológica é atribuída à CSN.

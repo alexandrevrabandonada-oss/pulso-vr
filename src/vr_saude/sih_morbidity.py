@@ -24,6 +24,10 @@ from .sih_tabnet import (
 )
 
 
+SIH_BRAZIL_RESIDENCE_DEF_URL = "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sih/cnv/nrbr"
+SIH_BRAZIL_RESIDENCE_QUERY_URL = "http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sih/cnv/nrbr"
+
+
 ALL_MUNICIPALITIES_VALUE = "TODAS_AS_CATEGORIAS__"
 MORBIDITY_LINE = "Lista_Morb__CID-10"
 TARGET_LABELS = {
@@ -33,6 +37,38 @@ TARGET_LABELS = {
     "copd": "Bronquite enfisema e outr doenç pulm obstr crôn",
     "asthma": "Asma",
     "pneumoconiosis": "Pneumoconiose",
+    "cardio_all": "Todas as doenças do aparelho circulatório",
+    "hypertension": "Doenças hipertensivas",
+    "ischemic_heart_disease": "Doenças isquêmicas do coração",
+    "acute_myocardial_infarction": "Infarto agudo do miocárdio",
+    "pulmonary_embolism": "Embolia pulmonar",
+    "cardiac_arrhythmia": "Transtornos de condução e arritmias cardíacas",
+    "heart_failure": "Insuficiência cardíaca",
+    "cerebrovascular": "Doenças cerebrovasculares",
+    "cardiorespiratory_all": "Todas as doenças cardiorrespiratórias",
+}
+CARDIOVASCULAR_COMPONENTS = {
+    "cardio_all": ("cardio_all",),
+    "hypertension": ("hypertension_essential", "hypertension_other"),
+    "ischemic_heart_disease": ("acute_myocardial_infarction", "ischemic_heart_disease_other"),
+    "acute_myocardial_infarction": ("acute_myocardial_infarction",),
+    "pulmonary_embolism": ("pulmonary_embolism",),
+    "cardiac_arrhythmia": ("cardiac_arrhythmia",),
+    "heart_failure": ("heart_failure",),
+    "cerebrovascular": (
+        "cerebrovascular_hemorrhage",
+        "cerebrovascular_infarction",
+        "cerebrovascular_unspecified",
+        "cerebrovascular_other",
+    ),
+}
+RESPIRATORY_TARGET_IDS = {
+    "resp_all",
+    "pneumonia",
+    "acute_bronchitis_bronchiolitis",
+    "copd",
+    "asthma",
+    "pneumoconiosis",
 }
 
 
@@ -57,6 +93,10 @@ def _canonical(value: str) -> str:
 
 def _target_id(label: str) -> str | None:
     canonical = _canonical(label)
+    # Transient cerebral ischemia (G45) is outside the configured I60-I69
+    # cerebrovascular outcome; do not fold it into that aggregate.
+    if "isquem transit" in canonical or "sindr cor" in canonical:
+        return None
     if canonical.startswith("10 doencas do aparelho respiratorio"):
         return "resp_all"
     if canonical == "pneumonia":
@@ -69,6 +109,30 @@ def _target_id(label: str) -> str | None:
         return "asthma"
     if canonical.startswith("pneumoconiose"):
         return "pneumoconiosis"
+    if canonical.startswith("09 doencas do aparelho circulatorio"):
+        return "cardio_all"
+    if canonical.startswith("hipertensao essencial"):
+        return "hypertension_essential"
+    if canonical.startswith("outras doencas hipertensivas"):
+        return "hypertension_other"
+    if canonical.startswith("infarto agudo do miocardio"):
+        return "acute_myocardial_infarction"
+    if canonical.startswith("outras doencas isquemicas do coracao"):
+        return "ischemic_heart_disease_other"
+    if canonical.startswith("embolia pulmonar"):
+        return "pulmonary_embolism"
+    if canonical.startswith("transtornos de conducao e arritmias cardiacas"):
+        return "cardiac_arrhythmia"
+    if canonical.startswith("insuficiencia cardiaca"):
+        return "heart_failure"
+    if canonical.startswith("hemorragia intracraniana"):
+        return "cerebrovascular_hemorrhage"
+    if canonical.startswith("infarto cerebral"):
+        return "cerebrovascular_infarction"
+    if canonical.startswith("acid vascular cerebr"):
+        return "cerebrovascular_unspecified"
+    if canonical.startswith("outras doencas cerebrovasculares"):
+        return "cerebrovascular_other"
     return None
 
 
@@ -78,6 +142,7 @@ def _parse_rows(response: str) -> tuple[dict[str, int], dict[str, str]]:
         raise ValueError("SIH TabNet morbidity response did not contain a PRE table")
     rows: dict[str, int] = {}
     labels: dict[str, str] = {}
+    components: dict[str, int] = {}
     for raw_line in html.unescape(match.group(1)).splitlines():
         line = raw_line.strip()
         if not line.startswith('"') or ";" not in line:
@@ -93,8 +158,19 @@ def _parse_rows(response: str) -> tuple[dict[str, int], dict[str, str]]:
             continue
         raw_value = label_match.group(2)
         value = 0 if raw_value == "-" else int(raw_value.replace(".", "").replace(",", ""))
-        rows[target_id] = value
-        labels[target_id] = label
+        if target_id in RESPIRATORY_TARGET_IDS:
+            rows[target_id] = value
+            labels[target_id] = label
+        else:
+            components[target_id] = components.get(target_id, 0) + value
+    for outcome_id, component_ids in CARDIOVASCULAR_COMPONENTS.items():
+        matched = [components[component_id] for component_id in component_ids if component_id in components]
+        if matched:
+            rows[outcome_id] = sum(matched)
+            labels[outcome_id] = TARGET_LABELS[outcome_id]
+    if "resp_all" in rows and "cardio_all" in rows:
+        rows["cardiorespiratory_all"] = rows["resp_all"] + rows["cardio_all"]
+        labels["cardiorespiratory_all"] = TARGET_LABELS["cardiorespiratory_all"]
     return rows, labels
 
 
@@ -402,12 +478,162 @@ def query_morbidity_series(
         "notes": [
             "SIH counts are aggregated hospitalizations/AIH, not unique persons or incident cases.",
             "Rest of RJ is algebraically derived after querying the RJ total and Volta Redonda by residence.",
-            "TabNet's Lista Morb CID-10 is used for the named respiratory groups; exact CID audit remains required.",
+            "TabNet's Lista Morb CID-10 is used for named respiratory and cardiovascular groups; aggregate cardiovascular groups are sums of their displayed subcategories.",
             "In the official TabNet legend, '-' is a numeric zero not resulting from rounding and is retained as 0.",
             "No denominator, rate, confidence interval, or causal estimate is produced here.",
         ],
     }
     report_path = root / "reports" / "quality" / f"sih_morbidity_{start_year}_{end_year}.json"
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return destination, report_path
+
+
+def _national_raw_path(root: Path, year: int, month: int) -> Path:
+    return root / "data" / "raw" / f"sih_tabnet_nrbr_morbidity_brazil_total_{year}_{month:02d}.html"
+
+
+def _query_national_and_save(
+    root: Path,
+    definition: str,
+    period: tuple[int, int],
+    timeout: int,
+) -> tuple[tuple[dict[str, int], dict[str, str]], Path]:
+    year, month = period
+    destination = _national_raw_path(root, year, month)
+    sidecar = Path(f"{destination}.sha256")
+    if destination.exists():
+        if not sidecar.exists():
+            raise FileExistsError(f"raw response exists without hash sidecar: {destination}")
+        declared = sidecar.read_text(encoding="utf-8").split()[0]
+        actual = sha256_file(destination)
+        if actual != declared:
+            raise FileExistsError(f"raw response exists with hash mismatch: {destination}")
+        payload = destination.read_bytes()
+        return _parse_rows(payload.decode("latin1")), destination
+
+    archive = _archive_value(definition, year, month, prefix="nrbr")
+    fields = [
+        ("Linha", MORBIDITY_LINE),
+        ("Coluna", "--Não-Ativa--"),
+        ("Incremento", "Internações"),
+        ("Arquivos", archive),
+        ("SMunicípio", ALL_MUNICIPALITIES_VALUE),
+        ("zeradas", "exibirlz"),
+        ("formato", "prn"),
+        ("mostre", "Mostra"),
+    ]
+    body = urllib.parse.urlencode(fields, encoding="latin1").encode("ascii")
+    request = urllib.request.Request(
+        SIH_BRAZIL_RESIDENCE_QUERY_URL,
+        data=body,
+        method="POST",
+        headers={"Content-Type": "application/x-www-form-urlencoded", "User-Agent": USER_AGENT},
+    )
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        payload = response.read()
+    decoded = payload.decode("latin1")
+    if "Tabela de conversao nao encontrada" in decoded or "Exception" in decoded:
+        raise ValueError(f"SIH TabNet rejected Brazil morbidity query for {year}-{month:02d}")
+    rows, labels = _parse_rows(decoded)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_bytes(payload)
+    write_sha256_sidecar(destination, sha256_file(destination))
+    append_extraction_log(
+        root,
+        {
+            "extraction_id": f"sih_tabnet_nrbr_morbidity_brazil_total_{year}_{month:02d}",
+            "source_id": "sih_tabnet_nrbr_morbidity",
+            "operation": "tabnet_post_morbidity_list",
+            "requested_period": f"{year}-{month:02d}",
+            "territory": "brazil_total",
+            "started_at": utc_now(),
+            "finished_at": utc_now(),
+            "status": "downloaded",
+            "records": sum(rows.values()),
+            "sha256": sha256_file(destination),
+            "raw_path": str(destination.relative_to(root)),
+            "validation_summary": "TabNet Brasil por município de residência agregado; HTML preservado",
+        },
+    )
+    return (rows, labels), destination
+
+
+def query_national_morbidity_series(
+    root: Path,
+    start_year: int,
+    start_month: int,
+    end_year: int,
+    end_month: int,
+    workers: int = 2,
+    timeout: int = 60,
+) -> tuple[Path, Path]:
+    """Acquire Brazil-total SIH morbidity counts using the official NRBR table."""
+    if workers < 1 or workers > 8:
+        raise ValueError("workers must be between 1 and 8")
+    periods = _periods(start_year, start_month, end_year, end_month)
+    if len(periods) > 240:
+        raise ValueError("a single national morbidity series query is limited to 240 months")
+    definition = _get(SIH_BRAZIL_RESIDENCE_DEF_URL, timeout).decode("latin1")
+    results: dict[tuple[int, int], tuple[tuple[dict[str, int], dict[str, str]], Path]] = {}
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = {
+            executor.submit(_query_national_and_save, root, definition, period, timeout): period
+            for period in periods
+        }
+        for future in as_completed(futures):
+            results[futures[future]] = future.result()
+
+    rows: list[dict[str, object]] = []
+    for year, month in periods:
+        (counts, labels), raw_path = results[(year, month)]
+        raw_hash = sha256_file(raw_path)
+        for outcome_id, value in counts.items():
+            rows.append(
+                {
+                    "year": year,
+                    "month": month,
+                    "period": f"{year:04d}-{month:02d}",
+                    "geography": "brazil_total",
+                    "municipality_code_datasus": "BR",
+                    "outcome_id": outcome_id,
+                    "outcome_label": TARGET_LABELS.get(outcome_id, labels.get(outcome_id, outcome_id)),
+                    "value": value,
+                    "unit": "internações agregadas pelo SIH",
+                    "source_paths": str(raw_path.relative_to(root)),
+                    "source_sha256s": raw_hash,
+                }
+            )
+    destination = root / "data" / "interim" / f"sih_morbidity_brazil_{start_year}_{end_year}.csv"
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    fields = [
+        "year", "month", "period", "geography", "municipality_code_datasus", "outcome_id",
+        "outcome_label", "value", "unit", "source_paths", "source_sha256s",
+    ]
+    with destination.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(rows)
+    expected_periods = len(periods)
+    report = {
+        "source_id": "sih_tabnet_nrbr_morbidity",
+        "geography": "Brasil total por município de residência",
+        "period_start": f"{start_year:04d}-{start_month:02d}",
+        "period_end": f"{end_year:04d}-{end_month:02d}",
+        "rows": len(rows),
+        "raw_response_count": len(results),
+        "period_count": expected_periods,
+        "outcome_count_by_period": {
+            f"{year:04d}-{month:02d}": len(results[(year, month)][0]) for year, month in periods
+        },
+        "status": "validated_structure_only_no_epidemiological_estimate",
+        "notes": [
+            "Counts are aggregated SIH hospitalizations/AIH by residence, not unique persons.",
+            "The NRBR table is the official Brazil residence table and uses the same Lista Morb CID-10 groups as the RJ query.",
+            "This artifact does not publish rates until annual denominators and reconciliation pass the same checks as the RJ series.",
+        ],
+    }
+    report_path = root / "reports" / "quality" / f"sih_morbidity_brazil_{start_year}_{end_year}.json"
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return destination, report_path

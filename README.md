@@ -1,8 +1,8 @@
 # vr_saude_ambiental
 
-Estudo reproduzível sobre internações respiratórias, pandemia, poluição,
-mortalidade por câncer, assistência oncológica e exposição ocupacional em
-Volta Redonda, Rio de Janeiro.
+Estudo reproduzível sobre internações respiratórias e cardiovasculares,
+pandemia, poluição, mortalidade por câncer, assistência oncológica e exposição
+ocupacional em Volta Redonda, Rio de Janeiro.
 
 ## Status da primeira execução
 
@@ -25,6 +25,10 @@ do município. O código IBGE de Volta Redonda usado no SIDRA é `3306305`.
 Os períodos completos estão em `config/periods.yml`. Março de 2020 é a ruptura
 da análise respiratória; 2020–2022 é período de interrupção assistencial para
 câncer; 2025–2026 ou 2025 em diante são provisórios conforme a fonte.
+As doenças cardiovasculares têm uma série própria, com 2020–2021 marcado como
+contexto pandêmico, sem ser tratado como ruptura causal.
+Também há uma série integrada cardiorrespiratória (I00–I99 + J00–J99),
+mantendo os componentes respiratório e cardiovascular disponíveis separadamente.
 
 ## Instalação e execução
 
@@ -70,7 +74,11 @@ python scripts/run_cli.py sivep-monthly
 python scripts/run_cli.py sim-mortality-rates
 python scripts/run_cli.py sim-age-sex-profile
 python scripts/run_cli.py sim-age-sex-rates
+python scripts/run_cli.py sim-municipal-map
 python scripts/run_cli.py portal-data --release-id beta-local --acquire-geography
+python scripts/run_cli.py portal-preflight
+# para CI de publicação pública: falha enquanto houver bloqueios
+python scripts/run_cli.py portal-preflight --strict
 python scripts/run_cli.py harmonize --source all
 ```
 
@@ -89,10 +97,30 @@ npm test
 npm run build
 ```
 
-A versão atual é uma beta técnica. Mortalidade por câncer vem do SIM e não é
-incidência; o comparador Brasil está disponível para as séries SIM nacionais.
-No SIH, o comparador nacional e as taxas municipais do mapa permanecem em
-preparação até aquisição e reconciliação oficial por residência.
+A versão atual está aprovada para publicação estática, com avisos explícitos.
+Mortalidade por câncer vem do SIM e não é incidência; o comparador Brasil está
+disponível para as séries SIM nacionais.
+O comparador Brasil do SIH foi adquirido pela tabela oficial NRBR, agregado por
+residência e reconciliado no pipeline. A camada municipal validada disponível é
+uma fotografia SIM 2022 por residência (92 municípios, taxa bruta e IC de
+Poisson, células menores que cinco suprimidas). A consulta municipal SIH foi
+reconciliada com a série anual para 15 desfechos e o snapshot municipal 2022
+agora está publicado no mapa. O comando `sim-municipal-map` gera o artefato SIM
+auditável; `sih-municipal-map` registra a consulta, os hashes e a reconciliação.
+O pré-voo de lançamento grava o diagnóstico em
+`reports/quality/portal_release_preflight.json`,
+`reports/technical/portal_lancamento.md` e no download público
+`site/public/data/launch-readiness.json`. A release atual está aprovada para
+publicação estática, com três avisos explícitos; os mapas municipais estão
+disponíveis em snapshot 2022. O módulo de perfis cobre os 30 indicadores SIM com dados de
+2022; SIH não é apresentado como perfil nesta versão. O ano 2010 usa a
+população residente do Censo 2010; 2023 permanece como lacuna de denominador,
+sem interpolação.
+O inventário resumido de lacunas e critérios de fechamento está em
+`reports/technical/lacunas_dados_portal.md`.
+As revisões epidemiológica e de acessibilidade, aprovadas pelo responsável do
+projeto com base nas evidências técnicas, estão em `reports/reviews/`. O
+registro da decisão está em `reports/reviews/release_signoff.json`.
 
 Cada arquivo baixado permanece em `data/raw/`, recebe um arquivo `.sha256` e
 é registrado em `metadata/extraction_log.csv`. A aquisição nunca substitui um
@@ -122,6 +150,13 @@ As primeiras taxas brutas anuais, com IC exato de Poisson, são gravadas em
 `data/processed/respiratory_rates_annual.parquet`. Apenas anos com 12 meses
 SIH e denominador disponível entram no cálculo; isso ainda não é padronização
 por idade nem análise causal.
+O mesmo artefato inclui as categorias cardiovasculares do capítulo I00–I99:
+doenças circulatórias, hipertensão, doença isquêmica, infarto agudo do
+miocárdio, embolia pulmonar, arritmias, insuficiência cardíaca e doenças
+cerebrovasculares. No SIH, os agregados são somas das subcategorias exibidas
+pela Lista de Morbidade; no SIM, a classificação usa a causa básica e CID-10.
+O indicador integrado cardiorrespiratório soma apenas eventos classificados em
+I00–I99 ou J00–J99 dentro da mesma fonte e período.
 Os desfechos classificados do SIM e SIVEP ficam em
 `data/processed/outcome_counts_sim_sivep.parquet`. SIM representa óbitos; SIVEP
 representa vigilância de SRAG, não incidência populacional. A apresentação
@@ -142,7 +177,8 @@ As taxas brutas de mortalidade do SIM para os anos públicos observados ficam em
 `data/processed/sim_mortality_rates_sample.parquet`, com IC exato de Poisson,
 razão VR/restante do RJ e marcação de 2020 como interrupção assistencial ou
 pandemia conforme o desfecho. Os arquivos SIM de 2010–2024 foram adquiridos,
-mas 2010 e 2023 permanecem fora das taxas por falta de denominador populacional;
+mas 2023 permanece fora das taxas por falta de denominador populacional
+compatível;
 o relatório está em `reports/technical/mortalidade_sim.md`.
 O perfil descritivo por grupos etários amplos e sexo está em
 `data/processed/sim_mortality_age_sex_profile.parquet`; ele mostra

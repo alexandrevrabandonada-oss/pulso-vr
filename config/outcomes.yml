@@ -48,6 +48,55 @@ respiratory:
     source: ["SIVEP", "SIH", "SIM"]
     priority: independent_series
 
+cardiovascular:
+  - id: cardio_all
+    label: "Todas as doenças do aparelho circulatório"
+    code_ranges: ["I00-I99"]
+    source: ["SIH", "SIM"]
+    priority: primary
+  - id: hypertension
+    label: "Doenças hipertensivas"
+    code_ranges: ["I10-I15"]
+    source: ["SIH", "SIM"]
+    priority: secondary
+  - id: ischemic_heart_disease
+    label: "Doenças isquêmicas do coração"
+    code_ranges: ["I20-I25"]
+    source: ["SIH", "SIM"]
+    priority: secondary
+  - id: acute_myocardial_infarction
+    label: "Infarto agudo do miocárdio"
+    code_ranges: ["I21-I22"]
+    source: ["SIH", "SIM"]
+    priority: secondary
+  - id: pulmonary_embolism
+    label: "Embolia pulmonar"
+    code_ranges: ["I26"]
+    source: ["SIH", "SIM"]
+    priority: secondary
+  - id: cardiac_arrhythmia
+    label: "Transtornos de condução e arritmias cardíacas"
+    code_ranges: ["I44-I49"]
+    source: ["SIH", "SIM"]
+    priority: secondary
+  - id: heart_failure
+    label: "Insuficiência cardíaca"
+    code_ranges: ["I50"]
+    source: ["SIH", "SIM"]
+    priority: secondary
+  - id: cerebrovascular
+    label: "Doenças cerebrovasculares"
+    code_ranges: ["I60-I69"]
+    source: ["SIH", "SIM"]
+    priority: secondary
+
+cardiorespiratory:
+  - id: cardiorespiratory_all
+    label: "Todas as doenças cardiorrespiratórias"
+    code_ranges: ["I00-I99", "J00-J99"]
+    source: ["SIH", "SIM"]
+    priority: primary_integrated
+
 cancer:
   - id: all_malignant_neoplasms
     label: "Todas as neoplasias malignas"

@@ -26,6 +26,7 @@
         "count"
       ],
       "geographyIds": [
+        "brazil_total",
         "rest_of_rj_excluding_vr",
         "rj_total",
         "volta_redonda"
@@ -33,7 +34,40 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sih-acute-myocardial-infarction",
+      "source": "SIH",
+      "outcomeId": "acute_myocardial_infarction",
+      "label": "Infarto agudo do miocárdio",
+      "theme": "cardiovascular",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "I21-I22"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2008,
+      "yearEnd": 2025,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -56,6 +90,7 @@
         "count"
       ],
       "geographyIds": [
+        "brazil_total",
         "rest_of_rj_excluding_vr",
         "rj_total",
         "volta_redonda"
@@ -63,7 +98,137 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sih-cardiac-arrhythmia",
+      "source": "SIH",
+      "outcomeId": "cardiac_arrhythmia",
+      "label": "Transtornos de condução e arritmias cardíacas",
+      "theme": "cardiovascular",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "I44-I49"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2008,
+      "yearEnd": 2025,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sih-cardio-all",
+      "source": "SIH",
+      "outcomeId": "cardio_all",
+      "label": "Todas as doenças do aparelho circulatório",
+      "theme": "cardiovascular",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "I00-I99"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2008,
+      "yearEnd": 2025,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sih-cardiorespiratory-all",
+      "source": "SIH",
+      "outcomeId": "cardiorespiratory_all",
+      "label": "Todas as doenças cardiorrespiratórias",
+      "theme": "cardiorespiratory",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "I00-I99",
+        "J00-J99"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2008,
+      "yearEnd": 2025,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sih-cerebrovascular",
+      "source": "SIH",
+      "outcomeId": "cerebrovascular",
+      "label": "Doenças cerebrovasculares",
+      "theme": "cardiovascular",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "I60-I69"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2008,
+      "yearEnd": 2025,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -86,6 +251,7 @@
         "count"
       ],
       "geographyIds": [
+        "brazil_total",
         "rest_of_rj_excluding_vr",
         "rj_total",
         "volta_redonda"
@@ -93,7 +259,104 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sih-heart-failure",
+      "source": "SIH",
+      "outcomeId": "heart_failure",
+      "label": "Insuficiência cardíaca",
+      "theme": "cardiovascular",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "I50"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2008,
+      "yearEnd": 2025,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sih-hypertension",
+      "source": "SIH",
+      "outcomeId": "hypertension",
+      "label": "Doenças hipertensivas",
+      "theme": "cardiovascular",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "I10-I15"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2008,
+      "yearEnd": 2025,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sih-ischemic-heart-disease",
+      "source": "SIH",
+      "outcomeId": "ischemic_heart_disease",
+      "label": "Doenças isquêmicas do coração",
+      "theme": "cardiovascular",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "I20-I25"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2008,
+      "yearEnd": 2025,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -116,6 +379,7 @@
         "count"
       ],
       "geographyIds": [
+        "brazil_total",
         "rest_of_rj_excluding_vr",
         "rj_total",
         "volta_redonda"
@@ -123,7 +387,8 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -146,6 +411,7 @@
         "count"
       ],
       "geographyIds": [
+        "brazil_total",
         "rest_of_rj_excluding_vr",
         "rj_total",
         "volta_redonda"
@@ -153,7 +419,40 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sih-pulmonary-embolism",
+      "source": "SIH",
+      "outcomeId": "pulmonary_embolism",
+      "label": "Embolia pulmonar",
+      "theme": "cardiovascular",
+      "measure": "hospitalization",
+      "measureLabel": "Internações hospitalares (AIHs)",
+      "definition": "Eventos de internação registrados em Autorizações de Internação Hospitalar por município de residência. Não representam pessoas únicas nem casos novos.",
+      "unit": "internações/AIHs de residentes",
+      "sourceLabel": "SIH/SUS — DATASUS",
+      "cidRanges": [
+        "I26"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2008,
+      "yearEnd": 2025,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -176,6 +475,7 @@
         "count"
       ],
       "geographyIds": [
+        "brazil_total",
         "rest_of_rj_excluding_vr",
         "rj_total",
         "volta_redonda"
@@ -183,7 +483,8 @@
       "yearStart": 2008,
       "yearEnd": 2025,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
+      "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -211,10 +512,43 @@
         "rj_total",
         "volta_redonda"
       ],
-      "yearStart": 2011,
+      "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-acute-myocardial-infarction",
+      "source": "SIM",
+      "outcomeId": "acute_myocardial_infarction",
+      "label": "Infarto agudo do miocárdio",
+      "theme": "cardiovascular",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "I21-I22"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -242,10 +576,11 @@
         "rj_total",
         "volta_redonda"
       ],
-      "yearStart": 2011,
+      "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -273,10 +608,43 @@
         "rj_total",
         "volta_redonda"
       ],
-      "yearStart": 2011,
+      "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-bladder",
+      "source": "SIM",
+      "outcomeId": "bladder",
+      "label": "Bexiga",
+      "theme": "cancer",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "C67"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -304,10 +672,172 @@
         "rj_total",
         "volta_redonda"
       ],
-      "yearStart": 2024,
+      "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-cardiac-arrhythmia",
+      "source": "SIM",
+      "outcomeId": "cardiac_arrhythmia",
+      "label": "Transtornos de condução e arritmias cardíacas",
+      "theme": "cardiovascular",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "I44-I49"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-cardio-all",
+      "source": "SIM",
+      "outcomeId": "cardio_all",
+      "label": "Todas as doenças do aparelho circulatório",
+      "theme": "cardiovascular",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "I00-I99"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-cardiorespiratory-all",
+      "source": "SIM",
+      "outcomeId": "cardiorespiratory_all",
+      "label": "Todas as doenças cardiorrespiratórias",
+      "theme": "cardiorespiratory",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "I00-I99",
+        "J00-J99"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-cerebrovascular",
+      "source": "SIM",
+      "outcomeId": "cerebrovascular",
+      "label": "Doenças cerebrovasculares",
+      "theme": "cardiovascular",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "I60-I69"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-cervix",
+      "source": "SIM",
+      "outcomeId": "cervix",
+      "label": "Colo do útero",
+      "theme": "cancer",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "C53"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -335,10 +865,11 @@
         "rj_total",
         "volta_redonda"
       ],
-      "yearStart": 2011,
+      "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -366,10 +897,75 @@
         "rj_total",
         "volta_redonda"
       ],
-      "yearStart": 2011,
+      "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-heart-failure",
+      "source": "SIM",
+      "outcomeId": "heart_failure",
+      "label": "Insuficiência cardíaca",
+      "theme": "cardiovascular",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "I50"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-hypertension",
+      "source": "SIM",
+      "outcomeId": "hypertension",
+      "label": "Doenças hipertensivas",
+      "theme": "cardiovascular",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "I10-I15"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -397,10 +993,43 @@
         "rj_total",
         "volta_redonda"
       ],
-      "yearStart": 2011,
+      "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-ischemic-heart-disease",
+      "source": "SIM",
+      "outcomeId": "ischemic_heart_disease",
+      "label": "Doenças isquêmicas do coração",
+      "theme": "cardiovascular",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "I20-I25"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -428,10 +1057,43 @@
         "rj_total",
         "volta_redonda"
       ],
-      "yearStart": 2011,
+      "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-liver",
+      "source": "SIM",
+      "outcomeId": "liver",
+      "label": "Fígado",
+      "theme": "cancer",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "C22"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -459,10 +1121,75 @@
         "rj_total",
         "volta_redonda"
       ],
-      "yearStart": 2011,
+      "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-multiple-myeloma",
+      "source": "SIM",
+      "outcomeId": "multiple_myeloma",
+      "label": "Mieloma múltiplo",
+      "theme": "cancer",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "C90"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-myelodysplastic-syndromes",
+      "source": "SIM",
+      "outcomeId": "myelodysplastic_syndromes",
+      "label": "Síndromes mielodisplásicas",
+      "theme": "cancer",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "D46"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -490,10 +1217,43 @@
         "rj_total",
         "volta_redonda"
       ],
-      "yearStart": 2011,
+      "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-pancreas",
+      "source": "SIM",
+      "outcomeId": "pancreas",
+      "label": "Pâncreas",
+      "theme": "cancer",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "C25"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -521,10 +1281,11 @@
         "rj_total",
         "volta_redonda"
       ],
-      "yearStart": 2011,
+      "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -552,10 +1313,11 @@
         "rj_total",
         "volta_redonda"
       ],
-      "yearStart": 2011,
+      "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -583,10 +1345,43 @@
         "rj_total",
         "volta_redonda"
       ],
-      "yearStart": 2011,
+      "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-pulmonary-embolism",
+      "source": "SIM",
+      "outcomeId": "pulmonary_embolism",
+      "label": "Embolia pulmonar",
+      "theme": "cardiovascular",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "I26"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     },
@@ -614,10 +1409,43 @@
         "rj_total",
         "volta_redonda"
       ],
-      "yearStart": 2011,
+      "yearStart": 2010,
       "yearEnd": 2024,
       "standardization": "crude_only",
-      "mapStatus": "context_only_pending_validated_municipal_rates",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
+      "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+    },
+    {
+      "id": "sim-stomach",
+      "source": "SIM",
+      "outcomeId": "stomach",
+      "label": "Estômago",
+      "theme": "cancer",
+      "measure": "mortality",
+      "measureLabel": "Mortalidade",
+      "definition": "Óbitos de residentes classificados pela causa básica no Sistema de Informação sobre Mortalidade. Mortalidade por câncer não representa incidência.",
+      "unit": "óbitos de residentes pela causa básica",
+      "sourceLabel": "SIM — Ministério da Saúde",
+      "cidRanges": [
+        "C16"
+      ],
+      "availableMetrics": [
+        "crude_rate_per_100k",
+        "count"
+      ],
+      "geographyIds": [
+        "brazil_total",
+        "rest_of_rj_excluding_vr",
+        "rj_total",
+        "volta_redonda"
+      ],
+      "yearStart": 2010,
+      "yearEnd": 2024,
+      "standardization": "crude_only",
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
+      "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
     }

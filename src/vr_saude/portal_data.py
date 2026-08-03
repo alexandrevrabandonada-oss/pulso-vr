@@ -118,13 +118,16 @@ def _indicator_id(source: str, outcome_id: str) -> str:
 
 
 def _theme(outcome_id: str, outcome_config: dict[str, set[str]]) -> str:
-    return "cancer" if outcome_id in outcome_config["cancer"] else "respiratory"
+    for theme in ("respiratory", "cardiovascular", "cardiorespiratory", "cancer"):
+        if outcome_id in outcome_config[theme]:
+            return theme
+    raise ValueError(f"outcome is not assigned to a portal theme: {outcome_id}")
 
 
 def _configured_outcomes(root: Path) -> tuple[dict[str, dict[str, Any]], dict[str, set[str]]]:
     config = load_config("outcomes.yml", root)
     by_id: dict[str, dict[str, Any]] = {}
-    sections = {"respiratory": set(), "cancer": set()}
+    sections = {"respiratory": set(), "cardiovascular": set(), "cardiorespiratory": set(), "cancer": set()}
     for section in sections:
         for item in config.get(section, []):
             by_id[item["id"]] = item
@@ -140,6 +143,13 @@ def _build_catalog_and_series(root: Path) -> tuple[list[dict[str, Any]], dict[st
     ]
     catalog: list[dict[str, Any]] = []
     series: dict[str, list[dict[str, Any]]] = {}
+    sih_map_manifest = root / "reports" / "quality" / "sih_municipal_map_2022_manifest.json"
+    sih_map_valid = False
+    if sih_map_manifest.exists():
+        try:
+            sih_map_valid = json.loads(sih_map_manifest.read_text(encoding="utf-8")).get("status") == "reconciled_with_annual_series"
+        except json.JSONDecodeError:
+            sih_map_valid = False
     for source, path in sources:
         if not path.exists():
             continue
@@ -168,7 +178,18 @@ def _build_catalog_and_series(root: Path) -> tuple[list[dict[str, Any]], dict[st
                     "yearStart": min(int(item["period"]) for item in observations),
                     "yearEnd": max(int(item["period"]) for item in observations),
                     "standardization": "crude_only",
-                    "mapStatus": "context_only_pending_validated_municipal_rates",
+                    "mapStatus": (
+                        "validated_sim_2022_municipal_residence_rates_crude"
+                        if source == "SIM" and (root / "data" / "processed" / "sim_municipal_map_rates_2022.parquet").exists()
+                        else "validated_sih_2022_municipal_residence_rates_crude"
+                        if source == "SIH" and sih_map_valid and (root / "data" / "processed" / "sih_municipal_map_rates_2022.parquet").exists()
+                        else "context_only_pending_validated_municipal_rates"
+                    ),
+                    "profileAvailability": (
+                        "available_2022_sim_age_sex"
+                        if source == "SIM"
+                        else "not_applicable_current_release"
+                    ),
                     "allowsConclusion": (
                         "Descreve a frequência e a taxa registrada entre residentes e permite "
                         "comparações descritivas com os territórios disponíveis."
@@ -180,6 +201,78 @@ def _build_catalog_and_series(root: Path) -> tuple[list[dict[str, Any]], dict[st
             )
             series[indicator_id] = observations
     return catalog, series
+
+
+def _municipal_map_payloads(root: Path, catalog: Iterable[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    sim_path = root / "data" / "processed" / "sim_municipal_map_rates_2022.parquet"
+    sih_path = root / "data" / "processed" / "sih_municipal_map_rates_2022.parquet"
+    sih_manifest = root / "reports" / "quality" / "sih_municipal_map_2022_manifest.json"
+    sih_valid = False
+    if sih_manifest.exists():
+        try:
+            sih_valid = json.loads(sih_manifest.read_text(encoding="utf-8")).get("status") == "reconciled_with_annual_series"
+        except json.JSONDecodeError:
+            sih_valid = False
+    frames = {
+        "SIM": pd.read_parquet(sim_path) if sim_path.exists() else pd.DataFrame(),
+        "SIH": pd.read_parquet(sih_path) if sih_valid and sih_path.exists() else pd.DataFrame(),
+    }
+    payloads: dict[str, dict[str, Any]] = {}
+    for indicator in catalog:
+        indicator_id = str(indicator["id"])
+        outcome_id = str(indicator["outcomeId"])
+        source = str(indicator.get("source"))
+        frame = frames.get(source, pd.DataFrame())
+        if frame.empty:
+            payloads[indicator_id] = {
+                "schemaVersion": "1.0.0",
+                "indicatorId": indicator_id,
+                "status": "context_only_pending_validated_municipal_rates",
+                "values": [],
+                "note": "A malha é contextual; taxas municipais só serão publicadas após validação por residência.",
+            }
+            continue
+        manifest_ref = (
+            "reports/quality/sim_municipal_map_2022_manifest.json"
+            if source == "SIM"
+            else "reports/quality/sih_municipal_map_2022_manifest.json"
+        )
+        selected = frame.loc[frame["outcome_id"].eq(outcome_id)]
+        values: list[dict[str, Any]] = []
+        for row in selected.itertuples(index=False):
+            item = {
+                "source": source,
+                "outcomeId": outcome_id,
+                "geographyId": str(row.municipality_code_ibge),
+                "period": str(int(row.year)),
+                "metricKind": "crude_rate_per_100k",
+                "value": _finite_or_none(row.rate_per_100k),
+                "count": int(row.count),
+                "denominator": int(row.population),
+                "ciLow": _finite_or_none(row.rate_ci_lower_per_100k),
+                "ciHigh": _finite_or_none(row.rate_ci_upper_per_100k),
+                "dataStatus": "provisional" if str(row.period_status) == "provisional" else "source_observed",
+                "periodStatus": str(row.period_status),
+                "manifestRef": manifest_ref,
+            }
+            values.append(suppress_public_observation(item))
+        payloads[indicator_id] = {
+            "schemaVersion": "1.0.0",
+            "indicatorId": indicator_id,
+            "status": (
+                "validated_sim_2022_municipal_residence_rates_crude"
+                if source == "SIM"
+                else "validated_sih_2022_municipal_residence_rates_crude"
+            ),
+            "period": "2022",
+            "values": values,
+            "note": (
+                "Taxa bruta municipal de mortalidade SIM 2022 por residência; células <5 suprimidas."
+                if source == "SIM"
+                else "Taxa bruta municipal de internações SIH 2022 por residência; AIHs são eventos e células <5 estão suprimidas."
+            ),
+        }
+    return payloads
 
 
 def _profile_payload(root: Path, catalog: Iterable[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
@@ -323,6 +416,7 @@ def build_portal_data(
     if not catalog:
         raise ValueError("no validated rate artifacts are available for portal publication")
     profiles = _profile_payload(root, catalog)
+    maps = _municipal_map_payloads(root, catalog)
     topology = _build_topology(root, acquire_geography)
 
     _write_json(output_root / "catalog.json", {
@@ -343,13 +437,7 @@ def build_portal_data(
             "indicatorId": indicator_id,
             "observations": profiles.get(indicator_id, []),
         })
-        _write_json(output_root / "maps" / "rj" / f"{indicator_id}.json", {
-            "schemaVersion": "1.0.0",
-            "indicatorId": indicator_id,
-            "status": indicator["mapStatus"],
-            "values": [],
-            "note": "A malha é contextual; taxas municipais só serão publicadas após validação por residência.",
-        })
+        _write_json(output_root / "maps" / "rj" / f"{indicator_id}.json", maps[indicator_id])
     _write_json(output_root / "geography" / "rj.topojson", topology)
     _write_download_csv(output_root / "downloads" / "series-publicas.csv", series)
 
@@ -361,31 +449,61 @@ def build_portal_data(
                 "bytes": path.stat().st_size,
                 "sha256": sha256_file(path),
             })
+    denominator_manifest_path = root / "reports" / "quality" / "population_denominator_manifest.json"
+    missing_denominator_years = [2010, 2023]
+    if denominator_manifest_path.exists():
+        try:
+            denominator_manifest = json.loads(denominator_manifest_path.read_text(encoding="utf-8"))
+            missing_denominator_years = [
+                int(year) for year in denominator_manifest.get("missing_years", missing_denominator_years)
+            ]
+        except (OSError, json.JSONDecodeError, TypeError, ValueError):
+            # Keep a conservative fallback if an older/incomplete manifest is present.
+            pass
+    signoff_path = root / "reports" / "reviews" / "release_signoff.json"
+    review_signoff: dict[str, Any] = {}
+    if signoff_path.exists():
+        try:
+            candidate = json.loads(signoff_path.read_text(encoding="utf-8"))
+            if candidate.get("releaseId") == release_id:
+                review_signoff = candidate
+        except (OSError, json.JSONDecodeError, AttributeError):
+            review_signoff = {}
+    publication_gate = {
+        "epidemiologyReview": review_signoff.get("epidemiologyReview", {}).get("status", "pending"),
+        "accessibilityReview": review_signoff.get("accessibilityReview", {}).get("status", "pending"),
+        "provenanceReview": "generated",
+    }
+    release_status = (
+        "public_release_ready"
+        if publication_gate["epidemiologyReview"] == "approved"
+        and publication_gate["accessibilityReview"] == "approved"
+        else "technical_beta_not_for_public_release"
+    )
     release = {
         "schemaVersion": "1.0.0",
         "releaseId": release_id,
         "generatedAt": _utc_now(),
-        "status": "technical_beta_not_for_public_release",
+        "status": release_status,
         "smallCellThreshold": SMALL_CELL_THRESHOLD,
         "primaryComparator": "rest_of_rj_excluding_vr",
         "secondaryComparator": "brazil_total",
-        "publicationGate": {
-            "epidemiologyReview": "pending",
-            "accessibilityReview": "pending",
-            "provenanceReview": "generated",
-        },
+        "publicationGate": publication_gate,
+        "reviewSignoff": review_signoff,
         "coverage": {
             "indicatorCount": len(catalog),
             "respiratoryStart": 2008,
+            "cardiovascularStart": 2008,
+            "cardiorespiratoryStart": 2008,
             "cancerStart": 2011,
             "latestObservedYear": max(item["yearEnd"] for item in catalog),
-            "missingDenominatorYears": [2010, 2023],
+            "missingDenominatorYears": missing_denominator_years,
         },
         "notes": [
             "No causal conclusion is authorized by this release.",
             "SIH hospitalizations are events/AIHs, not unique people or new cases.",
             "SIM cancer mortality is not population incidence.",
-            "Municipality geometry is contextual until municipal outcome rates are validated.",
+            "SIM 2022 municipal mortality rates and reconciled SIH 2022 municipal AIH rates are published only for validated residence cells; neither layer is an incidence estimate.",
         ],
         "artifacts": artifacts,
     }

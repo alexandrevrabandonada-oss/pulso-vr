@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-08-03T14:14:10+00:00",
+  "status": "reconciled_with_annual_series",
+  "year": 2022,
+  "municipalities": 92,
+  "outcome_ids": [
+    "resp_all",
+    "pneumonia",
+    "acute_bronchitis_bronchiolitis",
+    "copd",
+    "asthma",
+    "pneumoconiosis",
+    "cardio_all",
+    "hypertension",
+    "ischemic_heart_disease",
+    "acute_myocardial_infarction",
+    "pulmonary_embolism",
+    "cardiac_arrhythmia",
+    "heart_failure",
+    "cerebrovascular",
+    "cardiorespiratory_all"
+  ],
+  "rows": 1380,
+  "suppressed_cells_lt_5": 276,
+  "reconciliation": {},
+  "output_path": "data\\processed\\sih_municipal_map_rates_2022.parquet",
+  "output_sha256": "1d557515c1f220252065201921814eac6c7e78b81c951336e1a967750bb8f628",
+  "rules": {
+    "residence": "SIH TabNet NR/RJ por município de residência",
+    "rate": "AIHs / população residente × 100.000",
+    "interval": "IC 95% exato de Poisson",
+    "suppression": "count < 5 withheld before frontend"
+  },
+  "notes": [
+    "Annual municipal snapshot aggregated from 12 monthly NR/RJ archives.",
+    "An AIH is an event, not a unique person.",
+    "No causal inference is produced."
+  ]
+}

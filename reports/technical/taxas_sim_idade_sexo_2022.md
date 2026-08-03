@@ -1,6 +1,6 @@
 # Taxas específicas de mortalidade por idade e sexo — SIM 2022
 
-Execução: 2026-08-02T23:48:20+00:00
+Execução: 2026-08-03T13:00:22+00:00
 
 A taxa é óbitos de residentes pela causa básica / população residente do mesmo grupo etário e sexo × 100.000. O IC 95% é exato de Poisson. Esta é uma taxa específica bruta de 2022, não uma taxa padronizada.
 
@@ -45,6 +45,38 @@ A taxa é óbitos de residentes pela causa básica / população residente do me
 | volta_redonda | all_malignant_neoplasms | 65-74 | feminino | 72 | 513.19 | 401.54–646.27 |
 | volta_redonda | all_malignant_neoplasms | 75+ | masculino | 47 | 955.09 | 701.76–1270.07 |
 | volta_redonda | all_malignant_neoplasms | 75+ | feminino | 69 | 846.73 | 658.81–1071.59 |
+| rest_of_rj_excluding_vr | bladder | <1 | masculino | <5 | <5 | <5 |
+| rest_of_rj_excluding_vr | bladder | <1 | feminino | <5 | <5 | <5 |
+| rest_of_rj_excluding_vr | bladder | 1-4 | masculino | <5 | <5 | <5 |
+| rest_of_rj_excluding_vr | bladder | 1-4 | feminino | <5 | <5 | <5 |
+| rest_of_rj_excluding_vr | bladder | 5-14 | masculino | <5 | <5 | <5 |
+| rest_of_rj_excluding_vr | bladder | 5-14 | feminino | <5 | <5 | <5 |
+| rest_of_rj_excluding_vr | bladder | 15-24 | masculino | <5 | <5 | <5 |
+| rest_of_rj_excluding_vr | bladder | 15-24 | feminino | <5 | <5 | <5 |
+| rest_of_rj_excluding_vr | bladder | 25-44 | masculino | <5 | <5 | <5 |
+| rest_of_rj_excluding_vr | bladder | 25-44 | feminino | <5 | <5 | <5 |
+| rest_of_rj_excluding_vr | bladder | 45-64 | masculino | 38 | 2.05 | 1.45–2.81 |
+| rest_of_rj_excluding_vr | bladder | 45-64 | feminino | 38 | 1.74 | 1.23–2.40 |
+| rest_of_rj_excluding_vr | bladder | 65-74 | masculino | 114 | 20.64 | 17.03–24.80 |
+| rest_of_rj_excluding_vr | bladder | 65-74 | feminino | 39 | 5.28 | 3.76–7.22 |
+| rest_of_rj_excluding_vr | bladder | 75+ | masculino | 169 | 59.94 | 51.25–69.69 |
+| rest_of_rj_excluding_vr | bladder | 75+ | feminino | 102 | 20.70 | 16.88–25.13 |
+| volta_redonda | bladder | <1 | masculino | <5 | <5 | <5 |
+| volta_redonda | bladder | <1 | feminino | <5 | <5 | <5 |
+| volta_redonda | bladder | 1-4 | masculino | <5 | <5 | <5 |
+| volta_redonda | bladder | 1-4 | feminino | <5 | <5 | <5 |
+| volta_redonda | bladder | 5-14 | masculino | <5 | <5 | <5 |
+| volta_redonda | bladder | 5-14 | feminino | <5 | <5 | <5 |
+| volta_redonda | bladder | 15-24 | masculino | <5 | <5 | <5 |
+| volta_redonda | bladder | 15-24 | feminino | <5 | <5 | <5 |
+| volta_redonda | bladder | 25-44 | masculino | <5 | <5 | <5 |
+| volta_redonda | bladder | 25-44 | feminino | <5 | <5 | <5 |
+| volta_redonda | bladder | 45-64 | masculino | <5 | <5 | <5 |
+| volta_redonda | bladder | 45-64 | feminino | <5 | <5 | <5 |
+| volta_redonda | bladder | 65-74 | masculino | <5 | <5 | <5 |
+| volta_redonda | bladder | 65-74 | feminino | <5 | <5 | <5 |
+| volta_redonda | bladder | 75+ | masculino | <5 | <5 | <5 |
+| volta_redonda | bladder | 75+ | feminino | <5 | <5 | <5 |
 | rest_of_rj_excluding_vr | colorectal | <1 | masculino | <5 | <5 | <5 |
 | rest_of_rj_excluding_vr | colorectal | <1 | feminino | <5 | <5 | <5 |
 | rest_of_rj_excluding_vr | colorectal | 1-4 | masculino | <5 | <5 | <5 |

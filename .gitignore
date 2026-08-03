@@ -26,6 +26,7 @@ data/processed/*
 !data/processed/.gitkeep
 
 # Local execution artifacts
+.playwright-cli/
 outputs/*.log
 outputs/*.xlsx
 outputs/*.parquet

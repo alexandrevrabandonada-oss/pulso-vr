@@ -1,13 +1,13 @@
 # Taxas respiratórias brutas
 
-Execução: 2026-08-02T21:56:36+00:00
+Execução: 2026-08-03T14:29:16+00:00
 
 A taxa é calculada como internações agregadas do SIH / população residente × 100.000. O intervalo é exato de Poisson para a contagem. A razão compara a taxa de VR com a do restante do RJ, que exclui o código IBGE 3306305.
 
-- Anos elegíveis: **[2008, 2009, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024, 2025]**.
+- Anos elegíveis: **[2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024, 2025]**.
 - Anos SIH parciais excluídos da taxa anual: **[2026]**.
-- Anos completos sem denominador excluídos: **[2010, 2023]**.
-- Linhas duplicadas removidas ao combinar as janelas SIH: **18**.
+- Anos completos sem denominador excluídos: **[2023]**.
+- Linhas duplicadas removidas ao combinar as janelas SIH: **4338**.
 - 2025 é marcado como provisório; 2026-01 a 2026-05 não é anualizado.
 
 ## Desfecho primário: todas as doenças respiratórias
@@ -18,6 +18,8 @@ A taxa é calculada como internações agregadas do SIH / população residente 
 | 2008 | volta_redonda | 1509 | 580.81 | 551.87–610.87 |
 | 2009 | rest_of_rj_excluding_vr | 76894 | 488.25 | 484.80–491.71 |
 | 2009 | volta_redonda | 1556 | 595.25 | 566.04–625.58 |
+| 2010 | rest_of_rj_excluding_vr | 76605 | 486.93 | 483.49–490.39 |
+| 2010 | volta_redonda | 1404 | 544.60 | 516.48–573.85 |
 | 2011 | rest_of_rj_excluding_vr | 67616 | 426.50 | 423.29–429.73 |
 | 2011 | volta_redonda | 1540 | 594.57 | 565.24–625.02 |
 | 2012 | rest_of_rj_excluding_vr | 62862 | 393.60 | 390.53–396.69 |
@@ -51,8 +53,10 @@ As taxas por pneumonia, bronquite/bronquiolite aguda, DPOC, asma e pneumoconiose
 
 ## Fontes intermediárias
 
-- `data\interim\sih_morbidity_2008_2017.csv` — SHA-256 `fac4ff0a020d6717230b77c3617400d4995496677f15cb8536c6e20877d1aaa8`
-- `data\interim\sih_morbidity_2018_2026.csv` — SHA-256 `4d82442080e1c5fa0a994766b7efcbdfee3e01a76d830a30321bcc16a0e0a5e5`
+- `data\interim\sih_morbidity_2008_2017.csv` — SHA-256 `f1bf66ecaa85273e981308186260ccf9ea8c55609320cf8c0201f3071ea64905`
+- `data\interim\sih_morbidity_2018_2025.csv` — SHA-256 `d6094795117348123245cb6dc46eab87f7b5a1839ee2be62f3132b610bab8803`
+- `data\interim\sih_morbidity_2018_2026.csv` — SHA-256 `46e7a88b1158d3a28cf58a9ee579d19664be28e6c712f24dfe639c83201c6fd3`
 - `data\interim\sih_morbidity_2024_2024.csv` — SHA-256 `77038aa2aa0b531fbe39f27b270d73cf14a6871df2c7eb8a39bd0d15a112b705`
+- `data\interim\sih_morbidity_brazil_2008_2025.csv` — SHA-256 `04aca1883821a47b3775539bb4f7b8f8b0962ae312b3eb82987bd6a3624bc25c`
 
 Não há ajuste por idade, sexo, sazonalidade, pandemia ou poluição nesta etapa. Uma taxa bruta não sustenta comparação causal nem substitui a padronização etária.

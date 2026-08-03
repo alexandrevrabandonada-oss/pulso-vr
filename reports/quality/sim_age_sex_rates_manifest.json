@@ -1,22 +1,39 @@
 {
-  "generated_at": "2026-08-02T23:48:20+00:00",
+  "generated_at": "2026-08-03T13:00:22+00:00",
   "status": "validated_sim_2022_specific_crude_rates_no_standardization",
   "year": 2022,
-  "rows": 624,
+  "rows": 1440,
   "outcome_ids": [
     "acute_bronchitis_bronchiolitis",
+    "acute_myocardial_infarction",
     "all_malignant_neoplasms",
     "asthma",
+    "bladder",
+    "breast",
+    "cardiac_arrhythmia",
+    "cardio_all",
+    "cardiorespiratory_all",
+    "cerebrovascular",
+    "cervix",
     "colorectal",
     "copd",
+    "heart_failure",
+    "hypertension",
     "influenza",
+    "ischemic_heart_disease",
     "leukemia",
+    "liver",
     "lung",
+    "multiple_myeloma",
+    "myelodysplastic_syndromes",
     "non_hodgkin_lymphoma",
+    "pancreas",
     "pneumoconiosis",
     "pneumonia",
     "prostate",
-    "resp_all"
+    "pulmonary_embolism",
+    "resp_all",
+    "stomach"
   ],
   "geographies": [
     "rest_of_rj_excluding_vr",
@@ -38,11 +55,11 @@
     "feminino"
   ],
   "output_path": "data\\processed\\sim_mortality_age_sex_rates_2022.parquet",
-  "output_sha256": "ab3bdebda51a25b72e5459f03e770bb3abdcc66d8a78ca25b6a7f921b008dc9b",
+  "output_sha256": "c9dd069a416a179415afc4824efd694af60faf46443998ff6af4e15a58ce6693",
   "input_files": [
     {
       "path": "data\\processed\\outcome_counts_sim_sivep.parquet",
-      "sha256": "5609061246398e2b6f2707c1b492a2e56c1e8afd693100aa288c30cf8f765d16"
+      "sha256": "d92c57774ff503fb790870ae2f4a1f8a886198ab2e684e4b5c33282b2a8fae69"
     },
     {
       "path": "data\\processed\\population_age_sex_denominators_2022.parquet",

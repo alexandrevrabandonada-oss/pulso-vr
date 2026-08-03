@@ -16,16 +16,23 @@ interface FilterProps {
   onMetric: (value: MetricKind) => void
   onStartYear: (value: number) => void
   onEndYear: (value: number) => void
+  onDownload: () => void
 }
 
 export function ExplorerFilters(props: FilterProps) {
   const [open, setOpen] = useState(false)
+  const [feedback, setFeedback] = useState('')
   const selected = props.indicators.find((item) => item.id === props.indicatorId)!
   const years = Array.from({ length: selected.yearEnd - selected.yearStart + 1 }, (_, index) => selected.yearStart + index)
   const share = async () => {
     const url = window.location.href
-    if (navigator.share) await navigator.share({ title: 'Observatório Saúde & Ambiente', url })
-    else await navigator.clipboard.writeText(url)
+    try {
+      if (navigator.share) await navigator.share({ title: 'Observatório Saúde & Ambiente', url })
+      else await navigator.clipboard.writeText(url)
+      setFeedback('Link pronto para compartilhar.')
+    } catch (error) {
+      if ((error as DOMException).name !== 'AbortError') setFeedback('Não foi possível compartilhar este link.')
+    }
   }
   return (
     <>
@@ -43,6 +50,8 @@ export function ExplorerFilters(props: FilterProps) {
           Tema
           <select value={props.theme} onChange={(event) => props.onTheme(event.target.value as Theme)}>
             <option value="respiratory">Respiratórias</option>
+            <option value="cardiovascular">Cardiovasculares</option>
+            <option value="cardiorespiratory">Cardiorrespiratórias</option>
             <option value="cancer">Câncer</option>
           </select>
         </label>
@@ -89,9 +98,10 @@ export function ExplorerFilters(props: FilterProps) {
           <button type="button" className={props.metric === 'count' ? 'is-selected' : ''} onClick={() => props.onMetric('count')}>Contagens</button>
         </div>
         <div className="filter-actions">
-          <a className="icon-action" href="/data/downloads/series-publicas.csv" download><Download />Baixar dados</a>
+          <button className="icon-action" type="button" onClick={() => { props.onDownload(); setFeedback('Recorte baixado em CSV.') }}><Download />Baixar recorte</button>
           <button className="icon-action" type="button" onClick={share}><Share2 />Compartilhar</button>
         </div>
+        <span className="sr-only" aria-live="polite">{feedback}</span>
         <button className="filter-rail__apply" type="button" onClick={() => setOpen(false)}>Aplicar filtros</button>
       </section>
       {open ? <button className="filter-backdrop" aria-label="Fechar filtros" onClick={() => setOpen(false)} /> : null}

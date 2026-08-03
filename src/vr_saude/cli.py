@@ -18,16 +18,20 @@ from .interrupted_respiratory import build_interrupted_respiratory
 from .logging_utils import configure_logging
 from .layout_validation import write_layout_manifest
 from .mortality import build_mortality_rates
+from .oncology_diagnoses import build_oncology_diagnoses
 from .outcomes import build_outcome_counts
 from .population import acquire_population, harmonize_population
 from .population_age_sex import acquire_age_sex_population, harmonize_age_sex_population
 from .portal_data import build_portal_data
+from .portal_release import write_portal_preflight
 from .provenance import sha256_file
 from .raw_validation import write_raw_validation_report
 from .rates import build_respiratory_rates
 from .reporting import write_respiratory_report
-from .sih_morbidity import query_morbidity_series
+from .sih_morbidity import query_morbidity_series, query_national_morbidity_series
+from .sih_municipal_map import build_sih_municipal_map
 from .sih_tabnet import query_residence, query_residence_series, save_query_response, write_harmonized_series
+from .sim_municipal_map import build_sim_municipal_map
 from .sources import get_sample_source
 from .surveillance import build_sivep_surveillance_summary
 from .sivep_monthly import build_sivep_monthly
@@ -120,6 +124,9 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "reports" / "quality" / "sim_mortality_rates_manifest.json",
         root / "reports" / "quality" / "sim_age_sex_profile_manifest.json",
         root / "reports" / "quality" / "sim_age_sex_rates_manifest.json",
+        root / "reports" / "quality" / "sim_municipal_map_2022_manifest.json",
+        root / "reports" / "quality" / "sih_municipal_map_2022_manifest.json",
+        root / "reports" / "quality" / "portal_accessibility_audit.json",
         root / "reports" / "technical" / "fase3_respiratorio.md",
         root / "reports" / "technical" / "denominadores.md",
         root / "reports" / "technical" / "denominadores_idade_sexo_2022.md",
@@ -131,6 +138,13 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "reports" / "technical" / "mortalidade_sim.md",
         root / "reports" / "technical" / "perfil_etario_sexual_sim.md",
         root / "reports" / "technical" / "taxas_sim_idade_sexo_2022.md",
+        root / "reports" / "technical" / "mapa_municipal_sim_2022.md",
+        root / "reports" / "technical" / "mapa_municipal_sih_2022.md",
+        root / "reports" / "reviews" / "epidemiology_review_draft.md",
+        root / "reports" / "reviews" / "accessibility_review_draft.md",
+        root / "reports" / "technical" / "diagnosticos_painel_oncologia.md",
+        root / "reports" / "technical" / "territorialidade_cancer_bairros.md",
+        root / "reports" / "quality" / "painel_oncologia_diagnoses_manifest.json",
     ] + sorted((root / "reports" / "quality").glob("sih_series_*.json")) + sorted(
         (root / "reports" / "quality").glob("sih_morbidity_*.json")
     )
@@ -212,6 +226,15 @@ def _parser() -> argparse.ArgumentParser:
     sih_morbidity.add_argument("--end-year", type=int, required=True)
     sih_morbidity.add_argument("--end-month", type=int, required=True)
     sih_morbidity.add_argument("--workers", type=int, default=2)
+    sih_national = subparsers.add_parser(
+        "sih-national-morbidity",
+        help="query the official Brazil-total SIH morbidity table by residence",
+    )
+    sih_national.add_argument("--start-year", type=int, required=True)
+    sih_national.add_argument("--start-month", type=int, required=True)
+    sih_national.add_argument("--end-year", type=int, required=True)
+    sih_national.add_argument("--end-month", type=int, required=True)
+    sih_national.add_argument("--workers", type=int, default=2)
     subparsers.add_parser(
         "respiratory-report",
         help="write the reproducible descriptive SIH respiratory report",
@@ -269,6 +292,20 @@ def _parser() -> argparse.ArgumentParser:
         "sim-age-sex-rates",
         help="calculate SIM 2022 specific crude rates by age group and sex",
     )
+    subparsers.add_parser(
+        "sim-municipal-map",
+        help="calculate validated SIM 2022 municipal residence rates for the RJ map",
+    )
+    sih_municipal_map = subparsers.add_parser(
+        "sih-municipal-map",
+        help="query validated SIH annual municipal residence rates for the RJ map",
+    )
+    sih_municipal_map.add_argument("--year", type=int, default=2022)
+    sih_municipal_map.add_argument("--workers", type=int, default=4)
+    subparsers.add_parser(
+        "oncology-diagnoses",
+        help="harmonize Painel-Oncologia registered diagnoses by residence",
+    )
     portal_data = subparsers.add_parser(
         "portal-data",
         help="publish privacy-safe static JSON/TopoJSON artifacts for the portal",
@@ -278,6 +315,15 @@ def _parser() -> argparse.ArgumentParser:
         "--acquire-geography",
         action="store_true",
         help="download the official IBGE RJ municipality mesh when it is absent",
+    )
+    portal_preflight = subparsers.add_parser(
+        "portal-preflight",
+        help="audit portal artifacts and write the public-release readiness report",
+    )
+    portal_preflight.add_argument(
+        "--strict",
+        action="store_true",
+        help="return non-zero while any blocker remains",
     )
     discover = subparsers.add_parser("discover", help="save the current official resource catalog")
     discover.add_argument("--dataset", choices=("sim", "sivep"), required=True)
@@ -398,6 +444,22 @@ def main(argv: list[str] | None = None) -> int:
             return 1
         print(f"SIH morbidity interim series: {interim}")
         print(f"Morbidity quality report: {report}")
+        return 0
+    if args.command == "sih-national-morbidity":
+        try:
+            interim, report = query_national_morbidity_series(
+                root,
+                args.start_year,
+                args.start_month,
+                args.end_year,
+                args.end_month,
+                workers=args.workers,
+            )
+        except (LookupError, ValueError, OSError) as exc:
+            print(f"ERROR: SIH Brazil morbidity query failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"SIH Brazil morbidity interim series: {interim}")
+        print(f"Brazil morbidity quality report: {report}")
         return 0
     if args.command == "respiratory-report":
         try:
@@ -531,6 +593,36 @@ def main(argv: list[str] | None = None) -> int:
         print(f"SIM age-sex rates manifest: {manifest}")
         print(f"SIM age-sex rates report: {report}")
         return 0
+    if args.command == "sim-municipal-map":
+        try:
+            output, manifest, report = build_sim_municipal_map(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: SIM municipal map failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"SIM municipal map Parquet: {output}")
+        print(f"SIM municipal map manifest: {manifest}")
+        print(f"SIM municipal map report: {report}")
+        return 0
+    if args.command == "sih-municipal-map":
+        try:
+            output, manifest, report = build_sih_municipal_map(root, year=args.year, workers=args.workers)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: SIH municipal map failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"SIH municipal map Parquet: {output}")
+        print(f"SIH municipal map manifest: {manifest}")
+        print(f"SIH municipal map report: {report}")
+        return 0
+    if args.command == "oncology-diagnoses":
+        try:
+            output, manifest, report = build_oncology_diagnoses(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: oncology diagnoses failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Oncology diagnoses Parquet: {output}")
+        print(f"Oncology diagnoses manifest: {manifest}")
+        print(f"Oncology diagnoses report: {report}")
+        return 0
     if args.command == "portal-data":
         try:
             output, release = build_portal_data(
@@ -543,6 +635,22 @@ def main(argv: list[str] | None = None) -> int:
             return 1
         print(f"Portal data directory: {output}")
         print(f"Portal release manifest: {release}")
+        return 0
+    if args.command == "portal-preflight":
+        try:
+            quality, technical, report = write_portal_preflight(root)
+        except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError) as exc:
+            print(f"ERROR: portal preflight failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Portal preflight JSON: {quality}")
+        print(f"Portal launch report: {technical}")
+        print(
+            f"Portal readiness: {report['status']} "
+            f"({report['summary']['blockerCount']} blockers, "
+            f"{report['summary']['warningCount']} warnings)"
+        )
+        if args.strict and not report["publicationAllowed"]:
+            return 1
         return 0
     if args.command == "discover":
         resources = discover_resources(args.dataset)
@@ -625,6 +733,21 @@ def main(argv: list[str] | None = None) -> int:
                 return 1
         else:
             respiratory_its_report = None
+        oncology_report = None
+        if all(
+            (root / "data" / "raw" / filename).exists()
+            for filename in (
+                "painel_oncologia_vr_2013_2024.csv",
+                "painel_oncologia_rj_2013_2024.csv",
+                "painel_oncologia_brasil_2013_2024.csv",
+                "painel_oncologia_vr_detalhado_2024.csv",
+            )
+        ):
+            try:
+                _, _, oncology_report = build_oncology_diagnoses(root)
+            except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+                print(f"ERROR: oncology diagnoses failed: {exc}", file=sys.stderr)
+                return 1
         manifest = _manifest(root, quality)
         print(f"Raw validation report: {raw_report}")
         print(f"Quality report: {quality}")
@@ -632,6 +755,8 @@ def main(argv: list[str] | None = None) -> int:
             print(f"Respiratory report: {respiratory_report}")
         if respiratory_its_report:
             print(f"Respiratory interrupted series report: {respiratory_its_report}")
+        if oncology_report:
+            print(f"Oncology diagnoses report: {oncology_report}")
         print(f"Results manifest: {manifest}")
         return 0
     return 2

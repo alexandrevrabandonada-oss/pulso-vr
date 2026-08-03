@@ -18,6 +18,10 @@ export function statusLabel(status: string): string {
     source_observed: 'Observado na fonte',
     complete_annual: 'Ano completo',
     respiratory_pandemic: 'Período pandêmico',
+    cardiovascular_pandemic_context: 'Contexto pandêmico',
+    cardiovascular_provisional: 'Provisório',
+    cardiorespiratory_pandemic_context: 'Contexto pandêmico',
+    cardiorespiratory_provisional: 'Provisório',
     cancer_care_disruption: 'Interrupção assistencial',
   }
   return labels[status] ?? status.replaceAll('_', ' ')

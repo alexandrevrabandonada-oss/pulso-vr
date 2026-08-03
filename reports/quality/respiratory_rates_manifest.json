@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-02T21:56:36+00:00",
+  "generated_at": "2026-08-03T14:29:16+00:00",
   "status": "validated_crude_rates_with_poisson_ci_no_age_standardization",
-  "duplicate_rows_removed_from_input": 18,
+  "duplicate_rows_removed_from_input": 4338,
   "month_count_by_year": {
     "2008": 12,
     "2009": 12,
@@ -47,12 +47,12 @@
     2026
   ],
   "missing_denominator_years": [
-    2010,
     2023
   ],
   "eligible_years": [
     2008,
     2009,
+    2010,
     2011,
     2012,
     2013,
@@ -68,21 +68,29 @@
     2024,
     2025
   ],
-  "rows": 288,
+  "rows": 1020,
   "output_path": "data\\processed\\respiratory_rates_annual.parquet",
-  "output_sha256": "2a13bde7d697c685f663acd15935d8ee73242a96636e690a8e511f00eec686ed",
+  "output_sha256": "650936036ae9d356e1ff285dcd97b1ba8049e3fca883de464e0ce57898c10f31",
   "input_paths": [
     {
       "path": "data\\interim\\sih_morbidity_2008_2017.csv",
-      "sha256": "fac4ff0a020d6717230b77c3617400d4995496677f15cb8536c6e20877d1aaa8"
+      "sha256": "f1bf66ecaa85273e981308186260ccf9ea8c55609320cf8c0201f3071ea64905"
+    },
+    {
+      "path": "data\\interim\\sih_morbidity_2018_2025.csv",
+      "sha256": "d6094795117348123245cb6dc46eab87f7b5a1839ee2be62f3132b610bab8803"
     },
     {
       "path": "data\\interim\\sih_morbidity_2018_2026.csv",
-      "sha256": "4d82442080e1c5fa0a994766b7efcbdfee3e01a76d830a30321bcc16a0e0a5e5"
+      "sha256": "46e7a88b1158d3a28cf58a9ee579d19664be28e6c712f24dfe639c83201c6fd3"
     },
     {
       "path": "data\\interim\\sih_morbidity_2024_2024.csv",
       "sha256": "77038aa2aa0b531fbe39f27b270d73cf14a6871df2c7eb8a39bd0d15a112b705"
+    },
+    {
+      "path": "data\\interim\\sih_morbidity_brazil_2008_2025.csv",
+      "sha256": "04aca1883821a47b3775539bb4f7b8f8b0962ae312b3eb82987bd6a3624bc25c"
     }
   ],
   "notes": [

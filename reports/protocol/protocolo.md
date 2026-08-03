@@ -7,7 +7,7 @@
 ## 1. Pergunta e desenho
 
 O estudo avaliará se residentes de Volta Redonda apresentam excesso de
-internações respiratórias e mortalidade por câncer em comparação com o restante
+internações respiratórias e cardiovasculares e mortalidade por câncer em comparação com o restante
 do Estado do Rio de Janeiro, excluindo Volta Redonda. Será um programa de
 análises observacionais com três componentes:
 
@@ -29,24 +29,31 @@ causalidade à CSN ou a um poluente a partir de comparações ecológicas.
 
 ## 3. Desfechos
 
-Os códigos respiratórios e oncológicos estão em `config/outcomes.yml`. A CID
+Os códigos respiratórios, cardiovasculares e oncológicos estão em `config/outcomes.yml`. A CID
 será normalizada apenas mecanicamente; a equivalência entre layouts de SIH,
 SIM e SIVEP será documentada por fonte e ano.
 
 - Respiratório: J00–J99, pneumonias, bronquite/bronquiolite agudas, DPOC,
   asma e pneumoconioses.
 - Covid-19 e SRAG: séries independentes.
+- Cardiovascular: I00–I99, hipertensão, doença isquêmica do coração, infarto
+  agudo do miocárdio, embolia pulmonar, arritmias, insuficiência cardíaca e
+  doenças cerebrovasculares.
+- Cardiorrespiratório integrado: I00–I99 ou J00–J99, como indicador agregado
+  complementar; os componentes não são somados entre fontes.
 - Câncer: C00–C97, pulmão, bexiga, leucemias, linfomas, mieloma,
   mielodisplasia, colorretal, estômago, fígado, pâncreas, mama, colo do útero
   e próstata.
 
 ## 4. Períodos e rupturas
 
-Os períodos respiratórios e oncológicos estão em `config/periods.yml`. Março
+Os períodos respiratórios, cardiovasculares e oncológicos estão em `config/periods.yml`. Março
 de 2020 será modelado como interrupção da série respiratória. Para câncer,
 2020–2022 será mantido como período de interrupção assistencial; março de 2022
 será o marco da Linha de Atenção Oncológica; 2025 em diante será interpretado
 com cautela por causa do Prevenir 50+.
+Para cardiovasculares, 2020–2021 será mantido como contexto pandêmico e de
+acesso assistencial, sem interpretação causal automática.
 
 ## 5. Dados
 
