@@ -93,14 +93,6 @@ export function ExplorerPage() {
     update({ indicador: value, tema: nextIndicator.theme, inicio: nextIndicator.yearStart, fim: nextIndicator.yearEnd })
   }
 
-  const comparison = useMemo(() => {
-    if (!observations) return []
-    return GEO_ORDER.map((geographyId) => {
-      const candidates = observations.filter((item) => item.geographyId === geographyId && Number(item.period) >= startYear && Number(item.period) <= endYear)
-      const latest = [...candidates].sort((a, b) => Number(b.period) - Number(a.period)).find((item) => (metric === 'count' ? item.count : item.value) !== null)
-      return { geographyId, latest }
-    })
-  }, [observations, startYear, endYear, metric])
   const quickReading = useMemo(() => {
     if (selectedMunicipality && selectedMunicipalValue && municipalPeriod) {
       const stateTotal = observations?.find((item) => item.geographyId === 'rj_total' && item.period === municipalPeriod) ?? null
@@ -123,54 +115,8 @@ export function ExplorerPage() {
           : `RJ sem ${selectedMunicipality.name}: ${formatMetric(metric === 'count' ? restOfState?.count ?? null : restOfState?.value ?? null, metric)} · Brasil: ${formatMetric(metric === 'count' ? brazil?.count ?? null : brazil?.value ?? null, metric)}`,
       }
     }
-    const visible = comparison.filter(({ geographyId, latest }) => activeGeographies.includes(geographyId) && latest)
-    if (!visible.length) return null
-    if (territory !== 'all') {
-      const selected = visible[0]
-      const value = metric === 'count' ? selected.latest!.count : selected.latest!.value
-      return {
-        year: selected.latest!.period,
-        headline: `${formatMetric(value, metric)} em ${catalog.geographies[selected.geographyId]}`,
-        comparison: metric === 'count' ? 'Contagem de eventos registrados' : 'Taxa por 100 mil habitantes',
-        detail: metric === 'count'
-          ? 'Use a taxa por 100 mil para comparar territórios com populações diferentes.'
-          : 'Taxa bruta: diferenças de idade entre populações ainda podem influenciar o resultado.',
-      }
-    }
-    const vr = comparison.find(({ geographyId }) => geographyId === 'volta_redonda')?.latest
-    const rest = comparison.find(({ geographyId }) => geographyId === 'rest_of_rj_excluding_vr')?.latest
-    const brazil = comparison.find(({ geographyId }) => geographyId === 'brazil_total')?.latest
-    if (!vr) return null
-    if (metric === 'count') {
-      return {
-        year: vr.period,
-        headline: `${formatMetric(vr.count, metric)} eventos em Volta Redonda`,
-        comparison: 'Contagens não são comparáveis diretamente entre territórios',
-        detail: 'O tamanho das populações é muito diferente. Troque para taxa por 100 mil antes de comparar.',
-      }
-    }
-    const samePeriodRest = rest?.period === vr.period ? rest : undefined
-    const samePeriodBrazil = brazil?.period === vr.period ? brazil : undefined
-    const difference = vr.value !== null && samePeriodRest?.value
-      ? ((vr.value / samePeriodRest.value) - 1) * 100
-      : null
-    const direction = difference === null ? null : difference >= 0 ? 'acima' : 'abaixo'
-    return {
-      year: vr.period,
-      headline: `${formatMetric(vr.value, metric)} em Volta Redonda`,
-      comparison: difference === null
-        ? 'Sem comparação territorial no mesmo ano'
-        : `${Math.abs(difference).toLocaleString('pt-BR', { maximumFractionDigits: 0 })}% ${direction} do restante do RJ`,
-      detail: [
-        samePeriodRest?.value !== null && samePeriodRest?.value !== undefined
-          ? `RJ sem Volta Redonda: ${formatMetric(samePeriodRest.value, metric)}`
-          : null,
-        samePeriodBrazil?.value !== null && samePeriodBrazil?.value !== undefined
-          ? `Brasil: ${formatMetric(samePeriodBrazil.value, metric)}`
-          : null,
-      ].filter(Boolean).join(' · ') || 'Comparadores ainda não disponíveis para este período.',
-    }
-  }, [activeGeographies, catalog.geographies, comparison, metric, municipalPeriod, observations, selectedMunicipality, selectedMunicipalValue, territory])
+    return null
+  }, [metric, municipalPeriod, observations, selectedMunicipality, selectedMunicipalValue])
   const provisional = observations?.some((item) => Number(item.period) >= startYear && Number(item.period) <= endYear && item.dataStatus === 'provisional') ?? false
   const stateTotalAtMunicipalPeriod = observations?.find((item) => item.geographyId === 'rj_total' && item.period === municipalPeriod) ?? null
   const brazilAtMunicipalPeriod = observations?.find((item) => item.geographyId === 'brazil_total' && item.period === municipalPeriod) ?? null
@@ -239,7 +185,7 @@ export function ExplorerPage() {
       />
       <section className="selection-summary" aria-label="Resumo da consulta atual">
         <div><span>Indicador</span><strong>{indicator.measureLabel}: {indicator.label}</strong></div>
-        <div><span>Cidade escolhida</span><strong>{selectedMunicipality?.name ?? 'Volta Redonda'} · RJ sem a cidade · Brasil</strong></div>
+        <div><span>Cidade escolhida</span><strong>{selectedMunicipality?.name ?? 'Município selecionado'} · restante do RJ · Brasil</strong></div>
         <div><span>Período</span><strong>{startYear}–{endYear}</strong></div>
         <Link href={`/indicadores/${indicator.id}`}>Entenda este indicador <ArrowRight /></Link>
       </section>

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "vr-saude-ambiental"
 version = "0.1.0"
-description = "Estudo reproduzivel de saude ambiental e epidemiologia em Volta Redonda"
+description = "Observatório reproduzível de saúde e epidemiologia dos municípios do Rio de Janeiro"
 readme = "README.md"
 requires-python = ">=3.11,<3.14"
 dependencies = [
