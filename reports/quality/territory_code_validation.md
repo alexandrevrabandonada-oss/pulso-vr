@@ -22,4 +22,9 @@ Esta checagem confirma que os filtros de residência encontram Volta Redonda nos
 | `sim_2021_Mortalidade_Geral_2021_csv.zip` | SIM / `CODMUNRES` | 1832649 | 3202 | `{"6": 1832649}` | OK |
 | `sim_mortalidade_geral_2024_csv.zip` | SIM / `CODMUNRES` | 1532015 | 2493 | `{"6": 1532015}` | OK |
 | `sivep_2020_INFLUD20-23-03-2026.parquet` | SIVEP-SRAG / `CO_MUN_RES` | 1206920 | 1525 | `{"0": 113, "6": 1206807}` | OK |
+| `sivep_2021_INFLUD21-23-03-2026.parquet` | SIVEP-SRAG / `CO_MUN_RES` | 1745672 | 2973 | `{"0": 260, "6": 1745412}` | OK |
+| `sivep_2022_INFLUD22-23-03-2026.parquet` | SIVEP-SRAG / `CO_MUN_RES` | 560577 | 1277 | `{"0": 128, "6": 560449}` | OK |
+| `sivep_2023_INFLUD23-23-03-2026.parquet` | SIVEP-SRAG / `CO_MUN_RES` | 279453 | 733 | `{"0": 66, "6": 279387}` | OK |
+| `sivep_2024_INFLUD24-23-03-2026.parquet` | SIVEP-SRAG / `CO_MUN_RES` | 267986 | 592 | `{"0": 78, "6": 267908}` | OK |
+| `sivep_2025_INFLUD25-27-07-2026.parquet` | SIVEP-SRAG / `CO_MUN_RES` | 336260 | 826 | `{"0": 109, "6": 336151}` | OK |
 | `sivep_srag_2019_2026-03-23.parquet` | SIVEP-SRAG / `CO_MUN_RES` | 48941 | 116 | `{"0": 37, "6": 48904}` | OK |

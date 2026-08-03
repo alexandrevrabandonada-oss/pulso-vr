@@ -1,6 +1,6 @@
 # Série temporal interrompida — internações respiratórias do SIH
 
-Execução: 2026-08-03T00:13:58+00:00
+Execução: 2026-08-03T01:37:30+00:00
 
 O modelo usa contagens mensais de internações/AIH de residentes, com offset da população anual dividida por 12, indicadores de março de 2020 e tendência pós-intervenção, além de indicadores mensais de sazonalidade. Os intervalos usam covariância robusta HAC com 12 defasagens quando disponível.
 

@@ -197,6 +197,81 @@
     "errors": []
   },
   {
+    "path": "data\\raw\\sivep_2021_INFLUD21-23-03-2026.parquet",
+    "source": "SIVEP-SRAG",
+    "field": "CO_MUN_RES",
+    "format": "Parquet",
+    "ok": true,
+    "rows": 1745672,
+    "target_code": "330630",
+    "target_rows": 2973,
+    "observed_code_lengths": {
+      "0": 260,
+      "6": 1745412
+    },
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sivep_2022_INFLUD22-23-03-2026.parquet",
+    "source": "SIVEP-SRAG",
+    "field": "CO_MUN_RES",
+    "format": "Parquet",
+    "ok": true,
+    "rows": 560577,
+    "target_code": "330630",
+    "target_rows": 1277,
+    "observed_code_lengths": {
+      "0": 128,
+      "6": 560449
+    },
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sivep_2023_INFLUD23-23-03-2026.parquet",
+    "source": "SIVEP-SRAG",
+    "field": "CO_MUN_RES",
+    "format": "Parquet",
+    "ok": true,
+    "rows": 279453,
+    "target_code": "330630",
+    "target_rows": 733,
+    "observed_code_lengths": {
+      "0": 66,
+      "6": 279387
+    },
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sivep_2024_INFLUD24-23-03-2026.parquet",
+    "source": "SIVEP-SRAG",
+    "field": "CO_MUN_RES",
+    "format": "Parquet",
+    "ok": true,
+    "rows": 267986,
+    "target_code": "330630",
+    "target_rows": 592,
+    "observed_code_lengths": {
+      "0": 78,
+      "6": 267908
+    },
+    "errors": []
+  },
+  {
+    "path": "data\\raw\\sivep_2025_INFLUD25-27-07-2026.parquet",
+    "source": "SIVEP-SRAG",
+    "field": "CO_MUN_RES",
+    "format": "Parquet",
+    "ok": true,
+    "rows": 336260,
+    "target_code": "330630",
+    "target_rows": 826,
+    "observed_code_lengths": {
+      "0": 109,
+      "6": 336151
+    },
+    "errors": []
+  },
+  {
     "path": "data\\raw\\sivep_srag_2019_2026-03-23.parquet",
     "source": "SIVEP-SRAG",
     "field": "CO_MUN_RES",
