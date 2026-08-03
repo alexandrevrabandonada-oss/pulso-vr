@@ -81,8 +81,8 @@ def validate_project(root: Path | None = None) -> list[str]:
     except Exception as exc:  # pragma: no cover - message is user-facing
         return [f"configuration load failed: {exc}"]
 
-    if not all(outcomes.get(section) for section in ("respiratory", "cardiovascular", "cardiorespiratory", "cancer")):
-        issues.append("outcomes.yml must define respiratory, cardiovascular, cardiorespiratory and cancer outcomes")
+    if not all(outcomes.get(section) for section in ("respiratory", "cardiovascular", "cardiorespiratory", "cancer", "neurological")):
+        issues.append("outcomes.yml must define respiratory, cardiovascular, cardiorespiratory, cancer and neurological outcomes")
     if periods.get("breaks", {}).get("respiratory_pandemic_start") != "2020-03":
         issues.append("periods.yml must define respiratory break at 2020-03")
     if periods.get("breaks", {}).get("oncology_line_start") != "2022-03":

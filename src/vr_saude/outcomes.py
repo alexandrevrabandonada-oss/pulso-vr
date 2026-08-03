@@ -24,6 +24,7 @@ SIVEP_OUTCOME_CODES = {
     "": "sem informação",
 }
 AGE_GROUPS = ["<1", "1-4", "5-14", "15-24", "25-44", "45-64", "65-74", "75+", "ignorado"]
+OUTCOME_SECTIONS = ("respiratory", "cardiovascular", "cardiorespiratory", "cancer", "neurological")
 
 
 def _normalize_code(series: pd.Series) -> pd.Series:
@@ -61,7 +62,7 @@ def _matches_cid(codes: pd.Series, ranges: list[str]) -> pd.Series:
 def _definitions(root: Path, source: str) -> list[dict[str, Any]]:
     config = load_config("outcomes.yml", root)
     definitions: list[dict[str, Any]] = []
-    for section in ("respiratory", "cardiovascular", "cardiorespiratory", "cancer"):
+    for section in OUTCOME_SECTIONS:
         for item in config.get(section, []):
             if source in item.get("source", []) and item.get("code_ranges"):
                 definitions.append(item)

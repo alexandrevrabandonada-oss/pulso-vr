@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-08-03T20:53:20+00:00",
+  "status": "validated_sih_neurological_residence_rates",
+  "year": 2022,
+  "outcome_ids": [
+    "alzheimer",
+    "dementias_all"
+  ],
+  "municipalities": 92,
+  "geographies": [
+    "volta_redonda",
+    "rest_of_rj_excluding_vr",
+    "rj_total",
+    "brazil_total"
+  ],
+  "rows": 192,
+  "output_path": "data\\processed\\sih_neurological_rates_annual.parquet",
+  "output_sha256": "9676d6270c50fdf471d22ce8aa860d752f6bac8acd5d64c3ece595f6afac0772",
+  "input_files": [
+    {
+      "path": "data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_01.html",
+      "sha256": "4009ebde83376ee7c7c955e35e65519ab660851b74cd37912785e96f026c4d7c"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_02.html",
+      "sha256": "1cc0b2efeb5aeb19bbc687d556cbea90598edb76f680041d7af152adaddd1e35"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_03.html",
+      "sha256": "ea8f9b72a6a87cbc364158506994e1a81b1c0e9af67a9c43bdcd2184ba6df467"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_04.html",
+      "sha256": "e37d899b39cb3461d4e7870178bb0c0f7b481a56b109b18fe7ca4704ffc91960"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_05.html",
+      "sha256": "28a4f6569ca6d6e97fd495bf229f75c3e96ba95a8f6700bb3542ef622b3fc7e9"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_06.html",
+      "sha256": "cc73c1ecf834174cf207d4af07c2d1608f08f32a74bb4390298867b8096b17ed"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_07.html",
+      "sha256": "1eed5577f95a083fc808858d6e60ecba5b53283e9db584dbd832117b3232f692"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_08.html",
+      "sha256": "29d0b92077fa1929915342cce8d64091e025923a1816e4b942606640627ec52d"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_09.html",
+      "sha256": "fdbd1c9ba3f87a49052f6d4b6c0886e1ce4018faa6bc3846186d3d8a3438199e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_10.html",
+      "sha256": "724284ad91e8e640c60eb41320f70cfe29505402fdd1c531d1d1277dcfc9e47f"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_11.html",
+      "sha256": "ebc55ffe027631fe83b689ccf8bca4247f081bdbd023dcfb951f86ae9b5b423e"
+    },
+    {
+      "path": "data\\raw\\sih_tabnet_nrbr_morbidity_brazil_total_2022_12.html",
+      "sha256": "4d051a2ed408d052bbd61822bb65c07e141aeec90da81c39e105fa8a69fd3734"
+    },
+    {
+      "path": "data\\processed\\sih_municipal_map_rates_2022.parquet",
+      "sha256": "7a7b024925f8c3250932ff09a5dcc1ec4d41365909d3b07ac322f9adbafc1af1"
+    }
+  ],
+  "rules": {
+    "residence": "SIH municipality of residence",
+    "measure": "AIH/hospitalization event, not unique person",
+    "diagnostic_groups": {
+      "alzheimer": "146 Doença de Alzheimer",
+      "dementias_all": "132 Demência + 146 Doença de Alzheimer"
+    }
+  }
+}

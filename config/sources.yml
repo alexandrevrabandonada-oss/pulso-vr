@@ -38,6 +38,19 @@ sources:
       - "separate definitive, preliminary and provisional releases"
       - "use residence municipality for population risk"
       - "validate underlying and multiple causes separately"
+  sia:
+    title: "Produção Ambulatorial do SUS"
+    institution: "DATASUS / Ministério da Saúde"
+    primary:
+      landing_url: "https://datasus.saude.gov.br/acesso-a-informacao/producao-ambulatorial-sia-sus/"
+      mode: "TabNet / produção por município do estabelecimento"
+      granularity: "monthly"
+      territory: "municipality of establishment"
+    technical_notes: "https://tabnet.datasus.gov.br/cgi/sia/padescr.htm"
+    validation:
+      - "confirm a valid ICD-10 diagnostic dimension before classifying Alzheimer/dementia"
+      - "retain establishment geography and do not substitute residence"
+      - "publish no value or resident rate while diagnostic coverage is unavailable"
   ibge_population:
     title: "Population denominators"
     institution: "IBGE"

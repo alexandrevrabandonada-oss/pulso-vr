@@ -117,7 +117,7 @@ def test_published_municipality_summaries_cover_state_without_protected_leaks() 
     for path in paths:
         payload = json.loads(path.read_text(encoding="utf-8"))
         assert payload["municipalityCode"] == path.stem
-        assert len(payload["items"]) == 45
+        assert len(payload["items"]) == 49
         for item in payload["items"]:
             if item["suppressionStatus"] == "suppressed":
                 assert item["value"] is None
