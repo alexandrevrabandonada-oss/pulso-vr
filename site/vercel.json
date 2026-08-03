@@ -1,11 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "routes": [
-    { "src": "/api/share-card", "dest": "/api/share-card" },
-    { "src": "/api/share-page", "dest": "/api/share-page" },
-    { "src": "/compartilhar", "dest": "/api/share-page" },
-    { "src": "/((?!api/|compartilhar).*)", "dest": "/index.html" }
-  ],
   "headers": [
     {
       "source": "/data/(.*)",
