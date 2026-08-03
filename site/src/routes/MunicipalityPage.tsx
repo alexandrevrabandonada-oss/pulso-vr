@@ -11,7 +11,7 @@ import { TimeSeriesChart } from '../components/TimeSeriesChart'
 import { usePortal } from '../context/usePortal'
 import { trackEvent } from '../lib/analytics'
 import { loadMap, loadMunicipalitySummary, loadMunicipalSeries, loadSeries } from '../lib/data'
-import { formatMetric, statusLabel } from '../lib/format'
+import { formatMetric, metricLabel, statusLabel } from '../lib/format'
 import { buildMunicipalComparisonSeries, rateRatio, relativeDifferenceLabel } from '../lib/municipalComparison'
 import { municipalProperties } from '../lib/municipalities'
 import { buildFilteredSeriesCsv, saveCsvFile } from '../lib/publicDownload'
@@ -118,6 +118,8 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
   const visibleMapValues = mapMetric === 'crude_rate_per_100k' && mapAlternative ? mapAlternative.values : map?.values ?? []
   const visibleMapPeriod = mapMetric === 'crude_rate_per_100k' && mapAlternative ? mapAlternative.period : map?.period
   const eventLabel = indicator.measure === 'hospitalization' ? 'internações/AIHs registradas' : 'óbitos de residentes registrados'
+  const geographyLabel = indicator.geographyBasis === 'establishment' ? 'Local do estabelecimento' : 'Município de residência'
+  const comparisonLabel = latest?.comparisonAvailable ? `${relativeDifferenceLabel(ratio)} do restante do RJ` : 'Comparação indisponível'
   const open = (code: string, indicatorId: string) => navigate(`/municipios/${code}?indicador=${indicatorId}`)
   const download = async () => {
     const [seriesPayload, municipalPayload] = series && municipalSeries ? [{ observations: series }, { observations: municipalSeries }] : await Promise.all([loadSeries(indicator.id), loadMunicipalSeries(indicator.id)])
@@ -136,10 +138,40 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
         <DiscoverySearch compact municipalities={municipalities} indicators={catalog.indicators} initialMunicipalityCode={municipality.code} onOpen={open} />
       </section>
       <section className={`municipality-answer${latest?.suppressionStatus === 'suppressed' ? ' is-suppressed' : ''}`} aria-labelledby="municipality-answer-title">
-        <div className="municipality-answer__intro"><span>O que este indicador mede</span><h2 id="municipality-answer-title">{indicator.label}</h2><p>{indicator.definition}</p><small>{indicator.measureLabel} · {period ?? 'sem período publicável'} · {status}</small></div>
-        <div className="municipality-answer__value"><span>1 · Valor</span><strong>{latest.suppressionStatus === 'suppressed' ? 'Dado protegido' : formatMetric(latest.value, answerMetric)}</strong>{latest.suppressionStatus !== 'suppressed' ? <><span>{answerMetric === 'age_sex_standardized_rate_per_100k' ? 'taxa padronizada por idade e sexo por 100 mil' : 'por 100 mil habitantes'}</span><small>{formatMetric(latest.count, 'count')} {eventLabel}</small></> : <small>Célula pequena protegida. A ausência do valor não significa zero.</small>}</div>
-        <div className="municipality-answer__comparison"><span>2 · Comparação</span><strong>{latest?.comparisonAvailable ? relativeDifferenceLabel(ratio) : 'Comparação indisponível'}</strong><small>RJ sem {municipality.name}: {formatMetric(latest?.restOfStateValue ?? null, answerMetric)}</small>{indicator.comparisonAvailability?.brazil && answerMetric !== 'age_sex_standardized_rate_per_100k' ? <small>Brasil: {formatMetric(latest?.brazilValue ?? null, answerMetric)}</small> : <small>Brasil não exibido: definição, métrica ou período não equivalentes.</small>}</div>
-        <div className="municipality-answer__interpretation"><span>3 · Como interpretar</span><strong>Leitura orientada pelo contexto</strong><p>{indicator.allowsConclusion}</p></div>
+        <div className="municipality-answer__intro">
+          <div className="answer-kicker"><span>Leia primeiro</span><strong>O que este indicador mede</strong></div>
+          <h2 id="municipality-answer-title">{indicator.label}</h2>
+          <p>{indicator.definition}</p>
+          <dl className="answer-meta">
+            <div><dt>Fonte</dt><dd>{indicator.sourceLabel}</dd></div>
+            <div><dt>Período</dt><dd>{period ?? 'Sem período publicável'}</dd></div>
+            <div><dt>Território</dt><dd>{geographyLabel}</dd></div>
+            <div><dt>Status</dt><dd>{status}</dd></div>
+          </dl>
+        </div>
+        <div className="municipality-answer__value">
+          <div className="answer-kicker"><span>1</span><strong>Resultado principal</strong></div>
+          <strong className="answer-number">{latest.suppressionStatus === 'suppressed' ? 'Dado protegido' : formatMetric(latest.value, answerMetric)}</strong>
+          {latest.suppressionStatus !== 'suppressed' ? <>
+            <span className="answer-unit">{metricLabel(answerMetric)}</span>
+            <small>{formatMetric(latest.count, 'count')} {eventLabel}</small>
+          </> : <small>Célula pequena protegida. A ausência do valor não significa zero.</small>}
+        </div>
+        <div className="municipality-answer__comparison">
+          <div className="answer-kicker"><span>2</span><strong>Compare com cuidado</strong></div>
+          <strong className="answer-comparison-headline">{comparisonLabel}</strong>
+          <p className="answer-helper">A referência estadual é o RJ sem {municipality.name}; não é uma média simples das cidades.</p>
+          <div className="answer-comparison-list">
+            <div><span>RJ sem {municipality.name}</span><strong>{latest?.comparisonAvailable ? formatMetric(latest.restOfStateValue, answerMetric) : 'Indisponível'}</strong></div>
+            {indicator.comparisonAvailability?.brazil && answerMetric !== 'age_sex_standardized_rate_per_100k' ? <div><span>Brasil</span><strong>{formatMetric(latest?.brazilValue ?? null, answerMetric)}</strong></div> : <div className="is-unavailable"><span>Brasil</span><strong>Não exibido</strong><small>Definição, métrica ou período não equivalentes.</small></div>}
+          </div>
+        </div>
+        <div className="municipality-answer__interpretation">
+          <div className="answer-kicker"><span>3</span><strong>Como ler</strong></div>
+          <h3>Uma leitura orientada pelo contexto</h3>
+          <p>{indicator.allowsConclusion}</p>
+          <div className="answer-boundary"><strong>Este dado não permite concluir:</strong><p>{indicator.doesNotAllowConclusion}</p></div>
+        </div>
       </section>
       {isNeurological ? <section className="municipality-method"><FileText /><div><h2>Por que padronizar?</h2><p>Municípios mais envelhecidos podem apresentar taxas brutas maiores apenas pela composição etária. A taxa de 2022 ajusta idade e sexo usando a população do Brasil no Censo 2022, tornando a comparação municipal mais justa. Ela não mede prevalência nem todas as pessoas com diagnóstico.</p><p><strong>Dado recente:</strong> a mortalidade bruta de 2024 aparece na evolução. O ano de 2023 permanece como lacuna e não é interpolado.</p></div></section> : null}
       <div className="municipality-actions"><button type="button" onClick={download}><Download />Baixar este recorte</button><ShareButton surface="municipality" context={{ municipalityCode: municipality.code, indicatorId: indicator.id, period: period ?? undefined, metricKind: answerMetric, template: 'answer', format: 'og', route: 'municipality' }} /><Link href={`/explorador?indicador=${indicator.id}&municipio=${municipality.code}`}>Abrir análise avançada <ArrowRight /></Link></div>
