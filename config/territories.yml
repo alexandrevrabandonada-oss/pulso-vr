@@ -9,9 +9,11 @@ volta_redonda:
   residence_only: true
 comparators:
   primary:
-    id: rest_of_rj_excluding_vr
-    rule: "all municipalities in UF 33 except ibge_code_7=3306305"
+    id: rest_of_rj_excluding_selected_municipality
+    rule: "all municipalities in UF 33 except the selected municipality; calculate numerator and denominator after exclusion"
   secondary:
+    - id: brazil_total
+      rule: "national total using the equivalent source, geography basis and denominator"
     - id: medio_paraiba_without_vr
       rule: "Médio Paraíba municipalities except Volta Redonda"
     - id: pre_specified_comparable_municipalities

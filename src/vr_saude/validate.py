@@ -91,8 +91,8 @@ def validate_project(root: Path | None = None) -> list[str]:
     if vr.get("ibge_code_7") != "3306305":
         issues.append("territories.yml must define Volta Redonda IBGE code 3306305")
     primary_rule = territories.get("comparators", {}).get("primary", {}).get("rule", "")
-    if "3306305" not in primary_rule or "except" not in primary_rule.lower():
-        issues.append("primary comparator must exclude Volta Redonda")
+    if "selected municipality" not in primary_rule.lower() or "denominator" not in primary_rule.lower():
+        issues.append("primary comparator must exclude the selected municipality from numerator and denominator")
     if sources.get("sources", {}).get("sih", {}).get("primary", {}).get("territory") != "residence in RJ":
         issues.append("SIH source must declare residence in RJ")
 
