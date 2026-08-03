@@ -1,10 +1,10 @@
-# vr_saude_ambiental
+# Observatório Estadual de Saúde do Rio de Janeiro
 
 Estudo reproduzível e observatório estadual sobre internações respiratórias e
 cardiovasculares, pandemia, poluição, mortalidade por câncer, assistência
-oncológica e exposição ocupacional no Rio de Janeiro. Volta Redonda permanece
-como município de referência; o portal apresenta também os 92 municípios do
-estado quando houver dados municipais validados.
+oncológica e exposição ocupacional no Rio de Janeiro. Os 92 municípios ocupam
+a mesma posição na experiência pública quando houver dados validados. Volta
+Redonda permanece apenas como recorte histórico da pesquisa.
 
 ## Status da primeira execução
 
@@ -20,8 +20,8 @@ SIVEP, mas nenhuma hipótese causal é considerada confirmada.
 ## Comparação e períodos
 
 A comparação primária é o município selecionado versus o restante do Estado do
-Rio, excluindo Volta Redonda quando essa é a referência; para a visão estadual,
-cada município é comparado ao agregado estadual equivalente. Comparações
+Rio, sempre excluindo dinamicamente a cidade selecionada do numerador e do
+denominador agregados. Não se usa média simples das taxas municipais. Comparações
 secundárias incluem o Médio Paraíba sem Volta Redonda, municípios comparáveis
 definidos a priori e o Brasil quando numerador e denominador forem equivalentes.
 O código IBGE de Volta Redonda usado no SIDRA é `3306305`.

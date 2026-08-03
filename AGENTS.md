@@ -2,10 +2,10 @@
 
 ## Escopo
 
-Este repositório documenta e executa o estudo epidemiológico, estatístico,
-ambiental e ocupacional sobre a saúde da população residente em Volta
-Redonda (RJ). O código deve produzir tabelas, figuras, relatórios e um
-manifesto de resultados a partir de fontes versionadas e rastreáveis.
+Este repositório documenta e executa um observatório epidemiológico estadual
+para os 92 municípios do Rio de Janeiro. Volta Redonda permanece como recorte
+histórico da pesquisa, sem privilégio na navegação ou nas regras públicas.
+O código deve produzir tabelas, figuras, relatórios e manifestos rastreáveis.
 
 ## Regras obrigatórias
 
@@ -13,9 +13,10 @@ manifesto de resultados a partir de fontes versionadas e rastreáveis.
   atendimento ou ocorrência nunca substitui residência.
 - Uma internação SIH é um evento/AIH, não uma pessoa única nem um caso novo.
 - RHC não é tratado como incidência populacional.
-- O comparador primário é todo o RJ menos Volta Redonda. O código IBGE de
-  Volta Redonda é `3306305`; o código DATASUS de seis dígitos deve ser
-  confirmado a partir do cadastro de municípios antes da análise final.
+- O comparador primário é todo o RJ menos o município selecionado, calculado
+  com numerador e denominador agregados. Nunca é uma média simples das taxas.
+- Códigos IBGE e DATASUS devem ser confirmados no cadastro oficial antes da
+  análise final; `3306305` identifica Volta Redonda apenas no recorte histórico.
 - A pasta `data/raw` é imutável. Arquivos baixados recebem SHA-256 e não são
   editados, sobrescritos ou normalizados in place.
 - Dados definitivos, preliminares e provisórios devem permanecer separados.
