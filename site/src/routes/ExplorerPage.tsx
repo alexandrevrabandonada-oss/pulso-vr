@@ -15,17 +15,11 @@ import { loadMap, loadMunicipalSeries, loadSeries } from '../lib/data'
 import { deriveExplorerState, explorerStateSearch } from '../lib/explorerState'
 import { formatMetric, metricLabel, statusLabel } from '../lib/format'
 import { buildMunicipalComparisonSeries, rateRatio, relativeDifferenceLabel, restOfStateExcludingMunicipality } from '../lib/municipalComparison'
+import { municipalProperties } from '../lib/municipalities'
 import { buildFilteredSeriesCsv, saveCsvFile } from '../lib/publicDownload'
-import type { MapFeatureProperties, Observation, Theme } from '../types'
+import type { Observation, Theme } from '../types'
 
 const GEO_ORDER = ['volta_redonda', 'rest_of_rj_excluding_vr', 'brazil_total']
-
-function municipalProperties(topology: unknown): MapFeatureProperties[] {
-  const typed = topology as { objects?: { municipalities?: { geometries?: Array<{ properties?: MapFeatureProperties }> } } }
-  return (typed.objects?.municipalities?.geometries ?? [])
-    .map((geometry) => geometry.properties)
-    .filter((properties): properties is MapFeatureProperties => Boolean(properties))
-}
 
 export function ExplorerPage() {
   const { catalog, release, topology } = usePortal()

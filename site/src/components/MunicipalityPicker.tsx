@@ -1,15 +1,12 @@
 import { ArrowRight, MapPin, Search } from 'lucide-react'
 import { FormEvent, useEffect, useMemo, useState } from 'react'
+import { findMunicipality } from '../lib/municipalities'
 import type { MapFeatureProperties } from '../types'
 
 interface MunicipalityPickerProps {
   municipalities: MapFeatureProperties[]
   selectedCode: string | null
   onSelect: (code: string) => void
-}
-
-function normalize(value: string) {
-  return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('pt-BR').trim()
 }
 
 export function MunicipalityPicker({ municipalities, selectedCode, onSelect }: MunicipalityPickerProps) {
@@ -20,12 +17,7 @@ export function MunicipalityPicker({ municipalities, selectedCode, onSelect }: M
   const selected = sorted.find((item) => item.code === selectedCode) ?? null
   const [query, setQuery] = useState(selected?.name ?? '')
   const match = useMemo(() => {
-    const target = normalize(query)
-    if (!target) return null
-    return sorted.find((item) => normalize(item.name) === target)
-      ?? sorted.find((item) => normalize(item.name).startsWith(target))
-      ?? sorted.find((item) => normalize(item.name).includes(target))
-      ?? null
+    return findMunicipality(query, sorted)
   }, [query, sorted])
 
   useEffect(() => setQuery(selected?.name ?? ''), [selected?.name])

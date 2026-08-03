@@ -611,6 +611,15 @@ button, select, input, .primary-button, .icon-action, .content-actions a { borde
   line-height: 1.6;
 }
 .hero-actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.home-city-search { width: min(100%, 520px); margin-bottom: 14px; }
+.home-city-search > label { display: block; margin-bottom: 7px; font-size: .62rem; font-weight: 900; text-transform: uppercase; }
+.home-city-search > div { min-height: 54px; display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; border: 2px solid var(--ink); background: #fff; }
+.home-city-search > div > svg { align-self: center; justify-self: center; width: 19px; }
+.home-city-search input { min-width: 0; border: 0; outline: 0; padding: 0 8px 0 0; color: var(--ink); font: 700 .88rem/1.2 var(--sans); }
+.home-city-search button { display: flex; align-items: center; gap: 16px; border: 0; border-left: 2px solid var(--ink); padding: 0 16px; background: var(--ink); color: var(--yellow); font-size: .65rem; font-weight: 900; text-transform: uppercase; cursor: pointer; }
+.home-city-search button:disabled { background: #aaa; color: #fff; cursor: not-allowed; }
+.home-city-search button svg { width: 17px; }
+.hero-actions--secondary { gap: 18px; }
 .secondary-button {
   min-height: 46px;
   display: inline-flex;
@@ -986,6 +995,11 @@ button, select, input, .primary-button, .icon-action, .content-actions a { borde
   .home-hero__copy > p:not(.hero-method-note, .hero-eyebrow) { width: 100%; max-width: 100%; font-size: .82rem; }
   .hero-eyebrow { margin-bottom: 16px; }
   .hero-actions { align-items: stretch; flex-direction: column; gap: 16px; width: 100%; }
+  .home-city-search { width: 100%; }
+  .home-city-search > div { grid-template-columns: 40px minmax(0, 1fr) 50px; }
+  .home-city-search button { justify-content: center; padding: 0; }
+  .home-city-search button span { display: none; }
+  .hero-actions--secondary { align-items: flex-start; gap: 8px; }
   .primary-button { justify-content: space-between; width: 100%; }
   .secondary-button { justify-content: center; align-self: flex-start; }
   .data-preview__heading { min-height: 72px; padding: 12px 14px; }
