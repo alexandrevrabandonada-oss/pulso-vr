@@ -37,7 +37,15 @@ export interface Indicator {
   synonyms?: string[]
   geographicCoverage?: Pick<CoverageSummary, 'municipalityCount' | 'publishableMunicipalityCount'>
   temporalCoverage?: Omit<CoverageSummary, 'municipalityCount' | 'publishableMunicipalityCount'>
-  profileCoverage?: { status: 'available' | 'pilot' | 'unavailable'; geographies: string[]; periods: string[]; dimensions: string[] }
+  profileCoverage?: {
+    status: 'available' | 'pilot' | 'unavailable'
+    municipalityCount: number
+    publishableMunicipalityCount: number
+    periods: string[]
+    ageGroups: string[]
+    sexes: string[]
+    unavailableReason?: string | null
+  }
   comparisonAvailability?: { restOfState: boolean; brazil: boolean; reason?: string }
   updatedAt?: string
   methodologyUrl?: string
@@ -70,9 +78,20 @@ export interface Observation {
   suppressionStatus?: SuppressionStatus
 }
 
-export interface ProfileObservation extends Observation {
+export interface ProfileObservation {
+  municipalityCode: string
+  indicatorId: string
+  period: string
   ageGroup: string
   sex: string
+  count: number | null
+  denominator: number | null
+  ratePer100k: number | null
+  ciLow: number | null
+  ciHigh: number | null
+  suppressionStatus: 'published' | 'suppressed' | 'not_applicable' | 'unavailable'
+  dataStatus: string
+  manifestRef: string
 }
 
 export interface SeriesPayload {

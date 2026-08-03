@@ -34,7 +34,8 @@ export function loadMunicipalSeries(indicatorId: string) {
   return fetchJson<MunicipalSeriesPayload>(`/data/municipal-series/${indicatorId}.json`)
 }
 
-export function loadProfile(indicatorId: string) {
+export function loadProfile(indicatorId: string, period = '2022') {
+  if (period !== '2022') return Promise.reject(new Error(`Perfil indisponível para ${period}`))
   return fetchJson<ProfilePayload>(`/data/profiles/${indicatorId}.json`)
 }
 

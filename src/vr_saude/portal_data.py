@@ -337,7 +337,7 @@ def _municipal_series_payloads(root: Path, catalog: Iterable[dict[str, Any]]) ->
 
 
 def _profile_payload(root: Path, catalog: Iterable[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
-    path = root / "data" / "processed" / "sim_mortality_age_sex_rates_2022.parquet"
+    path = root / "data" / "processed" / "sim_municipal_age_sex_rates_2022.parquet"
     if not path.exists():
         return {}
     frame = pd.read_parquet(path)
@@ -349,24 +349,23 @@ def _profile_payload(root: Path, catalog: Iterable[dict[str, Any]]) -> dict[str,
             continue
         rows: list[dict[str, Any]] = []
         for row in group.itertuples(index=False):
+            protected = str(row.suppression_status) != "published"
             item = {
-                "source": "SIM",
-                "outcomeId": str(outcome_id),
-                "geographyId": str(row.geography),
+                "municipalityCode": str(row.municipality_code_ibge),
+                "indicatorId": indicator_id,
                 "period": "2022",
                 "ageGroup": str(row.age_group),
                 "sex": str(row.sex),
-                "metricKind": "age_sex_specific_crude_rate_per_100k",
-                "value": _finite_or_none(row.rate_per_100k),
-                "count": int(row.count),
+                "count": None if protected else int(row.count),
                 "denominator": int(row.population),
-                "ciLow": _finite_or_none(row.rate_ci_lower_per_100k),
-                "ciHigh": _finite_or_none(row.rate_ci_upper_per_100k),
+                "ratePer100k": None if protected else _finite_or_none(row.rate_per_100k),
+                "ciLow": None if protected else _finite_or_none(row.rate_ci_lower_per_100k),
+                "ciHigh": None if protected else _finite_or_none(row.rate_ci_upper_per_100k),
+                "suppressionStatus": "suppressed" if protected else "published",
                 "dataStatus": "source_observed",
-                "periodStatus": str(row.period_status),
-                "manifestRef": "reports/quality/sim_age_sex_rates_manifest.json",
+                "manifestRef": "reports/quality/sim_municipal_age_sex_profiles_manifest.json",
             }
-            rows.append(suppress_public_observation(item))
+            rows.append(item)
         payload[indicator_id] = rows
     return payload
 
@@ -503,12 +502,14 @@ def build_portal_data(
             "provisionalPeriods": provisional_periods,
         }
         profile_rows = profiles.get(indicator_id, [])
-        profile_geographies = sorted({item["geographyId"] for item in profile_rows})
         indicator["profileCoverage"] = {
-            "status": "pilot" if profile_rows else "unavailable",
-            "geographies": profile_geographies,
+            "status": "available" if profile_rows else "unavailable",
+            "municipalityCount": 92 if profile_rows else 0,
+            "publishableMunicipalityCount": len({item["municipalityCode"] for item in profile_rows if item["suppressionStatus"] == "published"}),
             "periods": sorted({item["period"] for item in profile_rows}),
-            "dimensions": ["age", "sex"] if profile_rows else [],
+            "ageGroups": ["<1", "1-4", "5-14", "15-24", "25-44", "45-64", "65-74", "75+"] if profile_rows else [],
+            "sexes": ["masculino", "feminino"] if profile_rows else [],
+            "unavailableReason": None if profile_rows else "municipal_profile_not_validated_for_source",
         }
         indicator["comparisonAvailability"] = {
             "restOfState": True,
@@ -576,9 +577,20 @@ def build_portal_data(
                 review_signoff = candidate
         except (OSError, json.JSONDecodeError, AttributeError):
             review_signoff = {}
+    accessibility_audit_path = root / "reports" / "quality" / "portal_accessibility_audit.json"
+    accessibility_audit: dict[str, Any] = {}
+    if accessibility_audit_path.exists():
+        try:
+            accessibility_audit = json.loads(accessibility_audit_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError, AttributeError):
+            accessibility_audit = {}
+    accessibility_revalidated = accessibility_audit.get("status") == "statewide_manual_validation_approved"
     publication_gate = {
         "epidemiologyReview": review_signoff.get("epidemiologyReview", {}).get("status", "pending"),
-        "accessibilityReview": review_signoff.get("accessibilityReview", {}).get("status", "pending"),
+        "accessibilityReview": (
+            review_signoff.get("accessibilityReview", {}).get("status", "pending")
+            if accessibility_revalidated else "pending"
+        ),
         "provenanceReview": "generated",
     }
     release_status = (
