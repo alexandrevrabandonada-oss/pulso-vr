@@ -15,5 +15,5 @@
     "basis": "Revisão do audit automatizado, rotas, foco, teclado, mapa, tabelas, contraste, downloads e testes frontend disponíveis.",
     "limitations": "A aprovação registra a decisão do responsável pelo projeto; testes adicionais com tecnologia assistiva podem ser realizados em manutenção contínua."
   },
-  "scope": "Aprovação dos portões da release estática beta-cardiorespiratorio-integrado; não autoriza inferência causal, incidência de câncer ou publicação de dados pessoais."
+  "scope": "Aprovação histórica dos portões da release estática beta-cardiorespiratorio-integrado; não se aplica à statewide-profiles-preview, não autoriza inferência causal, incidência de câncer ou publicação de dados pessoais."
 }
