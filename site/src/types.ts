@@ -1,6 +1,20 @@
 export type Theme = 'respiratory' | 'cardiovascular' | 'cardiorespiratory' | 'cancer' | 'neurological'
 export type MetricKind = 'crude_rate_per_100k' | 'age_sex_standardized_rate_per_100k' | 'count'
 export type SuppressionStatus = 'published' | 'suppressed' | 'aggregated' | 'unavailable'
+export type ShareTemplate = 'answer' | 'evolution' | 'map'
+export type ShareFormat = 'og' | 'feed' | 'story'
+export type ShareTarget = 'native' | 'whatsapp' | 'facebook' | 'instagram' | 'copy' | 'download'
+export type ShareRoute = 'municipality' | 'explorer' | 'profile' | 'indicator'
+
+export interface ShareContext {
+  municipalityCode?: string
+  indicatorId?: string
+  period?: string
+  metricKind?: MetricKind
+  template: ShareTemplate
+  format: ShareFormat
+  route?: ShareRoute
+}
 
 export interface CoverageSummary {
   municipalityCount: number
