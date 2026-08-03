@@ -37,7 +37,10 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sih-acute-myocardial-infarction",
@@ -69,7 +72,10 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sih-asthma",
@@ -101,7 +107,10 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sih-cardiac-arrhythmia",
@@ -133,7 +142,10 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sih-cardio-all",
@@ -165,7 +177,10 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sih-cardiorespiratory-all",
@@ -198,7 +213,10 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sih-cerebrovascular",
@@ -230,7 +248,10 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sih-copd",
@@ -262,7 +283,10 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sih-heart-failure",
@@ -294,7 +318,10 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sih-hypertension",
@@ -326,7 +353,10 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sih-ischemic-heart-disease",
@@ -358,7 +388,10 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sih-pneumoconiosis",
@@ -390,7 +423,10 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sih-pneumonia",
@@ -422,7 +458,26 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2024",
+        "2025"
+      ]
     },
     {
       "id": "sih-pulmonary-embolism",
@@ -454,7 +509,10 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sih-resp-all",
@@ -486,7 +544,10 @@
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-acute-bronchitis-bronchiolitis",
@@ -518,7 +579,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-acute-myocardial-infarction",
@@ -550,7 +614,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-all-malignant-neoplasms",
@@ -582,7 +649,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-asthma",
@@ -614,7 +684,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-bladder",
@@ -646,7 +719,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-breast",
@@ -678,7 +754,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-cardiac-arrhythmia",
@@ -710,7 +789,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-cardio-all",
@@ -742,7 +824,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-cardiorespiratory-all",
@@ -775,7 +860,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-cerebrovascular",
@@ -807,7 +895,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-cervix",
@@ -839,7 +930,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-colorectal",
@@ -871,7 +965,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-copd",
@@ -903,7 +1000,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-heart-failure",
@@ -935,7 +1035,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-hypertension",
@@ -967,7 +1070,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-influenza",
@@ -999,7 +1105,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-ischemic-heart-disease",
@@ -1031,7 +1140,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-leukemia",
@@ -1063,7 +1175,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-liver",
@@ -1095,7 +1210,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-lung",
@@ -1127,7 +1245,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-multiple-myeloma",
@@ -1159,7 +1280,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-myelodysplastic-syndromes",
@@ -1191,7 +1315,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-non-hodgkin-lymphoma",
@@ -1223,7 +1350,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-pancreas",
@@ -1255,7 +1385,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-pneumoconiosis",
@@ -1287,7 +1420,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-pneumonia",
@@ -1319,7 +1455,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-prostate",
@@ -1351,7 +1490,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-pulmonary-embolism",
@@ -1383,7 +1525,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-resp-all",
@@ -1415,7 +1560,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     },
     {
       "id": "sim-stomach",
@@ -1447,7 +1595,10 @@
       "mapStatus": "validated_sim_2022_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
-      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+      "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual ou incidência de câncer.",
+      "municipalPeriods": [
+        "2022"
+      ]
     }
   ],
   "futureCapabilities": [

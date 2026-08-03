@@ -475,6 +475,8 @@ def build_portal_data(
     profiles = _profile_payload(root, catalog)
     maps = _municipal_map_payloads(root, catalog)
     municipal_series = _municipal_series_payloads(root, catalog)
+    for indicator in catalog:
+        indicator["municipalPeriods"] = municipal_series[str(indicator["id"])]["periods"]
     topology = _build_topology(root, acquire_geography)
 
     _write_json(output_root / "catalog.json", {

@@ -18,6 +18,13 @@ interface IndicatorFinderProps {
   onSelect: (indicatorId: string) => void
 }
 
+function coverageLabel(indicator: Indicator) {
+  const periods = indicator.municipalPeriods ?? []
+  if (periods.length > 1) return `Série municipal · ${periods[0]}–${periods.at(-1)}`
+  if (periods[0]) return `Mapa municipal · ${periods[0]}`
+  return 'Cobertura municipal em preparação'
+}
+
 export function IndicatorFinder({ indicators, onSelect }: IndicatorFinderProps) {
   const [query, setQuery] = useState('')
   const matches = useMemo(() => {
@@ -67,7 +74,7 @@ export function IndicatorFinder({ indicators, onSelect }: IndicatorFinderProps) 
           {matches.length ? matches.map((indicator) => (
             <button type="button" key={indicator.id} onClick={() => select(indicator.id)}>
               <span>{indicator.label}</span>
-              <small>{indicator.measureLabel} · {indicator.sourceLabel}</small>
+              <small>{indicator.measureLabel} · {coverageLabel(indicator)}</small>
               <ArrowRight aria-hidden="true" />
             </button>
           )) : <p>Nenhum indicador encontrado. Tente “pulmão”, “pneumonia” ou “infarto”.</p>}
@@ -77,7 +84,7 @@ export function IndicatorFinder({ indicators, onSelect }: IndicatorFinderProps) 
           {quickIndicators.map((indicator) => (
             <button type="button" key={indicator.id} onClick={() => select(indicator.id)}>
               <span>{indicator.label}</span>
-              <small>{indicator.measureLabel}</small>
+              <small>{indicator.measureLabel} · {coverageLabel(indicator)}</small>
             </button>
           ))}
         </div>

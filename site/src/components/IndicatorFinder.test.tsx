@@ -9,6 +9,7 @@ const lungIndicator: Indicator = {
   unit: 'óbitos', sourceLabel: 'SIM — Ministério da Saúde', cidRanges: ['C33-C34'],
   availableMetrics: ['crude_rate_per_100k', 'count'], geographyIds: ['volta_redonda'], yearStart: 2010,
   yearEnd: 2024, standardization: 'crude_only', mapStatus: 'validated', allowsConclusion: 'Descreve.',
+  municipalPeriods: ['2022'],
   doesNotAllowConclusion: 'Não prova causa.',
 }
 
@@ -23,5 +24,6 @@ describe('IndicatorFinder', () => {
     fireEvent.click(screen.getByRole('button', { name: /Traqueia, brônquios e pulmão/ }))
 
     expect(onSelect).toHaveBeenCalledWith('sim-lung')
+    expect(screen.getByText(/Mapa municipal · 2022/)).toBeInTheDocument()
   })
 })

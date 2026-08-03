@@ -17,6 +17,7 @@ export interface Indicator {
   geographyIds: string[]
   yearStart: number
   yearEnd: number
+  municipalPeriods?: string[]
   standardization: string
   mapStatus: string
   profileAvailability?: 'available_2022_sim_age_sex' | 'not_applicable_current_release' | string

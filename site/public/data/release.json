@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "releaseId": "beta-cardiorespiratorio-integrado",
-  "generatedAt": "2026-08-03T16:02:02+00:00",
+  "generatedAt": "2026-08-03T16:50:40+00:00",
   "status": "public_release_ready",
   "smallCellThreshold": 5,
   "primaryComparator": "rest_of_rj_excluding_vr",
@@ -50,8 +50,8 @@
   "artifacts": [
     {
       "path": "catalog.json",
-      "bytes": 60239,
-      "sha256": "0f34e9704468da6a8bf549927d4b19de7448d2180088b04b8757e9c843bb6eb6"
+      "bytes": 62986,
+      "sha256": "2605e6642f855cbe2a21c0b1ef2590dd6d15dcbfe75bca0439c7aa71673e7c44"
     },
     {
       "path": "downloads/series-publicas.csv",
@@ -66,7 +66,7 @@
     {
       "path": "launch-readiness.json",
       "bytes": 4190,
-      "sha256": "67629920bba82cee87a6152af33c5d078dedd97aa9ba99c75adefafb1e132a6b"
+      "sha256": "89ef655a954ba3d3d36920dd9f0a8531c1828d5863b67f995a227f3be4dfab08"
     },
     {
       "path": "maps/rj/sih-acute-bronchitis-bronchiolitis.json",
@@ -968,5 +968,28 @@
       "bytes": 31572,
       "sha256": "159be9be08dec96e2d0b5cf689b8ffece592e0f3d3e1b1e501c945d7c5feab74"
     }
-  ]
+  ],
+  "readiness": {
+    "status": "public_release_ready",
+    "publicationAllowed": true,
+    "blockerCount": 0,
+    "warningCount": 3,
+    "indicatorCount": 45,
+    "seriesFiles": 45,
+    "profileFiles": 45,
+    "mapFiles": 45,
+    "observations": 2700,
+    "suppressedObservations": 93,
+    "profileObservations": 1440,
+    "profileEligibleIndicators": 30,
+    "mapValues": 2499,
+    "mapSuppressedValues": 1641,
+    "sihIndicators": 15,
+    "sihWithBrazilComparator": 15,
+    "missingDenominatorYears": [
+      2023
+    ],
+    "downloadSuppressionLeaks": 0,
+    "checkedAt": "2026-08-03T16:50:43+00:00"
+  }
 }

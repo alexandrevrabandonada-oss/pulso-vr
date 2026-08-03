@@ -13,7 +13,7 @@ export function IndicatorPage() {
       <header className="content-page__header">
         <p>{indicator.measureLabel}</p>
         <h1>{indicator.label}</h1>
-        <span>{indicator.sourceLabel} · {indicator.yearStart}–{indicator.yearEnd}</span>
+        <span>{indicator.sourceLabel} · cobertura agregada {indicator.yearStart}–{indicator.yearEnd}</span>
       </header>
       <section className="definition-lead"><h2>Definição</h2><p>{indicator.definition}</p></section>
       <div className="conclusion-grid">
@@ -26,6 +26,7 @@ export function IndicatorPage() {
           <div><dt>Unidade observada</dt><dd>{indicator.unit}</dd></div>
           <div><dt>Medidas disponíveis</dt><dd>Contagem e taxa bruta por 100 mil</dd></div>
           <div><dt>Território</dt><dd>Município de residência</dd></div>
+          <div><dt>Cobertura municipal publicada</dt><dd>{indicator.municipalPeriods?.length ? indicator.municipalPeriods.join(', ') : 'Em preparação'}</dd></div>
           <div><dt>Comparador primário</dt><dd>Restante do RJ, excluindo o município selecionado</dd></div>
           <div><dt>Padronização</dt><dd>Taxa bruta; não equivale a taxa padronizada por idade</dd></div>
           <div><dt>CID-10</dt><dd>{indicator.cidRanges.join(', ') || 'Definição própria da fonte'}</dd></div>
