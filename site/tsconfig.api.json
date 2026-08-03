@@ -13,5 +13,5 @@
     "composite": true,
     "types": ["node"]
   },
-  "include": ["api", "src/types.ts", "src/lib/share.ts"]
+  "include": ["api", "src/types.ts", "src/lib/share.ts", "src/lib/seo.ts"]
 }
