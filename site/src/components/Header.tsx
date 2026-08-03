@@ -21,6 +21,7 @@ export function Header() {
         <Link href="/" className="brand-link" onClick={() => setOpen(false)}>
           <BrandMark />
         </Link>
+        <div className="site-header__co-brand"><CoBrandBlock variant="header" /></div>
         <button
           className="menu-button"
           type="button"
@@ -42,7 +43,7 @@ export function Header() {
               {label}
             </Link>
           ))}
-          <div className="main-nav__partner"><CoBrandBlock compact /></div>
+          <div className="main-nav__partner"><CoBrandBlock variant="header" /></div>
         </nav>
       </div>
     </header>

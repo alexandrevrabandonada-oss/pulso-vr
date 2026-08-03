@@ -17,4 +17,10 @@ describe('CoBrandBlock', () => {
     expect(link).toHaveAttribute('target', '_blank')
     expect(link).toHaveAttribute('rel', 'noopener noreferrer')
   })
+
+  it('oferece uma variante de cabeçalho sem substituir a identidade do Observatório', () => {
+    render(<CoBrandBlock variant="header" />)
+    expect(screen.getByText('Projeto do Observatório')).toBeInTheDocument()
+    expect(screen.getByText('VR Abandonada')).toBeInTheDocument()
+  })
 })
