@@ -117,7 +117,11 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
   const mapAlternative = map?.alternatives?.find((item) => item.metricKind === 'crude_rate_per_100k')
   const visibleMapValues = mapMetric === 'crude_rate_per_100k' && mapAlternative ? mapAlternative.values : map?.values ?? []
   const visibleMapPeriod = mapMetric === 'crude_rate_per_100k' && mapAlternative ? mapAlternative.period : map?.period
-  const eventLabel = indicator.measure === 'hospitalization' ? 'internações/AIHs registradas' : 'óbitos de residentes registrados'
+  const eventLabel = indicator.measure === 'hospitalization'
+    ? 'internações/AIHs registradas'
+    : indicator.measure === 'ambulatory_production'
+      ? 'procedimentos registrados'
+      : 'óbitos de residentes registrados'
   const geographyLabel = indicator.geographyBasis === 'establishment' ? 'Local do estabelecimento' : 'Município de residência'
   const comparisonLabel = latest?.comparisonAvailable ? `${relativeDifferenceLabel(ratio)} do restante do RJ` : 'Comparação indisponível'
   const open = (code: string, indicatorId: string) => navigate(`/municipios/${code}?indicador=${indicatorId}`)
