@@ -47,10 +47,11 @@ function MunicipalityOverview({ municipalityCode }: { municipalityCode: string }
       <section className="municipality-hero"><Link href="/">Observatório estadual · 92 municípios</Link><h1>{municipality.name}</h1><p>Um ponto de partida neutro com indicadores selecionados de mortalidade e internações de residentes.</p><DiscoverySearch compact municipalities={municipalities} indicators={catalog.indicators} initialMunicipalityCode={municipality.code} onOpen={open} /></section>
       <section className="municipality-overview" aria-labelledby="overview-title"><div className="municipality-overview__heading"><h2 id="overview-title">Visão geral da cidade</h2><p>Escolha um indicador para entender o valor, a comparação e a evolução.</p></div>{items ? <div className="municipality-overview__list">{CURATED_INDICATORS.map((id) => {
         const indicator = catalog.indicators.find((item) => item.id === id)
-        const latest = items.find((item) => item.indicatorId === id)
-        if (!indicator) return null
-        const protectedCell = latest?.suppressionStatus === 'suppressed'
-        return <Link className="municipality-overview-card" key={id} href={`/municipios/${municipality.code}?indicador=${id}`}><span>{indicator.measureLabel}</span><h3>{indicator.label}</h3><strong>{protectedCell ? 'Dado protegido' : formatMetric(latest?.value ?? null, 'crude_rate_per_100k')}</strong><small>{latest?.period ? `${latest.period} · ${protectedCell ? 'valor não publicado' : 'taxa por 100 mil'}` : 'Sem período publicável'}</small><em>Entender este dado <ArrowRight /></em></Link>
+         const latest = items.find((item) => item.indicatorId === id)
+         if (!indicator) return null
+         const protectedCell = latest?.suppressionStatus === 'suppressed'
+         const cardMetric = latest?.metricKind ?? 'crude_rate_per_100k'
+         return <Link className="municipality-overview-card" key={id} href={`/municipios/${municipality.code}?indicador=${id}`}><span>{indicator.measureLabel}</span><h3>{indicator.label}</h3><strong>{protectedCell ? 'Dado protegido' : formatMetric(latest?.value ?? null, cardMetric)}</strong><small>{latest?.period ? `${latest.period} · ${protectedCell ? 'valor não publicado' : metricLabel(cardMetric)}` : 'Sem período publicável'}</small><em>Entender este dado <ArrowRight /></em></Link>
       })}</div> : loadFailed ? <div className="municipality-inline-error"><strong>Não foi possível carregar a visão geral.</strong><button type="button" onClick={() => window.location.reload()}>Tentar novamente</button></div> : <LoadingState label="Carregando visão geral…" />}</section>
       <section className="municipality-method"><FileText /><div><h2>Como esta seleção foi feita</h2><p>Os quatro indicadores têm ordem editorial fixa. Eles não representam uma lista dos “piores” resultados nem um diagnóstico da cidade.</p><Link href="/metodos">Conhecer fontes e limitações</Link></div></section>
     </main>
@@ -122,6 +123,11 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
     : indicator.measure === 'ambulatory_production'
       ? 'procedimentos registrados'
       : 'óbitos de residentes registrados'
+  const heroDescription = indicator.measure === 'hospitalization'
+    ? 'Internações/AIHs de residentes registradas pela fonte.'
+    : indicator.measure === 'ambulatory_production'
+      ? 'Produção ambulatorial registrada pela fonte, quando a dimensão diagnóstica está validada.'
+      : 'Óbitos de residentes registrados pela causa básica na fonte.'
   const geographyLabel = indicator.geographyBasis === 'establishment' ? 'Local do estabelecimento' : 'Município de residência'
   const comparisonLabel = latest?.comparisonAvailable ? `${relativeDifferenceLabel(ratio)} do restante do RJ` : 'Comparação indisponível'
   const open = (code: string, indicatorId: string) => navigate(`/municipios/${code}?indicador=${indicatorId}`)
@@ -138,7 +144,7 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
       <section className="municipality-hero">
         <Link href="/">Observatório estadual · 92 municípios</Link>
         <h1>{municipality.name}</h1>
-        <p>Dados de residentes, com comparação ao restante do Rio de Janeiro e ao Brasil quando a fonte é equivalente.</p>
+        <p>{heroDescription} Compare com o restante do Rio de Janeiro e com o Brasil quando a fonte é equivalente.</p>
         <DiscoverySearch compact municipalities={municipalities} indicators={catalog.indicators} initialMunicipalityCode={municipality.code} onOpen={open} />
       </section>
       <section className={`municipality-answer${latest?.suppressionStatus === 'suppressed' ? ' is-suppressed' : ''}`} aria-labelledby="municipality-answer-title">
@@ -179,8 +185,8 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
       </section>
       {isNeurological ? <section className="municipality-method"><FileText /><div><h2>Por que padronizar?</h2><p>Municípios mais envelhecidos podem apresentar taxas brutas maiores apenas pela composição etária. A taxa de 2022 ajusta idade e sexo usando a população do Brasil no Censo 2022, tornando a comparação municipal mais justa. Ela não mede prevalência nem todas as pessoas com diagnóstico.</p><p><strong>Dado recente:</strong> a mortalidade bruta de 2024 aparece na evolução. O ano de 2023 permanece como lacuna e não é interpolado.</p></div></section> : null}
       <div className="municipality-actions"><button type="button" onClick={download}><Download />Baixar este recorte</button><ShareButton surface="municipality" context={{ municipalityCode: municipality.code, indicatorId: indicator.id, period: period ?? undefined, metricKind: answerMetric, template: 'answer', format: 'og', route: 'municipality' }} /><Link href={`/explorador?indicador=${indicator.id}&municipio=${municipality.code}`}>Abrir análise avançada <ArrowRight /></Link></div>
-      <section className="municipality-explore" aria-labelledby="explore-title">
-        <div className="municipality-explore__heading"><span>3 · Evolução e contexto</span><h2 id="explore-title">Explore quando precisar</h2><p>A resposta principal está acima. Abra apenas a visualização que ajuda sua pergunta.</p></div>
+       <section className="municipality-explore" aria-labelledby="explore-title">
+         <div className="municipality-explore__heading"><span>Aprofunde se quiser</span><h2 id="explore-title">Explore quando precisar</h2><p>A resposta principal está acima. Abra apenas a visualização que ajuda sua pergunta.</p></div>
         <div className="municipality-tabs glass-surface" role="tablist" aria-label="Detalhes do indicador">
           <button type="button" role="tab" aria-selected={activeTab === 'evolution'} onClick={() => { setActiveTab('evolution'); trackEvent('map_series_toggled', { surface: 'municipality', tab: 'evolution' }) }}><ChartNoAxesCombined />Evolução</button>
           <button type="button" role="tab" aria-selected={activeTab === 'map'} onClick={() => { setActiveTab('map'); trackEvent('map_series_toggled', { surface: 'municipality', tab: 'map' }) }}><Map />Mapa</button>
@@ -196,7 +202,7 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
       </section>
       {isNeurological ? <section className="municipality-method"><FileText /><div><h2>Outras camadas disponíveis</h2><p><strong>Internações registradas em 2022:</strong> consulte o indicador SIH correspondente. Cada registro é uma AIH/evento de internação, não uma pessoa única ou caso novo.</p>{catalog.indicators.some((item) => item.id === `sih-${indicator.outcomeId.replaceAll('_', '-')}`) ? <Link href={`/municipios/${municipality.code}?indicador=sih-${indicator.outcomeId.replaceAll('_', '-')}`}>Ver internações/AIHs de 2022</Link> : null}<p><strong>Produção ambulatorial SIA:</strong> indisponível nesta release porque não há dimensão diagnóstica CID-10 e território de residência validados. Ausência não significa zero.</p></div></section> : null}
       <DataGlossary />
-      <section className="municipality-method"><FileText /><div><h2>Como interpretar</h2><p><strong>O que permite concluir:</strong> {indicator.allowsConclusion}</p><p><strong>O que não permite concluir:</strong> {indicator.doesNotAllowConclusion}</p><Link href={`/indicadores/${indicator.id}`}>Ver fonte, CID e limitações</Link></div></section>
+      <section className="municipality-method"><FileText /><div><h2>Fonte e limites</h2><p><strong>Fonte:</strong> {indicator.sourceLabel} · <strong>Território:</strong> {geographyLabel}.</p><p><strong>O que não permite concluir:</strong> {indicator.doesNotAllowConclusion}</p><Link href={`/indicadores/${indicator.id}`}>Ver fonte, CID e limitações</Link></div></section>
     </main>
   )
 }
