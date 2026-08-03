@@ -68,12 +68,13 @@ def _write_report(root: Path, summary: pd.DataFrame, metadata: dict[str, object]
         *rows,
         "",
         "A proporção de óbitos é descritiva entre notificações com os códigos de evolução "
-        "observados; não é letalidade populacional. Não há modelo de série temporal "
-        "interrompida com apenas estes dois anos.",
+        "observados; não é letalidade populacional. A extensão para uma série temporal "
+        "interrompida mensal ainda exige agregar a data de início dos sintomas e auditar "
+        "a cobertura ao longo dos anos.",
         "",
         "## Limitações",
         "",
-        "- 2019 e 2020 são arquivos SIVEP versionados, sujeitos a revisão e mudanças de cobertura.",
+        "- 2019–2025 são arquivos SIVEP versionados, sujeitos a revisão e mudanças de cobertura; 2025 é provisório.",
         "- O comparador territorial usa residência e exclui Volta Redonda do restante do RJ.",
         "- Não há ajuste por idade, sexo, vacinação, circulação viral, sazonalidade ou acesso.",
         "- Nenhuma associação com poluição ou CSN é estimada nesta etapa.",
@@ -132,14 +133,15 @@ def build_sivep_surveillance_summary(root: Path) -> tuple[Path, Path, Path]:
     output = root / "data" / "processed" / "sivep_surveillance_summary.parquet"
     output.parent.mkdir(parents=True, exist_ok=True)
     summary.to_parquet(output, index=False)
+    available_years = sorted(int(year) for year in summary["year"].unique())
     missing_denominator_years = sorted(
-        set(summary["year"].unique()) - set(population["year"].unique())
+        int(year) for year in set(summary["year"].unique()) - set(population["year"].unique())
     )
     manifest = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "status": "surveillance_notification_rates_no_incidence_estimate",
         "rows": int(len(summary)),
-        "available_years": sorted(summary["year"].unique().tolist()),
+        "available_years": available_years,
         "missing_denominator_years": missing_denominator_years,
         "output_path": str(output.relative_to(root)),
         "output_sha256": sha256_file(output),
@@ -154,7 +156,7 @@ def build_sivep_surveillance_summary(root: Path) -> tuple[Path, Path, Path]:
         },
         "notes": [
             "Notification rates are not incidence rates and should not be interpreted as risk of infection.",
-            "SIVEP coverage and case definitions change over time; 2019 and 2020 are not automatically comparable.",
+            "SIVEP coverage and case definitions change over time; 2019-2025 are not automatically comparable.",
             "Small counts are suppressed in the technical report.",
             "No causal or interrupted time-series inference is produced.",
         ],
@@ -165,6 +167,6 @@ def build_sivep_surveillance_summary(root: Path) -> tuple[Path, Path, Path]:
     report_path = _write_report(
         root,
         summary,
-        {"available_years": sorted(summary["year"].unique().tolist()), "missing_denominator_years": missing_denominator_years},
+        {"available_years": available_years, "missing_denominator_years": missing_denominator_years},
     )
     return output, manifest_path, report_path

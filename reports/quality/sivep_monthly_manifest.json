@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-08-03T00:52:07+00:00",
+  "status": "monthly_sivep_surveillance_notification_rates_no_incidence",
+  "start_period": "2019-01",
+  "end_period": "2025-12",
+  "rows": 756,
+  "missing_denominator_years": [
+    2023
+  ],
+  "source_stats": [
+    {
+      "path": "data\\interim\\sivep_2019_harmonized.parquet",
+      "sha256": "462776c0188faa490418629a21380863ea479cac0605f0a77efdb7ae3ffc2281",
+      "rows": 48941,
+      "rj_rows": 2426,
+      "missing_onset_rj_rows": 0,
+      "outside_window_rj_rows": 2
+    },
+    {
+      "path": "data\\interim\\sivep_2020_harmonized.parquet",
+      "sha256": "bb0fb1a7525633bc7b4e70db1992533408792d3d872f2a0933fb6582b267c607",
+      "rows": 1206920,
+      "rj_rows": 123918,
+      "missing_onset_rj_rows": 0,
+      "outside_window_rj_rows": 0
+    },
+    {
+      "path": "data\\interim\\sivep_2021_harmonized.parquet",
+      "sha256": "cd24265621e9359ce228c3379b5f2df92e79076e1d99d034cdaf0337530ea36e",
+      "rows": 1745672,
+      "rj_rows": 144786,
+      "missing_onset_rj_rows": 0,
+      "outside_window_rj_rows": 0
+    },
+    {
+      "path": "data\\interim\\sivep_2022_harmonized.parquet",
+      "sha256": "a9d3226cbf8f918b538d9a13b3026fbadb6ddac10c2015492a37a840a755fd7f",
+      "rows": 560577,
+      "rj_rows": 38726,
+      "missing_onset_rj_rows": 0,
+      "outside_window_rj_rows": 0
+    },
+    {
+      "path": "data\\interim\\sivep_2023_harmonized.parquet",
+      "sha256": "eca3cf4b869b24d1fb84d6c166fabd650394ccbafa4fd9760f76d964924cc5e1",
+      "rows": 279453,
+      "rj_rows": 19640,
+      "missing_onset_rj_rows": 0,
+      "outside_window_rj_rows": 0
+    },
+    {
+      "path": "data\\interim\\sivep_2024_harmonized.parquet",
+      "sha256": "76ccd46080ab1db62e48ad318f361ae60d4a45ae8bdcf7fc0a489d9a2993fa2d",
+      "rows": 267986,
+      "rj_rows": 18190,
+      "missing_onset_rj_rows": 0,
+      "outside_window_rj_rows": 0
+    },
+    {
+      "path": "data\\interim\\sivep_2025_harmonized.parquet",
+      "sha256": "22227f3ed2fe885f493412270affce15fadf5b635a9e920483daa628bb02001a",
+      "rows": 336260,
+      "rj_rows": 23322,
+      "missing_onset_rj_rows": 0,
+      "outside_window_rj_rows": 119
+    }
+  ],
+  "output_path": "data\\processed\\sivep_monthly_surveillance.parquet",
+  "output_sha256": "3bf7ab23f266ee0008564eb5408c325dacaf8677afc4278c231626f50c5a0744",
+  "report_path": "reports\\technical\\sivep_mensal.md",
+  "input_files": [
+    {
+      "path": "data\\interim\\sivep_2019_harmonized.parquet",
+      "sha256": "462776c0188faa490418629a21380863ea479cac0605f0a77efdb7ae3ffc2281"
+    },
+    {
+      "path": "data\\interim\\sivep_2020_harmonized.parquet",
+      "sha256": "bb0fb1a7525633bc7b4e70db1992533408792d3d872f2a0933fb6582b267c607"
+    },
+    {
+      "path": "data\\interim\\sivep_2021_harmonized.parquet",
+      "sha256": "cd24265621e9359ce228c3379b5f2df92e79076e1d99d034cdaf0337530ea36e"
+    },
+    {
+      "path": "data\\interim\\sivep_2022_harmonized.parquet",
+      "sha256": "a9d3226cbf8f918b538d9a13b3026fbadb6ddac10c2015492a37a840a755fd7f"
+    },
+    {
+      "path": "data\\interim\\sivep_2023_harmonized.parquet",
+      "sha256": "eca3cf4b869b24d1fb84d6c166fabd650394ccbafa4fd9760f76d964924cc5e1"
+    },
+    {
+      "path": "data\\interim\\sivep_2024_harmonized.parquet",
+      "sha256": "76ccd46080ab1db62e48ad318f361ae60d4a45ae8bdcf7fc0a489d9a2993fa2d"
+    },
+    {
+      "path": "data\\interim\\sivep_2025_harmonized.parquet",
+      "sha256": "22227f3ed2fe885f493412270affce15fadf5b635a9e920483daa628bb02001a"
+    }
+  ],
+  "rules": {
+    "date": "symptom onset date DT_SIN_PRI",
+    "residence": "CO_MUN_RES; rest of RJ excludes DATASUS 330630",
+    "srag": "all eligible SIVEP records",
+    "covid19": "CLASSI_FIN=5",
+    "influenza": "CLASSI_FIN=1"
+  },
+  "notes": [
+    "Notification rates are not incidence rates.",
+    "2025 is provisional and SIVEP versions are subject to revision.",
+    "No causal or interrupted time-series inference is produced here."
+  ]
+}

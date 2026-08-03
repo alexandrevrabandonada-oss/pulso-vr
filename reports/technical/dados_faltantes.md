@@ -10,8 +10,8 @@
 - População anual por município está disponível, mas 2010 e 2023 não têm
   denominador oficial nesta aquisição; a estrutura compatível de idade/sexo
   existe para 2022, e ainda falta uma série completa para padronização temporal.
-- SIVEP completo dos anos 2021–2026, além dos dicionários e versões
-  correspondentes; 2019 e 2020 já têm amostras Parquet validadas.
+- SIVEP 2021–2025 foi adquirido em Parquet e harmonizado; ainda falta o arquivo
+  2026 e a auditoria de versões/cobertura para comparação temporal completa.
 
 ## Necessários para pandemia e poluição
 

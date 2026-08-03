@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import csv
+import gzip
 import zipfile
 from pathlib import Path
 from typing import Any
@@ -39,6 +40,20 @@ def validate_raw_file(path: Path) -> dict[str, Any]:
             payload = json.loads(path.read_text(encoding="utf-8"))
             result["format_ok"] = isinstance(payload, (list, dict))
             result["format_details"] = {"json_type": type(payload).__name__}
+        elif suffix == ".geojson":
+            raw = path.read_bytes()
+            if raw[:2] == b"\x1f\x8b":
+                raw = gzip.decompress(raw)
+            payload = json.loads(raw.decode("utf-8"))
+            features = payload.get("features") if isinstance(payload, dict) else None
+            result["format_ok"] = payload.get("type") == "FeatureCollection" and isinstance(features, list)
+            result["format_details"] = {
+                "json_type": type(payload).__name__,
+                "geojson_type": payload.get("type") if isinstance(payload, dict) else None,
+                "features": len(features) if isinstance(features, list) else 0,
+            }
+            if not result["format_ok"]:
+                result["errors"].append("invalid_geojson_feature_collection")
         elif suffix == ".zip":
             with zipfile.ZipFile(path) as archive:
                 bad_member = archive.testzip()

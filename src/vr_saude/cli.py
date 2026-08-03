@@ -29,6 +29,7 @@ from .sih_morbidity import query_morbidity_series
 from .sih_tabnet import query_residence, query_residence_series, save_query_response, write_harmonized_series
 from .sources import get_sample_source
 from .surveillance import build_sivep_surveillance_summary
+from .sivep_monthly import build_sivep_monthly
 from .territory_validation import write_territory_report
 from .validate import validate_project
 
@@ -114,6 +115,7 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "reports" / "quality" / "respiratory_its_manifest.json",
         root / "reports" / "quality" / "outcome_counts_manifest.json",
         root / "reports" / "quality" / "sivep_surveillance_manifest.json",
+        root / "reports" / "quality" / "sivep_monthly_manifest.json",
         root / "reports" / "quality" / "sim_mortality_rates_manifest.json",
         root / "reports" / "quality" / "sim_age_sex_profile_manifest.json",
         root / "reports" / "quality" / "sim_age_sex_rates_manifest.json",
@@ -124,6 +126,7 @@ def _manifest(root: Path, quality_report: Path) -> Path:
         root / "reports" / "technical" / "serie_interrompida_respiratoria.md",
         root / "reports" / "technical" / "desfechos_sim_sivep.md",
         root / "reports" / "technical" / "pandemia_sivep.md",
+        root / "reports" / "technical" / "sivep_mensal.md",
         root / "reports" / "technical" / "mortalidade_sim.md",
         root / "reports" / "technical" / "perfil_etario_sexual_sim.md",
         root / "reports" / "technical" / "taxas_sim_idade_sexo_2022.md",
@@ -248,6 +251,10 @@ def _parser() -> argparse.ArgumentParser:
     subparsers.add_parser(
         "sivep-summary",
         help="summarize SIVEP notifications, notification rates and deaths",
+    )
+    subparsers.add_parser(
+        "sivep-monthly",
+        help="aggregate SIVEP monthly notifications by symptom onset and residence",
     )
     subparsers.add_parser(
         "sim-mortality-rates",
@@ -472,6 +479,16 @@ def main(argv: list[str] | None = None) -> int:
         print(f"SIVEP surveillance Parquet: {output}")
         print(f"SIVEP surveillance manifest: {manifest}")
         print(f"SIVEP surveillance report: {report}")
+        return 0
+    if args.command == "sivep-monthly":
+        try:
+            output, manifest, report = build_sivep_monthly(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: SIVEP monthly series failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"SIVEP monthly Parquet: {output}")
+        print(f"SIVEP monthly manifest: {manifest}")
+        print(f"SIVEP monthly report: {report}")
         return 0
     if args.command == "sim-mortality-rates":
         try:
