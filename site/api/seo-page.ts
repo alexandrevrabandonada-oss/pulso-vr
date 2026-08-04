@@ -26,7 +26,10 @@ function headMarkup(metadata: ReturnType<typeof buildSeoMetadata>) {
 }
 
 function unavailableShell(requestUrl: URL) {
-  const canonical = escapeHtml(requestUrl.origin + requestUrl.pathname + requestUrl.search)
+  const publicQuery = new URLSearchParams(requestUrl.search)
+  const internalKeys = ['route', 'codigo', 'id']
+  internalKeys.forEach((key) => publicQuery.delete(key))
+  const canonical = escapeHtml(requestUrl.origin + requestUrl.pathname + (publicQuery.toString() ? `?${publicQuery}` : ''))
   return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Observatório Estadual de Saúde do RJ</title><meta name="description" content="Portal estadual de dados públicos de saúde dos 92 municípios do Rio de Janeiro."><meta name="robots" content="noindex,nofollow"><link rel="canonical" href="${canonical}"></head><body><div id="root"><main><h1>Observatório Estadual de Saúde do RJ</h1><p>Esta página está pronta para carregar os dados públicos e suas explicações metodológicas.</p><p><a href="/">Voltar ao início</a></p></main></div></body></html>`
 }
 
