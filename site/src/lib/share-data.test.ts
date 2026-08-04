@@ -7,6 +7,11 @@ describe('safe social card contracts', () => {
     expect(parseShareRequest(new URL('https://example.test/compartilhar?indicador=sim-lung&modelo=answer&formato=og&periodo=2022%20texto'))).toBeNull()
     expect(parseShareRequest(new URL('https://example.test/compartilhar?indicador=sim-lung&modelo=answer&formato=og&release=%3Cmeta%3E'))).toBeNull()
   })
+  it('accepts the Portuguese public template aliases', () => {
+    expect(parseShareRequest(new URL('https://example.test/compartilhar?indicador=sim-lung&modelo=resposta&formato=og'))?.template).toBe('answer')
+    expect(parseShareRequest(new URL('https://example.test/compartilhar?indicador=sim-lung&modelo=evolucao&formato=story'))?.template).toBe('evolution')
+    expect(parseShareRequest(new URL('https://example.test/compartilhar?indicador=sim-lung&modelo=mapa&formato=feed'))?.template).toBe('map')
+  })
   it('breaks sparse series instead of crossing a missing year', () => {
     const paths = lineSegments([{ period: '2022', value: 2 }, { period: '2023', value: null }, { period: '2024', value: 4 }])
     expect(paths).toHaveLength(2)

@@ -3,6 +3,11 @@ import { buildCanonicalPath } from '../src/lib/share'
 import { feature } from 'topojson-client'
 
 const TEMPLATES = new Set<ShareTemplate>(['answer', 'evolution', 'map'])
+const TEMPLATE_ALIASES: Record<string, ShareTemplate> = {
+  resposta: 'answer',
+  evolucao: 'evolution',
+  mapa: 'map',
+}
 const FORMATS = new Set<ShareFormat>(['og', 'feed', 'story'])
 const ROUTES = new Set<ShareRoute>(['municipality', 'explorer', 'profile', 'indicator'])
 const METRICS = new Set<MetricKind>(['count', 'crude_rate_per_100k', 'age_sex_standardized_rate_per_100k'])
@@ -17,7 +22,8 @@ async function json<T>(origin: string, path: string): Promise<T> {
 }
 
 export function parseShareRequest(url: URL): SafeShareRequest | null {
-  const template = url.searchParams.get('modelo') as ShareTemplate
+  const rawTemplate = url.searchParams.get('modelo') ?? ''
+  const template = (TEMPLATE_ALIASES[rawTemplate] ?? rawTemplate) as ShareTemplate
   const format = url.searchParams.get('formato') as ShareFormat
   const indicatorId = url.searchParams.get('indicador') ?? ''
   const municipalityCode = url.searchParams.get('municipio') ?? undefined
