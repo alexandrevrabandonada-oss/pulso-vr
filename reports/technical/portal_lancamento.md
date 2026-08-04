@@ -1,36 +1,24 @@
 # Pré-voo de lançamento do Portal Observatório Saúde & Ambiente
 
-Verificação: `2026-08-03T18:43:25+00:00`
-Release: `statewide-profiles-preview`
-Status: **blocked_for_public_release**
+Verificação: `2026-08-04T00:38:25+00:00`
+Release: `statewide-2026-08-03`
+Status: **public_release_ready**
 
 ## Resumo
 
-- Bloqueios públicos: **2**
+- Bloqueios públicos: **0**
 - Avisos: **3**
-- Indicadores: **45**
-- Observações públicas: **2700**
-- Células suprimidas: **93**
-- Indicadores SIM elegíveis para perfis: **30**
-- Observações de perfis idade/sexo: **44160**
-- Valores municipais no mapa: **2528**
-- Células municipais suprimidas no mapa: **1612**
-- Comparadores Brasil no SIH: **15/15**
+- Indicadores: **49**
+- Observações públicas: **5580**
+- Células suprimidas: **1603**
+- Indicadores SIM elegíveis para perfis: **32**
+- Observações de perfis idade/sexo: **47104**
+- Valores municipais no mapa: **2664**
+- Células municipais suprimidas no mapa: **1844**
+- Comparadores Brasil no SIH: **17/17**
 - Vazamentos de supressão no download: **0**
 
 ## Achados
-
-### [BLOCKER] A release ainda está marcada como beta técnica
-
-status=technical_beta_not_for_public_release
-
-Ação: Concluir as revisões e mudar o status somente após aprovação formal.
-
-### [BLOCKER] Há portões de revisão pendentes
-
-accessibilityReview, epidemiologyReview
-
-Ação: Registrar revisão epidemiológica, acessibilidade e proveniência no manifesto.
 
 ### [WARNING] Existem anos sem denominador oficial
 
@@ -40,7 +28,7 @@ Ação: Manter esses anos como lacunas; para 2023, monitorar eventual publicaç�
 
 ### [WARNING] O catálogo de fontes ainda tem itens fora de verified
 
-sih_legacy_ftp=failed_initial_check, inmet=pending_endpoint, rhc=to_request, occupational_data=to_request
+sih_legacy_ftp=failed_initial_check, inmet=pending_endpoint, rhc=to_request, occupational_data=to_request, sia_ambulatory_alzheimer=unavailable_no_validated_diagnostic_dimension
 
 Ação: Resolver ou marcar claramente como fonte futura fora do escopo da release.
 

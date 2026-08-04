@@ -1,24 +1,24 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAt": "2026-08-03T18:43:25+00:00",
-  "releaseId": "statewide-profiles-preview",
-  "status": "blocked_for_public_release",
-  "publicationAllowed": false,
+  "checkedAt": "2026-08-04T00:38:25+00:00",
+  "releaseId": "statewide-2026-08-03",
+  "status": "public_release_ready",
+  "publicationAllowed": true,
   "summary": {
-    "blockerCount": 2,
+    "blockerCount": 0,
     "warningCount": 3,
-    "indicatorCount": 45,
-    "seriesFiles": 45,
-    "profileFiles": 45,
-    "mapFiles": 45,
-    "observations": 2700,
-    "suppressedObservations": 93,
-    "profileObservations": 44160,
-    "profileEligibleIndicators": 30,
-    "mapValues": 2528,
-    "mapSuppressedValues": 1612,
-    "sihIndicators": 15,
-    "sihWithBrazilComparator": 15,
+    "indicatorCount": 49,
+    "seriesFiles": 49,
+    "profileFiles": 49,
+    "mapFiles": 49,
+    "observations": 5580,
+    "suppressedObservations": 1603,
+    "profileObservations": 47104,
+    "profileEligibleIndicators": 32,
+    "mapValues": 2664,
+    "mapSuppressedValues": 1844,
+    "sihIndicators": 17,
+    "sihWithBrazilComparator": 17,
     "missingDenominatorYears": [
       2023
     ],
@@ -48,22 +48,19 @@
     "downloadSuppressionLeaks": [],
     "profileSuppressionLeaks": [],
     "mapStatusCounts": {
-      "validated_sih_2022_municipal_residence_rates_crude": 14,
+      "validated_sih_2022_municipal_residence_rates_crude": 16,
       "validated_sih_2025_municipal_residence_rates_crude": 1,
-      "validated_sim_2024_municipal_residence_rates_crude": 30
+      "validated_sim_2024_municipal_residence_rates_crude": 32
     },
     "sourceCounts": {
-      "SIH": 1020,
-      "SIM": 1680
+      "SIH": 1212,
+      "SIM": 4368
     },
     "dataStatusCounts": {
-      "source_observed": 2640,
+      "source_observed": 5520,
       "provisional": 60
     },
-    "pendingPublicationGates": [
-      "accessibilityReview",
-      "epidemiologyReview"
-    ],
+    "pendingPublicationGates": [],
     "nonVerifiedSources": [
       {
         "sourceId": "sih_legacy_ftp",
@@ -80,6 +77,10 @@
       {
         "sourceId": "occupational_data",
         "status": "to_request"
+      },
+      {
+        "sourceId": "sia_ambulatory_alzheimer",
+        "status": "unavailable_no_validated_diagnostic_dimension"
       }
     ]
   },
@@ -88,6 +89,7 @@
     "sim-acute-bronchitis-bronchiolitis",
     "sim-acute-myocardial-infarction",
     "sim-all-malignant-neoplasms",
+    "sim-alzheimer",
     "sim-asthma",
     "sim-bladder",
     "sim-breast",
@@ -98,6 +100,7 @@
     "sim-cervix",
     "sim-colorectal",
     "sim-copd",
+    "sim-dementias-all",
     "sim-heart-failure",
     "sim-hypertension",
     "sim-influenza",
@@ -119,20 +122,6 @@
   "indicatorsWithoutMaps": [],
   "findings": [
     {
-      "id": "release-not-public",
-      "severity": "blocker",
-      "title": "A release ainda está marcada como beta técnica",
-      "detail": "status=technical_beta_not_for_public_release",
-      "action": "Concluir as revisões e mudar o status somente após aprovação formal."
-    },
-    {
-      "id": "review-gates-pending",
-      "severity": "blocker",
-      "title": "Há portões de revisão pendentes",
-      "detail": "accessibilityReview, epidemiologyReview",
-      "action": "Registrar revisão epidemiológica, acessibilidade e proveniência no manifesto."
-    },
-    {
       "id": "denominator-gaps",
       "severity": "warning",
       "title": "Existem anos sem denominador oficial",
@@ -143,7 +132,7 @@
       "id": "source-catalog-open-items",
       "severity": "warning",
       "title": "O catálogo de fontes ainda tem itens fora de verified",
-      "detail": "sih_legacy_ftp=failed_initial_check, inmet=pending_endpoint, rhc=to_request, occupational_data=to_request",
+      "detail": "sih_legacy_ftp=failed_initial_check, inmet=pending_endpoint, rhc=to_request, occupational_data=to_request, sia_ambulatory_alzheimer=unavailable_no_validated_diagnostic_dimension",
       "action": "Resolver ou marcar claramente como fonte futura fora do escopo da release."
     },
     {
@@ -155,8 +144,6 @@
     }
   ],
   "nextActions": [
-    "Concluir as revisões e mudar o status somente após aprovação formal.",
-    "Registrar revisão epidemiológica, acessibilidade e proveniência no manifesto.",
     "Manter esses anos como lacunas; para 2023, monitorar eventual publicação oficial compatível e regenerar as séries somente após validação, sem interpolar.",
     "Resolver ou marcar claramente como fonte futura fora do escopo da release.",
     "Manter o rótulo provisório e indicar a data de atualização da fonte."

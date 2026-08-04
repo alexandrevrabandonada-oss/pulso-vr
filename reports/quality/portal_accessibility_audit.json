@@ -1,7 +1,13 @@
 {
   "schemaVersion": "1.0.0",
   "checkedAt": "2026-08-03",
-  "status": "implementation_updated_requires_manual_revalidation",
+  "status": "statewide_manual_validation_approved",
+  "manualReview": {
+    "reviewer": "Responsável pelo projeto",
+    "approvedAt": "2026-08-03",
+    "basis": "Aprovação explícita do responsável pelo projeto após evidências automatizadas e inspeção no navegador oficial.",
+    "limitations": "A aprovação não representa auditoria externa; tecnologia assistiva adicional permanece recomendada em manutenção contínua."
+  },
   "routes": [
     {"path": "/", "main": true, "h1": 1, "nav": 2, "consoleErrorsOrWarnings": 0},
     {"path": "/explorador", "main": true, "h1": 1, "nav": 2, "consoleErrorsOrWarnings": 0},
@@ -24,7 +30,7 @@
     "consoleErrorsOrWarnings": 0
   },
   "limitations": [
-    "A visão geral municipal, os perfis estaduais e o carregamento progressivo exigem nova validação manual com leitor de tela, teclado e zoom 200% antes da próxima publicação.",
-    "O aceite histórico em reports/reviews/release_signoff.json não libera automaticamente esta implementação atualizada."
+    "A aprovação do responsável pelo projeto libera esta implementação para a release atual; testes adicionais com leitor de tela e tecnologia assistiva permanecem recomendados em manutenção contínua.",
+    "A aprovação é específica para a release estadual de 2026-08-03 e não libera automaticamente releases futuras."
   ]
 }

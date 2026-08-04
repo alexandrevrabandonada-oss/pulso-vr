@@ -1,19 +1,19 @@
 {
   "schemaVersion": "1.0.0",
-  "releaseId": "beta-cardiorespiratorio-integrado",
+  "releaseId": "statewide-2026-08-03",
   "approvedAt": "2026-08-03",
-  "approvalType": "project_owner_signoff_based_on_technical_evidence",
+  "approvalType": "project_owner_signoff_based_on_technical_and_browser_evidence",
   "epidemiologyReview": {
     "status": "approved",
     "reviewer": "Responsável pelo projeto",
-    "basis": "Revisão das evidências técnicas, definições, residência, comparadores, denominadores, reconciliação SIH, supressão e limites de interpretação.",
+    "basis": "Revisão das evidências técnicas, definições, residência, comparadores, denominadores, reconciliação SIH, supressão e limites de interpretação, com aprovação explícita do responsável pelo projeto.",
     "limitations": "Esta aprovação registra a decisão do responsável pelo projeto e não afirma revisão independente externa."
   },
   "accessibilityReview": {
     "status": "approved",
     "reviewer": "Responsável pelo projeto",
-    "basis": "Revisão do audit automatizado, rotas, foco, teclado, mapa, tabelas, contraste, downloads e testes frontend disponíveis.",
+    "basis": "Revisão automatizada, inspeção no navegador oficial em desktop e 360 px, teclado, navegação, mapa, tabelas, contraste, downloads e aprovação explícita do responsável pelo projeto.",
     "limitations": "A aprovação registra a decisão do responsável pelo projeto; testes adicionais com tecnologia assistiva podem ser realizados em manutenção contínua."
   },
-  "scope": "Aprovação histórica dos portões da release estática beta-cardiorespiratorio-integrado; não se aplica à statewide-profiles-preview, não autoriza inferência causal, incidência de câncer ou publicação de dados pessoais."
+  "scope": "Aprovação dos portões da release estadual de 2026-08-03; não representa auditoria externa, não autoriza inferência causal, incidência de câncer ou publicação de dados pessoais."
 }
