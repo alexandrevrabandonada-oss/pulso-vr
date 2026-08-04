@@ -2,6 +2,7 @@ import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { Link, useLocation } from 'wouter'
 import { BrandMark } from './BrandMark'
+import { CoBrandBlock } from './CoBrandBlock'
 
 const links = [
   ['/', 'Início'],
@@ -15,11 +16,12 @@ export function Header() {
   const [open, setOpen] = useState(false)
   const [location] = useLocation()
   return (
-    <header className="site-header">
+    <header className="site-header glass-surface">
       <div className="site-header__inner">
         <Link href="/" className="brand-link" onClick={() => setOpen(false)}>
           <BrandMark />
         </Link>
+        <div className="site-header__co-brand"><CoBrandBlock variant="header" /></div>
         <button
           className="menu-button"
           type="button"
@@ -41,6 +43,7 @@ export function Header() {
               {label}
             </Link>
           ))}
+          <div className="main-nav__partner"><CoBrandBlock variant="header" /></div>
         </nav>
       </div>
     </header>

@@ -13,6 +13,7 @@
   "dependencies": {
     "@fontsource/inter": "^5.2.6",
     "@fontsource/source-serif-4": "^5.2.8",
+    "@vercel/og": "^1.0.0",
     "d3-geo": "^3.1.1",
     "lucide-react": "^0.468.0",
     "react": "^19.0.0",

@@ -138,6 +138,7 @@ cancer:
     code_ranges: ["C18-C21"]
     source: ["SIM", "RHC", "Painel Oncologia"]
     priority: care_comparison
+
   - id: stomach
     label: "Estômago"
     code_ranges: ["C16"]

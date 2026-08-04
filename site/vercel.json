@@ -1,6 +1,16 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
+    { "source": "/compartilhar", "destination": "/api/share-page" },
+    { "source": "/", "destination": "/api/seo-page?route=home" },
+    { "source": "/robots.txt", "destination": "/api/robots" },
+    { "source": "/sitemap.xml", "destination": "/api/sitemap" },
+    { "source": "/municipios/:codigo", "destination": "/api/seo-page?route=municipality&codigo=:codigo" },
+    { "source": "/indicadores/:id", "destination": "/api/seo-page?route=indicator&id=:id" },
+    { "source": "/perfis", "destination": "/api/seo-page?route=profiles" },
+    { "source": "/metodos", "destination": "/api/seo-page?route=methods" },
+    { "source": "/dados", "destination": "/api/seo-page?route=data" },
+    { "source": "/explorador", "destination": "/api/seo-page?route=explorer" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [

@@ -1,4 +1,4 @@
-import { ArrowRight, Check, ChevronDown, Copy, FileText, Info, MapPin } from 'lucide-react'
+import { ArrowRight, ChevronDown, FileText, Info, MapPin } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useSearch } from 'wouter'
 import { ExplorerFilters } from '../components/ExplorerFilters'
@@ -8,6 +8,7 @@ import { MunicipalTable } from '../components/MunicipalTable'
 import { MunicipalityPicker } from '../components/MunicipalityPicker'
 import { StatusNotice } from '../components/StatusNotice'
 import { SeriesInsights } from '../components/SeriesInsights'
+import { ShareButton } from '../components/ShareButton'
 import { TerritoryMap } from '../components/TerritoryMap'
 import { TimeSeriesChart } from '../components/TimeSeriesChart'
 import { usePortal } from '../context/usePortal'
@@ -20,7 +21,7 @@ import { municipalProperties } from '../lib/municipalities'
 import { buildFilteredSeriesCsv, saveCsvFile } from '../lib/publicDownload'
 import type { Observation, Theme } from '../types'
 
-const GEO_ORDER = ['volta_redonda', 'rest_of_rj_excluding_vr', 'brazil_total']
+const LEGACY_AGGREGATE_GEO_ORDER = ['volta_redonda', 'rest_of_rj_excluding_vr', 'brazil_total']
 
 export function ExplorerPage() {
   const { catalog, release, topology } = usePortal()
@@ -36,20 +37,19 @@ export function ExplorerPage() {
   const [mapPayload, setMapPayload] = useState<{ values: import('../types').MapValue[]; status: string; scaleDomain?: [number, number] | null } | null>(null)
   const [municipalObservations, setMunicipalObservations] = useState<Observation[] | null>(null)
   const [selectedMapPeriod, setSelectedMapPeriod] = useState<string | null>(null)
-  const [activeTab, setActiveTab] = useState<'map' | 'series'>('map')
-  const [linkCopied, setLinkCopied] = useState(false)
-  const activeGeographies = territory === 'all' ? GEO_ORDER : GEO_ORDER.filter((id) => id === territory)
+  const [activeTab, setActiveTab] = useState<'map' | 'series'>('series')
+  const activeGeographies = territory === 'all' ? LEGACY_AGGREGATE_GEO_ORDER : LEGACY_AGGREGATE_GEO_ORDER.filter((id) => id === territory)
   const municipalities = useMemo(() => municipalProperties(topology), [topology])
   const selectedMunicipalityCode = useMemo(
     () => municipalities.some((item) => item.code === municipalityCode) ? municipalityCode : null,
     [municipalities, municipalityCode],
   )
   const selectedMunicipality = municipalities.find((item) => item.code === selectedMunicipalityCode) ?? null
-  const availableMapPeriods = useMemo(() => [...new Set((municipalObservations ?? []).map((item) => item.period))].sort((a, b) => Number(a) - Number(b)), [municipalObservations])
+  const availableMapPeriods = useMemo(() => [...new Set((municipalObservations ?? []).filter((item) => item.metricKind === metric).map((item) => item.period))].sort((a, b) => Number(a) - Number(b)), [metric, municipalObservations])
   const municipalPeriod = selectedMapPeriod ?? mapPayload?.values[0]?.period ?? null
   const mapValues = useMemo(() => municipalPeriod && municipalObservations
-    ? municipalObservations.filter((item) => item.period === municipalPeriod)
-    : mapPayload?.values ?? [], [mapPayload, municipalObservations, municipalPeriod])
+    ? municipalObservations.filter((item) => item.period === municipalPeriod && item.metricKind === metric)
+    : mapPayload?.values ?? [], [mapPayload, metric, municipalObservations, municipalPeriod])
   const selectedMunicipalValue = mapValues.find((item) => item.geographyId === selectedMunicipalityCode) ?? null
 
   useEffect(() => {
@@ -60,19 +60,31 @@ export function ExplorerPage() {
   useEffect(() => {
     let active = true
     setObservations(null)
-    setMapPayload(null)
-    setMunicipalObservations(null)
-    setSelectedMapPeriod(null)
-    Promise.all([loadSeries(indicator.id), loadMap(indicator.id), loadMunicipalSeries(indicator.id)]).then(([seriesPayload, nextMap, municipalSeries]) => {
+    setMapPayload(null); setMunicipalObservations(null); setSelectedMapPeriod(null)
+    loadSeries(indicator.id).then((seriesPayload) => { if (active) setObservations(seriesPayload.observations) })
+    return () => { active = false }
+  }, [indicator.id])
+
+  useEffect(() => {
+    if (activeTab !== 'map' || (mapPayload && municipalObservations)) return
+    let active = true
+    Promise.all([loadMap(indicator.id), loadMunicipalSeries(indicator.id)]).then(([nextMap, municipalSeries]) => {
       if (active) {
-        setObservations(seriesPayload.observations)
         setMapPayload({ values: nextMap.values, status: nextMap.status, scaleDomain: nextMap.mapScale?.domain })
         setMunicipalObservations(municipalSeries.observations)
         setSelectedMapPeriod(nextMap.period ?? municipalSeries.periods.at(-1) ?? null)
       }
-    })
+    }).catch(() => trackEvent('data_load_error', { surface: 'explorer_map' }))
     return () => { active = false }
-  }, [indicator.id])
+  }, [activeTab, indicator.id, mapPayload, municipalObservations])
+
+  useEffect(() => {
+    if (activeTab !== 'series' || !selectedMunicipalityCode || municipalObservations) return
+    let active = true
+    loadMunicipalSeries(indicator.id).then((payload) => { if (active) setMunicipalObservations(payload.observations) })
+      .catch(() => trackEvent('data_load_error', { surface: 'explorer_series' }))
+    return () => { active = false }
+  }, [activeTab, indicator.id, municipalObservations, selectedMunicipalityCode])
 
   useEffect(() => {
     if (requestedMapPeriod && availableMapPeriods.includes(requestedMapPeriod)) {
@@ -91,7 +103,7 @@ export function ExplorerPage() {
     navigate(`/explorador?${new URLSearchParams({
       tema: value,
       indicador: nextIndicator.id,
-      medida: 'crude_rate_per_100k',
+      medida: nextIndicator.availableMetrics[0] ?? 'crude_rate_per_100k',
       territorio: 'all',
       inicio: String(nextIndicator.yearStart),
       fim: String(nextIndicator.yearEnd),
@@ -105,6 +117,7 @@ export function ExplorerPage() {
     next.set('tema', nextIndicator.theme)
     next.set('inicio', String(nextIndicator.yearStart))
     next.set('fim', String(nextIndicator.yearEnd))
+    next.set('medida', nextIndicator.availableMetrics[0] ?? 'crude_rate_per_100k')
     next.delete('ano_mapa')
     navigate(`/explorador?${next.toString()}`)
   }
@@ -115,9 +128,9 @@ export function ExplorerPage() {
 
   const quickReading = useMemo(() => {
     if (selectedMunicipality && selectedMunicipalValue && municipalPeriod) {
-      const stateTotal = observations?.find((item) => item.geographyId === 'rj_total' && item.period === municipalPeriod) ?? null
+      const stateTotal = observations?.find((item) => item.geographyId === 'rj_total' && item.period === municipalPeriod && item.metricKind === metric) ?? null
       const restOfState = restOfStateExcludingMunicipality(selectedMunicipalValue, stateTotal)
-      const brazil = observations?.find((item) => item.geographyId === 'brazil_total' && item.period === municipalPeriod) ?? null
+      const brazil = observations?.find((item) => item.geographyId === 'brazil_total' && item.period === municipalPeriod && item.metricKind === metric) ?? null
       const selectedValue = metric === 'count' ? selectedMunicipalValue.count : selectedMunicipalValue.value
       const difference = rateRatio(selectedMunicipalValue.value, restOfState?.value)
       const eventLabel = indicator.measure === 'hospitalization' ? 'internações hospitalares' : 'óbitos'
@@ -143,8 +156,8 @@ export function ExplorerPage() {
     return null
   }, [indicator.measure, metric, municipalPeriod, observations, selectedMunicipality, selectedMunicipalValue])
   const provisional = observations?.some((item) => Number(item.period) >= startYear && Number(item.period) <= endYear && item.dataStatus === 'provisional') ?? false
-  const stateTotalAtMunicipalPeriod = observations?.find((item) => item.geographyId === 'rj_total' && item.period === municipalPeriod) ?? null
-  const brazilAtMunicipalPeriod = observations?.find((item) => item.geographyId === 'brazil_total' && item.period === municipalPeriod) ?? null
+  const stateTotalAtMunicipalPeriod = observations?.find((item) => item.geographyId === 'rj_total' && item.period === municipalPeriod && item.metricKind === metric) ?? null
+  const brazilAtMunicipalPeriod = observations?.find((item) => item.geographyId === 'brazil_total' && item.period === municipalPeriod && item.metricKind === metric) ?? null
   const restOfState = restOfStateExcludingMunicipality(selectedMunicipalValue, stateTotalAtMunicipalPeriod)
   const stateRatio = rateRatio(selectedMunicipalValue?.value, restOfState?.value)
   const brazilRatio = rateRatio(selectedMunicipalValue?.value, brazilAtMunicipalPeriod?.value)
@@ -171,38 +184,12 @@ export function ExplorerPage() {
     })
     saveCsvFile(`observatorio-${indicator.id}-${startYear}-${endYear}.csv`, csv)
   }
-  const copyAnalysisLink = async () => {
-    const confirmCopy = () => {
-      setLinkCopied(true)
-      window.setTimeout(() => setLinkCopied(false), 2200)
-    }
-    try {
-      await navigator.clipboard.writeText(window.location.href)
-      confirmCopy()
-    } catch {
-      const input = document.createElement('textarea')
-      input.value = window.location.href
-      input.setAttribute('readonly', '')
-      input.style.position = 'fixed'
-      input.style.opacity = '0'
-      document.body.appendChild(input)
-      input.select()
-      const copied = document.execCommand('copy')
-      input.remove()
-      if (copied) confirmCopy()
-      else window.prompt('Copie o link desta análise:', window.location.href)
-    }
-  }
-
   return (
     <main className="explorer-page">
       <div className="explorer-title-row">
         <div><h1>Explorador de dados</h1><p>Compare territórios sem perder de vista fonte, unidade e grau de certeza.</p></div>
         <div className="explorer-title-actions">
-          <button type="button" className="share-analysis" onClick={copyAnalysisLink} aria-live="polite">
-            {linkCopied ? <Check aria-hidden="true" /> : <Copy aria-hidden="true" />}
-            {linkCopied ? 'Link copiado' : 'Copiar análise'}
-          </button>
+          <ShareButton className="share-analysis" label="Compartilhar análise" surface="explorer" context={{ municipalityCode: selectedMunicipalityCode || undefined, indicatorId: indicator.id, period: `${startYear}-${endYear}`, metricKind: metric, template: activeTab === 'map' ? 'map' : 'evolution', format: 'og', route: 'explorer' }} />
           <span className="beta-status">{release.status === 'public_release_ready' ? 'Release aprovada' : 'Beta técnica'} · {release.releaseId}</span>
         </div>
       </div>
@@ -246,7 +233,7 @@ export function ExplorerPage() {
         <button role="tab" aria-selected={activeTab === 'map'} className={activeTab === 'map' ? 'is-active' : ''} onClick={() => { setActiveTab('map'); trackEvent('map_series_toggled', { tab: 'map' }) }}>Mapa</button>
         <button role="tab" aria-selected={activeTab === 'series'} className={activeTab === 'series' ? 'is-active' : ''} onClick={() => { setActiveTab('series'); trackEvent('map_series_toggled', { tab: 'series' }) }}>Série temporal</button>
       </div>
-      {availableMapPeriods.length > 1 && selectedMunicipality ? (
+      {activeTab === 'map' && availableMapPeriods.length > 1 && selectedMunicipality ? (
         <nav className="map-period-control" aria-label="Escolher ano do mapa municipal">
           <div><span>Ano do mapa</span><small>Compare a distribuição entre cidades</small></div>
           <div>
@@ -258,7 +245,7 @@ export function ExplorerPage() {
       ) : null}
       {observations ? (
         <>
-          <section className={`explorer-map-row${activeTab === 'series' ? ' is-mobile-hidden' : ''}`}>
+          {activeTab === 'map' ? <section className="explorer-map-row">
             <TerritoryMap topology={topology} values={mapValues} scaleDomain={mapPayload?.scaleDomain} status={mapPayload?.status} period={municipalPeriod ?? undefined} selectedCode={selectedMunicipalityCode} onSelect={selectMunicipality} />
             <aside className="comparison-panel">
               {selectedMunicipality ? <>
@@ -287,8 +274,8 @@ export function ExplorerPage() {
                 <a href="#municipality-input">Buscar uma cidade <ArrowRight /></a>
               </div>}
             </aside>
-          </section>
-          {mapValues.length > 0 && selectedMunicipality ? (
+          </section> : null}
+          {activeTab === 'map' && mapValues.length > 0 && selectedMunicipality ? (
             <>
               <section className="municipal-detail" aria-labelledby="municipal-detail-title">
                 <div className="municipal-detail__heading">
@@ -306,7 +293,7 @@ export function ExplorerPage() {
               <MunicipalTable municipalities={municipalities} values={mapValues} measureLabel={indicator.measureLabel} selectedCode={selectedMunicipalityCode} onSelect={selectMunicipality} />
             </>
           ) : null}
-          {selectedMunicipality ? <section className={`explorer-series${activeTab === 'map' ? '' : ' is-mobile-primary'}`}>
+          {activeTab === 'series' && selectedMunicipality ? <section className="explorer-series is-mobile-primary">
             <SeriesInsights municipalityName={selectedMunicipality.name} observations={municipalChartObservations} />
             <div className="series-scope-note"><Info /><p><strong>Cobertura municipal validada:</strong> {municipalChartObservations.length ? [...new Set(municipalChartObservations.map((item) => item.period))].join(', ') : 'em preparação'}. Anos ausentes permanecem como lacunas e não são interpolados.</p></div>
             <TimeSeriesChart
@@ -318,7 +305,7 @@ export function ExplorerPage() {
               endYear={endYear}
               geographies={municipalChartGeographies}
             />
-          </section> : null}
+          </section> : activeTab === 'series' ? <section className="explorer-series-empty"><MapPin /><h2>Escolha uma cidade para ver a evolução</h2><p>A série municipal será carregada somente depois da seleção.</p><a href="#municipality-input">Escolher cidade</a></section> : null}
           <details className="indicator-definition">
             <summary><FileText />O que este indicador mostra?<ChevronDown /></summary>
             <div>

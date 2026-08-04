@@ -1,6 +1,20 @@
 export type Theme = 'respiratory' | 'cardiovascular' | 'cardiorespiratory' | 'cancer' | 'neurological'
-export type MetricKind = 'crude_rate_per_100k' | 'count'
+export type MetricKind = 'crude_rate_per_100k' | 'age_sex_standardized_rate_per_100k' | 'count'
 export type SuppressionStatus = 'published' | 'suppressed' | 'aggregated' | 'unavailable'
+export type ShareTemplate = 'answer' | 'evolution' | 'map'
+export type ShareFormat = 'og' | 'feed' | 'story'
+export type ShareTarget = 'native' | 'whatsapp' | 'facebook' | 'instagram' | 'copy' | 'download'
+export type ShareRoute = 'municipality' | 'explorer' | 'profile' | 'indicator'
+
+export interface ShareContext {
+  municipalityCode?: string
+  indicatorId?: string
+  period?: string
+  metricKind?: MetricKind
+  template: ShareTemplate
+  format: ShareFormat
+  route?: ShareRoute
+}
 
 export interface CoverageSummary {
   municipalityCount: number
@@ -30,6 +44,10 @@ export interface Indicator {
   yearEnd: number
   municipalPeriods?: string[]
   standardization: string
+  standardPopulation?: string | null
+  standardizationDimensions?: string[]
+  metricPeriod?: Partial<Record<MetricKind, string>>
+  unavailableReason?: string | null
   mapStatus: string
   profileAvailability?: 'available_2022_sim_age_sex' | 'not_applicable_current_release' | string
   allowsConclusion: string
@@ -59,6 +77,28 @@ export interface Catalog {
   indicators: Indicator[]
   futureCapabilities: string[]
   discovery?: { generatedAt: string; municipalityCount: number }
+}
+
+export interface MunicipalitySummaryItem {
+  indicatorId: string
+  period: string | null
+  metricKind?: MetricKind | null
+  value: number | null
+  count: number | null
+  unit: string
+  dataStatus: string
+  suppressionStatus: SuppressionStatus
+  restOfStateValue: number | null
+  brazilValue: number | null
+  comparisonAvailable: boolean
+  unavailableReason?: string | null
+}
+
+export interface MunicipalitySummaryPayload {
+  schemaVersion: string
+  generatedAt: string
+  municipalityCode: string
+  items: MunicipalitySummaryItem[]
 }
 
 export interface Observation {
@@ -148,6 +188,8 @@ export interface MapPayload {
   period?: string
   values: MapValue[]
   note: string
+  metricKind?: MetricKind
+  alternatives?: Array<{ metricKind: MetricKind; period: string; values: MapValue[] }>
   mapScale?: { domain: [number, number] | null; method: 'fixed_indicator_metric'; unit: string; temporalPolicy: 'comparable_across_available_periods' }
 }
 

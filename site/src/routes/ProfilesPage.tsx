@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useSearch } from 'wouter'
 import { LoadingState } from '../components/LoadingState'
+import { ShareButton } from '../components/ShareButton'
 import { usePortal } from '../context/usePortal'
 import { trackEvent } from '../lib/analytics'
 import { loadProfile } from '../lib/data'
@@ -81,7 +82,7 @@ export function ProfilesPage() {
       {!municipalityCode ? <section className="profile-empty"><h2>Escolha uma cidade para começar</h2><p>O perfil será carregado somente depois da seleção, sem adotar um município silenciosamente.</p></section> : rows ? (
         failed ? <section className="profile-empty" role="alert"><h2>Não foi possível carregar o perfil</h2><p>Tente novamente ou consulte a análise municipal sem o recorte por idade e sexo.</p></section> :
         <section className="profile-chart" aria-labelledby="profile-title">
-          <div className="profile-chart__heading"><div><h2 id="profile-title">{indicator?.label}</h2><p>{municipality?.name} · 2022 · taxa específica por 100 mil</p></div><div className="profile-legend"><span><i />Feminino</span><span><i />Masculino</span></div></div>
+          <div className="profile-chart__heading"><div><h2 id="profile-title">{indicator?.label}</h2><p>{municipality?.name} · 2022 · taxa específica por 100 mil</p></div><ShareButton surface="profiles" context={{ municipalityCode, indicatorId, period, metricKind: 'crude_rate_per_100k', template: 'answer', format: 'og', route: 'profile' }} /><div className="profile-legend"><span><i />Feminino</span><span><i />Masculino</span></div></div>
           <div className="profile-bars" aria-hidden="true">
             {profile.map((item) => (
               <div className="profile-row" key={item.age}>

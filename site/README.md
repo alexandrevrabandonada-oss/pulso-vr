@@ -23,3 +23,14 @@ preserva arquivos estáticos existentes antes do fallback da SPA.
 A pasta publicável é `dist/`. A implantação pública permanece bloqueada até a
 aprovação epidemiológica, de acessibilidade, proveniência e supressão descrita
 em `public/data/release.json`.
+
+## Marca e SEO
+
+O portal apresenta Observatório Estadual de Saúde do RJ e VR Abandonada como
+realização conjunta. A parceria institucional não substitui as fontes
+epidemiológicas exibidas pelos indicadores.
+
+As páginas públicas recebem título, descrição, canonical, Open Graph, Twitter
+Card e JSON-LD por rota. `robots.txt` e `sitemap.xml` são gerados pelas funções
+Vercel conforme o status da release. Em beta técnica, a indexação permanece
+bloqueada.

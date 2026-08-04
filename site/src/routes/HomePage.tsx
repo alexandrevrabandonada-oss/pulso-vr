@@ -2,7 +2,7 @@ import { ArrowRight, ChartNoAxesCombined, Download, FileSearch, Map, Users } fro
 import { useMemo } from 'react'
 import { Link, useLocation } from 'wouter'
 import { DiscoverySearch } from '../components/DiscoverySearch'
-import { TerritoryMap } from '../components/TerritoryMap'
+import { CoBrandBlock } from '../components/CoBrandBlock'
 import { municipalProperties } from '../lib/municipalities'
 import { usePortal } from '../context/usePortal'
 
@@ -10,36 +10,35 @@ export function HomePage() {
   const { catalog, topology, release } = usePortal()
   const [, navigate] = useLocation()
   const municipalities = useMemo(() => municipalProperties(topology), [topology])
-  const openCity = (municipalityCode: string, indicatorId: string) => navigate(`/municipios/${municipalityCode}?indicador=${indicatorId}`)
+  const openData = (municipalityCode: string, indicatorId: string) => navigate(`/municipios/${municipalityCode}?indicador=${indicatorId}`)
   const updatedAt = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'medium' }).format(new Date(release.generatedAt))
   return (
     <main>
       <section className="home-hero">
         <div className="home-hero__copy">
-          <p className="hero-eyebrow">Observatório estadual de saúde</p>
-          <h1>Doenças no Rio de Janeiro, cidade por cidade</h1>
-          <p>Escolha qualquer uma das 92 cidades, consulte internações e óbitos por residência e compare sua taxa com o restante do estado e com o Brasil.</p>
-          <DiscoverySearch municipalities={municipalities} indicators={catalog.indicators} onOpen={openCity} />
+          <h1>Saúde no Rio de Janeiro, cidade por cidade</h1>
+          <p>Dados públicos para entender, comparar e acompanhar a saúde nos 92 municípios do estado. Comece escolhendo uma cidade e um assunto.</p>
+          <div className="home-discovery-intro"><strong>Comece por uma pergunta</strong><span>Escolha a cidade e o tema para receber uma resposta principal.</span></div>
+          <DiscoverySearch municipalities={municipalities} indicators={catalog.indicators} onOpen={openData} />
           <div className="hero-actions hero-actions--secondary">
             <Link href="/explorador" className="secondary-button">Explorar primeiro</Link>
             <Link href="/metodos" className="secondary-button">Como ler os dados</Link>
           </div>
           <p className="hero-method-note">92 municípios · atualização {updatedAt} · dados por residência e limitações visíveis.</p>
         </div>
-        <div className="home-hero__data" aria-label="Prévia do explorador de dados">
-          <div className="data-preview__heading">
-            <span>Prévia dos dados</span>
-            <strong>Todos os municípios, sem cidade padrão</strong>
-          </div>
-          <div className="data-preview__visuals">
-            <TerritoryMap topology={topology} compact />
-            <div className="home-examples"><strong>Perguntas que você pode responder</strong><Link href="/explorador?indicador=sih-pneumonia">Como está a pneumonia?</Link><Link href="/explorador?indicador=sim-lung">Mortalidade por câncer de pulmão</Link><Link href="/explorador">Comparar uma cidade com o restante do RJ</Link></div>
-          </div>
+        <div className="home-hero__data home-hero__territory" aria-label="Cobertura estadual">
+          <svg viewBox="0 0 760 460" role="img" aria-label="Representação abstrata do território do Rio de Janeiro">
+            <path className="territory-blob" d="M68 246C125 192 186 205 235 164c56-46 114-25 166-66 61-48 137-25 187 17 46 39 77 98 47 145-33 51-111 39-165 75-58 39-91 96-164 78-67-17-86-75-148-81-64-7-134-28-90-86Z" />
+            <path className="territory-line" d="M80 268c92-62 168 18 247-54s178-54 287 15M92 310c90-54 169 26 250-38s169-54 249-2M126 350c79-35 142 21 212-21s144-44 205-22" />
+          </svg>
+          <div className="territory-stat"><strong>92</strong><span>municípios do Rio de Janeiro</span></div>
         </div>
         <div className="river-rule" aria-hidden="true">
           <svg viewBox="0 0 800 72" preserveAspectRatio="none"><path d="M0 38C90 5 130 66 220 34S350 57 430 31 560 55 640 30 720 52 800 22" /><path d="M0 51C90 18 130 79 220 47S350 70 430 44 560 68 640 43 720 65 800 35" /></svg>
         </div>
       </section>
+
+      <section className="question-rail" aria-labelledby="questions-title"><div><h2 id="questions-title">Perguntas que ajudam a entender</h2><p>Comece por uma pergunta simples e aprofunde apenas quando precisar.</p></div><Link href="/explorador?indicador=sih-pneumonia"><strong>Como está a pneumonia na minha cidade?</strong><ArrowRight /></Link><Link href="/explorador?indicador=sim-lung"><strong>Mortalidade por câncer de pulmão</strong><ArrowRight /></Link></section>
 
       <section className="lenses-section">
         <h2>Três lentes para entender os dados</h2>
@@ -57,6 +56,7 @@ export function HomePage() {
           <Link href="/dados"><Download /><span><strong>Dados e proveniência</strong>Arquivos públicos e manifestos</span></Link>
         </div>
       </section>
+      <section className="home-cobrand"><CoBrandBlock /></section>
     </main>
   )
 }
