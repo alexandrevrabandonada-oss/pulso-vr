@@ -58,6 +58,7 @@ export default async function handler(request: Request) {
     return new Response(`<!doctype html>${html.replace(/^<!doctype html>/i, '')}`, { status: resolvedRoute === 'not-found' ? 404 : 200, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' } })
   } catch (error) {
     console.error('[seo-page]', error)
-    return new Response('Página temporariamente indisponível.', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow' } })
+    const errorCode = error instanceof Error ? error.message : 'unknown_error'
+    return new Response('Página temporariamente indisponível.', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow', 'X-SEO-Error': errorCode.slice(0, 80) } })
   }
 }
