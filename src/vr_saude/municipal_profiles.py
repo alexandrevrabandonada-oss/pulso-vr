@@ -19,7 +19,7 @@ from .rates import RATE_MULTIPLIER
 YEAR = 2022
 SEXES = ["masculino", "feminino"]
 SMALL_CELL_THRESHOLD = 5
-PROFILE_OUTCOME_SECTIONS = ("respiratory", "cardiovascular", "cardiorespiratory", "cancer")
+PROFILE_OUTCOME_SECTIONS = ("respiratory", "cardiovascular", "cardiorespiratory", "cancer", "neurological")
 
 
 def _definitions(root: Path) -> list[dict[str, object]]:
@@ -30,8 +30,8 @@ def _definitions(root: Path) -> list[dict[str, object]]:
         for item in config.get(section, [])
         if "SIM" in item.get("source", []) and item.get("code_ranges") and item["id"] != "covid19"
     ]
-    if len(definitions) != 30:
-        raise ValueError(f"expected 30 public SIM profile outcomes, found {len(definitions)}")
+    if len(definitions) != 32:
+        raise ValueError(f"expected 32 public SIM profile outcomes, found {len(definitions)}")
     return definitions
 
 

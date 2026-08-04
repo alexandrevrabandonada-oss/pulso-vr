@@ -2,8 +2,8 @@
 
 Taxas específicas brutas de mortalidade de residentes, calculadas para 92 municípios e 30 indicadores SIM.
 
-- Linhas analíticas: **44160**.
-- Células primárias protegidas: **38666**.
+- Linhas analíticas: **47104**.
+- Células primárias protegidas: **41461**.
 - Supressões complementares: **0**.
 - Idade ou sexo ignorado é auditado, mas não recebe denominador inventado.
 - Mortalidade por câncer não representa incidência e estes dados não autorizam inferência causal.

@@ -22,6 +22,20 @@ sources:
       - "reconcile monthly RD totals with official TabNet totals"
       - "document processing month versus discharge month"
       - "do not interpret AIH as unique person"
+  sia:
+    title: "Produção Ambulatorial do SUS"
+    institution: "DATASUS / Ministério da Saúde"
+    primary:
+      landing_url: "https://datasus.saude.gov.br/acesso-a-informacao/producao-ambulatorial-sia-sus/"
+      mode: "TabNet / production by establishment municipality"
+      granularity: "monthly"
+      territory: "municipality of establishment"
+    technical_notes: "https://tabnet.datasus.gov.br/cgi/sia/padescr.htm"
+    validation:
+      - "confirm a valid ICD-10 diagnostic dimension before classifying Alzheimer/dementia"
+      - "retain establishment geography and do not substitute residence"
+      - "publish counts/production only; no resident disease rate"
+      - "record an unavailable manifest when a diagnostic dimension is absent"
   sim:
     title: "Sistema de Informação sobre Mortalidade"
     institution: "CGIAE / DATASUS / Ministério da Saúde"

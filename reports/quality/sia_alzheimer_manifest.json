@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-08-03T19:08:47+00:00",
+  "status": "unavailable_no_validated_diagnostic_dimension",
+  "input_path": "data\\interim\\sia_diagnostic_production.csv",
+  "geography_basis": "establishment",
+  "measure": "ambulatory_production",
+  "outcome_ids": [
+    "alzheimer",
+    "dementias_all"
+  ],
+  "notes": [
+    "No SIA extract with a validated CID-10 diagnostic dimension was found.",
+    "Procedure counts are not substituted for Alzheimer/dementia diagnoses.",
+    "No residence-based disease rate is calculated from SIA."
+  ]
+}

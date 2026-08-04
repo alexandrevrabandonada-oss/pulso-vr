@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-08-03T19:08:38+00:00",
+  "status": "validated_sim_2022_direct_standardized_rates",
+  "year": 2022,
+  "standard_population": "Brazil Censo 2022",
+  "outcome_ids": [
+    "alzheimer",
+    "dementias_all"
+  ],
+  "municipalities": 92,
+  "output_path": "data\\processed\\sim_neurological_standardized_rates_2022.parquet",
+  "output_sha256": "cc06f3570b9ba92e9ab2931e896dc4670a43c97611eea09a1f471b68751dd6ef",
+  "input_files": [
+    {
+      "path": "data\\processed\\sim_municipal_age_sex_rates_2022.parquet",
+      "sha256": "a88100b42025b77b26777cd748ed2cdfeee06372bf47b2cdaa020e9dee78ca9e"
+    },
+    {
+      "path": "data\\processed\\population_age_sex_brazil_2022.parquet",
+      "sha256": "7343e8f90e95820f7522f9c56a01f30c9946df61b7087ad1315b2f4478aa7e46"
+    }
+  ],
+  "notes": [
+    "Direct standardization is published only for 2022 because municipal age-sex denominators are not available as an annual series.",
+    "The rate is not calculated for SIA establishment production.",
+    "Cells below five remain protected at public publication time."
+  ]
+}

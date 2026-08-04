@@ -12,6 +12,7 @@ import pandas as pd
 from .config import load_config
 from .download import download_public_file
 from .provenance import sha256_file
+from .rates import RATE_MULTIPLIER
 
 
 SMALL_CELL_THRESHOLD = 5
@@ -49,6 +50,16 @@ SOURCE_DEFINITIONS = {
             "sobre Mortalidade. Mortalidade por câncer não representa incidência."
         ),
     },
+    "SIA": {
+        "measure": "ambulatory_production",
+        "measureLabel": "Produção ambulatorial (estabelecimento)",
+        "unit": "procedimentos/atendimentos registrados no município do estabelecimento",
+        "sourceLabel": "SIA/SUS — DATASUS",
+        "definition": (
+            "Produção ambulatorial registrada no município onde o estabelecimento está instalado. "
+            "Não representa residência, prevalência, incidência ou risco municipal."
+        ),
+    },
 }
 
 
@@ -58,7 +69,16 @@ def _utc_now() -> str:
 
 def _write_json(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    content = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+    try:
+        path.write_text(content, encoding="utf-8")
+    except OSError as exc:
+        # OneDrive Files On-Demand may leave generated JSON as a reparse-point
+        # placeholder that rejects direct replacement with WinError 22.
+        if getattr(exc, "winerror", None) != 22 or not path.is_file():
+            raise
+        path.unlink()
+        path.write_text(content, encoding="utf-8")
 
 
 def suppress_public_observation(observation: dict[str, Any]) -> dict[str, Any]:
@@ -92,24 +112,32 @@ def _series_observations(frame: pd.DataFrame, source: str) -> list[dict[str, Any
     observations: list[dict[str, Any]] = []
     for row in frame.itertuples(index=False):
         period_status = str(row.period_status)
+        outcome_id = str(row.outcome_id)
         observation = {
             "source": source,
-            "outcomeId": str(row.outcome_id),
+            "outcomeId": outcome_id,
             "geographyId": str(row.geography),
             "period": str(int(row.year)),
             "metricKind": "crude_rate_per_100k",
-            "value": _finite_or_none(row.rate_per_100k),
+            "value": _finite_or_none(getattr(row, "rate_per_100k", None)),
             "count": int(row.count),
-            "denominator": int(row.denominator if source == "SIH" else row.population),
-            "ciLow": _finite_or_none(row.rate_ci_lower_per_100k),
-            "ciHigh": _finite_or_none(row.rate_ci_upper_per_100k),
+            "denominator": int(row.denominator if source == "SIH" else row.population) if source != "SIA" and getattr(row, "population", None) is not None else None,
+            "ciLow": _finite_or_none(getattr(row, "rate_ci_lower_per_100k", None)),
+            "ciHigh": _finite_or_none(getattr(row, "rate_ci_upper_per_100k", None)),
             "dataStatus": _data_status(source, int(row.year), period_status),
             "periodStatus": period_status,
             "manifestRef": (
-                "reports/quality/respiratory_rates_manifest.json"
+                "reports/quality/sih_neurological_rates_manifest.json"
+                if source == "SIH" and outcome_id in {"alzheimer", "dementias_all"}
+                else "reports/quality/respiratory_rates_manifest.json"
                 if source == "SIH"
+                else "reports/quality/sim_neurological_rates_manifest.json"
+                if source == "SIM" and outcome_id in {"alzheimer", "dementias_all"}
                 else "reports/quality/sim_mortality_rates_manifest.json"
+                if source == "SIM"
+                else "reports/quality/sia_alzheimer_manifest.json"
             ),
+            "geographyBasis": "establishment" if source == "SIA" else "residence",
         }
         observations.append(suppress_public_observation(observation))
     return observations
@@ -120,7 +148,7 @@ def _indicator_id(source: str, outcome_id: str) -> str:
 
 
 def _theme(outcome_id: str, outcome_config: dict[str, set[str]]) -> str:
-    for theme in ("respiratory", "cardiovascular", "cardiorespiratory", "cancer"):
+    for theme in ("respiratory", "cardiovascular", "cardiorespiratory", "cancer", "neurological"):
         if outcome_id in outcome_config[theme]:
             return theme
     raise ValueError(f"outcome is not assigned to a portal theme: {outcome_id}")
@@ -129,7 +157,7 @@ def _theme(outcome_id: str, outcome_config: dict[str, set[str]]) -> str:
 def _configured_outcomes(root: Path) -> tuple[dict[str, dict[str, Any]], dict[str, set[str]]]:
     config = load_config("outcomes.yml", root)
     by_id: dict[str, dict[str, Any]] = {}
-    sections = {"respiratory": set(), "cardiovascular": set(), "cardiorespiratory": set(), "cancer": set()}
+    sections = {"respiratory": set(), "cardiovascular": set(), "cardiorespiratory": set(), "cancer": set(), "neurological": set()}
     for section in sections:
         for item in config.get(section, []):
             by_id[item["id"]] = item
@@ -141,14 +169,35 @@ def _build_catalog_and_series(root: Path) -> tuple[list[dict[str, Any]], dict[st
     configured, sections = _configured_outcomes(root)
     sources = [
         ("SIH", root / "data" / "processed" / "respiratory_rates_annual.parquet"),
-        ("SIM", root / "data" / "processed" / "sim_mortality_rates_sample.parquet"),
+        ("SIA", root / "data" / "processed" / "sia_alzheimer_production.parquet"),
     ]
+    sih_neurological_path = root / "data" / "processed" / "sih_neurological_rates_annual.parquet"
+    if sih_neurological_path.exists():
+        sources.insert(1, ("SIH", sih_neurological_path))
+    sim_path = root / "data" / "processed" / "sim_mortality_rates_sample.parquet"
+    neurological_path = root / "data" / "processed" / "sim_neurological_rates_annual.parquet"
+    sim_frame: pd.DataFrame | None = None
+    if sim_path.exists():
+        sim_frame = pd.read_parquet(sim_path)
+    if neurological_path.exists():
+        neurological = pd.read_parquet(neurological_path)
+        if sim_frame is None:
+            sim_frame = neurological
+        else:
+            neurological = neurological.loc[~neurological["outcome_id"].isin(sim_frame["outcome_id"].unique())]
+            sim_frame = pd.concat([sim_frame, neurological], ignore_index=True)
+    if sim_frame is not None:
+        sources.insert(1, ("SIM", sim_frame))
     catalog: list[dict[str, Any]] = []
     series: dict[str, list[dict[str, Any]]] = {}
-    for source, path in sources:
-        if not path.exists():
-            continue
-        frame = pd.read_parquet(path)
+    for source, source_data in sources:
+        if isinstance(source_data, pd.DataFrame):
+            frame = source_data
+        else:
+            path = source_data
+            if not path.exists():
+                continue
+            frame = pd.read_parquet(path)
         for outcome_id, outcome_frame in frame.groupby("outcome_id", sort=True):
             source_definition = SOURCE_DEFINITIONS[source]
             indicator_id = _indicator_id(source, str(outcome_id))
@@ -169,11 +218,24 @@ def _build_catalog_and_series(root: Path) -> tuple[list[dict[str, Any]], dict[st
                     "unit": source_definition["unit"],
                     "sourceLabel": source_definition["sourceLabel"],
                     "cidRanges": configured.get(str(outcome_id), {}).get("code_ranges", []),
-                    "availableMetrics": available_metrics,
+                    "availableMetrics": ["count"] if source == "SIA" else available_metrics,
                     "geographyIds": geography_ids,
                     "yearStart": min(int(item["period"]) for item in observations),
                     "yearEnd": max(int(item["period"]) for item in observations),
-                    "standardization": "crude_only",
+                    "standardization": (
+                        "age_standardized_2022_and_crude_annual"
+                        if source == "SIM" and str(outcome_id) in {"alzheimer", "dementias_all"}
+                        else "not_applicable_establishment_production" if source == "SIA"
+                        else "crude_only"
+                    ),
+                    "geographyBasis": "establishment" if source == "SIA" else "residence",
+                    "standardizedRateAvailability": (
+                        "available_2022_brazil_census_standard"
+                        if source == "SIM" and str(outcome_id) in {"alzheimer", "dementias_all"}
+                        else "not_applicable"
+                        if source == "SIA"
+                        else "pending_age_sex_validation"
+                    ),
                     "mapStatus": (
                         f"validated_{source.lower()}_{latest_map[2]}_municipal_residence_rates_crude"
                         if latest_map
@@ -185,11 +247,12 @@ def _build_catalog_and_series(root: Path) -> tuple[list[dict[str, Any]], dict[st
                         else "not_applicable_current_release"
                     ),
                     "allowsConclusion": (
-                        "Descreve a frequência e a taxa registrada entre residentes e permite "
-                        "comparações descritivas com os territórios disponíveis."
+                        "Descreve a produção ambulatorial registrada no local do estabelecimento; não é taxa de residentes."
+                        if source == "SIA"
+                        else "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis."
                     ),
                     "doesNotAllowConclusion": (
-                        "Não mede causalidade ambiental, risco individual ou incidência de câncer."
+                        "Não mede causalidade ambiental, risco individual, prevalência ou incidência."
                     ),
                     "synonyms": _indicator_synonyms(str(outcome_id), str(outcome_frame.iloc[0]["outcome_label"])),
                     "updatedAt": _utc_now(),
@@ -206,6 +269,8 @@ def _indicator_synonyms(outcome_id: str, label: str) -> list[str]:
         "pneumonia": ["pneumonia", "infecção pulmonar"],
         "acute_myocardial_infarction": ["infarto", "ataque cardíaco", "iam"],
         "all_malignant_neoplasms": ["câncer", "cancer", "neoplasias"],
+        "alzheimer": ["alzheimer", "doença de alzheimer", "demência de alzheimer"],
+        "dementias_all": ["demência", "demências", "alzheimer"],
     }
     return sorted({label.lower(), *common.get(outcome_id, [])})
 
@@ -244,6 +309,7 @@ def _municipal_map_payloads(root: Path, catalog: Iterable[dict[str, Any]]) -> di
                 "dataStatus": "provisional" if str(row.period_status) == "provisional" else "source_observed",
                 "periodStatus": str(row.period_status),
                 "manifestRef": manifest_ref,
+                "geographyBasis": "residence",
             }
             values.append(suppress_public_observation(item))
         payloads[indicator_id] = {
@@ -301,13 +367,43 @@ def _latest_validated_municipal_frame(root: Path, source: str, outcome_id: str |
 
 def _municipal_series_payloads(root: Path, catalog: Iterable[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     by_source = {source: _validated_municipal_frames(root, source) for source in ("SIM", "SIH")}
+    sia_path = root / "data" / "processed" / "sia_alzheimer_production.parquet"
     payloads: dict[str, dict[str, Any]] = {}
     for indicator in catalog:
         indicator_id = str(indicator["id"])
         outcome_id = str(indicator["outcomeId"])
         source = str(indicator["source"])
         observations: list[dict[str, Any]] = []
-        for frame, manifest_ref in by_source[source]:
+        if source == "SIA" and sia_path.exists():
+            sia_frame = pd.read_parquet(sia_path)
+            sia_frame = sia_frame.loc[sia_frame["outcome_id"].eq(outcome_id)]
+            for row in sia_frame.itertuples(index=False):
+                observations.append(suppress_public_observation({
+                    "source": "SIA",
+                    "outcomeId": outcome_id,
+                    "geographyId": str(row.geography),
+                    "period": str(int(row.year)),
+                    "metricKind": "count",
+                    "value": None,
+                    "count": int(row.count),
+                    "denominator": None,
+                    "ciLow": None,
+                    "ciHigh": None,
+                    "dataStatus": "provisional" if str(row.period_status) == "provisional" else "source_observed",
+                    "periodStatus": str(row.period_status),
+                    "manifestRef": "reports/quality/sia_alzheimer_manifest.json",
+                    "geographyBasis": "establishment",
+                }))
+        frames_for_indicator = by_source.get(source, [])
+        neurological_path = root / "data" / "processed" / "sim_neurological_rates_annual.parquet"
+        if source == "SIM" and outcome_id in {"alzheimer", "dementias_all"} and neurological_path.exists():
+            neurological_frame = pd.read_parquet(neurological_path)
+            neurological_frame = neurological_frame.loc[
+                neurological_frame["outcome_id"].eq(outcome_id)
+                & neurological_frame["geography"].astype(str).str.match(r"^33\d{5}$")
+            ].copy().rename(columns={"geography": "municipality_code_ibge"})
+            frames_for_indicator = [(neurological_frame, "reports/quality/sim_neurological_rates_manifest.json")]
+        for frame, manifest_ref in frames_for_indicator:
             for row in frame.loc[frame["outcome_id"].eq(outcome_id)].itertuples(index=False):
                 item = {
                     "source": source,
@@ -323,6 +419,7 @@ def _municipal_series_payloads(root: Path, catalog: Iterable[dict[str, Any]]) ->
                     "dataStatus": "provisional" if str(row.period_status) == "provisional" else "source_observed",
                     "periodStatus": str(row.period_status),
                     "manifestRef": manifest_ref,
+                    "geographyBasis": "residence",
                 }
                 observations.append(suppress_public_observation(item))
         periods = sorted({item["period"] for item in observations})
@@ -334,6 +431,114 @@ def _municipal_series_payloads(root: Path, catalog: Iterable[dict[str, Any]]) ->
             "note": "Série municipal publicada somente para anos validados por residência; lacunas não são interpoladas.",
         }
     return payloads
+
+
+def _residence_comparison_payloads(root: Path, catalog: Iterable[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
+    """Precompute selected-city comparators before municipal suppression."""
+    paths = {
+        "SIM": root / "data" / "processed" / "sim_mortality_rates_sample.parquet",
+        "SIH": root / "data" / "processed" / "respiratory_rates_annual.parquet",
+    }
+    result: dict[str, list[dict[str, Any]]] = {}
+    for indicator in catalog:
+        source = str(indicator["source"])
+        if source not in paths or not paths[source].exists():
+            result[str(indicator["id"])] = []
+            continue
+        outcome_id = str(indicator["outcomeId"])
+        aggregate_path = paths[source]
+        if source == "SIM" and outcome_id in {"alzheimer", "dementias_all"}:
+            neurological_path = root / "data" / "processed" / "sim_neurological_rates_annual.parquet"
+            if neurological_path.exists():
+                aggregate_path = neurological_path
+        if source == "SIH" and outcome_id in {"alzheimer", "dementias_all"}:
+            sih_neurological_path = root / "data" / "processed" / "sih_neurological_rates_annual.parquet"
+            if sih_neurological_path.exists():
+                aggregate_path = sih_neurological_path
+        aggregate = pd.read_parquet(aggregate_path)
+        aggregate = aggregate.loc[aggregate["outcome_id"].eq(outcome_id)].copy()
+        neurological_path = root / "data" / "processed" / "sim_neurological_rates_annual.parquet"
+        if source == "SIM" and outcome_id in {"alzheimer", "dementias_all"} and neurological_path.exists():
+            neurological_frame = pd.read_parquet(neurological_path)
+            municipal = neurological_frame.loc[
+                neurological_frame["outcome_id"].eq(outcome_id)
+                & neurological_frame["geography"].astype(str).str.match(r"^33\d{5}$")
+            ].copy().rename(columns={"geography": "municipality_code_ibge"})
+        else:
+            frames = _validated_municipal_frames(root, source)
+            selected_frames = [
+                frame.loc[frame["outcome_id"].eq(outcome_id)].copy()
+                for frame, _ in frames
+                if frame["outcome_id"].eq(outcome_id).any()
+            ]
+            municipal = pd.concat(
+                selected_frames,
+                ignore_index=True,
+            ) if selected_frames else pd.DataFrame()
+        comparisons: list[dict[str, Any]] = []
+        if municipal.empty or aggregate.empty:
+            result[str(indicator["id"])] = comparisons
+            continue
+        for row in municipal.itertuples(index=False):
+            state_rows = aggregate.loc[
+                aggregate["year"].eq(int(row.year)) & aggregate["geography"].eq("rj_total")
+            ]
+            brazil_rows = aggregate.loc[
+                aggregate["year"].eq(int(row.year)) & aggregate["geography"].eq("brazil_total")
+            ]
+            if state_rows.empty:
+                continue
+            state = state_rows.iloc[0]
+            state_denominator = int(state["denominator"] if source == "SIH" else state["population"])
+            city_denominator = int(row.population)
+            rest_count = int(state["count"]) - int(row.count)
+            rest_denominator = state_denominator - city_denominator
+            if rest_count < 0 or rest_denominator <= 0:
+                continue
+            rest_item = {
+                "source": source,
+                "outcomeId": outcome_id,
+                "geographyId": f"rest_of_rj_excluding_{row.municipality_code_ibge}",
+                "period": str(int(row.year)),
+                "metricKind": "crude_rate_per_100k",
+                "value": rest_count / rest_denominator * RATE_MULTIPLIER,
+                "count": rest_count,
+                "denominator": rest_denominator,
+                "ciLow": None,
+                "ciHigh": None,
+                "dataStatus": _data_status(source, int(row.year), str(row.period_status)),
+                "periodStatus": str(row.period_status),
+                "manifestRef": "reports/quality/municipal_comparisons_manifest.json",
+                "geographyBasis": "residence",
+            }
+            brazil_item = None
+            if not brazil_rows.empty:
+                national = brazil_rows.iloc[0]
+                national_denominator = int(national["denominator"] if source == "SIH" else national["population"])
+                brazil_item = {
+                    "source": source,
+                    "outcomeId": outcome_id,
+                    "geographyId": "brazil_total",
+                    "period": str(int(row.year)),
+                    "metricKind": "crude_rate_per_100k",
+                    "value": float(national["rate_per_100k"]),
+                    "count": int(national["count"]),
+                    "denominator": national_denominator,
+                    "ciLow": _finite_or_none(national.get("rate_ci_lower_per_100k")),
+                    "ciHigh": _finite_or_none(national.get("rate_ci_upper_per_100k")),
+                    "dataStatus": _data_status(source, int(row.year), str(national["period_status"])),
+                    "periodStatus": str(national["period_status"]),
+                    "manifestRef": "reports/quality/municipal_comparisons_manifest.json",
+                    "geographyBasis": "residence",
+                }
+            comparisons.append({
+                "municipalityCode": str(row.municipality_code_ibge),
+                "period": str(int(row.year)),
+                "restOfState": suppress_public_observation(rest_item),
+                "brazil": suppress_public_observation(brazil_item) if brazil_item else None,
+            })
+        result[str(indicator["id"])] = comparisons
+    return result
 
 
 def _profile_payload(root: Path, catalog: Iterable[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
@@ -479,6 +684,7 @@ def build_portal_data(
     profiles = _profile_payload(root, catalog)
     maps = _municipal_map_payloads(root, catalog)
     municipal_series = _municipal_series_payloads(root, catalog)
+    comparisons = _residence_comparison_payloads(root, catalog)
     for indicator in catalog:
         indicator_id = str(indicator["id"])
         municipal_payload = municipal_series[indicator_id]
@@ -526,6 +732,21 @@ def build_portal_data(
         }
     topology = _build_topology(root, acquire_geography)
 
+    comparison_manifest_path = root / "reports" / "quality" / "municipal_comparisons_manifest.json"
+    comparison_manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    comparison_manifest_path.write_text(
+        json.dumps({
+            "generated_at": _utc_now(),
+            "status": "precomputed_residence_comparisons_before_publication_suppression",
+            "comparator": "(RJ total - selected municipality) / (population RJ total - population selected municipality)",
+            "indicator_count": len(comparisons),
+            "comparison_rows": {indicator_id: len(rows) for indicator_id, rows in comparisons.items()},
+            "output_directory": "site/public/data/comparisons",
+            "suppression": "municipal cells are suppressed before publication; comparator aggregates are computed from source totals",
+        }, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
     _write_json(output_root / "catalog.json", {
         "schemaVersion": "1.1.0",
         "geographies": GEOGRAPHY_LABELS,
@@ -546,7 +767,14 @@ def build_portal_data(
             "observations": profiles.get(indicator_id, []),
         })
         _write_json(output_root / "maps" / "rj" / f"{indicator_id}.json", maps[indicator_id])
-        _write_json(output_root / "municipal-series" / f"{indicator_id}.json", municipal_series[indicator_id])
+        municipal_payload = municipal_series[indicator_id]
+        municipal_payload["comparisons"] = comparisons.get(indicator_id, [])
+        _write_json(output_root / "municipal-series" / f"{indicator_id}.json", municipal_payload)
+        _write_json(output_root / "comparisons" / f"{indicator_id}.json", {
+            "schemaVersion": "1.0.0",
+            "indicatorId": indicator_id,
+            "comparisons": comparisons.get(indicator_id, []),
+        })
     _write_json(output_root / "geography" / "rj.topojson", topology)
     _write_download_csv(output_root / "downloads" / "series-publicas.csv", series)
 

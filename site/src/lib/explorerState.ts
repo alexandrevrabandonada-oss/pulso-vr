@@ -1,6 +1,6 @@
 import type { Indicator, MetricKind, Theme } from '../types'
 
-const THEMES = new Set<Theme>(['respiratory', 'cardiovascular', 'cardiorespiratory', 'cancer'])
+const THEMES = new Set<Theme>(['respiratory', 'cardiovascular', 'cardiorespiratory', 'cancer', 'neurological'])
 const METRICS = new Set<MetricKind>(['crude_rate_per_100k', 'count'])
 const TERRITORIES = new Set(['all', 'volta_redonda', 'rest_of_rj_excluding_vr', 'brazil_total'])
 

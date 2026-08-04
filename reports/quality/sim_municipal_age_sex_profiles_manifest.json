@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-03T18:43:00+00:00",
+  "generated_at": "2026-08-03T19:08:35+00:00",
   "status": "validated_sim_2022_municipal_age_sex_specific_rates",
   "year": 2022,
   "municipality_count": 92,
-  "outcome_count": 30,
-  "rows": 44160,
+  "outcome_count": 32,
+  "rows": 47104,
   "age_groups": [
     "<1",
     "1-4",
@@ -20,8 +20,8 @@
     "feminino"
   ],
   "suppression": {
-    "suppressed": 38666,
-    "published": 4022,
+    "suppressed": 41461,
+    "published": 4171,
     "not_applicable": 1472
   },
   "quality": {
@@ -29,6 +29,7 @@
       "acute_bronchitis_bronchiolitis": 64,
       "acute_myocardial_infarction": 9499,
       "all_malignant_neoplasms": 22352,
+      "alzheimer": 2420,
       "asthma": 211,
       "bladder": 513,
       "breast": 2395,
@@ -39,6 +40,7 @@
       "cervix": 543,
       "colorectal": 2574,
       "copd": 3080,
+      "dementias_all": 2832,
       "heart_failure": 3550,
       "hypertension": 7697,
       "influenza": 132,
@@ -87,7 +89,9 @@
       "pancreas": 2,
       "breast": 4,
       "cervix": 2,
-      "prostate": 6
+      "prostate": 6,
+      "alzheimer": 36,
+      "dementias_all": 52
     },
     "excluded_invalid_or_historical_municipality_code": {
       "acute_myocardial_infarction": 17,
@@ -99,6 +103,7 @@
       "cerebrovascular": 13,
       "colorectal": 1,
       "copd": 2,
+      "dementias_all": 4,
       "heart_failure": 5,
       "hypertension": 6,
       "ischemic_heart_disease": 22,
@@ -111,6 +116,7 @@
       "acute_bronchitis_bronchiolitis": 64,
       "acute_myocardial_infarction": 9446,
       "all_malignant_neoplasms": 22313,
+      "alzheimer": 2384,
       "asthma": 211,
       "bladder": 513,
       "breast": 2391,
@@ -121,6 +127,7 @@
       "cervix": 541,
       "colorectal": 2568,
       "copd": 3068,
+      "dementias_all": 2780,
       "heart_failure": 3523,
       "hypertension": 7618,
       "influenza": 128,
@@ -142,7 +149,7 @@
     "reconciliation_mismatches": {}
   },
   "output_path": "data\\processed\\sim_municipal_age_sex_rates_2022.parquet",
-  "output_sha256": "5febbedf5b807f9f98cca962cfca20a5847b748b897edd07ea396f4109b8677a",
+  "output_sha256": "a88100b42025b77b26777cd748ed2cdfeee06372bf47b2cdaa020e9dee78ca9e",
   "input_files": [
     {
       "path": "data\\interim\\sim_2022_harmonized.parquet",

@@ -9,7 +9,7 @@ export function formatMetric(value: number | null, metric: MetricKind): string {
 }
 
 export function metricLabel(metric: MetricKind): string {
-  return metric === 'count' ? 'Contagens registradas' : 'Taxa bruta por 100 mil habitantes'
+  return metric === 'count' ? 'Contagens/produção registradas' : 'Taxa bruta por 100 mil habitantes'
 }
 
 export function statusLabel(status: string): string {
@@ -23,6 +23,7 @@ export function statusLabel(status: string): string {
     cardiorespiratory_pandemic_context: 'Contexto pandêmico',
     cardiorespiratory_provisional: 'Provisório',
     cancer_care_disruption: 'Interrupção assistencial',
+    neurological_provisional: 'Provisório',
   }
   return labels[status] ?? status.replaceAll('_', ' ')
 }

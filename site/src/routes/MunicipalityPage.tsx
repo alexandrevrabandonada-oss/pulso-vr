@@ -13,7 +13,7 @@ import { formatMetric, statusLabel } from '../lib/format'
 import { buildMunicipalComparisonSeries, rateRatio, relativeDifferenceLabel, restOfStateExcludingMunicipality } from '../lib/municipalComparison'
 import { municipalProperties } from '../lib/municipalities'
 import { buildFilteredSeriesCsv, saveCsvFile } from '../lib/publicDownload'
-import type { MapPayload, Observation } from '../types'
+import type { MapPayload, MunicipalComparison, Observation } from '../types'
 
 export function MunicipalityPage() {
   const [, params] = useRoute('/municipios/:codigo')
@@ -22,7 +22,7 @@ export function MunicipalityPage() {
   return <MunicipalityDetail municipalityCode={params?.codigo ?? ''} requestedIndicator={requestedIndicator} />
 }
 
-const CURATED_INDICATORS = ['sih-pneumonia', 'sim-lung', 'sim-all-malignant-neoplasms', 'sim-acute-myocardial-infarction']
+const CURATED_INDICATORS = ['sim-alzheimer', 'sim-dementias-all', 'sih-alzheimer', 'sih-pneumonia']
 
 function MunicipalityOverview({ municipalityCode }: { municipalityCode: string }) {
   const { catalog, topology } = usePortal()
@@ -62,16 +62,18 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
   const indicator = catalog.indicators.find((item) => item.id === requestedIndicator) ?? catalog.indicators[0]
   const [series, setSeries] = useState<Observation[] | null>(null)
   const [municipalSeries, setMunicipalSeries] = useState<Observation[] | null>(null)
+  const [comparisons, setComparisons] = useState<MunicipalComparison[]>([])
   const [map, setMap] = useState<MapPayload | null>(null)
 
   useEffect(() => {
     let active = true
-    setSeries(null); setMunicipalSeries(null); setMap(null)
+    setSeries(null); setMunicipalSeries(null); setMap(null); setComparisons([])
     Promise.all([loadSeries(indicator.id), loadMunicipalSeries(indicator.id)])
       .then(([seriesPayload, municipalPayload]) => {
         if (!active) return
         setSeries(seriesPayload.observations)
         setMunicipalSeries(municipalPayload.observations)
+        setComparisons(municipalPayload.comparisons ?? [])
         trackEvent('first_answer_rendered', { surface: 'municipality', indicatorId: indicator.id })
         loadMap(indicator.id).then((mapPayload) => { if (active) setMap(mapPayload) })
           .catch(() => trackEvent('data_load_error', { surface: 'municipality_map' }))
@@ -87,8 +89,9 @@ function MunicipalityDetail({ municipalityCode, requestedIndicator }: { municipa
   const period = latest?.period ?? map?.period ?? null
   const stateTotal = series.find((item) => item.geographyId === 'rj_total' && item.period === period) ?? null
   const brazil = series.find((item) => item.geographyId === 'brazil_total' && item.period === period) ?? null
-  const rest = restOfStateExcludingMunicipality(latest, stateTotal)
-  const comparisonSeries = buildMunicipalComparisonSeries(municipality.code, municipalSeries, series)
+  const precomputed = comparisons.find((item) => item.municipalityCode === municipality.code && item.period === period)
+  const rest = precomputed?.restOfState ?? restOfStateExcludingMunicipality(latest, stateTotal)
+  const comparisonSeries = buildMunicipalComparisonSeries(municipality.code, municipalSeries, series, comparisons)
   const labels = { selected_municipality: municipality.name, rest_of_rj_excluding_selected: `RJ sem ${municipality.name}`, brazil_total: 'Brasil' }
   const ratio = rateRatio(latest?.value, rest?.value)
   const status = statusLabel(latest?.dataStatus ?? '')

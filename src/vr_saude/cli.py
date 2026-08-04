@@ -19,10 +19,17 @@ from .logging_utils import configure_logging
 from .layout_validation import write_layout_manifest
 from .mortality import build_mortality_rates
 from .municipal_profiles import build_municipal_age_sex_profiles
+from .neurological import build_neurological_rates
 from .oncology_diagnoses import build_oncology_diagnoses
 from .outcomes import build_outcome_counts
 from .population import acquire_population, harmonize_population
-from .population_age_sex import acquire_age_sex_population, harmonize_age_sex_population
+from .population_age_sex import (
+    acquire_age_sex_population,
+    acquire_brazil_age_sex_population,
+    harmonize_age_sex_population,
+    harmonize_brazil_age_sex_population,
+)
+from .standardization import build_sim_neurological_standardized_rates
 from .portal_data import build_portal_data
 from .portal_release import write_portal_preflight
 from .provenance import sha256_file
@@ -31,8 +38,10 @@ from .rates import build_respiratory_rates
 from .reporting import write_respiratory_report
 from .sih_morbidity import query_morbidity_series, query_national_morbidity_series
 from .sih_municipal_map import build_sih_municipal_map
+from .sih_neurological import build_sih_neurological_rates
 from .sih_tabnet import query_residence, query_residence_series, save_query_response, write_harmonized_series
 from .sim_municipal_map import build_sim_municipal_map
+from .sia import build_sia_alzheimer_production
 from .sources import get_sample_source
 from .surveillance import build_sivep_surveillance_summary
 from .sivep_monthly import build_sivep_monthly
@@ -262,6 +271,14 @@ def _parser() -> argparse.ArgumentParser:
         help="harmonize SIDRA 9514 Census 2022 age-sex denominators",
     )
     subparsers.add_parser(
+        "population-brazil-age-sex-acquire",
+        help="download Brazil 2022 age-sex standard from SIDRA 9514",
+    )
+    subparsers.add_parser(
+        "population-brazil-age-sex-harmonize",
+        help="harmonize the Brazil 2022 age-sex standard",
+    )
+    subparsers.add_parser(
         "respiratory-rates",
         help="calculate crude annual respiratory rates with exact Poisson intervals",
     )
@@ -286,12 +303,29 @@ def _parser() -> argparse.ArgumentParser:
         help="calculate sampled SIM crude mortality rates with Poisson intervals",
     )
     subparsers.add_parser(
+        "sim-neurological-rates",
+        help="calculate annual SIM Alzheimer/dementia crude residence rates",
+    )
+    sih_neurological = subparsers.add_parser(
+        "sih-neurological-rates",
+        help="calculate 2022 SIH Alzheimer/dementia residence rates and Brazil comparator",
+    )
+    sih_neurological.add_argument("--year", type=int, default=2022)
+    subparsers.add_parser(
         "sim-age-sex-profile",
         help="describe SIM deaths by broad age group and sex",
     )
     subparsers.add_parser(
         "sim-age-sex-rates",
         help="calculate SIM 2022 specific crude rates by age group and sex",
+    )
+    subparsers.add_parser(
+        "sim-neurological-standardized",
+        help="calculate 2022 Alzheimer/dementia rates standardized to Brazil Census 2022",
+    )
+    subparsers.add_parser(
+        "sia-alzheimer",
+        help="validate SIA Alzheimer/dementia production by establishment",
     )
     subparsers.add_parser(
         "sim-municipal-profiles",
@@ -523,6 +557,22 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Age-sex denominator Parquet: {denominator}")
         print(f"Age-sex population report: {report}")
         return 0
+    if args.command == "population-brazil-age-sex-acquire":
+        try:
+            output = acquire_brazil_age_sex_population(root)
+        except (OSError, ValueError, RuntimeError) as exc:
+            print(f"ERROR: Brazil age-sex population acquisition failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Brazil age-sex raw payload: {output}")
+        return 0
+    if args.command == "population-brazil-age-sex-harmonize":
+        try:
+            output = harmonize_brazil_age_sex_population(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: Brazil age-sex population harmonization failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Brazil age-sex standard: {output}")
+        return 0
     if args.command == "respiratory-rates":
         try:
             output, manifest, report = build_respiratory_rates(root)
@@ -583,6 +633,26 @@ def main(argv: list[str] | None = None) -> int:
         print(f"SIM mortality rates manifest: {manifest}")
         print(f"SIM mortality rates report: {report}")
         return 0
+    if args.command == "sim-neurological-rates":
+        try:
+            output, manifest, report = build_neurological_rates(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: SIM neurological rates failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"SIM neurological rates Parquet: {output}")
+        print(f"SIM neurological rates manifest: {manifest}")
+        print(f"SIM neurological rates report: {report}")
+        return 0
+    if args.command == "sih-neurological-rates":
+        try:
+            output, manifest, report = build_sih_neurological_rates(root, year=args.year)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: SIH neurological rates failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"SIH neurological rates Parquet: {output}")
+        print(f"SIH neurological rates manifest: {manifest}")
+        print(f"SIH neurological rates report: {report}")
+        return 0
     if args.command == "sim-age-sex-profile":
         try:
             output, manifest, report = build_age_sex_profile(root)
@@ -602,6 +672,26 @@ def main(argv: list[str] | None = None) -> int:
         print(f"SIM age-sex rates Parquet: {output}")
         print(f"SIM age-sex rates manifest: {manifest}")
         print(f"SIM age-sex rates report: {report}")
+        return 0
+    if args.command == "sim-neurological-standardized":
+        try:
+            output, manifest, report = build_sim_neurological_standardized_rates(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: neurological standardization failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"Neurological standardized rates: {output}")
+        print(f"Neurological standardized manifest: {manifest}")
+        print(f"Neurological standardized report: {report}")
+        return 0
+    if args.command == "sia-alzheimer":
+        try:
+            output, manifest, report = build_sia_alzheimer_production(root)
+        except (OSError, ValueError, TypeError, KeyError, FileNotFoundError) as exc:
+            print(f"ERROR: SIA Alzheimer validation failed: {exc}", file=sys.stderr)
+            return 1
+        print(f"SIA production Parquet: {output or 'unavailable'}")
+        print(f"SIA production manifest: {manifest}")
+        print(f"SIA production report: {report}")
         return 0
     if args.command == "sim-municipal-profiles":
         try:

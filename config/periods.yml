@@ -83,6 +83,16 @@ cancer:
     end: "2099-12"
     status: provisional_prevenir_50_plus
 
+neurological:
+  - id: alzheimer_2010_2024
+    start: "2010-01"
+    end: "2024-12"
+    status: definitive_or_source_specific
+  - id: alzheimer_2025
+    start: "2025-01"
+    end: "2025-12"
+    status: provisional_source_year
+
 breaks:
   respiratory_pandemic_start: "2020-03"
   cancer_care_disruption_start: "2020-01"

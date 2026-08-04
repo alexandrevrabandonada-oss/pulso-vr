@@ -14,17 +14,23 @@ GEOGRAPHIES = ["brazil_total", "rj_total", "volta_redonda", "rest_of_rj_excludin
 ALPHA = 0.05
 
 
-def _outcome_sections(root: Path) -> tuple[set[str], set[str], set[str], set[str]]:
+def _outcome_sections(root: Path) -> dict[str, set[str]]:
     config = load_config("outcomes.yml", root)
-    respiratory = {item["id"] for item in config.get("respiratory", []) if "SIM" in item.get("source", [])}
-    cardiovascular = {item["id"] for item in config.get("cardiovascular", []) if "SIM" in item.get("source", [])}
-    cardiorespiratory = {item["id"] for item in config.get("cardiorespiratory", []) if "SIM" in item.get("source", [])}
-    cancer = {item["id"] for item in config.get("cancer", []) if "SIM" in item.get("source", [])}
-    return respiratory, cardiovascular, cardiorespiratory, cancer
+    return {
+        section: {
+            item["id"] for item in config.get(section, []) if "SIM" in item.get("source", [])
+        }
+        for section in ("respiratory", "cardiovascular", "cardiorespiratory", "cancer", "neurological")
+    }
 
 
 def period_status(root: Path, year: int, outcome_id: str) -> str:
-    respiratory, cardiovascular, cardiorespiratory, cancer = _outcome_sections(root)
+    sections = _outcome_sections(root)
+    respiratory = sections["respiratory"]
+    cardiovascular = sections["cardiovascular"]
+    cardiorespiratory = sections["cardiorespiratory"]
+    cancer = sections["cancer"]
+    neurological = sections["neurological"]
     if outcome_id in cancer:
         if 2020 <= year <= 2022:
             return "cancer_care_disruption"
@@ -45,6 +51,8 @@ def period_status(root: Path, year: int, outcome_id: str) -> str:
             return "cardiorespiratory_pandemic_context"
         if year >= 2025:
             return "cardiorespiratory_provisional"
+    if outcome_id in neurological and year >= 2025:
+        return "neurological_provisional"
     return "source_year_observed"
 
 

@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-08-03T18:56:09+00:00",
+  "status": "validated_census_2022_brazil_age_sex_standard",
+  "year": 2022,
+  "rows": 16,
+  "population": 203080756,
+  "output_path": "data\\processed\\population_age_sex_brazil_2022.parquet",
+  "output_sha256": "7343e8f90e95820f7522f9c56a01f30c9946df61b7087ad1315b2f4478aa7e46",
+  "input_file": {
+    "path": "data\\raw\\ibge_sidra_9514_age_sex_brazil_2022.json",
+    "sha256": "ae7102d22cd818b738c5e43351f9c62d88828df446b2607af69c2365d303552e"
+  }
+}

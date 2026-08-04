@@ -168,3 +168,15 @@ cancer:
     code_ranges: ["C61"]
     source: ["SIM", "RHC", "Painel Oncologia"]
     priority: care_comparison
+
+neurological:
+  - id: alzheimer
+    label: "Doença de Alzheimer"
+    code_ranges: ["G30", "F00.0-F00.2"]
+    source: ["SIM", "SIH", "SIA"]
+    priority: primary
+  - id: dementias_all
+    label: "Doença de Alzheimer e outras demências"
+    code_ranges: ["G30", "F00-F03"]
+    source: ["SIM", "SIH", "SIA"]
+    priority: contextual

@@ -1,0 +1,212 @@
+{
+  "generated_at": "2026-08-03T19:16:41+00:00",
+  "status": "validated_sim_neurological_crude_residence_rates",
+  "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2024
+  ],
+  "outcome_ids": [
+    "alzheimer",
+    "dementias_all"
+  ],
+  "geographies": [
+    "3300100",
+    "3300159",
+    "3300209",
+    "3300225",
+    "3300233",
+    "3300258",
+    "3300308",
+    "3300407",
+    "3300456",
+    "3300506",
+    "3300605",
+    "3300704",
+    "3300803",
+    "3300902",
+    "3300936",
+    "3300951",
+    "3301009",
+    "3301108",
+    "3301157",
+    "3301207",
+    "3301306",
+    "3301405",
+    "3301504",
+    "3301603",
+    "3301702",
+    "3301801",
+    "3301850",
+    "3301876",
+    "3301900",
+    "3302007",
+    "3302056",
+    "3302106",
+    "3302205",
+    "3302254",
+    "3302270",
+    "3302304",
+    "3302403",
+    "3302452",
+    "3302502",
+    "3302601",
+    "3302700",
+    "3302809",
+    "3302858",
+    "3302908",
+    "3303005",
+    "3303104",
+    "3303203",
+    "3303302",
+    "3303401",
+    "3303500",
+    "3303609",
+    "3303708",
+    "3303807",
+    "3303856",
+    "3303906",
+    "3303955",
+    "3304003",
+    "3304102",
+    "3304110",
+    "3304128",
+    "3304144",
+    "3304151",
+    "3304201",
+    "3304300",
+    "3304409",
+    "3304508",
+    "3304524",
+    "3304557",
+    "3304607",
+    "3304706",
+    "3304755",
+    "3304805",
+    "3304904",
+    "3305000",
+    "3305109",
+    "3305133",
+    "3305158",
+    "3305208",
+    "3305307",
+    "3305406",
+    "3305505",
+    "3305554",
+    "3305604",
+    "3305703",
+    "3305752",
+    "3305802",
+    "3305901",
+    "3306008",
+    "3306107",
+    "3306156",
+    "3306206",
+    "3306305",
+    "brazil_total",
+    "rj_total",
+    "volta_redonda",
+    "rest_of_rj_excluding_vr"
+  ],
+  "rows": 2688,
+  "output_path": "data\\processed\\sim_neurological_rates_annual.parquet",
+  "output_sha256": "e8fa9243e75cdc24ed4180c7725ecf413b0c0f7cd515a2dd7ef9878c09974a70",
+  "input_files": [
+    {
+      "path": "data\\interim\\sim_2010_harmonized.parquet",
+      "sha256": "749d287e037bae31fa7fc3d3e8c5760c3ec1edc8096cf120eeed6276a9993328",
+      "year": 2010
+    },
+    {
+      "path": "data\\interim\\sim_2011_harmonized.parquet",
+      "sha256": "2b4042c5959ed4ef2b77e789586c59bd1d07f22a3e43e0b813bbce91c5f0ab5b",
+      "year": 2011
+    },
+    {
+      "path": "data\\interim\\sim_2012_harmonized.parquet",
+      "sha256": "de0a65093e4883370d1c5d35c9a8fc335ae2739b8231c2c3057263be34e9cd53",
+      "year": 2012
+    },
+    {
+      "path": "data\\interim\\sim_2013_harmonized.parquet",
+      "sha256": "85d7ad1bdaf7a399c1f370c917ef9e5003f2e51890051e01b4ae5b399448d120",
+      "year": 2013
+    },
+    {
+      "path": "data\\interim\\sim_2014_harmonized.parquet",
+      "sha256": "b6f48c6d2850dfa1f58ada210ee14bb6a2bec877faeaf2ff367154aa2f41ea37",
+      "year": 2014
+    },
+    {
+      "path": "data\\interim\\sim_2015_harmonized.parquet",
+      "sha256": "490f73629d1246c2d521d060d28c6ed5afadfef64fd00dbc470afc75e8286914",
+      "year": 2015
+    },
+    {
+      "path": "data\\interim\\sim_2016_harmonized.parquet",
+      "sha256": "81e3dc15659d16f4f3e65b915b169b5da2cadc750b19c4499e62fbf8ed83c035",
+      "year": 2016
+    },
+    {
+      "path": "data\\interim\\sim_2017_harmonized.parquet",
+      "sha256": "02da6ad1116a1e9a46169f897eff390944016c502d32aefb87cb147d20f51ffd",
+      "year": 2017
+    },
+    {
+      "path": "data\\interim\\sim_2018_harmonized.parquet",
+      "sha256": "be1df1e75985daef5b3f140ae4464d44d74a5919752f34846d7a76c42f8cc92f",
+      "year": 2018
+    },
+    {
+      "path": "data\\interim\\sim_2019_harmonized.parquet",
+      "sha256": "d7082bee1b89f7fe3efdfe7213c4f8bcd4018bca78a25cf5622c04e63c0d2b5e",
+      "year": 2019
+    },
+    {
+      "path": "data\\interim\\sim_2020_harmonized.parquet",
+      "sha256": "d2fa96b160b2ef84be0bb40977912319d69a8d3f4ce6c6972ed91f1b7f7b6db1",
+      "year": 2020
+    },
+    {
+      "path": "data\\interim\\sim_2021_harmonized.parquet",
+      "sha256": "ffc64184ac479f4997fede36738dec535cfb904f967397d17ba05df28b5e483d",
+      "year": 2021
+    },
+    {
+      "path": "data\\interim\\sim_2022_harmonized.parquet",
+      "sha256": "2989c6f0b9c8810590f7befd2bae3fdc3ffe3972ed180022de8a597308ac2a9f",
+      "year": 2022
+    },
+    {
+      "path": "data\\interim\\sim_2023_harmonized.parquet",
+      "sha256": "a6e0befb91bf9dc61a86c920ce448504450e41adaf47b3c95c2f02c1c4564274",
+      "year": 2023
+    },
+    {
+      "path": "data\\interim\\sim_2024_harmonized.parquet",
+      "sha256": "ae0969906883b23d48645a7de6dbf64a3c87289e487a5a67b3abbbc4326ea4e5",
+      "year": 2024
+    }
+  ],
+  "population_input": {
+    "path": "data\\processed\\population_denominators.parquet",
+    "sha256": "713e0b8c8387c32e42da8a74c23e10df42ad73d9b2b11c397f5835571ba587d6"
+  },
+  "rules": {
+    "residence": "SIM municipality of residence",
+    "rate": "underlying-cause deaths / resident population × 100,000",
+    "comparison": "municipality-specific rest of RJ must be calculated from aggregate numerator and denominator",
+    "suppression": "count < 5 withheld before public publication"
+  }
+}

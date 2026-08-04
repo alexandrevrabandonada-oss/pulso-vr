@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T16:55:52+00:00",
+  "generated_at": "2026-08-03T19:07:21+00:00",
   "status": "validated_sim_2024_municipal_residence_rates_crude",
   "year": 2024,
   "municipalities": 92,
@@ -7,6 +7,7 @@
     "acute_bronchitis_bronchiolitis",
     "acute_myocardial_infarction",
     "all_malignant_neoplasms",
+    "alzheimer",
     "asthma",
     "bladder",
     "breast",
@@ -18,6 +19,7 @@
     "colorectal",
     "copd",
     "covid19",
+    "dementias_all",
     "heart_failure",
     "hypertension",
     "influenza",
@@ -36,10 +38,10 @@
     "resp_all",
     "stomach"
   ],
-  "rows": 2852,
-  "suppressed_cells_lt_5": 1429,
+  "rows": 3036,
+  "suppressed_cells_lt_5": 1505,
   "output_path": "data\\processed\\sim_municipal_map_rates_2024.parquet",
-  "output_sha256": "8895c341ce10f73c8b01435bfbf1453bcf2ac46222c5090933097ae867eade01",
+  "output_sha256": "c3f8985853866546ab85177628285822a956226311a17da55d8ae42f3ce0760e",
   "input_files": [
     {
       "path": "data\\raw\\sim_mortalidade_geral_2024_csv.zip",

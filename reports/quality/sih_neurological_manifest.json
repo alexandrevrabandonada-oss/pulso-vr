@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-08-03T19:23:20+00:00",
+  "status": "unavailable_no_validated_diagnostic_dimension",
+  "year": 2022,
+  "outcome_ids": [
+    "alzheimer",
+    "dementias_all"
+  ],
+  "geography_basis": "residence",
+  "measure": "hospitalization",
+  "notes": [
+    "The current SIH TabNet definition did not expose validated Alzheimer/dementia diagnostic options.",
+    "No procedure or generic hospitalization category was substituted for a diagnosis.",
+    "No residence-based SIH rate is published until the diagnostic dimension is validated."
+  ],
+  "reason": "SIH TabNet definition has no validated Alzheimer/dementia diagnostic options for alzheimer"
+}

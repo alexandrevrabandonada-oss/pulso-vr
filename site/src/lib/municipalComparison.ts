@@ -1,4 +1,4 @@
-import type { MapValue, Observation } from '../types'
+import type { MapValue, MunicipalComparison, Observation } from '../types'
 
 export interface ComparableValue {
   count: number | null
@@ -10,7 +10,7 @@ export function restOfStateExcludingMunicipality(
   municipality: MapValue | null,
   stateTotal: Observation | null,
 ): ComparableValue | null {
-  if (!municipality || municipality.suppressed || municipality.count === null || !stateTotal || stateTotal.count === null) return null
+  if (!municipality || municipality.suppressed || municipality.count === null || municipality.denominator === null || !stateTotal || stateTotal.count === null || stateTotal.denominator === null) return null
   const denominator = stateTotal.denominator - municipality.denominator
   const count = stateTotal.count - municipality.count
   if (denominator <= 0 || count < 0) return null
@@ -33,13 +33,17 @@ export function buildMunicipalComparisonSeries(
   municipalityCode: string,
   municipalObservations: Observation[],
   aggregateObservations: Observation[],
+  comparisons: MunicipalComparison[] = [],
 ): Observation[] {
   const result: Observation[] = []
   for (const municipality of municipalObservations) {
     if (municipality.geographyId !== municipalityCode) continue
     const state = aggregateObservations.find((item) => item.geographyId === 'rj_total' && item.period === municipality.period) ?? null
     const brazil = aggregateObservations.find((item) => item.geographyId === 'brazil_total' && item.period === municipality.period)
-    const rest = restOfStateExcludingMunicipality(municipality, state)
+    const precomputed = comparisons.find((item) => item.municipalityCode === municipalityCode && item.period === municipality.period)
+    const rest = precomputed?.restOfState
+      ? { count: precomputed.restOfState.count, denominator: precomputed.restOfState.denominator, value: precomputed.restOfState.value }
+      : restOfStateExcludingMunicipality(municipality, state)
     result.push({ ...municipality, geographyId: 'selected_municipality' })
     result.push({
       ...municipality,
@@ -52,7 +56,8 @@ export function buildMunicipalComparisonSeries(
       suppressed: rest === null,
       suppressionReason: rest === null ? 'selected_municipality_suppressed' : null,
     })
-    if (brazil) result.push(brazil)
+    if (precomputed?.brazil) result.push(precomputed.brazil)
+    else if (brazil) result.push(brazil)
   }
   return result
 }

@@ -66,6 +66,7 @@ export function ExplorerFilters(props: FilterProps) {
             <option value="cardiovascular">Cardiovasculares</option>
             <option value="cardiorespiratory">Cardiorrespiratórias</option>
             <option value="cancer">Câncer</option>
+            <option value="neurological">Alzheimer e demências</option>
           </select>
         </label>
         <label className="filter-rail__indicator">

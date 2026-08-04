@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T13:25:46+00:00",
+  "generated_at": "2026-08-03T19:05:06+00:00",
   "status": "validated_sim_2022_municipal_residence_rates_crude",
   "year": 2022,
   "municipalities": 92,
@@ -7,6 +7,7 @@
     "acute_bronchitis_bronchiolitis",
     "acute_myocardial_infarction",
     "all_malignant_neoplasms",
+    "alzheimer",
     "asthma",
     "bladder",
     "breast",
@@ -18,6 +19,7 @@
     "colorectal",
     "copd",
     "covid19",
+    "dementias_all",
     "heart_failure",
     "hypertension",
     "influenza",
@@ -36,28 +38,32 @@
     "resp_all",
     "stomach"
   ],
-  "rows": 2852,
-  "suppressed_cells_lt_5": 1457,
+  "rows": 3036,
+  "suppressed_cells_lt_5": 1535,
   "output_path": "data\\processed\\sim_municipal_map_rates_2022.parquet",
-  "output_sha256": "d4613bf2c534eb628c568bde92067d90d828044b1d3029c61a36935f2664ab63",
+  "output_sha256": "53533939a2ba4b2364e77a4723c596e5af27a3e6be11f7ca838763dc98300dad",
   "input_files": [
     {
       "path": "data\\raw\\sim_2022_DO22OPEN.csv",
       "sha256": "044568561aa08b8c93aafbe2eaa13e10ff4234fac37f8d30b917e4c3562f3f7d"
     },
     {
+      "path": "data\\interim\\sim_2022_harmonized.parquet",
+      "sha256": "2989c6f0b9c8810590f7befd2bae3fdc3ffe3972ed180022de8a597308ac2a9f"
+    },
+    {
       "path": "data/processed/population_rj_municipality.parquet",
-      "sha256": "8404f579875498adddecdb244df78603a67ebb410c611bc87bb2bb7dab5b7173"
+      "sha256": "73259db6f634050ef06c4a259d666789c50a3d9ae900f0334a785fa9541f8df8"
     }
   ],
   "rules": {
     "residence": "CODMUNRES DATASUS six-digit code mapped to IBGE seven-digit municipality code",
-    "rate": "SIM underlying-cause deaths of residents divided by Censo 2022 resident population times 100,000",
+    "rate": "SIM underlying-cause deaths of residents divided by the validated 2022 resident population times 100,000",
     "interval": "exact Poisson 95% interval",
     "suppression": "count < 5 is withheld before portal publication"
   },
   "notes": [
-    "This is a 2022 municipal snapshot, not a continuous time series.",
+    "This is a 2022 municipal snapshot; continuity depends on separately validated years.",
     "SIM cancer mortality is not incidence.",
     "No causal inference or attribution to CSN is produced."
   ]
