@@ -19,6 +19,6 @@ export default async function handler(request: Request) {
     if (publicRelease) lines.push(`Sitemap: ${origin}/sitemap.xml`)
     return new Response(lines.join('\n') + '\n', { headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' } })
   } catch {
-    return new Response('User-agent: *\nDisallow: /\n', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' } })
+    return new Response('User-agent: *\nDisallow: /\n', { headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' } })
   }
 }

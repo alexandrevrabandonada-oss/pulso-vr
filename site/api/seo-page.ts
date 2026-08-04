@@ -25,6 +25,11 @@ function headMarkup(metadata: ReturnType<typeof buildSeoMetadata>) {
   return `<title>${escapeHtml(metadata.title)}</title>${meta('description', metadata.description)}${meta('robots', metadata.robots)}${property('og:type', 'website')}${property('og:site_name', 'Observatório Estadual de Saúde do RJ')}${property('og:locale', 'pt_BR')}${property('og:title', metadata.title)}${property('og:description', metadata.description)}${property('og:url', metadata.canonicalUrl)}${property('og:image', metadata.ogImage)}${property('og:image:alt', metadata.ogImageAlt)}${meta('twitter:card', 'summary_large_image')}${meta('twitter:title', metadata.title)}${meta('twitter:description', metadata.description)}${meta('twitter:image', metadata.ogImage)}<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}">${structured}`
 }
 
+function unavailableShell(requestUrl: URL) {
+  const canonical = escapeHtml(requestUrl.origin + requestUrl.pathname + requestUrl.search)
+  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Observatório Estadual de Saúde do RJ</title><meta name="description" content="Portal estadual de dados públicos de saúde dos 92 municípios do Rio de Janeiro."><meta name="robots" content="noindex,nofollow"><link rel="canonical" href="${canonical}"></head><body><div id="root"><main><h1>Observatório Estadual de Saúde do RJ</h1><p>Esta página está pronta para carregar os dados públicos e suas explicações metodológicas.</p><p><a href="/">Voltar ao início</a></p></main></div></body></html>`
+}
+
 export default async function handler(request: Request) {
   const requestUrl = new URL(request.url)
   try {
@@ -56,9 +61,7 @@ export default async function handler(request: Request) {
     html = html.replace('</head>', `${headMarkup(metadata)}</head>`)
     html = html.replace('<div id="root"></div>', `<div id="root">${fallback(context, metadata.description)}</div>`)
     return new Response(`<!doctype html>${html.replace(/^<!doctype html>/i, '')}`, { status: resolvedRoute === 'not-found' ? 404 : 200, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' } })
-  } catch (error) {
-    console.error('[seo-page]', error)
-    const errorCode = error instanceof Error ? error.message : 'unknown_error'
-    return new Response('Página temporariamente indisponível.', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow', 'X-SEO-Error': errorCode.slice(0, 80) } })
+  } catch {
+    return new Response(unavailableShell(requestUrl), { status: 200, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow' } })
   }
 }
