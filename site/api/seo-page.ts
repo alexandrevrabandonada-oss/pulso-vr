@@ -56,7 +56,8 @@ export default async function handler(request: Request) {
     html = html.replace('</head>', `${headMarkup(metadata)}</head>`)
     html = html.replace('<div id="root"></div>', `<div id="root">${fallback(context, metadata.description)}</div>`)
     return new Response(`<!doctype html>${html.replace(/^<!doctype html>/i, '')}`, { status: resolvedRoute === 'not-found' ? 404 : 200, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' } })
-  } catch {
+  } catch (error) {
+    console.error('[seo-page]', error)
     return new Response('Página temporariamente indisponível.', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow' } })
   }
 }
