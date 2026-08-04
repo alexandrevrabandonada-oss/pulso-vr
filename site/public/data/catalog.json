@@ -35,7 +35,10 @@
       "yearEnd": 2025,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -43,7 +46,7 @@
       "synonyms": [
         "bronquite aguda e bronquiolite aguda"
       ],
-      "updatedAt": "2026-08-03T19:35:20+00:00",
+      "updatedAt": "2026-08-04T01:06:39+00:00",
       "methodologyUrl": "/indicadores/sih-acute-bronchitis-bronchiolitis",
       "municipalPeriods": [
         "2022"
@@ -104,7 +107,10 @@
       "yearEnd": 2025,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -115,7 +121,7 @@
         "infarto",
         "infarto agudo do miocárdio"
       ],
-      "updatedAt": "2026-08-03T19:35:20+00:00",
+      "updatedAt": "2026-08-04T01:06:39+00:00",
       "methodologyUrl": "/indicadores/sih-acute-myocardial-infarction",
       "municipalPeriods": [
         "2022"
@@ -176,7 +182,10 @@
       "yearEnd": 2025,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -184,7 +193,7 @@
       "synonyms": [
         "asma"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:39+00:00",
       "methodologyUrl": "/indicadores/sih-asthma",
       "municipalPeriods": [
         "2022"
@@ -245,7 +254,10 @@
       "yearEnd": 2025,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -253,7 +265,7 @@
       "synonyms": [
         "transtornos de condução e arritmias cardíacas"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sih-cardiac-arrhythmia",
       "municipalPeriods": [
         "2022"
@@ -314,7 +326,10 @@
       "yearEnd": 2025,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -322,7 +337,7 @@
       "synonyms": [
         "todas as doenças do aparelho circulatório"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sih-cardio-all",
       "municipalPeriods": [
         "2022"
@@ -384,7 +399,10 @@
       "yearEnd": 2025,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -392,7 +410,7 @@
       "synonyms": [
         "todas as doenças cardiorrespiratórias"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sih-cardiorespiratory-all",
       "municipalPeriods": [
         "2022"
@@ -453,7 +471,10 @@
       "yearEnd": 2025,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -461,7 +482,7 @@
       "synonyms": [
         "doenças cerebrovasculares"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sih-cerebrovascular",
       "municipalPeriods": [
         "2022"
@@ -522,7 +543,10 @@
       "yearEnd": 2025,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -530,7 +554,7 @@
       "synonyms": [
         "bronquite enfisema e outr doenç pulm obstr crôn"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sih-copd",
       "municipalPeriods": [
         "2022"
@@ -591,7 +615,10 @@
       "yearEnd": 2025,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -599,7 +626,7 @@
       "synonyms": [
         "insuficiência cardíaca"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sih-heart-failure",
       "municipalPeriods": [
         "2022"
@@ -660,7 +687,10 @@
       "yearEnd": 2025,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -668,7 +698,7 @@
       "synonyms": [
         "doenças hipertensivas"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sih-hypertension",
       "municipalPeriods": [
         "2022"
@@ -729,7 +759,10 @@
       "yearEnd": 2025,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -737,7 +770,7 @@
       "synonyms": [
         "doenças isquêmicas do coração"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sih-ischemic-heart-disease",
       "municipalPeriods": [
         "2022"
@@ -798,7 +831,10 @@
       "yearEnd": 2025,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -806,7 +842,7 @@
       "synonyms": [
         "pneumoconiose"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sih-pneumoconiosis",
       "municipalPeriods": [
         "2022"
@@ -867,7 +903,10 @@
       "yearEnd": 2025,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2025_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -876,7 +915,7 @@
         "infecção pulmonar",
         "pneumonia"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sih-pneumonia",
       "municipalPeriods": [
         "2008",
@@ -973,7 +1012,10 @@
       "yearEnd": 2025,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -981,7 +1023,7 @@
       "synonyms": [
         "embolia pulmonar"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sih-pulmonary-embolism",
       "municipalPeriods": [
         "2022"
@@ -1042,7 +1084,10 @@
       "yearEnd": 2025,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -1050,7 +1095,7 @@
       "synonyms": [
         "10 doenças do aparelho respiratório"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sih-resp-all",
       "municipalPeriods": [
         "2022"
@@ -1111,7 +1156,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -1119,7 +1167,7 @@
       "synonyms": [
         "bronquite e bronquiolite agudas"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sim-acute-bronchitis-bronchiolitis",
       "municipalPeriods": [
         "2022",
@@ -1198,7 +1246,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -1209,7 +1260,7 @@
         "infarto",
         "infarto agudo do miocárdio"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sim-acute-myocardial-infarction",
       "municipalPeriods": [
         "2022",
@@ -1288,7 +1339,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -1299,7 +1353,7 @@
         "neoplasias",
         "todas as neoplasias malignas"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sim-all-malignant-neoplasms",
       "municipalPeriods": [
         "2022",
@@ -1366,6 +1420,7 @@
         "F00.0-F00.2"
       ],
       "availableMetrics": [
+        "age_sex_standardized_rate_per_100k",
         "crude_rate_per_100k",
         "count"
       ],
@@ -1469,10 +1524,18 @@
       ],
       "yearStart": 2010,
       "yearEnd": 2024,
-      "standardization": "age_standardized_2022_and_crude_annual",
+      "standardization": "age_sex_standardized_2022_and_crude_annual",
       "geographyBasis": "residence",
+      "standardPopulation": "Brasil — Censo 2022",
+      "standardizationDimensions": [
+        "age_group",
+        "sex"
+      ],
       "standardizedRateAvailability": "available_2022_brazil_census_standard",
-      "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
+      "metricPeriod": {
+        "age_sex_standardized_rate_per_100k": "2022"
+      },
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_age_sex_standardized",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, prevalência ou incidência.",
@@ -1481,7 +1544,7 @@
         "demência de alzheimer",
         "doença de alzheimer"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sim-alzheimer",
       "municipalPeriods": [
         "2010",
@@ -1552,8 +1615,8 @@
       },
       "comparisonAvailability": {
         "restOfState": true,
-        "brazil": true,
-        "reason": null
+        "brazil": false,
+        "reason": "national_standardized_equivalent_unavailable"
       }
     },
     {
@@ -1584,7 +1647,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -1592,7 +1658,7 @@
       "synonyms": [
         "asma e estado de mal asmático"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sim-asthma",
       "municipalPeriods": [
         "2022",
@@ -1671,7 +1737,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -1679,7 +1748,7 @@
       "synonyms": [
         "bexiga"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sim-bladder",
       "municipalPeriods": [
         "2022",
@@ -1758,7 +1827,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -1766,7 +1838,7 @@
       "synonyms": [
         "mama"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sim-breast",
       "municipalPeriods": [
         "2022",
@@ -1845,7 +1917,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -1853,7 +1928,7 @@
       "synonyms": [
         "transtornos de condução e arritmias cardíacas"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sim-cardiac-arrhythmia",
       "municipalPeriods": [
         "2022",
@@ -1932,7 +2007,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -1940,7 +2018,7 @@
       "synonyms": [
         "todas as doenças do aparelho circulatório"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sim-cardio-all",
       "municipalPeriods": [
         "2022",
@@ -2020,7 +2098,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -2028,7 +2109,7 @@
       "synonyms": [
         "todas as doenças cardiorrespiratórias"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sim-cardiorespiratory-all",
       "municipalPeriods": [
         "2022",
@@ -2107,7 +2188,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -2115,7 +2199,7 @@
       "synonyms": [
         "doenças cerebrovasculares"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sim-cerebrovascular",
       "municipalPeriods": [
         "2022",
@@ -2194,7 +2278,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -2202,7 +2289,7 @@
       "synonyms": [
         "colo do útero"
       ],
-      "updatedAt": "2026-08-03T19:35:21+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sim-cervix",
       "municipalPeriods": [
         "2022",
@@ -2281,7 +2368,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -2289,7 +2379,7 @@
       "synonyms": [
         "cólon e reto"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sim-colorectal",
       "municipalPeriods": [
         "2022",
@@ -2368,7 +2458,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -2376,7 +2469,7 @@
       "synonyms": [
         "bronquite crônica, enfisema e dpoc"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sim-copd",
       "municipalPeriods": [
         "2022",
@@ -2443,6 +2536,7 @@
         "F00-F03"
       ],
       "availableMetrics": [
+        "age_sex_standardized_rate_per_100k",
         "crude_rate_per_100k",
         "count"
       ],
@@ -2546,10 +2640,18 @@
       ],
       "yearStart": 2010,
       "yearEnd": 2024,
-      "standardization": "age_standardized_2022_and_crude_annual",
+      "standardization": "age_sex_standardized_2022_and_crude_annual",
       "geographyBasis": "residence",
+      "standardPopulation": "Brasil — Censo 2022",
+      "standardizationDimensions": [
+        "age_group",
+        "sex"
+      ],
       "standardizedRateAvailability": "available_2022_brazil_census_standard",
-      "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
+      "metricPeriod": {
+        "age_sex_standardized_rate_per_100k": "2022"
+      },
+      "mapStatus": "validated_sim_2022_municipal_residence_rates_age_sex_standardized",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
       "doesNotAllowConclusion": "Não mede causalidade ambiental, risco individual, prevalência ou incidência.",
@@ -2559,7 +2661,7 @@
         "demências",
         "doença de alzheimer e outras demências"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:40+00:00",
       "methodologyUrl": "/indicadores/sim-dementias-all",
       "municipalPeriods": [
         "2010",
@@ -2630,8 +2732,8 @@
       },
       "comparisonAvailability": {
         "restOfState": true,
-        "brazil": true,
-        "reason": null
+        "brazil": false,
+        "reason": "national_standardized_equivalent_unavailable"
       }
     },
     {
@@ -2662,7 +2764,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -2670,7 +2775,7 @@
       "synonyms": [
         "insuficiência cardíaca"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-heart-failure",
       "municipalPeriods": [
         "2022",
@@ -2749,7 +2854,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -2757,7 +2865,7 @@
       "synonyms": [
         "doenças hipertensivas"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-hypertension",
       "municipalPeriods": [
         "2022",
@@ -2836,7 +2944,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -2844,7 +2955,7 @@
       "synonyms": [
         "influenza"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-influenza",
       "municipalPeriods": [
         "2022",
@@ -2923,7 +3034,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -2931,7 +3045,7 @@
       "synonyms": [
         "doenças isquêmicas do coração"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-ischemic-heart-disease",
       "municipalPeriods": [
         "2022",
@@ -3010,7 +3124,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -3018,7 +3135,7 @@
       "synonyms": [
         "leucemias"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-leukemia",
       "municipalPeriods": [
         "2022",
@@ -3097,7 +3214,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -3105,7 +3225,7 @@
       "synonyms": [
         "fígado"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-liver",
       "municipalPeriods": [
         "2022",
@@ -3184,7 +3304,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -3196,7 +3319,7 @@
         "traqueia",
         "traqueia, brônquios e pulmão"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-lung",
       "municipalPeriods": [
         "2022",
@@ -3275,7 +3398,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -3283,7 +3409,7 @@
       "synonyms": [
         "mieloma múltiplo"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-multiple-myeloma",
       "municipalPeriods": [
         "2022",
@@ -3362,7 +3488,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -3370,7 +3499,7 @@
       "synonyms": [
         "síndromes mielodisplásicas"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-myelodysplastic-syndromes",
       "municipalPeriods": [
         "2022",
@@ -3449,7 +3578,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -3457,7 +3589,7 @@
       "synonyms": [
         "linfoma não hodgkin"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-non-hodgkin-lymphoma",
       "municipalPeriods": [
         "2022",
@@ -3536,7 +3668,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -3544,7 +3679,7 @@
       "synonyms": [
         "pâncreas"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-pancreas",
       "municipalPeriods": [
         "2022",
@@ -3623,7 +3758,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -3631,7 +3769,7 @@
       "synonyms": [
         "pneumoconioses"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-pneumoconiosis",
       "municipalPeriods": [
         "2022",
@@ -3710,7 +3848,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -3720,7 +3861,7 @@
         "pneumonia",
         "pneumonias"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-pneumonia",
       "municipalPeriods": [
         "2022",
@@ -3799,7 +3940,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -3807,7 +3951,7 @@
       "synonyms": [
         "próstata"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-prostate",
       "municipalPeriods": [
         "2022",
@@ -3886,7 +4030,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -3894,7 +4041,7 @@
       "synonyms": [
         "embolia pulmonar"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-pulmonary-embolism",
       "municipalPeriods": [
         "2022",
@@ -3973,7 +4120,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -3981,7 +4131,7 @@
       "synonyms": [
         "todas as doenças respiratórias"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-resp-all",
       "municipalPeriods": [
         "2022",
@@ -4060,7 +4210,10 @@
       "yearEnd": 2024,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sim_2024_municipal_residence_rates_crude",
       "profileAvailability": "available_2022_sim_age_sex",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -4068,7 +4221,7 @@
       "synonyms": [
         "estômago"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sim-stomach",
       "municipalPeriods": [
         "2022",
@@ -4240,7 +4393,10 @@
       "yearEnd": 2022,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -4250,7 +4406,7 @@
         "demência de alzheimer",
         "doença de alzheimer"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sih-alzheimer",
       "municipalPeriods": [
         "2022"
@@ -4279,8 +4435,8 @@
       },
       "comparisonAvailability": {
         "restOfState": true,
-        "brazil": true,
-        "reason": null
+        "brazil": false,
+        "reason": "national_standardized_equivalent_unavailable"
       }
     },
     {
@@ -4404,7 +4560,10 @@
       "yearEnd": 2022,
       "standardization": "crude_only",
       "geographyBasis": "residence",
+      "standardPopulation": null,
+      "standardizationDimensions": [],
       "standardizedRateAvailability": "pending_age_sex_validation",
+      "metricPeriod": {},
       "mapStatus": "validated_sih_2022_municipal_residence_rates_crude",
       "profileAvailability": "not_applicable_current_release",
       "allowsConclusion": "Descreve a frequência e a taxa registrada entre residentes e permite comparações descritivas com os territórios disponíveis.",
@@ -4415,7 +4574,7 @@
         "demências",
         "doença de alzheimer e outras demências"
       ],
-      "updatedAt": "2026-08-03T19:35:22+00:00",
+      "updatedAt": "2026-08-04T01:06:41+00:00",
       "methodologyUrl": "/indicadores/sih-dementias-all",
       "municipalPeriods": [
         "2022"
@@ -4444,8 +4603,8 @@
       },
       "comparisonAvailability": {
         "restOfState": true,
-        "brazil": true,
-        "reason": null
+        "brazil": false,
+        "reason": "national_standardized_equivalent_unavailable"
       }
     }
   ],
@@ -4455,7 +4614,7 @@
     "neighborhoods"
   ],
   "discovery": {
-    "generatedAt": "2026-08-03T19:36:00+00:00",
+    "generatedAt": "2026-08-04T01:06:58+00:00",
     "municipalityCount": 92
   }
 }

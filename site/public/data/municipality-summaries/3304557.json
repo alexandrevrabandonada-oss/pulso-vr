@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-03T21:09:47+00:00",
+  "generatedAt": "2026-08-04T01:07:02+00:00",
   "municipalityCode": "3304557",
   "items": [
     {
@@ -12,9 +12,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 46.119693200423285,
+      "restOfStateValue": null,
       "brazilValue": 39.91367847773819,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -26,9 +26,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 102.2048972003213,
+      "restOfStateValue": null,
       "brazilValue": 80.24984898125946,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -40,9 +40,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 1.3206079550781997,
+      "restOfStateValue": null,
       "brazilValue": 0.8006667062043042,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -54,9 +54,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 27.428011374701075,
+      "restOfStateValue": null,
       "brazilValue": 41.07922466075515,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -68,9 +68,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 33.67550285449409,
+      "restOfStateValue": null,
       "brazilValue": 34.00322185131121,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -82,9 +82,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 667.4352604965221,
+      "restOfStateValue": null,
       "brazilValue": 589.5644784777145,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -96,9 +96,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 1220.5871402651233,
+      "restOfStateValue": null,
       "brazilValue": 1200.3077238889143,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -110,9 +110,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 160.55545176931497,
+      "restOfStateValue": null,
       "brazilValue": 138.33511630220642,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -124,9 +124,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 25.66042841944256,
+      "restOfStateValue": null,
       "brazilValue": 51.897581078534095,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -138,9 +138,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 3.5554829559797683,
+      "restOfStateValue": null,
       "brazilValue": 1.4826614098285118,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -152,9 +152,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 103.38328583716032,
+      "restOfStateValue": null,
       "brazilValue": 99.36588969562433,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -166,9 +166,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 38.38905740185013,
+      "restOfStateValue": null,
       "brazilValue": 29.09532205995924,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -180,9 +180,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 179.05412166314116,
+      "restOfStateValue": null,
       "brazilValue": 146.61014951116294,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -194,9 +194,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 0.48760909110579687,
+      "restOfStateValue": null,
       "brazilValue": 0.2683661469134968,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -208,9 +208,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "provisional",
       "suppressionStatus": "published",
-      "restOfStateValue": 301.8922085563668,
+      "restOfStateValue": null,
       "brazilValue": 330.0785198602517,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -222,9 +222,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 3.3929465922778363,
+      "restOfStateValue": null,
       "brazilValue": 5.916365605808558,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -236,9 +236,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 553.151879768601,
+      "restOfStateValue": null,
       "brazilValue": 610.7432454111998,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -615,7 +615,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 0.16228898022544055,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },

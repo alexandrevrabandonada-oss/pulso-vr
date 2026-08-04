@@ -206,6 +206,9 @@ def _build_catalog_and_series(root: Path) -> tuple[list[dict[str, Any]], dict[st
             observations = _series_observations(outcome_frame, source)
             geography_ids = sorted({item["geographyId"] for item in observations})
             available_metrics = ["crude_rate_per_100k", "count"]
+            neurological_sim = source == "SIM" and str(outcome_id) in {"alzheimer", "dementias_all"}
+            if neurological_sim and (root / "data" / "processed" / "sim_neurological_standardized_rates_2022.parquet").exists():
+                available_metrics.insert(0, "age_sex_standardized_rate_per_100k")
             catalog.append(
                 {
                     "id": indicator_id,
@@ -224,21 +227,26 @@ def _build_catalog_and_series(root: Path) -> tuple[list[dict[str, Any]], dict[st
                     "yearStart": min(int(item["period"]) for item in observations),
                     "yearEnd": max(int(item["period"]) for item in observations),
                     "standardization": (
-                        "age_standardized_2022_and_crude_annual"
-                        if source == "SIM" and str(outcome_id) in {"alzheimer", "dementias_all"}
+                        "age_sex_standardized_2022_and_crude_annual"
+                        if neurological_sim
                         else "not_applicable_establishment_production" if source == "SIA"
                         else "crude_only"
                     ),
                     "geographyBasis": "establishment" if source == "SIA" else "residence",
+                    "standardPopulation": "Brasil — Censo 2022" if neurological_sim else None,
+                    "standardizationDimensions": ["age_group", "sex"] if neurological_sim else [],
                     "standardizedRateAvailability": (
                         "available_2022_brazil_census_standard"
-                        if source == "SIM" and str(outcome_id) in {"alzheimer", "dementias_all"}
+                        if neurological_sim
                         else "not_applicable"
                         if source == "SIA"
                         else "pending_age_sex_validation"
                     ),
+                    "metricPeriod": {"age_sex_standardized_rate_per_100k": "2022"} if neurological_sim else {},
                     "mapStatus": (
-                        f"validated_{source.lower()}_{latest_map[2]}_municipal_residence_rates_crude"
+                        "validated_sim_2022_municipal_residence_rates_age_sex_standardized"
+                        if neurological_sim and (root / "data" / "processed" / "sim_neurological_standardized_rates_2022.parquet").exists()
+                        else f"validated_{source.lower()}_{latest_map[2]}_municipal_residence_rates_crude"
                         if latest_map
                         else "context_only_pending_validated_municipal_rates"
                     ),
@@ -887,8 +895,10 @@ def build_portal_data(
         }
         indicator["comparisonAvailability"] = {
             "restOfState": True,
-            "brazil": "brazil_total" in indicator["geographyIds"],
-            "reason": None if "brazil_total" in indicator["geographyIds"] else "national_equivalent_unavailable",
+            "brazil": "brazil_total" in indicator["geographyIds"] and indicator["theme"] != "neurological",
+            "reason": "national_standardized_equivalent_unavailable"
+            if indicator["theme"] == "neurological"
+            else None if "brazil_total" in indicator["geographyIds"] else "national_equivalent_unavailable",
         }
         values = [item["value"] for item in municipal_payload["observations"] if item.get("value") is not None]
         maps[indicator_id]["mapScale"] = {

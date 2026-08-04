@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "checkedAt": "2026-08-04T00:38:25+00:00",
+  "checkedAt": "2026-08-04T01:07:14+00:00",
   "releaseId": "statewide-2026-08-03",
   "status": "public_release_ready",
   "publicationAllowed": true,
@@ -15,8 +15,8 @@
     "suppressedObservations": 1603,
     "profileObservations": 47104,
     "profileEligibleIndicators": 32,
-    "mapValues": 2664,
-    "mapSuppressedValues": 1844,
+    "mapValues": 2662,
+    "mapSuppressedValues": 1846,
     "sihIndicators": 17,
     "sihWithBrazilComparator": 17,
     "missingDenominatorYears": [
@@ -50,7 +50,8 @@
     "mapStatusCounts": {
       "validated_sih_2022_municipal_residence_rates_crude": 16,
       "validated_sih_2025_municipal_residence_rates_crude": 1,
-      "validated_sim_2024_municipal_residence_rates_crude": 32
+      "validated_sim_2024_municipal_residence_rates_crude": 30,
+      "validated_sim_2022_municipal_residence_rates_age_sex_standardized": 2
     },
     "sourceCounts": {
       "SIH": 1212,

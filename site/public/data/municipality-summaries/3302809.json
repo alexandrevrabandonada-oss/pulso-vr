@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-03T21:09:47+00:00",
+  "generatedAt": "2026-08-04T01:07:02+00:00",
   "municipalityCode": "3302809",
   "items": [
     {
@@ -13,7 +13,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 39.91367847773819,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -26,9 +26,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 83.92115763434992,
+      "restOfStateValue": null,
       "brazilValue": 80.24984898125946,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -41,7 +41,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 0.8006667062043042,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -55,7 +55,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 41.07922466075515,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -68,9 +68,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 27.098696119985494,
+      "restOfStateValue": null,
       "brazilValue": 34.00322185131121,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -82,9 +82,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 529.3910487756577,
+      "restOfStateValue": null,
       "brazilValue": 589.5644784777145,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -96,9 +96,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 964.7971351453003,
+      "restOfStateValue": null,
       "brazilValue": 1200.3077238889143,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -110,9 +110,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 131.53405307204187,
+      "restOfStateValue": null,
       "brazilValue": 138.33511630220642,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -125,7 +125,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 51.897581078534095,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -139,7 +139,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 1.4826614098285118,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -152,9 +152,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 79.05137354099773,
+      "restOfStateValue": null,
       "brazilValue": 99.36588969562433,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -166,9 +166,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 29.374587533652015,
+      "restOfStateValue": null,
       "brazilValue": 29.09532205995924,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -180,9 +180,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 142.1590365484467,
+      "restOfStateValue": null,
       "brazilValue": 146.61014951116294,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -195,7 +195,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 0.2683661469134968,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -208,9 +208,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "provisional",
       "suppressionStatus": "published",
-      "restOfStateValue": 231.89679067140105,
+      "restOfStateValue": null,
       "brazilValue": 330.0785198602517,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -223,7 +223,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 5.916365605808558,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -236,9 +236,9 @@
       "unit": "internações/AIHs de residentes",
       "dataStatus": "source_observed",
       "suppressionStatus": "published",
-      "restOfStateValue": 435.40608636964265,
+      "restOfStateValue": null,
       "brazilValue": 610.7432454111998,
-      "comparisonAvailable": true,
+      "comparisonAvailable": false,
       "unavailableReason": null
     },
     {
@@ -251,7 +251,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 0.37067743889173094,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -307,7 +307,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 1.4220277890478459,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -321,7 +321,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 2.579218778481422,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -335,7 +335,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 9.93914163241546,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -349,7 +349,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 7.743301169539064,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -405,7 +405,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 3.5247284893600757,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -419,7 +419,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 12.315146383484157,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -489,7 +489,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 1.1562501837511099,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -517,7 +517,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 3.67713900991962,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -531,7 +531,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 5.498068408333187,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -545,7 +545,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 15.314905302028025,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -559,7 +559,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 1.9380597058806235,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -573,7 +573,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 0.5564865611788296,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -587,7 +587,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 2.2513479981419087,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -601,7 +601,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 6.763922454091622,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -615,7 +615,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 0.16228898022544055,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -643,7 +643,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 8.385401047822329,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -657,7 +657,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 4.5285681525516415,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     },
@@ -685,7 +685,7 @@
       "dataStatus": "source_observed",
       "suppressionStatus": "suppressed",
       "restOfStateValue": null,
-      "brazilValue": 7.016999182675064,
+      "brazilValue": null,
       "comparisonAvailable": false,
       "unavailableReason": "small_cell_lt_5"
     }

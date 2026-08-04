@@ -1,6 +1,6 @@
 # Pré-voo de lançamento do Portal Observatório Saúde & Ambiente
 
-Verificação: `2026-08-04T00:38:25+00:00`
+Verificação: `2026-08-04T01:07:14+00:00`
 Release: `statewide-2026-08-03`
 Status: **public_release_ready**
 
@@ -13,8 +13,8 @@ Status: **public_release_ready**
 - Células suprimidas: **1603**
 - Indicadores SIM elegíveis para perfis: **32**
 - Observações de perfis idade/sexo: **47104**
-- Valores municipais no mapa: **2664**
-- Células municipais suprimidas no mapa: **1844**
+- Valores municipais no mapa: **2662**
+- Células municipais suprimidas no mapa: **1846**
 - Comparadores Brasil no SIH: **17/17**
 - Vazamentos de supressão no download: **0**
 

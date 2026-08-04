@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "releaseId": "statewide-2026-08-03",
-  "generatedAt": "2026-08-03T19:36:20+00:00",
+  "generatedAt": "2026-08-04T01:07:10+00:00",
   "status": "public_release_ready",
   "smallCellThreshold": 5,
   "primaryComparator": "rest_of_rj_excluding_selected_municipality",
@@ -12,9 +12,23 @@
     "provenanceReview": "generated"
   },
   "reviewSignoff": {
+    "schemaVersion": "1.0.0",
     "releaseId": "statewide-2026-08-03",
     "approvedAt": "2026-08-03",
-    "approvalType": "project_owner_signoff_based_on_technical_and_browser_evidence"
+    "approvalType": "project_owner_signoff_based_on_technical_and_browser_evidence",
+    "epidemiologyReview": {
+      "status": "approved",
+      "reviewer": "Responsável pelo projeto",
+      "basis": "Revisão das evidências técnicas, definições, residência, comparadores, denominadores, reconciliação SIH, supressão e limites de interpretação, com aprovação explícita do responsável pelo projeto.",
+      "limitations": "Esta aprovação registra a decisão do responsável pelo projeto e não afirma revisão independente externa."
+    },
+    "accessibilityReview": {
+      "status": "approved",
+      "reviewer": "Responsável pelo projeto",
+      "basis": "Revisão automatizada, inspeção no navegador oficial em desktop e 360 px, teclado, navegação, mapa, tabelas, contraste, downloads e aprovação explícita do responsável pelo projeto.",
+      "limitations": "A aprovação registra a decisão do responsável pelo projeto; testes adicionais com tecnologia assistiva podem ser realizados em manutenção contínua."
+    },
+    "scope": "Aprovação dos portões da release estadual de 2026-08-03; não representa auditoria externa, não autoriza inferência causal, incidência de câncer ou publicação de dados pessoais."
   },
   "coverage": {
     "indicatorCount": 49,
@@ -36,8 +50,8 @@
   "artifacts": [
     {
       "path": "catalog.json",
-      "bytes": 137743,
-      "sha256": "9f774486839cb34131957088a757f095f1a3cd25c6483e6593aa6bfb653451b6"
+      "bytes": 143297,
+      "sha256": "5bebf670e962b8ce0e68b7490db29b77582cd353fe62c6b3d6b6403ea8235ea5"
     },
     {
       "path": "comparisons/sih-acute-bronchitis-bronchiolitis.json",
@@ -296,8 +310,8 @@
     },
     {
       "path": "launch-readiness.json",
-      "bytes": 4607,
-      "sha256": "24bc57b6e3a2b0d5b126404ace95de91830a0b15649f6a18df555d5d070ece10"
+      "bytes": 4686,
+      "sha256": "7f374c09671425a6872f75dc9785277dc8c4a2ce2babe2237fab9419bc19c48f"
     },
     {
       "path": "maps/rj/sih-acute-bronchitis-bronchiolitis.json",
@@ -401,8 +415,8 @@
     },
     {
       "path": "maps/rj/sim-alzheimer.json",
-      "bytes": 57938,
-      "sha256": "b2833e79d31f2a16bb40f40d7a29a8d63654ef45642a074ca2d0e033d247b6c7"
+      "bytes": 136957,
+      "sha256": "3a80c4d66a7d01bcaa4fc68f90b123a7873788aac901fad0fde09aa5e2bf51ee"
     },
     {
       "path": "maps/rj/sim-asthma.json",
@@ -456,8 +470,8 @@
     },
     {
       "path": "maps/rj/sim-dementias-all.json",
-      "bytes": 58453,
-      "sha256": "f6543107045098dd883130f1d922d92446e5286628f525d241442fc3f22c6c58"
+      "bytes": 138053,
+      "sha256": "84cbe22b286fd0309bb9dabc8d304bd3c0636ffa4836fed6ba3fe785263409be"
     },
     {
       "path": "maps/rj/sim-heart-failure.json",
@@ -646,8 +660,8 @@
     },
     {
       "path": "municipal-series/sim-alzheimer.json",
-      "bytes": 2678138,
-      "sha256": "2b1fa11a49d1d8a4e8891355d318979e4decd94d5a0f4703c8766beb7948141b"
+      "bytes": 2749946,
+      "sha256": "b2b3945bd7630726ae50f6cc651879cb14fe7ef33406acf3d048a10b392bccb8"
     },
     {
       "path": "municipal-series/sim-asthma.json",
@@ -701,8 +715,8 @@
     },
     {
       "path": "municipal-series/sim-dementias-all.json",
-      "bytes": 2695778,
-      "sha256": "6085516750a93088f2bd1bfed3912275202f94aeaca8fcec5dcae9e1ed172a35"
+      "bytes": 2768167,
+      "sha256": "c80e6f9985c62e3b6f29ad758ca5768faf43a7517df51da467cc2623e028ae65"
     },
     {
       "path": "municipal-series/sim-heart-failure.json",
@@ -788,6 +802,466 @@
       "path": "municipal-series/sim-stomach.json",
       "bytes": 381576,
       "sha256": "4078c5cb833668962c150ad0319e9f31245a3600f938f3727a41e42571656d29"
+    },
+    {
+      "path": "municipality-summaries/3300100.json",
+      "bytes": 23102,
+      "sha256": "60a4675283da05ccce341638f65563cdf172d92aa9deb9acdb87a723939f3499"
+    },
+    {
+      "path": "municipality-summaries/3300159.json",
+      "bytes": 22731,
+      "sha256": "795327025542a968b7cd33eb10ebdb88a42f322739ca605d830645d9260481cf"
+    },
+    {
+      "path": "municipality-summaries/3300209.json",
+      "bytes": 23024,
+      "sha256": "cd379f87dd67b341432dc20f545c21d74eff9b60bab0561b6995f0c7b5286827"
+    },
+    {
+      "path": "municipality-summaries/3300225.json",
+      "bytes": 22744,
+      "sha256": "6cc171c19c091bae71243bfa8884f99d6b3552b3882a0b6f791aa9edfd459e35"
+    },
+    {
+      "path": "municipality-summaries/3300233.json",
+      "bytes": 22889,
+      "sha256": "518c49722da572ee0ca607565454191e0cb02441615d35705dfc0041cf0a2963"
+    },
+    {
+      "path": "municipality-summaries/3300258.json",
+      "bytes": 22842,
+      "sha256": "bbdae4b8abcab717d79e23def49cd000f8fafc7e9a3a2f510a93a3b168cd8fe1"
+    },
+    {
+      "path": "municipality-summaries/3300308.json",
+      "bytes": 23019,
+      "sha256": "3aa857b330062068fd34afd1334827870d079459227f1cd68be1ed9d1df2f284"
+    },
+    {
+      "path": "municipality-summaries/3300407.json",
+      "bytes": 23103,
+      "sha256": "3c2fc17d33ad9434909130d8250bf0866588f8b0086a1728d8f060936f0a6c4c"
+    },
+    {
+      "path": "municipality-summaries/3300456.json",
+      "bytes": 23165,
+      "sha256": "1261406d791cc86f2e5863367bfccdc6791965db1a6ae9819d2e2f650fe89f3a"
+    },
+    {
+      "path": "municipality-summaries/3300506.json",
+      "bytes": 22783,
+      "sha256": "272961f8386b6e9150ef8d0d251b664a40aa5b0183150e8c91e0710aaa8384f8"
+    },
+    {
+      "path": "municipality-summaries/3300605.json",
+      "bytes": 22898,
+      "sha256": "c510584d9ca44642e65296cb923f7df0454a496f71b81bc860c87fe498dbf0d4"
+    },
+    {
+      "path": "municipality-summaries/3300704.json",
+      "bytes": 23072,
+      "sha256": "dd194ed19f26f8ae3608445dedfc3368b9ac9d5b1526120b1f620f62c2eece80"
+    },
+    {
+      "path": "municipality-summaries/3300803.json",
+      "bytes": 22919,
+      "sha256": "650d52766db4beb984c0e6cd382cf1cec379a319ee55c698b1c0b4ede8bc5903"
+    },
+    {
+      "path": "municipality-summaries/3300902.json",
+      "bytes": 22734,
+      "sha256": "9c95090598880eb9a370d3925259ceb53408db99b2bb057931e9cf4325fd65f9"
+    },
+    {
+      "path": "municipality-summaries/3300936.json",
+      "bytes": 22665,
+      "sha256": "abb0f16d331c964f313992f92684d1874c835edb93db2b9c7536c3addec18742"
+    },
+    {
+      "path": "municipality-summaries/3300951.json",
+      "bytes": 22591,
+      "sha256": "2be99d4a013a5726227627df7c8153b51b9903b7257ee8bc70a98a8198733c47"
+    },
+    {
+      "path": "municipality-summaries/3301009.json",
+      "bytes": 23209,
+      "sha256": "db4e94364678cf6cb3f770c7cab38b8a4dd5300fd898ded3c74a18630e17d2b1"
+    },
+    {
+      "path": "municipality-summaries/3301108.json",
+      "bytes": 22773,
+      "sha256": "0fe3357a04e9e9a0b6d6212c4e43323a76914f00da64e719221d885167ff870b"
+    },
+    {
+      "path": "municipality-summaries/3301157.json",
+      "bytes": 22716,
+      "sha256": "4ca4c1b79ac8ed8b1421bf28c4e327bbbedd767cb2e8ad540e2438dd8a8cf6cc"
+    },
+    {
+      "path": "municipality-summaries/3301207.json",
+      "bytes": 22769,
+      "sha256": "992c9c1676b00d1732ed7520635c4346ed95477241625f188529935549ee3997"
+    },
+    {
+      "path": "municipality-summaries/3301306.json",
+      "bytes": 22855,
+      "sha256": "2e6356292cbda407d76838ed08a280f666d625875c96a8ce8327d75dbb853d2f"
+    },
+    {
+      "path": "municipality-summaries/3301405.json",
+      "bytes": 22714,
+      "sha256": "0bf4e12bc320713525c845b6eea470797b65260bf8598e00b8f64c95690199b2"
+    },
+    {
+      "path": "municipality-summaries/3301504.json",
+      "bytes": 22752,
+      "sha256": "3dd093a61e31dbccc2c873c837db008002e2a4cc119b22c647afff99daa3d175"
+    },
+    {
+      "path": "municipality-summaries/3301603.json",
+      "bytes": 22682,
+      "sha256": "508f9b5b8f56145777452c7705b7a1ebf04473e3bc07ac55074d6a8ed3b84c29"
+    },
+    {
+      "path": "municipality-summaries/3301702.json",
+      "bytes": 23248,
+      "sha256": "e7b09711fa07f3eefaef61f586a7d9ad9f5e172804b6504f4b7af634ca0d1c55"
+    },
+    {
+      "path": "municipality-summaries/3301801.json",
+      "bytes": 22754,
+      "sha256": "e1ecff1331af1a268b47966d9dae7f4bb6533f2f5398d87b1fecfcdcebbd8257"
+    },
+    {
+      "path": "municipality-summaries/3301850.json",
+      "bytes": 22959,
+      "sha256": "46efe3d7764c276dd0f4a7061e587a7d98558d61d0ffbe5469b669b2b6e47a7e"
+    },
+    {
+      "path": "municipality-summaries/3301876.json",
+      "bytes": 22880,
+      "sha256": "ab450e975dc59e2d6e98a571e51289974c0c10bb4a90bdb5ad53989836044ae1"
+    },
+    {
+      "path": "municipality-summaries/3301900.json",
+      "bytes": 23146,
+      "sha256": "002d8aec4bd90d6000d734978c6224f91b946331feaf8eed4e475fb394c79a4b"
+    },
+    {
+      "path": "municipality-summaries/3302007.json",
+      "bytes": 22985,
+      "sha256": "ab5290c59fddbb4f526f012ad9a0dbe0378b1a5ded96de0b0075e574ff121481"
+    },
+    {
+      "path": "municipality-summaries/3302056.json",
+      "bytes": 22768,
+      "sha256": "894deffbe2c2c5b5fd0dfea6ffd7f74539d94ff41b50a27183f785439d6d211e"
+    },
+    {
+      "path": "municipality-summaries/3302106.json",
+      "bytes": 22875,
+      "sha256": "7dc61300a69935a88c39f8ab491eddc6c4c1721902fde3e5f093127b04cc142b"
+    },
+    {
+      "path": "municipality-summaries/3302205.json",
+      "bytes": 23080,
+      "sha256": "80296a22887f5356258427c464a6d3dec293f7461a2e8380eeff34670e2627f3"
+    },
+    {
+      "path": "municipality-summaries/3302254.json",
+      "bytes": 22759,
+      "sha256": "253838e941a975b216e6500ce32ac902a470ae05a26cceaf67dc002344ee7307"
+    },
+    {
+      "path": "municipality-summaries/3302270.json",
+      "bytes": 22949,
+      "sha256": "ec61e01d5e00194a35f242a593872ef29a3ed05472e62686b2ac5667a41d3486"
+    },
+    {
+      "path": "municipality-summaries/3302304.json",
+      "bytes": 22577,
+      "sha256": "85777ffa96ca764270eea0ffdb984885b8813a135c563e6217891588d0e38d93"
+    },
+    {
+      "path": "municipality-summaries/3302403.json",
+      "bytes": 23102,
+      "sha256": "bc2d96fedcb6523c293e87287230133d82347d5f4d01149200ae31a298fabb5c"
+    },
+    {
+      "path": "municipality-summaries/3302452.json",
+      "bytes": 22646,
+      "sha256": "8316446465fb0cabdf86cefa1ca3c71ba1370319a9ff4552bb550587d9db6560"
+    },
+    {
+      "path": "municipality-summaries/3302502.json",
+      "bytes": 23093,
+      "sha256": "dfc1f2f93c4c76b241c7bc3dacc0cd86b9c7335ca53a37614862b5a303d42590"
+    },
+    {
+      "path": "municipality-summaries/3302601.json",
+      "bytes": 22901,
+      "sha256": "d31ef68f2d96ae6dfb6328f9aee4e09090cca9faa23a6b9fb10ac446539933f4"
+    },
+    {
+      "path": "municipality-summaries/3302700.json",
+      "bytes": 23169,
+      "sha256": "cff2283ea24cbffaa683507d3260b4d0ebf1e659700ed3d6ab2dfdee1e576cb6"
+    },
+    {
+      "path": "municipality-summaries/3302809.json",
+      "bytes": 22755,
+      "sha256": "febc9a0e585c8998a286e3df129c49c1376d5ad16ff6623a764b90633d5f5584"
+    },
+    {
+      "path": "municipality-summaries/3302858.json",
+      "bytes": 23017,
+      "sha256": "01dc0cbd69912e82081bbb5f9cc6a683463d4eae5625e9d9aea2f7e0564f3642"
+    },
+    {
+      "path": "municipality-summaries/3302908.json",
+      "bytes": 22887,
+      "sha256": "92b1b71ba12fac00978b986bbe8ebae09790c596d9ae93b4cfe2e8a5fe713c26"
+    },
+    {
+      "path": "municipality-summaries/3303005.json",
+      "bytes": 22852,
+      "sha256": "88a196c84375ef20a35fd7f19c672d87b52f3b2d85f3b703c05cf039554301ab"
+    },
+    {
+      "path": "municipality-summaries/3303104.json",
+      "bytes": 22740,
+      "sha256": "b00559dce6ea22c95ef959f3e21d009888e1eee21deebb104b08ba6c3c3c0371"
+    },
+    {
+      "path": "municipality-summaries/3303203.json",
+      "bytes": 23021,
+      "sha256": "89dde19104ce854f336dc78f7c54fa3f065daa7ebae1b3a466111e0f1208b8f4"
+    },
+    {
+      "path": "municipality-summaries/3303302.json",
+      "bytes": 23227,
+      "sha256": "487d7dbb9522604f3d93665565d3f7bc4530cb3145043bf5049cac0a0df79b50"
+    },
+    {
+      "path": "municipality-summaries/3303401.json",
+      "bytes": 23127,
+      "sha256": "89d16061e8bd26123c4037db4f57ea5569d1ffb0c2221240a637f8900885f96a"
+    },
+    {
+      "path": "municipality-summaries/3303500.json",
+      "bytes": 23211,
+      "sha256": "70a0247fd8f1398e2e7dd68e7c54f7f5939b89536dfbe42196f6512543508a3f"
+    },
+    {
+      "path": "municipality-summaries/3303609.json",
+      "bytes": 22853,
+      "sha256": "fcba815165f4864e704731e77ef9a7d7b7bee9961ca7761526ef8efe439c366e"
+    },
+    {
+      "path": "municipality-summaries/3303708.json",
+      "bytes": 22881,
+      "sha256": "0f67ead71683a546cc0287eedafb99dc205bd073cc011062d3274c1d7a6cf626"
+    },
+    {
+      "path": "municipality-summaries/3303807.json",
+      "bytes": 22845,
+      "sha256": "2240b569cd02802b8a8478cdbbe1351a47d59ddaeed86e1631a8fa4305e78292"
+    },
+    {
+      "path": "municipality-summaries/3303856.json",
+      "bytes": 22836,
+      "sha256": "2742e2129395ba3b876bcff6c04111a543403f614bc2cb5451f959b0899d253d"
+    },
+    {
+      "path": "municipality-summaries/3303906.json",
+      "bytes": 23196,
+      "sha256": "3c55fdafdde0539f8ed6f067b6ba3eb010f80aec8b7bd975c2abb5b8ccc9b125"
+    },
+    {
+      "path": "municipality-summaries/3303955.json",
+      "bytes": 22820,
+      "sha256": "61ffa392cbb7eae93e14f3e6f4d127ed800b7c93098c3282d90c3a3ef920d07e"
+    },
+    {
+      "path": "municipality-summaries/3304003.json",
+      "bytes": 22814,
+      "sha256": "5d54ad982c7292372303bdce6a1735898b4e911b233fe84f6accf2058382db8e"
+    },
+    {
+      "path": "municipality-summaries/3304102.json",
+      "bytes": 22697,
+      "sha256": "b1bcfa9b3564bf70bbcd5342fe95c79f85633c78557eceae2f0fac1fab3f9fef"
+    },
+    {
+      "path": "municipality-summaries/3304110.json",
+      "bytes": 22736,
+      "sha256": "168ea9f827c03411ad746db30c2d3c4d47debd2fe0e8c60555370e688962e4f3"
+    },
+    {
+      "path": "municipality-summaries/3304128.json",
+      "bytes": 22734,
+      "sha256": "0f2d1dac8a0bc2591386606f913fbbacf3aaa6ea684d193ee0a8952fdb7e4cfe"
+    },
+    {
+      "path": "municipality-summaries/3304144.json",
+      "bytes": 22987,
+      "sha256": "e76d63f1a97c3409125bc1678c3058f3df52a436865ae2e5540b7f7063c49eb9"
+    },
+    {
+      "path": "municipality-summaries/3304151.json",
+      "bytes": 22795,
+      "sha256": "592961c75d539a25a82fe3877e50410e0078c070f344c4da051cf68d5040cb6a"
+    },
+    {
+      "path": "municipality-summaries/3304201.json",
+      "bytes": 23111,
+      "sha256": "c21992d24238ac14bf3907bb8bfd875cc040ce1b363d38216f6cdcc0aa8bacb3"
+    },
+    {
+      "path": "municipality-summaries/3304300.json",
+      "bytes": 22923,
+      "sha256": "312e1e552ea0ff6c652b9ebefd169aecc4cd7e16ebc3314afaf748175ecda278"
+    },
+    {
+      "path": "municipality-summaries/3304409.json",
+      "bytes": 22733,
+      "sha256": "b9adb1d2986500aee169010367fc9e05dc5892fbcf735011c2b25747e56c6c5a"
+    },
+    {
+      "path": "municipality-summaries/3304508.json",
+      "bytes": 22719,
+      "sha256": "07278bca22e64d16d789893f296f5406e6db5615d6df5751f6c457a80b3d1ff6"
+    },
+    {
+      "path": "municipality-summaries/3304524.json",
+      "bytes": 23034,
+      "sha256": "9a6e6df7d1b3e4d43386accb577413f9eea51bd53e5623825c18b0670ae4634b"
+    },
+    {
+      "path": "municipality-summaries/3304557.json",
+      "bytes": 23350,
+      "sha256": "e0686d529896d043d3d2ebfb2b7e18e5fbf5a47ad4270eb08bafd3bfdef48afa"
+    },
+    {
+      "path": "municipality-summaries/3304607.json",
+      "bytes": 22701,
+      "sha256": "9457dc74603a67c03236195ab6c82de322856635da57f1bd21d386ddf0261604"
+    },
+    {
+      "path": "municipality-summaries/3304706.json",
+      "bytes": 22867,
+      "sha256": "79842503f61a1d06fc604dc96ded0b59b968df9a1a818f18d16b5c2033b9c712"
+    },
+    {
+      "path": "municipality-summaries/3304755.json",
+      "bytes": 22821,
+      "sha256": "a27637fd81b27ad23b9518dc9c23763856dd9fd234b677464f41ad98cf9859c7"
+    },
+    {
+      "path": "municipality-summaries/3304805.json",
+      "bytes": 22827,
+      "sha256": "9ce93f99603bc842b4d447dab48af16add04ef3646b267d6d0f638e48a0fc0e5"
+    },
+    {
+      "path": "municipality-summaries/3304904.json",
+      "bytes": 23315,
+      "sha256": "0a5cd857d4c21b2b2b9a2342e07eb7ff3f2d099b3e11b599eaf6a202033176d4"
+    },
+    {
+      "path": "municipality-summaries/3305000.json",
+      "bytes": 22887,
+      "sha256": "e5ddfb5aa4f9424ede6e644ed59f96e00230ae587cd1e3bc59fb9341a5674e51"
+    },
+    {
+      "path": "municipality-summaries/3305109.json",
+      "bytes": 23162,
+      "sha256": "031b98a7893130ad6fa2f2715849634a8b23a523b06a59efbfda2fe426773338"
+    },
+    {
+      "path": "municipality-summaries/3305133.json",
+      "bytes": 22581,
+      "sha256": "4d55bb8cc5637b65ecc5fe0fe7846ef7478cbe32f149e7590a55139fdd190575"
+    },
+    {
+      "path": "municipality-summaries/3305158.json",
+      "bytes": 22803,
+      "sha256": "b950191d29c4ef5ca0d0dbae13c101d28984f0580f7973638719b85e37fbe33a"
+    },
+    {
+      "path": "municipality-summaries/3305208.json",
+      "bytes": 22933,
+      "sha256": "41f12d7e51dfff102a7d77e5bd82794a202dabfe5943a2ce6dd6335f4f584b99"
+    },
+    {
+      "path": "municipality-summaries/3305307.json",
+      "bytes": 22637,
+      "sha256": "38298b0886feb45739f88e37a5b92c0d3590beff06c3a7e3fb21982cfef18215"
+    },
+    {
+      "path": "municipality-summaries/3305406.json",
+      "bytes": 22726,
+      "sha256": "1fb0e5737dc02c9855498b48ae16089e27efd6fbc69cd6a12f1ff2fdcd5a7b83"
+    },
+    {
+      "path": "municipality-summaries/3305505.json",
+      "bytes": 22995,
+      "sha256": "29e89d7287d22941fc056ea9476b3f29fc3b9acbaae4c92ebd3ba701adc20fcb"
+    },
+    {
+      "path": "municipality-summaries/3305554.json",
+      "bytes": 22885,
+      "sha256": "1c28d4d3a80030759b9b33c1c3eae7990e6e157ad5fd6289a81a526112f19d72"
+    },
+    {
+      "path": "municipality-summaries/3305604.json",
+      "bytes": 22774,
+      "sha256": "dcbf76b658bc06239d49da4df55ed1c866e396d1ef38858a413e3b2fc8d81f38"
+    },
+    {
+      "path": "municipality-summaries/3305703.json",
+      "bytes": 22701,
+      "sha256": "df2d324cc9ccdc678ccb0a3a0de03e114197f6fe341d96302b0747c0e0a6e89c"
+    },
+    {
+      "path": "municipality-summaries/3305752.json",
+      "bytes": 22734,
+      "sha256": "765e9b9b715419391dffb5024195647c1ef5a2649858e56ad3e64f2917fe309f"
+    },
+    {
+      "path": "municipality-summaries/3305802.json",
+      "bytes": 23067,
+      "sha256": "c4a6cbcf45106aeec3118e4f7f64c3a269c98e2ac75c70e960c5ebc7b552f09d"
+    },
+    {
+      "path": "municipality-summaries/3305901.json",
+      "bytes": 22654,
+      "sha256": "177cdf9d929c0be6a1bac02e3a83f5655e5639968a668e100da7d65ed0aff02b"
+    },
+    {
+      "path": "municipality-summaries/3306008.json",
+      "bytes": 22952,
+      "sha256": "9ac03d95f1cc8d6872e039db22d02852638a3cbf6d237458b151f6f8c7dd6f10"
+    },
+    {
+      "path": "municipality-summaries/3306107.json",
+      "bytes": 22989,
+      "sha256": "177ba5a014492472084ebf6f3c508efb57bf4f077d5a805108d1f69c99cddc2b"
+    },
+    {
+      "path": "municipality-summaries/3306156.json",
+      "bytes": 22677,
+      "sha256": "63e66a59f52ecd8174adb644af6f797067c071c9d5e703e750832ecb1aa1c5b4"
+    },
+    {
+      "path": "municipality-summaries/3306206.json",
+      "bytes": 22902,
+      "sha256": "fd4d20d0116e7726620da701c9740bc3c8c8828b11158530268cde6a2e564ebf"
+    },
+    {
+      "path": "municipality-summaries/3306305.json",
+      "bytes": 23200,
+      "sha256": "0143f7b1e48b604b3d7ef918b8768ec27501cc9f89afce53aec5728df9a93b60"
     },
     {
       "path": "profiles/sih-acute-bronchitis-bronchiolitis.json",
@@ -1293,8 +1767,8 @@
     "suppressedObservations": 1603,
     "profileObservations": 47104,
     "profileEligibleIndicators": 32,
-    "mapValues": 2664,
-    "mapSuppressedValues": 1844,
+    "mapValues": 2662,
+    "mapSuppressedValues": 1846,
     "sihIndicators": 17,
     "sihWithBrazilComparator": 17,
     "missingDenominatorYears": [
@@ -1303,6 +1777,6 @@
     "downloadSuppressionLeaks": 0,
     "profileSuppressionLeaks": 0,
     "profileMunicipalityCount": 92,
-    "checkedAt": "2026-08-04T00:38:25+00:00"
+    "checkedAt": "2026-08-04T01:07:14+00:00"
   }
 }
